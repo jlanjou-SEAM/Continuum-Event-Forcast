@@ -1,74 +1,7 @@
 {
   "version": "1.0",
   "schema": "SEAM_EVENT_TRACKER_V1",
-  "generated_utc": "2026-09-11T00:00:00Z",
+  "generated_utc": "2026-09-12T00:00:00Z",
   "retention_days": 30,
-  "events": {
-    "SEAM-example-event-id": {
-      "event_id": "SEAM-example-event-id",
-      "signature_class": "seismic",
-      "primary_regime": "earthquake",
-      "first_detected_utc": "2026-09-10T12:00:00Z",
-      "status": "active",
-      "location": {
-        "best_effort_lat": 35.6762,
-        "best_effort_lon": 139.6503,
-        "region": "Asia",
-        "country": "Japan",
-        "state_province": "Tokyo",
-        "county_district": "Chiyoda",
-        "city": "Tokyo"
-      },
-      "confidence_history": [
-        {
-          "timestamp_utc": "2026-09-10T12:00:00Z",
-          "seam_phi": 0.45,
-          "phase": "track",
-          "magnitude": null
-        },
-        {
-          "timestamp_utc": "2026-09-10T12:30:00Z",
-          "seam_phi": 0.62,
-          "phase": "warning",
-          "magnitude": 4.2
-        },
-        {
-          "timestamp_utc": "2026-09-10T13:00:00Z",
-          "seam_phi": 0.78,
-          "phase": "warning",
-          "magnitude": 4.5
-        },
-        {
-          "timestamp_utc": "2026-09-10T13:30:00Z",
-          "seam_phi": 0.87,
-          "phase": "watch",
-          "magnitude": 5.1
-        }
-      ],
-      "phase_transitions": [
-        {
-          "from_phase": "track",
-          "to_phase": "warning",
-          "timestamp_utc": "2026-09-10T12:15:00Z"
-        },
-        {
-          "from_phase": "warning",
-          "to_phase": "watch",
-          "timestamp_utc": "2026-09-10T13:15:00Z"
-        }
-      ],
-      "official_alert": {
-        "alert_received_utc": "2026-09-10T13:45:00Z",
-        "alert_source": "USGS",
-        "alert_id": "us7000xyz"
-      },
-      "projections": {
-        "projected_event_time": "2026-09-10T14:00:00Z",
-        "projected_location": "35.6762, 139.6503",
-        "projected_severity": "5.2"
-      },
-      "time_to_lock_minutes": 45,
-      "identification_to_alert_minutes": 105
-    }
-  }
+  "events": {}
 }
