@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Continuum - Event Projection System</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #2a2a3e 0%, #3d3d52 100%);
@@ -18,12 +13,7 @@
             padding: 20px;
             min-height: 100vh;
         }
-
-        .container {
-            max-width: 1600px;
-            margin: 0 auto;
-        }
-
+        .container { max-width: 1600px; margin: 0 auto; }
         header {
             background: linear-gradient(135deg, #1e1e2e 0%, #2d2d3d 100%);
             padding: 30px;
@@ -31,70 +21,26 @@
             margin-bottom: 30px;
             border-left: 4px solid #ff6b6b;
         }
-
-        h1 {
-            color: #ff6b6b;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            color: #aaa;
-            font-size: 14px;
-        }
-
-        .phase-section {
-            margin-bottom: 40px;
-        }
-
+        h1 { color: #ff6b6b; margin-bottom: 10px; }
+        .subtitle { color: #aaa; font-size: 14px; }
+        .phase-section { margin-bottom: 40px; }
         .phase-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid;
+            display: flex; align-items: center; gap: 15px; margin-bottom: 20px;
+            padding-bottom: 15px; border-bottom: 2px solid;
         }
-
-        .phase-header.event {
-            border-bottom-color: #ff6b6b;
-        }
-
-        .phase-header.watch {
-            border-bottom-color: #ffa500;
-        }
-
-        .phase-header.warning {
-            border-bottom-color: #ffeb3b;
-        }
-
-        .phase-header.track {
-            border-bottom-color: #666;
-        }
-
-        .phase-icon {
-            font-size: 28px;
-        }
-
-        .phase-title {
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        .phase-count {
-            margin-left: auto;
-            background: rgba(255,255,255,0.1);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 14px;
-        }
-
+        .phase-header.event { border-bottom-color: #ff6b6b; }
+        .phase-header.watch { border-bottom-color: #ffa500; }
+        .phase-header.warning { border-bottom-color: #ffeb3b; }
+        .phase-header.track { border-bottom-color: #666; }
+        .phase-icon { font-size: 28px; }
+        .phase-title { font-size: 22px; font-weight: bold; }
+        .phase-count { margin-left: auto; background: rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 20px; }
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
             gap: 20px;
             margin-bottom: 30px;
         }
-
         .event-card {
             background: #1e1e2e;
             border-radius: 8px;
@@ -103,41 +49,13 @@
             border-top: 4px solid;
             transition: transform 0.2s, box-shadow 0.2s;
         }
-
-        .event-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255,107,107,0.2);
-        }
-
-        .event-card.event {
-            border-left-color: #ff6b6b;
-            border-top-color: #ff6b6b;
-        }
-
-        .event-card.watch {
-            border-left-color: #ffa500;
-            border-top-color: #ffa500;
-        }
-
-        .event-card.warning {
-            border-left-color: #ffeb3b;
-            border-top-color: #ffeb3b;
-        }
-
-        .event-card.track {
-            border-left-color: #666;
-            border-top-color: #666;
-        }
-
-        .card-header {
-            display: flex;
-            align-items: start;
-            justify-content: space-between;
-            margin-bottom: 15px;
-        }
-
+        .event-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(255,107,107,0.2); }
+        .event-card.event { border-left-color: #ff6b6b; border-top-color: #ff6b6b; }
+        .event-card.watch { border-left-color: #ffa500; border-top-color: #ffa500; }
+        .event-card.warning { border-left-color: #ffeb3b; border-top-color: #ffeb3b; }
+        .event-card.track { border-left-color: #666; border-top-color: #666; }
+        .card-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px; }
         .event-type {
-            display: inline-block;
             background: rgba(255,107,107,0.2);
             color: #ff6b6b;
             padding: 4px 12px;
@@ -146,180 +64,77 @@
             font-weight: bold;
             text-transform: uppercase;
         }
-
         .confidence-badge {
             background: #ff6b6b;
             color: white;
             padding: 6px 12px;
             border-radius: 4px;
             font-weight: bold;
-            font-size: 14px;
         }
-
-        .confidence-badge.watch {
-            background: #ffa500;
-        }
-
-        .confidence-badge.warning {
-            background: #ffeb3b;
-            color: #000;
-        }
-
-        .event-title {
-            font-size: 16px;
-            font-weight: bold;
-            color: #fff;
+        .confidence-badge.watch { background: #ffa500; }
+        .confidence-badge.warning { background: #ffeb3b; color: #000; }
+        .event-title { font-size: 16px; font-weight: bold; color: #fff; margin-bottom: 12px; }
+        .location-hierarchy {
+            background: rgba(255,165,0,0.1);
+            padding: 12px;
+            border-radius: 6px;
             margin-bottom: 12px;
-            line-height: 1.3;
+            border-left: 3px solid #ffa500;
+            font-size: 12px;
+            line-height: 1.6;
         }
-
-        .card-row {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 10px;
-            font-size: 13px;
-            color: #bbb;
-        }
-
-        .card-label {
-            font-weight: 600;
-            color: #888;
-            min-width: 100px;
-            text-transform: uppercase;
+        .location-hierarchy strong { color: #ffa500; }
+        .location-precision {
             font-size: 11px;
-        }
-
-        .card-value {
-            color: #fff;
-            flex: 1;
-        }
-
-        .trend-arrow {
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .trend-arrow.up {
-            color: #4ade80;
-        }
-
-        .trend-arrow.down {
-            color: #ff6b6b;
-        }
-
-        .trend-arrow.stable {
             color: #888;
+            margin-top: 6px;
+            padding-top: 6px;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
-
-        .projections {
+        .confidence-history {
             background: rgba(255,255,255,0.05);
             padding: 12px;
             border-radius: 6px;
-            margin-top: 15px;
-            border-left: 3px solid #ffa500;
-        }
-
-        .projection-title {
+            margin: 12px 0;
+            border-left: 3px solid #2196f3;
             font-size: 12px;
-            font-weight: bold;
-            color: #ffa500;
-            text-transform: uppercase;
-            margin-bottom: 8px;
         }
-
-        .projection-row {
+        .history-title { font-weight: bold; color: #2196f3; margin-bottom: 8px; }
+        .history-entry {
             display: flex;
             justify-content: space-between;
-            font-size: 12px;
-            margin-bottom: 6px;
+            padding: 4px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
             color: #aaa;
         }
-
-        .projection-value {
-            color: #fff;
-            font-weight: 600;
-        }
-
-        .time-delta {
+        .history-entry:last-child { border-bottom: none; }
+        .history-conf { color: #fff; font-weight: bold; }
+        .time-tracking {
             background: rgba(255,107,107,0.1);
-            padding: 10px;
-            border-radius: 4px;
-            margin-top: 12px;
+            padding: 12px;
+            border-radius: 6px;
             border-left: 3px solid #ff6b6b;
             font-size: 12px;
         }
-
-        .time-delta-label {
-            color: #888;
-            font-size: 11px;
-            text-transform: uppercase;
-        }
-
-        .time-delta-value {
-            color: #ff6b6b;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        .track-list {
-            background: #1e1e2e;
-            border-radius: 8px;
-            border-left: 4px solid #666;
-        }
-
+        .time-tracking-row { display: flex; justify-content: space-between; margin: 4px 0; }
+        .time-label { color: #888; }
+        .time-value { color: #ff6b6b; font-weight: bold; }
+        .track-list { background: #1e1e2e; border-radius: 8px; border-left: 4px solid #666; }
         .track-item {
             padding: 12px 20px;
             border-bottom: 1px solid rgba(255,255,255,0.05);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 13px;
-        }
-
-        .track-item:last-child {
-            border-bottom: none;
-        }
-
-        .track-type {
-            color: #aaa;
-            font-weight: 600;
-            min-width: 100px;
-        }
-
-        .track-conf {
-            color: #ffa500;
-            font-weight: bold;
-            margin-left: auto;
-            margin-right: 20px;
-        }
-
-        .track-time {
-            color: #888;
-            font-size: 11px;
-        }
-
-        .empty-state {
-            text-align: center;
-            padding: 40px;
-            color: #666;
-            background: #1e1e2e;
-            border-radius: 8px;
-        }
-
-        footer {
-            text-align: center;
-            color: #666;
-            margin-top: 40px;
             font-size: 12px;
         }
-
-        .loading {
-            text-align: center;
-            padding: 40px;
-            color: #aaa;
-        }
-
+        .track-item:last-child { border-bottom: none; }
+        .track-type { color: #aaa; font-weight: 600; min-width: 120px; }
+        .track-location { color: #ccc; flex: 1; margin: 0 20px; }
+        .track-conf { color: #ffa500; font-weight: bold; margin-right: 20px; }
+        .empty-state { text-align: center; padding: 40px; color: #666; background: #1e1e2e; border-radius: 8px; }
+        footer { text-align: center; color: #666; margin-top: 40px; font-size: 12px; }
+        .loading { text-align: center; padding: 40px; color: #aaa; }
         .error {
             background: rgba(255,107,107,0.2);
             color: #ff6b6b;
@@ -334,10 +149,10 @@
     <div class="container">
         <header>
             <h1>🎯 Continuum Event Projection System</h1>
-            <p class="subtitle">Real-time natural disaster prediction and tracking from multi-source manifold analysis</p>
+            <p class="subtitle">Real-time natural disaster prediction with 30-day event tracking</p>
         </header>
 
-        <div id="loading" class="loading" style="display:none;">Loading manifold data...</div>
+        <div id="loading" class="loading" style="display:none;">Loading event data...</div>
         <div id="error" class="error" style="display:none;"></div>
 
         <div id="eventPhase" class="phase-section"></div>
@@ -346,127 +161,90 @@
         <div id="trackPhase" class="phase-section"></div>
 
         <footer>
-            <p>Continuum Database • Event Projection System</p>
-            <p>Updates every 1-5 minutes | Last refresh: <span id="lastRefresh">-</span></p>
+            <p>Continuum Database • Event Projection System with 30-Day Rolling Tracker</p>
+            <p>Last refresh: <span id="lastRefresh">-</span></p>
         </footer>
     </div>
 
     <script>
         const REPO = 'jlanjou-SEAM/SEAM-Core';
         const BRANCH = 'main';
-        const MANIFOLD_FILE = 'continuum/output/volcanic_manifold_analysis.json';
-        const REFRESH_INTERVAL = 60000;
+        const TRACKER_FILE = 'continuum/event_tracker.json';
 
-        function parseSignalSummary(summaryStr) {
-            try {
-                const lines = summaryStr.split('\\n');
-                const jsonStr = lines.join('\n');
-                return JSON.parse(jsonStr);
-            } catch (e) {
-                return {};
+        function getFileUrl(file) {
+            return `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${file}`;
+        }
+
+        function getPhase(seam_phi) {
+            if (seam_phi > 0.90) return 'event';
+            if (seam_phi > 0.85) return 'watch';
+            if (seam_phi > 0.75) return 'warning';
+            if (seam_phi > 0.50) return 'track';
+            return 'unknown';
+        }
+
+        function formatLocation(loc) {
+            if (!loc) return 'Unknown';
+            const parts = [loc.city, loc.county_district, loc.state_province, loc.country, loc.region].filter(Boolean);
+            return parts.join(' › ');
+        }
+
+        function formatPrecision(lat, lon) {
+            if (lat !== null && lon !== null) {
+                return `Precision: ${lat.toFixed(4)}°, ${lon.toFixed(4)}°`;
             }
+            return 'Location pending';
         }
 
-        function calculateTrendArrow(event) {
-            // Simulate trend based on signal_summary history
-            // In production, this would come from historical confidence tracking
-            const summary = parseSignalSummary(event.signal_summary || '{}');
-            const isRising = Math.random() > 0.5; // Placeholder
-            return isRising ? '📈' : isRising === false ? '📉' : '—';
-        }
-
-        function getTrendClass(arrow) {
-            if (arrow === '📈') return 'up';
-            if (arrow === '📉') return 'down';
-            return 'stable';
-        }
-
-        function extractProjections(event) {
-            const summary = parseSignalSummary(event.signal_summary || '{}');
-
-            // Extract key projection data
-            const projectedTime = summary.window_end_utc || event.timestamp_utc || 'Unknown';
-            const severity = event.magnitude || 'Medium';
-            const location = event.latitude && event.longitude
-                ? `${event.latitude.toFixed(2)}°, ${event.longitude.toFixed(2)}°`
-                : event.spatial_region || 'Unknown';
-
-            return {
-                projectedTime,
-                severity,
-                location,
-                source: summary.source || 'Unknown'
-            };
-        }
-
-        function calculateTimeDelta(event) {
-            const summary = parseSignalSummary(event.signal_summary || '{}');
-            const capturedUtc = summary.captured_utc || event.timestamp_utc;
-            const identifiedUtc = event.timestamp_utc;
-
-            if (!capturedUtc || !identifiedUtc) return 'Unknown';
-
-            try {
-                const captured = new Date(capturedUtc);
-                const identified = new Date(identifiedUtc);
-                const delta = Math.round((captured - identified) / 1000 / 60); // minutes
-
-                if (delta < 0) return `${Math.abs(delta)}m ahead`;
-                if (delta === 0) return 'Simultaneous';
-                return `+${delta}m delay`;
-            } catch (e) {
-                return 'Unknown';
-            }
-        }
-
-        function createEventCard(event, phase) {
-            const conf = (event.seam_phi * 100).toFixed(0);
-            const arrow = calculateTrendArrow(event);
-            const projections = extractProjections(event);
-            const timeDelta = calculateTimeDelta(event);
+        function createEventCard(eventData, phase) {
+            const lastConf = eventData.confidence_history[eventData.confidence_history.length - 1];
+            const conf = lastConf ? (lastConf.seam_phi * 100).toFixed(0) : 'N/A';
 
             const card = document.createElement('div');
             card.className = `event-card ${phase}`;
 
+            const historyHtml = eventData.confidence_history.slice(-5).map((h, idx) => `
+                <div class="history-entry">
+                    <span>${new Date(h.timestamp_utc).toLocaleTimeString()}</span>
+                    <span class="history-conf">${(h.seam_phi * 100).toFixed(0)}%</span>
+                </div>
+            `).join('');
+
+            const timeTracking = eventData.identification_to_alert_minutes
+                ? `<div class="time-tracking-row"><span class="time-label">Identification → Alert:</span><span class="time-value">+${eventData.identification_to_alert_minutes}m</span></div>`
+                : '';
+
             card.innerHTML = `
                 <div class="card-header">
-                    <div>
-                        <span class="event-type">${event.signature_class}</span>
-                    </div>
+                    <span class="event-type">${eventData.signature_class}</span>
                     <span class="confidence-badge ${phase}">${conf}%</span>
                 </div>
 
-                <div class="event-title">${projections.source}</div>
+                <div class="event-title">${eventData.location.city || eventData.location.region || 'Event'}</div>
 
-                <div class="card-row">
-                    <span class="card-label">Trend</span>
-                    <span class="trend-arrow ${getTrendClass(arrow)}">${arrow}</span>
-                    <span class="card-value">Rising confidence pattern</span>
+                <div class="location-hierarchy">
+                    <strong>📍 Location Hierarchy</strong>
+                    <div>${formatLocation(eventData.location)}</div>
+                    <div class="location-precision">${formatPrecision(eventData.location.best_effort_lat, eventData.location.best_effort_lon)}</div>
                 </div>
 
-                <div class="card-row">
-                    <span class="card-label">Location</span>
-                    <span class="card-value">${projections.location}</span>
+                <div class="confidence-history">
+                    <div class="history-title">📊 Confidence Progression (Last 5)</div>
+                    ${historyHtml}
                 </div>
 
-                ${phase !== 'track' ? `
-                    <div class="projections">
-                        <div class="projection-title">📊 Projections</div>
-                        <div class="projection-row">
-                            <span>Event Time:</span>
-                            <span class="projection-value">${new Date(projections.projectedTime).toLocaleString()}</span>
-                        </div>
-                        <div class="projection-row">
-                            <span>Severity:</span>
-                            <span class="projection-value">${projections.severity}</span>
-                        </div>
-                    </div>
-
-                    <div class="time-delta">
-                        <div class="time-delta-label">⏱️ Identification to Official Alert</div>
-                        <div class="time-delta-value">${timeDelta}</div>
+                ${eventData.identification_to_alert_minutes !== null ? `
+                    <div class="time-tracking">
+                        <div class="time-label">⏱️ Detection Timeline</div>
+                        <div class="time-tracking-row"><span>First Detected:</span><span>${new Date(eventData.first_detected_utc).toLocaleString()}</span></div>
+                        ${timeTracking}
                     </div>
                 ` : ''}
+
+                <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 11px; color: #888;">
+                    Event ID: ${eventData.event_id}<br>
+                    Status: ${eventData.status}
+                </div>
             `;
 
             return card;
@@ -480,36 +258,30 @@
             error.style.display = 'none';
 
             try {
-                const url = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${MANIFOLD_FILE}`;
-                const response = await fetch(url);
+                const response = await fetch(getFileUrl(TRACKER_FILE));
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
-                const data = await response.json();
-                const events = data.manifold_events || data.matches || [];
+                const tracker = await response.json();
+                const allEvents = Object.values(tracker.events || {});
 
-                // Categorize by phase
-                const phases = {
-                    event: events.filter(e => e.seam_phi > 0.90),
-                    watch: events.filter(e => e.seam_phi > 0.85 && e.seam_phi <= 0.90),
-                    warning: events.filter(e => e.seam_phi > 0.75 && e.seam_phi <= 0.85),
-                    track: events.filter(e => e.seam_phi > 0.50 && e.seam_phi <= 0.75)
-                };
+                // Group by phase (use last confidence entry)
+                const phases = { event: [], watch: [], warning: [], track: [] };
 
-                // Render EVENT phase
+                allEvents.forEach(evt => {
+                    if (evt.confidence_history && evt.confidence_history.length > 0) {
+                        const lastConf = evt.confidence_history[evt.confidence_history.length - 1].seam_phi;
+                        const phase = getPhase(lastConf);
+                        phases[phase].push(evt);
+                    }
+                });
+
+                // Render phases
                 renderPhase('eventPhase', phases.event, 'event', '🔴 EVENT PHASE', 'Point of No Return (>90%)');
-
-                // Render WATCH phase
                 renderPhase('watchPhase', phases.watch, 'watch', '🟠 WATCH PHASE', 'Approaching Critical (>85%)');
-
-                // Render WARNING phase
                 renderPhase('warningPhase', phases.warning, 'warning', '🟡 WARNING PHASE', 'Early Signals (>75%)');
-
-                // Render TRACK phase
                 renderTrackPhase('trackPhase', phases.track);
 
-                // Update last refresh
                 document.getElementById('lastRefresh').textContent = new Date().toLocaleTimeString();
-
                 loading.style.display = 'none';
 
             } catch (err) {
@@ -534,13 +306,13 @@
                         <div class="phase-title">${title}</div>
                         <div class="subtitle">${subtitle}</div>
                     </div>
-                    <div class="phase-count">${events.length} event${events.length !== 1 ? 's' : ''}</div>
+                    <div class="phase-count">${events.length}</div>
                 </div>
                 <div class="cards-grid">
             `;
 
-            events.forEach(event => {
-                const card = createEventCard(event, phase);
+            events.forEach(evt => {
+                const card = createEventCard(evt, phase);
                 html += card.outerHTML;
             });
 
@@ -563,20 +335,19 @@
                         <div class="phase-title">📋 TRACK PHASE</div>
                         <div class="subtitle">Background Monitoring (>50%)</div>
                     </div>
-                    <div class="phase-count">${events.length} item${events.length !== 1 ? 's' : ''}</div>
+                    <div class="phase-count">${events.length}</div>
                 </div>
                 <div class="track-list">
             `;
 
-            events.forEach(event => {
-                const conf = (event.seam_phi * 100).toFixed(0);
-                const projections = extractProjections(event);
+            events.forEach(evt => {
+                const lastConf = evt.confidence_history[evt.confidence_history.length - 1];
+                const conf = lastConf ? (lastConf.seam_phi * 100).toFixed(0) : 'N/A';
                 html += `
                     <div class="track-item">
-                        <span class="track-type">${event.signature_class}</span>
-                        <span class="track-type">${projections.source}</span>
+                        <span class="track-type">${evt.signature_class}</span>
+                        <span class="track-location">${formatLocation(evt.location)}</span>
                         <span class="track-conf">${conf}%</span>
-                        <span class="track-time">${new Date(event.timestamp_utc).toLocaleString()}</span>
                     </div>
                 `;
             });
@@ -585,11 +356,8 @@
             container.innerHTML = html;
         }
 
-        // Load on startup
         loadAndRender();
-
-        // Auto-refresh
-        setInterval(loadAndRender, REFRESH_INTERVAL);
+        setInterval(loadAndRender, 60000);
     </script>
 </body>
 </html>
