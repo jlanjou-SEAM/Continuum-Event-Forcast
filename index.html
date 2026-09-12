@@ -50,12 +50,14 @@
         }
         .left-panel {
             flex: 0 0 80%;
+            overflow-y: auto;
+        }
+        #eventsContainer {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-auto-flow: row;
             gap: 20px;
-            overflow-y: auto;
-            align-content: start;
+            padding: 0;
         }
         .right-panel {
             flex: 0 0 20%;
@@ -231,6 +233,28 @@
         const TRACKER_FILE = 'continuum/event_tracker.json';
         const MANIFOLD_FILE = 'continuum/output/volcanic_manifold_analysis.json';
 
+        // Volcano database with (name, lat, lon, country, region)
+        const VOLCANOES = {
+            'kilauea': { name: 'Kilauea', lat: 19.4210, lon: -155.2924, country: 'USA', state: 'Hawaii' },
+            'mauna_loa': { name: 'Mauna Loa', lat: 19.4755, lon: -155.6081, country: 'USA', state: 'Hawaii' },
+            'sakurajima': { name: 'Sakurajima', lat: 31.5933, lon: 130.6568, country: 'Japan', state: 'Kagoshima' },
+            'popocatepetl': { name: 'Popocatépetl', lat: 19.0228, lon: -98.6272, country: 'Mexico', state: 'Puebla' },
+            'merapi': { name: 'Mount Merapi', lat: -7.5412, lon: 110.4429, country: 'Indonesia', state: 'Central Java' },
+            'stromboli': { name: 'Stromboli', lat: 38.7914, lon: 15.2127, country: 'Italy', state: 'Sicily' },
+            'etna': { name: 'Mount Etna', lat: 37.7412, lon: 15.0031, country: 'Italy', state: 'Sicily' },
+        };
+
+        function getVolcanoInfo(lat, lon) {
+            for (const [key, volcano] of Object.entries(VOLCANOES)) {
+                const latDiff = Math.abs(volcano.lat - lat);
+                const lonDiff = Math.abs(volcano.lon - lon);
+                if (latDiff < 0.1 && lonDiff < 0.1) {
+                    return volcano;
+                }
+            }
+            return null;
+        }
+
         let logEntries = [];
 
         function addLog(message, type = 'info') {
@@ -274,18 +298,35 @@
             const lastConf = eventData.confidence_history[eventData.confidence_history.length - 1];
             const conf = lastConf ? (lastConf.seam_phi * 100).toFixed(0) : 'N/A';
             const mag = lastConf && lastConf.magnitude ? lastConf.magnitude : null;
-            const location = formatLocation(eventData.location, eventData.signal_summary);
+            let location = formatLocation(eventData.location, eventData.signal_summary);
+
+            // Try to get volcano info for better location hierarchy
+            let locationHierarchy = location;
+            if (eventData.signature_class === 'volcanic' && eventData.location.best_effort_lat && eventData.location.best_effort_lon) {
+                const volcanoInfo = getVolcanoInfo(eventData.location.best_effort_lat, eventData.location.best_effort_lon);
+                if (volcanoInfo) {
+                    locationHierarchy = `${volcanoInfo.name}<br/><small>${volcanoInfo.state}, ${volcanoInfo.country}</small>`;
+                    location = `${volcanoInfo.name} (${volcanoInfo.state}, ${volcanoInfo.country})`;
+                }
+            }
+
+            // Create descriptive event type with magnitude/depth info
+            let eventType = eventData.signature_class.toUpperCase();
+            if (mag) {
+                eventType += ` (M${mag})`;
+            }
 
             const card = document.createElement('div');
             card.className = `event-card ${phase}`;
 
             const magDisplay = mag ? `<div class="card-info-row"><span class="card-label">Magnitude</span><span class="card-value">${mag}</span></div>` : '';
+            const coordDisplay = eventData.location.best_effort_lat ? `<div class="card-info-row"><span class="card-label">Coordinates</span><span class="card-value">${eventData.location.best_effort_lat.toFixed(2)}, ${eventData.location.best_effort_lon.toFixed(2)}</span></div>` : '';
 
             card.innerHTML = `
                 <div>
                     <div class="card-phase">${phase === 'event' ? '🔴 EVENT' : '🟠 WATCH'}</div>
-                    <div class="card-type">${eventData.signature_class}</div>
-                    <div class="card-location">${location}</div>
+                    <div class="card-type">${eventType}</div>
+                    <div class="card-location">${locationHierarchy}</div>
                 </div>
 
                 <div>
@@ -300,10 +341,7 @@
                             <span class="card-value">${eventData.status.toUpperCase()}</span>
                         </div>
                         ${magDisplay}
-                        <div class="card-info-row">
-                            <span class="card-label">Precision</span>
-                            <span class="card-value">${eventData.location.best_effort_lat ? '🎯 LOCKED' : '📍 Pending'}</span>
-                        </div>
+                        ${coordDisplay}
                     </div>
                 </div>
             `;
