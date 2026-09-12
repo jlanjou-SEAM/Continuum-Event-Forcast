@@ -1,0 +1,70 @@
+name: Batch Acquisition 168hr Window (Weekly)
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Every Sunday at midnight UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  batch-168hr:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 feedparser urllib3 pillow
+
+      - name: Run realtime 168hr acquisition
+        env:
+          SEAM_COLLECTOR_TIMEOUT_SECONDS: 45
+        run: |
+          cd config/step1_raw_data_retrieval
+          python realtime_acquisition_168hr.py
+
+      - name: Run nonrealtime 168hr acquisition
+        env:
+          SEAM_COLLECTOR_TIMEOUT_SECONDS: 60
+        run: |
+          cd config/step1_raw_data_retrieval
+          python nonrealtime_acquisition_168hr.py
+
+      - name: Run official 168hr acquisition
+        env:
+          SEAM_COLLECTOR_TIMEOUT_SECONDS: 45
+        run: |
+          cd config/step1_raw_data_retrieval
+          python official_acquisition_168hr.py
+
+      - name: Run image stream 168hr acquisition
+        env:
+          SEAM_COLLECTOR_TIMEOUT_SECONDS: 60
+        run: |
+          cd config/step1_raw_data_retrieval
+          python image_stream_acquisition_168hr.py
+
+      - name: Commit changes
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: batch 168hr acquisition cycle (weekly) [skip ci]"
+            git push
+          fi
