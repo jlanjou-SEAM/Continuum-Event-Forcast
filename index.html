@@ -237,7 +237,7 @@
         const TRACKER_FILE = 'continuum/event_tracker.json';
         const MANIFOLD_FILE = 'continuum/output/volcanic_manifold_analysis.json';
 
-        // Volcano database with (name, lat, lon, country, region)
+        // Location database with (name, lat, lon, country, state/region)
         const VOLCANOES = {
             'kilauea': { name: 'Kilauea', lat: 19.4210, lon: -155.2924, country: 'USA', state: 'Hawaii' },
             'mauna_loa': { name: 'Mauna Loa', lat: 19.4755, lon: -155.6081, country: 'USA', state: 'Hawaii' },
@@ -248,6 +248,12 @@
             'etna': { name: 'Mount Etna', lat: 37.7412, lon: 15.0031, country: 'Italy', state: 'Sicily' },
         };
 
+        const SEISMIC_ZONES = {
+            'pacific_ring': { name: 'Pacific Ring of Fire', lat: 0, lon: 0, country: 'Global', state: 'Pacific Rim' },
+            'iowa': { name: 'Iowa Seismic Zone', lat: 41.16, lon: -94.93, country: 'USA', state: 'Iowa' },
+            'tokyo': { name: 'Tokyo Bay', lat: 35.45, lon: 139.77, country: 'Japan', state: 'Tokyo' },
+        };
+
         function getVolcanoInfo(lat, lon) {
             for (const [key, volcano] of Object.entries(VOLCANOES)) {
                 const latDiff = Math.abs(volcano.lat - lat);
@@ -255,6 +261,24 @@
                 if (latDiff < 0.1 && lonDiff < 0.1) {
                     return volcano;
                 }
+            }
+            return null;
+        }
+
+        function getSeismicZoneInfo(lat, lon) {
+            for (const [key, zone] of Object.entries(SEISMIC_ZONES)) {
+                const latDiff = Math.abs(zone.lat - lat);
+                const lonDiff = Math.abs(zone.lon - lon);
+                if (latDiff < 1.0 && lonDiff < 1.0) {
+                    return zone;
+                }
+            }
+            return null;
+        }
+
+        function getLocationInfo(lat, lon, eventType) {
+            if (eventType === 'seismic') {
+                return getSeismicZoneInfo(lat, lon);
             }
             return null;
         }
@@ -315,17 +339,30 @@
 
             // Build location with hierarchy
             let locationDisplay = '';
-            if (eventData.signature_class === 'volcanic' && eventData.location.best_effort_lat && eventData.location.best_effort_lon) {
-                const volcanoInfo = getVolcanoInfo(eventData.location.best_effort_lat, eventData.location.best_effort_lon);
-                if (volcanoInfo) {
-                    locationDisplay = `${volcanoInfo.name}<br/><small>${volcanoInfo.state}, ${volcanoInfo.country}</small>`;
-                    eventData.location.city = volcanoInfo.name;
-                    eventData.location.state_province = volcanoInfo.state;
-                    eventData.location.country = volcanoInfo.country;
+            const lat = eventData.location.best_effort_lat;
+            const lon = eventData.location.best_effort_lon;
+
+            if (lat && lon) {
+                // Try type-specific lookup first
+                let locationInfo = null;
+                if (eventData.signature_class === 'volcanic') {
+                    locationInfo = getVolcanoInfo(lat, lon);
+                } else if (eventData.signature_class === 'seismic') {
+                    locationInfo = getSeismicZoneInfo(lat, lon);
+                } else {
+                    // Try generic location lookup
+                    locationInfo = getLocationInfo(lat, lon, eventData.signature_class);
+                }
+
+                if (locationInfo) {
+                    locationDisplay = `${locationInfo.name}<br/><small>${locationInfo.state}, ${locationInfo.country}</small>`;
+                    eventData.location.city = locationInfo.name;
+                    eventData.location.state_province = locationInfo.state;
+                    eventData.location.country = locationInfo.country;
                 }
             }
 
-            // Fallback to formatted location
+            // Fallback to formatted location or coordinates
             if (!locationDisplay) {
                 locationDisplay = formatLocation(eventData.location, eventData.signal_summary);
             }
