@@ -1,0 +1,43 @@
+{
+  "version": "v68",
+  "source_of_truth": "Continuum Engine.zip Last Known Good State",
+  "purpose": "Restore from LKGS and apply only runnable Step3 multi-event category expansion.",
+  "modified_files": [
+    "continuum/config/pipeline_config.json",
+    "continuum/processes/step3_volcanic_analysis/step3_volcanic_analysis.py",
+    "continuum/processes/step3_volcanic_analysis/run_step3_volcanic_analysis.bat"
+  ],
+  "config_candidates_seen": [
+    "state/last_successful_payloads/berkeleyseti.json",
+    "continuum/output/continuum_master_72h.json",
+    "continuum/output/SEAM_Bidirectional_Checksum.json",
+    "continuum/output/SEAM_Event_Matrix.json",
+    "continuum/output/SEAM_Master_Data_Reconciliation.json",
+    "continuum/output/SEAM_Operational_Event_Report.json",
+    "continuum/output/SEAM_Recursive_Official_Analysis.json",
+    "continuum/output/SEAM_Web_Index.json",
+    "continuum/output/volcanic_active_clusters.json",
+    "continuum/output/volcanic_manifold_analysis.json",
+    "continuum/output/volcanic_signature_query_results.json",
+    "continuum/output/volcanic_web_index.json"
+  ],
+  "preserved_paths": {
+    "continuum_master": "output/continuum_master_72h.json",
+    "step3_output": "output/volcanic_manifold_analysis.json"
+  },
+  "signature_classes": [
+    "volcanic",
+    "seismic",
+    "severe_weather",
+    "tornadic",
+    "tropical_cyclone",
+    "flood",
+    "wildfire",
+    "drought",
+    "winter_weather",
+    "tsunami",
+    "geomagnetic",
+    "rf_disruption",
+    "grid_instability"
+  ]
+}

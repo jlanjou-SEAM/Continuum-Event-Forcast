@@ -1,0 +1,22 @@
+{
+  "source": "adsbexchange_live",
+  "bucket": "streams",
+  "acquisition_class": "image_stream",
+  "captured_utc": "2026-09-12T03:07:34.534492+00:00",
+  "config_file": "C:\\Continuum Database\\config\\step1_raw_data_retrieval\\collector_sources.json",
+  "captures": [
+    {
+      "url": "https://globe.adsbexchange.com/",
+      "ok": true,
+      "status": 200,
+      "content_type": "text/html",
+      "final_url": "https://globe.adsbexchange.com/",
+      "captured_utc": "2026-09-12T03:07:34.693315+00:00",
+      "elapsed_ms": 158.79,
+      "bytes_read": 107715,
+      "sha256": "b28f63a3d3a9038352679c2a8a17cca61f223b5e74d7079b5fb1b62663bf6753",
+      "saved_file": "C:\\Continuum Database\\streams\\adsbexchange_live\\20260912_030734_0.html",
+      "latest_file": "C:\\Continuum Database\\streams\\adsbexchange_live\\latest_0.html"
+    }
+  ]
+}

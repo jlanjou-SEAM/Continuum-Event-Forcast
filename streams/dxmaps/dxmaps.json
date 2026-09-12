@@ -1,0 +1,22 @@
+{
+  "source": "dxmaps",
+  "bucket": "streams",
+  "acquisition_class": "image_stream",
+  "captured_utc": "2026-09-12T03:07:33.659638+00:00",
+  "config_file": "C:\\Continuum Database\\config\\step1_raw_data_retrieval\\collector_sources.json",
+  "captures": [
+    {
+      "url": "https://www.dxmaps.com/",
+      "ok": true,
+      "status": 200,
+      "content_type": "text/html",
+      "final_url": "https://www.dxmaps.com/spots/mapg.php?Lan=E",
+      "captured_utc": "2026-09-12T03:07:34.412209+00:00",
+      "elapsed_ms": 753.44,
+      "bytes_read": 51140,
+      "sha256": "e2d075d9b8f333dbb9c67d27acabb154fee172549bffb8365630a8444c838fbb",
+      "saved_file": "C:\\Continuum Database\\streams\\dxmaps\\20260912_030734_0.html",
+      "latest_file": "C:\\Continuum Database\\streams\\dxmaps\\latest_0.html"
+    }
+  ]
+}
