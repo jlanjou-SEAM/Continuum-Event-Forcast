@@ -55,6 +55,25 @@ SIGNATURES = {
     "winter_weather": ["winter storm", "blizzard", "snow"],
 }
 
+# Major volcanoes with known coordinates (lat, lon)
+VOLCANO_DATABASE = {
+    "kilauea": (19.4210, -155.2924),
+    "mauna loa": (19.4755, -155.6081),
+    "sakurajima": (31.5933, 130.6568),
+    "popocatépetl": (19.0228, -98.6272),
+    "merapi": (-7.5412, 110.4429),
+    "stromboli": (38.7914, 15.2127),
+    "etna": (37.7412, 15.0031),
+    "yasur": (-19.5297, 169.4412),
+    "villarrica": (-39.4210, -71.9310),
+    "cotopaxi": (-0.8670, -78.4388),
+    "piton": (-21.2447, 55.7108),
+    "erta ale": (13.6022, 40.6699),
+    "nyiragongo": (-1.5197, 29.2527),
+    "yasour": (-19.5297, 169.4412),
+    "taal": (14.0356, 120.9965),
+}
+
 def safe_float(v):
     try:
         return float(v)
@@ -146,6 +165,19 @@ def regex_coordinates(text):
 
     return None, None
 
+def lookup_volcano_coordinates(text):
+    """Lookup volcano coordinates by name from text"""
+    if not text:
+        return None, None
+
+    text_lower = str(text).lower()
+
+    for volcano_name, (lat, lon) in VOLCANO_DATABASE.items():
+        if volcano_name in text_lower:
+            return lat, lon
+
+    return None, None
+
 
 def extract_coordinates(record):
 
@@ -197,6 +229,11 @@ def extract_coordinates(record):
 
     lat, lon = regex_coordinates(search_text)
 
+    if lat is not None and lon is not None:
+        return lat, lon
+
+    # For volcanic events, try volcano name lookup
+    lat, lon = lookup_volcano_coordinates(search_text)
     if lat is not None and lon is not None:
         return lat, lon
 
