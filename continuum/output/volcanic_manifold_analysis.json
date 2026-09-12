@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-05-17T03:11:39.232871+00:00",
+  "generated_utc": "2026-09-12T21:46:59.952281+00:00",
   "schema": "SEAM_STEP3_MULTI_SIGNATURE_CANONICAL_V76",
   "source": "C:\\Continuum Database\\continuum\\output\\continuum_master_72h.json",
   "records_scanned": 232,
@@ -19,15 +19,15 @@
   "total_manifold_events": 129,
   "matches": [
     {
-      "event_id": "SEAM-1cb3ec2d11eb8ed1e7e6eac4",
+      "event_id": "SEAM-196e40c254276f4952b1992c",
       "signature_class": "drought",
       "primary_regime": "drought",
       "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.53,
+      "latitude": 37.7412,
+      "longitude": 15.0031,
+      "spatial_region": "37.74_15.0",
+      "geohash": "37.741:15.003",
+      "seam_phi": 0.61,
       "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
@@ -36,7 +36,7 @@
       ],
       "magnitude": null,
       "official_reference": "14e60fdda9da5fd00a614fcc33fc69e4b3ac52c2740daaa06f0bfbd6d1a41216",
-      "evidence_hash": "1cb3ec2d11eb8ed1e7e6eac4"
+      "evidence_hash": "196e40c254276f4952b1992c"
     },
     {
       "event_id": "SEAM-1ce2b0eea987da96821601c0",
@@ -159,15 +159,15 @@
       "evidence_hash": "7f03cf64081d1ce3f173c923"
     },
     {
-      "event_id": "SEAM-762152c5dbb7a706ae5f6ae2",
+      "event_id": "SEAM-9455702693c1ec7917e8e82b",
       "signature_class": "flood",
       "primary_regime": "flood",
       "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.53,
+      "latitude": 37.7412,
+      "longitude": 15.0031,
+      "spatial_region": "37.74_15.0",
+      "geohash": "37.741:15.003",
+      "seam_phi": 0.61,
       "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
@@ -176,7 +176,7 @@
       ],
       "magnitude": null,
       "official_reference": "14e60fdda9da5fd00a614fcc33fc69e4b3ac52c2740daaa06f0bfbd6d1a41216",
-      "evidence_hash": "762152c5dbb7a706ae5f6ae2"
+      "evidence_hash": "9455702693c1ec7917e8e82b"
     },
     {
       "event_id": "SEAM-7ef745dd63e482b539c88750",
@@ -1259,15 +1259,15 @@
       "evidence_hash": "fcc6b09a549da269cef76713"
     },
     {
-      "event_id": "SEAM-c9813be2d2c9a9ad53a82102",
+      "event_id": "SEAM-3329e1fa6751cfa936db1c34",
       "signature_class": "rf_disruption",
       "primary_regime": "rf_disruption",
       "timestamp_utc": "2026-05-17T02:43:42.987594+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.53,
+      "latitude": 19.421,
+      "longitude": -155.2924,
+      "spatial_region": "19.42_-155.29",
+      "geohash": "19.421:-155.292",
+      "seam_phi": 0.61,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:56.297948+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:55.800",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\volcano_smithsonian.json",
@@ -1276,7 +1276,7 @@
       ],
       "magnitude": null,
       "official_reference": "8682f878f202d8281e6d508e500f2012a36a9b591a946edfd9aa5b4e2e8ffdc4",
-      "evidence_hash": "c9813be2d2c9a9ad53a82102"
+      "evidence_hash": "3329e1fa6751cfa936db1c34"
     },
     {
       "event_id": "SEAM-9f6205b5c15e4c120ac13c94",
@@ -1639,6 +1639,26 @@
       "evidence_hash": "87a5848f89154b38c1785016"
     },
     {
+      "event_id": "SEAM-40f00b1cf5a7a582d342768e",
+      "signature_class": "seismic",
+      "primary_regime": "seismic",
+      "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
+      "latitude": 37.7412,
+      "longitude": 15.0031,
+      "spatial_region": "37.74_15.0",
+      "geohash": "37.741:15.003",
+      "seam_phi": 0.61,
+      "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
+        "gdacs_alerts",
+        "raw"
+      ],
+      "magnitude": null,
+      "official_reference": "14e60fdda9da5fd00a614fcc33fc69e4b3ac52c2740daaa06f0bfbd6d1a41216",
+      "evidence_hash": "40f00b1cf5a7a582d342768e"
+    },
+    {
       "event_id": "SEAM-444f9429fee3faa9591a41da",
       "signature_class": "seismic",
       "primary_regime": "seismic",
@@ -1657,26 +1677,6 @@
       "magnitude": null,
       "official_reference": "d6dbebd84e3ad506e40e91bbff5817896d3b0b7dd2a1f79393fde15d346fe8eb",
       "evidence_hash": "444f9429fee3faa9591a41da"
-    },
-    {
-      "event_id": "SEAM-84950bfbc4e024d030464bef",
-      "signature_class": "seismic",
-      "primary_regime": "seismic",
-      "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.53,
-      "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
-      "source_refs": [
-        "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
-        "gdacs_alerts",
-        "raw"
-      ],
-      "magnitude": null,
-      "official_reference": "14e60fdda9da5fd00a614fcc33fc69e4b3ac52c2740daaa06f0bfbd6d1a41216",
-      "evidence_hash": "84950bfbc4e024d030464bef"
     },
     {
       "event_id": "SEAM-b59734a70762e3617b27a0ad",
@@ -1819,15 +1819,15 @@
       "evidence_hash": "47777a13ddb4356ca24c29ff"
     },
     {
-      "event_id": "SEAM-b025301d1084c8738bb6fbe6",
+      "event_id": "SEAM-1246f44140b7c81a4b7acf38",
       "signature_class": "seismic",
       "primary_regime": "seismic",
       "timestamp_utc": "2026-05-17T02:43:42.987594+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.77,
+      "latitude": 19.421,
+      "longitude": -155.2924,
+      "spatial_region": "19.42_-155.29",
+      "geohash": "19.421:-155.292",
+      "seam_phi": 0.85,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:56.297948+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:55.800",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\volcano_smithsonian.json",
@@ -1836,7 +1836,7 @@
       ],
       "magnitude": null,
       "official_reference": "8682f878f202d8281e6d508e500f2012a36a9b591a946edfd9aa5b4e2e8ffdc4",
-      "evidence_hash": "b025301d1084c8738bb6fbe6"
+      "evidence_hash": "1246f44140b7c81a4b7acf38"
     },
     {
       "event_id": "SEAM-1504439d33e218c67190d0a2",
@@ -1959,15 +1959,15 @@
       "evidence_hash": "334708237b155c65cea938db"
     },
     {
-      "event_id": "SEAM-5ac2109e381aed4b9fcb770d",
+      "event_id": "SEAM-6a0d518b974a2e158dc9d8aa",
       "signature_class": "seismic",
       "primary_regime": "seismic",
       "timestamp_utc": "2026-05-17T02:43:43.015696+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.77,
+      "latitude": 31.5933,
+      "longitude": 130.6568,
+      "spatial_region": "31.59_130.66",
+      "geohash": "31.593:130.657",
+      "seam_phi": 0.85,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:01Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:01Z\",\n  \"captured_utc\": \"2026-05-16T20:32:01.390515+00",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\volcano_smithsonian_weekly168.json",
@@ -1976,18 +1976,18 @@
       ],
       "magnitude": null,
       "official_reference": "d832cff2216288e28508fffc140c157951a5b0ec637c81db86014a0c4551cf0e",
-      "evidence_hash": "5ac2109e381aed4b9fcb770d"
+      "evidence_hash": "6a0d518b974a2e158dc9d8aa"
     },
     {
-      "event_id": "SEAM-5e9b8ff5e6e68e1c9d931717",
+      "event_id": "SEAM-a9991b7f8db805d0a4b8c904",
       "signature_class": "seismic",
       "primary_regime": "seismic",
       "timestamp_utc": "2026-05-17T02:43:43.015696+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.77,
+      "latitude": 31.5933,
+      "longitude": 130.6568,
+      "spatial_region": "31.59_130.66",
+      "geohash": "31.593:130.657",
+      "seam_phi": 0.85,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"captured_utc\": \"2026-05-16T20:26:02.173805+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"t",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\volcano_smithsonian.json",
@@ -1996,7 +1996,7 @@
       ],
       "magnitude": null,
       "official_reference": "8e9e34b22e601ef4aed624a4b1e5a626ff79864458a7825a5f8c1eb291be1272",
-      "evidence_hash": "5e9b8ff5e6e68e1c9d931717"
+      "evidence_hash": "a9991b7f8db805d0a4b8c904"
     },
     {
       "event_id": "SEAM-13e1c6a248caf053fd373cec",
@@ -2019,26 +2019,6 @@
       "evidence_hash": "13e1c6a248caf053fd373cec"
     },
     {
-      "event_id": "SEAM-4012aee7c4971575a3ed02ce",
-      "signature_class": "severe_weather",
-      "primary_regime": "severe_weather",
-      "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.53,
-      "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
-      "source_refs": [
-        "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
-        "gdacs_alerts",
-        "raw"
-      ],
-      "magnitude": null,
-      "official_reference": "14e60fdda9da5fd00a614fcc33fc69e4b3ac52c2740daaa06f0bfbd6d1a41216",
-      "evidence_hash": "4012aee7c4971575a3ed02ce"
-    },
-    {
       "event_id": "SEAM-698b469a7c97399bb3654deb",
       "signature_class": "severe_weather",
       "primary_regime": "severe_weather",
@@ -2057,6 +2037,26 @@
       "magnitude": null,
       "official_reference": "a2c89e5626ba58e727f4374cbf9b9f986cfbf971b2ed9350ba7aae617a3b7947",
       "evidence_hash": "698b469a7c97399bb3654deb"
+    },
+    {
+      "event_id": "SEAM-9faf1d73d018baf10d744c93",
+      "signature_class": "severe_weather",
+      "primary_regime": "severe_weather",
+      "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
+      "latitude": 37.7412,
+      "longitude": 15.0031,
+      "spatial_region": "37.74_15.0",
+      "geohash": "37.741:15.003",
+      "seam_phi": 0.61,
+      "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
+        "gdacs_alerts",
+        "raw"
+      ],
+      "magnitude": null,
+      "official_reference": "14e60fdda9da5fd00a614fcc33fc69e4b3ac52c2740daaa06f0bfbd6d1a41216",
+      "evidence_hash": "9faf1d73d018baf10d744c93"
     },
     {
       "event_id": "SEAM-d6352c9edc311af1e07b5fbb",
@@ -2339,15 +2339,15 @@
       "evidence_hash": "2894612e1865d60e3b11b697"
     },
     {
-      "event_id": "SEAM-433eaddfae1a84bba74d9cec",
+      "event_id": "SEAM-d4bcfbb0b282b832074935bf",
       "signature_class": "volcanic",
       "primary_regime": "volcanic",
       "timestamp_utc": "2026-05-17T02:43:42.987594+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.89,
+      "latitude": 19.421,
+      "longitude": -155.2924,
+      "spatial_region": "19.42_-155.29",
+      "geohash": "19.421:-155.292",
+      "seam_phi": 0.97,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:56.297948+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:55.800",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\volcano_smithsonian.json",
@@ -2356,18 +2356,18 @@
       ],
       "magnitude": null,
       "official_reference": "8682f878f202d8281e6d508e500f2012a36a9b591a946edfd9aa5b4e2e8ffdc4",
-      "evidence_hash": "433eaddfae1a84bba74d9cec"
+      "evidence_hash": "d4bcfbb0b282b832074935bf"
     },
     {
-      "event_id": "SEAM-4c12b3e26cfa53799a331374",
+      "event_id": "SEAM-32e5a035a10ca4055bafa65f",
       "signature_class": "volcanic",
       "primary_regime": "volcanic",
       "timestamp_utc": "2026-05-17T02:43:43.015696+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.89,
+      "latitude": 31.5933,
+      "longitude": 130.6568,
+      "spatial_region": "31.59_130.66",
+      "geohash": "31.593:130.657",
+      "seam_phi": 0.97,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"captured_utc\": \"2026-05-16T20:26:02.173805+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"t",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\volcano_smithsonian.json",
@@ -2376,18 +2376,18 @@
       ],
       "magnitude": null,
       "official_reference": "8e9e34b22e601ef4aed624a4b1e5a626ff79864458a7825a5f8c1eb291be1272",
-      "evidence_hash": "4c12b3e26cfa53799a331374"
+      "evidence_hash": "32e5a035a10ca4055bafa65f"
     },
     {
-      "event_id": "SEAM-aa67d9c622f786b4a9ac3d88",
+      "event_id": "SEAM-5220e8595562d8ef6c634408",
       "signature_class": "volcanic",
       "primary_regime": "volcanic",
       "timestamp_utc": "2026-05-17T02:43:43.015696+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.89,
+      "latitude": 31.5933,
+      "longitude": 130.6568,
+      "spatial_region": "31.59_130.66",
+      "geohash": "31.593:130.657",
+      "seam_phi": 0.97,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:01Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:01Z\",\n  \"captured_utc\": \"2026-05-16T20:32:01.390515+00",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\volcano_smithsonian_weekly168.json",
@@ -2396,7 +2396,7 @@
       ],
       "magnitude": null,
       "official_reference": "d832cff2216288e28508fffc140c157951a5b0ec637c81db86014a0c4551cf0e",
-      "evidence_hash": "aa67d9c622f786b4a9ac3d88"
+      "evidence_hash": "5220e8595562d8ef6c634408"
     },
     {
       "event_id": "SEAM-82e102fef84cd5a0c6664488",
@@ -2601,15 +2601,15 @@
   ],
   "manifold_events": [
     {
-      "event_id": "SEAM-1cb3ec2d11eb8ed1e7e6eac4",
+      "event_id": "SEAM-196e40c254276f4952b1992c",
       "signature_class": "drought",
       "primary_regime": "drought",
       "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.53,
+      "latitude": 37.7412,
+      "longitude": 15.0031,
+      "spatial_region": "37.74_15.0",
+      "geohash": "37.741:15.003",
+      "seam_phi": 0.61,
       "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
@@ -2618,7 +2618,7 @@
       ],
       "magnitude": null,
       "official_reference": "14e60fdda9da5fd00a614fcc33fc69e4b3ac52c2740daaa06f0bfbd6d1a41216",
-      "evidence_hash": "1cb3ec2d11eb8ed1e7e6eac4"
+      "evidence_hash": "196e40c254276f4952b1992c"
     },
     {
       "event_id": "SEAM-1ce2b0eea987da96821601c0",
@@ -2741,15 +2741,15 @@
       "evidence_hash": "7f03cf64081d1ce3f173c923"
     },
     {
-      "event_id": "SEAM-762152c5dbb7a706ae5f6ae2",
+      "event_id": "SEAM-9455702693c1ec7917e8e82b",
       "signature_class": "flood",
       "primary_regime": "flood",
       "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.53,
+      "latitude": 37.7412,
+      "longitude": 15.0031,
+      "spatial_region": "37.74_15.0",
+      "geohash": "37.741:15.003",
+      "seam_phi": 0.61,
       "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
@@ -2758,7 +2758,7 @@
       ],
       "magnitude": null,
       "official_reference": "14e60fdda9da5fd00a614fcc33fc69e4b3ac52c2740daaa06f0bfbd6d1a41216",
-      "evidence_hash": "762152c5dbb7a706ae5f6ae2"
+      "evidence_hash": "9455702693c1ec7917e8e82b"
     },
     {
       "event_id": "SEAM-7ef745dd63e482b539c88750",
@@ -3841,15 +3841,15 @@
       "evidence_hash": "fcc6b09a549da269cef76713"
     },
     {
-      "event_id": "SEAM-c9813be2d2c9a9ad53a82102",
+      "event_id": "SEAM-3329e1fa6751cfa936db1c34",
       "signature_class": "rf_disruption",
       "primary_regime": "rf_disruption",
       "timestamp_utc": "2026-05-17T02:43:42.987594+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.53,
+      "latitude": 19.421,
+      "longitude": -155.2924,
+      "spatial_region": "19.42_-155.29",
+      "geohash": "19.421:-155.292",
+      "seam_phi": 0.61,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:56.297948+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:55.800",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\volcano_smithsonian.json",
@@ -3858,7 +3858,7 @@
       ],
       "magnitude": null,
       "official_reference": "8682f878f202d8281e6d508e500f2012a36a9b591a946edfd9aa5b4e2e8ffdc4",
-      "evidence_hash": "c9813be2d2c9a9ad53a82102"
+      "evidence_hash": "3329e1fa6751cfa936db1c34"
     },
     {
       "event_id": "SEAM-9f6205b5c15e4c120ac13c94",
@@ -4221,6 +4221,26 @@
       "evidence_hash": "87a5848f89154b38c1785016"
     },
     {
+      "event_id": "SEAM-40f00b1cf5a7a582d342768e",
+      "signature_class": "seismic",
+      "primary_regime": "seismic",
+      "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
+      "latitude": 37.7412,
+      "longitude": 15.0031,
+      "spatial_region": "37.74_15.0",
+      "geohash": "37.741:15.003",
+      "seam_phi": 0.61,
+      "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
+        "gdacs_alerts",
+        "raw"
+      ],
+      "magnitude": null,
+      "official_reference": "14e60fdda9da5fd00a614fcc33fc69e4b3ac52c2740daaa06f0bfbd6d1a41216",
+      "evidence_hash": "40f00b1cf5a7a582d342768e"
+    },
+    {
       "event_id": "SEAM-444f9429fee3faa9591a41da",
       "signature_class": "seismic",
       "primary_regime": "seismic",
@@ -4239,26 +4259,6 @@
       "magnitude": null,
       "official_reference": "d6dbebd84e3ad506e40e91bbff5817896d3b0b7dd2a1f79393fde15d346fe8eb",
       "evidence_hash": "444f9429fee3faa9591a41da"
-    },
-    {
-      "event_id": "SEAM-84950bfbc4e024d030464bef",
-      "signature_class": "seismic",
-      "primary_regime": "seismic",
-      "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.53,
-      "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
-      "source_refs": [
-        "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
-        "gdacs_alerts",
-        "raw"
-      ],
-      "magnitude": null,
-      "official_reference": "14e60fdda9da5fd00a614fcc33fc69e4b3ac52c2740daaa06f0bfbd6d1a41216",
-      "evidence_hash": "84950bfbc4e024d030464bef"
     },
     {
       "event_id": "SEAM-b59734a70762e3617b27a0ad",
@@ -4401,15 +4401,15 @@
       "evidence_hash": "47777a13ddb4356ca24c29ff"
     },
     {
-      "event_id": "SEAM-b025301d1084c8738bb6fbe6",
+      "event_id": "SEAM-1246f44140b7c81a4b7acf38",
       "signature_class": "seismic",
       "primary_regime": "seismic",
       "timestamp_utc": "2026-05-17T02:43:42.987594+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.77,
+      "latitude": 19.421,
+      "longitude": -155.2924,
+      "spatial_region": "19.42_-155.29",
+      "geohash": "19.421:-155.292",
+      "seam_phi": 0.85,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:56.297948+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:55.800",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\volcano_smithsonian.json",
@@ -4418,7 +4418,7 @@
       ],
       "magnitude": null,
       "official_reference": "8682f878f202d8281e6d508e500f2012a36a9b591a946edfd9aa5b4e2e8ffdc4",
-      "evidence_hash": "b025301d1084c8738bb6fbe6"
+      "evidence_hash": "1246f44140b7c81a4b7acf38"
     },
     {
       "event_id": "SEAM-1504439d33e218c67190d0a2",
@@ -4541,15 +4541,15 @@
       "evidence_hash": "334708237b155c65cea938db"
     },
     {
-      "event_id": "SEAM-5ac2109e381aed4b9fcb770d",
+      "event_id": "SEAM-6a0d518b974a2e158dc9d8aa",
       "signature_class": "seismic",
       "primary_regime": "seismic",
       "timestamp_utc": "2026-05-17T02:43:43.015696+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.77,
+      "latitude": 31.5933,
+      "longitude": 130.6568,
+      "spatial_region": "31.59_130.66",
+      "geohash": "31.593:130.657",
+      "seam_phi": 0.85,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:01Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:01Z\",\n  \"captured_utc\": \"2026-05-16T20:32:01.390515+00",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\volcano_smithsonian_weekly168.json",
@@ -4558,18 +4558,18 @@
       ],
       "magnitude": null,
       "official_reference": "d832cff2216288e28508fffc140c157951a5b0ec637c81db86014a0c4551cf0e",
-      "evidence_hash": "5ac2109e381aed4b9fcb770d"
+      "evidence_hash": "6a0d518b974a2e158dc9d8aa"
     },
     {
-      "event_id": "SEAM-5e9b8ff5e6e68e1c9d931717",
+      "event_id": "SEAM-a9991b7f8db805d0a4b8c904",
       "signature_class": "seismic",
       "primary_regime": "seismic",
       "timestamp_utc": "2026-05-17T02:43:43.015696+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.77,
+      "latitude": 31.5933,
+      "longitude": 130.6568,
+      "spatial_region": "31.59_130.66",
+      "geohash": "31.593:130.657",
+      "seam_phi": 0.85,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"captured_utc\": \"2026-05-16T20:26:02.173805+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"t",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\volcano_smithsonian.json",
@@ -4578,7 +4578,7 @@
       ],
       "magnitude": null,
       "official_reference": "8e9e34b22e601ef4aed624a4b1e5a626ff79864458a7825a5f8c1eb291be1272",
-      "evidence_hash": "5e9b8ff5e6e68e1c9d931717"
+      "evidence_hash": "a9991b7f8db805d0a4b8c904"
     },
     {
       "event_id": "SEAM-13e1c6a248caf053fd373cec",
@@ -4601,26 +4601,6 @@
       "evidence_hash": "13e1c6a248caf053fd373cec"
     },
     {
-      "event_id": "SEAM-4012aee7c4971575a3ed02ce",
-      "signature_class": "severe_weather",
-      "primary_regime": "severe_weather",
-      "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.53,
-      "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
-      "source_refs": [
-        "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
-        "gdacs_alerts",
-        "raw"
-      ],
-      "magnitude": null,
-      "official_reference": "14e60fdda9da5fd00a614fcc33fc69e4b3ac52c2740daaa06f0bfbd6d1a41216",
-      "evidence_hash": "4012aee7c4971575a3ed02ce"
-    },
-    {
       "event_id": "SEAM-698b469a7c97399bb3654deb",
       "signature_class": "severe_weather",
       "primary_regime": "severe_weather",
@@ -4639,6 +4619,26 @@
       "magnitude": null,
       "official_reference": "a2c89e5626ba58e727f4374cbf9b9f986cfbf971b2ed9350ba7aae617a3b7947",
       "evidence_hash": "698b469a7c97399bb3654deb"
+    },
+    {
+      "event_id": "SEAM-9faf1d73d018baf10d744c93",
+      "signature_class": "severe_weather",
+      "primary_regime": "severe_weather",
+      "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
+      "latitude": 37.7412,
+      "longitude": 15.0031,
+      "spatial_region": "37.74_15.0",
+      "geohash": "37.741:15.003",
+      "seam_phi": 0.61,
+      "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
+        "gdacs_alerts",
+        "raw"
+      ],
+      "magnitude": null,
+      "official_reference": "14e60fdda9da5fd00a614fcc33fc69e4b3ac52c2740daaa06f0bfbd6d1a41216",
+      "evidence_hash": "9faf1d73d018baf10d744c93"
     },
     {
       "event_id": "SEAM-d6352c9edc311af1e07b5fbb",
@@ -4921,15 +4921,15 @@
       "evidence_hash": "2894612e1865d60e3b11b697"
     },
     {
-      "event_id": "SEAM-433eaddfae1a84bba74d9cec",
+      "event_id": "SEAM-d4bcfbb0b282b832074935bf",
       "signature_class": "volcanic",
       "primary_regime": "volcanic",
       "timestamp_utc": "2026-05-17T02:43:42.987594+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.89,
+      "latitude": 19.421,
+      "longitude": -155.2924,
+      "spatial_region": "19.42_-155.29",
+      "geohash": "19.421:-155.292",
+      "seam_phi": 0.97,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:56.297948+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:55.800",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\volcano_smithsonian.json",
@@ -4938,18 +4938,18 @@
       ],
       "magnitude": null,
       "official_reference": "8682f878f202d8281e6d508e500f2012a36a9b591a946edfd9aa5b4e2e8ffdc4",
-      "evidence_hash": "433eaddfae1a84bba74d9cec"
+      "evidence_hash": "d4bcfbb0b282b832074935bf"
     },
     {
-      "event_id": "SEAM-4c12b3e26cfa53799a331374",
+      "event_id": "SEAM-32e5a035a10ca4055bafa65f",
       "signature_class": "volcanic",
       "primary_regime": "volcanic",
       "timestamp_utc": "2026-05-17T02:43:43.015696+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.89,
+      "latitude": 31.5933,
+      "longitude": 130.6568,
+      "spatial_region": "31.59_130.66",
+      "geohash": "31.593:130.657",
+      "seam_phi": 0.97,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"captured_utc\": \"2026-05-16T20:26:02.173805+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"t",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\volcano_smithsonian.json",
@@ -4958,18 +4958,18 @@
       ],
       "magnitude": null,
       "official_reference": "8e9e34b22e601ef4aed624a4b1e5a626ff79864458a7825a5f8c1eb291be1272",
-      "evidence_hash": "4c12b3e26cfa53799a331374"
+      "evidence_hash": "32e5a035a10ca4055bafa65f"
     },
     {
-      "event_id": "SEAM-aa67d9c622f786b4a9ac3d88",
+      "event_id": "SEAM-5220e8595562d8ef6c634408",
       "signature_class": "volcanic",
       "primary_regime": "volcanic",
       "timestamp_utc": "2026-05-17T02:43:43.015696+00:00",
-      "latitude": null,
-      "longitude": null,
-      "spatial_region": null,
-      "geohash": null,
-      "seam_phi": 0.89,
+      "latitude": 31.5933,
+      "longitude": 130.6568,
+      "spatial_region": "31.59_130.66",
+      "geohash": "31.593:130.657",
+      "seam_phi": 0.97,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:01Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:01Z\",\n  \"captured_utc\": \"2026-05-16T20:32:01.390515+00",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\volcano_smithsonian_weekly168.json",
@@ -4978,7 +4978,7 @@
       ],
       "magnitude": null,
       "official_reference": "d832cff2216288e28508fffc140c157951a5b0ec637c81db86014a0c4551cf0e",
-      "evidence_hash": "aa67d9c622f786b4a9ac3d88"
+      "evidence_hash": "5220e8595562d8ef6c634408"
     },
     {
       "event_id": "SEAM-82e102fef84cd5a0c6664488",
