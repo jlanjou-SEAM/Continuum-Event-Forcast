@@ -354,6 +354,7 @@
                     }));
 
                     addLog(`📊 Loaded ${allEvents.length} events from LIVE MANIFOLD (127 signatures)`, 'warning');
+                }
 
                 if (allEvents.length === 0) {
                     container.innerHTML = '<div class="empty-state">No events yet. Waiting for data...</div>';
@@ -400,7 +401,7 @@
                 error.style.display = 'block';
                 error.textContent = `Error: ${err.message}`;
                 loading.style.display = 'none';
-                addLog(`❌ Error loading tracker: ${err.message}`, 'error');
+                addLog(`❌ Error: ${err.message}`, 'error');
             }
         }
 
