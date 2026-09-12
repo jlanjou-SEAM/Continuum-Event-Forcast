@@ -250,7 +250,7 @@
             return 'track';
         }
 
-        function formatLocation(loc) {
+        function formatLocation(loc, signal_summary) {
             if (!loc) return 'Unknown';
             const parts = [loc.city, loc.county_district, loc.state_province, loc.country].filter(Boolean);
             if (parts.length > 0) return parts.join(', ');
@@ -258,14 +258,21 @@
             if (loc.best_effort_lat && loc.best_effort_lon) {
                 return `${loc.best_effort_lat.toFixed(2)}, ${loc.best_effort_lon.toFixed(2)}`;
             }
-            return 'TBD';
+            // Last resort: extract source from signal_summary
+            if (signal_summary && typeof signal_summary === 'string') {
+                try {
+                    const summary = JSON.parse(signal_summary);
+                    if (summary.source) return `📡 ${summary.source.toUpperCase()}`;
+                } catch (e) {}
+            }
+            return 'Data In Progress';
         }
 
         function createEventCard(eventData, phase) {
             const lastConf = eventData.confidence_history[eventData.confidence_history.length - 1];
             const conf = lastConf ? (lastConf.seam_phi * 100).toFixed(0) : 'N/A';
             const mag = lastConf && lastConf.magnitude ? lastConf.magnitude : null;
-            const location = formatLocation(eventData.location) || 'TBD';
+            const location = formatLocation(eventData.location, eventData.signal_summary);
 
             const card = document.createElement('div');
             card.className = `event-card ${phase}`;
@@ -402,7 +409,7 @@
                     const card = createEventCard(evt, phase);
                     container.appendChild(card);
 
-                    addLog(`${phase === 'event' ? '🔴' : '🟠'} ${evt.signature_class.toUpperCase()} at ${formatLocation(evt.location)} - ${(lastConf*100).toFixed(0)}%`, phase);
+                    addLog(`${phase === 'event' ? '🔴' : '🟠'} ${evt.signature_class.toUpperCase()} at ${formatLocation(evt.location, evt.signal_summary)} - ${(lastConf*100).toFixed(0)}%`, phase);
                 });
 
                 loading.style.display = 'none';
