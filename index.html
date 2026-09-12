@@ -325,14 +325,18 @@
             // Show coordinates with location hierarchy
             const coordDisplay = eventData.location.best_effort_lat ? `<div class="card-info-row"><span class="card-label">Coords</span><span class="card-value">${eventData.location.best_effort_lat.toFixed(2)}, ${eventData.location.best_effort_lon.toFixed(2)}</span></div>` : '';
 
-            // Official alert status and time if available
+            // Official alert status and issued time
             const officialAlert = eventData.official_alert && eventData.official_alert.status ? eventData.official_alert.status : 'None';
-            const officialTime = eventData.official_alert && eventData.official_alert.issued_utc ? new Date(eventData.official_alert.issued_utc).toLocaleTimeString() : 'N/A';
+            const alertIssuedTime = eventData.official_alert && eventData.official_alert.issued_utc ? new Date(eventData.official_alert.issued_utc).toLocaleTimeString() : 'N/A';
+
+            // Event time vs detection time
+            const detectedTime = new Date(eventData.first_detected_utc).toLocaleTimeString();
+            const eventTime = eventData.projections && eventData.projections.projected_event_time ? new Date(eventData.projections.projected_event_time).toLocaleTimeString() : 'N/A';
 
             // Time delta between SEAM detection and official alert
             let timeDelta = '';
             if (eventData.identification_to_alert_minutes !== undefined && eventData.identification_to_alert_minutes !== null) {
-                timeDelta = `<div class="card-info-row"><span class="card-label">Time Δ</span><span class="card-value">${eventData.identification_to_alert_minutes} min</span></div>`;
+                timeDelta = `<div class="card-info-row"><span class="card-label">Detection→Alert</span><span class="card-value">${eventData.identification_to_alert_minutes}m</span></div>`;
             }
 
             card.innerHTML = `
@@ -346,16 +350,20 @@
                     <div class="card-confidence ${phase}">${conf}%</div>
                     <div class="card-info">
                         <div class="card-info-row">
-                            <span class="card-label">SEAM</span>
-                            <span class="card-value">${new Date(eventData.first_detected_utc).toLocaleTimeString()}</span>
+                            <span class="card-label">Detected</span>
+                            <span class="card-value">${detectedTime}</span>
                         </div>
                         <div class="card-info-row">
-                            <span class="card-label">Official</span>
-                            <span class="card-value">${officialTime}</span>
+                            <span class="card-label">Event</span>
+                            <span class="card-value">${eventTime}</span>
+                        </div>
+                        <div class="card-info-row">
+                            <span class="card-label">Alert Issued</span>
+                            <span class="card-value">${alertIssuedTime}</span>
                         </div>
                         ${timeDelta}
                         <div class="card-info-row">
-                            <span class="card-label">Alert</span>
+                            <span class="card-label">Status</span>
                             <span class="card-value">${officialAlert}</span>
                         </div>
                         ${magDisplay}
