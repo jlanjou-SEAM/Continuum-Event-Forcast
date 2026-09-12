@@ -227,6 +227,7 @@
         const REPO = 'jlanjou-SEAM/SEAM-Core';
         const BRANCH = 'main';
         const TRACKER_FILE = 'continuum/event_tracker.json';
+        const MANIFOLD_FILE = 'continuum/output/volcanic_manifold_analysis.json';
 
         let logEntries = [];
 
@@ -301,14 +302,58 @@
             error.style.display = 'none';
 
             try {
-                const url = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${TRACKER_FILE}`;
-                const response = await fetch(url);
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                let allEvents = [];
 
-                const tracker = await response.json();
-                const allEvents = Object.values(tracker.events || {});
+                // Try tracker first
+                try {
+                    const trackerUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${TRACKER_FILE}`;
+                    const trackerResponse = await fetch(trackerUrl);
+                    if (trackerResponse.ok) {
+                        const tracker = await trackerResponse.json();
+                        const trackerEvents = Object.values(tracker.events || {});
+                        if (trackerEvents.length > 0) {
+                            allEvents = trackerEvents;
+                            addLog(`📊 Loaded ${allEvents.length} events from tracker (30-day history)`, 'info');
+                        }
+                    }
+                } catch (e) {
+                    console.log('Tracker not available, trying manifold...');
+                }
 
-                addLog(`📊 Loaded ${allEvents.length} events from tracker`, 'info');
+                // If tracker empty, use manifold
+                if (allEvents.length === 0) {
+                    const manifoldUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${MANIFOLD_FILE}`;
+                    const manifoldResponse = await fetch(manifoldUrl);
+                    if (!manifoldResponse.ok) throw new Error(`HTTP ${manifoldResponse.status}`);
+
+                    const manifold = await manifoldResponse.json();
+                    const manifoldEvents = manifold.manifold_events || manifold.matches || [];
+
+                    // Convert manifold events to tracker format for display
+                    allEvents = manifoldEvents.map(e => ({
+                        event_id: e.event_id,
+                        signature_class: e.signature_class,
+                        primary_regime: e.primary_regime,
+                        first_detected_utc: e.timestamp_utc,
+                        status: 'active',
+                        location: {
+                            best_effort_lat: e.latitude,
+                            best_effort_lon: e.longitude,
+                            region: null,
+                            country: null,
+                            state_province: null,
+                            county_district: null,
+                            city: null
+                        },
+                        confidence_history: [{
+                            timestamp_utc: e.timestamp_utc,
+                            seam_phi: e.seam_phi,
+                            phase: getPhase(e.seam_phi),
+                            magnitude: e.magnitude
+                        }]
+                    }));
+
+                    addLog(`📊 Loaded ${allEvents.length} events from LIVE MANIFOLD (127 signatures)`, 'warning');
 
                 if (allEvents.length === 0) {
                     container.innerHTML = '<div class="empty-state">No events yet. Waiting for data...</div>';
