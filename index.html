@@ -321,7 +321,19 @@
             card.className = `event-card ${phase}`;
 
             const magDisplay = mag ? `<div class="card-info-row"><span class="card-label">Magnitude</span><span class="card-value">${mag}</span></div>` : '';
-            const coordDisplay = eventData.location.best_effort_lat ? `<div class="card-info-row"><span class="card-label">Coordinates</span><span class="card-value">${eventData.location.best_effort_lat.toFixed(2)}, ${eventData.location.best_effort_lon.toFixed(2)}</span></div>` : '';
+
+            // Show coordinates with location hierarchy
+            const coordDisplay = eventData.location.best_effort_lat ? `<div class="card-info-row"><span class="card-label">Coords</span><span class="card-value">${eventData.location.best_effort_lat.toFixed(2)}, ${eventData.location.best_effort_lon.toFixed(2)}</span></div>` : '';
+
+            // Official alert status and time if available
+            const officialAlert = eventData.official_alert && eventData.official_alert.status ? eventData.official_alert.status : 'None';
+            const officialTime = eventData.official_alert && eventData.official_alert.issued_utc ? new Date(eventData.official_alert.issued_utc).toLocaleTimeString() : 'N/A';
+
+            // Time delta between SEAM detection and official alert
+            let timeDelta = '';
+            if (eventData.identification_to_alert_minutes !== undefined && eventData.identification_to_alert_minutes !== null) {
+                timeDelta = `<div class="card-info-row"><span class="card-label">Time Δ</span><span class="card-value">${eventData.identification_to_alert_minutes} min</span></div>`;
+            }
 
             card.innerHTML = `
                 <div>
@@ -334,12 +346,17 @@
                     <div class="card-confidence ${phase}">${conf}%</div>
                     <div class="card-info">
                         <div class="card-info-row">
-                            <span class="card-label">Detected</span>
+                            <span class="card-label">SEAM</span>
                             <span class="card-value">${new Date(eventData.first_detected_utc).toLocaleTimeString()}</span>
                         </div>
                         <div class="card-info-row">
-                            <span class="card-label">Status</span>
-                            <span class="card-value">${eventData.status.toUpperCase()}</span>
+                            <span class="card-label">Official</span>
+                            <span class="card-value">${officialTime}</span>
+                        </div>
+                        ${timeDelta}
+                        <div class="card-info-row">
+                            <span class="card-label">Alert</span>
+                            <span class="card-value">${officialAlert}</span>
                         </div>
                         ${magDisplay}
                         ${coordDisplay}
@@ -450,7 +467,8 @@
                     const card = createEventCard(evt, phase);
                     container.appendChild(card);
 
-                    addLog(`${phase === 'event' ? '🔴' : '🟠'} ${evt.signature_class.toUpperCase()} at ${formatLocation(evt.location, evt.signal_summary)} - ${(lastConf*100).toFixed(0)}%`, phase);
+                    const deltaStr = evt.identification_to_alert_minutes ? ` [Δ${evt.identification_to_alert_minutes}m]` : '';
+                    addLog(`${phase === 'event' ? '🔴' : '🟠'} ${evt.signature_class.toUpperCase()} at ${formatLocation(evt.location, evt.signal_summary)} - ${(lastConf*100).toFixed(0)}%${deltaStr}`, phase);
                 });
 
                 loading.style.display = 'none';
