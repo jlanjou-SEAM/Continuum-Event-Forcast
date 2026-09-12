@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Continuum Database - Live Manifold Index</title>
+    <title>Continuum - Natural Event Projections</title>
     <style>
         * {
             margin: 0;
@@ -12,21 +12,20 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
-            color: #333;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
         header {
             background: white;
-            padding: 40px;
+            padding: 30px;
             border-radius: 10px;
             margin-bottom: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -34,236 +33,437 @@
 
         h1 {
             color: #667eea;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .subtitle {
             color: #666;
-            font-size: 16px;
+            font-size: 14px;
         }
 
-        .status {
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .controls {
             background: white;
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        .status-item {
+        .filter-btn {
+            padding: 8px 16px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .filter-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .filter-btn:hover {
+            border-color: #667eea;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid #667eea;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .event-type {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .event-type.volcanic {
+            background: #e74c3c;
+        }
+
+        .event-type.seismic {
+            background: #f39c12;
+        }
+
+        .event-type.wildfire {
+            background: #e67e22;
+        }
+
+        .event-type.flood {
+            background: #3498db;
+        }
+
+        .event-type.severe_weather {
+            background: #9b59b6;
+        }
+
+        .event-type.tropical_cyclone {
+            background: #16a085;
+        }
+
+        .event-type.tornado {
+            background: #c0392b;
+        }
+
+        .event-type.geomagnetic {
+            background: #2980b9;
+        }
+
+        .event-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .event-info {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 8px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
+            gap: 8px;
         }
 
-        .status-item:last-child {
-            border-bottom: none;
-        }
-
-        .status-label {
+        .event-info-label {
             font-weight: 600;
             color: #333;
+            min-width: 80px;
         }
 
-        .status-value {
-            color: #667eea;
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
+        .confidence {
+            display: inline-block;
+            padding: 4px 8px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            font-weight: bold;
         }
 
-        .loading {
-            color: #ff9800;
+        .confidence.high {
+            background: #d4edda;
+            color: #155724;
         }
 
-        .error {
-            color: #f44336;
+        .confidence.medium {
+            background: #fff3cd;
+            color: #856404;
         }
 
-        .success {
-            color: #4caf50;
+        .confidence.low {
+            background: #f8d7da;
+            color: #721c24;
         }
 
-        .manifold-grid {
+        .location {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .manifold-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-left: 4px solid #667eea;
-        }
-
-        .manifold-card h3 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-
-        .manifold-card p {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-
-        .manifold-data {
-            background: #f5f5f5;
-            padding: 10px;
-            border-radius: 5px;
-            font-family: 'Courier New', monospace;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #eee;
             font-size: 12px;
-            max-height: 200px;
-            overflow-y: auto;
-            color: #333;
         }
 
-        .refresh-info {
-            background: #e3f2fd;
-            padding: 10px;
-            border-radius: 5px;
-            margin-top: 10px;
-            color: #1976d2;
+        .location-item {
+            background: #f9f9f9;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .location-label {
+            font-weight: 600;
+            color: #667eea;
+            font-size: 11px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .location-value {
+            color: #333;
+            font-family: 'Courier New', monospace;
             font-size: 13px;
+        }
+
+        .empty-state {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            color: #999;
         }
 
         footer {
             text-align: center;
             color: white;
             margin-top: 40px;
-            font-size: 14px;
+            font-size: 13px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: white;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🌍 Continuum Database</h1>
-            <p class="subtitle">Real-time multi-source data aggregation and manifold analysis</p>
+            <h1>🌍 Continuum Event Projections</h1>
+            <p class="subtitle">Real-time natural disaster and event projections from multi-source manifold analysis</p>
+
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-label">Active Events</div>
+                    <div class="stat-value" id="totalEvents">-</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Last Update</div>
+                    <div class="stat-value" id="lastUpdate" style="font-size: 16px;">-</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Event Types</div>
+                    <div class="stat-value" id="eventTypes">-</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Confidence Avg</div>
+                    <div class="stat-value" id="avgConfidence">-</div>
+                </div>
+            </div>
         </header>
 
-        <div class="status">
-            <div class="status-item">
-                <span class="status-label">Last Update:</span>
-                <span class="status-value" id="lastUpdate">Loading...</span>
-            </div>
-            <div class="status-item">
-                <span class="status-label">Data Sources:</span>
-                <span class="status-value" id="sourceCount">Loading...</span>
-            </div>
-            <div class="status-item">
-                <span class="status-label">Pipeline Status:</span>
-                <span class="status-value loading" id="pipelineStatus">Checking...</span>
-            </div>
-            <div class="status-item">
-                <span class="status-label">Auto-refresh:</span>
-                <span class="status-value" id="refreshRate">Every 60 seconds</span>
-            </div>
+        <div class="controls">
+            <button class="filter-btn active" onclick="filterEvents(null)">All Events</button>
+            <button class="filter-btn" onclick="filterEvents('volcanic')">Volcanic</button>
+            <button class="filter-btn" onclick="filterEvents('seismic')">Seismic</button>
+            <button class="filter-btn" onclick="filterEvents('wildfire')">Wildfire</button>
+            <button class="filter-btn" onclick="filterEvents('flood')">Flood</button>
+            <button class="filter-btn" onclick="filterEvents('severe_weather')">Severe Weather</button>
+            <button class="filter-btn" onclick="filterEvents('tropical_cyclone')">Cyclones</button>
         </div>
 
-        <div class="manifold-grid" id="manifoldGrid">
-            <div class="status">
-                <p class="loading">Loading manifold data...</p>
-            </div>
-        </div>
+        <div id="loading" class="loading" style="display:none;">Loading event projections...</div>
+        <div id="error" class="error" style="display:none;"></div>
+        <div id="cardsContainer" class="cards-grid"></div>
 
         <footer>
-            <p>Continuum Database • GitHub: <a href="https://github.com/jlanjou-SEAM/SEAM-Core" style="color: white;">jlanjou-SEAM/SEAM-Core</a></p>
-            <p>Updates automatically every 1-5 minutes via GitHub Actions</p>
+            <p>Continuum Database • Manifold-based natural event projection system</p>
+            <p>Updates every 1-5 minutes via GitHub Actions automation</p>
         </footer>
     </div>
 
     <script>
-        const MANIFOLD_REPO = 'jlanjou-SEAM/SEAM-Core';
-        const MANIFOLD_BRANCH = 'main';
+        const REPO = 'jlanjou-SEAM/SEAM-Core';
+        const BRANCH = 'main';
+        const MANIFOLD_FILE = 'continuum/output/volcanic_manifold_analysis.json';
         const REFRESH_INTERVAL = 60000; // 60 seconds
 
-        const manifoldFiles = {
-            'Consolidated Master': 'continuum/outputs/continuum_master.json',
-            'Volcanic Analysis': 'continuum/outputs/volcanic_manifold_analysis.json',
-            'Event Matrix': 'continuum/outputs/SEAM_Event_Matrix.json',
-            'Official Analysis': 'continuum/outputs/SEAM_Recursive_Official_Analysis.json',
-            'Web Index': 'continuum/outputs/SEAM_Web_Index.json'
-        };
+        let allEvents = [];
+        let currentFilter = null;
 
-        function getRawGitHubUrl(filePath) {
-            return `https://raw.githubusercontent.com/${MANIFOLD_REPO}/${MANIFOLD_BRANCH}/${filePath}`;
+        function getManifoldUrl() {
+            return `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${MANIFOLD_FILE}`;
         }
 
-        async function fetchManifold(name, filePath) {
-            try {
-                const url = getRawGitHubUrl(filePath);
-                const response = await fetch(url);
+        function getConfidenceClass(score) {
+            if (!score) return 'low';
+            const numScore = parseFloat(score);
+            if (numScore >= 0.7) return 'high';
+            if (numScore >= 0.4) return 'medium';
+            return 'low';
+        }
 
-                if (!response.ok) {
-                    throw new Error(`HTTP ${response.status}`);
-                }
+        function formatCoord(value) {
+            if (!value) return 'N/A';
+            const num = parseFloat(value);
+            return num.toFixed(4);
+        }
+
+        function createEventCard(event) {
+            const type = event.signature_class || 'unknown';
+            const confidence = event.confidence_score || event.score || 0;
+            const lat = event.latitude || event.lat || 'N/A';
+            const lon = event.longitude || event.lon || 'N/A';
+            const timestamp = event.timestamp_utc || event.timestamp || 'Unknown';
+            const summary = event.event_summary || event.summary || event.title || type.toUpperCase();
+
+            const card = document.createElement('div');
+            card.className = 'event-card';
+
+            const confidenceNum = parseFloat(confidence);
+            const confidencePercent = (confidenceNum * 100).toFixed(0);
+
+            card.innerHTML = `
+                <span class="event-type ${type}">${type}</span>
+                <div class="event-title">${summary.substring(0, 60)}</div>
+
+                <div class="event-info">
+                    <span class="event-info-label">Confidence:</span>
+                    <span class="confidence ${getConfidenceClass(confidence)}">${confidencePercent}%</span>
+                </div>
+
+                <div class="event-info">
+                    <span class="event-info-label">Detected:</span>
+                    <span>${new Date(timestamp).toLocaleString()}</span>
+                </div>
+
+                <div class="location">
+                    <div class="location-item">
+                        <span class="location-label">Latitude</span>
+                        <span class="location-value">${formatCoord(lat)}</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="location-label">Longitude</span>
+                        <span class="location-value">${formatCoord(lon)}</span>
+                    </div>
+                </div>
+            `;
+
+            return card;
+        }
+
+        function filterEvents(type) {
+            currentFilter = type;
+
+            // Update button states
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            renderCards();
+        }
+
+        function renderCards() {
+            const container = document.getElementById('cardsContainer');
+            container.innerHTML = '';
+
+            const filtered = currentFilter
+                ? allEvents.filter(e => e.signature_class === currentFilter)
+                : allEvents;
+
+            if (filtered.length === 0) {
+                container.innerHTML = '<div class="empty-state">No events matching filter</div>';
+                return;
+            }
+
+            filtered.forEach(event => {
+                container.appendChild(createEventCard(event));
+            });
+        }
+
+        async function loadManifold() {
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            const container = document.getElementById('cardsContainer');
+
+            loading.style.display = 'block';
+            error.style.display = 'none';
+
+            try {
+                const response = await fetch(getManifoldUrl());
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
                 const data = await response.json();
-                return { name, data, error: null };
-            } catch (error) {
-                return { name, data: null, error: error.message };
+                allEvents = data.manifold_events || data.matches || [];
+
+                // Update stats
+                document.getElementById('totalEvents').textContent = allEvents.length;
+                document.getElementById('lastUpdate').textContent = new Date(data.generated_utc).toLocaleTimeString();
+                document.getElementById('eventTypes').textContent = data.signature_classes || Object.keys(data.signature_counts || {}).length;
+
+                // Calculate average confidence
+                const confidences = allEvents
+                    .map(e => parseFloat(e.confidence_score || e.score || 0))
+                    .filter(c => !isNaN(c));
+                const avgConf = confidences.length > 0
+                    ? (confidences.reduce((a, b) => a + b) / confidences.length * 100).toFixed(0)
+                    : '-';
+                document.getElementById('avgConfidence').textContent = avgConf + '%';
+
+                renderCards();
+                loading.style.display = 'none';
+
+            } catch (err) {
+                error.style.display = 'block';
+                error.textContent = `Error loading manifold: ${err.message}`;
+                container.innerHTML = '';
+                console.error(err);
             }
         }
 
-        async function loadAllManifolds() {
-            const grid = document.getElementById('manifoldGrid');
-            grid.innerHTML = '';
-
-            const promises = Object.entries(manifoldFiles).map(([name, path]) =>
-                fetchManifold(name, path)
-            );
-
-            const results = await Promise.all(promises);
-
-            let successCount = 0;
-
-            results.forEach(({ name, data, error }) => {
-                const card = document.createElement('div');
-                card.className = 'manifold-card';
-
-                let content = `<h3>${name}</h3>`;
-
-                if (error) {
-                    content += `<p class="error">Error: ${error}</p>`;
-                    card.style.borderLeftColor = '#f44336';
-                } else {
-                    successCount++;
-                    const dataStr = JSON.stringify(data, null, 2);
-                    const preview = dataStr.substring(0, 300) + (dataStr.length > 300 ? '...' : '');
-
-                    content += `
-                        <p>Status: <span class="success">✓ Updated</span></p>
-                        <div class="manifold-data">${preview}</div>
-                        <div class="refresh-info">
-                            Size: ${(JSON.stringify(data).length / 1024).toFixed(2)} KB
-                        </div>
-                    `;
-                    card.style.borderLeftColor = '#4caf50';
-                }
-
-                card.innerHTML = content;
-                grid.appendChild(card);
-            });
-
-            // Update status
-            document.getElementById('lastUpdate').textContent = new Date().toLocaleString();
-            document.getElementById('pipelineStatus').textContent = `${successCount}/${results.length} manifolds loaded`;
-            document.getElementById('pipelineStatus').className = 'status-value ' + (successCount === results.length ? 'success' : 'loading');
-        }
-
         // Load on page load
-        loadAllManifolds();
+        loadManifold();
 
         // Auto-refresh every 60 seconds
-        setInterval(loadAllManifolds, REFRESH_INTERVAL);
+        setInterval(loadManifold, REFRESH_INTERVAL);
 
-        console.log('Continuum Manifold Index loaded. Refreshing every 60 seconds.');
+        console.log('Continuum Event Projection Dashboard loaded');
     </script>
 </body>
 </html>
