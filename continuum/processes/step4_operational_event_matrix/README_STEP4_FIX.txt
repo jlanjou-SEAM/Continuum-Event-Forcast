@@ -1,0 +1,1 @@
+Step4 uses outputs.event_matrix and outputs.event_matrix_table from continuum/config/pipeline_config.json

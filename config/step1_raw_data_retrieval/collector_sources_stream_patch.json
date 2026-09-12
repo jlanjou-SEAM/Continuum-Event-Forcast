@@ -1,0 +1,33 @@
+{
+  "iss_hls": {
+    "bucket": "streams",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://video.nasa.gov/hls/live/2037218/NTV-Public-IPS.m3u8"
+    ]
+  },
+
+  "kiwisdr": {
+    "bucket": "streams",
+    "timeout_seconds": 2,
+    "urls": [
+      "http://kiwisdr.com/public/"
+    ]
+  },
+
+  "websdr": {
+    "bucket": "streams",
+    "timeout_seconds": 2,
+    "urls": [
+      "http://websdr.org/"
+    ]
+  },
+
+  "lightningmaps": {
+    "bucket": "streams",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.lightningmaps.org/"
+    ]
+  }
+}

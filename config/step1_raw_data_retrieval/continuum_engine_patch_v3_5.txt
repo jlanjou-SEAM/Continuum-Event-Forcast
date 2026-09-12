@@ -1,0 +1,17 @@
+# SEAM CONTINUUM ENGINE PATCH v3.5
+
+# CONTINUUM SHOULD TRACK:
+# state transitions only
+
+# NOT:
+# repeated identical telemetry snapshots
+
+# EFFECT:
+# unchanged sources no longer create:
+# duplicate continuum entries
+
+# RESULT:
+# much smaller continuum
+# faster processing
+# better signal density
+# lower git payload volume

@@ -1,0 +1,80 @@
+{
+  "purpleair": {
+    "acquisition_class": "curated",
+    "urls": [
+      "https://api.purpleair.com/v1/sensors"
+    ]
+  },
+  "openaq": {
+    "acquisition_class": "curated",
+    "urls": [
+      "https://api.openaq.org/v2/latest"
+    ]
+  },
+  "weatherunderground_bulk": {
+    "acquisition_class": "realtime",
+    "urls": [
+      "https://api.weather.com/v2/pws/observations/current"
+    ]
+  },
+  "ambientweather_bulk": {
+    "acquisition_class": "realtime",
+    "urls": [
+      "https://api.ambientweather.net/v1/devices"
+    ]
+  },
+  "goes_east_geocolor": {
+    "acquisition_class": "image_stream",
+    "urls": [
+      "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/latest.jpg"
+    ]
+  },
+  "goes_west_geocolor": {
+    "acquisition_class": "image_stream",
+    "urls": [
+      "https://cdn.star.nesdis.noaa.gov/GOES18/ABI/FD/GEOCOLOR/latest.jpg"
+    ]
+  },
+  "himawari": {
+    "acquisition_class": "image_stream",
+    "urls": [
+      "https://www.data.jma.go.jp/mscweb/data/himawari/img/se4/se4_b13_1080.jpg"
+    ]
+  },
+  "meteosat": {
+    "acquisition_class": "image_stream",
+    "urls": [
+      "https://eumetview.eumetsat.int/static-images/latestImages/EUMETSAT_MSG_RGBNatColourEnhncd.jpg"
+    ]
+  },
+  "nexrad_conus": {
+    "acquisition_class": "image_stream",
+    "urls": [
+      "https://radar.weather.gov/ridge/standard/CONUS_loop.gif"
+    ]
+  },
+  "satnogs_network": {
+    "acquisition_class": "realtime",
+    "urls": [
+      "https://network.satnogs.org/api/"
+    ]
+  },
+  "adsbexchange_live": {
+    "acquisition_class": "realtime",
+    "urls": [
+      "https://globe.adsbexchange.com/"
+    ]
+  },
+  "opensky_live": {
+    "acquisition_class": "realtime",
+    "urls": [
+      "https://opensky-network.org/api/states/all"
+    ]
+  },
+  "cwop_mesh": {
+    "acquisition_class": "realtime",
+    "urls": [
+      "https://www.findu.com/cgi-bin/wxpage.cgi"
+    ]
+  }
+}

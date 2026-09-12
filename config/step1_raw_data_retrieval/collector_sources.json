@@ -1,0 +1,843 @@
+{
+  "usgs": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "usgs_day": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "emsc": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.seismicportal.eu/fdsnws/event/1/query?limit=200&format=json"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "iris": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://service.iris.edu/fdsnws/event/1/query?format=geojson&limit=200"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "geonet_nz": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://api.geonet.org.nz/quake?MMI=3"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "geofon": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://geofon.gfz-potsdam.de/fdsnws/event/1/query?format=text&limit=100"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "raspberryshake": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://data.raspberryshake.org/fdsnws/station/1/query?network=AM&level=station&format=text"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "openmeteo_global": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://api.open-meteo.com/v1/forecast?latitude=0&longitude=0&current_weather=true"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "madis": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://madis.ncep.noaa.gov/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "cwop": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://weather.gladstonefamily.net/cgi-bin/wxsite.cgi"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "uscrn": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "mesowest": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://mesowest.utah.edu/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "weatherunderground_pws": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.wunderground.com/dashboard/pws/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "earthnetworks": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.earthnetworks.com/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "meteostat": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://meteostat.net/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "ambientweather": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://ambientweather.net/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "synopticdata": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://api.synopticdata.com/v2/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "openaq": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://api.openaq.org/v2/latest?limit=100"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "safecast": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://api.safecast.org/en-US/measurements.json"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "noaabuoys": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.ndbc.noaa.gov/data/latest_obs/latest_obs.txt"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "usgs_water": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01646500&period=PT2H"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "ioc_sealevel": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "http://www.ioc-sealevelmonitoring.org/service.php?format=json"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "argo_index": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://data-argo.ifremer.fr/latest_data/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "copernicus_marine": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://marine.copernicus.eu/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "wavewatch": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://polar.ncep.noaa.gov/waves/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "hycom": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.hycom.org/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "dart_tsunami": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.ndbc.noaa.gov/dart.shtml"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "goes_xray": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://services.swpc.noaa.gov/json/goes/primary/xrays-1-day.json"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "goes_mag": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://services.swpc.noaa.gov/json/goes/primary/magnetometers-1-day.json"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "swpc_kindex": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://services.swpc.noaa.gov/json/planetary_k_index_1m.json"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "swpc_solarwind": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://services.swpc.noaa.gov/products/solar-wind/plasma-1-day.json"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "nasa_donki": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://api.nasa.gov/DONKI/notifications?api_key=DEMO_KEY"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "nasa_epic": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://epic.gsfc.nasa.gov/api/natural"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "nasa_dsn": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://eyes.nasa.gov/dsn/data/dsn.json"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "sidc_solar": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.sidc.be/SILSO/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "intermagnet": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://intermagnet.org/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "neutronmonitor": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.nmdb.eu/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "superdarn": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://superdarn.org/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "giro": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://giro.uml.edu/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "reversebeaconnetwork": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.reversebeacon.net/raw_data/"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "wsprnet": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://wsprnet.org/olddb?mode=csv&count=100"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "pskreporter": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://pskreporter.info/cgi-bin/psk_xml.pl?last=15"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "hamsci": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://hamsci.org/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "stanfordsid": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "http://solar-center.stanford.edu/SID/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "ecallisto": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "http://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "grapevlf": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://giro.uml.edu/grape/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "aprsfi": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://aprs.fi/"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "clublog": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://clublog.org/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "pota": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://pota.app/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "sotawatch": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://sotawatch.sota.org.uk/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "opensky": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://opensky-network.org/api/states/all"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "adsbexchange": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://globe.adsbexchange.com/"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "celestrak": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=json"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "satnogs": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://db.satnogs.org/api/transmitters/?format=json"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "spaceweatherlive": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.spaceweatherlive.com/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "blitzortung": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.blitzortung.org/en/live_lightning_maps.php"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "firms": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://firms.modaps.eosdis.nasa.gov/data/active_fire/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "globalforestwatch": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://data.globalforestwatch.org/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "droughtmonitor": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://droughtmonitor.unl.edu/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "viirs_fire": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.earthdata.nasa.gov/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "soilmoisture_activepassive": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://smap.jpl.nasa.gov/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "gridstatus": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.gridstatus.io/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "ercot": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.ercot.com/api/1/services/read/dashboards"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "pjm": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://api.pjm.com/api/v1/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "caiso": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.caiso.com/TodaysOutlook/Pages/default.aspx"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "entsoe": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://transparency.entsoe.eu/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "eia_grid_monitor": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.eia.gov/beta/electricity/gridmonitor/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "ukgrid": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.nationalgrideso.com/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "aemo": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://aemo.com.au/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "occto": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.occto.or.jp/en/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "lofar": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://lofar-surveys.org/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "murchisonwidefieldarray": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://ws.mwatelescope.org/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "vla": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://science.nrao.edu/facilities/vla"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "gmrt": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://naps.ncra.tifr.res.in/goa/data/search"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "mithaystack": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.haystack.mit.edu/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "berkeleyseti": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://seti.berkeley.edu/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "sloandigitalskysurvey": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.sdss.org/dr18/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "carisma": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.carisma.ca/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "image_magnetometer": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://space.fmi.fi/image/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "global_lightning_archive": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.lightningmaps.org/"
+    ],
+    "acquisition_class": "image_stream"
+  },
+  "ionogram_archive": {
+    "bucket": "raw",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://giro.uml.edu/didbase/"
+    ],
+    "acquisition_class": "image_stream"
+  },
+  "lightning_density_clusters": {
+    "bucket": "curated",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.lightningmaps.org/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "rf_propagation_clusters": {
+    "bucket": "curated",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.dxmaps.com/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "weather_station_mesh": {
+    "bucket": "curated",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://api.synopticdata.com/v2/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "storm_cell_tracking": {
+    "bucket": "curated",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://mesowest.utah.edu/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "wildfire_risk_overlay": {
+    "bucket": "curated",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://firms.modaps.eosdis.nasa.gov/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "drought_heat_overlay": {
+    "bucket": "curated",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://droughtmonitor.unl.edu/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "air_quality_clusters": {
+    "bucket": "curated",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://api.openaq.org/v2/latest"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "grid_stability_overlay": {
+    "bucket": "curated",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.gridstatus.io/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "hf_skip_observations": {
+    "bucket": "curated",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://wsprnet.org/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "citizen_weather_aggregation": {
+    "bucket": "curated",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://weather.gladstonefamily.net/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "space_weather_overlay": {
+    "bucket": "curated",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://services.swpc.noaa.gov/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "marine_anomaly_overlay": {
+    "bucket": "curated",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://marine.copernicus.eu/"
+    ],
+    "acquisition_class": "nonrealtime"
+  },
+  "iss_hls": {
+    "bucket": "streams",
+    "timeout_seconds": 6,
+    "urls": [
+      "https://video.nasa.gov/hls/live/2037218/NTV-Public-IPS.m3u8",
+      "https://www.nasa.gov/live/"
+    ],
+    "acquisition_class": "image_stream"
+  },
+  "kiwisdr": {
+    "bucket": "streams",
+    "timeout_seconds": 2,
+    "urls": [
+      "http://kiwisdr.com/public/"
+    ],
+    "acquisition_class": "image_stream"
+  },
+  "websdr": {
+    "bucket": "streams",
+    "timeout_seconds": 2,
+    "urls": [
+      "http://websdr.org/"
+    ],
+    "acquisition_class": "image_stream"
+  },
+  "lightningmaps": {
+    "bucket": "streams",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.lightningmaps.org/"
+    ],
+    "acquisition_class": "image_stream"
+  },
+  "dxmaps": {
+    "bucket": "streams",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.dxmaps.com/"
+    ],
+    "acquisition_class": "image_stream"
+  },
+  "adsbexchange_live": {
+    "bucket": "streams",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://globe.adsbexchange.com/"
+    ],
+    "acquisition_class": "image_stream"
+  },
+  "noaa_alerts": {
+    "bucket": "official",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://api.weather.gov/alerts/active"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "nhc_advisories": {
+    "bucket": "official",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.nhc.noaa.gov/CurrentStorms.json"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "gdacs_alerts": {
+    "bucket": "official",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.gdacs.org/xml/rss.xml"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "volcano_smithsonian": {
+    "bucket": "official",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://volcano.si.edu/news/WeeklyVolcanoRSS.xml"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "copernicus_ems": {
+    "bucket": "official",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://emergency.copernicus.eu/"
+    ],
+    "acquisition_class": "realtime"
+  },
+  "fema_disasters": {
+    "bucket": "official",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.fema.gov/openfema-data-page/disaster-declarations-summaries-v2"
+    ],
+    "acquisition_class": "realtime"
+  }
+}

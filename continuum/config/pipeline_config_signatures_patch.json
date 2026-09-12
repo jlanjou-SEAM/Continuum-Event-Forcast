@@ -1,0 +1,79 @@
+{
+  "PATCH_ONLY": true,
+  "NOTE": "MERGE ONLY THE signatures BLOCK INTO EXISTING LKGS pipeline_config.json",
+  "signatures": {
+    "volcanic": [
+      "volcano",
+      "volcanic",
+      "eruption",
+      "lava",
+      "magma",
+      "ash",
+      "ash plume",
+      "kilauea",
+      "mauna loa"
+    ],
+    "seismic": [
+      "earthquake",
+      "aftershock",
+      "tremor",
+      "fault",
+      "richter",
+      "magnitude",
+      "seismic"
+    ],
+    "severe_weather": [
+      "thunderstorm",
+      "supercell",
+      "hail",
+      "lightning",
+      "derecho"
+    ],
+    "tornadic": [
+      "tornado",
+      "mesocyclone",
+      "funnel cloud",
+      "rotation"
+    ],
+    "tropical_cyclone": [
+      "hurricane",
+      "cyclone",
+      "typhoon",
+      "storm surge"
+    ],
+    "flood": [
+      "flood",
+      "flash flood",
+      "river flood",
+      "inundation"
+    ],
+    "wildfire": [
+      "wildfire",
+      "forest fire",
+      "brush fire",
+      "smoke plume"
+    ],
+    "drought": [
+      "drought",
+      "heatwave",
+      "dry conditions"
+    ],
+    "winter_weather": [
+      "blizzard",
+      "ice storm",
+      "snow squall"
+    ],
+    "geomagnetic": [
+      "solar flare",
+      "geomagnetic storm",
+      "aurora",
+      "kp index"
+    ],
+    "grid_instability": [
+      "blackout",
+      "brownout",
+      "grid failure",
+      "power disruption"
+    ]
+  }
+}

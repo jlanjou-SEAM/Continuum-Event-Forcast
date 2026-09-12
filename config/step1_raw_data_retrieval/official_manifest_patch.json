@@ -1,0 +1,62 @@
+{
+  "usgs": {
+    "acquisition_class": "official",
+    "urls": [
+      "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson"
+    ]
+  },
+  "usgs_day": {
+    "acquisition_class": "official",
+    "urls": [
+      "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
+    ]
+  },
+  "noaa_alerts": {
+    "acquisition_class": "official",
+    "urls": [
+      "https://api.weather.gov/alerts/active"
+    ]
+  },
+  "nhc_advisories": {
+    "acquisition_class": "official",
+    "urls": [
+      "https://www.nhc.noaa.gov/"
+    ]
+  },
+  "gdacs_alerts": {
+    "acquisition_class": "official",
+    "urls": [
+      "https://www.gdacs.org/xml/rss.xml"
+    ]
+  },
+  "fema_disasters": {
+    "acquisition_class": "official",
+    "urls": [
+      "https://www.fema.gov/openfema-data-page/disaster-declarations-summaries-v2"
+    ]
+  },
+  "copernicus_ems": {
+    "acquisition_class": "official",
+    "urls": [
+      "https://emergency.copernicus.eu/"
+    ]
+  },
+  "volcano_smithsonian": {
+    "acquisition_class": "official",
+    "urls": [
+      "https://volcano.si.edu/"
+    ]
+  },
+  "spc_outlook": {
+    "acquisition_class": "official",
+    "urls": [
+      "https://www.spc.noaa.gov/products/outlook/"
+    ]
+  },
+  "tsunami_gov": {
+    "acquisition_class": "official",
+    "urls": [
+      "https://www.tsunami.gov/"
+    ]
+  }
+}

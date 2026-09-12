@@ -1,0 +1,15 @@
+{
+  "version": "v54",
+  "description": "Baseline continuum master configuration",
+  "intake_sets": {
+    "raw": "../../raw",
+    "curated": "../../curated",
+    "streams": "../../streams",
+    "official": "../../official"
+  },
+  "output_file": "../../continuum/continuum_master.json",
+  "extensions": [
+    ".json"
+  ],
+  "recursive": true
+}

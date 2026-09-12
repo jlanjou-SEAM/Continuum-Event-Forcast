@@ -1,0 +1,28 @@
+
+# continuous_runtime.py UPDATE
+
+# Ensure ALL NEW COLLECTORS
+# are included in:
+
+# COLLECTORS = [...]
+
+# Add:
+# wsprnet.py
+# pskreporter.py
+# dxmaps.py
+# aprsfi.py
+# grapevlf.py
+# superdarn.py
+# madrigal.py
+# giro.py
+# gridstatus.py
+# ercot.py
+# pjm.py
+# caiso.py
+# entsoe.py
+# firms.py
+# iocsealevel.py
+# mit_haystack.py
+# mwa.py
+
+# Runtime automatically pulls all configured sources

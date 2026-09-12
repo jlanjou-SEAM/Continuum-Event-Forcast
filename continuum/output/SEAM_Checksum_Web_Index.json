@@ -1,0 +1,41 @@
+{
+  "generated_utc": "2026-05-16T17:38:38.812079+00:00",
+  "summary": {
+    "seam_event_count": 5,
+    "official_candidate_count": 6,
+    "confirmed_count": 5,
+    "precursor_count": 0,
+    "blind_spot_count": 4
+  },
+  "blind_spots": [
+    {
+      "official_record_id": "OFF-00042",
+      "official_source_family": "intermagnet",
+      "official_source_file": "C:\\Continuum Database\\raw\\intermagnet.json",
+      "official_record_timestamp_utc": "2026-05-16T16:15:32.285646+00:00",
+      "reconciliation_state": "BLIND_SPOT"
+    },
+    {
+      "official_record_id": "OFF-00060",
+      "official_source_family": "neutronmonitor",
+      "official_source_file": "C:\\Continuum Database\\raw\\neutronmonitor.json",
+      "official_record_timestamp_utc": "2026-05-16T16:15:32.287384+00:00",
+      "reconciliation_state": "BLIND_SPOT"
+    },
+    {
+      "official_record_id": "OFF-00093",
+      "official_source_family": "usgs_water",
+      "official_source_file": "C:\\Continuum Database\\raw\\usgs_water.json",
+      "official_record_timestamp_utc": "2026-05-16T16:15:32.302049+00:00",
+      "reconciliation_state": "BLIND_SPOT"
+    },
+    {
+      "official_record_id": "OFF-00098",
+      "official_source_family": "weatherunderground_pws",
+      "official_source_file": "C:\\Continuum Database\\raw\\weatherunderground_pws.json",
+      "official_record_timestamp_utc": "2026-05-16T16:15:32.303053+00:00",
+      "reconciliation_state": "BLIND_SPOT"
+    }
+  ],
+  "precursors": []
+}
