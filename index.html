@@ -298,13 +298,19 @@
         </header>
 
         <div class="controls">
-            <button class="filter-btn active" onclick="filterEvents(null)">All Events</button>
-            <button class="filter-btn" onclick="filterEvents('volcanic')">Volcanic</button>
-            <button class="filter-btn" onclick="filterEvents('seismic')">Seismic</button>
-            <button class="filter-btn" onclick="filterEvents('wildfire')">Wildfire</button>
-            <button class="filter-btn" onclick="filterEvents('flood')">Flood</button>
-            <button class="filter-btn" onclick="filterEvents('severe_weather')">Severe Weather</button>
-            <button class="filter-btn" onclick="filterEvents('tropical_cyclone')">Cyclones</button>
+            <strong style="padding: 8px 0; color: #333;">Confidence Threshold:</strong>
+            <button class="filter-btn active" onclick="setConfidenceThreshold(0.75)">≥75%</button>
+            <button class="filter-btn" onclick="setConfidenceThreshold(0.85)">≥85%</button>
+            <button class="filter-btn" onclick="setConfidenceThreshold(0.95)">≥95%</button>
+            <span style="flex: 1;"></span>
+            <strong style="padding: 8px 0; color: #333;">Event Type:</strong>
+            <button class="filter-btn active" onclick="filterByType(null)">All</button>
+            <button class="filter-btn" onclick="filterByType('volcanic')">Volcanic</button>
+            <button class="filter-btn" onclick="filterByType('seismic')">Seismic</button>
+            <button class="filter-btn" onclick="filterByType('wildfire')">Wildfire</button>
+            <button class="filter-btn" onclick="filterByType('flood')">Flood</button>
+            <button class="filter-btn" onclick="filterByType('severe_weather')">Severe Weather</button>
+            <button class="filter-btn" onclick="filterByType('tropical_cyclone')">Cyclones</button>
         </div>
 
         <div id="loading" class="loading" style="display:none;">Loading event projections...</div>
@@ -325,6 +331,7 @@
 
         let allEvents = [];
         let currentFilter = null;
+        let minConfidence = 0.75; // Default: 75%
 
         function getManifoldUrl() {
             return `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${MANIFOLD_FILE}`;
@@ -346,11 +353,11 @@
 
         function createEventCard(event) {
             const type = event.signature_class || 'unknown';
-            const confidence = event.confidence_score || event.score || 0;
+            const confidence = event.seam_phi || event.confidence_score || event.score || 0;
             const lat = event.latitude || event.lat || 'N/A';
             const lon = event.longitude || event.lon || 'N/A';
             const timestamp = event.timestamp_utc || event.timestamp || 'Unknown';
-            const summary = event.event_summary || event.summary || event.title || type.toUpperCase();
+            const summary = event.signal_summary || event.event_summary || event.summary || event.title || type.toUpperCase();
 
             const card = document.createElement('div');
             card.className = 'event-card';
@@ -387,12 +394,25 @@
             return card;
         }
 
-        function filterEvents(type) {
+        function setConfidenceThreshold(threshold) {
+            minConfidence = threshold;
+
+            // Update button states
+            document.querySelectorAll('.controls .filter-btn').forEach((btn, idx) => {
+                if (idx < 3) btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            renderCards();
+        }
+
+        function filterByType(type) {
             currentFilter = type;
 
             // Update button states
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active');
+            const buttons = document.querySelectorAll('.controls .filter-btn');
+            buttons.forEach((btn, idx) => {
+                if (idx >= 3) btn.classList.remove('active');
             });
             event.target.classList.add('active');
 
@@ -403,12 +423,16 @@
             const container = document.getElementById('cardsContainer');
             container.innerHTML = '';
 
-            const filtered = currentFilter
-                ? allEvents.filter(e => e.signature_class === currentFilter)
-                : allEvents;
+            // Filter by confidence threshold AND type
+            const filtered = allEvents.filter(e => {
+                const confidence = parseFloat(e.seam_phi || e.confidence_score || e.score || 0);
+                const passConfidence = confidence >= minConfidence;
+                const passType = !currentFilter || e.signature_class === currentFilter;
+                return passConfidence && passType;
+            });
 
             if (filtered.length === 0) {
-                container.innerHTML = '<div class="empty-state">No events matching filter</div>';
+                container.innerHTML = `<div class="empty-state">No events with ≥${(minConfidence*100).toFixed(0)}% confidence matching filter</div>`;
                 return;
             }
 
@@ -437,9 +461,9 @@
                 document.getElementById('lastUpdate').textContent = new Date(data.generated_utc).toLocaleTimeString();
                 document.getElementById('eventTypes').textContent = data.signature_classes || Object.keys(data.signature_counts || {}).length;
 
-                // Calculate average confidence
+                // Calculate average confidence (seam_phi)
                 const confidences = allEvents
-                    .map(e => parseFloat(e.confidence_score || e.score || 0))
+                    .map(e => parseFloat(e.seam_phi || e.confidence_score || e.score || 0))
                     .filter(c => !isNaN(c));
                 const avgConf = confidences.length > 0
                     ? (confidences.reduce((a, b) => a + b) / confidences.length * 100).toFixed(0)
