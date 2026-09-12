@@ -50,10 +50,11 @@
         }
         .left-panel {
             flex: 0 0 80%;
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 20px;
             overflow-y: auto;
+            align-content: start;
         }
         .right-panel {
             flex: 0 0 20%;
@@ -101,10 +102,10 @@
         .event-card {
             background: #1e1e2e;
             border-radius: 8px;
-            padding: 30px;
+            padding: 20px;
             border-top: 6px solid;
             border-left: 6px solid;
-            min-height: 300px;
+            min-height: 280px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -138,16 +139,16 @@
             text-transform: uppercase;
         }
         .card-location {
-            font-size: 28px;
+            font-size: 20px;
             font-weight: bold;
             color: #fff;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             line-height: 1.3;
         }
         .card-confidence {
-            font-size: 48px;
+            font-size: 36px;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .card-confidence.event { color: #ff6b6b; }
         .card-confidence.watch { color: #ffa500; }
@@ -403,7 +404,7 @@
                 }
 
                 container.innerHTML = '';
-                criticalEvents.slice(0, 2).forEach((evt, idx) => {
+                criticalEvents.slice(0, 10).forEach((evt, idx) => {
                     const lastConf = evt.confidence_history[evt.confidence_history.length - 1].seam_phi;
                     const phase = getPhase(lastConf);
                     const card = createEventCard(evt, phase);
