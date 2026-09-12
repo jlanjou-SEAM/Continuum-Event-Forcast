@@ -279,12 +279,22 @@
 
         function formatLocation(loc, signal_summary) {
             if (!loc) return 'Unknown';
-            const parts = [loc.city, loc.county_district, loc.state_province, loc.country].filter(Boolean);
+
+            // Build location hierarchy from available fields
+            const parts = [];
+            if (loc.city) parts.push(loc.city);
+            if (loc.county_district) parts.push(loc.county_district);
+            if (loc.state_province) parts.push(loc.state_province);
+            if (loc.country) parts.push(loc.country);
+
+            // If we have location hierarchy, return it
             if (parts.length > 0) return parts.join(', ');
+
             // Fallback to lat/lon if location hierarchy unavailable
             if (loc.best_effort_lat && loc.best_effort_lon) {
                 return `${loc.best_effort_lat.toFixed(2)}, ${loc.best_effort_lon.toFixed(2)}`;
             }
+
             // Last resort: extract source from signal_summary
             if (signal_summary && typeof signal_summary === 'string') {
                 try {
@@ -292,7 +302,7 @@
                     if (summary.source) return `📡 ${summary.source.toUpperCase()}`;
                 } catch (e) {}
             }
-            return 'Data In Progress';
+            return 'TBD';
         }
 
         function createEventCard(eventData, phase) {
@@ -306,9 +316,21 @@
             if (eventData.signature_class === 'volcanic' && eventData.location.best_effort_lat && eventData.location.best_effort_lon) {
                 const volcanoInfo = getVolcanoInfo(eventData.location.best_effort_lat, eventData.location.best_effort_lon);
                 if (volcanoInfo) {
+                    // Update location object with hierarchy data
+                    eventData.location.city = volcanoInfo.name;
+                    eventData.location.state_province = volcanoInfo.state;
+                    eventData.location.country = volcanoInfo.country;
+
                     locationHierarchy = `${volcanoInfo.name}<br/><small>${volcanoInfo.state}, ${volcanoInfo.country}</small>`;
                     location = `${volcanoInfo.name} (${volcanoInfo.state}, ${volcanoInfo.country})`;
                 }
+            }
+
+            // Ensure location always shows hierarchy if available
+            if (!eventData.location.city && eventData.location.state_province && eventData.location.country) {
+                locationHierarchy = `<small>${eventData.location.state_province}, ${eventData.location.country}</small>`;
+            } else if (!eventData.location.city && eventData.location.country) {
+                locationHierarchy = eventData.location.country;
             }
 
             // Create descriptive event type with magnitude/depth info
