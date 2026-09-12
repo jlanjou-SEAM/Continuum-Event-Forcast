@@ -68,6 +68,29 @@ jobs:
           echo "Running 168hr image streams..."
           python image_stream_acquisition_168hr.py
 
+      - name: '[Step 2] Run consolidation'
+        run: |
+          cd config/step2_continuum_master
+          python step2_continuum_master.py
+
+      - name: '[Step 3] Run volcanic analysis manifold'
+        run: |
+          cd continuum/processes/step3_volcanic_analysis
+          python step3_volcanic_analysis.py
+        continue-on-error: true
+
+      - name: '[Step 4] Run operational event matrix'
+        run: |
+          cd continuum/processes/step4_operational_event_matrix
+          python step4_operational_event_matrix.py
+        continue-on-error: true
+
+      - name: '[Step 4] Run recursive registry'
+        run: |
+          cd continuum/processes/step4_recursive_registry
+          python step4_recursive_registry.py
+        continue-on-error: true
+
       - name: '[Step 5] Run native reconciliation'
         run: |
           cd continuum/processes/step5_recursive_official_analysis
@@ -94,9 +117,13 @@ jobs:
           echo "Timestamp: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> pipeline_report.md
           echo "" >> pipeline_report.md
           echo "### Steps Executed" >> pipeline_report.md
-          echo "- [x] Realtime 72hr/168hr acquisition" >> pipeline_report.md
-          echo "- [x] Nonrealtime 72hr/168hr acquisition" >> pipeline_report.md
-          echo "- [x] Official 72hr/168hr acquisition" >> pipeline_report.md
-          echo "- [x] Image streams 72hr/168hr acquisition" >> pipeline_report.md
-          echo "- [x] Step5 native reconciliation" >> pipeline_report.md
+          echo "- [x] Step 1: Realtime 72hr/168hr acquisition" >> pipeline_report.md
+          echo "- [x] Step 1: Nonrealtime 72hr/168hr acquisition" >> pipeline_report.md
+          echo "- [x] Step 1: Official 72hr/168hr acquisition" >> pipeline_report.md
+          echo "- [x] Step 1: Image streams 72hr/168hr acquisition" >> pipeline_report.md
+          echo "- [x] Step 2: Consolidation (continuum_master.json)" >> pipeline_report.md
+          echo "- [x] Step 3: Volcanic analysis manifold" >> pipeline_report.md
+          echo "- [x] Step 4: Operational event matrix" >> pipeline_report.md
+          echo "- [x] Step 4: Recursive registry" >> pipeline_report.md
+          echo "- [x] Step 5: Native reconciliation" >> pipeline_report.md
           cat pipeline_report.md

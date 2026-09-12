@@ -1,0 +1,60 @@
+name: Step 3 - Manifold Generation (Every 1min)
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # Every minute (offset from Step 2)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  manifold-generation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 feedparser urllib3 numpy scipy
+
+      - name: Run Step 3 - Volcanic Analysis Manifold
+        run: |
+          cd continuum/processes/step3_volcanic_analysis
+          python step3_volcanic_analysis.py
+        continue-on-error: true
+
+      - name: Run Step 4 - Operational Event Matrix
+        run: |
+          cd continuum/processes/step4_operational_event_matrix
+          python step4_operational_event_matrix.py
+        continue-on-error: true
+
+      - name: Run Step 4 - Recursive Registry
+        run: |
+          cd continuum/processes/step4_recursive_registry
+          python step4_recursive_registry.py
+        continue-on-error: true
+
+      - name: Commit changes
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: step 3-4 manifold generation and matrices [skip ci]"
+            git push
+          fi
