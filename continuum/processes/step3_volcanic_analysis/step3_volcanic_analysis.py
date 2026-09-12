@@ -422,5 +422,17 @@ def main():
     print(f"[step3] total manifold events: {len(matches)}")
     print(f"[step3] output: {OUTFILE}")
 
+    # Update event tracker
+    update_event_tracker(matches)
+
+def update_event_tracker(matches):
+    """Update rolling event tracker with current manifold events"""
+    try:
+        from tracker_manager import update_tracker_with_events
+        tracker, removed = update_tracker_with_events(matches)
+        print(f"[step3] tracker updated: {len(tracker['events'])} events, {removed} pruned")
+    except Exception as e:
+        print(f"[step3] tracker update failed: {e}")
+
 if __name__ == "__main__":
     main()
