@@ -160,10 +160,13 @@
             font-size: 11px;
             color: #aaa;
             margin-bottom: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
         }
         .card-info-row {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             margin-bottom: 3px;
             padding: 3px 0;
             border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -173,11 +176,11 @@
             font-weight: bold;
             text-transform: uppercase;
             font-size: 9px;
+            margin-bottom: 2px;
         }
         .card-value {
             color: #fff;
             font-weight: bold;
-            text-align: right;
             font-size: 10px;
         }
         .empty-state {
@@ -309,28 +312,22 @@
             const lastConf = eventData.confidence_history[eventData.confidence_history.length - 1];
             const conf = lastConf ? (lastConf.seam_phi * 100).toFixed(0) : 'N/A';
             const mag = lastConf && lastConf.magnitude ? lastConf.magnitude : null;
-            let location = formatLocation(eventData.location, eventData.signal_summary);
 
-            // Try to get volcano info for better location hierarchy
-            let locationHierarchy = location;
+            // Build location with hierarchy
+            let locationDisplay = '';
             if (eventData.signature_class === 'volcanic' && eventData.location.best_effort_lat && eventData.location.best_effort_lon) {
                 const volcanoInfo = getVolcanoInfo(eventData.location.best_effort_lat, eventData.location.best_effort_lon);
                 if (volcanoInfo) {
-                    // Update location object with hierarchy data
+                    locationDisplay = `${volcanoInfo.name}<br/><small>${volcanoInfo.state}, ${volcanoInfo.country}</small>`;
                     eventData.location.city = volcanoInfo.name;
                     eventData.location.state_province = volcanoInfo.state;
                     eventData.location.country = volcanoInfo.country;
-
-                    locationHierarchy = `${volcanoInfo.name}<br/><small>${volcanoInfo.state}, ${volcanoInfo.country}</small>`;
-                    location = `${volcanoInfo.name} (${volcanoInfo.state}, ${volcanoInfo.country})`;
                 }
             }
 
-            // Ensure location always shows hierarchy if available
-            if (!eventData.location.city && eventData.location.state_province && eventData.location.country) {
-                locationHierarchy = `<small>${eventData.location.state_province}, ${eventData.location.country}</small>`;
-            } else if (!eventData.location.city && eventData.location.country) {
-                locationHierarchy = eventData.location.country;
+            // Fallback to formatted location
+            if (!locationDisplay) {
+                locationDisplay = formatLocation(eventData.location, eventData.signal_summary);
             }
 
             // Create descriptive event type with magnitude/depth info
@@ -342,10 +339,19 @@
             const card = document.createElement('div');
             card.className = `event-card ${phase}`;
 
-            const magDisplay = mag ? `<div class="card-info-row"><span class="card-label">Magnitude</span><span class="card-value">${mag}</span></div>` : '';
+            // Coordinates with lock status
+            let coordLabel = 'Coordinates';
+            let coordStatus = '';
+            if (eventData.location.best_effort_lat) {
+                // If we have coordinates, determine if they're locked (confirmed) or projected
+                coordStatus = eventData.location.best_effort_lat ? '🔒 Locked' : '📍 Projected';
+                if (eventData.projections && eventData.projections.projected_location) {
+                    coordStatus = '📍 Projected';
+                }
+            }
 
-            // Show coordinates with location hierarchy
-            const coordDisplay = eventData.location.best_effort_lat ? `<div class="card-info-row"><span class="card-label">Coords</span><span class="card-value">${eventData.location.best_effort_lat.toFixed(2)}, ${eventData.location.best_effort_lon.toFixed(2)}</span></div>` : '';
+            const coordDisplay = eventData.location.best_effort_lat ?
+                `<div class="card-info-row"><span class="card-label">${coordStatus}</span><span class="card-value">${eventData.location.best_effort_lat.toFixed(2)}, ${eventData.location.best_effort_lon.toFixed(2)}</span></div>` : '';
 
             // Official alert status and issued time
             const officialAlert = eventData.official_alert && eventData.official_alert.status ? eventData.official_alert.status : 'None';
@@ -356,16 +362,18 @@
             const eventTime = eventData.projections && eventData.projections.projected_event_time ? new Date(eventData.projections.projected_event_time).toLocaleTimeString() : 'N/A';
 
             // Time delta between SEAM detection and official alert
-            let timeDelta = '';
+            let timeDeltaDisplay = '';
             if (eventData.identification_to_alert_minutes !== undefined && eventData.identification_to_alert_minutes !== null) {
-                timeDelta = `<div class="card-info-row"><span class="card-label">Detection→Alert</span><span class="card-value">${eventData.identification_to_alert_minutes}m</span></div>`;
+                timeDeltaDisplay = `<div class="card-info-row"><span class="card-label">Δ Alert</span><span class="card-value">${eventData.identification_to_alert_minutes}m</span></div>`;
             }
+
+            const magDisplay = mag ? `<div class="card-info-row"><span class="card-label">Magnitude</span><span class="card-value">${mag}</span></div>` : '';
 
             card.innerHTML = `
                 <div>
                     <div class="card-phase">${phase === 'event' ? '🔴 EVENT' : '🟠 WATCH'}</div>
                     <div class="card-type">${eventType}</div>
-                    <div class="card-location">${locationHierarchy}</div>
+                    <div class="card-location">${locationDisplay}</div>
                 </div>
 
                 <div>
@@ -383,13 +391,13 @@
                             <span class="card-label">Alert Issued</span>
                             <span class="card-value">${alertIssuedTime}</span>
                         </div>
-                        ${timeDelta}
                         <div class="card-info-row">
                             <span class="card-label">Status</span>
                             <span class="card-value">${officialAlert}</span>
                         </div>
-                        ${magDisplay}
                         ${coordDisplay}
+                        ${magDisplay}
+                        ${timeDeltaDisplay}
                     </div>
                 </div>
             `;
