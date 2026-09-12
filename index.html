@@ -444,7 +444,7 @@
                 }
 
                 container.innerHTML = '';
-                criticalEvents.slice(0, 20).forEach((evt, idx) => {
+                criticalEvents.forEach((evt, idx) => {
                     const lastConf = evt.confidence_history[evt.confidence_history.length - 1].seam_phi;
                     const phase = getPhase(lastConf);
                     const card = createEventCard(evt, phase);
