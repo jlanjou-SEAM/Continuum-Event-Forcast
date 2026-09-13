@@ -1106,7 +1106,7 @@
         }
 
         // Update clock and countdown
-        const REFRESH_INTERVAL = 30000; // 30 seconds
+        const REFRESH_INTERVAL = 180000; // 3 minutes - aligns with 5-minute backend pipeline
         let nextRefreshTime = Date.now() + REFRESH_INTERVAL;
 
         function updateTimeDisplay() {
