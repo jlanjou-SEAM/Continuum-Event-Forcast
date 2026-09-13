@@ -440,6 +440,50 @@
             return null;
         }
 
+        function getRegionFromCoordinates(lat, lon) {
+            // Determine region/area name from coordinates
+            if (lat === null || lon === null) return null;
+
+            // Pacific Ring of Fire
+            if ((10 < lat && lat < 65 && (125 < lon || -180 < lon && lon < -75)) || (-60 < lat && lat < -10 && 125 < lon && lon < 180)) {
+                return { name: 'Pacific Ring', country: 'Global', state: 'Ring of Fire' };
+            }
+            // Atlantic
+            if (-80 < lat && lat < 80 && -100 < lon && lon < -20) {
+                return { name: 'Atlantic Basin', country: 'Atlantic', state: 'Ocean Basin' };
+            }
+            // Indian Ocean
+            if (-60 < lat && lat < 40 && 20 < lon && lon < 120) {
+                return { name: 'Indian Ocean', country: 'Indian', state: 'Ocean Basin' };
+            }
+            // Europe/Mediterranean
+            if (30 < lat && lat < 70 && -10 < lon && lon < 50) {
+                return { name: 'Europe/Mediterranean', country: 'Europe', state: 'Region' };
+            }
+            // Asia
+            if (-10 < lat && lat < 60 && 50 < lon && lon < 150) {
+                return { name: 'Asia', country: 'Asia', state: 'Region' };
+            }
+            // Africa
+            if (-35 < lat && lat < 40 && -20 < lon && lon < 55) {
+                return { name: 'Africa', country: 'Africa', state: 'Region' };
+            }
+            // Americas
+            if (-60 < lat && lat < 80 && -180 < lon && lon < -30) {
+                if (lat > 15) {
+                    return { name: 'North America', country: 'USA', state: 'Region' };
+                } else {
+                    return { name: 'South America', country: 'South America', state: 'Region' };
+                }
+            }
+            // Australia
+            if (-50 < lat && lat < -10 && 110 < lon && lon < 160) {
+                return { name: 'Australia', country: 'Australia', state: 'Region' };
+            }
+
+            return null;
+        }
+
         function getEventTypeAbbrev(eventType) {
             const abbrevMap = {
                 'volcanic': 'vol', 'seismic': 'seis', 'severe_weather': 'wthr',
@@ -518,29 +562,31 @@
         function formatLocation(loc, signal_summary) {
             if (!loc) return 'Unknown';
 
-            // Build location hierarchy from available fields
+            // Build location hierarchy from available fields (prefer more specific to less specific)
             const parts = [];
             if (loc.city) parts.push(loc.city);
-            if (loc.county_district) parts.push(loc.county_district);
+            if (loc.county_district && !loc.city) parts.push(loc.county_district);
             if (loc.state_province) parts.push(loc.state_province);
             if (loc.country) parts.push(loc.country);
 
             // If we have location hierarchy, return it
             if (parts.length > 0) return parts.join(', ');
 
-            // Fallback to lat/lon if location hierarchy unavailable
-            if (loc.best_effort_lat && loc.best_effort_lon) {
-                return `${loc.best_effort_lat.toFixed(2)}, ${loc.best_effort_lon.toFixed(2)}`;
-            }
-
-            // Last resort: extract source from signal_summary
+            // Fallback to signal_summary source if available
             if (signal_summary && typeof signal_summary === 'string') {
                 try {
                     const summary = JSON.parse(signal_summary);
-                    if (summary.source) return `📡 ${summary.source.toUpperCase()}`;
+                    if (summary.source) return summary.source;
+                    if (summary.spatial_region) return summary.spatial_region;
                 } catch (e) {}
             }
-            return 'TBD';
+
+            // Last resort: use coordinates label instead of TBD
+            if (loc.best_effort_lat && loc.best_effort_lon) {
+                return `Location [${loc.best_effort_lat.toFixed(2)}, ${loc.best_effort_lon.toFixed(2)}]`;
+            }
+
+            return 'Coordinates Pending';
         }
 
         function createEventCard(eventData, phase) {
@@ -566,8 +612,13 @@
                     locationInfo = getLocationInfo(lat, lon, eventData.signature_class);
                 }
 
+                // If no specific location found, try region fallback
+                if (!locationInfo) {
+                    locationInfo = getRegionFromCoordinates(lat, lon);
+                }
+
                 if (locationInfo) {
-                    locationDisplay = `${locationInfo.name}<br/><small>${locationInfo.state}, ${locationInfo.country}</small>`;
+                    locationDisplay = `${locationInfo.name}, ${locationInfo.state}`;
                     eventData.location.city = locationInfo.name;
                     eventData.location.state_province = locationInfo.state;
                     eventData.location.country = locationInfo.country;
@@ -744,7 +795,15 @@
                             <div class="card-confidence ${phase}" style="margin: 0;">${conf}%</div>
                         </div>
                     </div>
-                    <div class="card-location">${locationDisplay}</div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 6px;">
+                        <div class="card-location" style="flex: 1; margin-bottom: 0;">${locationDisplay}</div>
+                        <div style="font-size: 13px; color: #888; flex-shrink: 0; white-space: nowrap;">
+                            ${eventData.location.best_effort_lat && eventData.location.best_effort_lon ?
+                                `[${eventData.location.best_effort_lat.toFixed(2)}, ${eventData.location.best_effort_lon.toFixed(2)}]` :
+                                ''
+                            }
+                        </div>
+                    </div>
                 </div>
 
                 ${hysteresisHtml}
