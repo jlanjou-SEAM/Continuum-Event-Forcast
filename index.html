@@ -195,6 +195,7 @@
         .card-phase.event { color: #ff6b6b; }
         .card-phase.watch { color: #ffa500; }
         .card-phase.warning { color: #ffeb3b; }
+        .card-phase.locked { color: #ff3333; font-weight: bold; text-transform: uppercase; }
         .card-type {
             font-size: 16px;
             font-weight: bold;
@@ -759,11 +760,15 @@
             const magDisplay = mag ? `<div class="card-info-row"><span class="card-label">Magnitude</span><span class="card-value">${mag}</span></div>` : '';
 
             // Calculate hysteresis (confidence trend)
+            // Terminal events (97%+) should NOT hold steady - they're inevitable and progressing to lock
             const confidenceHistory = eventData.confidence_history || [];
             let hysteresisHtml = '';
             let trendStatus = 'stable';
             let trendIcon = '➡️';
             let trendLabel = 'Steady';
+
+            // Check if this is a terminal event (97%+ = inevitable)
+            const isTerminal = conf >= 97;
 
             if (confidenceHistory.length > 1) {
                 const recentValues = confidenceHistory.slice(-5).map(h => h.seam_phi);
@@ -773,7 +778,25 @@
                 const diff = avgNew - avgOld;
                 const threshold = 0.08;
 
-                if (diff > threshold) {
+                if (isTerminal) {
+                    // Terminal event (97%+): should show as locked/inevitable, not steady
+                    if (diff > 0.01) {
+                        // Still rising toward 100% lock
+                        trendStatus = 'rising';
+                        trendIcon = '🔒';
+                        trendLabel = 'LOCKED';
+                    } else if (diff < -0.01) {
+                        // Confidence dropping from terminal state = anomaly
+                        trendStatus = 'falling';
+                        trendIcon = '⚠️';
+                        trendLabel = 'Declining (anomaly)';
+                    } else {
+                        // Holding at terminal = event is locked in, awaiting occurrence
+                        trendStatus = 'locked';
+                        trendIcon = '🔒';
+                        trendLabel = 'LOCKED';
+                    }
+                } else if (diff > threshold) {
                     trendStatus = 'rising_fast';
                     trendIcon = '📈';
                     trendLabel = 'Increasing Fast';
@@ -790,6 +813,7 @@
                     trendIcon = '↘️';
                     trendLabel = 'Decreasing Slow';
                 } else {
+                    // Non-terminal event holding steady
                     trendStatus = 'stable';
                     trendIcon = '➡️';
                     trendLabel = 'Steady';
@@ -856,6 +880,7 @@
                     <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 4px;">
                         <div>
                             <div class="card-phase">${
+                                conf >= 97 ? '🔴 LOCKED' :
                                 phase === 'event' ? '🔴 EVENT' :
                                 phase === 'watch' ? '🟠 WATCH' :
                                 phase === 'warning' ? '🟡 WARNING' :
