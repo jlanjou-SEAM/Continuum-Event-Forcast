@@ -958,10 +958,10 @@
             try {
                 let allEvents = [];
 
-                // Try tracker first
+                // Try tracker first - with cache busting to ensure fresh data
                 try {
-                    const trackerUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${TRACKER_FILE}`;
-                    const trackerResponse = await fetch(trackerUrl);
+                    const trackerUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${TRACKER_FILE}?t=${Date.now()}`;
+                    const trackerResponse = await fetch(trackerUrl, { cache: 'no-store' });
                     if (trackerResponse.ok) {
                         const tracker = await trackerResponse.json();
                         const trackerEvents = Object.values(tracker.events || {});
@@ -974,10 +974,10 @@
                     console.log('Tracker not available, trying manifold...');
                 }
 
-                // If tracker empty, use manifold
+                // If tracker empty, use manifold - with cache busting to ensure fresh data
                 if (allEvents.length === 0) {
-                    const manifoldUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${MANIFOLD_FILE}`;
-                    const manifoldResponse = await fetch(manifoldUrl);
+                    const manifoldUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${MANIFOLD_FILE}?t=${Date.now()}`;
+                    const manifoldResponse = await fetch(manifoldUrl, { cache: 'no-store' });
                     if (!manifoldResponse.ok) throw new Error(`HTTP ${manifoldResponse.status}`);
 
                     const manifold = await manifoldResponse.json();
