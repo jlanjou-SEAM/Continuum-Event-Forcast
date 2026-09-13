@@ -195,53 +195,71 @@
         .card-phase.watch { color: #ffa500; }
         .card-phase.warning { color: #ffeb3b; }
         .card-type {
-            font-size: 12px;
+            font-size: 14px;
             font-weight: bold;
             color: #fff;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             text-transform: uppercase;
         }
         .card-location {
-            font-size: 13px;
+            font-size: 16px;
             font-weight: bold;
             color: #fff;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             line-height: 1.2;
         }
         .card-confidence {
-            font-size: 24px;
+            font-size: 32px;
             font-weight: bold;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
         .card-confidence.event { color: #ff6b6b; }
         .card-confidence.watch { color: #ffa500; }
         .card-confidence.warning { color: #ffeb3b; }
         .card-info {
-            font-size: 11px;
+            font-size: 12px;
             color: #aaa;
             margin-bottom: 0;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 8px;
+            gap: 12px;
+        }
+        .card-info-column {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
         }
         .card-info-row {
             display: flex;
             flex-direction: column;
-            margin-bottom: 3px;
-            padding: 3px 0;
+            margin-bottom: 2px;
+            padding: 2px 0;
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
         .card-label {
             color: #888;
             font-weight: bold;
             text-transform: uppercase;
-            font-size: 9px;
-            margin-bottom: 2px;
+            font-size: 10px;
+            margin-bottom: 1px;
         }
         .card-value {
             color: #fff;
             font-weight: bold;
-            font-size: 10px;
+            font-size: 11px;
+        }
+        .column-title {
+            font-size: 11px;
+            font-weight: bold;
+            color: #0f0;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(15,255,0,0.3);
+            padding-bottom: 2px;
+        }
+        .column-title.official {
+            color: #ffa500;
+            border-bottom-color: rgba(255,165,0,0.3);
         }
         .empty-state {
             padding: 40px;
@@ -513,6 +531,30 @@
                 alertStatus = '⚠️ Predicted';
             }
 
+            // Calculate time to event
+            let timeToEvent = 'N/A';
+            if (eventTime !== 'N/A' && detectedTime !== 'N/A') {
+                try {
+                    const eventDate = new Date(eventData.projections.projected_event_time);
+                    const now = new Date();
+                    const diffMs = eventDate - now;
+                    const diffMins = Math.max(0, Math.round(diffMs / 60000));
+                    timeToEvent = diffMins > 0 ? `${diffMins} min` : 'Occurring';
+                } catch (e) {}
+            }
+
+            // Calculate official duration
+            let officialDuration = 'N/A';
+            if (alertIssuedTime !== 'N/A') {
+                try {
+                    const alertDate = new Date(eventData.official_alert.issued_utc);
+                    const now = new Date();
+                    const diffMs = now - alertDate;
+                    const diffMins = Math.round(diffMs / 60000);
+                    officialDuration = `${diffMins} min ago`;
+                } catch (e) {}
+            }
+
             card.innerHTML = `
                 <div style="grid-column: 1; padding-right: 8px;">
                     <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 4px;">
@@ -529,24 +571,40 @@
 
                 <div style="grid-column: 1;">
                     <div class="card-info">
-                        <div class="card-info-row">
-                            <span class="card-label">Detected</span>
-                            <span class="card-value">${detectedTime}</span>
+                        <div class="card-info-column">
+                            <div class="column-title">🔍 SEAM Prediction</div>
+                            <div class="card-info-row">
+                                <span class="card-label">Detected</span>
+                                <span class="card-value">${detectedTime}</span>
+                            </div>
+                            <div class="card-info-row">
+                                <span class="card-label">Estimated Time</span>
+                                <span class="card-value">${eventTime}</span>
+                            </div>
+                            <div class="card-info-row">
+                                <span class="card-label">Time to Event</span>
+                                <span class="card-value">${timeToEvent}</span>
+                            </div>
+                            <div class="card-info-row">
+                                <span class="card-label">Trend</span>
+                                <span class="card-value">${trendStatus.toUpperCase()}</span>
+                            </div>
                         </div>
-                        <div class="card-info-row">
-                            <span class="card-label">Forecast</span>
-                            <span class="card-value">${eventTime}</span>
+                        <div class="card-info-column">
+                            <div class="column-title official">📡 Official State</div>
+                            <div class="card-info-row">
+                                <span class="card-label">Status</span>
+                                <span class="card-value">${alertStatus}</span>
+                            </div>
+                            <div class="card-info-row">
+                                <span class="card-label">Alert Issued</span>
+                                <span class="card-value">${alertIssuedTime}</span>
+                            </div>
+                            <div class="card-info-row">
+                                <span class="card-label">Duration</span>
+                                <span class="card-value">${officialDuration}</span>
+                            </div>
                         </div>
-                        <div class="card-info-row">
-                            <span class="card-label">USGS</span>
-                            <span class="card-value">${alertStatus}</span>
-                        </div>
-                        <div class="card-info-row">
-                            <span class="card-label">Trend</span>
-                            <span class="card-value">${trendStatus.toUpperCase()}</span>
-                        </div>
-                        ${coordDisplay}
-                        ${magDisplay}
                     </div>
                 </div>
             `;
