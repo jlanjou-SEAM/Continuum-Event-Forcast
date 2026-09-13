@@ -439,6 +439,40 @@
             return null;
         }
 
+        function getEventTypeAbbrev(eventType) {
+            const abbrevMap = {
+                'volcanic': 'vol', 'seismic': 'seis', 'severe_weather': 'wthr',
+                'tornadic': 'torn', 'winter_weather': 'wint', 'tropical_cyclone': 'trop',
+                'flood': 'fld', 'wildfire': 'fire', 'drought': 'drgt',
+                'geomagnetic': 'gmag', 'rf_disruption': 'rf'
+            };
+            return abbrevMap[eventType] || 'evt';
+        }
+
+        function getRegionAbbrev(lat, lon) {
+            if (lat === null || lon === null) return 'unk';
+            if ((10 < lat && lat < 65 && 125 < lon && lon < 180) || (-60 < lat && lat < -10 && 125 < lon && lon < 180)) return 'pac';
+            if (-80 < lat && lat < 80 && -120 < lon && lon < -20) return 'atl';
+            if (-60 < lat && lat < 40 && 20 < lon && lon < 120) return 'ind';
+            if (30 < lat && lat < 70 && -10 < lon && lon < 50) return 'eur';
+            if (-10 < lat && lat < 60 && 50 < lon && lon < 150) return 'asia';
+            if (-35 < lat && lat < 40 && -20 < lon && lon < 55) return 'afr';
+            if (-60 < lat && lat < 80 && -180 < lon && lon < -30) return lat > 15 ? 'nam' : 'sam';
+            if (-50 < lat && lat < -10 && 110 < lon && lon < 160) return 'aus';
+            return 'gbl';
+        }
+
+        function generateFormattedEventId(eventType, lat, lon, timestamp) {
+            const typeAbbrev = getEventTypeAbbrev(eventType);
+            const regionAbbrev = getRegionAbbrev(lat, lon);
+            try {
+                const year = new Date(timestamp).getFullYear() % 100;
+                return `${typeAbbrev}_${regionAbbrev}_${year}`;
+            } catch (e) {
+                return `${typeAbbrev}_${regionAbbrev}_??`;
+            }
+        }
+
         let logEntries = [];
 
         function addLog(message, type = 'info') {
@@ -492,6 +526,7 @@
             const lastConf = eventData.confidence_history[eventData.confidence_history.length - 1];
             const conf = lastConf ? (lastConf.seam_phi * 100).toFixed(0) : 'N/A';
             const mag = lastConf && lastConf.magnitude ? lastConf.magnitude : null;
+            const formattedId = generateFormattedEventId(eventData.signature_class, eventData.location.best_effort_lat, eventData.location.best_effort_lon, eventData.first_detected_utc);
 
             // Build location with hierarchy
             let locationDisplay = '';
@@ -679,7 +714,7 @@
                                 phase === 'warning' ? '🟡 WARNING' :
                                 '⚪ TRACK'
                             }</div>
-                            <div style="font-size: 10px; color: #888; margin-bottom: 2px;">${eventData.event_id.substring(5, 24) || eventData.event_id}</div>
+                            <div style="font-size: 10px; color: #0f0; font-weight: bold; margin-bottom: 2px;">${formattedId}</div>
                             <div class="card-type">${eventType}</div>
                         </div>
                         <div style="display: flex; align-items: center; gap: 4px; text-align: right;">
