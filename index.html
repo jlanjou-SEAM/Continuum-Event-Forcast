@@ -508,9 +508,9 @@
         }
 
         function getPhase(seam_phi) {
-            if (seam_phi > 0.95) return 'event';
-            if (seam_phi > 0.85) return 'watch';
-            if (seam_phi > 0.75) return 'warning';
+            if (seam_phi >= 0.95) return 'event';
+            if (seam_phi >= 0.85) return 'watch';
+            if (seam_phi >= 0.75) return 'warning';
             return 'track';
         }
 
