@@ -759,9 +759,9 @@
             // Event time = ETA of actual event occurrence (eruption, quake, touchdown, etc)
             let eventTime = 'N/A';
             let eventDate = '';
-            if (eventData.projections && eventData.projections.projected_event_time) {
+            if (eventData.projected_event_time) {
                 // Use projected event time if available
-                const eventDt = new Date(eventData.projections.projected_event_time);
+                const eventDt = new Date(eventData.projected_event_time);
                 eventTime = eventDt.toLocaleTimeString();
                 eventDate = eventDt.toLocaleDateString();
             }
@@ -870,7 +870,7 @@
             let timeToEvent = 'N/A';
             if (eventTime !== 'N/A' && detectedTime !== 'N/A') {
                 try {
-                    const eventDate = new Date(eventData.projections.projected_event_time);
+                    const eventDate = new Date(eventData.projected_event_time);
                     const now = new Date();
                     const diffMs = eventDate - now;
                     const diffMins = Math.max(0, Math.round(diffMs / 60000));
@@ -1018,6 +1018,7 @@
                         },
                         signal_summary: e.signal_summary,
                         source_refs: e.source_refs || [],
+                        projected_event_time: e.projected_event_time,
                         confidence_history: [{
                             timestamp_utc: e.timestamp_utc,
                             seam_phi: e.seam_phi,
