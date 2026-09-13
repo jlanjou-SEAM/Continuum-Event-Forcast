@@ -345,9 +345,30 @@
         };
 
         const SEISMIC_ZONES = {
-            'pacific_ring': { name: 'Pacific Ring of Fire', lat: 0, lon: 0, country: 'Global', state: 'Pacific Rim' },
             'iowa': { name: 'Iowa Seismic Zone', lat: 41.16, lon: -94.93, country: 'USA', state: 'Iowa' },
             'tokyo': { name: 'Tokyo Bay', lat: 35.45, lon: 139.77, country: 'Japan', state: 'Tokyo' },
+            'california': { name: 'San Francisco Bay', lat: 37.77, lon: -122.42, country: 'USA', state: 'California' },
+            'alaska': { name: 'Alaska Subduction Zone', lat: 61.0, lon: -149.0, country: 'USA', state: 'Alaska' },
+        };
+
+        const WEATHER_ZONES = {
+            'texas': { name: 'Southern Plains', lat: 31.97, lon: -99.90, country: 'USA', state: 'Texas' },
+            'oklahoma': { name: 'Central Plains', lat: 35.56, lon: -97.49, country: 'USA', state: 'Oklahoma' },
+            'florida': { name: 'Southeast Coast', lat: 27.99, lon: -81.76, country: 'USA', state: 'Florida' },
+            'midwest': { name: 'Great Lakes Region', lat: 43.00, lon: -85.00, country: 'USA', state: 'Michigan' },
+            'pacific': { name: 'Pacific Northwest', lat: 47.61, lon: -122.33, country: 'USA', state: 'Washington' },
+        };
+
+        const TROPICAL_ZONES = {
+            'atlantic': { name: 'Atlantic Basin', lat: 20.00, lon: -60.00, country: 'Atlantic', state: 'Open Water' },
+            'pacific': { name: 'Eastern Pacific', lat: 15.00, lon: -120.00, country: 'Pacific', state: 'Open Water' },
+            'caribbean': { name: 'Caribbean', lat: 18.22, lon: -77.50, country: 'Caribbean Region', state: 'Tropical' },
+        };
+
+        const FIRE_ZONES = {
+            'california': { name: 'California Wildlands', lat: 38.50, lon: -120.50, country: 'USA', state: 'California' },
+            'oregon': { name: 'Pacific Northwest Forests', lat: 43.94, lon: -120.55, country: 'USA', state: 'Oregon' },
+            'australia': { name: 'Eastern Australia', lat: -34.40, lon: 150.88, country: 'Australia', state: 'NSW' },
         };
 
         function getVolcanoInfo(lat, lon) {
@@ -372,9 +393,48 @@
             return null;
         }
 
+        function getWeatherZoneInfo(lat, lon) {
+            for (const [key, zone] of Object.entries(WEATHER_ZONES)) {
+                const latDiff = Math.abs(zone.lat - lat);
+                const lonDiff = Math.abs(zone.lon - lon);
+                if (latDiff < 3.0 && lonDiff < 3.0) {
+                    return zone;
+                }
+            }
+            return null;
+        }
+
+        function getTropicalZoneInfo(lat, lon) {
+            for (const [key, zone] of Object.entries(TROPICAL_ZONES)) {
+                const latDiff = Math.abs(zone.lat - lat);
+                const lonDiff = Math.abs(zone.lon - lon);
+                if (latDiff < 10.0 && lonDiff < 15.0) {
+                    return zone;
+                }
+            }
+            return null;
+        }
+
+        function getFireZoneInfo(lat, lon) {
+            for (const [key, zone] of Object.entries(FIRE_ZONES)) {
+                const latDiff = Math.abs(zone.lat - lat);
+                const lonDiff = Math.abs(zone.lon - lon);
+                if (latDiff < 3.0 && lonDiff < 3.0) {
+                    return zone;
+                }
+            }
+            return null;
+        }
+
         function getLocationInfo(lat, lon, eventType) {
             if (eventType === 'seismic') {
                 return getSeismicZoneInfo(lat, lon);
+            } else if (['severe_weather', 'tornadic', 'winter_weather'].includes(eventType)) {
+                return getWeatherZoneInfo(lat, lon);
+            } else if (eventType === 'tropical_cyclone') {
+                return getTropicalZoneInfo(lat, lon);
+            } else if (eventType === 'wildfire') {
+                return getFireZoneInfo(lat, lon);
             }
             return null;
         }
