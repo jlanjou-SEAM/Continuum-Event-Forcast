@@ -839,5 +839,283 @@
       "https://www.fema.gov/openfema-data-page/disaster-declarations-summaries-v2"
     ],
     "acquisition_class": "realtime"
+  },
+  "jma_volcanic": {
+    "bucket": "official",
+    "timeout_seconds": 3,
+    "urls": [
+      "https://www.jma.go.jp/bosai/volcano/data/volcano_list.json",
+      "https://www.data.jma.go.jp/svd/volcmail/volcmail.php"
+    ],
+    "acquisition_class": "realtime",
+    "description": "Japan Meteorological Agency - Real-time volcanic alerts (Sakurajima, Aso, Kirishima, etc.)"
+  },
+  "jma_seismic": {
+    "bucket": "official",
+    "timeout_seconds": 3,
+    "urls": [
+      "https://www.jma.go.jp/bosai/quake/data/latest_quake_list.json",
+      "https://www.jma.go.jp/bosai/eq/"
+    ],
+    "acquisition_class": "realtime",
+    "description": "Japan Meteorological Agency - Real-time earthquake and tsunami alerts"
+  },
+  "nws_text_alerts": {
+    "bucket": "official",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://forecast.weather.gov/wwamap/wwatxtget.php",
+      "https://api.weather.gov/alerts/active?point=39.0,-95.0"
+    ],
+    "acquisition_class": "realtime",
+    "description": "NWS Text Products - Tornado, Severe Weather, Winter Storm alerts (US)"
+  },
+  "cma_seismic": {
+    "bucket": "official",
+    "timeout_seconds": 3,
+    "urls": [
+      "http://www.cea.gov.cn/",
+      "http://www.csi.ac.cn/"
+    ],
+    "acquisition_class": "realtime",
+    "description": "China Earthquake Administration - Seismic alerts for Asia-Pacific region"
+  },
+  "gfz_volcanoes": {
+    "bucket": "official",
+    "timeout_seconds": 3,
+    "urls": [
+      "https://www.gfz-potsdam.de/en/section/volcanology/",
+      "https://www.volcanoesonline.org/search"
+    ],
+    "acquisition_class": "realtime",
+    "description": "GFZ (German Research Centre) - Real-time volcanic activity monitoring worldwide"
+  },
+  "emsc_tsunami": {
+    "bucket": "official",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.emsc.usgs.gov/Services/2.1/Tsunami/query"
+    ],
+    "acquisition_class": "realtime",
+    "description": "EMSC Tsunami Database - Real-time tsunami alerts and information"
+  },
+  "ptwc_tsunami": {
+    "bucket": "official",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://ptwc.weather.gov/",
+      "https://itic.ioc-unesco.org/index.php?option=com_content&view=article&id=1344&Itemid=2474"
+    ],
+    "acquisition_class": "realtime",
+    "description": "Pacific Tsunami Warning Center - Tsunami alerts and warnings (Pacific/Indian Oceans)"
+  },
+  "bom_australia": {
+    "bucket": "official",
+    "timeout_seconds": 2,
+    "urls": [
+      "http://www.bom.gov.au/",
+      "http://www.bom.gov.au/joomla/frontend_dev/warnings/"
+    ],
+    "acquisition_class": "realtime",
+    "description": "Bureau of Meteorology (Australia) - Cyclone, severe weather, tsunami alerts"
+  },
+  "meteoalarm_europe": {
+    "bucket": "official",
+    "timeout_seconds": 2,
+    "urls": [
+      "http://www.meteoalarm.eu/",
+      "http://feeds.meteoalarm.eu/feeds/meteoalarm-rss2_eu.php"
+    ],
+    "acquisition_class": "realtime",
+    "description": "MeteoAlarm - European severe weather alerts (24 countries)"
+  },
+  "icgc_catalan": {
+    "bucket": "official",
+    "timeout_seconds": 3,
+    "urls": [
+      "https://www.icgc.cat/en"
+    ],
+    "acquisition_class": "realtime",
+    "description": "Institut Cartogràfic i Geològic de Catalunya - Volcanic, seismic monitoring (Spain/Mediterranean)"
+  },
+  "eccc_canada": {
+    "bucket": "official",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://weather.gc.ca/",
+      "https://www.canada.ca/content/canadasite/en/services/environment/weather.html"
+    ],
+    "acquisition_class": "realtime",
+    "description": "Environment and Climate Change Canada - Weather alerts, severe weather, tsunami (Canada)"
+  },
+  "gsc_canada": {
+    "bucket": "official",
+    "timeout_seconds": 3,
+    "urls": [
+      "https://www.nrcan.gc.ca/science-data/science-research/natural-hazards/earthquakes",
+      "https://earthquakescanada.nrcan.gc.ca/"
+    ],
+    "acquisition_class": "realtime",
+    "description": "Geological Survey of Canada - Earthquake alerts and seismic monitoring"
+  },
+  "imd_india": {
+    "bucket": "official",
+    "timeout_seconds": 3,
+    "urls": [
+      "https://mausam.imd.gov.in/",
+      "https://www.imd.gov.in/pages/alerts.php"
+    ],
+    "acquisition_class": "realtime",
+    "description": "India Meteorological Department - Weather, cyclone, severe weather alerts"
+  },
+  "bmkg_indonesia": {
+    "bucket": "official",
+    "timeout_seconds": 3,
+    "urls": [
+      "https://www.bmkg.go.id/",
+      "https://www.bmkg.go.id/web/en/#beranda"
+    ],
+    "acquisition_class": "realtime",
+    "description": "BMKG Indonesia - Earthquakes, tsunamis, volcanoes, weather (Indonesian Ring of Fire)"
+  },
+  "kma_korea": {
+    "bucket": "official",
+    "timeout_seconds": 3,
+    "urls": [
+      "https://www.kma.go.kr/eng/",
+      "https://web.kma.go.kr/notify/press/kma_list.jsp"
+    ],
+    "acquisition_class": "realtime",
+    "description": "Korea Meteorological Administration - Weather, seismic, tsunami alerts (Korea, NE Asia)"
+  },
+  "phivolcs_philippines": {
+    "bucket": "official",
+    "timeout_seconds": 3,
+    "urls": [
+      "https://www.phivolcs.dost.gov.ph/",
+      "https://earthquake.phivolcs.dost.gov.ph/"
+    ],
+    "acquisition_class": "realtime",
+    "description": "Philippine Institute of Volcanology and Seismology - Volcanoes, earthquakes, tsunami (Philippines)"
+  },
+  "usgs_conred_guatemala": {
+    "bucket": "official",
+    "timeout_seconds": 3,
+    "urls": [
+      "https://www.conred.gob.gt/",
+      "http://www.conred.gob.gt/www/index.php?option=com_content&view=article&id=43&Itemid=56"
+    ],
+    "acquisition_class": "realtime",
+    "description": "CONRED Guatemala - Disaster alerts, volcanic, seismic, weather (Central America)"
+  },
+  "servgeo_colombia": {
+    "bucket": "official",
+    "timeout_seconds": 3,
+    "urls": [
+      "https://www.sgc.gov.co/",
+      "https://www.sgc.gov.co/volcanes"
+    ],
+    "acquisition_class": "realtime",
+    "description": "Servicio Geológico Colombiano - Earthquakes, volcanoes, geological hazards (Colombia/Andes)"
+  },
+  "igp_peru": {
+    "bucket": "official",
+    "timeout_seconds": 3,
+    "urls": [
+      "https://www.igp.gob.pe/",
+      "https://www.igp.gob.pe/en"
+    ],
+    "acquisition_class": "realtime",
+    "description": "Instituto Geofísico del Perú - Seismic, volcanic, tsunami alerts (Peru/South America)"
+  },
+  "onemi_chile": {
+    "bucket": "official",
+    "timeout_seconds": 3,
+    "urls": [
+      "https://www.onemi.gov.cl/",
+      "https://www.sismologia.cl/"
+    ],
+    "acquisition_class": "realtime",
+    "description": "ONEMI Chile - Earthquake, tsunami, volcanic, weather alerts (Chile)"
+  },
+  "segemar_argentina": {
+    "bucket": "official",
+    "timeout_seconds": 3,
+    "urls": [
+      "http://www.segemar.gov.ar/",
+      "http://www.ign.gob.ar/"
+    ],
+    "acquisition_class": "realtime",
+    "description": "SEGEMAR Argentina - Geological, seismic, volcanic hazards (Argentina/South America)"
+  },
+  "inmet_brazil": {
+    "bucket": "official",
+    "timeout_seconds": 3,
+    "urls": [
+      "https://www.inmet.gov.br/",
+      "http://alertas.inmet.gov.br/"
+    ],
+    "acquisition_class": "realtime",
+    "description": "INMET Brazil - Meteorological alerts, severe weather, flooding (Brazil)"
+  },
+  "ukmo_metoffice": {
+    "bucket": "official",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.metoffice.gov.uk/",
+      "https://www.metoffice.gov.uk/weather/warnings-and-advice"
+    ],
+    "acquisition_class": "realtime",
+    "description": "UK Met Office - Weather alerts, severe weather, storm forecasts (UK/North Atlantic)"
+  },
+  "meteofrance": {
+    "bucket": "official",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://meteofrance.com/",
+      "https://alerte-meteo.meteofrance.com/"
+    ],
+    "acquisition_class": "realtime",
+    "description": "Méteo-France - Weather alerts, severe weather, cyclones (France/Mediterranean)"
+  },
+  "dwd_germany": {
+    "bucket": "official",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.dwd.de/",
+      "https://www.dwd.de/DE/wetter/warnungen_aktuell/warnliste.cfg"
+    ],
+    "acquisition_class": "realtime",
+    "description": "Deutscher Wetterdienst (DWD) - German meteorological alerts (Germany/Central Europe)"
+  },
+  "arpa_italia": {
+    "bucket": "official",
+    "timeout_seconds": 3,
+    "urls": [
+      "https://www.isprambiente.gov.it/",
+      "http://www.protezionecivile.gov.it/"
+    ],
+    "acquisition_class": "realtime",
+    "description": "ARPA Italia - Volcanic, seismic, environmental hazards (Italy/Mediterranean)"
+  },
+  "saws_southafrica": {
+    "bucket": "official",
+    "timeout_seconds": 2,
+    "urls": [
+      "https://www.weathersa.co.za/",
+      "https://www.weathersa.co.za/home/warnings"
+    ],
+    "acquisition_class": "realtime",
+    "description": "South African Weather Service - Weather alerts, cyclones, severe weather (Southern Africa)"
+  },
+  "usgs_volcano": {
+    "bucket": "official",
+    "timeout_seconds": 3,
+    "urls": [
+      "https://www.usgs.gov/programs/VHP/volcanic_rocks.html",
+      "https://volcano.usgs.gov/currentactivity/seismicity/"
+    ],
+    "acquisition_class": "realtime",
+    "description": "USGS Volcano Program - Global volcano monitoring, eruption alerts, hazard assessments"
   }
 }
