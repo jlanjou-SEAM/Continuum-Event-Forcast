@@ -39,6 +39,23 @@ def get_phase(seam_phi):
         return "track"
     return "unknown"
 
+def get_government_agency(event_type):
+    """Map event type to responsible government agency"""
+    agency_map = {
+        "volcanic": "USGS",
+        "seismic": "USGS",
+        "severe_weather": "NWS",
+        "tornadic": "NWS",
+        "winter_weather": "NWS",
+        "tropical_cyclone": "NWS",
+        "flood": "NWS",
+        "wildfire": "NOAA",
+        "drought": "NOAA",
+        "geomagnetic": "NOAA",
+        "rf_disruption": "NOAA"
+    }
+    return agency_map.get(event_type, "UNKNOWN")
+
 def extract_location(event, signal_summary):
     """Extract location hierarchy from event and signal_summary"""
     location = {

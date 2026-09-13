@@ -627,12 +627,22 @@
                 </div>`;
             }
 
-            // Status: if high confidence but no official alert, flag as "Predicted"
+            // Map event type to responsible government agency
+            const agencyMap = {
+                'volcanic': 'USGS', 'seismic': 'USGS',
+                'severe_weather': 'NWS', 'tornadic': 'NWS', 'winter_weather': 'NWS', 'tropical_cyclone': 'NWS', 'flood': 'NWS',
+                'wildfire': 'NOAA', 'drought': 'NOAA', 'geomagnetic': 'NOAA', 'rf_disruption': 'NOAA'
+            };
+            const responsibleAgency = agencyMap[eventData.signature_class] || 'UNKNOWN';
+
+            // Status: if high confidence but no official alert, flag as "Awaiting [AGENCY]"
             let alertStatus = officialAlert;
             let alertStatusDisplay = officialAlert;
             if (conf >= 90 && officialAlert === 'None') {
-                alertStatus = '⚠️ Predicted';
-                alertStatusDisplay = 'Issued by SEAM';
+                alertStatus = `⚠️ Awaiting ${responsibleAgency}`;
+                alertStatusDisplay = `Awaiting ${responsibleAgency}`;
+            } else if (officialAlert === 'None') {
+                alertStatusDisplay = `No ${responsibleAgency} Alert`;
             }
 
             // Calculate time to event
