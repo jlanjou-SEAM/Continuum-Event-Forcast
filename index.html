@@ -673,7 +673,12 @@
                 <div style="grid-column: 1; padding-right: 8px;">
                     <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 4px;">
                         <div>
-                            <div class="card-phase">${phase === 'event' ? '🔴 EVENT' : '🟠 WATCH'}</div>
+                            <div class="card-phase">${
+                                phase === 'event' ? '🔴 EVENT' :
+                                phase === 'watch' ? '🟠 WATCH' :
+                                phase === 'warning' ? '🟡 WARNING' :
+                                '⚪ TRACK'
+                            }</div>
                             <div class="card-type">${eventType}</div>
                         </div>
                         <div style="display: flex; align-items: center; gap: 4px; text-align: right;">
