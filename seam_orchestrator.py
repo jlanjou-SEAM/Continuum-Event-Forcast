@@ -57,23 +57,9 @@ def run_command(cmd, description):
 
 
 def step1_acquisition():
-    """Step 1: Sample all 118 data sources"""
-    log_step("STEP1", "Starting data acquisition from 118 sources...")
-
-    commands = [
-        ("cd config/step1_raw_data_retrieval && python realtime_acquisition.py", "Realtime Acquisition"),
-        ("cd config/step1_raw_data_retrieval && python nonrealtime_acquisition.py", "Nonrealtime Acquisition"),
-        ("cd config/step1_raw_data_retrieval && python official_acquisition.py", "Official Acquisition"),
-        ("cd config/step1_raw_data_retrieval && python image_stream_acquisition.py", "Image Stream Acquisition"),
-    ]
-
-    success_count = 0
-    for cmd, desc in commands:
-        if run_command(cmd, desc):
-            success_count += 1
-
-    log_step("STEP1", f"Acquisition complete: {success_count}/{len(commands)} sources succeeded")
-    return success_count > 0
+    """Skip acquisition - collectors run separately. Consolidate existing data."""
+    log_step("STEP1", "Skipping acquisition (runs separately). Using existing collected data.")
+    return True  # Always succeed - data collection is async
 
 
 def step2_consolidation():
@@ -159,8 +145,9 @@ def main():
     start_time = datetime.now()
 
     # Run pipeline steps
+    # NOTE: Acquisition runs separately in parallel GitHub Actions workflows
+    # This orchestrator focuses on rapid consolidation + analysis
     steps = [
-        ("Acquisition", step1_acquisition),
         ("Consolidation", step2_consolidation),
         ("Manifold Generation", step3_manifold),
         ("Verification", verify_manifold_fresh),
@@ -181,8 +168,8 @@ def main():
     log_step("PIPELINE", "="*60)
 
     for step_name, success in results.items():
-        status = "✓ PASS" if success else "✗ FAIL"
-        log_step("SUMMARY", f"{status}: {step_name}")
+        status = "PASS" if success else "FAIL"
+        log_step("SUMMARY", f"[{status}] {step_name}")
 
     elapsed = (datetime.now() - start_time).total_seconds()
     total_success = sum(1 for v in results.values() if v)
