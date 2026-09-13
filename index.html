@@ -552,7 +552,24 @@
 
             // Event time vs detection time
             const detectedTime = new Date(eventData.first_detected_utc).toLocaleTimeString();
-            const eventTime = eventData.projections && eventData.projections.projected_event_time ? new Date(eventData.projections.projected_event_time).toLocaleTimeString() : 'N/A';
+            const detectedDate = new Date(eventData.first_detected_utc).toLocaleDateString();
+
+            // Get event time from projections or confidence_history
+            let eventTime = 'Calculating...';
+            let eventDate = '';
+            if (eventData.projections && eventData.projections.projected_event_time) {
+                const eventDt = new Date(eventData.projections.projected_event_time);
+                eventTime = eventDt.toLocaleTimeString();
+                eventDate = eventDt.toLocaleDateString();
+            } else if (eventData.confidence_history && eventData.confidence_history.length > 0) {
+                const lastHistory = eventData.confidence_history[eventData.confidence_history.length - 1];
+                if (lastHistory.timestamp_utc) {
+                    // Use timestamp as approximate event time
+                    const eventDt = new Date(lastHistory.timestamp_utc);
+                    eventTime = eventDt.toLocaleTimeString();
+                    eventDate = eventDt.toLocaleDateString();
+                }
+            }
 
             // Time delta between SEAM detection and official alert
             let timeDeltaDisplay = '';
@@ -612,8 +629,10 @@
 
             // Status: if high confidence but no official alert, flag as "Predicted"
             let alertStatus = officialAlert;
+            let alertStatusDisplay = officialAlert;
             if (conf >= 90 && officialAlert === 'None') {
                 alertStatus = '⚠️ Predicted';
+                alertStatusDisplay = 'Issued by SEAM';
             }
 
             // Calculate time to event
@@ -667,26 +686,22 @@
                                 <span class="card-value">${detectedTime}</span>
                             </div>
                             <div class="card-info-row">
-                                <span class="card-label">Estimated Time</span>
+                                <span class="card-label">Event Time</span>
                                 <span class="card-value">${eventTime}</span>
                             </div>
                             <div class="card-info-row">
-                                <span class="card-label">Time to Event</span>
+                                <span class="card-label">Until Event</span>
                                 <span class="card-value">${timeToEvent}</span>
-                            </div>
-                            <div class="card-info-row">
-                                <span class="card-label">Trend</span>
-                                <span class="card-value">${trendStatus.toUpperCase()}</span>
                             </div>
                         </div>
                         <div class="card-info-column">
                             <div class="column-title official">📡 Official State</div>
                             <div class="card-info-row">
                                 <span class="card-label">Status</span>
-                                <span class="card-value">${alertStatus}</span>
+                                <span class="card-value">${alertStatusDisplay}</span>
                             </div>
                             <div class="card-info-row">
-                                <span class="card-label">Alert Issued</span>
+                                <span class="card-label">Issued</span>
                                 <span class="card-value">${alertIssuedTime}</span>
                             </div>
                             <div class="card-info-row">
