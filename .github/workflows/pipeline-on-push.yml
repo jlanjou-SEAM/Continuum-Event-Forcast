@@ -1,0 +1,80 @@
+name: Pipeline - Run on Every Commit
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'realtime/**'
+      - 'nonrealtime/**'
+      - 'official/**'
+      - 'streams/**'
+  workflow_dispatch:  # Manual trigger button on GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  full-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 feedparser urllib3
+
+      - name: STEP 1 - Acquire Realtime Data
+        run: |
+          cd config/step1_raw_data_retrieval
+          python realtime_acquisition.py || true
+
+      - name: STEP 1 - Acquire Nonrealtime Data
+        run: |
+          cd config/step1_raw_data_retrieval
+          python nonrealtime_acquisition.py || true
+
+      - name: STEP 1 - Acquire Official Data
+        run: |
+          cd config/step1_raw_data_retrieval
+          python official_acquisition.py || true
+
+      - name: STEP 1 - Acquire Image Streams
+        run: |
+          cd config/step1_raw_data_retrieval
+          python image_stream_acquisition.py || true
+
+      - name: STEP 2 - Consolidate All Data
+        run: |
+          cd config/step2_continuum_master
+          python step2_continuum_master.py || true
+
+      - name: STEP 3 - Generate Fresh Manifold
+        run: |
+          cd continuum/processes/step3_volcanic_analysis
+          python step3_volcanic_analysis.py || true
+
+      - name: Commit Updated Manifold
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add -f continuum/output/volcanic_manifold_analysis.json
+          git add -f continuum/outputs/continuum_master.json
+
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: pipeline update - fresh manifold and consolidation [skip ci]"
+            git push
+            echo "Manifold updated and pushed to GitHub"
+          else
+            echo "No changes in manifold"
+          fi
