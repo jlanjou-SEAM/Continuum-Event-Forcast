@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-13T05:57:53.963017+00:00",
+  "generated_utc": "2026-09-13T06:12:33.149418+00:00",
   "schema": "SEAM_STEP3_MULTI_SIGNATURE_CANONICAL_V76",
   "source": "C:\\Continuum Database\\continuum\\output\\continuum_master_72h.json",
   "records_scanned": 232,
@@ -28,6 +28,7 @@
       "spatial_region": "37.74_15.0",
       "geohash": "37.741:15.003",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
@@ -48,6 +49,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"droughtmonitor\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:43Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:43Z\",\n  \"captured_utc\": \"2026-05-16T20:29:43.569873+00:00\",\n ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\droughtmonitor_weekly168.json",
@@ -68,6 +70,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"droughtmonitor\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:20.957797+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://droughtmonitor.unl.edu/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf-8\"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\droughtmonitor.json",
@@ -88,6 +91,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"drought_heat_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:46.272287+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://droughtmonitor.unl.edu/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; char",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\drought_heat_overlay.json",
@@ -108,6 +112,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"drought_heat_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:05Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:05Z\",\n  \"captured_utc\": \"2026-05-16T20:30:05.752258",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\drought_heat_overlay_weekly168.json",
@@ -128,6 +133,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"copernicus_ems\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"captured_utc\": \"2026-05-16T20:26:02.706575+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://emergency.copernicus.eu/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\copernicus_ems.json",
@@ -148,6 +154,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"copernicus_ems\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:01Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:01Z\",\n  \"captured_utc\": \"2026-05-16T20:32:01.818514+00:00\",",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\copernicus_ems_weekly168.json",
@@ -168,6 +175,7 @@
       "spatial_region": "37.74_15.0",
       "geohash": "37.741:15.003",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
@@ -188,6 +196,7 @@
       "spatial_region": "41.16_-94.93",
       "geohash": "41.16:-94.93",
       "seam_phi": 0.85,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:53.998402+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/alerts/active\",\n      \"fetched_utc\": \"2026-05-16T00:11:52.871908+00:00\",\n      \"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\noaa_alerts.json",
@@ -208,6 +217,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"copernicus_ems\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"captured_utc\": \"2026-05-16T20:26:02.706575+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://emergency.copernicus.eu/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\copernicus_ems.json",
@@ -228,6 +238,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"copernicus_ems\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:01Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:01Z\",\n  \"captured_utc\": \"2026-05-16T20:32:01.818514+00:00\",",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\copernicus_ems_weekly168.json",
@@ -248,6 +259,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"image_magnetometer\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:38.892409+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://space.fmi.fi/image/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=UTF-8\"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\image_magnetometer.json",
@@ -268,6 +280,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"image_magnetometer\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:59Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:59Z\",\n  \"captured_utc\": \"2026-05-16T20:29:59.369320+00:00",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\image_magnetometer_weekly168.json",
@@ -288,6 +301,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"intermagnet\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:06.241259+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://intermagnet.org/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf-8\",\n      \"f",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\intermagnet.json",
@@ -308,6 +322,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"intermagnet\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:30Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:30Z\",\n  \"captured_utc\": \"2026-05-16T20:29:30.356741+00:00\",\n  \"c",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\intermagnet_weekly168.json",
@@ -328,6 +343,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"stanfordsid\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:34Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:34Z\",\n  \"captured_utc\": \"2026-05-16T20:29:34.237851+00:00\",\n  \"c",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\stanfordsid_weekly168.json",
@@ -348,6 +364,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"spaceweatherlive\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:14.911722+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.spaceweatherlive.com/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=UT",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\spaceweatherlive.json",
@@ -368,6 +385,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"spaceweatherlive\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:38Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:38Z\",\n  \"captured_utc\": \"2026-05-16T20:29:38.704198+00:00\",",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\spaceweatherlive_weekly168.json",
@@ -388,6 +406,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"superdarn\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:31Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:31Z\",\n  \"captured_utc\": \"2026-05-16T20:29:31.736797+00:00\",\n  \"cap",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\superdarn_weekly168.json",
@@ -408,6 +427,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"superdarn\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:07.953511+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://superdarn.org/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf-8\",\n      \"final",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\superdarn.json",
@@ -428,6 +448,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"stanfordsid\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:10.493230+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"http://solar-center.stanford.edu/SID/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\stanfordsid.json",
@@ -448,6 +469,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"adsbexchange\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:31:47Z\",\n  \"window_end_utc\": \"2026-05-16T20:31:47Z\",\n  \"captured_utc\": \"2026-05-16T20:31:47.472489+00:00\",\n  \"cap",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\adsbexchange_weekly168.json",
@@ -468,6 +490,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"adsbexchange\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"captured_utc\": \"2026-05-16T20:26:31.693163+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://globe.adsbexchange.com/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html\",\n      \"final_url\":",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\adsbexchange.json",
@@ -488,6 +511,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"carisma\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:38.080499+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.carisma.ca/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf-8\",\n      \"final_",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\carisma.json",
@@ -508,6 +532,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"carisma\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:58Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:58Z\",\n  \"captured_utc\": \"2026-05-16T20:29:58.617497+00:00\",\n  \"captu",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\carisma_weekly168.json",
@@ -528,6 +553,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"clublog\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:12.411586+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://clublog.org/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html\",\n      \"final_url\": \"https://clu",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\clublog.json",
@@ -548,6 +574,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"copernicus_marine\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:22Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:22Z\",\n  \"captured_utc\": \"2026-05-16T20:29:22.176427+00:00\"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\copernicus_marine_weekly168.json",
@@ -568,6 +595,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"copernicus_marine\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:20:59.492964+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://marine.copernicus.eu/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=UTF-8",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\copernicus_marine.json",
@@ -588,6 +616,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"clublog\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:36Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:36Z\",\n  \"captured_utc\": \"2026-05-16T20:29:36.001419+00:00\",\n  \"captu",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\clublog_weekly168.json",
@@ -608,6 +637,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"cwop\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:20:51.553650+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://weather.gladstonefamily.net/cgi-bin/wxsite.cgi\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; c",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\cwop.json",
@@ -628,6 +658,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"cwop\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:11Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:11Z\",\n  \"captured_utc\": \"2026-05-16T20:29:11.129181+00:00\",\n  \"captures",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\cwop_weekly168.json",
@@ -648,6 +679,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"earthnetworks\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:13Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:13Z\",\n  \"captured_utc\": \"2026-05-16T20:29:13.975688+00:00\",\n  ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\earthnetworks_weekly168.json",
@@ -668,6 +700,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"global_lightning_archive\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:18Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:18Z\",\n  \"captured_utc\": \"2026-05-16T20:32:18.25629",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\global_lightning_archive_weekly168.json",
@@ -688,6 +721,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"dxmaps\",\n  \"bucket\": \"raw\",\n  \"pulled_utc\": \"2026-05-16T00:11:31.216138+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.dxmaps.com/\",\n      \"fetched_utc\": \"2026-05-16T00:11:30.034683+00:00\",\n      \"result\": {\n        \"ok\":",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\dxmaps.json",
@@ -708,6 +742,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"global_lightning_archive\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:43.038625+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https:/",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\global_lightning_archive.json",
@@ -728,6 +763,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"giro\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:09.006042+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://giro.uml.edu/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html\",\n      \"final_url\": \"https://giro.",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\giro.json",
@@ -748,6 +784,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"giro\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:32Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:32Z\",\n  \"captured_utc\": \"2026-05-16T20:29:32.570404+00:00\",\n  \"captures",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\giro_weekly168.json",
@@ -768,6 +805,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"earthnetworks\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:20:54.408613+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.earthnetworks.com/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=UTF-8\",\n",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\earthnetworks.json",
@@ -788,6 +826,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.65,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"image_magnetometer\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:38.892409+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://space.fmi.fi/image/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=UTF-8\"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\image_magnetometer.json",
@@ -808,6 +847,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"hycom\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:25Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:25Z\",\n  \"captured_utc\": \"2026-05-16T20:29:25.724703+00:00\",\n  \"capture",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\hycom_weekly168.json",
@@ -828,6 +868,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"hamsci\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:33Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:33Z\",\n  \"captured_utc\": \"2026-05-16T20:29:33.263975+00:00\",\n  \"captur",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\hamsci_weekly168.json",
@@ -848,6 +889,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"madis\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:20:50.782013+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://madis.ncep.noaa.gov/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf-8\",\n      \"fin",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\madis.json",
@@ -868,6 +910,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"hamsci\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:09.625969+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://hamsci.org/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf-8\",\n      \"final_url\":",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\hamsci.json",
@@ -888,6 +931,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"hycom\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:01.495612+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.hycom.org/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf-8\",\n      \"final_url",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\hycom.json",
@@ -908,6 +952,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"kiwisdr\",\n  \"bucket\": \"raw\",\n  \"pulled_utc\": \"2026-05-16T00:38:09.328333+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"http://kiwisdr.com/public/\",\n      \"fetched_utc\": \"2026-05-16T00:38:09.168052+00:00\",\n      \"result\": {\n        \"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\kiwisdr.json",
@@ -928,6 +973,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"ioc_sealevel\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:31:40Z\",\n  \"window_end_utc\": \"2026-05-16T20:31:40Z\",\n  \"captured_utc\": \"2026-05-16T20:31:40.391421+00:00\",\n  \"cap",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\ioc_sealevel_weekly168.json",
@@ -948,6 +994,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"madis\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:09Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:09Z\",\n  \"captured_utc\": \"2026-05-16T20:29:09.512200+00:00\",\n  \"capture",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\madis_weekly168.json",
@@ -968,6 +1015,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"gridstatus\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:46Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:46Z\",\n  \"captured_utc\": \"2026-05-16T20:29:46.680397+00:00\",\n  \"ca",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\gridstatus_weekly168.json",
@@ -988,6 +1036,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.65,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"image_magnetometer\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:59Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:59Z\",\n  \"captured_utc\": \"2026-05-16T20:29:59.369320+00:00",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\image_magnetometer_weekly168.json",
@@ -1008,6 +1057,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"gridstatus\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:24.301489+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.gridstatus.io/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf-8\",\n      \"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\gridstatus.json",
@@ -1028,6 +1078,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"ioc_sealevel\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:27.432972+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"http://www.ioc-sealevel",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\ioc_sealevel.json",
@@ -1048,6 +1099,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"neutronmonitor\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:30Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:30Z\",\n  \"captured_utc\": \"2026-05-16T20:29:30.733789+00:00\",\n ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\neutronmonitor_weekly168.json",
@@ -1068,6 +1120,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"neutronmonitor\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:06.768253+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.nmdb.eu/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html\",\n      \"final_url\": \"http",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\neutronmonitor.json",
@@ -1088,6 +1141,7 @@
       "spatial_region": "41.16_-94.93",
       "geohash": "41.16:-94.93",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:53.998402+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/alerts/active\",\n      \"fetched_utc\": \"2026-05-16T00:11:52.871908+00:00\",\n      \"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\noaa_alerts.json",
@@ -1108,6 +1162,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"superdarn\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:31Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:31Z\",\n  \"captured_utc\": \"2026-05-16T20:29:31.736797+00:00\",\n  \"cap",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\superdarn_weekly168.json",
@@ -1128,6 +1183,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"superdarn\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:07.953511+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://superdarn.org/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf-8\",\n      \"final",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\superdarn.json",
@@ -1148,6 +1204,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"soilmoisture_activepassive\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:23.334905+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://smap.jpl.nasa.gov/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\soilmoisture_activepassive.json",
@@ -1168,6 +1225,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"soilmoisture_activepassive\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:45Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:45Z\",\n  \"captured_utc\": \"2026-05-16T20:29:45.8281",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\soilmoisture_activepassive_weekly168.json",
@@ -1188,6 +1246,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"viirs_fire\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:22.584568+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.earthdata.nasa.gov/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=UTF-8\",\n  ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\viirs_fire.json",
@@ -1208,6 +1267,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"vla\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:33.914937+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://science.nrao.edu/facilities/vla\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html;charset=utf-8\",\n  ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\vla.json",
@@ -1228,6 +1288,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"viirs_fire\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:45Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:45Z\",\n  \"captured_utc\": \"2026-05-16T20:29:45.114449+00:00\",\n  \"ca",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\viirs_fire_weekly168.json",
@@ -1248,6 +1309,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"vla\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:54Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:54Z\",\n  \"captured_utc\": \"2026-05-16T20:29:54.955188+00:00\",\n  \"captures\"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\vla_weekly168.json",
@@ -1268,6 +1330,7 @@
       "spatial_region": "19.42_-155.29",
       "geohash": "19.421:-155.292",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:56.297948+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:55.800",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\volcano_smithsonian.json",
@@ -1288,6 +1351,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"citizen_weather_aggregation\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:50.496282+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://weather.gladstonefamily.net/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"tex",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\citizen_weather_aggregation.json",
@@ -1308,6 +1372,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"citizen_weather_aggregation\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:09Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:09Z\",\n  \"captured_utc\": \"2026-05-16T20:30:09",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\citizen_weather_aggregation_weekly168.json",
@@ -1328,6 +1393,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"grid_stability_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:07Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:07Z\",\n  \"captured_utc\": \"2026-05-16T20:30:07.7758",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\grid_stability_overlay_weekly168.json",
@@ -1348,6 +1414,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"grid_stability_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:48.408643+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.gridstatus.io/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\grid_stability_overlay.json",
@@ -1368,6 +1435,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"lightning_density_clusters\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:01Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:01Z\",\n  \"captured_utc\": \"2026-05-16T20:30:01.",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\lightning_density_clusters_weekly168.json",
@@ -1388,6 +1456,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"lightning_density_clusters\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:41.310322+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.lightningmaps.org/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html;",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\lightning_density_clusters.json",
@@ -1408,6 +1477,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"marine_anomaly_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:10Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:10Z\",\n  \"captured_utc\": \"2026-05-16T20:30:10.9650",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\marine_anomaly_overlay_weekly168.json",
@@ -1428,6 +1498,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"marine_anomaly_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:52.248116+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://marine.copernicus.eu/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; char",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\marine_anomaly_overlay.json",
@@ -1448,6 +1519,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"rf_propagation_clusters\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:42.496318+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.dxmaps.com/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html\",\n      \"f",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\rf_propagation_clusters.json",
@@ -1468,6 +1540,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"rf_propagation_clusters\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:02Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:02Z\",\n  \"captured_utc\": \"2026-05-16T20:30:02.868",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\rf_propagation_clusters_weekly168.json",
@@ -1488,6 +1561,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"wildfire_risk_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:04Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:04Z\",\n  \"captured_utc\": \"2026-05-16T20:30:04.92111",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\wildfire_risk_overlay_weekly168.json",
@@ -1508,6 +1582,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"wildfire_risk_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:44.953690+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://firms.modaps.eosdis.nasa.gov/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/htm",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\wildfire_risk_overlay.json",
@@ -1528,6 +1603,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"adsbexchange_live\",\n  \"bucket\": \"streams\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:31:17Z\",\n  \"window_end_utc\": \"2026-05-16T20:31:17Z\",\n  \"captured_utc\": \"2026-05-16T20:31:17.756092+0",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\streams\\adsbexchange_live_weekly168.json",
@@ -1548,6 +1624,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"adsbexchange_live\",\n  \"bucket\": \"streams\",\n  \"acquisition_class\": \"image_stream\",\n  \"captured_utc\": \"2026-05-16T20:26:28.834970+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://globe.adsbexchange.com/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html\",\n     ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\streams\\adsbexchange_live.json",
@@ -1568,6 +1645,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"kiwisdr\",\n  \"bucket\": \"streams\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:45.134563+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"http://kiwisdr.com/p",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\streams\\kiwisdr.json",
@@ -1588,6 +1666,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"kiwisdr\",\n  \"bucket\": \"streams\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:21Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:21Z\",\n  \"captured_utc\": \"2026-05-16T20:32:21.703069+00:00\",\n  \"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\streams\\kiwisdr_weekly168.json",
@@ -1608,6 +1687,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"lightningmaps\",\n  \"bucket\": \"streams\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:22Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:22Z\",\n  \"captured_utc\": \"2026-05-16T20:32:22.519214+00:00",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\streams\\lightningmaps_weekly168.json",
@@ -1628,6 +1708,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"lightningmaps\",\n  \"bucket\": \"streams\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:45.912903+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.li",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\streams\\lightningmaps.json",
@@ -1648,6 +1729,7 @@
       "spatial_region": "37.74_15.0",
       "geohash": "37.741:15.003",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
@@ -1668,6 +1750,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.65,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"emsc\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:23Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:23Z\",\n  \"captured_utc\": \"2026-05-16T20:32:23.614678+00:00\",\n  \"captures\": ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\emsc_weekly168.json",
@@ -1688,6 +1771,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.65,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"emsc\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:21.901193+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.seismicportal.eu/fd",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\emsc.json",
@@ -1708,6 +1792,7 @@
       "spatial_region": "32.85_-116.15",
       "geohash": "32.854:-116.146",
       "seam_phi": 0.73,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"usgs\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:21.306947+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://earthquake.usgs.gov/ear",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\usgs.json",
@@ -1728,6 +1813,7 @@
       "spatial_region": "32.85_-116.15",
       "geohash": "32.854:-116.146",
       "seam_phi": 0.73,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"usgs_day\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:21.576131+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://earthquake.usgs.gov",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\usgs_day.json",
@@ -1748,6 +1834,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"usgs_water\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:26.754576+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://waterservices.usg",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\usgs_water.json",
@@ -1768,6 +1855,7 @@
       "spatial_region": "32.85_-116.15",
       "geohash": "32.854:-116.146",
       "seam_phi": 0.73,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"usgs_day\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:23Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:23Z\",\n  \"captured_utc\": \"2026-05-16T20:32:23.106843+00:00\",\n  \"capture",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\usgs_day_weekly168.json",
@@ -1788,6 +1876,7 @@
       "spatial_region": "32.85_-116.15",
       "geohash": "32.854:-116.146",
       "seam_phi": 0.73,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"usgs\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:22Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:22Z\",\n  \"captured_utc\": \"2026-05-16T20:32:22.580496+00:00\",\n  \"captures\": ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\usgs_weekly168.json",
@@ -1808,6 +1897,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"usgs_water\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:31:39Z\",\n  \"window_end_utc\": \"2026-05-16T20:31:39Z\",\n  \"captured_utc\": \"2026-05-16T20:31:39.668863+00:00\",\n  \"captu",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\usgs_water_weekly168.json",
@@ -1828,6 +1918,7 @@
       "spatial_region": "19.42_-155.29",
       "geohash": "19.421:-155.292",
       "seam_phi": 0.85,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:56.297948+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:55.800",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\volcano_smithsonian.json",
@@ -1848,6 +1939,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"weatherunderground_pws\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:20:53.775333+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.wunderground.com/dashboard/pws/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\weatherunderground_pws.json",
@@ -1868,6 +1960,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"weatherunderground_pws\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:13Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:13Z\",\n  \"captured_utc\": \"2026-05-16T20:29:13.217218+0",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\weatherunderground_pws_weekly168.json",
@@ -1888,6 +1981,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"citizen_weather_aggregation\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:50.496282+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://weather.gladstonefamily.net/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"tex",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\citizen_weather_aggregation.json",
@@ -1908,6 +2002,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"citizen_weather_aggregation\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:09Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:09Z\",\n  \"captured_utc\": \"2026-05-16T20:30:09",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\citizen_weather_aggregation_weekly168.json",
@@ -1928,6 +2023,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:00Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:00Z\",\n  \"captured_utc\": \"2026-05-16T20:32:00.246851+00:00\",\n ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\gdacs_alerts_weekly168.json",
@@ -1948,6 +2044,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:33.526349+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.gdacs.",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\gdacs_alerts.json",
@@ -1968,6 +2065,7 @@
       "spatial_region": "31.59_130.66",
       "geohash": "31.593:130.657",
       "seam_phi": 0.85,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:01Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:01Z\",\n  \"captured_utc\": \"2026-05-16T20:32:01.390515+00",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\volcano_smithsonian_weekly168.json",
@@ -1988,6 +2086,7 @@
       "spatial_region": "31.59_130.66",
       "geohash": "31.593:130.657",
       "seam_phi": 0.85,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"captured_utc\": \"2026-05-16T20:26:02.173805+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"t",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\volcano_smithsonian.json",
@@ -2008,6 +2107,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"global_lightning_archive\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:18Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:18Z\",\n  \"captured_utc\": \"2026-05-16T20:32:18.25629",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\global_lightning_archive_weekly168.json",
@@ -2028,6 +2128,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"global_lightning_archive\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:43.038625+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https:/",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\global_lightning_archive.json",
@@ -2048,6 +2149,7 @@
       "spatial_region": "37.74_15.0",
       "geohash": "37.741:15.003",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
@@ -2068,6 +2170,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"lightningmaps\",\n  \"bucket\": \"raw\",\n  \"pulled_utc\": \"2026-05-16T00:38:12.715739+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.lightningmaps.org/\",\n      \"fetched_utc\": \"2026-05-16T00:38:11.880586+00:00\",\n      \"result\": {",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\lightningmaps.json",
@@ -2088,6 +2191,7 @@
       "spatial_region": "41.16_-94.93",
       "geohash": "41.16:-94.93",
       "seam_phi": 0.85,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:53.998402+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/alerts/active\",\n      \"fetched_utc\": \"2026-05-16T00:11:52.871908+00:00\",\n      \"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\noaa_alerts.json",
@@ -2108,6 +2212,7 @@
       "spatial_region": "47.45_-122.3",
       "geohash": "47.45:-122.3",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"weather_observations_core\",\n  \"bucket\": \"raw\",\n  \"pulled_utc\": \"2026-05-16T01:00:33.625157+00:00\",\n  \"source_count\": 10,\n  \"successes\": 10,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/stations/KSEA/observations/latest\",\n      \"fetched_utc\": \"2026-05-16T",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\weather_observations_core.json",
@@ -2128,6 +2233,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"lightning_density_clusters\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:01Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:01Z\",\n  \"captured_utc\": \"2026-05-16T20:30:01.",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\lightning_density_clusters_weekly168.json",
@@ -2148,6 +2254,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"lightning_density_clusters\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:41.310322+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.lightningmaps.org/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html;",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\lightning_density_clusters.json",
@@ -2168,6 +2275,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"lightningmaps\",\n  \"bucket\": \"streams\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:45.912903+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.li",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\streams\\lightningmaps.json",
@@ -2188,6 +2296,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"lightningmaps\",\n  \"bucket\": \"streams\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:22Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:22Z\",\n  \"captured_utc\": \"2026-05-16T20:32:22.519214+00:00",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\streams\\lightningmaps_weekly168.json",
@@ -2208,6 +2317,7 @@
       "spatial_region": "38.43_-89.9",
       "geohash": "38.43:-89.9",
       "seam_phi": 0.73,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:32.316217+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://api.weather",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\noaa_alerts.json",
@@ -2228,6 +2338,7 @@
       "spatial_region": "38.42_-86.45",
       "geohash": "38.42:-86.45",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:31:58Z\",\n  \"window_end_utc\": \"2026-05-16T20:31:58Z\",\n  \"captured_utc\": \"2026-05-16T20:31:58.171855+00:00\",\n  ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\noaa_alerts_weekly168.json",
@@ -2248,6 +2359,7 @@
       "spatial_region": "41.16_-94.93",
       "geohash": "41.16:-94.93",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:53.998402+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/alerts/active\",\n      \"fetched_utc\": \"2026-05-16T00:11:52.871908+00:00\",\n      \"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\noaa_alerts.json",
@@ -2268,6 +2380,7 @@
       "spatial_region": "38.43_-89.9",
       "geohash": "38.43:-89.9",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:32.316217+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://api.weather",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\noaa_alerts.json",
@@ -2288,6 +2401,7 @@
       "spatial_region": "32.85_-116.15",
       "geohash": "32.854:-116.146",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"usgs_day\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:21.576131+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://earthquake.usgs.gov",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\usgs_day.json",
@@ -2308,6 +2422,7 @@
       "spatial_region": "32.85_-116.15",
       "geohash": "32.854:-116.146",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"usgs_day\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:23Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:23Z\",\n  \"captured_utc\": \"2026-05-16T20:32:23.106843+00:00\",\n  \"capture",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\usgs_day_weekly168.json",
@@ -2328,6 +2443,7 @@
       "spatial_region": "32.85_-116.15",
       "geohash": "32.854:-116.146",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"usgs\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:22Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:22Z\",\n  \"captured_utc\": \"2026-05-16T20:32:22.580496+00:00\",\n  \"captures\": ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\usgs_weekly168.json",
@@ -2348,6 +2464,7 @@
       "spatial_region": "19.42_-155.29",
       "geohash": "19.421:-155.292",
       "seam_phi": 0.97,
+      "projected_event_time": "2026-05-17T02:43:42.987594+00:00",
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:56.297948+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:55.800",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\volcano_smithsonian.json",
@@ -2368,6 +2485,7 @@
       "spatial_region": "31.59_130.66",
       "geohash": "31.593:130.657",
       "seam_phi": 0.97,
+      "projected_event_time": "2026-05-17T02:43:43.015696+00:00",
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"captured_utc\": \"2026-05-16T20:26:02.173805+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"t",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\volcano_smithsonian.json",
@@ -2388,6 +2506,7 @@
       "spatial_region": "31.59_130.66",
       "geohash": "31.593:130.657",
       "seam_phi": 0.97,
+      "projected_event_time": "2026-05-17T02:43:43.015696+00:00",
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:01Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:01Z\",\n  \"captured_utc\": \"2026-05-16T20:32:01.390515+00",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\volcano_smithsonian_weekly168.json",
@@ -2408,6 +2527,7 @@
       "spatial_region": "41.16_-94.93",
       "geohash": "41.16:-94.93",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:53.998402+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/alerts/active\",\n      \"fetched_utc\": \"2026-05-16T00:11:52.871908+00:00\",\n      \"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\noaa_alerts.json",
@@ -2428,6 +2548,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"viirs_fire\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:22.584568+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.earthdata.nasa.gov/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=UTF-8\",\n  ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\viirs_fire.json",
@@ -2448,6 +2569,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"viirs_fire\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:45Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:45Z\",\n  \"captured_utc\": \"2026-05-16T20:29:45.114449+00:00\",\n  \"ca",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\viirs_fire_weekly168.json",
@@ -2468,6 +2590,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.77,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"wildfire_risk_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:44.953690+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://firms.modaps.eosdis.nasa.gov/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/htm",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\wildfire_risk_overlay.json",
@@ -2488,6 +2611,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.77,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"wildfire_risk_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:04Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:04Z\",\n  \"captured_utc\": \"2026-05-16T20:30:04.92111",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\wildfire_risk_overlay_weekly168.json",
@@ -2508,6 +2632,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"copernicus_ems\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:01Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:01Z\",\n  \"captured_utc\": \"2026-05-16T20:32:01.818514+00:00\",",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\copernicus_ems_weekly168.json",
@@ -2528,6 +2653,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"copernicus_ems\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"captured_utc\": \"2026-05-16T20:26:02.706575+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://emergency.copernicus.eu/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\copernicus_ems.json",
@@ -2548,6 +2674,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"hycom\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:25Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:25Z\",\n  \"captured_utc\": \"2026-05-16T20:29:25.724703+00:00\",\n  \"capture",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\hycom_weekly168.json",
@@ -2568,6 +2695,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"madis\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:09Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:09Z\",\n  \"captured_utc\": \"2026-05-16T20:29:09.512200+00:00\",\n  \"capture",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\madis_weekly168.json",
@@ -2588,6 +2716,7 @@
       "spatial_region": "41.16_-94.93",
       "geohash": "41.16:-94.93",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:53.998402+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/alerts/active\",\n      \"fetched_utc\": \"2026-05-16T00:11:52.871908+00:00\",\n      \"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\noaa_alerts.json",
@@ -2610,6 +2739,7 @@
       "spatial_region": "37.74_15.0",
       "geohash": "37.741:15.003",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
@@ -2630,6 +2760,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"droughtmonitor\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:43Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:43Z\",\n  \"captured_utc\": \"2026-05-16T20:29:43.569873+00:00\",\n ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\droughtmonitor_weekly168.json",
@@ -2650,6 +2781,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"droughtmonitor\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:20.957797+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://droughtmonitor.unl.edu/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf-8\"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\droughtmonitor.json",
@@ -2670,6 +2802,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"drought_heat_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:46.272287+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://droughtmonitor.unl.edu/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; char",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\drought_heat_overlay.json",
@@ -2690,6 +2823,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"drought_heat_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:05Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:05Z\",\n  \"captured_utc\": \"2026-05-16T20:30:05.752258",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\drought_heat_overlay_weekly168.json",
@@ -2710,6 +2844,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"copernicus_ems\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"captured_utc\": \"2026-05-16T20:26:02.706575+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://emergency.copernicus.eu/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\copernicus_ems.json",
@@ -2730,6 +2865,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"copernicus_ems\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:01Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:01Z\",\n  \"captured_utc\": \"2026-05-16T20:32:01.818514+00:00\",",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\copernicus_ems_weekly168.json",
@@ -2750,6 +2886,7 @@
       "spatial_region": "37.74_15.0",
       "geohash": "37.741:15.003",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
@@ -2770,6 +2907,7 @@
       "spatial_region": "41.16_-94.93",
       "geohash": "41.16:-94.93",
       "seam_phi": 0.85,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:53.998402+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/alerts/active\",\n      \"fetched_utc\": \"2026-05-16T00:11:52.871908+00:00\",\n      \"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\noaa_alerts.json",
@@ -2790,6 +2928,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"copernicus_ems\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"captured_utc\": \"2026-05-16T20:26:02.706575+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://emergency.copernicus.eu/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\copernicus_ems.json",
@@ -2810,6 +2949,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"copernicus_ems\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:01Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:01Z\",\n  \"captured_utc\": \"2026-05-16T20:32:01.818514+00:00\",",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\copernicus_ems_weekly168.json",
@@ -2830,6 +2970,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"image_magnetometer\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:38.892409+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://space.fmi.fi/image/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=UTF-8\"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\image_magnetometer.json",
@@ -2850,6 +2991,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"image_magnetometer\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:59Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:59Z\",\n  \"captured_utc\": \"2026-05-16T20:29:59.369320+00:00",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\image_magnetometer_weekly168.json",
@@ -2870,6 +3012,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"intermagnet\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:06.241259+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://intermagnet.org/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf-8\",\n      \"f",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\intermagnet.json",
@@ -2890,6 +3033,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"intermagnet\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:30Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:30Z\",\n  \"captured_utc\": \"2026-05-16T20:29:30.356741+00:00\",\n  \"c",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\intermagnet_weekly168.json",
@@ -2910,6 +3054,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"stanfordsid\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:34Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:34Z\",\n  \"captured_utc\": \"2026-05-16T20:29:34.237851+00:00\",\n  \"c",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\stanfordsid_weekly168.json",
@@ -2930,6 +3075,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"spaceweatherlive\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:14.911722+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.spaceweatherlive.com/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=UT",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\spaceweatherlive.json",
@@ -2950,6 +3096,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"spaceweatherlive\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:38Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:38Z\",\n  \"captured_utc\": \"2026-05-16T20:29:38.704198+00:00\",",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\spaceweatherlive_weekly168.json",
@@ -2970,6 +3117,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"superdarn\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:31Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:31Z\",\n  \"captured_utc\": \"2026-05-16T20:29:31.736797+00:00\",\n  \"cap",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\superdarn_weekly168.json",
@@ -2990,6 +3138,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"superdarn\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:07.953511+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://superdarn.org/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf-8\",\n      \"final",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\superdarn.json",
@@ -3010,6 +3159,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"stanfordsid\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:10.493230+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"http://solar-center.stanford.edu/SID/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\stanfordsid.json",
@@ -3030,6 +3180,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"adsbexchange\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:31:47Z\",\n  \"window_end_utc\": \"2026-05-16T20:31:47Z\",\n  \"captured_utc\": \"2026-05-16T20:31:47.472489+00:00\",\n  \"cap",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\adsbexchange_weekly168.json",
@@ -3050,6 +3201,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"adsbexchange\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"captured_utc\": \"2026-05-16T20:26:31.693163+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://globe.adsbexchange.com/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html\",\n      \"final_url\":",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\adsbexchange.json",
@@ -3070,6 +3222,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"carisma\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:38.080499+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.carisma.ca/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf-8\",\n      \"final_",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\carisma.json",
@@ -3090,6 +3243,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"carisma\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:58Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:58Z\",\n  \"captured_utc\": \"2026-05-16T20:29:58.617497+00:00\",\n  \"captu",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\carisma_weekly168.json",
@@ -3110,6 +3264,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"clublog\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:12.411586+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://clublog.org/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html\",\n      \"final_url\": \"https://clu",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\clublog.json",
@@ -3130,6 +3285,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"copernicus_marine\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:22Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:22Z\",\n  \"captured_utc\": \"2026-05-16T20:29:22.176427+00:00\"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\copernicus_marine_weekly168.json",
@@ -3150,6 +3306,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"copernicus_marine\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:20:59.492964+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://marine.copernicus.eu/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=UTF-8",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\copernicus_marine.json",
@@ -3170,6 +3327,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"clublog\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:36Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:36Z\",\n  \"captured_utc\": \"2026-05-16T20:29:36.001419+00:00\",\n  \"captu",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\clublog_weekly168.json",
@@ -3190,6 +3348,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"cwop\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:20:51.553650+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://weather.gladstonefamily.net/cgi-bin/wxsite.cgi\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; c",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\cwop.json",
@@ -3210,6 +3369,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"cwop\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:11Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:11Z\",\n  \"captured_utc\": \"2026-05-16T20:29:11.129181+00:00\",\n  \"captures",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\cwop_weekly168.json",
@@ -3230,6 +3390,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"earthnetworks\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:13Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:13Z\",\n  \"captured_utc\": \"2026-05-16T20:29:13.975688+00:00\",\n  ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\earthnetworks_weekly168.json",
@@ -3250,6 +3411,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"global_lightning_archive\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:18Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:18Z\",\n  \"captured_utc\": \"2026-05-16T20:32:18.25629",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\global_lightning_archive_weekly168.json",
@@ -3270,6 +3432,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"dxmaps\",\n  \"bucket\": \"raw\",\n  \"pulled_utc\": \"2026-05-16T00:11:31.216138+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.dxmaps.com/\",\n      \"fetched_utc\": \"2026-05-16T00:11:30.034683+00:00\",\n      \"result\": {\n        \"ok\":",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\dxmaps.json",
@@ -3290,6 +3453,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"global_lightning_archive\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:43.038625+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https:/",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\global_lightning_archive.json",
@@ -3310,6 +3474,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"giro\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:09.006042+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://giro.uml.edu/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html\",\n      \"final_url\": \"https://giro.",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\giro.json",
@@ -3330,6 +3495,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"giro\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:32Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:32Z\",\n  \"captured_utc\": \"2026-05-16T20:29:32.570404+00:00\",\n  \"captures",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\giro_weekly168.json",
@@ -3350,6 +3516,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"earthnetworks\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:20:54.408613+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.earthnetworks.com/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=UTF-8\",\n",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\earthnetworks.json",
@@ -3370,6 +3537,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.65,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"image_magnetometer\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:38.892409+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://space.fmi.fi/image/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=UTF-8\"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\image_magnetometer.json",
@@ -3390,6 +3558,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"hycom\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:25Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:25Z\",\n  \"captured_utc\": \"2026-05-16T20:29:25.724703+00:00\",\n  \"capture",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\hycom_weekly168.json",
@@ -3410,6 +3579,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"hamsci\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:33Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:33Z\",\n  \"captured_utc\": \"2026-05-16T20:29:33.263975+00:00\",\n  \"captur",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\hamsci_weekly168.json",
@@ -3430,6 +3600,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"madis\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:20:50.782013+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://madis.ncep.noaa.gov/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf-8\",\n      \"fin",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\madis.json",
@@ -3450,6 +3621,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"hamsci\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:09.625969+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://hamsci.org/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf-8\",\n      \"final_url\":",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\hamsci.json",
@@ -3470,6 +3642,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"hycom\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:01.495612+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.hycom.org/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf-8\",\n      \"final_url",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\hycom.json",
@@ -3490,6 +3663,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"kiwisdr\",\n  \"bucket\": \"raw\",\n  \"pulled_utc\": \"2026-05-16T00:38:09.328333+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"http://kiwisdr.com/public/\",\n      \"fetched_utc\": \"2026-05-16T00:38:09.168052+00:00\",\n      \"result\": {\n        \"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\kiwisdr.json",
@@ -3510,6 +3684,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"ioc_sealevel\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:31:40Z\",\n  \"window_end_utc\": \"2026-05-16T20:31:40Z\",\n  \"captured_utc\": \"2026-05-16T20:31:40.391421+00:00\",\n  \"cap",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\ioc_sealevel_weekly168.json",
@@ -3530,6 +3705,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"madis\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:09Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:09Z\",\n  \"captured_utc\": \"2026-05-16T20:29:09.512200+00:00\",\n  \"capture",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\madis_weekly168.json",
@@ -3550,6 +3726,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"gridstatus\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:46Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:46Z\",\n  \"captured_utc\": \"2026-05-16T20:29:46.680397+00:00\",\n  \"ca",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\gridstatus_weekly168.json",
@@ -3570,6 +3747,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.65,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"image_magnetometer\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:59Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:59Z\",\n  \"captured_utc\": \"2026-05-16T20:29:59.369320+00:00",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\image_magnetometer_weekly168.json",
@@ -3590,6 +3768,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"gridstatus\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:24.301489+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.gridstatus.io/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf-8\",\n      \"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\gridstatus.json",
@@ -3610,6 +3789,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"ioc_sealevel\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:27.432972+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"http://www.ioc-sealevel",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\ioc_sealevel.json",
@@ -3630,6 +3810,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"neutronmonitor\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:30Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:30Z\",\n  \"captured_utc\": \"2026-05-16T20:29:30.733789+00:00\",\n ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\neutronmonitor_weekly168.json",
@@ -3650,6 +3831,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"neutronmonitor\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:06.768253+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.nmdb.eu/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html\",\n      \"final_url\": \"http",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\neutronmonitor.json",
@@ -3670,6 +3852,7 @@
       "spatial_region": "41.16_-94.93",
       "geohash": "41.16:-94.93",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:53.998402+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/alerts/active\",\n      \"fetched_utc\": \"2026-05-16T00:11:52.871908+00:00\",\n      \"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\noaa_alerts.json",
@@ -3690,6 +3873,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"superdarn\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:31Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:31Z\",\n  \"captured_utc\": \"2026-05-16T20:29:31.736797+00:00\",\n  \"cap",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\superdarn_weekly168.json",
@@ -3710,6 +3894,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"superdarn\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:07.953511+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://superdarn.org/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf-8\",\n      \"final",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\superdarn.json",
@@ -3730,6 +3915,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"soilmoisture_activepassive\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:23.334905+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://smap.jpl.nasa.gov/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\soilmoisture_activepassive.json",
@@ -3750,6 +3936,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"soilmoisture_activepassive\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:45Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:45Z\",\n  \"captured_utc\": \"2026-05-16T20:29:45.8281",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\soilmoisture_activepassive_weekly168.json",
@@ -3770,6 +3957,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"viirs_fire\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:22.584568+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.earthdata.nasa.gov/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=UTF-8\",\n  ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\viirs_fire.json",
@@ -3790,6 +3978,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"vla\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:33.914937+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://science.nrao.edu/facilities/vla\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html;charset=utf-8\",\n  ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\vla.json",
@@ -3810,6 +3999,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"viirs_fire\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:45Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:45Z\",\n  \"captured_utc\": \"2026-05-16T20:29:45.114449+00:00\",\n  \"ca",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\viirs_fire_weekly168.json",
@@ -3830,6 +4020,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"vla\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:54Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:54Z\",\n  \"captured_utc\": \"2026-05-16T20:29:54.955188+00:00\",\n  \"captures\"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\vla_weekly168.json",
@@ -3850,6 +4041,7 @@
       "spatial_region": "19.42_-155.29",
       "geohash": "19.421:-155.292",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:56.297948+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:55.800",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\volcano_smithsonian.json",
@@ -3870,6 +4062,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"citizen_weather_aggregation\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:50.496282+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://weather.gladstonefamily.net/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"tex",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\citizen_weather_aggregation.json",
@@ -3890,6 +4083,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"citizen_weather_aggregation\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:09Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:09Z\",\n  \"captured_utc\": \"2026-05-16T20:30:09",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\citizen_weather_aggregation_weekly168.json",
@@ -3910,6 +4104,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"grid_stability_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:07Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:07Z\",\n  \"captured_utc\": \"2026-05-16T20:30:07.7758",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\grid_stability_overlay_weekly168.json",
@@ -3930,6 +4125,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"grid_stability_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:48.408643+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.gridstatus.io/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\grid_stability_overlay.json",
@@ -3950,6 +4146,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"lightning_density_clusters\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:01Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:01Z\",\n  \"captured_utc\": \"2026-05-16T20:30:01.",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\lightning_density_clusters_weekly168.json",
@@ -3970,6 +4167,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"lightning_density_clusters\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:41.310322+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.lightningmaps.org/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html;",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\lightning_density_clusters.json",
@@ -3990,6 +4188,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"marine_anomaly_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:10Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:10Z\",\n  \"captured_utc\": \"2026-05-16T20:30:10.9650",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\marine_anomaly_overlay_weekly168.json",
@@ -4010,6 +4209,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"marine_anomaly_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:52.248116+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://marine.copernicus.eu/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; char",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\marine_anomaly_overlay.json",
@@ -4030,6 +4230,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"rf_propagation_clusters\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:42.496318+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.dxmaps.com/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html\",\n      \"f",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\rf_propagation_clusters.json",
@@ -4050,6 +4251,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"rf_propagation_clusters\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:02Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:02Z\",\n  \"captured_utc\": \"2026-05-16T20:30:02.868",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\rf_propagation_clusters_weekly168.json",
@@ -4070,6 +4272,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"wildfire_risk_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:04Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:04Z\",\n  \"captured_utc\": \"2026-05-16T20:30:04.92111",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\wildfire_risk_overlay_weekly168.json",
@@ -4090,6 +4293,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"wildfire_risk_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:44.953690+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://firms.modaps.eosdis.nasa.gov/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/htm",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\wildfire_risk_overlay.json",
@@ -4110,6 +4314,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"adsbexchange_live\",\n  \"bucket\": \"streams\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:31:17Z\",\n  \"window_end_utc\": \"2026-05-16T20:31:17Z\",\n  \"captured_utc\": \"2026-05-16T20:31:17.756092+0",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\streams\\adsbexchange_live_weekly168.json",
@@ -4130,6 +4335,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"adsbexchange_live\",\n  \"bucket\": \"streams\",\n  \"acquisition_class\": \"image_stream\",\n  \"captured_utc\": \"2026-05-16T20:26:28.834970+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://globe.adsbexchange.com/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html\",\n     ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\streams\\adsbexchange_live.json",
@@ -4150,6 +4356,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"kiwisdr\",\n  \"bucket\": \"streams\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:45.134563+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"http://kiwisdr.com/p",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\streams\\kiwisdr.json",
@@ -4170,6 +4377,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"kiwisdr\",\n  \"bucket\": \"streams\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:21Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:21Z\",\n  \"captured_utc\": \"2026-05-16T20:32:21.703069+00:00\",\n  \"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\streams\\kiwisdr_weekly168.json",
@@ -4190,6 +4398,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"lightningmaps\",\n  \"bucket\": \"streams\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:22Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:22Z\",\n  \"captured_utc\": \"2026-05-16T20:32:22.519214+00:00",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\streams\\lightningmaps_weekly168.json",
@@ -4210,6 +4419,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"lightningmaps\",\n  \"bucket\": \"streams\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:45.912903+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.li",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\streams\\lightningmaps.json",
@@ -4230,6 +4440,7 @@
       "spatial_region": "37.74_15.0",
       "geohash": "37.741:15.003",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
@@ -4250,6 +4461,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.65,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"emsc\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:23Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:23Z\",\n  \"captured_utc\": \"2026-05-16T20:32:23.614678+00:00\",\n  \"captures\": ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\emsc_weekly168.json",
@@ -4270,6 +4482,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.65,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"emsc\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:21.901193+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.seismicportal.eu/fd",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\emsc.json",
@@ -4290,6 +4503,7 @@
       "spatial_region": "32.85_-116.15",
       "geohash": "32.854:-116.146",
       "seam_phi": 0.73,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"usgs\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:21.306947+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://earthquake.usgs.gov/ear",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\usgs.json",
@@ -4310,6 +4524,7 @@
       "spatial_region": "32.85_-116.15",
       "geohash": "32.854:-116.146",
       "seam_phi": 0.73,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"usgs_day\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:21.576131+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://earthquake.usgs.gov",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\usgs_day.json",
@@ -4330,6 +4545,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"usgs_water\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:26.754576+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://waterservices.usg",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\usgs_water.json",
@@ -4350,6 +4566,7 @@
       "spatial_region": "32.85_-116.15",
       "geohash": "32.854:-116.146",
       "seam_phi": 0.73,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"usgs_day\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:23Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:23Z\",\n  \"captured_utc\": \"2026-05-16T20:32:23.106843+00:00\",\n  \"capture",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\usgs_day_weekly168.json",
@@ -4370,6 +4587,7 @@
       "spatial_region": "32.85_-116.15",
       "geohash": "32.854:-116.146",
       "seam_phi": 0.73,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"usgs\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:22Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:22Z\",\n  \"captured_utc\": \"2026-05-16T20:32:22.580496+00:00\",\n  \"captures\": ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\usgs_weekly168.json",
@@ -4390,6 +4608,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"usgs_water\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:31:39Z\",\n  \"window_end_utc\": \"2026-05-16T20:31:39Z\",\n  \"captured_utc\": \"2026-05-16T20:31:39.668863+00:00\",\n  \"captu",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\usgs_water_weekly168.json",
@@ -4410,6 +4629,7 @@
       "spatial_region": "19.42_-155.29",
       "geohash": "19.421:-155.292",
       "seam_phi": 0.85,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:56.297948+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:55.800",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\volcano_smithsonian.json",
@@ -4430,6 +4650,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"weatherunderground_pws\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:20:53.775333+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.wunderground.com/dashboard/pws/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\weatherunderground_pws.json",
@@ -4450,6 +4671,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"weatherunderground_pws\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:13Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:13Z\",\n  \"captured_utc\": \"2026-05-16T20:29:13.217218+0",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\weatherunderground_pws_weekly168.json",
@@ -4470,6 +4692,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"citizen_weather_aggregation\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:50.496282+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://weather.gladstonefamily.net/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"tex",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\citizen_weather_aggregation.json",
@@ -4490,6 +4713,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"citizen_weather_aggregation\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:09Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:09Z\",\n  \"captured_utc\": \"2026-05-16T20:30:09",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\citizen_weather_aggregation_weekly168.json",
@@ -4510,6 +4734,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:00Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:00Z\",\n  \"captured_utc\": \"2026-05-16T20:32:00.246851+00:00\",\n ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\gdacs_alerts_weekly168.json",
@@ -4530,6 +4755,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:33.526349+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.gdacs.",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\gdacs_alerts.json",
@@ -4550,6 +4776,7 @@
       "spatial_region": "31.59_130.66",
       "geohash": "31.593:130.657",
       "seam_phi": 0.85,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:01Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:01Z\",\n  \"captured_utc\": \"2026-05-16T20:32:01.390515+00",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\volcano_smithsonian_weekly168.json",
@@ -4570,6 +4797,7 @@
       "spatial_region": "31.59_130.66",
       "geohash": "31.593:130.657",
       "seam_phi": 0.85,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"captured_utc\": \"2026-05-16T20:26:02.173805+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"t",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\volcano_smithsonian.json",
@@ -4590,6 +4818,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"global_lightning_archive\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:18Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:18Z\",\n  \"captured_utc\": \"2026-05-16T20:32:18.25629",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\global_lightning_archive_weekly168.json",
@@ -4610,6 +4839,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"global_lightning_archive\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:43.038625+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https:/",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\global_lightning_archive.json",
@@ -4630,6 +4860,7 @@
       "spatial_region": "37.74_15.0",
       "geohash": "37.741:15.003",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
@@ -4650,6 +4881,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"lightningmaps\",\n  \"bucket\": \"raw\",\n  \"pulled_utc\": \"2026-05-16T00:38:12.715739+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.lightningmaps.org/\",\n      \"fetched_utc\": \"2026-05-16T00:38:11.880586+00:00\",\n      \"result\": {",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\lightningmaps.json",
@@ -4670,6 +4902,7 @@
       "spatial_region": "41.16_-94.93",
       "geohash": "41.16:-94.93",
       "seam_phi": 0.85,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:53.998402+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/alerts/active\",\n      \"fetched_utc\": \"2026-05-16T00:11:52.871908+00:00\",\n      \"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\noaa_alerts.json",
@@ -4690,6 +4923,7 @@
       "spatial_region": "47.45_-122.3",
       "geohash": "47.45:-122.3",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"weather_observations_core\",\n  \"bucket\": \"raw\",\n  \"pulled_utc\": \"2026-05-16T01:00:33.625157+00:00\",\n  \"source_count\": 10,\n  \"successes\": 10,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/stations/KSEA/observations/latest\",\n      \"fetched_utc\": \"2026-05-16T",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\weather_observations_core.json",
@@ -4710,6 +4944,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"lightning_density_clusters\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:01Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:01Z\",\n  \"captured_utc\": \"2026-05-16T20:30:01.",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\lightning_density_clusters_weekly168.json",
@@ -4730,6 +4965,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"lightning_density_clusters\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:41.310322+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.lightningmaps.org/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html;",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\lightning_density_clusters.json",
@@ -4750,6 +4986,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"lightningmaps\",\n  \"bucket\": \"streams\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:45.912903+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.li",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\streams\\lightningmaps.json",
@@ -4770,6 +5007,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"lightningmaps\",\n  \"bucket\": \"streams\",\n  \"acquisition_class\": \"image_stream\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:22Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:22Z\",\n  \"captured_utc\": \"2026-05-16T20:32:22.519214+00:00",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\streams\\lightningmaps_weekly168.json",
@@ -4790,6 +5028,7 @@
       "spatial_region": "38.43_-89.9",
       "geohash": "38.43:-89.9",
       "seam_phi": 0.73,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:32.316217+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://api.weather",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\noaa_alerts.json",
@@ -4810,6 +5049,7 @@
       "spatial_region": "38.42_-86.45",
       "geohash": "38.42:-86.45",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:31:58Z\",\n  \"window_end_utc\": \"2026-05-16T20:31:58Z\",\n  \"captured_utc\": \"2026-05-16T20:31:58.171855+00:00\",\n  ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\noaa_alerts_weekly168.json",
@@ -4830,6 +5070,7 @@
       "spatial_region": "41.16_-94.93",
       "geohash": "41.16:-94.93",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:53.998402+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/alerts/active\",\n      \"fetched_utc\": \"2026-05-16T00:11:52.871908+00:00\",\n      \"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\noaa_alerts.json",
@@ -4850,6 +5091,7 @@
       "spatial_region": "38.43_-89.9",
       "geohash": "38.43:-89.9",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:32.316217+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://api.weather",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\noaa_alerts.json",
@@ -4870,6 +5112,7 @@
       "spatial_region": "32.85_-116.15",
       "geohash": "32.854:-116.146",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"usgs_day\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:21.576131+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://earthquake.usgs.gov",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\usgs_day.json",
@@ -4890,6 +5133,7 @@
       "spatial_region": "32.85_-116.15",
       "geohash": "32.854:-116.146",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"usgs_day\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:23Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:23Z\",\n  \"captured_utc\": \"2026-05-16T20:32:23.106843+00:00\",\n  \"capture",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\usgs_day_weekly168.json",
@@ -4910,6 +5154,7 @@
       "spatial_region": "32.85_-116.15",
       "geohash": "32.854:-116.146",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"usgs\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:22Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:22Z\",\n  \"captured_utc\": \"2026-05-16T20:32:22.580496+00:00\",\n  \"captures\": ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\usgs_weekly168.json",
@@ -4930,6 +5175,7 @@
       "spatial_region": "19.42_-155.29",
       "geohash": "19.421:-155.292",
       "seam_phi": 0.97,
+      "projected_event_time": "2026-05-17T02:43:42.987594+00:00",
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:56.297948+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:55.800",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\volcano_smithsonian.json",
@@ -4950,6 +5196,7 @@
       "spatial_region": "31.59_130.66",
       "geohash": "31.593:130.657",
       "seam_phi": 0.97,
+      "projected_event_time": "2026-05-17T02:43:43.015696+00:00",
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"captured_utc\": \"2026-05-16T20:26:02.173805+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"t",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\volcano_smithsonian.json",
@@ -4970,6 +5217,7 @@
       "spatial_region": "31.59_130.66",
       "geohash": "31.593:130.657",
       "seam_phi": 0.97,
+      "projected_event_time": "2026-05-17T02:43:43.015696+00:00",
       "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:01Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:01Z\",\n  \"captured_utc\": \"2026-05-16T20:32:01.390515+00",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\volcano_smithsonian_weekly168.json",
@@ -4990,6 +5238,7 @@
       "spatial_region": "41.16_-94.93",
       "geohash": "41.16:-94.93",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:53.998402+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/alerts/active\",\n      \"fetched_utc\": \"2026-05-16T00:11:52.871908+00:00\",\n      \"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\noaa_alerts.json",
@@ -5010,6 +5259,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"viirs_fire\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:22.584568+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://www.earthdata.nasa.gov/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=UTF-8\",\n  ",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\viirs_fire.json",
@@ -5030,6 +5280,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"viirs_fire\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:45Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:45Z\",\n  \"captured_utc\": \"2026-05-16T20:29:45.114449+00:00\",\n  \"ca",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\viirs_fire_weekly168.json",
@@ -5050,6 +5301,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.77,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"wildfire_risk_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"captured_utc\": \"2026-05-16T20:21:44.953690+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://firms.modaps.eosdis.nasa.gov/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/htm",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\wildfire_risk_overlay.json",
@@ -5070,6 +5322,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.77,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"wildfire_risk_overlay\",\n  \"bucket\": \"curated\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:30:04Z\",\n  \"window_end_utc\": \"2026-05-16T20:30:04Z\",\n  \"captured_utc\": \"2026-05-16T20:30:04.92111",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\curated\\wildfire_risk_overlay_weekly168.json",
@@ -5090,6 +5343,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"copernicus_ems\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:32:01Z\",\n  \"window_end_utc\": \"2026-05-16T20:32:01Z\",\n  \"captured_utc\": \"2026-05-16T20:32:01.818514+00:00\",",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\copernicus_ems_weekly168.json",
@@ -5110,6 +5364,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"copernicus_ems\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"captured_utc\": \"2026-05-16T20:26:02.706575+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://emergency.copernicus.eu/\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"text/html; charset=utf",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\official\\copernicus_ems.json",
@@ -5130,6 +5385,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"hycom\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:25Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:25Z\",\n  \"captured_utc\": \"2026-05-16T20:29:25.724703+00:00\",\n  \"capture",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\hycom_weekly168.json",
@@ -5150,6 +5406,7 @@
       "spatial_region": null,
       "geohash": null,
       "seam_phi": 0.53,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"madis\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"nonrealtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:29:09Z\",\n  \"window_end_utc\": \"2026-05-16T20:29:09Z\",\n  \"captured_utc\": \"2026-05-16T20:29:09.512200+00:00\",\n  \"capture",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\madis_weekly168.json",
@@ -5170,6 +5427,7 @@
       "spatial_region": "41.16_-94.93",
       "geohash": "41.16:-94.93",
       "seam_phi": 0.61,
+      "projected_event_time": null,
       "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:53.998402+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/alerts/active\",\n      \"fetched_utc\": \"2026-05-16T00:11:52.871908+00:00\",\n      \"",
       "source_refs": [
         "C:\\Continuum Database\\continuum\\..\\raw\\noaa_alerts.json",
