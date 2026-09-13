@@ -110,13 +110,16 @@
             text-transform: uppercase;
         }
         .log-entry {
-            font-size: 13px;
-            margin-bottom: 8px;
-            padding: 6px;
-            border-left: 2px solid #666;
+            font-size: 12px;
+            margin-bottom: 4px;
+            padding: 4px 6px;
+            border-left: 3px solid #666;
             padding-left: 10px;
             color: #bbb;
-            line-height: 1.4;
+            line-height: 1.2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .log-entry.event {
             border-left-color: #ff6b6b;
@@ -605,14 +608,36 @@
 
         function addLog(message, type = 'info') {
             const timestamp = new Date().toLocaleTimeString();
-            logEntries.unshift({ timestamp, message, type });
-            if (logEntries.length > 100) logEntries.pop();
 
-            const logContainer = document.getElementById('logContainer');
-            const entry = document.createElement('div');
-            entry.className = `log-entry ${type}`;
-            entry.innerHTML = `<span class="log-timestamp">${timestamp}</span> ${message}`;
-            logContainer.insertBefore(entry, logContainer.firstChild);
+            // Check if this is an event update (contains event info)
+            // If so, consolidate with existing event entries
+            const eventMatch = message.match(/(\w+)_(\w+)_\d+_\d{3}/); // Matches event ID pattern
+
+            if (eventMatch) {
+                // This is an event - show it as one line with timestamp
+                const logContainer = document.getElementById('logContainer');
+                const entry = document.createElement('div');
+                entry.className = `log-entry ${type}`;
+                // Format: [TIME] EVENT_TYPE - LOCATION - CONFIDENCE - HISTORY
+                entry.innerHTML = `<span class="log-timestamp">${timestamp}</span> ${message}`;
+                entry.style.whiteSpace = 'nowrap';
+                entry.style.overflow = 'hidden';
+                entry.style.textOverflow = 'ellipsis';
+                logContainer.insertBefore(entry, logContainer.firstChild);
+
+                logEntries.unshift({ timestamp, message, type });
+                if (logEntries.length > 50) logEntries.pop(); // Limit to 50 entries
+            } else {
+                // System message - show normally but limit
+                logEntries.unshift({ timestamp, message, type });
+                if (logEntries.length > 50) logEntries.pop();
+
+                const logContainer = document.getElementById('logContainer');
+                const entry = document.createElement('div');
+                entry.className = `log-entry ${type}`;
+                entry.innerHTML = `<span class="log-timestamp">${timestamp}</span> ${message}`;
+                logContainer.insertBefore(entry, logContainer.firstChild);
+            }
         }
 
         function getPhase(seam_phi) {
@@ -1054,8 +1079,19 @@
                     const card = createEventCard(evt, phase);
                     container.appendChild(card);
 
-                    const deltaStr = evt.identification_to_alert_minutes ? ` [Δ${evt.identification_to_alert_minutes}m]` : '';
-                    addLog(`${phase === 'event' ? '🔴' : '🟠'} ${evt.signature_class.toUpperCase()} at ${formatLocation(evt.location, evt.signal_summary)} - ${(lastConf*100).toFixed(0)}%${deltaStr}`, phase);
+                    const deltaStr = evt.identification_to_alert_minutes ? ` Δ${evt.identification_to_alert_minutes}m` : '';
+
+                    // Build confidence history string (last 3 readings)
+                    let historyStr = '';
+                    if (evt.confidence_history && evt.confidence_history.length > 1) {
+                        const recentConf = evt.confidence_history.slice(-3).map(h => `${(h.seam_phi*100).toFixed(0)}%`).join('←');
+                        historyStr = ` [${recentConf}]`;
+                    }
+
+                    const phaseEmoji = lastConf >= 0.97 ? '🔴' : lastConf >= 0.95 ? '🔴' : lastConf >= 0.85 ? '🟠' : lastConf >= 0.75 ? '🟡' : '⚪';
+                    const formattedId = evt.formatted_id || `${evt.signature_class.substring(0,3)}_${evt.location.best_effort_lat?.toFixed(0)}_${evt.location.best_effort_lon?.toFixed(0)}`;
+
+                    addLog(`${phaseEmoji} ${formattedId} ${(lastConf*100).toFixed(0)}%${historyStr}${deltaStr}`, phase);
                 });
 
                 loading.style.display = 'none';
