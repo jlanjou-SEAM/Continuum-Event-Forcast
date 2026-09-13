@@ -451,25 +451,45 @@
 
         function getRegionAbbrev(lat, lon) {
             if (lat === null || lon === null) return 'unk';
-            if ((10 < lat && lat < 65 && 125 < lon && lon < 180) || (-60 < lat && lat < -10 && 125 < lon && lon < 180)) return 'pac';
-            if (-80 < lat && lat < 80 && -120 < lon && lon < -20) return 'atl';
+            // Pacific (includes Hawaii at -155, -75)
+            if ((10 < lat && lat < 65 && (125 < lon || -180 < lon && lon < -75)) || (-60 < lat && lat < -10 && 125 < lon && lon < 180)) return 'pac';
+            // Atlantic
+            if (-80 < lat && lat < 80 && -100 < lon && lon < -20) return 'atl';
+            // Indian Ocean
             if (-60 < lat && lat < 40 && 20 < lon && lon < 120) return 'ind';
+            // Europe/Mediterranean
             if (30 < lat && lat < 70 && -10 < lon && lon < 50) return 'eur';
+            // Asia
             if (-10 < lat && lat < 60 && 50 < lon && lon < 150) return 'asia';
+            // Africa
             if (-35 < lat && lat < 40 && -20 < lon && lon < 55) return 'afr';
+            // Americas
             if (-60 < lat && lat < 80 && -180 < lon && lon < -30) return lat > 15 ? 'nam' : 'sam';
+            // Australia
             if (-50 < lat && lat < -10 && 110 < lon && lon < 160) return 'aus';
             return 'gbl';
         }
+
+        // Event sequence counter
+        const eventCounter = {};
 
         function generateFormattedEventId(eventType, lat, lon, timestamp) {
             const typeAbbrev = getEventTypeAbbrev(eventType);
             const regionAbbrev = getRegionAbbrev(lat, lon);
             try {
                 const year = new Date(timestamp).getFullYear() % 100;
-                return `${typeAbbrev}_${regionAbbrev}_${year}`;
+                const key = `${typeAbbrev}_${regionAbbrev}_${year}`;
+
+                if (!eventCounter[key]) {
+                    eventCounter[key] = 1;
+                } else {
+                    eventCounter[key]++;
+                }
+
+                const num = String(eventCounter[key]).padStart(3, '0');
+                return `${key}_${num}`;
             } catch (e) {
-                return `${typeAbbrev}_${regionAbbrev}_??`;
+                return `${typeAbbrev}_${regionAbbrev}_??_???`;
             }
         }
 
