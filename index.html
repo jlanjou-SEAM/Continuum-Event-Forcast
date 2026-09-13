@@ -587,10 +587,12 @@
                             <div class="card-phase">${phase === 'event' ? '🔴 EVENT' : '🟠 WATCH'}</div>
                             <div class="card-type">${eventType}</div>
                         </div>
-                        <div style="text-align: right;">
-                            <div style="font-size: 28px; margin-bottom: 2px;">${trendIcon}</div>
-                            <div class="card-confidence ${phase}">${conf}%</div>
-                            <div style="font-size: 9px; color: #aaa; margin-top: 2px;">${trendLabel}</div>
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                            <div style="font-size: 28px; line-height: 1;">${trendIcon}</div>
+                            <div style="text-align: left;">
+                                <div class="card-confidence ${phase}" style="margin: 0;">${conf}%</div>
+                                <div style="font-size: 9px; color: #aaa;">${trendLabel}</div>
+                            </div>
                         </div>
                     </div>
                     <div class="card-location">${locationDisplay}</div>
