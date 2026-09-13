@@ -1,0 +1,104 @@
+name: Full Pipeline - Realtime (Sample → Consolidate → Manifold)
+
+on:
+  schedule:
+    - cron: '*/2 * * * *'  # Every 2 minutes - as frequent as GitHub allows
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  full-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 feedparser urllib3
+
+      - name: Step 1 - Realtime Data Acquisition
+        env:
+          SEAM_COLLECTOR_TIMEOUT_SECONDS: 30
+        run: |
+          cd config/step1_raw_data_retrieval
+          echo "[pipeline] Starting realtime acquisition..."
+          python realtime_acquisition.py 2>&1 | tee acquisition.log
+          cd ../../
+
+      - name: Step 1 - Nonrealtime Data Acquisition
+        env:
+          SEAM_COLLECTOR_TIMEOUT_SECONDS: 30
+        run: |
+          cd config/step1_raw_data_retrieval
+          echo "[pipeline] Starting nonrealtime acquisition..."
+          python nonrealtime_acquisition.py 2>&1 | tee -a acquisition.log
+          cd ../../
+
+      - name: Step 1 - Official Data Acquisition
+        env:
+          SEAM_COLLECTOR_TIMEOUT_SECONDS: 30
+        run: |
+          cd config/step1_raw_data_retrieval
+          echo "[pipeline] Starting official acquisition..."
+          python official_acquisition.py 2>&1 | tee -a acquisition.log
+          cd ../../
+
+      - name: Step 1 - Image Stream Acquisition
+        env:
+          SEAM_COLLECTOR_TIMEOUT_SECONDS: 30
+        run: |
+          cd config/step1_raw_data_retrieval
+          echo "[pipeline] Starting image stream acquisition..."
+          python image_stream_acquisition.py 2>&1 | tee -a acquisition.log
+          cd ../../
+
+      - name: Step 2 - Consolidate all data
+        run: |
+          echo "[pipeline] Running consolidation (Step 2)..."
+          cd config/step2_continuum_master
+          python step2_continuum_master.py 2>&1 | tee consolidation.log
+          cd ../../
+
+      - name: Step 3 - Generate Manifold
+        run: |
+          echo "[pipeline] Running manifold generation (Step 3)..."
+          cd continuum/processes/step3_volcanic_analysis
+          python step3_volcanic_analysis.py 2>&1 | tee manifold.log
+          cd ../../../
+
+      - name: Commit pipeline results
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Add all updated data
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No changes detected in pipeline"
+          else
+            git commit -m "chore: full pipeline update - sample + consolidate + manifold [skip ci]"
+            git push
+            echo "Pipeline complete: manifold updated and committed"
+          fi
+
+      - name: Verify manifold was updated
+        run: |
+          echo "[verify] Checking manifold timestamp..."
+          ls -lh continuum/output/volcanic_manifold_analysis.json
+          echo "[verify] Manifold event count:"
+          python -c "import json; m=json.load(open('continuum/output/volcanic_manifold_analysis.json')); print(f'Events: {len(m.get(\"manifold_events\", []))}')"
