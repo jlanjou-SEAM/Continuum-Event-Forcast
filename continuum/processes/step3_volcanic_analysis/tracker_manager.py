@@ -56,6 +56,73 @@ def get_government_agency(event_type):
     }
     return agency_map.get(event_type, "UNKNOWN")
 
+def get_event_type_abbrev(event_type):
+    """Get abbreviation for event type"""
+    abbrev_map = {
+        "volcanic": "vol",
+        "seismic": "seis",
+        "severe_weather": "wthr",
+        "tornadic": "torn",
+        "winter_weather": "wint",
+        "tropical_cyclone": "trop",
+        "flood": "fld",
+        "wildfire": "fire",
+        "drought": "drgt",
+        "geomagnetic": "gmag",
+        "rf_disruption": "rf"
+    }
+    return abbrev_map.get(event_type, "evt")
+
+def get_location_abbrev(lat, lon):
+    """Get region abbreviation from coordinates"""
+    if lat is None or lon is None:
+        return "unk"
+
+    # Pacific Ring of Fire
+    if (10 < lat < 65 and 125 < lon < 180) or (-60 < lat < -10 and 125 < lon < 180):
+        return "pac"
+    # Atlantic
+    elif -80 < lat < 80 and -120 < lon < -20:
+        return "atl"
+    # Indian Ocean
+    elif -60 < lat < 40 and 20 < lon < 120:
+        return "ind"
+    # Mediterranean/Europe
+    elif 30 < lat < 70 and -10 < lon < 50:
+        return "eur"
+    # Asia
+    elif -10 < lat < 60 and 50 < lon < 150:
+        return "asia"
+    # Africa
+    elif -35 < lat < 40 and -20 < lon < 55:
+        return "afr"
+    # Americas
+    elif -60 < lat < 80 and -180 < lon < -30:
+        if lat > 15:
+            return "nam"  # North America
+        else:
+            return "sam"  # South America
+    # Australia
+    elif -50 < lat < -10 and 110 < lon < 160:
+        return "aus"
+
+    return "gbl"  # Global
+
+def generate_event_id(event_type, lat, lon, timestamp_utc):
+    """Generate formatted event ID: type_region_year_###"""
+    type_abbrev = get_event_type_abbrev(event_type)
+    region_abbrev = get_location_abbrev(lat, lon)
+
+    try:
+        year = datetime.fromisoformat(timestamp_utc).year % 100
+    except:
+        year = datetime.now(UTC).year % 100
+
+    # Event number would be assigned sequentially - placeholder for now
+    event_num = "001"
+
+    return f"{type_abbrev}_{region_abbrev}_{year}_{event_num}"
+
 def extract_location(event, signal_summary):
     """Extract location hierarchy from event and signal_summary"""
     location = {
@@ -98,8 +165,16 @@ def update_or_create_event(tracker, event, signal_summary_dict):
 
     if event_id not in tracker["events"]:
         # New event
+        lat = event.get("latitude")
+        lon = event.get("longitude")
+        event_type = event.get("signature_class")
+        timestamp = event.get("timestamp_utc")
+
+        formatted_id = generate_event_id(event_type, lat, lon, timestamp)
+
         tracker["events"][event_id] = {
             "event_id": event_id,
+            "formatted_id": formatted_id,
             "signature_class": event.get("signature_class"),
             "primary_regime": event.get("primary_regime"),
             "first_detected_utc": event.get("timestamp_utc"),

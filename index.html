@@ -679,6 +679,7 @@
                                 phase === 'warning' ? '🟡 WARNING' :
                                 '⚪ TRACK'
                             }</div>
+                            <div style="font-size: 10px; color: #888; margin-bottom: 2px;">${eventData.event_id.substring(5, 24) || eventData.event_id}</div>
                             <div class="card-type">${eventType}</div>
                         </div>
                         <div style="display: flex; align-items: center; gap: 4px; text-align: right;">
