@@ -812,14 +812,17 @@
             };
             const responsibleAgency = agencyMap[eventData.signature_class] || 'UNKNOWN';
 
-            // Status: if high confidence but no official alert, flag as "Awaiting [AGENCY]"
+            // Status: show "No Alert" if no official alert exists
+            // When an alert exists, show the agency name
             let alertStatus = officialAlert;
             let alertStatusDisplay = officialAlert;
-            if (conf >= 90 && officialAlert === 'None') {
-                alertStatus = `⚠️ Awaiting ${responsibleAgency}`;
-                alertStatusDisplay = `Awaiting ${responsibleAgency}`;
-            } else if (officialAlert === 'None') {
-                alertStatusDisplay = `No ${responsibleAgency} Alert`;
+            if (officialAlert === 'None') {
+                alertStatus = 'No Alert';
+                alertStatusDisplay = 'No Alert';
+            } else {
+                // Alert exists - show the responsible agency that issued it
+                // Agency may be USGS, NWS, NOAA, or international/other
+                alertStatusDisplay = `${responsibleAgency} Alert`;
             }
 
             // Calculate time to event
