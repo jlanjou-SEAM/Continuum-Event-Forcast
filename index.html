@@ -105,13 +105,41 @@
         .event-card {
             background: #1e1e2e;
             border-radius: 8px;
-            padding: 12px;
+            padding: 8px;
             border-top: 4px solid;
             border-left: 4px solid;
             min-height: 140px;
+            display: grid;
+            grid-template-columns: 7fr 1fr;
+            grid-template-rows: auto 1fr;
+            gap: 6px;
+            position: relative;
+        }
+        .card-hysteresis {
+            grid-column: 2;
+            grid-row: 1 / 3;
+            background: rgba(0,0,0,0.3);
+            border-radius: 4px;
+            padding: 4px;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            align-items: flex-end;
+            justify-content: space-around;
+            gap: 2px;
+        }
+        .hysteresis-bar {
+            flex: 1;
+            background: #666;
+            border-radius: 2px;
+            min-height: 2px;
+        }
+        .hysteresis-bar.rising {
+            background: #4CAF50;
+        }
+        .hysteresis-bar.falling {
+            background: #ff6b6b;
+        }
+        .hysteresis-bar.locked {
+            background: #ffd700;
         }
         .event-card.event {
             border-top-color: #ff6b6b;
@@ -406,35 +434,69 @@
 
             const magDisplay = mag ? `<div class="card-info-row"><span class="card-label">Magnitude</span><span class="card-value">${mag}</span></div>` : '';
 
+            // Calculate hysteresis (confidence trend)
+            const confidenceHistory = eventData.confidence_history || [];
+            let hysteresisHtml = '';
+            let trendStatus = 'stable';
+
+            if (confidenceHistory.length > 1) {
+                const recentValues = confidenceHistory.slice(-5).map(h => h.seam_phi);
+                const avgOld = recentValues.slice(0, Math.ceil(recentValues.length / 2)).reduce((a, b) => a + b, 0) / Math.ceil(recentValues.length / 2);
+                const avgNew = recentValues.slice(Math.ceil(recentValues.length / 2)).reduce((a, b) => a + b, 0) / Math.ceil(recentValues.length / 2);
+
+                trendStatus = avgNew > avgOld ? 'rising' : avgNew < avgOld ? 'falling' : 'stable';
+
+                // Create sparkline bars
+                const maxConf = Math.max(...recentValues, 1);
+                hysteresisHtml = `<div class="card-hysteresis">
+                    ${recentValues.map(v => {
+                        const height = (v / maxConf * 100);
+                        const trendClass = trendStatus === 'rising' ? 'rising' : trendStatus === 'falling' ? 'falling' : 'locked';
+                        return `<div class="hysteresis-bar ${trendClass}" style="height: ${height}%"></div>`;
+                    }).join('')}
+                </div>`;
+            }
+
+            // Status: if high confidence but no official alert, flag as "Predicted"
+            let alertStatus = officialAlert;
+            if (conf >= 90 && officialAlert === 'None') {
+                alertStatus = '⚠️ Predicted';
+            }
+
             card.innerHTML = `
-                <div>
-                    <div class="card-phase">${phase === 'event' ? '🔴 EVENT' : '🟠 WATCH'}</div>
-                    <div class="card-type">${eventType}</div>
+                <div style="grid-column: 1; padding-right: 8px;">
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 4px;">
+                        <div>
+                            <div class="card-phase">${phase === 'event' ? '🔴 EVENT' : '🟠 WATCH'}</div>
+                            <div class="card-type">${eventType}</div>
+                        </div>
+                        <div class="card-confidence ${phase}" style="text-align: right;">${conf}%</div>
+                    </div>
                     <div class="card-location">${locationDisplay}</div>
                 </div>
 
-                <div>
-                    <div class="card-confidence ${phase}">${conf}%</div>
+                ${hysteresisHtml}
+
+                <div style="grid-column: 1;">
                     <div class="card-info">
                         <div class="card-info-row">
                             <span class="card-label">Detected</span>
                             <span class="card-value">${detectedTime}</span>
                         </div>
                         <div class="card-info-row">
-                            <span class="card-label">Event</span>
+                            <span class="card-label">Forecast</span>
                             <span class="card-value">${eventTime}</span>
                         </div>
                         <div class="card-info-row">
-                            <span class="card-label">Alert Issued</span>
-                            <span class="card-value">${alertIssuedTime}</span>
+                            <span class="card-label">USGS</span>
+                            <span class="card-value">${alertStatus}</span>
                         </div>
                         <div class="card-info-row">
-                            <span class="card-label">Status</span>
-                            <span class="card-value">${officialAlert}</span>
+                            <span class="card-label">Trend</span>
+                            <span class="card-value">${trendStatus.toUpperCase()}</span>
                         </div>
                         ${coordDisplay}
                         ${magDisplay}
-                        ${timeDeltaDisplay}
                     </div>
                 </div>
             `;
