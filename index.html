@@ -10,39 +10,69 @@
             font-family: 'Courier New', monospace;
             background: linear-gradient(135deg, #2a2a3e 0%, #3d3d52 100%);
             color: #fff;
-            padding: 20px;
+            padding: 0;
+            margin: 0;
             min-height: 100vh;
-        }
-        .container {
-            max-width: 100%;
-            margin: 0 auto;
             display: flex;
-            gap: 20px;
-            height: calc(100vh - 40px);
+            flex-direction: column;
         }
         header {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            right: 20px;
             background: linear-gradient(135deg, #1e1e2e 0%, #2d2d3d 100%);
             padding: 8px 20px;
-            border-radius: 8px;
-            border-left: 4px solid #ff6b6b;
+            border-bottom: 4px solid #ff6b6b;
             z-index: 100;
-            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
         }
         h1 {
             color: #ff6b6b;
             font-size: 14px;
+            margin: 0;
             margin-bottom: 2px;
         }
         .subtitle {
             color: #aaa;
             font-size: 10px;
+            margin: 0;
+        }
+        .header-right {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            font-size: 10px;
+        }
+        .time-display {
+            text-align: right;
+        }
+        .time-label {
+            color: #888;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+        .time-value {
+            color: #0f0;
+            font-weight: bold;
+        }
+        .refresh-countdown {
+            text-align: center;
+            padding: 4px 8px;
+            background: rgba(255,107,107,0.1);
+            border-radius: 4px;
+            border-left: 2px solid #ff6b6b;
+        }
+        .container {
+            max-width: 100%;
+            display: flex;
+            gap: 20px;
+            flex: 1;
+            min-height: 0;
+            padding: 20px;
+            overflow: hidden;
         }
         .main-content {
-            margin-top: 65px;
             display: flex;
             gap: 20px;
             flex: 1;
@@ -240,10 +270,27 @@
 </head>
 <body>
     <header>
-        <h1>🎯 CONTINUUM EVENT PROJECTION</h1>
-        <p class="subtitle">Real-time natural disaster prediction system • Last refresh: <span id="lastRefresh">-</span></p>
+        <div>
+            <h1>🎯 CONTINUUM EVENT PROJECTION</h1>
+            <p class="subtitle">Real-time natural disaster prediction system</p>
+        </div>
+        <div class="header-right">
+            <div class="time-display">
+                <div class="time-label">LOCAL</div>
+                <div class="time-value" id="localTime">--:--:--</div>
+            </div>
+            <div class="time-display">
+                <div class="time-label">GMT</div>
+                <div class="time-value" id="gmtTime">--:--:--</div>
+            </div>
+            <div class="refresh-countdown">
+                <div class="time-label">REFRESH IN</div>
+                <div class="time-value" id="refreshCountdown">60s</div>
+            </div>
+        </div>
     </header>
 
+    <div class="container">
     <div class="main-content">
         <div class="left-panel">
             <div id="loading" class="loading" style="display:none;">Loading events...</div>
@@ -256,8 +303,9 @@
             <div id="logContainer" style="flex: 1; overflow-y: auto;"></div>
         </div>
     </div>
+    </div>
 
-    <footer>Continuum Database • 30-Day Event Tracker</footer>
+    <footer style="padding: 10px 20px; text-align: center; font-size: 10px; color: #666; border-top: 1px solid rgba(255,255,255,0.1);">Continuum Database • 30-Day Event Tracker</footer>
 
     <script>
         const REPO = 'jlanjou-SEAM/SEAM-Core';
@@ -619,9 +667,32 @@
             }
         }
 
+        // Update clock and countdown
+        let nextRefreshTime = Date.now() + 60000;
+        function updateTimeDisplay() {
+            const now = new Date();
+
+            // Local time
+            document.getElementById('localTime').textContent = now.toLocaleTimeString();
+
+            // GMT time
+            document.getElementById('gmtTime').textContent = now.toUTCString().split(' ')[4];
+
+            // Refresh countdown
+            const msUntilRefresh = nextRefreshTime - Date.now();
+            const secsUntilRefresh = Math.max(0, Math.ceil(msUntilRefresh / 1000));
+            document.getElementById('refreshCountdown').textContent = secsUntilRefresh + 's';
+        }
+
+        updateTimeDisplay();
+        setInterval(updateTimeDisplay, 1000);
+
         addLog('🚀 Continuum Event Projection System started', 'info');
         loadAndRender();
-        setInterval(loadAndRender, 60000);
+        const refreshInterval = setInterval(() => {
+            nextRefreshTime = Date.now() + 60000;
+            loadAndRender();
+        }, 60000);
     </script>
 </body>
 </html>
