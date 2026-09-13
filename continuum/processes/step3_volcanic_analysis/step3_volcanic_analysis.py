@@ -427,6 +427,39 @@ def main():
             matches.append(canonical_event(record, signature, score))
             counts[signature] += 1
 
+    # Deduplicate: keep only highest-confidence event for each unique location + signature_class
+    def deduplicate_by_location(events):
+        """Group events by (signature_class, rounded_lat, rounded_lon) and keep highest confidence"""
+        seen = {}
+        for event in events:
+            sig_class = event.get("signature_class", "")
+            lat = event.get("latitude")
+            lon = event.get("longitude")
+
+            if lat is None or lon is None:
+                # No location, keep as-is
+                if (sig_class, None, None) not in seen:
+                    seen[(sig_class, None, None)] = event
+                continue
+
+            # Round to 2 decimals for spatial grouping (~1 km resolution)
+            lat_key = round(lat, 2)
+            lon_key = round(lon, 2)
+            key = (sig_class, lat_key, lon_key)
+
+            if key not in seen:
+                seen[key] = event
+            else:
+                # Keep event with higher confidence
+                existing_phi = seen[key].get("seam_phi", 0)
+                new_phi = event.get("seam_phi", 0)
+                if new_phi > existing_phi:
+                    seen[key] = event
+
+        return list(seen.values())
+
+    matches = deduplicate_by_location(matches)
+
     matches.sort(
         key=lambda e: (
             e.get("signature_class", ""),
