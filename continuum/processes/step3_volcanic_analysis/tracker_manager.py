@@ -86,10 +86,13 @@ def update_or_create_event(tracker, event, signal_summary_dict):
             "signature_class": event.get("signature_class"),
             "primary_regime": event.get("primary_regime"),
             "first_detected_utc": event.get("timestamp_utc"),
+            "event_date": datetime.fromisoformat(event.get("timestamp_utc")).date().isoformat() if event.get("timestamp_utc") else None,
             "status": "active",
             "location": extract_location(event, signal_summary_dict),
             "confidence_history": [],
             "phase_transitions": [],
+            "prediction_history": [],
+            "official_declarations": [],
             "official_alert": {},
             "projections": {
                 "projected_event_time": None,
@@ -97,7 +100,10 @@ def update_or_create_event(tracker, event, signal_summary_dict):
                 "projected_severity": None
             },
             "time_to_lock_minutes": None,
-            "identification_to_alert_minutes": None
+            "identification_to_alert_minutes": None,
+            "offset_to_official_minutes": None,
+            "closed_at_utc": None,
+            "retention_until_utc": None
         }
 
     event_record = tracker["events"][event_id]
@@ -115,6 +121,14 @@ def update_or_create_event(tracker, event, signal_summary_dict):
             "seam_phi": seam_phi,
             "phase": current_phase,
             "magnitude": event.get("magnitude")
+        })
+
+        # Record prediction history on confidence change
+        event_record["prediction_history"].append({
+            "timestamp_utc": datetime.now(UTC).isoformat(),
+            "seam_phi": seam_phi,
+            "predicted_event_time": event.get("timestamp_utc"),
+            "confidence_phase": current_phase
         })
 
     # Track phase transitions
