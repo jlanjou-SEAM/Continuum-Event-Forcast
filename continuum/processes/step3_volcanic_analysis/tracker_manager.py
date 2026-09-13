@@ -29,7 +29,7 @@ def create_empty_tracker():
 
 def get_phase(seam_phi):
     """Determine phase from confidence score"""
-    if seam_phi > 0.90:
+    if seam_phi > 0.95:
         return "event"
     elif seam_phi > 0.85:
         return "watch"
