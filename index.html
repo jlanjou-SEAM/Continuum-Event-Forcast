@@ -350,6 +350,9 @@
             'tokyo': { name: 'Tokyo Bay', lat: 35.45, lon: 139.77, country: 'Japan', state: 'Tokyo' },
             'california': { name: 'San Francisco Bay', lat: 37.77, lon: -122.42, country: 'USA', state: 'California' },
             'alaska': { name: 'Alaska Subduction Zone', lat: 61.0, lon: -149.0, country: 'USA', state: 'Alaska' },
+            'chile': { name: 'Chile Trench', lat: -30.0, lon: -71.0, country: 'Chile', state: 'Ring of Fire' },
+            'japan': { name: 'Japan Trench', lat: 37.0, lon: 142.0, country: 'Japan', state: 'Ring of Fire' },
+            'peru': { name: 'Peru-Chile Trench', lat: -15.0, lon: -75.0, country: 'Peru', state: 'Ring of Fire' },
         };
 
         const WEATHER_ZONES = {
@@ -358,18 +361,25 @@
             'florida': { name: 'Southeast Coast', lat: 27.99, lon: -81.76, country: 'USA', state: 'Florida' },
             'midwest': { name: 'Great Lakes Region', lat: 43.00, lon: -85.00, country: 'USA', state: 'Michigan' },
             'pacific': { name: 'Pacific Northwest', lat: 47.61, lon: -122.33, country: 'USA', state: 'Washington' },
+            'gulf': { name: 'Gulf of Mexico', lat: 26.0, lon: -90.0, country: 'USA', state: 'Gulf Coast' },
+            'midwest_plains': { name: 'Great Plains', lat: 39.0, lon: -98.0, country: 'USA', state: 'Kansas' },
         };
 
         const TROPICAL_ZONES = {
             'atlantic': { name: 'Atlantic Basin', lat: 20.00, lon: -60.00, country: 'Atlantic', state: 'Open Water' },
-            'pacific': { name: 'Eastern Pacific', lat: 15.00, lon: -120.00, country: 'Pacific', state: 'Open Water' },
+            'pacific_east': { name: 'Eastern Pacific', lat: 15.00, lon: -120.00, country: 'Pacific', state: 'Open Water' },
             'caribbean': { name: 'Caribbean', lat: 18.22, lon: -77.50, country: 'Caribbean Region', state: 'Tropical' },
+            'pacific_west': { name: 'Western Pacific', lat: 15.00, lon: 140.00, country: 'Pacific', state: 'Open Water' },
+            'indian_ocean': { name: 'Indian Ocean', lat: -10.00, lon: 80.00, country: 'Indian', state: 'Ocean Basin' },
         };
 
         const FIRE_ZONES = {
-            'california': { name: 'California Wildlands', lat: 38.50, lon: -120.50, country: 'USA', state: 'California' },
-            'oregon': { name: 'Pacific Northwest Forests', lat: 43.94, lon: -120.55, country: 'USA', state: 'Oregon' },
+            'california_north': { name: 'Northern California', lat: 40.0, lon: -121.0, country: 'USA', state: 'California' },
+            'california_south': { name: 'Southern California', lat: 34.0, lon: -118.0, country: 'USA', state: 'California' },
+            'oregon_washington': { name: 'Pacific Northwest Forests', lat: 44.0, lon: -121.0, country: 'USA', state: 'Oregon' },
             'australia': { name: 'Eastern Australia', lat: -34.40, lon: 150.88, country: 'Australia', state: 'NSW' },
+            'amazon': { name: 'Amazon Basin', lat: -5.0, lon: -60.0, country: 'Brazil', state: 'Amazonas' },
+            'siberia': { name: 'Siberian Taiga', lat: 65.0, lon: 100.0, country: 'Russia', state: 'Siberia' },
         };
 
         function getVolcanoInfo(lat, lon) {
@@ -441,47 +451,99 @@
         }
 
         function getRegionFromCoordinates(lat, lon) {
-            // Determine region/area name from coordinates
-            if (lat === null || lon === null) return null;
+            // Determine region/area name from coordinates - MUST always return something
+            if (lat === null || lon === null) return { name: 'Global', country: 'Global', state: 'Unspecified' };
 
-            // Pacific Ring of Fire
-            if ((10 < lat && lat < 65 && (125 < lon || -180 < lon && lon < -75)) || (-60 < lat && lat < -10 && 125 < lon && lon < 180)) {
-                return { name: 'Pacific Ring', country: 'Global', state: 'Ring of Fire' };
+            // USA - More detailed regions
+            if (25 < lat && lat < 49 && -125 < lon && lon < -66) {
+                if (lat > 42 && lon < -70) return { name: 'New England', country: 'USA', state: 'New England' };
+                if (lat > 40 && lon < -75) return { name: 'Mid-Atlantic', country: 'USA', state: 'Mid-Atlantic' };
+                if (lat < 37 && lon < -80) return { name: 'Southeast', country: 'USA', state: 'Southeast' };
+                if (lat > 36 && lat < 42 && lon < -80) return { name: 'Appalachia', country: 'USA', state: 'Appalachia' };
+                if (lat > 37 && lat < 46 && lon > -105 && lon < -85) return { name: 'Great Lakes', country: 'USA', state: 'Great Lakes' };
+                if (lat > 39 && lat < 49 && lon > -105 && lon < -85) return { name: 'Midwest', country: 'USA', state: 'Midwest' };
+                if (lat > 35 && lat < 40 && lon > -104 && lon < -93) return { name: 'Great Plains', country: 'USA', state: 'Great Plains' };
+                if (lat > 29 && lat < 37 && lon > -104 && lon < -93) return { name: 'South Central', country: 'USA', state: 'South Central' };
+                if (lat > 25 && lat < 32 && lon > -87 && lon < -80) return { name: 'Gulf Coast', country: 'USA', state: 'Gulf Coast' };
+                if (lat > 35 && lat < 46 && lon > -125 && lon < -105) return { name: 'Mountain West', country: 'USA', state: 'Mountain West' };
+                if (lat > 30 && lat < 42 && lon > -125 && lon < -114) return { name: 'Pacific West', country: 'USA', state: 'Pacific West' };
+                return { name: 'Continental USA', country: 'USA', state: 'USA' };
             }
-            // Atlantic
-            if (-80 < lat && lat < 80 && -100 < lon && lon < -20) {
-                return { name: 'Atlantic Basin', country: 'Atlantic', state: 'Ocean Basin' };
+
+            // Canada
+            if (42 < lat && lat < 84 && -141 < lon && lon < -52) {
+                return { name: 'Canada', country: 'Canada', state: 'North America' };
             }
-            // Indian Ocean
-            if (-60 < lat && lat < 40 && 20 < lon && lon < 120) {
-                return { name: 'Indian Ocean', country: 'Indian', state: 'Ocean Basin' };
+
+            // Mexico & Central America
+            if (7 < lat && lat < 32 && -120 < lon && lon < -86) {
+                return { name: 'Mexico & Central America', country: 'Mexico', state: 'Central America' };
             }
-            // Europe/Mediterranean
-            if (30 < lat && lat < 70 && -10 < lon && lon < 50) {
-                return { name: 'Europe/Mediterranean', country: 'Europe', state: 'Region' };
+
+            // South America
+            if (-56 < lat && lat < 13 && -82 < lon && lon < -34) {
+                if (lat > -10 && lon > -75) return { name: 'Amazon Basin', country: 'Brazil', state: 'Amazonas' };
+                if (lat > -28 && lat < -8) return { name: 'Central South America', country: 'Brazil', state: 'Central' };
+                if (lat < -28) return { name: 'Southern South America', country: 'Argentina', state: 'Southern' };
+                return { name: 'South America', country: 'South America', state: 'Region' };
             }
-            // Asia
-            if (-10 < lat && lat < 60 && 50 < lon && lon < 150) {
+
+            // Europe
+            if (35 < lat && lat < 70 && -10 < lon && lon < 40) {
+                if (lat > 54 && lon < 30) return { name: 'Scandinavia', country: 'Nordic', state: 'Northern Europe' };
+                if (lat > 48 && lon > 8) return { name: 'Central Europe', country: 'Europe', state: 'Central' };
+                if (lat < 44 && lon > 5) return { name: 'Mediterranean', country: 'Europe', state: 'Mediterranean' };
+                if (lon < -5) return { name: 'Atlantic Europe', country: 'Europe', state: 'Atlantic' };
+                return { name: 'Europe', country: 'Europe', state: 'Region' };
+            }
+
+            // Africa
+            if (-35 < lat && lat < 37 && -18 < lon && lon < 55) {
+                if (lat > 20) return { name: 'North Africa', country: 'Africa', state: 'North Africa' };
+                if (lat > 5) return { name: 'Central Africa', country: 'Africa', state: 'Central Africa' };
+                if (lat > -12) return { name: 'East Africa', country: 'Africa', state: 'East Africa' };
+                return { name: 'Southern Africa', country: 'Africa', state: 'Southern Africa' };
+            }
+
+            // Middle East
+            if (12 < lat && lat < 43 && 26 < lon && lon < 63) {
+                return { name: 'Middle East', country: 'Middle East', state: 'Southwest Asia' };
+            }
+
+            // Asia - More detailed
+            if (-10 < lat && lat < 72 && 52 < lon && lon < 150) {
+                if (lat > 50) return { name: 'Russia/Siberia', country: 'Russia', state: 'Siberia' };
+                if (lat > 30 && lon > 75 && lon < 100) return { name: 'Central Asia', country: 'Central Asia', state: 'Region' };
+                if (lat > 30 && lon > 70) return { name: 'South Asia', country: 'India', state: 'South Asia' };
+                if (lat > 20 && lon > 100) return { name: 'Southeast Asia', country: 'Southeast Asia', state: 'Region' };
+                if (lat > 30 && lon > 100) return { name: 'East Asia', country: 'China', state: 'East Asia' };
+                if (lat > 25 && lon > 120) return { name: 'Japan/Korea', country: 'Japan', state: 'East Asia' };
                 return { name: 'Asia', country: 'Asia', state: 'Region' };
             }
-            // Africa
-            if (-35 < lat && lat < 40 && -20 < lon && lon < 55) {
-                return { name: 'Africa', country: 'Africa', state: 'Region' };
-            }
-            // Americas
-            if (-60 < lat && lat < 80 && -180 < lon && lon < -30) {
-                if (lat > 15) {
-                    return { name: 'North America', country: 'USA', state: 'Region' };
-                } else {
-                    return { name: 'South America', country: 'South America', state: 'Region' };
-                }
-            }
-            // Australia
-            if (-50 < lat && lat < -10 && 110 < lon && lon < 160) {
-                return { name: 'Australia', country: 'Australia', state: 'Region' };
+
+            // Australia/Oceania
+            if (-50 < lat && lat < -10 && 110 < lon && lon < 180) {
+                if (lat < -35 && lon > 140) return { name: 'New Zealand', country: 'New Zealand', state: 'Oceania' };
+                return { name: 'Australia', country: 'Australia', state: 'Oceania' };
             }
 
-            return null;
+            // Pacific Ring of Fire
+            if ((10 < lat && lat < 65 && (125 < lon && lon < 180)) || (-60 < lat && lat < -10 && 125 < lon && lon < 180)) {
+                return { name: 'Pacific Ring', country: 'Global', state: 'Ring of Fire' };
+            }
+
+            // Atlantic Basin
+            if (-60 < lat && lat < 60 && -100 < lon && lon < -15) {
+                return { name: 'Atlantic Basin', country: 'Atlantic', state: 'Open Water' };
+            }
+
+            // Indian Ocean
+            if (-60 < lat && lat < 30 && 20 < lon && lon < 120) {
+                return { name: 'Indian Ocean', country: 'Indian', state: 'Open Water' };
+            }
+
+            // Default global fallback
+            return { name: 'Global', country: 'Global', state: 'Unspecified' };
         }
 
         function getEventTypeAbbrev(eventType) {
@@ -560,7 +622,7 @@
         }
 
         function formatLocation(loc, signal_summary) {
-            if (!loc) return 'Unknown';
+            if (!loc) return 'Unknown Location';
 
             // Build location hierarchy from available fields (prefer more specific to less specific)
             const parts = [];
@@ -578,15 +640,13 @@
                     const summary = JSON.parse(signal_summary);
                     if (summary.source) return summary.source;
                     if (summary.spatial_region) return summary.spatial_region;
+                    if (summary.location) return summary.location;
                 } catch (e) {}
             }
 
-            // Last resort: use coordinates label instead of TBD
-            if (loc.best_effort_lat && loc.best_effort_lon) {
-                return `Location [${loc.best_effort_lat.toFixed(2)}, ${loc.best_effort_lon.toFixed(2)}]`;
-            }
-
-            return 'Coordinates Pending';
+            // If we get here, we MUST have coordinates - no "pending" or placeholder
+            // Return empty string - the region lookup should have caught this
+            return '';
         }
 
         function createEventCard(eventData, phase) {
@@ -595,14 +655,14 @@
             const mag = lastConf && lastConf.magnitude ? lastConf.magnitude : null;
             const formattedId = generateFormattedEventId(eventData.signature_class, eventData.location.best_effort_lat, eventData.location.best_effort_lon, eventData.first_detected_utc);
 
-            // Build location with hierarchy
+            // Build location with hierarchy - ALWAYS must result in a location
             let locationDisplay = '';
             const lat = eventData.location.best_effort_lat;
             const lon = eventData.location.best_effort_lon;
 
+            // Try type-specific lookup first
+            let locationInfo = null;
             if (lat && lon) {
-                // Try type-specific lookup first
-                let locationInfo = null;
                 if (eventData.signature_class === 'volcanic') {
                     locationInfo = getVolcanoInfo(lat, lon);
                 } else if (eventData.signature_class === 'seismic') {
@@ -611,23 +671,33 @@
                     // Try generic location lookup
                     locationInfo = getLocationInfo(lat, lon, eventData.signature_class);
                 }
-
-                // If no specific location found, try region fallback
-                if (!locationInfo) {
-                    locationInfo = getRegionFromCoordinates(lat, lon);
-                }
-
-                if (locationInfo) {
-                    locationDisplay = `${locationInfo.name}, ${locationInfo.state}`;
-                    eventData.location.city = locationInfo.name;
-                    eventData.location.state_province = locationInfo.state;
-                    eventData.location.country = locationInfo.country;
-                }
             }
 
-            // Fallback to formatted location or coordinates
-            if (!locationDisplay) {
+            // If no specific location found, use region fallback (which ALWAYS returns something)
+            if (!locationInfo && lat && lon) {
+                locationInfo = getRegionFromCoordinates(lat, lon);
+            }
+
+            // Build the display string
+            if (locationInfo) {
+                locationDisplay = `${locationInfo.name}, ${locationInfo.state}`;
+                eventData.location.city = locationInfo.name;
+                eventData.location.state_province = locationInfo.state;
+                eventData.location.country = locationInfo.country;
+            } else if (lat && lon) {
+                // Last resort - use formatted location
                 locationDisplay = formatLocation(eventData.location, eventData.signal_summary);
+                // If still empty, use coordinates with a generic label
+                if (!locationDisplay) {
+                    locationDisplay = `Lat ${lat.toFixed(2)}, Lon ${lon.toFixed(2)}`;
+                }
+            } else {
+                // No coordinates at all - use formatted location
+                locationDisplay = formatLocation(eventData.location, eventData.signal_summary);
+                // Fallback to something better than empty
+                if (!locationDisplay) {
+                    locationDisplay = 'Location Unknown (No Coordinates)';
+                }
             }
 
             // Create descriptive event type with magnitude/depth info
