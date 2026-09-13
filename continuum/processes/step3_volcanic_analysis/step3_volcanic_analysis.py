@@ -368,6 +368,16 @@ def canonical_event(record, signature, score):
 
     evidence_hash = hash24(identity)
 
+    seam_phi = calc_phi(record, signature, score)
+
+    # For ACTIVE events (seam_phi >= 0.95), set projected event time to current/detection time
+    # ACTIVE means eruption is occurring NOW, not a future prediction
+    projected_event_time = None
+    if seam_phi >= 0.95:
+        # ACTIVE event - eruption is happening now
+        # Use detection timestamp as the eruption time
+        projected_event_time = ts if ts else utc_iso()
+
     return {
         "event_id": f"SEAM-{evidence_hash}",
         "signature_class": signature,
@@ -385,7 +395,8 @@ def canonical_event(record, signature, score):
             if lat is not None and lon is not None
             else None
         ),
-        "seam_phi": calc_phi(record, signature, score),
+        "seam_phi": seam_phi,
+        "projected_event_time": projected_event_time,  # NOW for active events
         "signal_summary": summary,
         "source_refs": refs,
         "magnitude": mag,
