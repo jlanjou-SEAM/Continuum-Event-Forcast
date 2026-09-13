@@ -25,6 +25,8 @@
             justify-content: space-between;
             align-items: center;
             flex-shrink: 0;
+            position: sticky;
+            top: 0;
         }
         h1 {
             color: #ff6b6b;
@@ -657,7 +659,6 @@
                 });
 
                 loading.style.display = 'none';
-                document.getElementById('lastRefresh').textContent = new Date().toLocaleTimeString();
 
             } catch (err) {
                 error.style.display = 'block';
@@ -668,7 +669,9 @@
         }
 
         // Update clock and countdown
-        let nextRefreshTime = Date.now() + 60000;
+        const REFRESH_INTERVAL = 30000; // 30 seconds
+        let nextRefreshTime = Date.now() + REFRESH_INTERVAL;
+
         function updateTimeDisplay() {
             const now = new Date();
 
@@ -690,9 +693,9 @@
         addLog('🚀 Continuum Event Projection System started', 'info');
         loadAndRender();
         const refreshInterval = setInterval(() => {
-            nextRefreshTime = Date.now() + 60000;
+            nextRefreshTime = Date.now() + REFRESH_INTERVAL;
             loadAndRender();
-        }, 60000);
+        }, REFRESH_INTERVAL);
     </script>
 </body>
 </html>
