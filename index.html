@@ -953,8 +953,10 @@
                     const manifold = await manifoldResponse.json();
                     const manifoldEvents = manifold.manifold_events || manifold.matches || [];
 
-                    // Convert manifold events to tracker format for display
-                    allEvents = manifoldEvents.map(e => ({
+                    // Convert manifold events to tracker format - ONLY if they have location
+                    allEvents = manifoldEvents
+                        .filter(e => e.latitude !== null && e.latitude !== undefined && e.longitude !== null && e.longitude !== undefined)
+                        .map(e => ({
                         event_id: e.event_id,
                         signature_class: e.signature_class,
                         primary_regime: e.primary_regime,
@@ -988,11 +990,16 @@
                     return;
                 }
 
-                // Get WARNING+ phases (>75% confidence)
+                // Get WARNING+ phases (>75% confidence) AND must have valid location
                 const criticalEvents = allEvents.filter(evt => {
+                    // Must have valid coordinates
+                    if (!evt.location || !evt.location.best_effort_lat || !evt.location.best_effort_lon) {
+                        return false;
+                    }
+                    // Must have confidence > 75%
                     if (evt.confidence_history && evt.confidence_history.length > 0) {
                         const lastConf = evt.confidence_history[evt.confidence_history.length - 1].seam_phi;
-                        return lastConf > 0.75;
+                        return lastConf >= 0.75;
                     }
                     return false;
                 }).sort((a, b) => {
