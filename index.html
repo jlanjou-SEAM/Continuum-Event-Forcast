@@ -506,21 +506,46 @@
             const confidenceHistory = eventData.confidence_history || [];
             let hysteresisHtml = '';
             let trendStatus = 'stable';
+            let trendIcon = '➡️';
+            let trendLabel = 'Steady';
 
             if (confidenceHistory.length > 1) {
                 const recentValues = confidenceHistory.slice(-5).map(h => h.seam_phi);
                 const avgOld = recentValues.slice(0, Math.ceil(recentValues.length / 2)).reduce((a, b) => a + b, 0) / Math.ceil(recentValues.length / 2);
                 const avgNew = recentValues.slice(Math.ceil(recentValues.length / 2)).reduce((a, b) => a + b, 0) / Math.ceil(recentValues.length / 2);
 
-                trendStatus = avgNew > avgOld ? 'rising' : avgNew < avgOld ? 'falling' : 'stable';
+                const diff = avgNew - avgOld;
+                const threshold = 0.08;
+
+                if (diff > threshold) {
+                    trendStatus = 'rising_fast';
+                    trendIcon = '📈';
+                    trendLabel = 'Increasing Fast';
+                } else if (diff > 0.02) {
+                    trendStatus = 'rising';
+                    trendIcon = '↗️';
+                    trendLabel = 'Increasing Slow';
+                } else if (diff < -threshold) {
+                    trendStatus = 'falling_fast';
+                    trendIcon = '📉';
+                    trendLabel = 'Decreasing Fast';
+                } else if (diff < -0.02) {
+                    trendStatus = 'falling';
+                    trendIcon = '↘️';
+                    trendLabel = 'Decreasing Slow';
+                } else {
+                    trendStatus = 'stable';
+                    trendIcon = '➡️';
+                    trendLabel = 'Steady';
+                }
 
                 // Create sparkline bars
                 const maxConf = Math.max(...recentValues, 1);
                 hysteresisHtml = `<div class="card-hysteresis">
                     ${recentValues.map(v => {
                         const height = (v / maxConf * 100);
-                        const trendClass = trendStatus === 'rising' ? 'rising' : trendStatus === 'falling' ? 'falling' : 'locked';
-                        return `<div class="hysteresis-bar ${trendClass}" style="height: ${height}%"></div>`;
+                        const barClass = trendStatus.includes('rising') ? 'rising' : trendStatus.includes('falling') ? 'falling' : 'locked';
+                        return `<div class="hysteresis-bar ${barClass}" style="height: ${height}%"></div>`;
                     }).join('')}
                 </div>`;
             }
@@ -562,7 +587,11 @@
                             <div class="card-phase">${phase === 'event' ? '🔴 EVENT' : '🟠 WATCH'}</div>
                             <div class="card-type">${eventType}</div>
                         </div>
-                        <div class="card-confidence ${phase}" style="text-align: right;">${conf}%</div>
+                        <div style="text-align: right;">
+                            <div style="font-size: 28px; margin-bottom: 2px;">${trendIcon}</div>
+                            <div class="card-confidence ${phase}">${conf}%</div>
+                            <div style="font-size: 9px; color: #aaa; margin-top: 2px;">${trendLabel}</div>
+                        </div>
                     </div>
                     <div class="card-location">${locationDisplay}</div>
                 </div>
