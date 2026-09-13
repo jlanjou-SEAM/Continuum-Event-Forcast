@@ -1042,8 +1042,8 @@
 
                 if (criticalEvents.length === 0) {
                     container.innerHTML = '<div class="empty-state">No critical events. System nominal.</div>';
+                    addLog('✅ No critical events detected', 'info');
                     loading.style.display = 'none';
-                    document.getElementById('lastRefresh').textContent = new Date().toLocaleTimeString();
                     return;
                 }
 
@@ -1061,10 +1061,11 @@
                 loading.style.display = 'none';
 
             } catch (err) {
+                console.error('loadAndRender error:', err);
                 error.style.display = 'block';
-                error.textContent = `Error: ${err.message}`;
+                error.innerHTML = `<strong>Error loading events:</strong> ${err.message}<br/><small>${err.stack}</small>`;
                 loading.style.display = 'none';
-                addLog(`❌ Error: ${err.message}`, 'error');
+                addLog(`❌ ${err.message}`, 'error');
             }
         }
 
@@ -1091,11 +1092,16 @@
         setInterval(updateTimeDisplay, 1000);
 
         addLog('🚀 Continuum Event Projection System started', 'info');
+        console.log('Initial loadAndRender() starting...');
         loadAndRender();
+
         const refreshInterval = setInterval(() => {
+            console.log(`[${new Date().toLocaleTimeString()}] Refresh cycle triggered`);
             nextRefreshTime = Date.now() + REFRESH_INTERVAL;
             loadAndRender();
         }, REFRESH_INTERVAL);
+
+        console.log(`Refresh interval set: every ${REFRESH_INTERVAL}ms (30 seconds)`);
     </script>
 </body>
 </html>
