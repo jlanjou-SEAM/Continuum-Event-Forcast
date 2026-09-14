@@ -1,31 +1,31 @@
 [realtime] cycle start | sources=56
-[changed] usgs 1/1 ok | 108.72 ms -> realtime | usgs.json | 7.48 KB
-[changed] usgs_day 1/1 ok | 95.17 ms -> realtime | usgs_day.json | 9.82 KB
-[changed] emsc 1/1 ok | 1837.59 ms -> realtime | emsc.json | 10.05 KB
+[changed] usgs 1/1 ok | 122.48 ms -> realtime | usgs.json | 6.75 KB
+[changed] usgs_day 1/1 ok | 105.59 ms -> realtime | usgs_day.json | 9.83 KB
+[changed] emsc 1/1 ok | 6048.55 ms -> realtime | emsc.json | 10.03 KB
 [failed] iris 0/1 ok | 0.0 ms -> realtime | iris.json | 0.47 KB
-[changed] geonet_nz 1/1 ok | 499.4 ms -> realtime | geonet_nz.json | 9.74 KB
-[failed] geofon 0/1 ok | 0.0 ms -> realtime | geofon.json | 0.48 KB
+[changed] geonet_nz 1/1 ok | 407.31 ms -> realtime | geonet_nz.json | 9.74 KB
+[changed] geofon 1/1 ok | 1500.73 ms -> realtime | geofon.json | 8.83 KB
 [failed] raspberryshake 0/1 ok | 0.0 ms -> realtime | raspberryshake.json | 0.51 KB
-[changed] noaabuoys 1/1 ok | 237.3 ms -> realtime | noaabuoys.json | 8.81 KB
-[changed] usgs_water 1/1 ok | 511.16 ms -> realtime | usgs_water.json | 9.88 KB
-[changed] ioc_sealevel 1/1 ok | 682.25 ms -> realtime | ioc_sealevel.json | 9.23 KB
-[changed] goes_xray 1/1 ok | 206.89 ms -> realtime | goes_xray.json | 9.37 KB
-[changed] goes_mag 1/1 ok | 88.64 ms -> realtime | goes_mag.json | 9.46 KB
-[changed] swpc_kindex 1/1 ok | 67.68 ms -> realtime | swpc_kindex.json | 9.97 KB
+[changed] noaabuoys 1/1 ok | 257.33 ms -> realtime | noaabuoys.json | 8.81 KB
+[changed] usgs_water 1/1 ok | 335.39 ms -> realtime | usgs_water.json | 9.88 KB
+[changed] ioc_sealevel 1/1 ok | 699.95 ms -> realtime | ioc_sealevel.json | 9.23 KB
+[changed] goes_xray 1/1 ok | 207.75 ms -> realtime | goes_xray.json | 9.37 KB
+[changed] goes_mag 1/1 ok | 101.94 ms -> realtime | goes_mag.json | 9.47 KB
+[changed] swpc_kindex 1/1 ok | 80.3 ms -> realtime | swpc_kindex.json | 9.97 KB
 [failed] swpc_solarwind 0/1 ok | 0.0 ms -> realtime | swpc_solarwind.json | 0.48 KB
-[changed] reversebeaconnetwork 1/1 ok | 500.0 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
+[changed] reversebeaconnetwork 1/1 ok | 550.47 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
 [failed] wsprnet 0/1 ok | 0.0 ms -> realtime | wsprnet.json | 0.46 KB
 [failed] pskreporter 0/1 ok | 0.0 ms -> realtime | pskreporter.json | 0.46 KB
-[changed] aprsfi 1/1 ok | 234.94 ms -> realtime | aprsfi.json | 4.21 KB
-[changed] opensky 1/1 ok | 692.36 ms -> realtime | opensky.json | 9.15 KB
-[changed] adsbexchange 1/1 ok | 138.39 ms -> realtime | adsbexchange.json | 8.76 KB
-[changed] celestrak 1/1 ok | 665.0 ms -> realtime | celestrak.json | 9.57 KB
-[changed] satnogs 1/1 ok | 2107.48 ms -> realtime | satnogs.json | 9.65 KB
-[changed] noaa_alerts 1/1 ok | 257.35 ms -> official | noaa_alerts.json | 9.31 KB
-[changed] nhc_advisories 1/1 ok | 235.14 ms -> official | nhc_advisories.json | 9.46 KB
-[changed] gdacs_alerts 1/1 ok | 1260.85 ms -> official | gdacs_alerts.json | 9.03 KB
-[changed] volcano_smithsonian 1/1 ok | 252.19 ms -> official | volcano_smithsonian.json | 8.84 KB
-[changed] copernicus_ems 1/1 ok | 870.96 ms -> official | copernicus_ems.json | 9.24 KB
+[changed] aprsfi 1/1 ok | 329.86 ms -> realtime | aprsfi.json | 4.21 KB
+[changed] opensky 1/1 ok | 741.74 ms -> realtime | opensky.json | 9.14 KB
+[changed] adsbexchange 1/1 ok | 167.43 ms -> realtime | adsbexchange.json | 8.76 KB
+[changed] celestrak 1/1 ok | 563.32 ms -> realtime | celestrak.json | 9.57 KB
+[changed] satnogs 1/1 ok | 2864.96 ms -> realtime | satnogs.json | 9.65 KB
+[changed] noaa_alerts 1/1 ok | 348.78 ms -> official | noaa_alerts.json | 9.2 KB
+[changed] nhc_advisories 1/1 ok | 185.62 ms -> official | nhc_advisories.json | 9.46 KB
+[changed] gdacs_alerts 1/1 ok | 1518.35 ms -> official | gdacs_alerts.json | 9.02 KB
+[changed] volcano_smithsonian 1/1 ok | 311.3 ms -> official | volcano_smithsonian.json | 8.84 KB
+[changed] copernicus_ems 1/1 ok | 803.01 ms -> official | copernicus_ems.json | 9.24 KB
 [failed] fema_disasters 0/1 ok | 0.0 ms -> official | fema_disasters.json | 0.49 KB
 [missing] jma_volcanic.py
 [missing] jma_seismic.py
@@ -55,95 +55,36 @@
 [missing] arpa_italia.py
 [missing] saws_southafrica.py
 [missing] usgs_volcano.py
-[realtime] summary | changed=21 unchanged=0 degraded=0 failed=7 missing=28 total=56 elapsed=21.71s
+[realtime] summary | changed=22 unchanged=0 degraded=0 failed=6 missing=28 total=56 elapsed=25.81s
 [realtime] sleep 30s
 [realtime] cycle start | sources=56
-[changed] usgs 1/1 ok | 58.64 ms -> realtime | usgs.json | 7.49 KB
-[changed] usgs_day 1/1 ok | 83.49 ms -> realtime | usgs_day.json | 9.82 KB
-[changed] emsc 1/1 ok | 1079.78 ms -> realtime | emsc.json | 10.05 KB
+[changed] usgs 1/1 ok | 79.96 ms -> realtime | usgs.json | 6.75 KB
+[changed] usgs_day 1/1 ok | 105.35 ms -> realtime | usgs_day.json | 9.83 KB
+[changed] emsc 1/1 ok | 943.29 ms -> realtime | emsc.json | 10.03 KB
 [failed] iris 0/1 ok | 0.0 ms -> realtime | iris.json | 0.47 KB
-[changed] geonet_nz 1/1 ok | 248.59 ms -> realtime | geonet_nz.json | 9.74 KB
-[changed] geofon 1/1 ok | 3345.47 ms -> realtime | geofon.json | 8.84 KB
-[changed] raspberryshake 1/1 ok | 1286.4 ms -> realtime | raspberryshake.json | 8.87 KB
-[changed] noaabuoys 1/1 ok | 89.77 ms -> realtime | noaabuoys.json | 8.81 KB
-[changed] usgs_water 1/1 ok | 356.56 ms -> realtime | usgs_water.json | 9.88 KB
-[changed] ioc_sealevel 1/1 ok | 414.2 ms -> realtime | ioc_sealevel.json | 9.23 KB
-[changed] goes_xray 1/1 ok | 63.61 ms -> realtime | goes_xray.json | 9.37 KB
-[changed] goes_mag 1/1 ok | 212.06 ms -> realtime | goes_mag.json | 9.46 KB
-[changed] swpc_kindex 1/1 ok | 69.77 ms -> realtime | swpc_kindex.json | 9.97 KB
-[failed] swpc_solarwind 0/1 ok | 0.0 ms -> realtime | swpc_solarwind.json | 0.48 KB
-[changed] reversebeaconnetwork 1/1 ok | 455.91 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
-[failed] wsprnet 0/1 ok | 0.0 ms -> realtime | wsprnet.json | 0.46 KB
-[failed] pskreporter 0/1 ok | 0.0 ms -> realtime | pskreporter.json | 0.46 KB
-[changed] aprsfi 1/1 ok | 195.53 ms -> realtime | aprsfi.json | 4.21 KB
-[changed] opensky 1/1 ok | 851.86 ms -> realtime | opensky.json | 9.15 KB
-[changed] adsbexchange 1/1 ok | 108.11 ms -> realtime | adsbexchange.json | 8.76 KB
-[changed] celestrak 1/1 ok | 1068.97 ms -> realtime | celestrak.json | 9.58 KB
-[changed] satnogs 1/1 ok | 1895.75 ms -> realtime | satnogs.json | 9.65 KB
-[changed] noaa_alerts 1/1 ok | 301.75 ms -> official | noaa_alerts.json | 9.31 KB
-[changed] nhc_advisories 1/1 ok | 66.21 ms -> official | nhc_advisories.json | 9.45 KB
-[changed] gdacs_alerts 1/1 ok | 927.31 ms -> official | gdacs_alerts.json | 9.03 KB
-[changed] volcano_smithsonian 1/1 ok | 98.95 ms -> official | volcano_smithsonian.json | 8.84 KB
-[changed] copernicus_ems 1/1 ok | 721.05 ms -> official | copernicus_ems.json | 9.24 KB
-[failed] fema_disasters 0/1 ok | 0.0 ms -> official | fema_disasters.json | 0.49 KB
-[missing] jma_volcanic.py
-[missing] jma_seismic.py
-[missing] nws_text_alerts.py
-[missing] cma_seismic.py
-[missing] gfz_volcanoes.py
-[missing] emsc_tsunami.py
-[missing] ptwc_tsunami.py
-[missing] bom_australia.py
-[missing] meteoalarm_europe.py
-[missing] icgc_catalan.py
-[missing] eccc_canada.py
-[missing] gsc_canada.py
-[missing] imd_india.py
-[missing] bmkg_indonesia.py
-[missing] kma_korea.py
-[missing] phivolcs_philippines.py
-[missing] usgs_conred_guatemala.py
-[missing] servgeo_colombia.py
-[missing] igp_peru.py
-[missing] onemi_chile.py
-[missing] segemar_argentina.py
-[missing] inmet_brazil.py
-[missing] ukmo_metoffice.py
-[missing] meteofrance.py
-[missing] dwd_germany.py
-[missing] arpa_italia.py
-[missing] saws_southafrica.py
-[missing] usgs_volcano.py
-[realtime] summary | changed=23 unchanged=0 degraded=0 failed=5 missing=28 total=56 elapsed=18.08s
-[realtime] sleep 30s
-[realtime] cycle start | sources=56
-[changed] usgs 1/1 ok | 133.74 ms -> realtime | usgs.json | 7.49 KB
-[changed] usgs_day 1/1 ok | 73.93 ms -> realtime | usgs_day.json | 9.82 KB
-[changed] emsc 1/1 ok | 823.35 ms -> realtime | emsc.json | 10.04 KB
-[failed] iris 0/1 ok | 0.0 ms -> realtime | iris.json | 0.47 KB
-[changed] geonet_nz 1/1 ok | 539.54 ms -> realtime | geonet_nz.json | 9.74 KB
-[changed] geofon 1/1 ok | 2075.23 ms -> realtime | geofon.json | 8.84 KB
+[changed] geonet_nz 1/1 ok | 279.94 ms -> realtime | geonet_nz.json | 9.74 KB
+[changed] geofon 1/1 ok | 808.5 ms -> realtime | geofon.json | 8.83 KB
 [failed] raspberryshake 0/1 ok | 0.0 ms -> realtime | raspberryshake.json | 0.51 KB
-[changed] noaabuoys 1/1 ok | 215.71 ms -> realtime | noaabuoys.json | 8.81 KB
-[changed] usgs_water 1/1 ok | 376.68 ms -> realtime | usgs_water.json | 9.88 KB
-[changed] ioc_sealevel 1/1 ok | 409.31 ms -> realtime | ioc_sealevel.json | 9.23 KB
-[changed] goes_xray 1/1 ok | 230.4 ms -> realtime | goes_xray.json | 9.37 KB
-[changed] goes_mag 1/1 ok | 93.67 ms -> realtime | goes_mag.json | 9.46 KB
-[changed] swpc_kindex 1/1 ok | 79.91 ms -> realtime | swpc_kindex.json | 9.97 KB
+[changed] noaabuoys 1/1 ok | 101.89 ms -> realtime | noaabuoys.json | 8.81 KB
+[changed] usgs_water 1/1 ok | 279.55 ms -> realtime | usgs_water.json | 9.88 KB
+[changed] ioc_sealevel 1/1 ok | 419.36 ms -> realtime | ioc_sealevel.json | 9.23 KB
+[changed] goes_xray 1/1 ok | 100.31 ms -> realtime | goes_xray.json | 9.37 KB
+[changed] goes_mag 1/1 ok | 101.21 ms -> realtime | goes_mag.json | 9.47 KB
+[changed] swpc_kindex 1/1 ok | 86.62 ms -> realtime | swpc_kindex.json | 9.97 KB
 [failed] swpc_solarwind 0/1 ok | 0.0 ms -> realtime | swpc_solarwind.json | 0.48 KB
-[changed] reversebeaconnetwork 1/1 ok | 469.41 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
+[changed] reversebeaconnetwork 1/1 ok | 504.14 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
 [failed] wsprnet 0/1 ok | 0.0 ms -> realtime | wsprnet.json | 0.46 KB
 [failed] pskreporter 0/1 ok | 0.0 ms -> realtime | pskreporter.json | 0.46 KB
-[changed] aprsfi 1/1 ok | 189.73 ms -> realtime | aprsfi.json | 4.21 KB
-[changed] opensky 1/1 ok | 681.84 ms -> realtime | opensky.json | 9.16 KB
-[changed] adsbexchange 1/1 ok | 108.07 ms -> realtime | adsbexchange.json | 8.76 KB
-[changed] celestrak 1/1 ok | 696.28 ms -> realtime | celestrak.json | 9.57 KB
-[changed] satnogs 1/1 ok | 1885.49 ms -> realtime | satnogs.json | 9.65 KB
-[changed] noaa_alerts 1/1 ok | 487.15 ms -> official | noaa_alerts.json | 9.31 KB
-[changed] nhc_advisories 1/1 ok | 244.99 ms -> official | nhc_advisories.json | 9.46 KB
-[changed] gdacs_alerts 1/1 ok | 841.86 ms -> official | gdacs_alerts.json | 9.03 KB
-[changed] volcano_smithsonian 1/1 ok | 175.02 ms -> official | volcano_smithsonian.json | 8.84 KB
-[changed] copernicus_ems 1/1 ok | 832.27 ms -> official | copernicus_ems.json | 9.24 KB
+[changed] aprsfi 1/1 ok | 244.22 ms -> realtime | aprsfi.json | 4.21 KB
+[changed] opensky 1/1 ok | 923.38 ms -> realtime | opensky.json | 9.14 KB
+[changed] adsbexchange 1/1 ok | 134.26 ms -> realtime | adsbexchange.json | 8.76 KB
+[changed] celestrak 1/1 ok | 1029.21 ms -> realtime | celestrak.json | 9.58 KB
+[changed] satnogs 1/1 ok | 1900.03 ms -> realtime | satnogs.json | 9.65 KB
+[changed] noaa_alerts 1/1 ok | 325.39 ms -> official | noaa_alerts.json | 9.2 KB
+[changed] nhc_advisories 1/1 ok | 88.51 ms -> official | nhc_advisories.json | 9.45 KB
+[changed] gdacs_alerts 1/1 ok | 1017.66 ms -> official | gdacs_alerts.json | 9.02 KB
+[changed] volcano_smithsonian 1/1 ok | 148.35 ms -> official | volcano_smithsonian.json | 8.84 KB
+[changed] copernicus_ems 1/1 ok | 791.33 ms -> official | copernicus_ems.json | 9.24 KB
 [failed] fema_disasters 0/1 ok | 0.0 ms -> official | fema_disasters.json | 0.49 KB
 [missing] jma_volcanic.py
 [missing] jma_seismic.py
@@ -173,36 +114,36 @@
 [missing] arpa_italia.py
 [missing] saws_southafrica.py
 [missing] usgs_volcano.py
-[realtime] summary | changed=22 unchanged=0 degraded=0 failed=6 missing=28 total=56 elapsed=18.09s
+[realtime] summary | changed=22 unchanged=0 degraded=0 failed=6 missing=28 total=56 elapsed=17.44s
 [realtime] sleep 30s
 [realtime] cycle start | sources=56
-[changed] usgs 1/1 ok | 63.51 ms -> realtime | usgs.json | 7.49 KB
-[changed] usgs_day 1/1 ok | 87.3 ms -> realtime | usgs_day.json | 9.82 KB
-[changed] emsc 1/1 ok | 1182.21 ms -> realtime | emsc.json | 10.05 KB
+[changed] usgs 1/1 ok | 156.62 ms -> realtime | usgs.json | 6.76 KB
+[changed] usgs_day 1/1 ok | 105.18 ms -> realtime | usgs_day.json | 9.82 KB
+[changed] emsc 1/1 ok | 1306.54 ms -> realtime | emsc.json | 10.03 KB
 [failed] iris 0/1 ok | 0.0 ms -> realtime | iris.json | 0.47 KB
-[changed] geonet_nz 1/1 ok | 278.58 ms -> realtime | geonet_nz.json | 9.74 KB
-[changed] geofon 1/1 ok | 1922.97 ms -> realtime | geofon.json | 8.84 KB
+[changed] geonet_nz 1/1 ok | 542.39 ms -> realtime | geonet_nz.json | 9.74 KB
+[changed] geofon 1/1 ok | 1660.23 ms -> realtime | geofon.json | 8.83 KB
 [failed] raspberryshake 0/1 ok | 0.0 ms -> realtime | raspberryshake.json | 0.51 KB
-[changed] noaabuoys 1/1 ok | 90.91 ms -> realtime | noaabuoys.json | 8.81 KB
-[changed] usgs_water 1/1 ok | 261.19 ms -> realtime | usgs_water.json | 9.88 KB
-[changed] ioc_sealevel 1/1 ok | 518.52 ms -> realtime | ioc_sealevel.json | 9.23 KB
-[changed] goes_xray 1/1 ok | 63.63 ms -> realtime | goes_xray.json | 9.37 KB
-[changed] goes_mag 1/1 ok | 91.49 ms -> realtime | goes_mag.json | 9.46 KB
-[changed] swpc_kindex 1/1 ok | 72.0 ms -> realtime | swpc_kindex.json | 9.97 KB
+[changed] noaabuoys 1/1 ok | 267.24 ms -> realtime | noaabuoys.json | 8.81 KB
+[changed] usgs_water 1/1 ok | 202.43 ms -> realtime | usgs_water.json | 9.88 KB
+[changed] ioc_sealevel 1/1 ok | 664.66 ms -> realtime | ioc_sealevel.json | 9.23 KB
+[changed] goes_xray 1/1 ok | 216.38 ms -> realtime | goes_xray.json | 9.37 KB
+[changed] goes_mag 1/1 ok | 106.43 ms -> realtime | goes_mag.json | 9.47 KB
+[changed] swpc_kindex 1/1 ok | 81.18 ms -> realtime | swpc_kindex.json | 9.97 KB
 [failed] swpc_solarwind 0/1 ok | 0.0 ms -> realtime | swpc_solarwind.json | 0.48 KB
-[changed] reversebeaconnetwork 1/1 ok | 456.54 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
+[changed] reversebeaconnetwork 1/1 ok | 494.72 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
 [failed] wsprnet 0/1 ok | 0.0 ms -> realtime | wsprnet.json | 0.46 KB
 [failed] pskreporter 0/1 ok | 0.0 ms -> realtime | pskreporter.json | 0.46 KB
-[changed] aprsfi 1/1 ok | 187.45 ms -> realtime | aprsfi.json | 4.21 KB
-[changed] opensky 1/1 ok | 626.56 ms -> realtime | opensky.json | 9.15 KB
-[changed] adsbexchange 1/1 ok | 147.81 ms -> realtime | adsbexchange.json | 8.76 KB
-[changed] celestrak 1/1 ok | 589.33 ms -> realtime | celestrak.json | 9.57 KB
-[changed] satnogs 1/1 ok | 1669.67 ms -> realtime | satnogs.json | 9.65 KB
-[changed] noaa_alerts 1/1 ok | 253.35 ms -> official | noaa_alerts.json | 9.29 KB
-[changed] nhc_advisories 1/1 ok | 77.13 ms -> official | nhc_advisories.json | 9.45 KB
-[changed] gdacs_alerts 1/1 ok | 1005.1 ms -> official | gdacs_alerts.json | 9.03 KB
-[changed] volcano_smithsonian 1/1 ok | 89.67 ms -> official | volcano_smithsonian.json | 8.84 KB
-[changed] copernicus_ems 1/1 ok | 961.44 ms -> official | copernicus_ems.json | 9.24 KB
+[changed] aprsfi 1/1 ok | 244.25 ms -> realtime | aprsfi.json | 4.21 KB
+[changed] opensky 1/1 ok | 683.14 ms -> realtime | opensky.json | 9.14 KB
+[changed] adsbexchange 1/1 ok | 157.08 ms -> realtime | adsbexchange.json | 8.76 KB
+[changed] celestrak 1/1 ok | 2524.74 ms -> realtime | celestrak.json | 9.58 KB
+[changed] satnogs 1/1 ok | 1826.63 ms -> realtime | satnogs.json | 9.65 KB
+[changed] noaa_alerts 1/1 ok | 141.36 ms -> official | noaa_alerts.json | 9.19 KB
+[changed] nhc_advisories 1/1 ok | 188.38 ms -> official | nhc_advisories.json | 9.46 KB
+[changed] gdacs_alerts 1/1 ok | 1266.18 ms -> official | gdacs_alerts.json | 9.02 KB
+[changed] volcano_smithsonian 1/1 ok | 170.89 ms -> official | volcano_smithsonian.json | 8.84 KB
+[changed] copernicus_ems 1/1 ok | 829.08 ms -> official | copernicus_ems.json | 9.24 KB
 [failed] fema_disasters 0/1 ok | 0.0 ms -> official | fema_disasters.json | 0.49 KB
 [missing] jma_volcanic.py
 [missing] jma_seismic.py
@@ -232,381 +173,439 @@
 [missing] arpa_italia.py
 [missing] saws_southafrica.py
 [missing] usgs_volcano.py
-[realtime] summary | changed=22 unchanged=0 degraded=0 failed=6 missing=28 total=56 elapsed=17.12s
+[realtime] summary | changed=22 unchanged=0 degraded=0 failed=6 missing=28 total=56 elapsed=20.94s
 [realtime] sleep 30s
 [realtime] cycle start | sources=56
-[changed] usgs 1/1 ok | 145.52 ms -> realtime | usgs.json | 7.49 KB
-[changed] usgs_day 1/1 ok | 91.29 ms -> realtime | usgs_day.json | 9.82 KB
-[changed] emsc 1/1 ok | 1087.3 ms -> realtime | emsc.json | 10.04 KB
+[changed] usgs 1/1 ok | 86.7 ms -> realtime | usgs.json | 6.76 KB
+[changed] usgs_day 1/1 ok | 110.92 ms -> realtime | usgs_day.json | 9.82 KB
+[changed] emsc 1/1 ok | 2070.87 ms -> realtime | emsc.json | 10.03 KB
 [failed] iris 0/1 ok | 0.0 ms -> realtime | iris.json | 0.47 KB
-[changed] geonet_nz 1/1 ok | 331.68 ms -> realtime | geonet_nz.json | 9.74 KB
-[failed] geofon 0/1 ok | 0.0 ms -> realtime | geofon.json | 0.48 KB
-[failed] raspberryshake 0/1 ok | 0.0 ms -> realtime | raspberryshake.json | 0.51 KB
-[changed] noaabuoys 1/1 ok | 299.96 ms -> realtime | noaabuoys.json | 8.81 KB
-[changed] usgs_water 1/1 ok | 336.2 ms -> realtime | usgs_water.json | 9.88 KB
-[changed] ioc_sealevel 1/1 ok | 410.36 ms -> realtime | ioc_sealevel.json | 9.23 KB
-[changed] goes_xray 1/1 ok | 243.51 ms -> realtime | goes_xray.json | 9.38 KB
-[changed] goes_mag 1/1 ok | 189.3 ms -> realtime | goes_mag.json | 9.47 KB
-[changed] swpc_kindex 1/1 ok | 72.72 ms -> realtime | swpc_kindex.json | 9.97 KB
+[changed] geonet_nz 1/1 ok | 278.67 ms -> realtime | geonet_nz.json | 9.74 KB
+[changed] geofon 1/1 ok | 915.35 ms -> realtime | geofon.json | 8.83 KB
+[changed] raspberryshake 1/1 ok | 1779.01 ms -> realtime | raspberryshake.json | 8.87 KB
+[changed] noaabuoys 1/1 ok | 100.03 ms -> realtime | noaabuoys.json | 8.81 KB
+[changed] usgs_water 1/1 ok | 338.39 ms -> realtime | usgs_water.json | 9.88 KB
+[changed] ioc_sealevel 1/1 ok | 541.02 ms -> realtime | ioc_sealevel.json | 9.23 KB
+[changed] goes_xray 1/1 ok | 103.99 ms -> realtime | goes_xray.json | 9.37 KB
+[changed] goes_mag 1/1 ok | 102.06 ms -> realtime | goes_mag.json | 9.47 KB
+[changed] swpc_kindex 1/1 ok | 80.8 ms -> realtime | swpc_kindex.json | 9.97 KB
 [failed] swpc_solarwind 0/1 ok | 0.0 ms -> realtime | swpc_solarwind.json | 0.48 KB
-[changed] reversebeaconnetwork 1/1 ok | 622.07 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
+[changed] reversebeaconnetwork 1/1 ok | 494.39 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
 [failed] wsprnet 0/1 ok | 0.0 ms -> realtime | wsprnet.json | 0.46 KB
 [failed] pskreporter 0/1 ok | 0.0 ms -> realtime | pskreporter.json | 0.46 KB
-[changed] aprsfi 1/1 ok | 185.81 ms -> realtime | aprsfi.json | 4.21 KB
-[changed] opensky 1/1 ok | 674.61 ms -> realtime | opensky.json | 9.16 KB
-[changed] adsbexchange 1/1 ok | 88.31 ms -> realtime | adsbexchange.json | 8.76 KB
-[changed] celestrak 1/1 ok | 905.84 ms -> realtime | celestrak.json | 9.57 KB
-[changed] satnogs 1/1 ok | 1647.1 ms -> realtime | satnogs.json | 9.65 KB
-[changed] noaa_alerts 1/1 ok | 352.32 ms -> official | noaa_alerts.json | 9.29 KB
-[changed] nhc_advisories 1/1 ok | 201.81 ms -> official | nhc_advisories.json | 9.46 KB
-[changed] gdacs_alerts 1/1 ok | 934.97 ms -> official | gdacs_alerts.json | 9.03 KB
-[changed] volcano_smithsonian 1/1 ok | 173.58 ms -> official | volcano_smithsonian.json | 8.84 KB
-[changed] copernicus_ems 1/1 ok | 758.91 ms -> official | copernicus_ems.json | 9.24 KB
-[failed] fema_disasters 0/1 ok | 0.0 ms -> official | fema_disasters.json | 0.49 KB
-[missing] jma_volcanic.py
-[missing] jma_seismic.py
-[missing] nws_text_alerts.py
-[missing] cma_seismic.py
-[missing] gfz_volcanoes.py
-[missing] emsc_tsunami.py
-[missing] ptwc_tsunami.py
-[missing] bom_australia.py
-[missing] meteoalarm_europe.py
-[missing] icgc_catalan.py
-[missing] eccc_canada.py
-[missing] gsc_canada.py
-[missing] imd_india.py
-[missing] bmkg_indonesia.py
-[missing] kma_korea.py
-[missing] phivolcs_philippines.py
-[missing] usgs_conred_guatemala.py
-[missing] servgeo_colombia.py
-[missing] igp_peru.py
-[missing] onemi_chile.py
-[missing] segemar_argentina.py
-[missing] inmet_brazil.py
-[missing] ukmo_metoffice.py
-[missing] meteofrance.py
-[missing] dwd_germany.py
-[missing] arpa_italia.py
-[missing] saws_southafrica.py
-[missing] usgs_volcano.py
-[realtime] summary | changed=21 unchanged=0 degraded=0 failed=7 missing=28 total=56 elapsed=19.52s
-[realtime] sleep 30s
-[realtime] cycle start | sources=56
-[changed] usgs 1/1 ok | 62.24 ms -> realtime | usgs.json | 7.49 KB
-[changed] usgs_day 1/1 ok | 92.63 ms -> realtime | usgs_day.json | 9.82 KB
-[changed] emsc 1/1 ok | 1078.27 ms -> realtime | emsc.json | 10.05 KB
-[failed] iris 0/1 ok | 0.0 ms -> realtime | iris.json | 0.47 KB
-[changed] geonet_nz 1/1 ok | 278.61 ms -> realtime | geonet_nz.json | 9.74 KB
-[changed] geofon 1/1 ok | 1695.06 ms -> realtime | geofon.json | 8.84 KB
-[failed] raspberryshake 0/1 ok | 0.0 ms -> realtime | raspberryshake.json | 0.51 KB
-[changed] noaabuoys 1/1 ok | 82.49 ms -> realtime | noaabuoys.json | 8.81 KB
-[changed] usgs_water 1/1 ok | 177.84 ms -> realtime | usgs_water.json | 9.88 KB
-[changed] ioc_sealevel 1/1 ok | 583.65 ms -> realtime | ioc_sealevel.json | 9.23 KB
-[changed] goes_xray 1/1 ok | 73.02 ms -> realtime | goes_xray.json | 9.37 KB
-[changed] goes_mag 1/1 ok | 91.91 ms -> realtime | goes_mag.json | 9.47 KB
-[changed] swpc_kindex 1/1 ok | 70.07 ms -> realtime | swpc_kindex.json | 9.97 KB
-[failed] swpc_solarwind 0/1 ok | 0.0 ms -> realtime | swpc_solarwind.json | 0.48 KB
-[changed] reversebeaconnetwork 1/1 ok | 455.42 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
-[failed] wsprnet 0/1 ok | 0.0 ms -> realtime | wsprnet.json | 0.46 KB
-[failed] pskreporter 0/1 ok | 0.0 ms -> realtime | pskreporter.json | 0.46 KB
-[changed] aprsfi 1/1 ok | 184.53 ms -> realtime | aprsfi.json | 4.21 KB
-[changed] opensky 1/1 ok | 670.87 ms -> realtime | opensky.json | 9.16 KB
-[changed] adsbexchange 1/1 ok | 86.78 ms -> realtime | adsbexchange.json | 8.76 KB
-[changed] celestrak 1/1 ok | 445.55 ms -> realtime | celestrak.json | 9.57 KB
-[changed] satnogs 1/1 ok | 1805.22 ms -> realtime | satnogs.json | 9.65 KB
-[changed] noaa_alerts 1/1 ok | 315.57 ms -> official | noaa_alerts.json | 9.23 KB
-[changed] nhc_advisories 1/1 ok | 66.25 ms -> official | nhc_advisories.json | 9.45 KB
-[changed] gdacs_alerts 1/1 ok | 918.65 ms -> official | gdacs_alerts.json | 9.03 KB
-[changed] volcano_smithsonian 1/1 ok | 92.39 ms -> official | volcano_smithsonian.json | 8.84 KB
-[changed] copernicus_ems 1/1 ok | 724.75 ms -> official | copernicus_ems.json | 9.24 KB
-[failed] fema_disasters 0/1 ok | 0.0 ms -> official | fema_disasters.json | 0.49 KB
-[missing] jma_volcanic.py
-[missing] jma_seismic.py
-[missing] nws_text_alerts.py
-[missing] cma_seismic.py
-[missing] gfz_volcanoes.py
-[missing] emsc_tsunami.py
-[missing] ptwc_tsunami.py
-[missing] bom_australia.py
-[missing] meteoalarm_europe.py
-[missing] icgc_catalan.py
-[missing] eccc_canada.py
-[missing] gsc_canada.py
-[missing] imd_india.py
-[missing] bmkg_indonesia.py
-[missing] kma_korea.py
-[missing] phivolcs_philippines.py
-[missing] usgs_conred_guatemala.py
-[missing] servgeo_colombia.py
-[missing] igp_peru.py
-[missing] onemi_chile.py
-[missing] segemar_argentina.py
-[missing] inmet_brazil.py
-[missing] ukmo_metoffice.py
-[missing] meteofrance.py
-[missing] dwd_germany.py
-[missing] arpa_italia.py
-[missing] saws_southafrica.py
-[missing] usgs_volcano.py
-[realtime] summary | changed=22 unchanged=0 degraded=0 failed=6 missing=28 total=56 elapsed=16.59s
-[realtime] sleep 30s
-[realtime] cycle start | sources=56
-[changed] usgs 1/1 ok | 159.31 ms -> realtime | usgs.json | 7.49 KB
-[changed] usgs_day 1/1 ok | 97.78 ms -> realtime | usgs_day.json | 9.82 KB
-[changed] emsc 1/1 ok | 1195.79 ms -> realtime | emsc.json | 10.05 KB
-[failed] iris 0/1 ok | 0.0 ms -> realtime | iris.json | 0.47 KB
-[changed] geonet_nz 1/1 ok | 520.4 ms -> realtime | geonet_nz.json | 9.74 KB
-[failed] geofon 0/1 ok | 0.0 ms -> realtime | geofon.json | 0.48 KB
-[failed] raspberryshake 0/1 ok | 0.0 ms -> realtime | raspberryshake.json | 0.51 KB
-[changed] noaabuoys 1/1 ok | 263.88 ms -> realtime | noaabuoys.json | 8.81 KB
-[changed] usgs_water 1/1 ok | 165.12 ms -> realtime | usgs_water.json | 9.88 KB
-[changed] ioc_sealevel 1/1 ok | 398.61 ms -> realtime | ioc_sealevel.json | 9.23 KB
-[changed] goes_xray 1/1 ok | 236.53 ms -> realtime | goes_xray.json | 9.38 KB
-[changed] goes_mag 1/1 ok | 91.4 ms -> realtime | goes_mag.json | 9.46 KB
-[changed] swpc_kindex 1/1 ok | 72.23 ms -> realtime | swpc_kindex.json | 9.97 KB
-[failed] swpc_solarwind 0/1 ok | 0.0 ms -> realtime | swpc_solarwind.json | 0.48 KB
-[changed] reversebeaconnetwork 1/1 ok | 448.69 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
-[failed] wsprnet 0/1 ok | 0.0 ms -> realtime | wsprnet.json | 0.46 KB
-[failed] pskreporter 0/1 ok | 0.0 ms -> realtime | pskreporter.json | 0.46 KB
-[changed] aprsfi 1/1 ok | 194.43 ms -> realtime | aprsfi.json | 4.21 KB
-[changed] opensky 1/1 ok | 1170.85 ms -> realtime | opensky.json | 9.16 KB
-[changed] adsbexchange 1/1 ok | 130.53 ms -> realtime | adsbexchange.json | 8.76 KB
-[changed] celestrak 1/1 ok | 731.27 ms -> realtime | celestrak.json | 9.57 KB
-[changed] satnogs 1/1 ok | 1795.44 ms -> realtime | satnogs.json | 9.65 KB
-[changed] noaa_alerts 1/1 ok | 278.61 ms -> official | noaa_alerts.json | 9.25 KB
-[changed] nhc_advisories 1/1 ok | 232.44 ms -> official | nhc_advisories.json | 9.46 KB
-[changed] gdacs_alerts 1/1 ok | 804.41 ms -> official | gdacs_alerts.json | 9.03 KB
-[changed] volcano_smithsonian 1/1 ok | 172.23 ms -> official | volcano_smithsonian.json | 8.84 KB
-[changed] copernicus_ems 1/1 ok | 804.54 ms -> official | copernicus_ems.json | 9.24 KB
-[failed] fema_disasters 0/1 ok | 0.0 ms -> official | fema_disasters.json | 0.49 KB
-[missing] jma_volcanic.py
-[missing] jma_seismic.py
-[missing] nws_text_alerts.py
-[missing] cma_seismic.py
-[missing] gfz_volcanoes.py
-[missing] emsc_tsunami.py
-[missing] ptwc_tsunami.py
-[missing] bom_australia.py
-[missing] meteoalarm_europe.py
-[missing] icgc_catalan.py
-[missing] eccc_canada.py
-[missing] gsc_canada.py
-[missing] imd_india.py
-[missing] bmkg_indonesia.py
-[missing] kma_korea.py
-[missing] phivolcs_philippines.py
-[missing] usgs_conred_guatemala.py
-[missing] servgeo_colombia.py
-[missing] igp_peru.py
-[missing] onemi_chile.py
-[missing] segemar_argentina.py
-[missing] inmet_brazil.py
-[missing] ukmo_metoffice.py
-[missing] meteofrance.py
-[missing] dwd_germany.py
-[missing] arpa_italia.py
-[missing] saws_southafrica.py
-[missing] usgs_volcano.py
-[realtime] summary | changed=21 unchanged=0 degraded=0 failed=7 missing=28 total=56 elapsed=20.26s
-[realtime] sleep 30s
-[realtime] cycle start | sources=56
-[changed] usgs 1/1 ok | 62.76 ms -> realtime | usgs.json | 6.7 KB
-[changed] usgs_day 1/1 ok | 146.1 ms -> realtime | usgs_day.json | 9.82 KB
-[changed] emsc 1/1 ok | 1202.59 ms -> realtime | emsc.json | 10.05 KB
-[failed] iris 0/1 ok | 0.0 ms -> realtime | iris.json | 0.47 KB
-[changed] geonet_nz 1/1 ok | 249.05 ms -> realtime | geonet_nz.json | 9.74 KB
-[changed] geofon 1/1 ok | 3154.24 ms -> realtime | geofon.json | 8.84 KB
-[failed] raspberryshake 0/1 ok | 0.0 ms -> realtime | raspberryshake.json | 0.51 KB
-[changed] noaabuoys 1/1 ok | 83.02 ms -> realtime | noaabuoys.json | 8.81 KB
-[changed] usgs_water 1/1 ok | 403.35 ms -> realtime | usgs_water.json | 9.88 KB
-[changed] ioc_sealevel 1/1 ok | 406.29 ms -> realtime | ioc_sealevel.json | 9.23 KB
-[changed] goes_xray 1/1 ok | 87.18 ms -> realtime | goes_xray.json | 9.37 KB
-[changed] goes_mag 1/1 ok | 92.25 ms -> realtime | goes_mag.json | 9.47 KB
-[changed] swpc_kindex 1/1 ok | 80.11 ms -> realtime | swpc_kindex.json | 9.97 KB
-[failed] swpc_solarwind 0/1 ok | 0.0 ms -> realtime | swpc_solarwind.json | 0.48 KB
-[changed] reversebeaconnetwork 1/1 ok | 523.09 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
-[failed] wsprnet 0/1 ok | 0.0 ms -> realtime | wsprnet.json | 0.46 KB
-[failed] pskreporter 0/1 ok | 0.0 ms -> realtime | pskreporter.json | 0.46 KB
-[changed] aprsfi 1/1 ok | 446.95 ms -> realtime | aprsfi.json | 4.21 KB
-[changed] opensky 1/1 ok | 688.4 ms -> realtime | opensky.json | 9.16 KB
-[changed] adsbexchange 1/1 ok | 198.91 ms -> realtime | adsbexchange.json | 8.76 KB
-[changed] celestrak 1/1 ok | 710.61 ms -> realtime | celestrak.json | 9.57 KB
-[changed] satnogs 1/1 ok | 1843.78 ms -> realtime | satnogs.json | 9.65 KB
-[changed] noaa_alerts 1/1 ok | 198.95 ms -> official | noaa_alerts.json | 9.31 KB
-[changed] nhc_advisories 1/1 ok | 58.69 ms -> official | nhc_advisories.json | 9.45 KB
-[changed] gdacs_alerts 1/1 ok | 832.63 ms -> official | gdacs_alerts.json | 9.03 KB
-[changed] volcano_smithsonian 1/1 ok | 102.03 ms -> official | volcano_smithsonian.json | 8.84 KB
-[changed] copernicus_ems 1/1 ok | 903.27 ms -> official | copernicus_ems.json | 9.24 KB
-[failed] fema_disasters 0/1 ok | 0.0 ms -> official | fema_disasters.json | 0.49 KB
-[missing] jma_volcanic.py
-[missing] jma_seismic.py
-[missing] nws_text_alerts.py
-[missing] cma_seismic.py
-[missing] gfz_volcanoes.py
-[missing] emsc_tsunami.py
-[missing] ptwc_tsunami.py
-[missing] bom_australia.py
-[missing] meteoalarm_europe.py
-[missing] icgc_catalan.py
-[missing] eccc_canada.py
-[missing] gsc_canada.py
-[missing] imd_india.py
-[missing] bmkg_indonesia.py
-[missing] kma_korea.py
-[missing] phivolcs_philippines.py
-[missing] usgs_conred_guatemala.py
-[missing] servgeo_colombia.py
-[missing] igp_peru.py
-[missing] onemi_chile.py
-[missing] segemar_argentina.py
-[missing] inmet_brazil.py
-[missing] ukmo_metoffice.py
-[missing] meteofrance.py
-[missing] dwd_germany.py
-[missing] arpa_italia.py
-[missing] saws_southafrica.py
-[missing] usgs_volcano.py
-[realtime] summary | changed=22 unchanged=0 degraded=0 failed=6 missing=28 total=56 elapsed=19.22s
-[realtime] sleep 30s
-[realtime] cycle start | sources=56
-[changed] usgs 1/1 ok | 96.74 ms -> realtime | usgs.json | 6.7 KB
-[changed] usgs_day 1/1 ok | 84.55 ms -> realtime | usgs_day.json | 9.82 KB
-[changed] emsc 1/1 ok | 1337.23 ms -> realtime | emsc.json | 10.05 KB
-[failed] iris 0/1 ok | 0.0 ms -> realtime | iris.json | 0.47 KB
-[changed] geonet_nz 1/1 ok | 559.01 ms -> realtime | geonet_nz.json | 9.74 KB
-[changed] geofon 1/1 ok | 2002.98 ms -> realtime | geofon.json | 8.84 KB
-[failed] raspberryshake 0/1 ok | 0.0 ms -> realtime | raspberryshake.json | 0.51 KB
-[changed] noaabuoys 1/1 ok | 277.56 ms -> realtime | noaabuoys.json | 8.81 KB
-[changed] usgs_water 1/1 ok | 315.5 ms -> realtime | usgs_water.json | 9.88 KB
-[changed] ioc_sealevel 1/1 ok | 580.46 ms -> realtime | ioc_sealevel.json | 9.23 KB
-[changed] goes_xray 1/1 ok | 223.3 ms -> realtime | goes_xray.json | 9.37 KB
-[changed] goes_mag 1/1 ok | 99.26 ms -> realtime | goes_mag.json | 9.47 KB
-[changed] swpc_kindex 1/1 ok | 116.06 ms -> realtime | swpc_kindex.json | 9.97 KB
-[failed] swpc_solarwind 0/1 ok | 0.0 ms -> realtime | swpc_solarwind.json | 0.48 KB
-[changed] reversebeaconnetwork 1/1 ok | 461.34 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
-[failed] wsprnet 0/1 ok | 0.0 ms -> realtime | wsprnet.json | 0.46 KB
-[failed] pskreporter 0/1 ok | 0.0 ms -> realtime | pskreporter.json | 0.46 KB
-[changed] aprsfi 1/1 ok | 183.04 ms -> realtime | aprsfi.json | 4.21 KB
-[changed] opensky 1/1 ok | 725.36 ms -> realtime | opensky.json | 9.16 KB
-[changed] adsbexchange 1/1 ok | 145.84 ms -> realtime | adsbexchange.json | 8.76 KB
-[changed] celestrak 1/1 ok | 559.69 ms -> realtime | celestrak.json | 9.57 KB
-[changed] satnogs 1/1 ok | 1695.95 ms -> realtime | satnogs.json | 9.65 KB
-[changed] noaa_alerts 1/1 ok | 293.14 ms -> official | noaa_alerts.json | 9.31 KB
-[changed] nhc_advisories 1/1 ok | 268.52 ms -> official | nhc_advisories.json | 9.46 KB
-[changed] gdacs_alerts 1/1 ok | 797.66 ms -> official | gdacs_alerts.json | 9.03 KB
-[changed] volcano_smithsonian 1/1 ok | 297.16 ms -> official | volcano_smithsonian.json | 8.84 KB
-[changed] copernicus_ems 1/1 ok | 831.19 ms -> official | copernicus_ems.json | 9.24 KB
-[failed] fema_disasters 0/1 ok | 0.0 ms -> official | fema_disasters.json | 0.49 KB
-[missing] jma_volcanic.py
-[missing] jma_seismic.py
-[missing] nws_text_alerts.py
-[missing] cma_seismic.py
-[missing] gfz_volcanoes.py
-[missing] emsc_tsunami.py
-[missing] ptwc_tsunami.py
-[missing] bom_australia.py
-[missing] meteoalarm_europe.py
-[missing] icgc_catalan.py
-[missing] eccc_canada.py
-[missing] gsc_canada.py
-[missing] imd_india.py
-[missing] bmkg_indonesia.py
-[missing] kma_korea.py
-[missing] phivolcs_philippines.py
-[missing] usgs_conred_guatemala.py
-[missing] servgeo_colombia.py
-[missing] igp_peru.py
-[missing] onemi_chile.py
-[missing] segemar_argentina.py
-[missing] inmet_brazil.py
-[missing] ukmo_metoffice.py
-[missing] meteofrance.py
-[missing] dwd_germany.py
-[missing] arpa_italia.py
-[missing] saws_southafrica.py
-[missing] usgs_volcano.py
-[realtime] summary | changed=22 unchanged=0 degraded=0 failed=6 missing=28 total=56 elapsed=18.46s
-[realtime] sleep 30s
-[realtime] cycle start | sources=56
-[changed] usgs 1/1 ok | 66.38 ms -> realtime | usgs.json | 6.7 KB
-[changed] usgs_day 1/1 ok | 72.12 ms -> realtime | usgs_day.json | 9.82 KB
-[changed] emsc 1/1 ok | 1521.58 ms -> realtime | emsc.json | 10.05 KB
-[failed] iris 0/1 ok | 0.0 ms -> realtime | iris.json | 0.47 KB
-[changed] geonet_nz 1/1 ok | 285.16 ms -> realtime | geonet_nz.json | 9.74 KB
-[changed] geofon 1/1 ok | 2036.31 ms -> realtime | geofon.json | 8.84 KB
-[changed] raspberryshake 1/1 ok | 1345.85 ms -> realtime | raspberryshake.json | 8.87 KB
-[changed] noaabuoys 1/1 ok | 88.35 ms -> realtime | noaabuoys.json | 8.81 KB
-[changed] usgs_water 1/1 ok | 220.73 ms -> realtime | usgs_water.json | 9.88 KB
-[changed] ioc_sealevel 1/1 ok | 525.3 ms -> realtime | ioc_sealevel.json | 9.23 KB
-[changed] goes_xray 1/1 ok | 105.38 ms -> realtime | goes_xray.json | 9.38 KB
-[changed] goes_mag 1/1 ok | 80.87 ms -> realtime | goes_mag.json | 9.47 KB
-[changed] swpc_kindex 1/1 ok | 67.91 ms -> realtime | swpc_kindex.json | 9.97 KB
-[failed] swpc_solarwind 0/1 ok | 0.0 ms -> realtime | swpc_solarwind.json | 0.48 KB
-[changed] reversebeaconnetwork 1/1 ok | 460.18 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
-[failed] wsprnet 0/1 ok | 0.0 ms -> realtime | wsprnet.json | 0.46 KB
-[failed] pskreporter 0/1 ok | 0.0 ms -> realtime | pskreporter.json | 0.46 KB
-[changed] aprsfi 1/1 ok | 192.11 ms -> realtime | aprsfi.json | 4.21 KB
-[changed] opensky 1/1 ok | 694.66 ms -> realtime | opensky.json | 9.16 KB
-[changed] adsbexchange 1/1 ok | 81.96 ms -> realtime | adsbexchange.json | 8.76 KB
-[changed] celestrak 1/1 ok | 483.71 ms -> realtime | celestrak.json | 9.57 KB
-[changed] satnogs 1/1 ok | 1812.18 ms -> realtime | satnogs.json | 9.65 KB
-[changed] noaa_alerts 1/1 ok | 306.2 ms -> official | noaa_alerts.json | 9.31 KB
-[changed] nhc_advisories 1/1 ok | 64.95 ms -> official | nhc_advisories.json | 9.45 KB
-[changed] gdacs_alerts 1/1 ok | 921.44 ms -> official | gdacs_alerts.json | 9.03 KB
-[changed] volcano_smithsonian 1/1 ok | 98.58 ms -> official | volcano_smithsonian.json | 8.84 KB
-[changed] copernicus_ems 1/1 ok | 786.7 ms -> official | copernicus_ems.json | 9.24 KB
-[failed] fema_disasters 0/1 ok | 0.0 ms -> official | fema_disasters.json | 0.49 KB
-[missing] jma_volcanic.py
-[missing] jma_seismic.py
-[missing] nws_text_alerts.py
-[missing] cma_seismic.py
-[missing] gfz_volcanoes.py
-[missing] emsc_tsunami.py
-[missing] ptwc_tsunami.py
-[missing] bom_australia.py
-[missing] meteoalarm_europe.py
-[missing] icgc_catalan.py
-[missing] eccc_canada.py
-[missing] gsc_canada.py
-[missing] imd_india.py
-[missing] bmkg_indonesia.py
-[missing] kma_korea.py
-[missing] phivolcs_philippines.py
-[missing] usgs_conred_guatemala.py
-[missing] servgeo_colombia.py
-[missing] igp_peru.py
-[missing] onemi_chile.py
-[missing] segemar_argentina.py
-[missing] inmet_brazil.py
-[missing] ukmo_metoffice.py
-[missing] meteofrance.py
-[missing] dwd_germany.py
-[missing] arpa_italia.py
-[missing] saws_southafrica.py
-[missing] usgs_volcano.py
-[realtime] summary | changed=23 unchanged=0 degraded=0 failed=5 missing=28 total=56 elapsed=16.56s
-[realtime] sleep 30s
-[realtime] cycle start | sources=56
-[changed] usgs 1/1 ok | 141.84 ms -> realtime | usgs.json | 6.7 KB
-[changed] usgs_day 1/1 ok | 81.86 ms -> realtime | usgs_day.json | 9.82 KB
-[changed] emsc 1/1 ok | 1781.61 ms -> realtime | emsc.json | 10.05 KB
-[failed] iris 0/1 ok | 0.0 ms -> realtime | iris.json | 0.47 KB
-[changed] geonet_nz 1/1 ok | 472.9 ms -> realtime | geonet_nz.json | 9.74 KB
-[failed] geofon 0/1 ok | 0.0 ms -> realtime | geofon.json | 0.48 KB
-[failed] raspberryshake 0/1 ok | 0.0 ms -> realtime | raspberryshake.json | 0.51 KB
-[changed] noaabuoys 1/1 ok | 237.2 ms -> realtime | noaabuoys.json | 8.81 KB
-[changed] usgs_water 1/1 ok | 167.57 ms -> realtime | usgs_water.json | 9.88 KB
-[changed] ioc_sealevel 1/1 ok | 426.92 ms -> realtime | ioc_sealevel.json | 9.23 KB
-[changed] goes_xray 1/1 ok | 234.13 ms -> realtime | goes_xray.json | 9.38 KB
-[changed] goes_mag 1/1 ok | 137.38 ms -> realtime | goes_mag.json | 9.47 KB
-[changed] swpc_kindex 1/1 ok | 61.38 ms -> realtime | swpc_kindex.json | 9.97 KB
-[failed] swpc_solarwind 0/1 ok | 0.0 ms -> realtime | swpc_solarwind.json | 0.48 KB
-[changed] reversebeaconnetwork 1/1 ok | 450.6 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
-[failed] wsprnet 0/1 ok | 0.0 ms -> realtime | wsprnet.json | 0.46 KB
-[failed] pskreporter 0/1 ok | 0.0 ms -> realtime | pskreporter.json | 0.46 KB
-[changed] aprsfi 1/1 ok | 185.63 ms -> realtime | aprsfi.json | 4.21 KB
-[changed] opensky 1/1 ok | 657.92 ms -> realtime | opensky.json | 9.16 KB
-[changed] adsbexchange 1/1 ok | 202.17 ms -> realtime | adsbexchange.json | 8.76 KB
+[changed] aprsfi 1/1 ok | 241.97 ms -> realtime | aprsfi.json | 4.21 KB
+[changed] opensky 1/1 ok | 701.09 ms -> realtime | opensky.json | 9.15 KB
+[changed] adsbexchange 1/1 ok | 135.19 ms -> realtime | adsbexchange.json | 8.76 KB
 [failed] celestrak 0/1 ok | 0.0 ms -> realtime | celestrak.json | 0.48 KB
+[changed] satnogs 1/1 ok | 1744.88 ms -> realtime | satnogs.json | 9.65 KB
+[changed] noaa_alerts 1/1 ok | 321.18 ms -> official | noaa_alerts.json | 9.19 KB
+[changed] nhc_advisories 1/1 ok | 82.39 ms -> official | nhc_advisories.json | 9.45 KB
+[changed] gdacs_alerts 1/1 ok | 989.62 ms -> official | gdacs_alerts.json | 9.02 KB
+[changed] volcano_smithsonian 1/1 ok | 135.23 ms -> official | volcano_smithsonian.json | 8.84 KB
+[changed] copernicus_ems 1/1 ok | 794.44 ms -> official | copernicus_ems.json | 9.24 KB
+[failed] fema_disasters 0/1 ok | 0.0 ms -> official | fema_disasters.json | 0.49 KB
+[missing] jma_volcanic.py
+[missing] jma_seismic.py
+[missing] nws_text_alerts.py
+[missing] cma_seismic.py
+[missing] gfz_volcanoes.py
+[missing] emsc_tsunami.py
+[missing] ptwc_tsunami.py
+[missing] bom_australia.py
+[missing] meteoalarm_europe.py
+[missing] icgc_catalan.py
+[missing] eccc_canada.py
+[missing] gsc_canada.py
+[missing] imd_india.py
+[missing] bmkg_indonesia.py
+[missing] kma_korea.py
+[missing] phivolcs_philippines.py
+[missing] usgs_conred_guatemala.py
+[missing] servgeo_colombia.py
+[missing] igp_peru.py
+[missing] onemi_chile.py
+[missing] segemar_argentina.py
+[missing] inmet_brazil.py
+[missing] ukmo_metoffice.py
+[missing] meteofrance.py
+[missing] dwd_germany.py
+[missing] arpa_italia.py
+[missing] saws_southafrica.py
+[missing] usgs_volcano.py
+[realtime] summary | changed=22 unchanged=0 degraded=0 failed=6 missing=28 total=56 elapsed=19.02s
+[realtime] sleep 30s
+[realtime] cycle start | sources=56
+[changed] usgs 1/1 ok | 177.06 ms -> realtime | usgs.json | 6.76 KB
+[changed] usgs_day 1/1 ok | 112.06 ms -> realtime | usgs_day.json | 9.82 KB
+[changed] emsc 1/1 ok | 1663.46 ms -> realtime | emsc.json | 10.03 KB
+[failed] iris 0/1 ok | 0.0 ms -> realtime | iris.json | 0.47 KB
+[changed] geonet_nz 1/1 ok | 477.56 ms -> realtime | geonet_nz.json | 9.74 KB
+[failed] geofon 0/1 ok | 0.0 ms -> realtime | geofon.json | 0.48 KB
+[failed] raspberryshake 0/1 ok | 0.0 ms -> realtime | raspberryshake.json | 0.51 KB
+[changed] noaabuoys 1/1 ok | 249.9 ms -> realtime | noaabuoys.json | 8.81 KB
+[changed] usgs_water 1/1 ok | 2564.13 ms -> realtime | usgs_water.json | 9.88 KB
+[changed] ioc_sealevel 1/1 ok | 572.13 ms -> realtime | ioc_sealevel.json | 9.23 KB
+[changed] goes_xray 1/1 ok | 197.17 ms -> realtime | goes_xray.json | 9.37 KB
+[changed] goes_mag 1/1 ok | 102.16 ms -> realtime | goes_mag.json | 9.47 KB
+[changed] swpc_kindex 1/1 ok | 80.58 ms -> realtime | swpc_kindex.json | 9.97 KB
+[failed] swpc_solarwind 0/1 ok | 0.0 ms -> realtime | swpc_solarwind.json | 0.48 KB
+[changed] reversebeaconnetwork 1/1 ok | 504.28 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
+[failed] wsprnet 0/1 ok | 0.0 ms -> realtime | wsprnet.json | 0.46 KB
+[failed] pskreporter 0/1 ok | 0.0 ms -> realtime | pskreporter.json | 0.46 KB
+[changed] aprsfi 1/1 ok | 245.67 ms -> realtime | aprsfi.json | 4.21 KB
+[changed] opensky 1/1 ok | 906.23 ms -> realtime | opensky.json | 9.14 KB
+[changed] adsbexchange 1/1 ok | 190.57 ms -> realtime | adsbexchange.json | 8.76 KB
+[failed] celestrak 0/1 ok | 0.0 ms -> realtime | celestrak.json | 0.48 KB
+[changed] satnogs 1/1 ok | 1984.44 ms -> realtime | satnogs.json | 9.65 KB
+[changed] noaa_alerts 1/1 ok | 882.79 ms -> official | noaa_alerts.json | 9.2 KB
+[changed] nhc_advisories 1/1 ok | 211.03 ms -> official | nhc_advisories.json | 9.46 KB
+[changed] gdacs_alerts 1/1 ok | 1058.48 ms -> official | gdacs_alerts.json | 9.02 KB
+[changed] volcano_smithsonian 1/1 ok | 219.63 ms -> official | volcano_smithsonian.json | 8.84 KB
+[changed] copernicus_ems 1/1 ok | 793.58 ms -> official | copernicus_ems.json | 9.24 KB
+[failed] fema_disasters 0/1 ok | 0.0 ms -> official | fema_disasters.json | 0.49 KB
+[missing] jma_volcanic.py
+[missing] jma_seismic.py
+[missing] nws_text_alerts.py
+[missing] cma_seismic.py
+[missing] gfz_volcanoes.py
+[missing] emsc_tsunami.py
+[missing] ptwc_tsunami.py
+[missing] bom_australia.py
+[missing] meteoalarm_europe.py
+[missing] icgc_catalan.py
+[missing] eccc_canada.py
+[missing] gsc_canada.py
+[missing] imd_india.py
+[missing] bmkg_indonesia.py
+[missing] kma_korea.py
+[missing] phivolcs_philippines.py
+[missing] usgs_conred_guatemala.py
+[missing] servgeo_colombia.py
+[missing] igp_peru.py
+[missing] onemi_chile.py
+[missing] segemar_argentina.py
+[missing] inmet_brazil.py
+[missing] ukmo_metoffice.py
+[missing] meteofrance.py
+[missing] dwd_germany.py
+[missing] arpa_italia.py
+[missing] saws_southafrica.py
+[missing] usgs_volcano.py
+[realtime] summary | changed=20 unchanged=0 degraded=0 failed=8 missing=28 total=56 elapsed=25.63s
+[realtime] sleep 30s
+[realtime] cycle start | sources=56
+[changed] usgs 1/1 ok | 106.31 ms -> realtime | usgs.json | 6.76 KB
+[changed] usgs_day 1/1 ok | 144.92 ms -> realtime | usgs_day.json | 9.82 KB
+[changed] emsc 1/1 ok | 805.36 ms -> realtime | emsc.json | 10.03 KB
+[failed] iris 0/1 ok | 0.0 ms -> realtime | iris.json | 0.47 KB
+[changed] geonet_nz 1/1 ok | 278.6 ms -> realtime | geonet_nz.json | 9.74 KB
+[changed] geofon 1/1 ok | 1098.97 ms -> realtime | geofon.json | 8.83 KB
+[failed] raspberryshake 0/1 ok | 0.0 ms -> realtime | raspberryshake.json | 0.51 KB
+[changed] noaabuoys 1/1 ok | 100.81 ms -> realtime | noaabuoys.json | 8.81 KB
+[failed] usgs_water 0/1 ok | 0.0 ms -> realtime | usgs_water.json | 0.49 KB
+[changed] ioc_sealevel 1/1 ok | 296.99 ms -> realtime | ioc_sealevel.json | 9.23 KB
+[changed] goes_xray 1/1 ok | 99.43 ms -> realtime | goes_xray.json | 9.37 KB
+[changed] goes_mag 1/1 ok | 101.16 ms -> realtime | goes_mag.json | 9.47 KB
+[changed] swpc_kindex 1/1 ok | 81.35 ms -> realtime | swpc_kindex.json | 9.97 KB
+[failed] swpc_solarwind 0/1 ok | 0.0 ms -> realtime | swpc_solarwind.json | 0.48 KB
+[changed] reversebeaconnetwork 1/1 ok | 487.75 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
+[failed] wsprnet 0/1 ok | 0.0 ms -> realtime | wsprnet.json | 0.46 KB
+[failed] pskreporter 0/1 ok | 0.0 ms -> realtime | pskreporter.json | 0.46 KB
+[changed] aprsfi 1/1 ok | 238.54 ms -> realtime | aprsfi.json | 4.21 KB
+[changed] opensky 1/1 ok | 819.55 ms -> realtime | opensky.json | 9.14 KB
+[changed] adsbexchange 1/1 ok | 167.47 ms -> realtime | adsbexchange.json | 8.76 KB
+[failed] celestrak 0/1 ok | 0.0 ms -> realtime | celestrak.json | 0.48 KB
+[changed] satnogs 1/1 ok | 2369.37 ms -> realtime | satnogs.json | 9.65 KB
+[changed] noaa_alerts 1/1 ok | 179.52 ms -> official | noaa_alerts.json | 9.2 KB
+[changed] nhc_advisories 1/1 ok | 76.82 ms -> official | nhc_advisories.json | 9.45 KB
+[changed] gdacs_alerts 1/1 ok | 1511.66 ms -> official | gdacs_alerts.json | 9.02 KB
+[changed] volcano_smithsonian 1/1 ok | 208.04 ms -> official | volcano_smithsonian.json | 8.84 KB
+[changed] copernicus_ems 1/1 ok | 781.39 ms -> official | copernicus_ems.json | 9.24 KB
+[failed] fema_disasters 0/1 ok | 0.0 ms -> official | fema_disasters.json | 0.49 KB
+[missing] jma_volcanic.py
+[missing] jma_seismic.py
+[missing] nws_text_alerts.py
+[missing] cma_seismic.py
+[missing] gfz_volcanoes.py
+[missing] emsc_tsunami.py
+[missing] ptwc_tsunami.py
+[missing] bom_australia.py
+[missing] meteoalarm_europe.py
+[missing] icgc_catalan.py
+[missing] eccc_canada.py
+[missing] gsc_canada.py
+[missing] imd_india.py
+[missing] bmkg_indonesia.py
+[missing] kma_korea.py
+[missing] phivolcs_philippines.py
+[missing] usgs_conred_guatemala.py
+[missing] servgeo_colombia.py
+[missing] igp_peru.py
+[missing] onemi_chile.py
+[missing] segemar_argentina.py
+[missing] inmet_brazil.py
+[missing] ukmo_metoffice.py
+[missing] meteofrance.py
+[missing] dwd_germany.py
+[missing] arpa_italia.py
+[missing] saws_southafrica.py
+[missing] usgs_volcano.py
+[realtime] summary | changed=20 unchanged=0 degraded=0 failed=8 missing=28 total=56 elapsed=21.84s
+[realtime] sleep 30s
+[realtime] cycle start | sources=56
+[changed] usgs 1/1 ok | 176.85 ms -> realtime | usgs.json | 6.01 KB
+[changed] usgs_day 1/1 ok | 107.12 ms -> realtime | usgs_day.json | 9.82 KB
+[changed] emsc 1/1 ok | 1185.13 ms -> realtime | emsc.json | 10.03 KB
+[failed] iris 0/1 ok | 0.0 ms -> realtime | iris.json | 0.47 KB
+[changed] geonet_nz 1/1 ok | 487.09 ms -> realtime | geonet_nz.json | 9.74 KB
+[failed] geofon 0/1 ok | 0.0 ms -> realtime | geofon.json | 0.48 KB
+[failed] raspberryshake 0/1 ok | 0.0 ms -> realtime | raspberryshake.json | 0.51 KB
+[changed] noaabuoys 1/1 ok | 240.44 ms -> realtime | noaabuoys.json | 8.81 KB
+[changed] usgs_water 1/1 ok | 259.16 ms -> realtime | usgs_water.json | 9.88 KB
+[changed] ioc_sealevel 1/1 ok | 788.44 ms -> realtime | ioc_sealevel.json | 9.23 KB
+[changed] goes_xray 1/1 ok | 210.68 ms -> realtime | goes_xray.json | 9.37 KB
+[changed] goes_mag 1/1 ok | 190.81 ms -> realtime | goes_mag.json | 9.47 KB
+[changed] swpc_kindex 1/1 ok | 80.77 ms -> realtime | swpc_kindex.json | 9.97 KB
+[failed] swpc_solarwind 0/1 ok | 0.0 ms -> realtime | swpc_solarwind.json | 0.48 KB
+[changed] reversebeaconnetwork 1/1 ok | 558.98 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
+[failed] wsprnet 0/1 ok | 0.0 ms -> realtime | wsprnet.json | 0.46 KB
+[failed] pskreporter 0/1 ok | 0.0 ms -> realtime | pskreporter.json | 0.46 KB
+[changed] aprsfi 1/1 ok | 353.03 ms -> realtime | aprsfi.json | 4.21 KB
+[changed] opensky 1/1 ok | 839.07 ms -> realtime | opensky.json | 9.14 KB
+[changed] adsbexchange 1/1 ok | 166.19 ms -> realtime | adsbexchange.json | 8.76 KB
+[failed] celestrak 0/1 ok | 0.0 ms -> realtime | celestrak.json | 0.48 KB
+[changed] satnogs 1/1 ok | 1772.7 ms -> realtime | satnogs.json | 9.65 KB
+[changed] noaa_alerts 1/1 ok | 188.65 ms -> official | noaa_alerts.json | 9.23 KB
+[changed] nhc_advisories 1/1 ok | 198.64 ms -> official | nhc_advisories.json | 9.46 KB
+[changed] gdacs_alerts 1/1 ok | 993.68 ms -> official | gdacs_alerts.json | 9.02 KB
+[changed] volcano_smithsonian 1/1 ok | 212.93 ms -> official | volcano_smithsonian.json | 8.84 KB
+[changed] copernicus_ems 1/1 ok | 768.12 ms -> official | copernicus_ems.json | 9.24 KB
+[failed] fema_disasters 0/1 ok | 0.0 ms -> official | fema_disasters.json | 0.49 KB
+[missing] jma_volcanic.py
+[missing] jma_seismic.py
+[missing] nws_text_alerts.py
+[missing] cma_seismic.py
+[missing] gfz_volcanoes.py
+[missing] emsc_tsunami.py
+[missing] ptwc_tsunami.py
+[missing] bom_australia.py
+[missing] meteoalarm_europe.py
+[missing] icgc_catalan.py
+[missing] eccc_canada.py
+[missing] gsc_canada.py
+[missing] imd_india.py
+[missing] bmkg_indonesia.py
+[missing] kma_korea.py
+[missing] phivolcs_philippines.py
+[missing] usgs_conred_guatemala.py
+[missing] servgeo_colombia.py
+[missing] igp_peru.py
+[missing] onemi_chile.py
+[missing] segemar_argentina.py
+[missing] inmet_brazil.py
+[missing] ukmo_metoffice.py
+[missing] meteofrance.py
+[missing] dwd_germany.py
+[missing] arpa_italia.py
+[missing] saws_southafrica.py
+[missing] usgs_volcano.py
+[realtime] summary | changed=20 unchanged=0 degraded=0 failed=8 missing=28 total=56 elapsed=22.05s
+[realtime] sleep 30s
+[realtime] cycle start | sources=56
+[changed] usgs 1/1 ok | 84.61 ms -> realtime | usgs.json | 6.0 KB
+[changed] usgs_day 1/1 ok | 107.68 ms -> realtime | usgs_day.json | 9.82 KB
+[changed] emsc 1/1 ok | 808.35 ms -> realtime | emsc.json | 10.03 KB
+[failed] iris 0/1 ok | 0.0 ms -> realtime | iris.json | 0.47 KB
+[changed] geonet_nz 1/1 ok | 278.32 ms -> realtime | geonet_nz.json | 9.74 KB
+[changed] geofon 1/1 ok | 571.3 ms -> realtime | geofon.json | 8.83 KB
+[failed] raspberryshake 0/1 ok | 0.0 ms -> realtime | raspberryshake.json | 0.51 KB
+[changed] noaabuoys 1/1 ok | 99.3 ms -> realtime | noaabuoys.json | 8.8 KB
+[changed] usgs_water 1/1 ok | 255.96 ms -> realtime | usgs_water.json | 9.88 KB
+[changed] ioc_sealevel 1/1 ok | 276.75 ms -> realtime | ioc_sealevel.json | 9.23 KB
+[changed] goes_xray 1/1 ok | 107.0 ms -> realtime | goes_xray.json | 9.37 KB
+[changed] goes_mag 1/1 ok | 100.81 ms -> realtime | goes_mag.json | 9.47 KB
+[changed] swpc_kindex 1/1 ok | 79.39 ms -> realtime | swpc_kindex.json | 9.97 KB
+[failed] swpc_solarwind 0/1 ok | 0.0 ms -> realtime | swpc_solarwind.json | 0.48 KB
+[changed] reversebeaconnetwork 1/1 ok | 499.16 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
+[failed] wsprnet 0/1 ok | 0.0 ms -> realtime | wsprnet.json | 0.46 KB
+[failed] pskreporter 0/1 ok | 0.0 ms -> realtime | pskreporter.json | 0.46 KB
+[changed] aprsfi 1/1 ok | 238.51 ms -> realtime | aprsfi.json | 4.21 KB
+[changed] opensky 1/1 ok | 835.19 ms -> realtime | opensky.json | 9.14 KB
+[changed] adsbexchange 1/1 ok | 131.06 ms -> realtime | adsbexchange.json | 8.76 KB
+[changed] celestrak 1/1 ok | 1519.18 ms -> realtime | celestrak.json | 9.58 KB
+[changed] satnogs 1/1 ok | 2056.31 ms -> realtime | satnogs.json | 9.65 KB
+[changed] noaa_alerts 1/1 ok | 168.27 ms -> official | noaa_alerts.json | 9.23 KB
+[changed] nhc_advisories 1/1 ok | 78.68 ms -> official | nhc_advisories.json | 9.45 KB
+[changed] gdacs_alerts 1/1 ok | 985.69 ms -> official | gdacs_alerts.json | 9.02 KB
+[changed] volcano_smithsonian 1/1 ok | 132.45 ms -> official | volcano_smithsonian.json | 8.84 KB
+[changed] copernicus_ems 1/1 ok | 804.4 ms -> official | copernicus_ems.json | 9.24 KB
+[failed] fema_disasters 0/1 ok | 0.0 ms -> official | fema_disasters.json | 0.49 KB
+[missing] jma_volcanic.py
+[missing] jma_seismic.py
+[missing] nws_text_alerts.py
+[missing] cma_seismic.py
+[missing] gfz_volcanoes.py
+[missing] emsc_tsunami.py
+[missing] ptwc_tsunami.py
+[missing] bom_australia.py
+[missing] meteoalarm_europe.py
+[missing] icgc_catalan.py
+[missing] eccc_canada.py
+[missing] gsc_canada.py
+[missing] imd_india.py
+[missing] bmkg_indonesia.py
+[missing] kma_korea.py
+[missing] phivolcs_philippines.py
+[missing] usgs_conred_guatemala.py
+[missing] servgeo_colombia.py
+[missing] igp_peru.py
+[missing] onemi_chile.py
+[missing] segemar_argentina.py
+[missing] inmet_brazil.py
+[missing] ukmo_metoffice.py
+[missing] meteofrance.py
+[missing] dwd_germany.py
+[missing] arpa_italia.py
+[missing] saws_southafrica.py
+[missing] usgs_volcano.py
+[realtime] summary | changed=22 unchanged=0 degraded=0 failed=6 missing=28 total=56 elapsed=17.2s
+[realtime] sleep 30s
+[realtime] cycle start | sources=56
+[changed] usgs 1/1 ok | 252.2 ms -> realtime | usgs.json | 6.02 KB
+[changed] usgs_day 1/1 ok | 105.06 ms -> realtime | usgs_day.json | 9.83 KB
+[changed] emsc 1/1 ok | 1181.87 ms -> realtime | emsc.json | 10.03 KB
+[failed] iris 0/1 ok | 0.0 ms -> realtime | iris.json | 0.47 KB
+[changed] geonet_nz 1/1 ok | 358.09 ms -> realtime | geonet_nz.json | 9.74 KB
+[changed] geofon 1/1 ok | 1571.62 ms -> realtime | geofon.json | 8.83 KB
+[failed] raspberryshake 0/1 ok | 0.0 ms -> realtime | raspberryshake.json | 0.51 KB
+[changed] noaabuoys 1/1 ok | 237.92 ms -> realtime | noaabuoys.json | 8.81 KB
+[changed] usgs_water 1/1 ok | 260.34 ms -> realtime | usgs_water.json | 9.88 KB
+[changed] ioc_sealevel 1/1 ok | 797.39 ms -> realtime | ioc_sealevel.json | 9.23 KB
+[changed] goes_xray 1/1 ok | 213.05 ms -> realtime | goes_xray.json | 9.37 KB
+[changed] goes_mag 1/1 ok | 101.59 ms -> realtime | goes_mag.json | 9.47 KB
+[changed] swpc_kindex 1/1 ok | 80.95 ms -> realtime | swpc_kindex.json | 9.97 KB
+[failed] swpc_solarwind 0/1 ok | 0.0 ms -> realtime | swpc_solarwind.json | 0.48 KB
+[changed] reversebeaconnetwork 1/1 ok | 495.22 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
+[failed] wsprnet 0/1 ok | 0.0 ms -> realtime | wsprnet.json | 0.46 KB
+[failed] pskreporter 0/1 ok | 0.0 ms -> realtime | pskreporter.json | 0.46 KB
+[changed] aprsfi 1/1 ok | 241.98 ms -> realtime | aprsfi.json | 4.21 KB
+[changed] opensky 1/1 ok | 752.18 ms -> realtime | opensky.json | 9.14 KB
+[changed] adsbexchange 1/1 ok | 163.7 ms -> realtime | adsbexchange.json | 8.76 KB
+[changed] celestrak 1/1 ok | 935.64 ms -> realtime | celestrak.json | 9.57 KB
+[changed] satnogs 1/1 ok | 2078.37 ms -> realtime | satnogs.json | 9.65 KB
+[changed] noaa_alerts 1/1 ok | 327.65 ms -> official | noaa_alerts.json | 9.27 KB
+[changed] nhc_advisories 1/1 ok | 202.7 ms -> official | nhc_advisories.json | 9.45 KB
+[changed] gdacs_alerts 1/1 ok | 991.41 ms -> official | gdacs_alerts.json | 9.02 KB
+[changed] volcano_smithsonian 1/1 ok | 209.58 ms -> official | volcano_smithsonian.json | 8.84 KB
+[changed] copernicus_ems 1/1 ok | 805.52 ms -> official | copernicus_ems.json | 9.24 KB
+[failed] fema_disasters 0/1 ok | 0.0 ms -> official | fema_disasters.json | 0.49 KB
+[missing] jma_volcanic.py
+[missing] jma_seismic.py
+[missing] nws_text_alerts.py
+[missing] cma_seismic.py
+[missing] gfz_volcanoes.py
+[missing] emsc_tsunami.py
+[missing] ptwc_tsunami.py
+[missing] bom_australia.py
+[missing] meteoalarm_europe.py
+[missing] icgc_catalan.py
+[missing] eccc_canada.py
+[missing] gsc_canada.py
+[missing] imd_india.py
+[missing] bmkg_indonesia.py
+[missing] kma_korea.py
+[missing] phivolcs_philippines.py
+[missing] usgs_conred_guatemala.py
+[missing] servgeo_colombia.py
+[missing] igp_peru.py
+[missing] onemi_chile.py
+[missing] segemar_argentina.py
+[missing] inmet_brazil.py
+[missing] ukmo_metoffice.py
+[missing] meteofrance.py
+[missing] dwd_germany.py
+[missing] arpa_italia.py
+[missing] saws_southafrica.py
+[missing] usgs_volcano.py
+[realtime] summary | changed=22 unchanged=0 degraded=0 failed=6 missing=28 total=56 elapsed=19.54s
+[realtime] sleep 30s
+[realtime] cycle start | sources=56
+[changed] usgs 1/1 ok | 81.15 ms -> realtime | usgs.json | 6.02 KB
+[changed] usgs_day 1/1 ok | 107.61 ms -> realtime | usgs_day.json | 9.83 KB
+[changed] emsc 1/1 ok | 1182.6 ms -> realtime | emsc.json | 10.03 KB
+[failed] iris 0/1 ok | 0.0 ms -> realtime | iris.json | 0.47 KB
+[changed] geonet_nz 1/1 ok | 277.81 ms -> realtime | geonet_nz.json | 9.74 KB
+[changed] geofon 1/1 ok | 821.65 ms -> realtime | geofon.json | 8.83 KB
+[failed] raspberryshake 0/1 ok | 0.0 ms -> realtime | raspberryshake.json | 0.51 KB
+[changed] noaabuoys 1/1 ok | 99.11 ms -> realtime | noaabuoys.json | 8.81 KB
+[changed] usgs_water 1/1 ok | 520.8 ms -> realtime | usgs_water.json | 9.88 KB
+[changed] ioc_sealevel 1/1 ok | 930.54 ms -> realtime | ioc_sealevel.json | 9.23 KB
+[changed] goes_xray 1/1 ok | 101.48 ms -> realtime | goes_xray.json | 9.37 KB
+[changed] goes_mag 1/1 ok | 164.98 ms -> realtime | goes_mag.json | 9.47 KB
+[changed] swpc_kindex 1/1 ok | 81.31 ms -> realtime | swpc_kindex.json | 9.97 KB
+[failed] swpc_solarwind 0/1 ok | 0.0 ms -> realtime | swpc_solarwind.json | 0.48 KB
+[changed] reversebeaconnetwork 1/1 ok | 490.36 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
+[failed] wsprnet 0/1 ok | 0.0 ms -> realtime | wsprnet.json | 0.46 KB
+[failed] pskreporter 0/1 ok | 0.0 ms -> realtime | pskreporter.json | 0.46 KB
+[changed] aprsfi 1/1 ok | 244.91 ms -> realtime | aprsfi.json | 4.21 KB
+[changed] opensky 1/1 ok | 838.82 ms -> realtime | opensky.json | 9.14 KB
+[changed] adsbexchange 1/1 ok | 139.19 ms -> realtime | adsbexchange.json | 8.76 KB
+[failed] celestrak 0/1 ok | 0.0 ms -> realtime | celestrak.json | 0.48 KB
+[changed] satnogs 1/1 ok | 1837.09 ms -> realtime | satnogs.json | 9.65 KB
+[changed] noaa_alerts 1/1 ok | 191.17 ms -> official | noaa_alerts.json | 9.28 KB
+[changed] nhc_advisories 1/1 ok | 77.02 ms -> official | nhc_advisories.json | 9.45 KB
+[changed] gdacs_alerts 1/1 ok | 1253.43 ms -> official | gdacs_alerts.json | 9.02 KB
+[changed] volcano_smithsonian 1/1 ok | 134.07 ms -> official | volcano_smithsonian.json | 8.84 KB
+[changed] copernicus_ems 1/1 ok | 945.35 ms -> official | copernicus_ems.json | 9.24 KB
+[failed] fema_disasters 0/1 ok | 0.0 ms -> official | fema_disasters.json | 0.49 KB
+[missing] jma_volcanic.py
+[missing] jma_seismic.py
+[missing] nws_text_alerts.py
+[missing] cma_seismic.py
+[missing] gfz_volcanoes.py
+[missing] emsc_tsunami.py
+[missing] ptwc_tsunami.py
+[missing] bom_australia.py
+[missing] meteoalarm_europe.py
+[missing] icgc_catalan.py
+[missing] eccc_canada.py
+[missing] gsc_canada.py
+[missing] imd_india.py
+[missing] bmkg_indonesia.py
+[missing] kma_korea.py
+[missing] phivolcs_philippines.py
+[missing] usgs_conred_guatemala.py
+[missing] servgeo_colombia.py
+[missing] igp_peru.py
+[missing] onemi_chile.py
+[missing] segemar_argentina.py
+[missing] inmet_brazil.py
+[missing] ukmo_metoffice.py
+[missing] meteofrance.py
+[missing] dwd_germany.py
+[missing] arpa_italia.py
+[missing] saws_southafrica.py
+[missing] usgs_volcano.py
+[realtime] summary | changed=21 unchanged=0 degraded=0 failed=7 missing=28 total=56 elapsed=20.14s
+[realtime] sleep 30s
+[realtime] cycle start | sources=56
+[changed] usgs 1/1 ok | 188.95 ms -> realtime | usgs.json | 6.02 KB
+[changed] usgs_day 1/1 ok | 105.83 ms -> realtime | usgs_day.json | 9.83 KB
+[changed] emsc 1/1 ok | 1177.1 ms -> realtime | emsc.json | 10.03 KB
+[failed] iris 0/1 ok | 0.0 ms -> realtime | iris.json | 0.47 KB
+[changed] geonet_nz 1/1 ok | 741.91 ms -> realtime | geonet_nz.json | 9.74 KB
+[changed] geofon 1/1 ok | 824.65 ms -> realtime | geofon.json | 8.83 KB
+[failed] raspberryshake 0/1 ok | 0.0 ms -> realtime | raspberryshake.json | 0.51 KB
+[changed] noaabuoys 1/1 ok | 131.55 ms -> realtime | noaabuoys.json | 8.81 KB
+[failed] usgs_water 0/1 ok | 0.0 ms -> realtime | usgs_water.json | 0.49 KB
+[changed] ioc_sealevel 1/1 ok | 687.46 ms -> realtime | ioc_sealevel.json | 9.23 KB
+[changed] goes_xray 1/1 ok | 204.91 ms -> realtime | goes_xray.json | 9.37 KB
+[changed] goes_mag 1/1 ok | 101.71 ms -> realtime | goes_mag.json | 9.47 KB
+[changed] swpc_kindex 1/1 ok | 81.92 ms -> realtime | swpc_kindex.json | 9.97 KB
+[failed] swpc_solarwind 0/1 ok | 0.0 ms -> realtime | swpc_solarwind.json | 0.48 KB
+[changed] reversebeaconnetwork 1/1 ok | 484.75 ms -> realtime | reversebeaconnetwork.json | 9.74 KB
+[failed] wsprnet 0/1 ok | 0.0 ms -> realtime | wsprnet.json | 0.46 KB
+[failed] pskreporter 0/1 ok | 0.0 ms -> realtime | pskreporter.json | 0.46 KB
+[changed] aprsfi 1/1 ok | 247.02 ms -> realtime | aprsfi.json | 4.21 KB
+[changed] opensky 1/1 ok | 688.22 ms -> realtime | opensky.json | 9.14 KB
+[changed] adsbexchange 1/1 ok | 134.92 ms -> realtime | adsbexchange.json | 8.76 KB
