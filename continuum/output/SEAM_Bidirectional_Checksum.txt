@@ -1,0 +1,27 @@
+SEAM BIDIRECTIONAL CHECKSUM / FALSIFIABILITY REPORT
+================================================================================================================================================================
+Generated UTC: 2026-05-16T17:38:38.812079+00:00
+SEAM Events: 5
+Official Candidates: 6
+Confirmed: 5
+Precursors: 0
+Blind Spots: 4
+
+SEAM -> OFFICIAL
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Event ID | SEAM | Official | State | Lock State | Official Matches
+VOLK-00000 | True | True | CONFIRMED | FOLLOW PROTOCOL (61.0%) | 6
+VOLK-00001 | True | True | CONFIRMED | FOLLOW PROTOCOL (61.0%) | 6
+VOLK-00002 | True | True | CONFIRMED | FOLLOW PROTOCOL (61.0%) | 6
+VOLK-00003 | True | True | CONFIRMED | HARD LOCK (97.0%) | 6
+VOLK-00004 | True | True | CONFIRMED | FOLLOW PROTOCOL (61.0%) | 6
+
+OFFICIAL -> SEAM
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Official ID | Source | Official UTC | SEAM | State | SEAM Matches
+OFF-00042 | intermagnet | 2026-05-16T16:15:32.285646+00:00 | False | BLIND_SPOT | 0
+OFF-00060 | neutronmonitor | 2026-05-16T16:15:32.287384+00:00 | False | BLIND_SPOT | 0
+OFF-00065 | noaa_alerts | 2026-05-16T16:15:32.290382+00:00 | True | CONFIRMED | 5
+OFF-00093 | usgs_water | 2026-05-16T16:15:32.302049+00:00 | False | BLIND_SPOT | 0
+OFF-00096 | volcano_smithsonian | 2026-05-16T16:15:32.303053+00:00 | True | CONFIRMED | 5
+OFF-00098 | weatherunderground_pws | 2026-05-16T16:15:32.303053+00:00 | False | BLIND_SPOT | 0

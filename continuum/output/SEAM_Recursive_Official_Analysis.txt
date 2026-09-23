@@ -1,0 +1,53 @@
+SEAM RECURSIVE OFFICIAL ANALYSIS
+====================================================================================================================================================================================
+{
+  "seam_event_count": 28,
+  "official_record_count": 12,
+  "confirmed_count": 28,
+  "precursor_count": 0,
+  "blind_spot_count": 10
+}
+
+SEAM -> OFFICIAL
+VOLK-00000 | CONFIRMED | official_matches=2
+VOLK-00001 | CONFIRMED | official_matches=2
+VOLK-00002 | CONFIRMED | official_matches=2
+VOLK-00003 | CONFIRMED | official_matches=2
+VOLK-00004 | CONFIRMED | official_matches=2
+VOLK-00005 | CONFIRMED | official_matches=2
+VOLK-00006 | CONFIRMED | official_matches=2
+VOLK-00007 | CONFIRMED | official_matches=2
+VOLK-00008 | CONFIRMED | official_matches=2
+VOLK-00009 | CONFIRMED | official_matches=2
+VOLK-00010 | CONFIRMED | official_matches=2
+VOLK-00011 | CONFIRMED | official_matches=2
+VOLK-00012 | CONFIRMED | official_matches=2
+VOLK-00013 | CONFIRMED | official_matches=2
+VOLK-00014 | CONFIRMED | official_matches=2
+VOLK-00015 | CONFIRMED | official_matches=2
+VOLK-00016 | CONFIRMED | official_matches=2
+VOLK-00017 | CONFIRMED | official_matches=2
+VOLK-00018 | CONFIRMED | official_matches=2
+VOLK-00019 | CONFIRMED | official_matches=2
+VOLK-00020 | CONFIRMED | official_matches=2
+VOLK-00021 | CONFIRMED | official_matches=2
+VOLK-00022 | CONFIRMED | official_matches=2
+VOLK-00023 | CONFIRMED | official_matches=2
+VOLK-00024 | CONFIRMED | official_matches=2
+VOLK-00025 | CONFIRMED | official_matches=2
+VOLK-00026 | CONFIRMED | official_matches=2
+VOLK-00027 | CONFIRMED | official_matches=2
+
+OFFICIAL -> SEAM
+OFF-00000 | copernicus_ems | BLIND_SPOT | seam_matches=0
+OFF-00001 | copernicus_ems_weekly168 | BLIND_SPOT | seam_matches=0
+OFF-00002 | fema_disasters | BLIND_SPOT | seam_matches=0
+OFF-00003 | fema_disasters_weekly168 | BLIND_SPOT | seam_matches=0
+OFF-00004 | gdacs_alerts | BLIND_SPOT | seam_matches=0
+OFF-00005 | gdacs_alerts_weekly168 | BLIND_SPOT | seam_matches=0
+OFF-00006 | nhc_advisories | BLIND_SPOT | seam_matches=0
+OFF-00007 | nhc_advisories_weekly168 | BLIND_SPOT | seam_matches=0
+OFF-00008 | noaa_alerts | BLIND_SPOT | seam_matches=0
+OFF-00009 | noaa_alerts_weekly168 | BLIND_SPOT | seam_matches=0
+OFF-00010 | volcano_smithsonian | CONFIRMED | seam_matches=28
+OFF-00011 | volcano_smithsonian_weekly168 | CONFIRMED | seam_matches=28

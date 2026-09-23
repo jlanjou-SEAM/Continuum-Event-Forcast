@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuum - Event Projection</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2a2a3e 0%, #3d3d52 100%);
+            color: #fff;
+            padding: 0;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-size: 16px;
+        }
+        header {
+            background: linear-gradient(135deg, #1e1e2e 0%, #2d2d3d 100%);
+            padding: 8px 20px;
+            border-bottom: 4px solid #ff6b6b;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+            position: sticky;
+            top: 0;
+        }
+        h1 {
+            color: #ff6b6b;
+            font-size: 14px;
+            margin: 0;
+            margin-bottom: 2px;
+        }
+        .subtitle {
+            color: #aaa;
+            font-size: 10px;
+            margin: 0;
+        }
+        .header-right {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            font-size: 10px;
+        }
+        .time-display {
+            text-align: right;
+        }
+        .time-label {
+            color: #888;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+        .time-value {
+            color: #0f0;
+            font-weight: bold;
+        }
+        .refresh-countdown {
+            text-align: center;
+            padding: 4px 8px;
+            background: rgba(255,107,107,0.1);
+            border-radius: 4px;
+            border-left: 2px solid #ff6b6b;
+        }
+        .container {
+            max-width: 100%;
+            display: flex;
+            gap: 20px;
+            flex: 1;
+            min-height: 0;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .main-content {
+            display: flex;
+            gap: 20px;
+            flex: 1;
+            min-height: 0;
+        }
+        .left-panel {
+            flex: 0 0 80%;
+            overflow-y: auto;
+        }
+        #eventsContainer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-flow: row;
+            gap: 20px;
+            padding: 0;
+        }
+        .right-panel {
+            flex: 0 0 20%;
+            background: #1e1e2e;
+            border-radius: 8px;
+            border-left: 4px solid #ffa500;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .log-title {
+            font-weight: bold;
+            color: #ffa500;
+            margin-bottom: 10px;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        .log-entry {
+            font-size: 12px;
+            margin-bottom: 4px;
+            padding: 4px 6px;
+            border-left: 3px solid #666;
+            padding-left: 10px;
+            color: #bbb;
+            line-height: 1.2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .log-entry.event {
+            border-left-color: #ff6b6b;
+            color: #ff6b6b;
+        }
+        .log-entry.watch {
+            border-left-color: #ffa500;
+            color: #ffa500;
+        }
+        .log-entry.warning {
+            border-left-color: #ffeb3b;
+            color: #ffeb3b;
+        }
+        .log-timestamp {
+            color: #666;
+            font-size: 10px;
+            margin-right: 8px;
+        }
+        .event-card {
+            background: #1e1e2e;
+            border-radius: 8px;
+            padding: 8px;
+            border-top: 4px solid;
+            border-left: 4px solid;
+            min-height: 140px;
+            display: grid;
+            grid-template-columns: 7fr 1fr;
+            grid-template-rows: auto 1fr;
+            gap: 6px;
+            position: relative;
+        }
+        .card-hysteresis {
+            grid-column: 2;
+            grid-row: 1 / 3;
+            background: rgba(0,0,0,0.3);
+            border-radius: 4px;
+            padding: 4px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            gap: 2px;
+        }
+        .hysteresis-bar {
+            flex: 1;
+            background: #666;
+            border-radius: 2px;
+            min-height: 2px;
+        }
+        .hysteresis-bar.rising {
+            background: #4CAF50;
+        }
+        .hysteresis-bar.falling {
+            background: #ff6b6b;
+        }
+        .hysteresis-bar.locked {
+            background: #ffd700;
+        }
+        .event-card.event {
+            border-top-color: #ff6b6b;
+            border-left-color: #ff6b6b;
+        }
+        .event-card.watch {
+            border-top-color: #ffa500;
+            border-left-color: #ffa500;
+        }
+        .event-card.warning {
+            border-top-color: #ffeb3b;
+            border-left-color: #ffeb3b;
+        }
+        .card-phase {
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        .card-phase.event { color: #ff6b6b; }
+        .card-phase.watch { color: #ffa500; }
+        .card-phase.warning { color: #ffeb3b; }
+        .card-phase.locked { color: #ff3333; font-weight: bold; text-transform: uppercase; }
+        .card-type {
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+        .card-location {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+        .card-confidence {
+            font-size: 34px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .card-confidence.event { color: #ff6b6b; }
+        .card-confidence.watch { color: #ffa500; }
+        .card-confidence.warning { color: #ffeb3b; }
+        .card-info {
+            font-size: 13px;
+            color: #aaa;
+            margin-bottom: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .card-info-column {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .card-info-row {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2px;
+            padding: 2px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .card-label {
+            color: #888;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 11px;
+            margin-bottom: 1px;
+        }
+        .card-value {
+            color: #fff;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        .column-title {
+            font-size: 11px;
+            font-weight: bold;
+            color: #0f0;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(15,255,0,0.3);
+            padding-bottom: 2px;
+        }
+        .column-title.official {
+            color: #ffa500;
+            border-bottom-color: rgba(255,165,0,0.3);
+        }
+        .empty-state {
+            padding: 40px;
+            text-align: center;
+            color: #666;
+        }
+        .loading {
+            padding: 40px;
+            text-align: center;
+            color: #aaa;
+        }
+        .error {
+            background: rgba(255,107,107,0.2);
+            color: #ff6b6b;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ff6b6b;
+        }
+        footer {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            font-size: 11px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>🎯 CONTINUUM EVENT PROJECTION</h1>
+            <p class="subtitle">Real-time natural disaster prediction system</p>
+        </div>
+        <div class="header-right">
+            <div class="time-display">
+                <div class="time-label">LOCAL</div>
+                <div class="time-value" id="localTime">--:--:--</div>
+            </div>
+            <div class="time-display">
+                <div class="time-label">GMT</div>
+                <div class="time-value" id="gmtTime">--:--:--</div>
+            </div>
+            <div class="refresh-countdown">
+                <div class="time-label">REFRESH IN</div>
+                <div class="time-value" id="refreshCountdown">60s</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+    <div class="main-content">
+        <div class="left-panel">
+            <div id="loading" class="loading" style="display:none;">Loading events...</div>
+            <div id="error" class="error" style="display:none;"></div>
+            <div id="eventsContainer"></div>
+        </div>
+
+        <div class="right-panel">
+            <div class="log-title">📋 Live Log</div>
+            <div id="logContainer" style="flex: 1; overflow-y: auto;"></div>
+        </div>
+    </div>
+    </div>
+
+    <footer style="padding: 10px 20px; text-align: center; font-size: 10px; color: #666; border-top: 1px solid rgba(255,255,255,0.1);">Continuum Database • 30-Day Event Tracker</footer>
+
+    <script>
+        const REPO = 'jlanjou-SEAM/SEAM-Core';
+        const BRANCH = 'main';
+        const TRACKER_FILE = 'continuum/event_tracker.json';
+        const MANIFOLD_FILE = 'continuum/output/volcanic_manifold_analysis.json';
+        const LIVE_FEED_FILE = './public/data/live.json';
+
+        // Location database with (name, lat, lon, country, state/region)
+        const VOLCANOES = {
+            'kilauea': { name: 'Kilauea', lat: 19.4210, lon: -155.2924, country: 'USA', state: 'Hawaii' },
+            'mauna_loa': { name: 'Mauna Loa', lat: 19.4755, lon: -155.6081, country: 'USA', state: 'Hawaii' },
+            'sakurajima': { name: 'Sakurajima', lat: 31.5933, lon: 130.6568, country: 'Japan', state: 'Kagoshima' },
+            'popocatepetl': { name: 'Popocatépetl', lat: 19.0228, lon: -98.6272, country: 'Mexico', state: 'Puebla' },
+            'merapi': { name: 'Mount Merapi', lat: -7.5412, lon: 110.4429, country: 'Indonesia', state: 'Central Java' },
+            'stromboli': { name: 'Stromboli', lat: 38.7914, lon: 15.2127, country: 'Italy', state: 'Sicily' },
+            'etna': { name: 'Mount Etna', lat: 37.7412, lon: 15.0031, country: 'Italy', state: 'Sicily' },
+        };
+
+        const SEISMIC_ZONES = {
+            'iowa': { name: 'Iowa Seismic Zone', lat: 41.16, lon: -94.93, country: 'USA', state: 'Iowa' },
+            'tokyo': { name: 'Tokyo Bay', lat: 35.45, lon: 139.77, country: 'Japan', state: 'Tokyo' },
+            'california': { name: 'San Francisco Bay', lat: 37.77, lon: -122.42, country: 'USA', state: 'California' },
+            'alaska': { name: 'Alaska Subduction Zone', lat: 61.0, lon: -149.0, country: 'USA', state: 'Alaska' },
+            'chile': { name: 'Chile Trench', lat: -30.0, lon: -71.0, country: 'Chile', state: 'Ring of Fire' },
+            'japan': { name: 'Japan Trench', lat: 37.0, lon: 142.0, country: 'Japan', state: 'Ring of Fire' },
+            'peru': { name: 'Peru-Chile Trench', lat: -15.0, lon: -75.0, country: 'Peru', state: 'Ring of Fire' },
+        };
+
+        const WEATHER_ZONES = {
+            'texas': { name: 'Southern Plains', lat: 31.97, lon: -99.90, country: 'USA', state: 'Texas' },
+            'oklahoma': { name: 'Central Plains', lat: 35.56, lon: -97.49, country: 'USA', state: 'Oklahoma' },
+            'florida': { name: 'Southeast Coast', lat: 27.99, lon: -81.76, country: 'USA', state: 'Florida' },
+            'midwest': { name: 'Great Lakes Region', lat: 43.00, lon: -85.00, country: 'USA', state: 'Michigan' },
+            'pacific': { name: 'Pacific Northwest', lat: 47.61, lon: -122.33, country: 'USA', state: 'Washington' },
+            'gulf': { name: 'Gulf of Mexico', lat: 26.0, lon: -90.0, country: 'USA', state: 'Gulf Coast' },
+            'midwest_plains': { name: 'Great Plains', lat: 39.0, lon: -98.0, country: 'USA', state: 'Kansas' },
+        };
+
+        const TROPICAL_ZONES = {
+            'atlantic': { name: 'Atlantic Basin', lat: 20.00, lon: -60.00, country: 'Atlantic', state: 'Open Water' },
+            'pacific_east': { name: 'Eastern Pacific', lat: 15.00, lon: -120.00, country: 'Pacific', state: 'Open Water' },
+            'caribbean': { name: 'Caribbean', lat: 18.22, lon: -77.50, country: 'Caribbean Region', state: 'Tropical' },
+            'pacific_west': { name: 'Western Pacific', lat: 15.00, lon: 140.00, country: 'Pacific', state: 'Open Water' },
+            'indian_ocean': { name: 'Indian Ocean', lat: -10.00, lon: 80.00, country: 'Indian', state: 'Ocean Basin' },
+        };
+
+        const FIRE_ZONES = {
+            'california_north': { name: 'Northern California', lat: 40.0, lon: -121.0, country: 'USA', state: 'California' },
+            'california_south': { name: 'Southern California', lat: 34.0, lon: -118.0, country: 'USA', state: 'California' },
+            'oregon_washington': { name: 'Pacific Northwest Forests', lat: 44.0, lon: -121.0, country: 'USA', state: 'Oregon' },
+            'australia': { name: 'Eastern Australia', lat: -34.40, lon: 150.88, country: 'Australia', state: 'NSW' },
+            'amazon': { name: 'Amazon Basin', lat: -5.0, lon: -60.0, country: 'Brazil', state: 'Amazonas' },
+            'siberia': { name: 'Siberian Taiga', lat: 65.0, lon: 100.0, country: 'Russia', state: 'Siberia' },
+        };
+
+        function getVolcanoInfo(lat, lon) {
+            for (const [key, volcano] of Object.entries(VOLCANOES)) {
+                const latDiff = Math.abs(volcano.lat - lat);
+                const lonDiff = Math.abs(volcano.lon - lon);
+                if (latDiff < 0.1 && lonDiff < 0.1) {
+                    return volcano;
+                }
+            }
+            return null;
+        }
+
+        function getSeismicZoneInfo(lat, lon) {
+            for (const [key, zone] of Object.entries(SEISMIC_ZONES)) {
+                const latDiff = Math.abs(zone.lat - lat);
+                const lonDiff = Math.abs(zone.lon - lon);
+                if (latDiff < 1.0 && lonDiff < 1.0) {
+                    return zone;
+                }
+            }
+            return null;
+        }
+
+        function getWeatherZoneInfo(lat, lon) {
+            for (const [key, zone] of Object.entries(WEATHER_ZONES)) {
+                const latDiff = Math.abs(zone.lat - lat);
+                const lonDiff = Math.abs(zone.lon - lon);
+                if (latDiff < 3.0 && lonDiff < 3.0) {
+                    return zone;
+                }
+            }
+            return null;
+        }
+
+        function getTropicalZoneInfo(lat, lon) {
+            for (const [key, zone] of Object.entries(TROPICAL_ZONES)) {
+                const latDiff = Math.abs(zone.lat - lat);
+                const lonDiff = Math.abs(zone.lon - lon);
+                if (latDiff < 10.0 && lonDiff < 15.0) {
+                    return zone;
+                }
+            }
+            return null;
+        }
+
+        function getFireZoneInfo(lat, lon) {
+            for (const [key, zone] of Object.entries(FIRE_ZONES)) {
+                const latDiff = Math.abs(zone.lat - lat);
+                const lonDiff = Math.abs(zone.lon - lon);
+                if (latDiff < 3.0 && lonDiff < 3.0) {
+                    return zone;
+                }
+            }
+            return null;
+        }
+
+        function getLocationInfo(lat, lon, eventType) {
+            if (eventType === 'seismic') {
+                return getSeismicZoneInfo(lat, lon);
+            } else if (['severe_weather', 'tornadic', 'winter_weather'].includes(eventType)) {
+                return getWeatherZoneInfo(lat, lon);
+            } else if (eventType === 'tropical_cyclone') {
+                return getTropicalZoneInfo(lat, lon);
+            } else if (eventType === 'wildfire') {
+                return getFireZoneInfo(lat, lon);
+            }
+            return null;
+        }
+
+        function getRegionFromCoordinates(lat, lon) {
+            // Determine region/area name from coordinates - MUST always return something
+            if (lat === null || lon === null) return { name: 'Global', country: 'Global', state: 'Unspecified' };
+
+            // USA - More detailed regions
+            if (25 < lat && lat < 49 && -125 < lon && lon < -66) {
+                if (lat > 42 && lon < -70) return { name: 'New England', country: 'USA', state: 'New England' };
+                if (lat > 40 && lon < -75) return { name: 'Mid-Atlantic', country: 'USA', state: 'Mid-Atlantic' };
+                if (lat < 37 && lon < -80) return { name: 'Southeast', country: 'USA', state: 'Southeast' };
+                if (lat > 36 && lat < 42 && lon < -80) return { name: 'Appalachia', country: 'USA', state: 'Appalachia' };
+                if (lat > 37 && lat < 46 && lon > -105 && lon < -85) return { name: 'Great Lakes', country: 'USA', state: 'Great Lakes' };
+                if (lat > 39 && lat < 49 && lon > -105 && lon < -85) return { name: 'Midwest', country: 'USA', state: 'Midwest' };
+                if (lat > 35 && lat < 40 && lon > -104 && lon < -93) return { name: 'Great Plains', country: 'USA', state: 'Great Plains' };
+                if (lat > 29 && lat < 37 && lon > -104 && lon < -93) return { name: 'South Central', country: 'USA', state: 'South Central' };
+                if (lat > 25 && lat < 32 && lon > -87 && lon < -80) return { name: 'Gulf Coast', country: 'USA', state: 'Gulf Coast' };
+                if (lat > 35 && lat < 46 && lon > -125 && lon < -105) return { name: 'Mountain West', country: 'USA', state: 'Mountain West' };
+                if (lat > 30 && lat < 42 && lon > -125 && lon < -114) return { name: 'Pacific West', country: 'USA', state: 'Pacific West' };
+                return { name: 'Continental USA', country: 'USA', state: 'USA' };
+            }
+
+            // Canada
+            if (42 < lat && lat < 84 && -141 < lon && lon < -52) {
+                return { name: 'Canada', country: 'Canada', state: 'North America' };
+            }
+
+            // Mexico & Central America
+            if (7 < lat && lat < 32 && -120 < lon && lon < -86) {
+                return { name: 'Mexico & Central America', country: 'Mexico', state: 'Central America' };
+            }
+
+            // South America
+            if (-56 < lat && lat < 13 && -82 < lon && lon < -34) {
+                if (lat > -10 && lon > -75) return { name: 'Amazon Basin', country: 'Brazil', state: 'Amazonas' };
+                if (lat > -28 && lat < -8) return { name: 'Central South America', country: 'Brazil', state: 'Central' };
+                if (lat < -28) return { name: 'Southern South America', country: 'Argentina', state: 'Southern' };
+                return { name: 'South America', country: 'South America', state: 'Region' };
+            }
+
+            // Europe
+            if (35 < lat && lat < 70 && -10 < lon && lon < 40) {
+                if (lat > 54 && lon < 30) return { name: 'Scandinavia', country: 'Nordic', state: 'Northern Europe' };
+                if (lat > 48 && lon > 8) return { name: 'Central Europe', country: 'Europe', state: 'Central' };
+                if (lat < 44 && lon > 5) return { name: 'Mediterranean', country: 'Europe', state: 'Mediterranean' };
+                if (lon < -5) return { name: 'Atlantic Europe', country: 'Europe', state: 'Atlantic' };
+                return { name: 'Europe', country: 'Europe', state: 'Region' };
+            }
+
+            // Africa
+            if (-35 < lat && lat < 37 && -18 < lon && lon < 55) {
+                if (lat > 20) return { name: 'North Africa', country: 'Africa', state: 'North Africa' };
+                if (lat > 5) return { name: 'Central Africa', country: 'Africa', state: 'Central Africa' };
+                if (lat > -12) return { name: 'East Africa', country: 'Africa', state: 'East Africa' };
+                return { name: 'Southern Africa', country: 'Africa', state: 'Southern Africa' };
+            }
+
+            // Middle East
+            if (12 < lat && lat < 43 && 26 < lon && lon < 63) {
+                return { name: 'Middle East', country: 'Middle East', state: 'Southwest Asia' };
+            }
+
+            // Asia - More detailed
+            if (-10 < lat && lat < 72 && 52 < lon && lon < 150) {
+                if (lat > 50) return { name: 'Russia/Siberia', country: 'Russia', state: 'Siberia' };
+                if (lat > 30 && lon > 75 && lon < 100) return { name: 'Central Asia', country: 'Central Asia', state: 'Region' };
+                if (lat > 30 && lon > 70) return { name: 'South Asia', country: 'India', state: 'South Asia' };
+                if (lat > 20 && lon > 100) return { name: 'Southeast Asia', country: 'Southeast Asia', state: 'Region' };
+                if (lat > 30 && lon > 100) return { name: 'East Asia', country: 'China', state: 'East Asia' };
+                if (lat > 25 && lon > 120) return { name: 'Japan/Korea', country: 'Japan', state: 'East Asia' };
+                return { name: 'Asia', country: 'Asia', state: 'Region' };
+            }
+
+            // Australia/Oceania
+            if (-50 < lat && lat < -10 && 110 < lon && lon < 180) {
+                if (lat < -35 && lon > 140) return { name: 'New Zealand', country: 'New Zealand', state: 'Oceania' };
+                return { name: 'Australia', country: 'Australia', state: 'Oceania' };
+            }
+
+            // Pacific Ring of Fire
+            if ((10 < lat && lat < 65 && (125 < lon && lon < 180)) || (-60 < lat && lat < -10 && 125 < lon && lon < 180)) {
+                return { name: 'Pacific Ring', country: 'Global', state: 'Ring of Fire' };
+            }
+
+            // Atlantic Basin
+            if (-60 < lat && lat < 60 && -100 < lon && lon < -15) {
+                return { name: 'Atlantic Basin', country: 'Atlantic', state: 'Open Water' };
+            }
+
+            // Indian Ocean
+            if (-60 < lat && lat < 30 && 20 < lon && lon < 120) {
+                return { name: 'Indian Ocean', country: 'Indian', state: 'Open Water' };
+            }
+
+            // Default global fallback
+            return { name: 'Global', country: 'Global', state: 'Unspecified' };
+        }
+
+        function getEventTypeAbbrev(eventType) {
+            const abbrevMap = {
+                'volcanic': 'vol', 'seismic': 'seis', 'severe_weather': 'wthr',
+                'tornadic': 'torn', 'winter_weather': 'wint', 'tropical_cyclone': 'trop',
+                'flood': 'fld', 'wildfire': 'fire', 'drought': 'drgt',
+                'geomagnetic': 'gmag', 'rf_disruption': 'rf'
+            };
+            return abbrevMap[eventType] || 'evt';
+        }
+
+        function getRegionAbbrev(lat, lon) {
+            if (lat === null || lon === null) return 'unk';
+            // Pacific (includes Hawaii at -155, -75)
+            if ((10 < lat && lat < 65 && (125 < lon || -180 < lon && lon < -75)) || (-60 < lat && lat < -10 && 125 < lon && lon < 180)) return 'pac';
+            // Atlantic
+            if (-80 < lat && lat < 80 && -100 < lon && lon < -20) return 'atl';
+            // Indian Ocean
+            if (-60 < lat && lat < 40 && 20 < lon && lon < 120) return 'ind';
+            // Europe/Mediterranean
+            if (30 < lat && lat < 70 && -10 < lon && lon < 50) return 'eur';
+            // Asia
+            if (-10 < lat && lat < 60 && 50 < lon && lon < 150) return 'asia';
+            // Africa
+            if (-35 < lat && lat < 40 && -20 < lon && lon < 55) return 'afr';
+            // Americas
+            if (-60 < lat && lat < 80 && -180 < lon && lon < -30) return lat > 15 ? 'nam' : 'sam';
+            // Australia
+            if (-50 < lat && lat < -10 && 110 < lon && lon < 160) return 'aus';
+            return 'gbl';
+        }
+
+        // Event sequence counter
+        const eventCounter = {};
+
+        function generateFormattedEventId(eventType, lat, lon, timestamp) {
+            const typeAbbrev = getEventTypeAbbrev(eventType);
+            const regionAbbrev = getRegionAbbrev(lat, lon);
+            try {
+                const year = new Date(timestamp).getFullYear() % 100;
+                const key = `${typeAbbrev}_${regionAbbrev}_${year}`;
+
+                if (!eventCounter[key]) {
+                    eventCounter[key] = 1;
+                } else {
+                    eventCounter[key]++;
+                }
+
+                const num = String(eventCounter[key]).padStart(3, '0');
+                return `${key}_${num}`;
+            } catch (e) {
+                return `${typeAbbrev}_${regionAbbrev}_??_???`;
+            }
+        }
+
+        let logEntries = [];
+
+        function addLog(message, type = 'info') {
+            const logContainer = document.getElementById('logContainer');
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+
+            // For events, show without timestamp (cleaner format)
+            const eventMatch = message.match(/🔴|🟠|🟡|⚪/);
+            if (eventMatch) {
+                // Event entry - no timestamp, just the message
+                entry.innerHTML = message;
+            } else {
+                // System message - with timestamp
+                const timestamp = new Date().toLocaleTimeString();
+                entry.innerHTML = `<span class="log-timestamp">${timestamp}</span> ${message}`;
+            }
+
+            // Add to top of log
+            logContainer.insertBefore(entry, logContainer.firstChild);
+            logEntries.unshift({ message, type });
+
+            // Keep only recent entries (cleared each refresh anyway)
+            if (logEntries.length > 100) logEntries.pop();
+        }
+
+        function getPhase(seam_phi) {
+            if (seam_phi >= 0.95) return 'event';
+            if (seam_phi >= 0.85) return 'watch';
+            if (seam_phi >= 0.75) return 'warning';
+            return 'track';
+        }
+
+        function formatLocation(loc, signal_summary) {
+            if (!loc) return 'Unknown Location';
+
+            // Build location hierarchy from available fields (prefer more specific to less specific)
+            const parts = [];
+            if (loc.city) parts.push(loc.city);
+            if (loc.county_district && !loc.city) parts.push(loc.county_district);
+            if (loc.state_province) parts.push(loc.state_province);
+            if (loc.country) parts.push(loc.country);
+
+            // If we have location hierarchy, return it
+            if (parts.length > 0) return parts.join(', ');
+
+            // Fallback to signal_summary source if available
+            if (signal_summary && typeof signal_summary === 'string') {
+                try {
+                    const summary = JSON.parse(signal_summary);
+                    if (summary.source) return summary.source;
+                    if (summary.spatial_region) return summary.spatial_region;
+                    if (summary.location) return summary.location;
+                } catch (e) {}
+            }
+
+            // If we get here, we MUST have coordinates - no "pending" or placeholder
+            // Return empty string - the region lookup should have caught this
+            return '';
+        }
+
+        function createEventCard(eventData, phase) {
+            const lastConf = eventData.confidence_history[eventData.confidence_history.length - 1];
+            const conf = lastConf ? (lastConf.seam_phi * 100).toFixed(0) : 'N/A';
+            const mag = lastConf && lastConf.magnitude ? lastConf.magnitude : null;
+            const formattedId = generateFormattedEventId(eventData.signature_class, eventData.location.best_effort_lat, eventData.location.best_effort_lon, eventData.first_detected_utc);
+
+            // Build location with hierarchy - ALWAYS must result in a location
+            let locationDisplay = '';
+            const lat = eventData.location.best_effort_lat;
+            const lon = eventData.location.best_effort_lon;
+
+            // Try type-specific lookup first
+            let locationInfo = null;
+            if (lat && lon) {
+                if (eventData.signature_class === 'volcanic') {
+                    locationInfo = getVolcanoInfo(lat, lon);
+                } else if (eventData.signature_class === 'seismic') {
+                    locationInfo = getSeismicZoneInfo(lat, lon);
+                } else {
+                    // Try generic location lookup
+                    locationInfo = getLocationInfo(lat, lon, eventData.signature_class);
+                }
+            }
+
+            // If no specific location found, use region fallback (which ALWAYS returns something)
+            if (!locationInfo && lat && lon) {
+                locationInfo = getRegionFromCoordinates(lat, lon);
+            }
+
+            // Build the display string
+            if (locationInfo) {
+                locationDisplay = `${locationInfo.name}, ${locationInfo.state}`;
+                eventData.location.city = locationInfo.name;
+                eventData.location.state_province = locationInfo.state;
+                eventData.location.country = locationInfo.country;
+            } else if (lat && lon) {
+                // Last resort - use formatted location
+                locationDisplay = formatLocation(eventData.location, eventData.signal_summary);
+                // If still empty, use coordinates with a generic label
+                if (!locationDisplay) {
+                    locationDisplay = `Lat ${lat.toFixed(2)}, Lon ${lon.toFixed(2)}`;
+                }
+            } else {
+                // No coordinates at all - use formatted location
+                locationDisplay = formatLocation(eventData.location, eventData.signal_summary);
+                // Fallback to something better than empty
+                if (!locationDisplay) {
+                    locationDisplay = 'Location Unknown (No Coordinates)';
+                }
+            }
+
+            // Create descriptive event type with magnitude/depth info
+            let eventType = eventData.signature_class.toUpperCase();
+            if (mag) {
+                eventType += ` (M${mag})`;
+            }
+
+            const card = document.createElement('div');
+            card.className = `event-card ${phase}`;
+
+            // Coordinates with lock status
+            let coordLabel = 'Coordinates';
+            let coordStatus = '';
+            if (eventData.location.best_effort_lat) {
+                // If we have coordinates, determine if they're locked (confirmed) or projected
+                coordStatus = eventData.location.best_effort_lat ? '🔒 Locked' : '📍 Projected';
+                if (eventData.projections && eventData.projections.projected_location) {
+                    coordStatus = '📍 Projected';
+                }
+            }
+
+            const coordDisplay = eventData.location.best_effort_lat ?
+                `<div class="card-info-row"><span class="card-label">${coordStatus}</span><span class="card-value">${eventData.location.best_effort_lat.toFixed(2)}, ${eventData.location.best_effort_lon.toFixed(2)}</span></div>` : '';
+
+            // Official alert status and issued time
+            const officialAlert = eventData.official_alert && eventData.official_alert.status ? eventData.official_alert.status : 'None';
+            const alertIssuedTime = eventData.official_alert && eventData.official_alert.issued_utc ? new Date(eventData.official_alert.issued_utc).toLocaleTimeString() : 'N/A';
+
+            // SEAM detect time = when confidence first crossed >75% (WARNING threshold)
+            let detectedTime = 'N/A';
+            let detectedDate = '';
+            if (eventData.confidence_history && eventData.confidence_history.length > 0) {
+                // Find first time confidence hit >= 75%
+                const warningEntry = eventData.confidence_history.find(h => h.seam_phi >= 0.75);
+                if (warningEntry && warningEntry.timestamp_utc) {
+                    const detectedDt = new Date(warningEntry.timestamp_utc);
+                    detectedTime = detectedDt.toLocaleTimeString();
+                    detectedDate = detectedDt.toLocaleDateString();
+                }
+            }
+
+            // Event time = ETA of actual event occurrence (eruption, quake, touchdown, etc)
+            let eventTime = 'N/A';
+            let eventDate = '';
+            if (eventData.projected_event_time) {
+                // Use projected event time if available
+                const eventDt = new Date(eventData.projected_event_time);
+                eventTime = eventDt.toLocaleTimeString();
+                eventDate = eventDt.toLocaleDateString();
+            }
+
+            // Time delta between SEAM detection and official alert
+            let timeDeltaDisplay = '';
+            if (eventData.identification_to_alert_minutes !== undefined && eventData.identification_to_alert_minutes !== null) {
+                timeDeltaDisplay = `<div class="card-info-row"><span class="card-label">Δ Alert</span><span class="card-value">${eventData.identification_to_alert_minutes}m</span></div>`;
+            }
+
+            const magDisplay = mag ? `<div class="card-info-row"><span class="card-label">Magnitude</span><span class="card-value">${mag}</span></div>` : '';
+
+            // Calculate hysteresis (confidence trend)
+            // Terminal events (97%+) should NOT hold steady - they're inevitable and progressing to lock
+            const confidenceHistory = eventData.confidence_history || [];
+            let hysteresisHtml = '';
+            let trendStatus = 'stable';
+            let trendIcon = '➡️';
+            let trendLabel = 'Steady';
+
+            // Check if this is a terminal event (97%+ = inevitable)
+            const isTerminal = conf >= 97;
+
+            if (confidenceHistory.length > 1) {
+                const recentValues = confidenceHistory.slice(-5).map(h => h.seam_phi);
+                const avgOld = recentValues.slice(0, Math.ceil(recentValues.length / 2)).reduce((a, b) => a + b, 0) / Math.ceil(recentValues.length / 2);
+                const avgNew = recentValues.slice(Math.ceil(recentValues.length / 2)).reduce((a, b) => a + b, 0) / Math.ceil(recentValues.length / 2);
+
+                const diff = avgNew - avgOld;
+                const threshold = 0.08;
+
+                if (isTerminal) {
+                    // Terminal event (97%+): should show as locked/inevitable, not steady
+                    if (diff > 0.01) {
+                        // Still rising toward 100% lock
+                        trendStatus = 'rising';
+                        trendIcon = '🔒';
+                        trendLabel = 'LOCKED';
+                    } else if (diff < -0.01) {
+                        // Confidence dropping from terminal state = anomaly
+                        trendStatus = 'falling';
+                        trendIcon = '⚠️';
+                        trendLabel = 'Declining (anomaly)';
+                    } else {
+                        // Holding at terminal = event is locked in, awaiting occurrence
+                        trendStatus = 'locked';
+                        trendIcon = '🔒';
+                        trendLabel = 'LOCKED';
+                    }
+                } else if (diff > threshold) {
+                    trendStatus = 'rising_fast';
+                    trendIcon = '📈';
+                    trendLabel = 'Increasing Fast';
+                } else if (diff > 0.02) {
+                    trendStatus = 'rising';
+                    trendIcon = '↗️';
+                    trendLabel = 'Increasing Slow';
+                } else if (diff < -threshold) {
+                    trendStatus = 'falling_fast';
+                    trendIcon = '📉';
+                    trendLabel = 'Decreasing Fast';
+                } else if (diff < -0.02) {
+                    trendStatus = 'falling';
+                    trendIcon = '↘️';
+                    trendLabel = 'Decreasing Slow';
+                } else {
+                    // Non-terminal event holding steady
+                    trendStatus = 'stable';
+                    trendIcon = '➡️';
+                    trendLabel = 'Steady';
+                }
+
+                // Create sparkline bars
+                const maxConf = Math.max(...recentValues, 1);
+                hysteresisHtml = `<div class="card-hysteresis">
+                    ${recentValues.map(v => {
+                        const height = (v / maxConf * 100);
+                        const barClass = trendStatus.includes('rising') ? 'rising' : trendStatus.includes('falling') ? 'falling' : 'locked';
+                        return `<div class="hysteresis-bar ${barClass}" style="height: ${height}%"></div>`;
+                    }).join('')}
+                </div>`;
+            }
+
+            // Map event type to responsible government agency
+            const agencyMap = {
+                'volcanic': 'USGS', 'seismic': 'USGS',
+                'severe_weather': 'NWS', 'tornadic': 'NWS', 'winter_weather': 'NWS', 'tropical_cyclone': 'NWS', 'flood': 'NWS',
+                'wildfire': 'NOAA', 'drought': 'NOAA', 'geomagnetic': 'NOAA', 'rf_disruption': 'NOAA'
+            };
+            const responsibleAgency = agencyMap[eventData.signature_class] || 'UNKNOWN';
+
+            // Status: show "No Alert" if no official alert exists
+            // When an alert exists, show the agency name
+            let alertStatus = officialAlert;
+            let alertStatusDisplay = officialAlert;
+            if (officialAlert === 'None') {
+                alertStatus = 'No Alert';
+                alertStatusDisplay = 'No Alert';
+            } else {
+                // Alert exists - show the responsible agency that issued it
+                // Agency may be USGS, NWS, NOAA, or international/other
+                alertStatusDisplay = `${responsibleAgency} Alert`;
+            }
+
+            // Calculate time to event
+            let timeToEvent = 'N/A';
+            if (eventTime !== 'N/A' && detectedTime !== 'N/A') {
+                try {
+                    const eventDate = new Date(eventData.projected_event_time);
+                    const now = new Date();
+                    const diffMs = eventDate - now;
+                    const diffMins = Math.max(0, Math.round(diffMs / 60000));
+                    timeToEvent = diffMins > 0 ? `${diffMins} min` : 'Occurring';
+                } catch (e) {}
+            }
+
+            // Calculate official duration
+            let officialDuration = 'N/A';
+            if (alertIssuedTime !== 'N/A') {
+                try {
+                    const alertDate = new Date(eventData.official_alert.issued_utc);
+                    const now = new Date();
+                    const diffMs = now - alertDate;
+                    const diffMins = Math.round(diffMs / 60000);
+                    officialDuration = `${diffMins} min ago`;
+                } catch (e) {}
+            }
+
+            card.innerHTML = `
+                <div style="grid-column: 1; padding-right: 8px;">
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 4px;">
+                        <div>
+                            <div class="card-phase">${
+                                conf >= 97 ? '🔴 LOCKED' :
+                                phase === 'event' ? '🔴 EVENT' :
+                                phase === 'watch' ? '🟠 WATCH' :
+                                phase === 'warning' ? '🟡 WARNING' :
+                                '⚪ TRACK'
+                            }</div>
+                            <div style="font-size: 10px; color: #0f0; font-weight: bold; margin-bottom: 2px;">${formattedId}</div>
+                            <div class="card-type">${eventType}</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 4px; text-align: right;">
+                            <div style="font-size: 9px; color: #aaa; flex-shrink: 0;">${trendLabel}</div>
+                            <div style="font-size: 20px; line-height: 1; flex-shrink: 0;">${trendIcon}</div>
+                            <div class="card-confidence ${phase}" style="margin: 0;">${conf}%</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 6px;">
+                        <div class="card-location" style="flex: 1; margin-bottom: 0;">${locationDisplay}</div>
+                        <div style="font-size: 13px; color: #888; flex-shrink: 0; white-space: nowrap;">
+                            ${eventData.location.best_effort_lat && eventData.location.best_effort_lon ?
+                                `[${eventData.location.best_effort_lat.toFixed(2)}, ${eventData.location.best_effort_lon.toFixed(2)}]` :
+                                ''
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                ${hysteresisHtml}
+
+                <div style="grid-column: 1;">
+                    <div class="card-info">
+                        <div class="card-info-column">
+                            <div class="column-title">🔍 SEAM Prediction</div>
+                            <div class="card-info-row">
+                                <span class="card-label">Detected</span>
+                                <span class="card-value">${detectedTime}</span>
+                            </div>
+                            <div class="card-info-row">
+                                <span class="card-label">Event Time</span>
+                                <span class="card-value">${eventTime}</span>
+                            </div>
+                            <div class="card-info-row">
+                                <span class="card-label">Until Event</span>
+                                <span class="card-value">${timeToEvent}</span>
+                            </div>
+                        </div>
+                        <div class="card-info-column">
+                            <div class="column-title official">📡 Official State</div>
+                            <div class="card-info-row">
+                                <span class="card-label">Status</span>
+                                <span class="card-value">${alertStatusDisplay}</span>
+                            </div>
+                            <div class="card-info-row">
+                                <span class="card-label">Issued</span>
+                                <span class="card-value">${alertIssuedTime}</span>
+                            </div>
+                            <div class="card-info-row">
+                                <span class="card-label">Duration</span>
+                                <span class="card-value">${officialDuration}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            return card;
+        }
+
+        async function loadAndRender() {
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            const container = document.getElementById('eventsContainer');
+
+            loading.style.display = 'block';
+            error.style.display = 'none';
+
+            try {
+                let allEvents = [];
+
+                // Prefer the same-origin feed produced and deployed by the pipeline.
+                try {
+                    const liveResponse = await fetch(`${LIVE_FEED_FILE}?t=${Date.now()}`, { cache: 'no-store' });
+                    if (!liveResponse.ok) throw new Error(`HTTP ${liveResponse.status}`);
+                    const live = await liveResponse.json();
+                    if (live.schema !== 'SEAM_LIVE_FEED_V1') throw new Error('Unsupported live-feed schema');
+                    allEvents = Object.values(live.events || {});
+                    addLog(`📡 Live feed: ${allEvents.length} events (${live.generated_utc})`, 'info');
+                } catch (e) {
+                    console.warn('Published live feed unavailable; falling back to repository data', e);
+                }
+
+                // Try tracker first - with cache busting to ensure fresh data
+                try {
+                    if (allEvents.length > 0) throw new Error('live feed already loaded');
+                    const trackerUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${TRACKER_FILE}?t=${Date.now()}`;
+                    const trackerResponse = await fetch(trackerUrl, { cache: 'no-store' });
+                    if (trackerResponse.ok) {
+                        const tracker = await trackerResponse.json();
+                        const trackerEvents = Object.values(tracker.events || {});
+                        if (trackerEvents.length > 0) {
+                            allEvents = trackerEvents;
+                            addLog(`📊 Loaded ${allEvents.length} events from tracker (30-day history)`, 'info');
+                        }
+                    }
+                } catch (e) {
+                    console.log('Tracker not available, trying manifold...');
+                }
+
+                // If tracker empty, use manifold - with cache busting to ensure fresh data
+                if (allEvents.length === 0) {
+                    const manifoldUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${MANIFOLD_FILE}?t=${Date.now()}`;
+                    const manifoldResponse = await fetch(manifoldUrl, { cache: 'no-store' });
+                    if (!manifoldResponse.ok) throw new Error(`HTTP ${manifoldResponse.status}`);
+
+                    const manifold = await manifoldResponse.json();
+                    const manifoldEvents = manifold.manifold_events || manifold.matches || [];
+
+                    // Convert manifold events to tracker format - ONLY if they have location
+                    allEvents = manifoldEvents
+                        .filter(e => e.latitude !== null && e.latitude !== undefined && e.longitude !== null && e.longitude !== undefined)
+                        .map(e => ({
+                        event_id: e.event_id,
+                        signature_class: e.signature_class,
+                        primary_regime: e.primary_regime,
+                        first_detected_utc: e.timestamp_utc,
+                        status: 'active',
+                        location: {
+                            best_effort_lat: e.latitude,
+                            best_effort_lon: e.longitude,
+                            region: e.spatial_region || null,
+                            country: null,
+                            state_province: null,
+                            county_district: null,
+                            city: null
+                        },
+                        signal_summary: e.signal_summary,
+                        source_refs: e.source_refs || [],
+                        projected_event_time: e.projected_event_time,
+                        confidence_history: [{
+                            timestamp_utc: e.timestamp_utc,
+                            seam_phi: e.seam_phi,
+                            phase: getPhase(e.seam_phi),
+                            magnitude: e.magnitude
+                        }]
+                    }));
+
+                    addLog(`📊 Loaded ${allEvents.length} events from LIVE MANIFOLD (127 signatures)`, 'warning');
+                }
+
+                if (allEvents.length === 0) {
+                    container.innerHTML = '<div class="empty-state">No events yet. Waiting for data...</div>';
+                    loading.style.display = 'none';
+                    return;
+                }
+
+                // Get WARNING+ phases (>75% confidence) AND must have valid location
+                const criticalEvents = allEvents.filter(evt => {
+                    // Must have valid coordinates
+                    if (!evt.location || evt.location.best_effort_lat == null || evt.location.best_effort_lon == null) {
+                        return false;
+                    }
+                    // Must have confidence > 75%
+                    if (evt.confidence_history && evt.confidence_history.length > 0) {
+                        const lastConf = evt.confidence_history[evt.confidence_history.length - 1].seam_phi;
+                        return lastConf >= 0.75;
+                    }
+                    return false;
+                }).sort((a, b) => {
+                    const aConf = a.confidence_history[a.confidence_history.length - 1].seam_phi;
+                    const bConf = b.confidence_history[b.confidence_history.length - 1].seam_phi;
+                    return bConf - aConf;
+                });
+
+                addLog(`⚠️ ${criticalEvents.length} elevated events (>75% confidence)`, 'warning');
+
+                if (criticalEvents.length === 0) {
+                    container.innerHTML = '<div class="empty-state">No critical events. System nominal.</div>';
+                    addLog('✅ No critical events detected', 'info');
+                    loading.style.display = 'none';
+                    return;
+                }
+
+                container.innerHTML = '';
+
+                // CLEAR LOG AND REBUILD with only current events
+                const logContainer = document.getElementById('logContainer');
+                logContainer.innerHTML = '';
+                logEntries = [];
+
+                criticalEvents.forEach((evt, idx) => {
+                    const lastConf = evt.confidence_history[evt.confidence_history.length - 1].seam_phi;
+                    const phase = getPhase(lastConf);
+                    const card = createEventCard(evt, phase);
+                    container.appendChild(card);
+
+                    const deltaStr = evt.identification_to_alert_minutes ? ` Δ${evt.identification_to_alert_minutes}m` : '';
+
+                    // Build confidence history string (last 3 readings)
+                    let historyStr = '';
+                    if (evt.confidence_history && evt.confidence_history.length > 1) {
+                        const recentConf = evt.confidence_history.slice(-3).map(h => `${(h.seam_phi*100).toFixed(0)}%`).join('←');
+                        historyStr = ` [${recentConf}]`;
+                    }
+
+                    const phaseEmoji = lastConf >= 0.97 ? '🔴' : lastConf >= 0.95 ? '🔴' : lastConf >= 0.85 ? '🟠' : lastConf >= 0.75 ? '🟡' : '⚪';
+                    const formattedId = evt.formatted_id || `${evt.signature_class.substring(0,3)}_${evt.location.best_effort_lat?.toFixed(0)}_${evt.location.best_effort_lon?.toFixed(0)}`;
+
+                    // Add to log - this will be the only entry for this event
+                    addLog(`${phaseEmoji} ${formattedId} ${(lastConf*100).toFixed(0)}%${historyStr}${deltaStr}`, phase);
+                });
+
+                // Show summary of refresh
+                addLog(`📊 ${criticalEvents.length} events at ${new Date().toLocaleTimeString()}`, 'info');
+
+                loading.style.display = 'none';
+
+            } catch (err) {
+                console.error('loadAndRender error:', err);
+                error.style.display = 'block';
+                error.innerHTML = `<strong>Error loading events:</strong> ${err.message}<br/><small>${err.stack}</small>`;
+                loading.style.display = 'none';
+                addLog(`❌ ${err.message}`, 'error');
+            }
+        }
+
+        // Update clock and countdown
+        const REFRESH_INTERVAL = 60000; // Poll the published snapshot; backend refreshes independently.
+        let nextRefreshTime = Date.now() + REFRESH_INTERVAL;
+
+        function updateTimeDisplay() {
+            const now = new Date();
+
+            // Local time
+            document.getElementById('localTime').textContent = now.toLocaleTimeString();
+
+            // GMT time
+            document.getElementById('gmtTime').textContent = now.toUTCString().split(' ')[4];
+
+            // Refresh countdown
+            const msUntilRefresh = nextRefreshTime - Date.now();
+            const secsUntilRefresh = Math.max(0, Math.ceil(msUntilRefresh / 1000));
+            document.getElementById('refreshCountdown').textContent = secsUntilRefresh + 's';
+        }
+
+        updateTimeDisplay();
+        setInterval(updateTimeDisplay, 1000);
+
+        addLog('🚀 Continuum Event Projection System started', 'info');
+        console.log('Initial loadAndRender() starting...');
+        loadAndRender();
+
+        const refreshInterval = setInterval(() => {
+            console.log(`[${new Date().toLocaleTimeString()}] Refresh cycle triggered`);
+            nextRefreshTime = Date.now() + REFRESH_INTERVAL;
+            loadAndRender();
+        }, REFRESH_INTERVAL);
+
+        console.log(`Refresh interval set: every ${REFRESH_INTERVAL}ms`);
+    </script>
+</body>
+</html>

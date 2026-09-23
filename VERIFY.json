@@ -1,0 +1,24 @@
+{
+  "official_collectors": [
+    "usgs",
+    "usgs_day",
+    "noaa_alerts",
+    "nhc_advisories",
+    "gdacs_alerts",
+    "fema_disasters",
+    "copernicus_ems",
+    "volcano_smithsonian",
+    "spc_outlook",
+    "tsunami_gov"
+  ],
+  "official_count": 10,
+  "scheduler_compiles": true,
+  "supports_acquisition_class": true,
+  "supports_bucket_fallback": true,
+  "config_search_order": [
+    "config\\collector_sources.json",
+    "config\\step1_raw_data_retrieval\\collector_sources.json",
+    "config\\step1_raw_data_retrieval\\collector_sources_additive_patch.json",
+    "config\\step1_raw_data_retrieval\\official_manifest_patch.json"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "version": "v58",
+  "description": "SEAM pipeline config with Step2 intake/output and Step3 volcanic signature",
+  "intake_sets": {
+    "raw": "../raw",
+    "curated": "../curated",
+    "streams": "../streams",
+    "official": "../official"
+  },
+  "outputs": {
+    "continuum_master": "output/continuum_master_72h.json",
+    "volcanic_analysis": "output/volcanic_manifold_analysis.json"
+  },
+  "signature": {
+    "type": "volcanic",
+    "terms": [
+      "volcano",
+      "volcanic",
+      "eruption",
+      "lava",
+      "magma",
+      "ash",
+      "ash plume",
+      "kilauea",
+      "mauna loa",
+      "hawaii",
+      "yellowstone",
+      "kamchatka",
+      "iceland",
+      "mayon",
+      "semeru",
+      "dukono",
+      "marapi",
+      "merapi"
+    ]
+  }
+}
