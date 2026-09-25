@@ -8,6 +8,8 @@ on:
 jobs:
   collect:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout public repo
         uses: actions/checkout@v4
@@ -19,9 +21,14 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Clone private engine
+      - name: Clone private engine via SSH
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git clone --depth 1 https://${{ secrets.GITHUB_TOKEN }}@github.com/jlanjou-SEAM/seam-private-engines.git /tmp/engines
+          git clone --depth 1 \
+            https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/jlanjou-SEAM/seam-private-engines.git \
+            /tmp/engines || \
+          git clone --depth 1 https://github.com/jlanjou-SEAM/seam-private-engines.git /tmp/engines
 
       - name: Run realtime collectors
         env:
