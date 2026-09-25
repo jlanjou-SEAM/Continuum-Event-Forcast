@@ -1,139 +1,98 @@
-# Continuum Database
+# Continuum Event Forecast
 
-A comprehensive real-time and historical multi-source data aggregation system that continuously collects, processes, and curates environmental, geophysical, astronomical, and atmospheric data from 118+ global sources.
+A distributed event data aggregation and anomaly detection system collecting from 118+ global sources.
 
-## Overview
+## ⚠️ Architecture Change
 
-Continuum ingests data across multiple acquisition buckets with independent refresh cycles, processes the raw data through an anomaly detection pipeline, and outputs curated datasets with native SEAM (Substrate Event Analysis Module) reconciliation.
+**The collector pipeline has been moved to a private repository** ([seam-private-engines](https://github.com/jlanjou-SEAM/seam-private-engines)) for proprietary IP protection.
 
-### Data Sources (118+)
+This public repository now contains:
+- Documentation and architectural guides
+- Configuration schemas
+- Output data and results
+- Processing pipeline specifications
 
-- **Seismic Events**: USGS, EMSC, GeoNet NZ, GEOFON, IRIS, Raspberry Shake
-- **Weather & Atmospheric**: Open-Meteo, NOAA MADIS, CWOP, USCRN, WeatherUnderground, ambient weather networks
-- **Space Weather**: NASA EPIC, GOES X-ray/Magnetometer, SOHO, LASCO
-- **Astronomical**: Sloan Digital Sky Survey, SETI@home, various observatories (VLA, Arecibo, LOFAR, MeerKAT, etc.)
-- **Aviation**: ADS-B Exchange real-time flight tracking
-- **Power & Energy**: CAISO, ERCOT, AEMO, EIA grid monitoring
-- **Radio & RF**: KiwiSDR, WebSDR, ham radio networks, DX Maps
-- **Environmental**: Air quality, wildfire risk, marine anomalies, drought/heat indices
-- **Emergency Alerts**: FEMA disasters, Copernicus EMS, GDACS, NOAA alerts, NHC hurricane advisories
-- **RF Propagation**: Ionospheric skip observations, HF band conditions
-- **Marine**: Hycom models, marine anomaly detection
+## Data & Components
 
-## Architecture
+### Public (this repo)
+- Configuration examples and pipeline specifications
+- Historical output data and results
+- Documentation (CLAUDE.md, GITHUB_ACTIONS_SETUP.md, etc.)
 
-### Pipeline Stages
+### Private (seam-private-engines/event-forcast/)
+- **collectors/** — 118 data source acquisition modules
+- **config/step1_raw_data_retrieval/** — Acquisition configuration
+- **continuum/processes/** — Processing pipeline (Steps 2-5)
+- **seam_orchestrator.py** — Orchestration logic
+- **.github/workflows/** — GitHub Actions automation
+
+## Data Sources (118+)
+
+- **Seismic**: USGS, EMSC, GeoNet, GEOFON, IRIS
+- **Weather**: NOAA, Open-Meteo, WeatherUnderground, CWOP
+- **Space**: NASA EPIC, GOES, SOHO
+- **Astronomical**: SDSS, observatories (VLA, Arecibo, LOFAR, MeerKAT)
+- **Aviation**: ADS-B Exchange
+- **Power**: CAISO, ERCOT, AEMO, EIA
+- **Radio/RF**: KiwiSDR, WebSDR, ham networks
+- **Environmental**: Air quality, wildfire, marine, drought indices
+- **Alerts**: FEMA, Copernicus, GDACS, NHC
+- **Marine**: Hycom, anomaly detection
+
+## Pipeline Architecture
 
 ```
 Step 1: Raw Data Retrieval (4-bucket scheduler)
-    ├── Realtime bucket (22 sources, 30s cycle)
-    ├── Nonrealtime bucket (69 sources, 300s cycle)
-    ├── Official bucket (6 sources, 30s cycle)
-    └── Image streams (8 sources, 60s cycle)
-    
-Step 2-3: Preliminary processing & anomaly emergence
-Step 4: Runtime substrate wrapper (native SEAM format)
-Step 5: Native reconciliation & manifold emergence
-```
-
-### Data Buckets
-
-- **`realtime/`**: Live streaming data from rapid-update sources
-- **`streams/`**: Continuous streaming feeds (radio, image, network data)
-- **`curated/`**: Processed, analyzed, and clustered anomaly datasets
-- **`official/`**: Authoritative alerts and advisories from government agencies
-- **`state/`**: SHA256 checksums for data integrity verification
-
-## Project Structure
-
-```
-continuum-database/
-├── collectors/              # Data collection modules
-├── config/                  # Configuration and acquisition scripts
-│   └── step1_raw_data_retrieval/
-│       ├── collector_sources.json    # 118+ source definitions
-│       ├── official_acquisition.py
-│       ├── realtime_acquisition.py
-│       ├── nonrealtime_acquisition.py
-│       └── image_stream_acquisition.py
-├── continuum/               # Processing pipeline
-│   └── processes/
-│       └── step5_recursive_official_analysis/
-├── curated/                 # Output: processed datasets
-├── official/                # Output: official alerts
-├── realtime/                # Output: live streaming data
-├── streams/                 # Output: continuous feeds
-├── state/                   # Data integrity checksums
-└── CLAUDE.md                # Development guidelines
+  ├─ Realtime (22 sources, 30s)
+  ├─ Nonrealtime (69 sources, 300s)
+  ├─ Official (6 sources, 30s)
+  └─ Image streams (8 sources, 60s)
+  
+Step 2-3: Processing & anomaly detection
+Step 4: Runtime substrate wrapping
+Step 5: Native reconciliation
 ```
 
 ## Running the System
 
-### Realtime Acquisition (30-second cycle)
-```bash
-cd config/step1_raw_data_retrieval
-python realtime_acquisition.py
-```
+To run the full pipeline:
 
-### Full 72-hour Window Acquisition
-```bash
-python realtime_acquisition_72hr.py
-python nonrealtime_acquisition_72hr.py
-python official_acquisition_72hr.py
-python image_stream_acquisition_72hr.py
-```
+1. **Clone the private engine repository**:
+   ```bash
+   git clone https://github.com/jlanjou-SEAM/seam-private-engines.git
+   cd seam-private-engines/event-forcast
+   ```
 
-### Full 7-day (168-hour) Window
-```bash
-python realtime_acquisition_168hr.py
-python nonrealtime_acquisition_168hr.py
-python official_acquisition_168hr.py
-python image_stream_acquisition_168hr.py
-```
+2. **Follow setup in that repo's README.md**
 
-## Configuration
+3. **Results are committed back to this public repository** via GitHub Actions
 
-All data sources are defined in `config/step1_raw_data_retrieval/collector_sources.json`:
+## Output Files
 
-```json
-{
-  "source_name": {
-    "bucket": "realtime|nonrealtime|official|streams",
-    "timeout_seconds": 2,
-    "urls": ["https://api.example.com/endpoint"],
-    "acquisition_class": "realtime|nonrealtime|image_stream|official"
-  }
-}
-```
+- `realtime/*.json` — Live data (22 sources)
+- `nonrealtime/*.json` — Secondary data (69 sources)  
+- `official/*.json` — Alerts (6 sources)
+- `streams/*.json` — Continuous feeds (8 sources)
+- `curated/*.json` — Processed anomalies
+- `state/*.sha256` — Integrity checksums
 
-## Data Formats
+## Documentation
 
-- **Primary format**: GeoJSON for geospatial data
-- **Metadata**: JSON with timestamps, source attribution, validation flags
-- **Packaging**: 72hr/168hr rolling windows compressed to `continuum_master_72h.zip`
+- **[CLAUDE.md](CLAUDE.md)** — Development guide & architecture
+- **[GITHUB_ACTIONS_SETUP.md](GITHUB_ACTIONS_SETUP.md)** — Workflow configuration
+- **[GITHUB_ACTIONS_ROADMAP.md](GITHUB_ACTIONS_ROADMAP.md)** — Enhancement plans
 
-## Key Features
+## Security
 
-- **Native SEAM Reconciliation**: Preserves recursive manifold emergence without hard-coded clustering
-- **Multi-window analysis**: 72-hour and 7-day historical windows
-- **Integrity verification**: SHA256 checksums for all state data
-- **Scalable architecture**: 118+ sources with independent refresh cycles
-- **Real-time capability**: 30-second refresh cycles for critical data streams
-
-## Recent Updates
-
-- **v35 Step5 Patch**: Updated native SEAM reconciliation to consume Step4 runtime substrate format
-- **Root-bucket routing**: Fixed collector output routing to root-level folders (realtime, streams, curated, official)
-- **Manifest merging**: Official acquisition now merges multiple manifests instead of stopping at first
-
-## Development
-
-For development guidelines and architecture notes, see `CLAUDE.md`.
+- **Proprietary collectors**: Not public; kept in private repo
+- **Configuration/credentials**: Private repo only (API endpoints, timeouts, auth)
+- **Output data**: Public (results of collection)
 
 ## License
 
-[License information to be added]
+Proprietary — SEAM Foundation. Collector code and engine are not available in this public repository.
 
-## Contributing
+---
 
-[Contribution guidelines to be added]
+**Last Updated**: 2026-09-25  
+**Backend Repository**: https://github.com/jlanjou-SEAM/seam-private-engines
