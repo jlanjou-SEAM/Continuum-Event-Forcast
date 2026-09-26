@@ -1055,24 +1055,38 @@
                 }
 
                 // Get WARNING+ phases (>75% confidence) AND must have valid location
-                const criticalEvents = allEvents.filter(evt => {
-                    // Must have valid coordinates
+                const AGE_THRESHOLD_MS = 2 * 60 * 60 * 1000; // 2 hours
+                const now = new Date();
+
+                const allCritical = allEvents.filter(evt => {
                     if (!evt.location || evt.location.best_effort_lat == null || evt.location.best_effort_lon == null) {
                         return false;
                     }
-                    // Must have confidence > 75%
                     if (evt.confidence_history && evt.confidence_history.length > 0) {
                         const lastConf = evt.confidence_history[evt.confidence_history.length - 1].seam_phi;
                         return lastConf >= 0.75;
                     }
                     return false;
+                });
+
+                // Split by age: recent (< 2h) for main display, old for log only
+                const criticalEvents = allCritical.filter(evt => {
+                    const firstDetected = new Date(evt.first_detected_utc);
+                    const ageMs = now - firstDetected;
+                    return ageMs < AGE_THRESHOLD_MS;
                 }).sort((a, b) => {
                     const aConf = a.confidence_history[a.confidence_history.length - 1].seam_phi;
                     const bConf = b.confidence_history[b.confidence_history.length - 1].seam_phi;
                     return bConf - aConf;
                 });
 
-                addLog(`⚠️ ${criticalEvents.length} elevated events (>75% confidence)`, 'warning');
+                const oldEvents = allCritical.filter(evt => {
+                    const firstDetected = new Date(evt.first_detected_utc);
+                    const ageMs = now - firstDetected;
+                    return ageMs >= AGE_THRESHOLD_MS;
+                });
+
+                addLog(`⚠️ ${criticalEvents.length} active events | 📋 ${oldEvents.length} archived`, 'warning');
 
                 if (criticalEvents.length === 0) {
                     container.innerHTML = '<div class="empty-state">No critical events. System nominal.</div>';
@@ -1083,11 +1097,12 @@
 
                 container.innerHTML = '';
 
-                // CLEAR LOG AND REBUILD with only current events
+                // CLEAR LOG AND REBUILD
                 const logContainer = document.getElementById('logContainer');
                 logContainer.innerHTML = '';
                 logEntries = [];
 
+                // Render ACTIVE events in main display
                 criticalEvents.forEach((evt, idx) => {
                     const lastConf = evt.confidence_history[evt.confidence_history.length - 1].seam_phi;
                     const phase = getPhase(lastConf);
@@ -1095,8 +1110,6 @@
                     container.appendChild(card);
 
                     const deltaStr = evt.identification_to_alert_minutes ? ` Δ${evt.identification_to_alert_minutes}m` : '';
-
-                    // Build confidence history string (last 3 readings)
                     let historyStr = '';
                     if (evt.confidence_history && evt.confidence_history.length > 1) {
                         const recentConf = evt.confidence_history.slice(-3).map(h => `${(h.seam_phi*100).toFixed(0)}%`).join('←');
@@ -1105,13 +1118,23 @@
 
                     const phaseEmoji = lastConf >= 0.97 ? '🔴' : lastConf >= 0.95 ? '🔴' : lastConf >= 0.85 ? '🟠' : lastConf >= 0.75 ? '🟡' : '⚪';
                     const formattedId = evt.formatted_id || `${evt.signature_class.substring(0,3)}_${evt.location.best_effort_lat?.toFixed(0)}_${evt.location.best_effort_lon?.toFixed(0)}`;
-
-                    // Add to log - this will be the only entry for this event
-                    addLog(`${phaseEmoji} ${formattedId} ${(lastConf*100).toFixed(0)}%${historyStr}${deltaStr}`, phase);
+                    addLog(`${phaseEmoji} ACTIVE ${formattedId} ${(lastConf*100).toFixed(0)}%${historyStr}${deltaStr}`, phase);
                 });
 
+                // Add old events to log panel (right column)
+                if (oldEvents.length > 0) {
+                    addLog(`📋 ARCHIVED (>2h)`, 'info');
+                    oldEvents.forEach(evt => {
+                        const lastConf = evt.confidence_history[evt.confidence_history.length - 1].seam_phi;
+                        const ageMs = now - new Date(evt.first_detected_utc);
+                        const ageHours = Math.floor(ageMs / (60*60*1000));
+                        const formattedId = evt.formatted_id || `${evt.signature_class.substring(0,3)}_${evt.location.best_effort_lat?.toFixed(0)}_${evt.location.best_effort_lon?.toFixed(0)}`;
+                        addLog(`  └─ ${formattedId} ${(lastConf*100).toFixed(0)}% (${ageHours}h)`, 'watch');
+                    });
+                }
+
                 // Show summary of refresh
-                addLog(`📊 ${criticalEvents.length} events at ${new Date().toLocaleTimeString()}`, 'info');
+                addLog(`📊 ${criticalEvents.length} active at ${now.toLocaleTimeString()}`, 'info');
 
                 loading.style.display = 'none';
 
