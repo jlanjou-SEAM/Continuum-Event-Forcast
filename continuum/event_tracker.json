@@ -1,64 +1,606 @@
 {
   "version": "1.0",
   "schema": "SEAM_EVENT_TRACKER_V1",
-  "generated_utc": "2026-09-26T00:14:27.342692+00:00",
+  "generated_utc": "2026-09-26T00:17:28.525375+00:00",
   "retention_days": 30,
   "events": {
-    "KILAUEA-CONTINUOUS": {
-      "event_id": "KILAUEA-CONTINUOUS",
-      "signature_class": "volcanic",
-      "primary_regime": "volcanic",
-      "first_detected_utc": "2026-09-25T23:14:27.342692+00:00",
+    "SEAM-196e40c254276f4952b1992c": {
+      "event_id": "SEAM-196e40c254276f4952b1992c",
+      "signature_class": "drought",
+      "primary_regime": "drought",
+      "first_detected_utc": "2026-05-17T02:43:42.903254+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 37.7412,
+        "best_effort_lon": 15.0031,
+        "region": "37.74_15.0"
+      },
+      "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
+        "gdacs_alerts",
+        "raw"
+      ],
+      "projected_event_time": null,
+      "magnitude": null,
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
+          "seam_phi": 0.61,
+          "phase": "warning",
+          "magnitude": null
+        }
+      ]
+    },
+    "SEAM-9455702693c1ec7917e8e82b": {
+      "event_id": "SEAM-9455702693c1ec7917e8e82b",
+      "signature_class": "flood",
+      "primary_regime": "flood",
+      "first_detected_utc": "2026-05-17T02:43:42.903254+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 37.7412,
+        "best_effort_lon": 15.0031,
+        "region": "37.74_15.0"
+      },
+      "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
+        "gdacs_alerts",
+        "raw"
+      ],
+      "projected_event_time": null,
+      "magnitude": null,
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
+          "seam_phi": 0.61,
+          "phase": "warning",
+          "magnitude": null
+        }
+      ]
+    },
+    "SEAM-7ef745dd63e482b539c88750": {
+      "event_id": "SEAM-7ef745dd63e482b539c88750",
+      "signature_class": "flood",
+      "primary_regime": "flood",
+      "first_detected_utc": "2026-05-17T02:43:42.963289+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 41.16,
+        "best_effort_lon": -94.93,
+        "region": "41.16_-94.93"
+      },
+      "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:53.998402+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/alerts/active\",\n      \"fetched_utc\": \"2026-05-16T00:11:52.871908+00:00\",\n      \"",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\raw\\noaa_alerts.json",
+        "noaa_alerts",
+        "raw"
+      ],
+      "projected_event_time": null,
+      "magnitude": null,
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-05-17T02:43:42.963289+00:00",
+          "seam_phi": 0.85,
+          "phase": "event",
+          "magnitude": null
+        }
+      ]
+    },
+    "SEAM-1604a5a1b12d34cd4a50c8f8": {
+      "event_id": "SEAM-1604a5a1b12d34cd4a50c8f8",
+      "signature_class": "rf_disruption",
+      "primary_regime": "rf_disruption",
+      "first_detected_utc": "2026-05-17T02:43:42.963289+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 41.16,
+        "best_effort_lon": -94.93,
+        "region": "41.16_-94.93"
+      },
+      "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:53.998402+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/alerts/active\",\n      \"fetched_utc\": \"2026-05-16T00:11:52.871908+00:00\",\n      \"",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\raw\\noaa_alerts.json",
+        "noaa_alerts",
+        "raw"
+      ],
+      "projected_event_time": null,
+      "magnitude": null,
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-05-17T02:43:42.963289+00:00",
+          "seam_phi": 0.61,
+          "phase": "warning",
+          "magnitude": null
+        }
+      ]
+    },
+    "SEAM-3329e1fa6751cfa936db1c34": {
+      "event_id": "SEAM-3329e1fa6751cfa936db1c34",
+      "signature_class": "rf_disruption",
+      "primary_regime": "rf_disruption",
+      "first_detected_utc": "2026-05-17T02:43:42.987594+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 19.421,
         "best_effort_lon": -155.2924,
-        "region": "Kilauea",
-        "country": "USA",
-        "state": "Hawaii"
+        "region": "19.42_-155.29"
       },
-      "signal_summary": "Continuous volcanic activity at Kilauea",
+      "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:56.297948+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:55.800",
       "source_refs": [
-        "USGS Volcano Hazards Program"
+        "C:\\Continuum Database\\continuum\\..\\raw\\volcano_smithsonian.json",
+        "raw",
+        "volcano_smithsonian"
       ],
-      "projected_event_time": "2026-09-26T02:14:27.342692+00:00",
-      "official_alert": {
-        "status": "VOLCANIC_ACTIVITY",
-        "issued_utc": "2026-09-25T23:14:27.342692+00:00",
-        "alert_level": "CAUTION"
-      },
+      "projected_event_time": null,
+      "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T20:14:27.342692+00:00",
-          "seam_phi": 0.65,
+          "timestamp_utc": "2026-05-17T02:43:42.987594+00:00",
+          "seam_phi": 0.61,
           "phase": "warning",
-          "magnitude": 3.1
-        },
+          "magnitude": null
+        }
+      ]
+    },
+    "SEAM-40f00b1cf5a7a582d342768e": {
+      "event_id": "SEAM-40f00b1cf5a7a582d342768e",
+      "signature_class": "seismic",
+      "primary_regime": "seismic",
+      "first_detected_utc": "2026-05-17T02:43:42.903254+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 37.7412,
+        "best_effort_lon": 15.0031,
+        "region": "37.74_15.0"
+      },
+      "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
+        "gdacs_alerts",
+        "raw"
+      ],
+      "projected_event_time": null,
+      "magnitude": null,
+      "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T21:14:27.342692+00:00",
-          "seam_phi": 0.78,
+          "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
+          "seam_phi": 0.61,
+          "phase": "warning",
+          "magnitude": null
+        }
+      ]
+    },
+    "SEAM-31611cda2a8f810bca1f185a": {
+      "event_id": "SEAM-31611cda2a8f810bca1f185a",
+      "signature_class": "seismic",
+      "primary_regime": "seismic",
+      "first_detected_utc": "2026-05-17T02:43:42.983080+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 32.8538333333333,
+        "best_effort_lon": -116.145833333333,
+        "region": "32.85_-116.15"
+      },
+      "signal_summary": "{\n  \"source\": \"usgs\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:21.306947+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://earthquake.usgs.gov/ear",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\raw\\usgs.json",
+        "raw",
+        "usgs"
+      ],
+      "projected_event_time": null,
+      "magnitude": null,
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-05-17T02:43:42.983080+00:00",
+          "seam_phi": 0.73,
+          "phase": "warning",
+          "magnitude": null
+        }
+      ]
+    },
+    "SEAM-1246f44140b7c81a4b7acf38": {
+      "event_id": "SEAM-1246f44140b7c81a4b7acf38",
+      "signature_class": "seismic",
+      "primary_regime": "seismic",
+      "first_detected_utc": "2026-05-17T02:43:42.987594+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 19.421,
+        "best_effort_lon": -155.2924,
+        "region": "19.42_-155.29"
+      },
+      "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:56.297948+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:55.800",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\raw\\volcano_smithsonian.json",
+        "raw",
+        "volcano_smithsonian"
+      ],
+      "projected_event_time": null,
+      "magnitude": null,
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-05-17T02:43:42.987594+00:00",
+          "seam_phi": 0.85,
           "phase": "event",
-          "magnitude": 3.5
-        },
+          "magnitude": null
+        }
+      ]
+    },
+    "SEAM-a9991b7f8db805d0a4b8c904": {
+      "event_id": "SEAM-a9991b7f8db805d0a4b8c904",
+      "signature_class": "seismic",
+      "primary_regime": "seismic",
+      "first_detected_utc": "2026-05-17T02:43:43.015696+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 31.5933,
+        "best_effort_lon": 130.6568,
+        "region": "31.59_130.66"
+      },
+      "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"captured_utc\": \"2026-05-16T20:26:02.173805+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"t",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\official\\volcano_smithsonian.json",
+        "official",
+        "volcano_smithsonian"
+      ],
+      "projected_event_time": null,
+      "magnitude": null,
+      "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T22:14:27.342692+00:00",
-          "seam_phi": 0.92,
+          "timestamp_utc": "2026-05-17T02:43:43.015696+00:00",
+          "seam_phi": 0.85,
           "phase": "event",
-          "magnitude": 4.2
-        },
+          "magnitude": null
+        }
+      ]
+    },
+    "SEAM-9faf1d73d018baf10d744c93": {
+      "event_id": "SEAM-9faf1d73d018baf10d744c93",
+      "signature_class": "severe_weather",
+      "primary_regime": "severe_weather",
+      "first_detected_utc": "2026-05-17T02:43:42.903254+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 37.7412,
+        "best_effort_lon": 15.0031,
+        "region": "37.74_15.0"
+      },
+      "signal_summary": "{\n  \"source\": \"gdacs_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:55.691379+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://www.gdacs.org/xml/rss.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:54.484481+00:00\",\n      \"res",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\raw\\gdacs_alerts.json",
+        "gdacs_alerts",
+        "raw"
+      ],
+      "projected_event_time": null,
+      "magnitude": null,
+      "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T23:14:27.342692+00:00",
+          "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
+          "seam_phi": 0.61,
+          "phase": "warning",
+          "magnitude": null
+        }
+      ]
+    },
+    "SEAM-f21ca079216d69311318ec0f": {
+      "event_id": "SEAM-f21ca079216d69311318ec0f",
+      "signature_class": "severe_weather",
+      "primary_regime": "severe_weather",
+      "first_detected_utc": "2026-05-17T02:43:42.963289+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 41.16,
+        "best_effort_lon": -94.93,
+        "region": "41.16_-94.93"
+      },
+      "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:53.998402+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/alerts/active\",\n      \"fetched_utc\": \"2026-05-16T00:11:52.871908+00:00\",\n      \"",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\raw\\noaa_alerts.json",
+        "noaa_alerts",
+        "raw"
+      ],
+      "projected_event_time": null,
+      "magnitude": null,
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-05-17T02:43:42.963289+00:00",
+          "seam_phi": 0.85,
+          "phase": "event",
+          "magnitude": null
+        }
+      ]
+    },
+    "SEAM-afdb3f3200834ec364f70039": {
+      "event_id": "SEAM-afdb3f3200834ec364f70039",
+      "signature_class": "severe_weather",
+      "primary_regime": "severe_weather",
+      "first_detected_utc": "2026-05-17T02:43:42.989113+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 47.45,
+        "best_effort_lon": -122.3,
+        "region": "47.45_-122.3"
+      },
+      "signal_summary": "{\n  \"source\": \"weather_observations_core\",\n  \"bucket\": \"raw\",\n  \"pulled_utc\": \"2026-05-16T01:00:33.625157+00:00\",\n  \"source_count\": 10,\n  \"successes\": 10,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/stations/KSEA/observations/latest\",\n      \"fetched_utc\": \"2026-05-16T",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\raw\\weather_observations_core.json",
+        "raw",
+        "weather_observations_core"
+      ],
+      "projected_event_time": null,
+      "magnitude": null,
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-05-17T02:43:42.989113+00:00",
+          "seam_phi": 0.61,
+          "phase": "warning",
+          "magnitude": null
+        }
+      ]
+    },
+    "SEAM-56fc457dc3263bbb18d65df5": {
+      "event_id": "SEAM-56fc457dc3263bbb18d65df5",
+      "signature_class": "severe_weather",
+      "primary_regime": "severe_weather",
+      "first_detected_utc": "2026-05-17T02:43:43.014611+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 38.43,
+        "best_effort_lon": -89.9,
+        "region": "38.43_-89.9"
+      },
+      "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:32.316217+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://api.weather",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\official\\noaa_alerts.json",
+        "noaa_alerts",
+        "official"
+      ],
+      "projected_event_time": null,
+      "magnitude": null,
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-05-17T02:43:43.014611+00:00",
+          "seam_phi": 0.73,
+          "phase": "warning",
+          "magnitude": null
+        }
+      ]
+    },
+    "SEAM-685624a622200871e246f5b2": {
+      "event_id": "SEAM-685624a622200871e246f5b2",
+      "signature_class": "severe_weather",
+      "primary_regime": "severe_weather",
+      "first_detected_utc": "2026-05-17T02:43:43.014611+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 38.42,
+        "best_effort_lon": -86.45,
+        "region": "38.42_-86.45"
+      },
+      "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"weekly_168hr_update\",\n  \"window_hours\": 168,\n  \"window_start_utc\": \"2026-05-09T20:31:58Z\",\n  \"window_end_utc\": \"2026-05-16T20:31:58Z\",\n  \"captured_utc\": \"2026-05-16T20:31:58.171855+00:00\",\n  ",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\official\\noaa_alerts_weekly168.json",
+        "noaa_alerts_weekly168",
+        "official"
+      ],
+      "projected_event_time": null,
+      "magnitude": null,
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-05-17T02:43:43.014611+00:00",
+          "seam_phi": 0.61,
+          "phase": "warning",
+          "magnitude": null
+        }
+      ]
+    },
+    "SEAM-faf4a9e1c027179e8ac3738d": {
+      "event_id": "SEAM-faf4a9e1c027179e8ac3738d",
+      "signature_class": "tornadic",
+      "primary_regime": "tornadic",
+      "first_detected_utc": "2026-05-17T02:43:42.963289+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 41.16,
+        "best_effort_lon": -94.93,
+        "region": "41.16_-94.93"
+      },
+      "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:53.998402+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/alerts/active\",\n      \"fetched_utc\": \"2026-05-16T00:11:52.871908+00:00\",\n      \"",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\raw\\noaa_alerts.json",
+        "noaa_alerts",
+        "raw"
+      ],
+      "projected_event_time": null,
+      "magnitude": null,
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-05-17T02:43:42.963289+00:00",
+          "seam_phi": 0.61,
+          "phase": "warning",
+          "magnitude": null
+        }
+      ]
+    },
+    "SEAM-8eb820b32818c4e446b37ac0": {
+      "event_id": "SEAM-8eb820b32818c4e446b37ac0",
+      "signature_class": "tornadic",
+      "primary_regime": "tornadic",
+      "first_detected_utc": "2026-05-17T02:43:43.014611+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 38.43,
+        "best_effort_lon": -89.9,
+        "region": "38.43_-89.9"
+      },
+      "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:32.316217+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://api.weather",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\official\\noaa_alerts.json",
+        "noaa_alerts",
+        "official"
+      ],
+      "projected_event_time": null,
+      "magnitude": null,
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-05-17T02:43:43.014611+00:00",
+          "seam_phi": 0.61,
+          "phase": "warning",
+          "magnitude": null
+        }
+      ]
+    },
+    "SEAM-ff30af0e3cbbdd6151211fdb": {
+      "event_id": "SEAM-ff30af0e3cbbdd6151211fdb",
+      "signature_class": "volcanic",
+      "primary_regime": "volcanic",
+      "first_detected_utc": "2026-05-17T02:43:42.983080+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 32.8538333333333,
+        "best_effort_lon": -116.145833333333,
+        "region": "32.85_-116.15"
+      },
+      "signal_summary": "{\n  \"source\": \"usgs_day\",\n  \"bucket\": \"raw\",\n  \"acquisition_class\": \"realtime\",\n  \"retrieval_mode\": \"live\",\n  \"window_hours\": 0,\n  \"window_start_utc\": null,\n  \"window_end_utc\": null,\n  \"captured_utc\": \"2026-05-16T20:27:21.576131+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://earthquake.usgs.gov",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\raw\\usgs_day.json",
+        "raw",
+        "usgs_day"
+      ],
+      "projected_event_time": null,
+      "magnitude": null,
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-05-17T02:43:42.983080+00:00",
+          "seam_phi": 0.61,
+          "phase": "warning",
+          "magnitude": null
+        }
+      ]
+    },
+    "SEAM-d4bcfbb0b282b832074935bf": {
+      "event_id": "SEAM-d4bcfbb0b282b832074935bf",
+      "signature_class": "volcanic",
+      "primary_regime": "volcanic",
+      "first_detected_utc": "2026-05-17T02:43:42.987594+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 19.421,
+        "best_effort_lon": -155.2924,
+        "region": "19.42_-155.29"
+      },
+      "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:56.297948+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"fetched_utc\": \"2026-05-16T00:11:55.800",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\raw\\volcano_smithsonian.json",
+        "raw",
+        "volcano_smithsonian"
+      ],
+      "projected_event_time": "2026-05-17T02:43:42.987594+00:00",
+      "magnitude": null,
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-05-17T02:43:42.987594+00:00",
           "seam_phi": 0.97,
           "phase": "event",
-          "magnitude": 4.2
+          "magnitude": null
         }
+      ]
+    },
+    "SEAM-32e5a035a10ca4055bafa65f": {
+      "event_id": "SEAM-32e5a035a10ca4055bafa65f",
+      "signature_class": "volcanic",
+      "primary_regime": "volcanic",
+      "first_detected_utc": "2026-05-17T02:43:43.015696+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 31.5933,
+        "best_effort_lon": 130.6568,
+        "region": "31.59_130.66"
+      },
+      "signal_summary": "{\n  \"source\": \"volcano_smithsonian\",\n  \"bucket\": \"official\",\n  \"acquisition_class\": \"realtime\",\n  \"captured_utc\": \"2026-05-16T20:26:02.173805+00:00\",\n  \"captures\": [\n    {\n      \"url\": \"https://volcano.si.edu/news/WeeklyVolcanoRSS.xml\",\n      \"ok\": true,\n      \"status\": 200,\n      \"content_type\": \"t",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\official\\volcano_smithsonian.json",
+        "official",
+        "volcano_smithsonian"
       ],
-      "identification_to_alert_minutes": 0,
-      "magnitude": 4.2
+      "projected_event_time": "2026-05-17T02:43:43.015696+00:00",
+      "magnitude": null,
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-05-17T02:43:43.015696+00:00",
+          "seam_phi": 0.97,
+          "phase": "event",
+          "magnitude": null
+        }
+      ]
+    },
+    "SEAM-82e102fef84cd5a0c6664488": {
+      "event_id": "SEAM-82e102fef84cd5a0c6664488",
+      "signature_class": "wildfire",
+      "primary_regime": "wildfire",
+      "first_detected_utc": "2026-05-17T02:43:42.963289+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 41.16,
+        "best_effort_lon": -94.93,
+        "region": "41.16_-94.93"
+      },
+      "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:53.998402+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/alerts/active\",\n      \"fetched_utc\": \"2026-05-16T00:11:52.871908+00:00\",\n      \"",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\raw\\noaa_alerts.json",
+        "noaa_alerts",
+        "raw"
+      ],
+      "projected_event_time": null,
+      "magnitude": null,
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-05-17T02:43:42.963289+00:00",
+          "seam_phi": 0.61,
+          "phase": "warning",
+          "magnitude": null
+        }
+      ]
+    },
+    "SEAM-57ea1d321eacdcf4e9277873": {
+      "event_id": "SEAM-57ea1d321eacdcf4e9277873",
+      "signature_class": "winter_weather",
+      "primary_regime": "winter_weather",
+      "first_detected_utc": "2026-05-17T02:43:42.963289+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 41.16,
+        "best_effort_lon": -94.93,
+        "region": "41.16_-94.93"
+      },
+      "signal_summary": "{\n  \"source\": \"noaa_alerts\",\n  \"bucket\": \"official\",\n  \"pulled_utc\": \"2026-05-16T00:11:53.998402+00:00\",\n  \"source_count\": 1,\n  \"successes\": 1,\n  \"failures\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://api.weather.gov/alerts/active\",\n      \"fetched_utc\": \"2026-05-16T00:11:52.871908+00:00\",\n      \"",
+      "source_refs": [
+        "C:\\Continuum Database\\continuum\\..\\raw\\noaa_alerts.json",
+        "noaa_alerts",
+        "raw"
+      ],
+      "projected_event_time": null,
+      "magnitude": null,
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-05-17T02:43:42.963289+00:00",
+          "seam_phi": 0.61,
+          "phase": "warning",
+          "magnitude": null
+        }
+      ]
     }
   },
   "metadata": {
     "event_age_display_threshold_minutes": 120,
-    "control_event": "KILAUEA-CONTINUOUS"
+    "total_events": 21,
+    "confidence_thresholds": {
+      "critical": 0.9,
+      "event": 0.75,
+      "warning": 0.5,
+      "watch": 0.0
+    }
   }
 }
