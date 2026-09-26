@@ -1,14 +1,14 @@
 {
   "version": "1.0",
   "schema": "SEAM_EVENT_TRACKER_V1",
-  "generated_utc": "2026-09-26T00:19:14.592346+00:00",
+  "generated_utc": "2026-09-26T04:33:51.463553+00:00",
   "retention_days": 30,
   "events": {
     "SEAM-196e40c254276f4952b1992c": {
       "event_id": "SEAM-196e40c254276f4952b1992c",
       "signature_class": "drought",
       "primary_regime": "drought",
-      "first_detected_utc": "2026-09-25T22:49:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:42.903254+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 37.7412,
@@ -21,11 +21,11 @@
         "gdacs_alerts",
         "raw"
       ],
-      "projected_event_time": "2026-09-26T04:19:14.592346+00:00",
+      "projected_event_time": "2026-09-26T08:33:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T22:49:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
           "seam_phi": 0.61,
           "phase": "warning",
           "magnitude": null
@@ -36,7 +36,7 @@
       "event_id": "SEAM-9455702693c1ec7917e8e82b",
       "signature_class": "flood",
       "primary_regime": "flood",
-      "first_detected_utc": "2026-09-25T22:49:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:42.903254+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 37.7412,
@@ -49,11 +49,11 @@
         "gdacs_alerts",
         "raw"
       ],
-      "projected_event_time": "2026-09-26T04:19:14.592346+00:00",
+      "projected_event_time": "2026-09-26T08:33:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T22:49:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
           "seam_phi": 0.61,
           "phase": "warning",
           "magnitude": null
@@ -64,7 +64,7 @@
       "event_id": "SEAM-7ef745dd63e482b539c88750",
       "signature_class": "flood",
       "primary_regime": "flood",
-      "first_detected_utc": "2026-09-25T23:19:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:42.963289+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 41.16,
@@ -77,11 +77,11 @@
         "noaa_alerts",
         "raw"
       ],
-      "projected_event_time": "2026-09-26T02:19:14.592346+00:00",
+      "projected_event_time": "2026-09-26T06:33:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T23:19:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:42.963289+00:00",
           "seam_phi": 0.85,
           "phase": "event",
           "magnitude": null
@@ -92,7 +92,7 @@
       "event_id": "SEAM-1604a5a1b12d34cd4a50c8f8",
       "signature_class": "rf_disruption",
       "primary_regime": "rf_disruption",
-      "first_detected_utc": "2026-09-25T22:49:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:42.963289+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 41.16,
@@ -105,11 +105,11 @@
         "noaa_alerts",
         "raw"
       ],
-      "projected_event_time": "2026-09-26T04:19:14.592346+00:00",
+      "projected_event_time": "2026-09-26T08:33:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T22:49:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:42.963289+00:00",
           "seam_phi": 0.61,
           "phase": "warning",
           "magnitude": null
@@ -120,7 +120,7 @@
       "event_id": "SEAM-3329e1fa6751cfa936db1c34",
       "signature_class": "rf_disruption",
       "primary_regime": "rf_disruption",
-      "first_detected_utc": "2026-09-25T22:49:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:42.987594+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 19.421,
@@ -133,11 +133,11 @@
         "raw",
         "volcano_smithsonian"
       ],
-      "projected_event_time": "2026-09-26T04:19:14.592346+00:00",
+      "projected_event_time": "2026-09-26T08:33:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T22:49:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:42.987594+00:00",
           "seam_phi": 0.61,
           "phase": "warning",
           "magnitude": null
@@ -148,7 +148,7 @@
       "event_id": "SEAM-40f00b1cf5a7a582d342768e",
       "signature_class": "seismic",
       "primary_regime": "seismic",
-      "first_detected_utc": "2026-09-25T22:49:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:42.903254+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 37.7412,
@@ -161,11 +161,11 @@
         "gdacs_alerts",
         "raw"
       ],
-      "projected_event_time": "2026-09-26T04:19:14.592346+00:00",
+      "projected_event_time": "2026-09-26T08:33:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T22:49:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
           "seam_phi": 0.61,
           "phase": "warning",
           "magnitude": null
@@ -176,7 +176,7 @@
       "event_id": "SEAM-31611cda2a8f810bca1f185a",
       "signature_class": "seismic",
       "primary_regime": "seismic",
-      "first_detected_utc": "2026-09-25T22:49:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:42.983080+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 32.8538333333333,
@@ -189,11 +189,11 @@
         "raw",
         "usgs"
       ],
-      "projected_event_time": "2026-09-26T04:19:14.592346+00:00",
+      "projected_event_time": "2026-09-26T08:33:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T22:49:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:42.983080+00:00",
           "seam_phi": 0.73,
           "phase": "warning",
           "magnitude": null
@@ -204,7 +204,7 @@
       "event_id": "SEAM-1246f44140b7c81a4b7acf38",
       "signature_class": "seismic",
       "primary_regime": "seismic",
-      "first_detected_utc": "2026-09-25T23:19:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:42.987594+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 19.421,
@@ -217,11 +217,11 @@
         "raw",
         "volcano_smithsonian"
       ],
-      "projected_event_time": "2026-09-26T02:19:14.592346+00:00",
+      "projected_event_time": "2026-09-26T06:33:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T23:19:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:42.987594+00:00",
           "seam_phi": 0.85,
           "phase": "event",
           "magnitude": null
@@ -232,7 +232,7 @@
       "event_id": "SEAM-a9991b7f8db805d0a4b8c904",
       "signature_class": "seismic",
       "primary_regime": "seismic",
-      "first_detected_utc": "2026-09-25T23:19:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:43.015696+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 31.5933,
@@ -245,11 +245,11 @@
         "official",
         "volcano_smithsonian"
       ],
-      "projected_event_time": "2026-09-26T02:19:14.592346+00:00",
+      "projected_event_time": "2026-09-26T06:33:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T23:19:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:43.015696+00:00",
           "seam_phi": 0.85,
           "phase": "event",
           "magnitude": null
@@ -260,7 +260,7 @@
       "event_id": "SEAM-9faf1d73d018baf10d744c93",
       "signature_class": "severe_weather",
       "primary_regime": "severe_weather",
-      "first_detected_utc": "2026-09-25T22:49:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:42.903254+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 37.7412,
@@ -273,11 +273,11 @@
         "gdacs_alerts",
         "raw"
       ],
-      "projected_event_time": "2026-09-26T04:19:14.592346+00:00",
+      "projected_event_time": "2026-09-26T08:33:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T22:49:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:42.903254+00:00",
           "seam_phi": 0.61,
           "phase": "warning",
           "magnitude": null
@@ -288,7 +288,7 @@
       "event_id": "SEAM-f21ca079216d69311318ec0f",
       "signature_class": "severe_weather",
       "primary_regime": "severe_weather",
-      "first_detected_utc": "2026-09-25T23:19:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:42.963289+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 41.16,
@@ -301,11 +301,11 @@
         "noaa_alerts",
         "raw"
       ],
-      "projected_event_time": "2026-09-26T02:19:14.592346+00:00",
+      "projected_event_time": "2026-09-26T06:33:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T23:19:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:42.963289+00:00",
           "seam_phi": 0.85,
           "phase": "event",
           "magnitude": null
@@ -316,7 +316,7 @@
       "event_id": "SEAM-afdb3f3200834ec364f70039",
       "signature_class": "severe_weather",
       "primary_regime": "severe_weather",
-      "first_detected_utc": "2026-09-25T22:49:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:42.989113+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 47.45,
@@ -329,11 +329,11 @@
         "raw",
         "weather_observations_core"
       ],
-      "projected_event_time": "2026-09-26T04:19:14.592346+00:00",
+      "projected_event_time": "2026-09-26T08:33:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T22:49:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:42.989113+00:00",
           "seam_phi": 0.61,
           "phase": "warning",
           "magnitude": null
@@ -344,7 +344,7 @@
       "event_id": "SEAM-56fc457dc3263bbb18d65df5",
       "signature_class": "severe_weather",
       "primary_regime": "severe_weather",
-      "first_detected_utc": "2026-09-25T22:49:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:43.014611+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 38.43,
@@ -357,11 +357,11 @@
         "noaa_alerts",
         "official"
       ],
-      "projected_event_time": "2026-09-26T04:19:14.592346+00:00",
+      "projected_event_time": "2026-09-26T08:33:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T22:49:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:43.014611+00:00",
           "seam_phi": 0.73,
           "phase": "warning",
           "magnitude": null
@@ -372,7 +372,7 @@
       "event_id": "SEAM-685624a622200871e246f5b2",
       "signature_class": "severe_weather",
       "primary_regime": "severe_weather",
-      "first_detected_utc": "2026-09-25T22:49:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:43.014611+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 38.42,
@@ -385,11 +385,11 @@
         "noaa_alerts_weekly168",
         "official"
       ],
-      "projected_event_time": "2026-09-26T04:19:14.592346+00:00",
+      "projected_event_time": "2026-09-26T08:33:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T22:49:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:43.014611+00:00",
           "seam_phi": 0.61,
           "phase": "warning",
           "magnitude": null
@@ -400,7 +400,7 @@
       "event_id": "SEAM-faf4a9e1c027179e8ac3738d",
       "signature_class": "tornadic",
       "primary_regime": "tornadic",
-      "first_detected_utc": "2026-09-25T22:49:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:42.963289+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 41.16,
@@ -413,11 +413,11 @@
         "noaa_alerts",
         "raw"
       ],
-      "projected_event_time": "2026-09-26T04:19:14.592346+00:00",
+      "projected_event_time": "2026-09-26T08:33:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T22:49:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:42.963289+00:00",
           "seam_phi": 0.61,
           "phase": "warning",
           "magnitude": null
@@ -428,7 +428,7 @@
       "event_id": "SEAM-8eb820b32818c4e446b37ac0",
       "signature_class": "tornadic",
       "primary_regime": "tornadic",
-      "first_detected_utc": "2026-09-25T22:49:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:43.014611+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 38.43,
@@ -441,11 +441,11 @@
         "noaa_alerts",
         "official"
       ],
-      "projected_event_time": "2026-09-26T04:19:14.592346+00:00",
+      "projected_event_time": "2026-09-26T08:33:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T22:49:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:43.014611+00:00",
           "seam_phi": 0.61,
           "phase": "warning",
           "magnitude": null
@@ -456,7 +456,7 @@
       "event_id": "SEAM-ff30af0e3cbbdd6151211fdb",
       "signature_class": "volcanic",
       "primary_regime": "volcanic",
-      "first_detected_utc": "2026-09-25T22:49:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:42.983080+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 32.8538333333333,
@@ -469,11 +469,11 @@
         "raw",
         "usgs_day"
       ],
-      "projected_event_time": "2026-09-26T04:19:14.592346+00:00",
+      "projected_event_time": "2026-09-26T08:33:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T22:49:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:42.983080+00:00",
           "seam_phi": 0.61,
           "phase": "warning",
           "magnitude": null
@@ -484,7 +484,7 @@
       "event_id": "SEAM-d4bcfbb0b282b832074935bf",
       "signature_class": "volcanic",
       "primary_regime": "volcanic",
-      "first_detected_utc": "2026-09-25T23:49:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:42.987594+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 19.421,
@@ -497,11 +497,11 @@
         "raw",
         "volcano_smithsonian"
       ],
-      "projected_event_time": "2026-09-26T00:34:14.592346+00:00",
+      "projected_event_time": "2026-09-26T04:48:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T23:49:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:42.987594+00:00",
           "seam_phi": 0.97,
           "phase": "event",
           "magnitude": null
@@ -512,7 +512,7 @@
       "event_id": "SEAM-32e5a035a10ca4055bafa65f",
       "signature_class": "volcanic",
       "primary_regime": "volcanic",
-      "first_detected_utc": "2026-09-25T23:49:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:43.015696+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 31.5933,
@@ -525,11 +525,11 @@
         "official",
         "volcano_smithsonian"
       ],
-      "projected_event_time": "2026-09-26T00:34:14.592346+00:00",
+      "projected_event_time": "2026-09-26T04:48:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T23:49:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:43.015696+00:00",
           "seam_phi": 0.97,
           "phase": "event",
           "magnitude": null
@@ -540,7 +540,7 @@
       "event_id": "SEAM-82e102fef84cd5a0c6664488",
       "signature_class": "wildfire",
       "primary_regime": "wildfire",
-      "first_detected_utc": "2026-09-25T22:49:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:42.963289+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 41.16,
@@ -553,11 +553,11 @@
         "noaa_alerts",
         "raw"
       ],
-      "projected_event_time": "2026-09-26T04:19:14.592346+00:00",
+      "projected_event_time": "2026-09-26T08:33:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T22:49:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:42.963289+00:00",
           "seam_phi": 0.61,
           "phase": "warning",
           "magnitude": null
@@ -568,7 +568,7 @@
       "event_id": "SEAM-57ea1d321eacdcf4e9277873",
       "signature_class": "winter_weather",
       "primary_regime": "winter_weather",
-      "first_detected_utc": "2026-09-25T22:49:14.592346+00:00",
+      "first_detected_utc": "2026-05-17T02:43:42.963289+00:00",
       "status": "active",
       "location": {
         "best_effort_lat": 41.16,
@@ -581,11 +581,11 @@
         "noaa_alerts",
         "raw"
       ],
-      "projected_event_time": "2026-09-26T04:19:14.592346+00:00",
+      "projected_event_time": "2026-09-26T08:33:51.463170+00:00",
       "magnitude": null,
       "confidence_history": [
         {
-          "timestamp_utc": "2026-09-25T22:49:14.592346+00:00",
+          "timestamp_utc": "2026-05-17T02:43:42.963289+00:00",
           "seam_phi": 0.61,
           "phase": "warning",
           "magnitude": null
@@ -595,11 +595,8 @@
   },
   "metadata": {
     "event_age_display_threshold_minutes": 120,
-    "total_monitored": 21,
-    "confidence_thresholds": {
-      "critical": 0.9,
-      "event": 0.75,
-      "warning": 0.5
-    }
+    "manifold_events": 21,
+    "total_tracked": 21,
+    "manifold_file": "/home/runner/work/Continuum-Event-Forcast/Continuum-Event-Forcast/continuum/output/volcanic_manifold_analysis.json"
   }
 }
