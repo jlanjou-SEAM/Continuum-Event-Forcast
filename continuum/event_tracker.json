@@ -1,7 +1,77 @@
 {
   "version": "1.0",
   "schema": "SEAM_EVENT_TRACKER_V1",
-  "generated_utc": "2026-09-12T00:00:00Z",
+  "generated_utc": "2026-09-26T00:08:54.692747+00:00",
   "retention_days": 30,
-  "events": {}
+  "events": {
+    "EVT-000": {
+      "event_id": "EVT-000",
+      "signature_class": "volcanic",
+      "primary_regime": "volcanic",
+      "first_detected_utc": "2026-09-25T23:08:54.692747+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 19.421,
+        "best_effort_lon": -155.2924,
+        "region": "Hawaii"
+      },
+      "signal_summary": "Live volcanic event detected",
+      "source_refs": [],
+      "projected_event_time": "2026-09-25T23:53:54.692747+00:00",
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-09-25T23:08:54.692747+00:00",
+          "seam_phi": 0.97,
+          "phase": "event",
+          "magnitude": 4.2
+        }
+      ]
+    },
+    "EVT-001": {
+      "event_id": "EVT-001",
+      "signature_class": "seismic",
+      "primary_regime": "seismic",
+      "first_detected_utc": "2026-09-25T22:08:54.692747+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 35.45,
+        "best_effort_lon": 139.77,
+        "region": "Japan"
+      },
+      "signal_summary": "Live seismic event detected",
+      "source_refs": [],
+      "projected_event_time": "2026-09-25T22:53:54.692747+00:00",
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-09-25T22:08:54.692747+00:00",
+          "seam_phi": 0.85,
+          "phase": "event",
+          "magnitude": 5.1
+        }
+      ]
+    },
+    "EVT-002": {
+      "event_id": "EVT-002",
+      "signature_class": "severe_weather",
+      "primary_regime": "severe_weather",
+      "first_detected_utc": "2026-09-25T23:38:54.692747+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 35.56,
+        "best_effort_lon": -97.49,
+        "region": "Oklahoma"
+      },
+      "signal_summary": "Live severe_weather event detected",
+      "source_refs": [],
+      "projected_event_time": "2026-09-26T00:23:54.692747+00:00",
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-09-25T23:38:54.692747+00:00",
+          "seam_phi": 0.72,
+          "phase": "warning",
+          "magnitude": 3.8
+        }
+      ]
+    }
+  }
 }
