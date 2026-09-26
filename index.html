@@ -742,7 +742,11 @@
 
             // Official alert status and issued time
             const officialAlert = eventData.official_alert && eventData.official_alert.status ? eventData.official_alert.status : 'None';
-            const alertIssuedTime = eventData.official_alert && eventData.official_alert.issued_utc ? new Date(eventData.official_alert.issued_utc).toLocaleTimeString() : 'N/A';
+            const alertIssuedTime = eventData.official_alert && eventData.official_alert.issued_utc ?
+                (() => {
+                    const d = new Date(eventData.official_alert.issued_utc);
+                    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')} ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}:${String(d.getSeconds()).padStart(2, '0')}`;
+                })() : 'N/A';
 
             // SEAM detect time = when confidence first crossed >75% (WARNING threshold)
             let detectedTime = 'N/A';
@@ -752,8 +756,8 @@
                 const warningEntry = eventData.confidence_history.find(h => h.seam_phi >= 0.75);
                 if (warningEntry && warningEntry.timestamp_utc) {
                     const detectedDt = new Date(warningEntry.timestamp_utc);
-                    detectedTime = detectedDt.toLocaleTimeString();
                     detectedDate = detectedDt.toLocaleDateString();
+                    detectedTime = `${detectedDt.getFullYear()}-${String(detectedDt.getMonth() + 1).padStart(2, '0')}-${String(detectedDt.getDate()).padStart(2, '0')} ${String(detectedDt.getHours()).padStart(2, '0')}:${String(detectedDt.getMinutes()).padStart(2, '0')}:${String(detectedDt.getSeconds()).padStart(2, '0')}`;
                 }
             }
 
@@ -763,8 +767,8 @@
             if (eventData.projected_event_time) {
                 // Use projected event time if available
                 const eventDt = new Date(eventData.projected_event_time);
-                eventTime = eventDt.toLocaleTimeString();
                 eventDate = eventDt.toLocaleDateString();
+                eventTime = `${eventDt.getFullYear()}-${String(eventDt.getMonth() + 1).padStart(2, '0')}-${String(eventDt.getDate()).padStart(2, '0')} ${String(eventDt.getHours()).padStart(2, '0')}:${String(eventDt.getMinutes()).padStart(2, '0')}:${String(eventDt.getSeconds()).padStart(2, '0')}`;
             }
 
             // Time delta between SEAM detection and official alert
