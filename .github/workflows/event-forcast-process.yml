@@ -25,113 +25,19 @@ jobs:
         run: |
           git clone --depth 1 https://github.com/jlanjou-SEAM/seam-private-engines.git /tmp/engines
 
-      - name: Run backend processor
+      - name: Update event tracker from manifold
         env:
           PUBLIC_REPO_PATH: ${{ github.workspace }}
         run: |
-          cd /tmp/engines/event-forcast
-          python << 'PYTHON'
-          import json
-          import os
-          import sys
-          from pathlib import Path
-          from datetime import datetime, timezone
-          
-          PUBLIC_REPO_PATH = Path(os.environ.get('PUBLIC_REPO_PATH', '.'))
-          COMBINED_LOG_FILE = PUBLIC_REPO_PATH / "curated/COMBINED_LOG.json"
-          
-          # Load all public data
-          data = {
-              "realtime": {},
-              "nonrealtime": {},
-              "official": {},
-              "streams": {},
-              "metadata": {
-                  "collected_at": datetime.now(timezone.utc).isoformat(),
-                  "sources_loaded": 0,
-                  "data_points": 0
-              }
-          }
-          
-          # Load realtime data
-          realtime_dir = PUBLIC_REPO_PATH / "realtime"
-          if realtime_dir.exists():
-              for json_file in realtime_dir.glob("*.json"):
-                  try:
-                      with open(json_file) as f:
-                          data["realtime"][json_file.stem] = json.load(f)
-                          data["metadata"]["sources_loaded"] += 1
-                  except:
-                      pass
-          
-          # Load nonrealtime data
-          nonrealtime_dir = PUBLIC_REPO_PATH / "nonrealtime"
-          if nonrealtime_dir.exists():
-              for json_file in nonrealtime_dir.glob("*.json"):
-                  try:
-                      with open(json_file) as f:
-                          data["nonrealtime"][json_file.stem] = json.load(f)
-                  except:
-                      pass
-          
-          # Load official data
-          official_dir = PUBLIC_REPO_PATH / "official"
-          if official_dir.exists():
-              for json_file in official_dir.glob("*.json"):
-                  try:
-                      with open(json_file) as f:
-                          data["official"][json_file.stem] = json.load(f)
-                  except:
-                      pass
-          
-          # Load stream data
-          streams_dir = PUBLIC_REPO_PATH / "streams"
-          if streams_dir.exists():
-              for json_file in streams_dir.glob("*.json"):
-                  try:
-                      with open(json_file) as f:
-                          data["streams"][json_file.stem] = json.load(f)
-                  except:
-                      pass
-          
-          # Generate combined log
-          analysis = {
-              "pipeline_version": "v5",
-              "processed_at": datetime.now(timezone.utc).isoformat(),
-              "source_summary": {
-                  "realtime_sources": len(data["realtime"]),
-                  "nonrealtime_sources": len(data["nonrealtime"]),
-                  "official_sources": len(data["official"]),
-                  "stream_sources": len(data["streams"]),
-                  "total_sources": data["metadata"]["sources_loaded"]
-              },
-              "anomalies": [],
-              "events": []
-          }
-          
-          combined_log = {
-              "metadata": data["metadata"],
-              "source_summary": analysis["source_summary"],
-              "processed_at": analysis["processed_at"],
-              "data": data
-          }
-          
-          # Write combined log
-          COMBINED_LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
-          with open(COMBINED_LOG_FILE, 'w') as f:
-              json.dump(combined_log, f, indent=2)
-          
-          print(f"Generated combined log: {COMBINED_LOG_FILE}")
-          print(f"Sources processed: {data['metadata']['sources_loaded']}")
-          PYTHON
+          python /tmp/engines/event-forcast/backend_processor_live.py
 
-      - name: Commit and push combined log
+      - name: Commit and push updated tracker
         run: |
           cd ${{ github.workspace }}
           git config user.name "SEAM Processor"
           git config user.email "processor@github.local"
-          git add -A curated/
+          git add continuum/event_tracker.json
           if ! git diff --quiet --cached; then
-            git commit -m "chore: processed event data [skip ci]"
+            git commit -m "chore: update event register from manifold [skip ci]"
             git push origin main
           fi
