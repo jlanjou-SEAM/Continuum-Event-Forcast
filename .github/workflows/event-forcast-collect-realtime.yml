@@ -34,6 +34,16 @@ jobs:
           cd /tmp/engines/event-forcast/step1_raw_data_retrieval
           python realtime_acquisition.py
 
+      - name: Copy collected data to public repo
+        run: |
+          # Copy data from where collectors wrote it to the public repo
+          for dir in realtime nonrealtime official streams state; do
+            if [ -d "/tmp/engines/event-forcast/$dir" ]; then
+              mkdir -p "${{ github.workspace }}/$dir"
+              cp -r /tmp/engines/event-forcast/$dir/* "${{ github.workspace }}/$dir/" 2>/dev/null || true
+            fi
+          done
+
       - name: Commit and push results
         run: |
           cd ${{ github.workspace }}
