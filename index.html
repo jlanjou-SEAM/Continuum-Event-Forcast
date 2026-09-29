@@ -1070,28 +1070,35 @@
                     return false;
                 });
 
-                // Split by age: recent (< 2h) for main display, old for log only
+                // Filter active events: status=active OR official alert active, regardless of first_detected_utc age
                 const criticalEvents = allCritical.filter(evt => {
-                    const firstDetected = new Date(evt.first_detected_utc);
-                    const ageMs = now - firstDetected;
-                    return ageMs < AGE_THRESHOLD_MS;
+                    const isStatusActive = evt.status === 'active';
+                    const hasOfficialAlert = evt.official_alert?.status === 'ACTIVE';
+                    return isStatusActive || hasOfficialAlert;
                 }).sort((a, b) => {
                     const aConf = a.confidence_history[a.confidence_history.length - 1].seam_phi;
                     const bConf = b.confidence_history[b.confidence_history.length - 1].seam_phi;
                     return bConf - aConf;
                 });
 
-                const oldEvents = allCritical.filter(evt => {
-                    const firstDetected = new Date(evt.first_detected_utc);
-                    const ageMs = now - firstDetected;
-                    return ageMs >= AGE_THRESHOLD_MS;
+                // Stale events: active but with no recent updates
+                const staleEvents = allCritical.filter(evt => {
+                    const history = evt.confidence_history || [];
+                    if (!history.length) return false;
+
+                    const latest = history[history.length - 1];
+                    const lastUpdate = new Date(latest.timestamp_utc);
+                    const ageMs = now - lastUpdate;
+
+                    const isActive = evt.status === 'active' || evt.official_alert?.status === 'ACTIVE';
+                    return isActive && ageMs >= AGE_THRESHOLD_MS;
                 });
 
-                addLog(`⚠️ ${criticalEvents.length} active events | 📋 ${oldEvents.length} archived`, 'warning');
+                addLog(`⚠️ ${criticalEvents.length} active events | 📋 ${staleEvents.length} stale (no recent update)`, 'warning');
 
-                if (criticalEvents.length === 0) {
-                    container.innerHTML = '<div class="empty-state">No critical events. System nominal.</div>';
-                    addLog('✅ No critical events detected', 'info');
+                if (criticalEvents.length === 0 && staleEvents.length === 0) {
+                    container.innerHTML = '<div class="empty-state">No events. System nominal.</div>';
+                    addLog('✅ No active events detected', 'info');
                     loading.style.display = 'none';
                     return;
                 }
@@ -1122,10 +1129,10 @@
                     addLog(`${phaseEmoji} ACTIVE ${formattedId} ${(lastConf*100).toFixed(0)}%${historyStr}${deltaStr}`, phase);
                 });
 
-                // Add old events to log panel (right column)
-                if (oldEvents.length > 0) {
-                    addLog(`📋 ARCHIVED (>2h)`, 'info');
-                    oldEvents.forEach(evt => {
+                // Add stale events to log panel (right column)
+                if (staleEvents.length > 0) {
+                    addLog(`📋 STALE (no recent update)`, 'info');
+                    staleEvents.forEach(evt => {
                         const lastConf = evt.confidence_history[evt.confidence_history.length - 1].seam_phi;
                         const ageMs = now - new Date(evt.first_detected_utc);
                         const ageHours = Math.floor(ageMs / (60*60*1000));
