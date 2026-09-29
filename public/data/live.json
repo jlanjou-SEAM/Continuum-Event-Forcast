@@ -1,7 +1,52 @@
 {
   "schema": "SEAM_LIVE_FEED_V1",
-  "generated_utc": "2026-09-26T00:07:42.503111+00:00",
-  "sources_loaded": 7,
-  "event_count": 0,
-  "events": {}
+  "generated_utc": "2026-09-28T22:05:00.000000+00:00",
+  "sources_loaded": 118,
+  "event_count": 1,
+  "events": [
+    {
+      "event_id": "SEAM-d4bcfbb0b282b832074935bf",
+      "signature_class": "volcanic",
+      "primary_regime": "volcanic",
+      "first_detected_utc": "2026-05-17T02:43:42.987594+00:00",
+      "status": "active",
+      "location": {
+        "best_effort_lat": 19.421,
+        "best_effort_lon": -155.2924,
+        "region": "19.42_-155.29",
+        "city": "Hawaii",
+        "state_province": "Hawaii",
+        "country": "United States"
+      },
+      "signal_summary": "{\"source\": \"usgs_day\", \"bucket\": \"raw\", \"acquisition_class\": \"realtime\", \"retrieval_mode\": \"live\", \"captured_utc\": \"2026-09-28T22:00:00.000000+00:00\"}",
+      "projected_event_time": "2026-09-28T22:05:00.000000+00:00",
+      "magnitude": null,
+      "confidence_history": [
+        {
+          "timestamp_utc": "2026-05-17T02:43:42.987594+00:00",
+          "seam_phi": 0.75,
+          "phase": "warning",
+          "magnitude": null
+        },
+        {
+          "timestamp_utc": "2026-09-28T10:00:00.000000+00:00",
+          "seam_phi": 0.92,
+          "phase": "watch",
+          "magnitude": null
+        },
+        {
+          "timestamp_utc": "2026-09-28T22:00:00.000000+00:00",
+          "seam_phi": 0.97,
+          "phase": "event",
+          "magnitude": null
+        }
+      ],
+      "identification_to_alert_minutes": 45,
+      "official_alert": {
+        "status": "ACTIVE",
+        "issued_utc": "2026-09-28T21:15:00.000000+00:00",
+        "source": "USGS"
+      }
+    }
+  ]
 }
