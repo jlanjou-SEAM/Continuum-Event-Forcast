@@ -1177,41 +1177,40 @@
         updateTimeDisplay();
         setInterval(updateTimeDisplay, 1000);
 
-        // GitHub Actions workflow trigger - runs collection every 5 minutes if data is stale
-        const WORKFLOW_TRIGGER_INTERVAL = 5 * 60 * 1000; // 5 minutes
-        let lastWorkflowTrigger = 0;
-
+        // GitHub Actions workflow trigger - fires every 30 seconds for continuous updates
         async function triggerDataCollection() {
             try {
-                const now = Date.now();
+                const now = new Date().toLocaleTimeString();
+                console.log(`[${now}] Triggering backend collection cycle...`);
 
-                // Only trigger every 5 minutes max (rate limiting)
-                if (now - lastWorkflowTrigger < WORKFLOW_TRIGGER_INTERVAL) {
-                    return;
-                }
+                // Call GitHub API to dispatch event-forcast-collect-realtime workflow
+                const response = await fetch('https://api.github.com/repos/jlanjou-SEAM/seam-private-engines/actions/workflows/event-forcast-collect-realtime.yml/dispatches', {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/vnd.github+json',
+                        'Authorization': 'token ' + (window.GITHUB_TOKEN || ''),
+                        'X-GitHub-Api-Version': '2022-11-28'
+                    },
+                    body: JSON.stringify({
+                        ref: 'main'
+                    })
+                });
 
-                // Check if live.json is fresh
-                const response = await fetch('./public/data/live.json', { method: 'HEAD', cache: 'no-store' });
-                const lastModified = new Date(response.headers.get('last-modified')).getTime();
-                const dataAge = now - lastModified;
-
-                // If data is >5 minutes old, trigger workflow
-                if (dataAge > WORKFLOW_TRIGGER_INTERVAL) {
-                    lastWorkflowTrigger = now;
-                    console.log(`[TRIGGER] Data is ${Math.round(dataAge/1000)}s old. Triggering collection workflow...`);
-
-                    // Attempt to trigger via GitHub API or webhook
-                    // This requires a backend endpoint or GitHub App
-                    // For now, just log that trigger is needed
-                    addLog('Data collection triggered (5+ min stale)', 'warning');
+                if (response.ok) {
+                    addLog('Collection cycle triggered', 'info');
+                    console.log(`[${now}] Backend workflow dispatched successfully`);
+                } else if (response.status === 401 || response.status === 403) {
+                    console.log('GitHub token not available - collection will run on schedule');
+                    addLog('Collection running on schedule (auth required for on-demand)', 'status');
+                } else {
+                    console.log(`Dispatch failed: ${response.status}`);
                 }
             } catch (err) {
-                // Silently fail - this is optional optimization
-                console.log('Workflow trigger check skipped:', err.message);
+                console.log('Collection trigger skipped:', err.message);
             }
         }
 
-        // Check for stale data every 30 seconds
+        // Trigger backend collection every 30 seconds for continuous live updates
         setInterval(triggerDataCollection, 30 * 1000);
 
         addLog('Continuum Event Projection System started', 'info');
