@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "schema": "SEAM_EVENT_TRACKER_V1",
-  "generated_utc": "2026-10-01T02:54:47.297560+00:00",
+  "generated_utc": "2026-10-01T02:58:46.557458+00:00",
   "events": {
     "vol_pac_26_001": {
       "event_id": "vol_pac_26_001",
@@ -19,6 +19,7 @@
       "status": "ACTIVE",
       "signature_class": "volcanic",
       "confidence": 0.97,
+      "first_detected_utc": "2026-05-16T19:43:42Z",
       "confidence_history": [
         {
           "timestamp_utc": "2026-05-16T19:43:42Z",
@@ -27,6 +28,7 @@
       ],
       "projected_event_time": "2026-09-28T15:05:00Z",
       "identification_to_alert_minutes": 1966,
+      "signal_summary": "Strong volcanic seismic signal detected with eruption confirmation",
       "prediction": {
         "confidence": 0.97,
         "detected_utc": "2026-05-16T19:43:42Z",
@@ -84,7 +86,7 @@
         "identification_to_alert_minutes": 1966,
         "signal_summary": "Strong volcanic seismic signal detected with eruption confirmation"
       },
-      "created_utc": "2026-10-01T02:54:47.297516+00:00"
+      "created_utc": "2026-10-01T02:58:46.557416+00:00"
     }
   },
   "metadata": {
