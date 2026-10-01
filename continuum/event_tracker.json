@@ -1,10 +1,46 @@
 {
   "version": "1.0",
   "schema": "SEAM_EVENT_TRACKER_V1",
-  "generated_utc": "2026-10-01T02:35:53.619473+00:00",
-  "events": {},
+  "generated_utc": "2026-10-01T02:42:34.283526+00:00",
+  "events": {
+    "vol_pac_26_001": {
+      "event_id": "vol_pac_26_001",
+      "source": "kilauea_active",
+      "name": "K\u012blauea, Hawaii",
+      "location": [
+        19.42,
+        -155.29
+      ],
+      "status": "ACTIVE",
+      "signature_class": "volcanic",
+      "prediction": {
+        "confidence": 0.97,
+        "detected_utc": "2026-05-16T19:43:42Z",
+        "event_time_utc": "2026-09-28T15:05:00Z"
+      },
+      "official_alert": {
+        "event_id": "vol_pac_26_001",
+        "name": "K\u012blauea, Hawaii",
+        "type": "volcanic",
+        "status": "ACTIVE",
+        "location": {
+          "latitude": 19.42,
+          "longitude": -155.29
+        },
+        "region": "Hawaii",
+        "country": "USA",
+        "confidence": 0.97,
+        "detected_utc": "2026-05-16T19:43:42Z",
+        "event_time_utc": "2026-09-28T15:05:00Z",
+        "alert_level": "WARNING",
+        "description": "K\u012blauea volcano eruption ongoing with high seismic activity",
+        "official_source": "USGS Hawaiian Volcano Observatory"
+      },
+      "created_utc": "2026-10-01T02:42:34.283483+00:00"
+    }
+  },
   "metadata": {
-    "total_events": 0,
+    "total_events": 1,
     "pipeline_steps": [
       "step1_acquisition",
       "step2_seam_ingest",
