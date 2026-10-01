@@ -1,7 +1,77 @@
 {
   "schema": "SEAM_LIVE_FEED_V1",
-  "generated_utc": "2026-10-01T02:50:03.930060+00:00",
+  "generated_utc": "2026-10-01T02:52:03.962912+00:00",
   "sources_loaded": 6746,
-  "event_count": 0,
-  "events": []
+  "event_count": 1,
+  "events": [
+    {
+      "event_id": "vol_pac_26_001",
+      "source": "kilauea_active",
+      "name": "K\u012blauea, Hawaii",
+      "location": [
+        19.42,
+        -155.29
+      ],
+      "status": "ACTIVE",
+      "signature_class": "volcanic",
+      "prediction": {
+        "confidence": 0.97,
+        "detected_utc": "2026-05-16T19:43:42Z",
+        "event_time_utc": "2026-09-28T15:05:00Z"
+      },
+      "official_alert": {
+        "event_id": "vol_pac_26_001",
+        "name": "K\u012blauea, Hawaii",
+        "signature_class": "volcanic",
+        "status": "ACTIVE",
+        "type": "volcanic",
+        "confidence": 0.97,
+        "location": {
+          "best_effort_lat": 19.42,
+          "best_effort_lon": -155.29,
+          "latitude": 19.42,
+          "longitude": -155.29,
+          "name": "K\u012blauea",
+          "state_province": "Hawaii",
+          "country": "USA"
+        },
+        "region": "Hawaii",
+        "country": "USA",
+        "detected_utc": "2026-05-16T19:43:42Z",
+        "projected_event_time": "2026-09-28T15:05:00Z",
+        "event_time_utc": "2026-09-28T15:05:00Z",
+        "alert_level": "WARNING",
+        "description": "K\u012blauea volcano eruption ongoing with high seismic activity",
+        "official_source": "USGS Hawaiian Volcano Observatory",
+        "confidence_history": [
+          {
+            "timestamp_utc": "2026-05-16T19:43:42Z",
+            "seam_phi": 0.97
+          }
+        ],
+        "official_alert": {
+          "event_id": "vol_pac_26_001",
+          "name": "K\u012blauea, Hawaii",
+          "type": "volcanic",
+          "status": "ACTIVE",
+          "issued_utc": "2026-09-28T14:15:00Z",
+          "location": {
+            "latitude": 19.42,
+            "longitude": -155.29
+          },
+          "region": "Hawaii",
+          "country": "USA",
+          "confidence": 0.97,
+          "detected_utc": "2026-05-16T19:43:42Z",
+          "event_time_utc": "2026-09-28T15:05:00Z",
+          "alert_level": "WARNING",
+          "description": "K\u012blauea volcano eruption ongoing with high seismic activity",
+          "official_source": "USGS Hawaiian Volcano Observatory"
+        },
+        "identification_to_alert_minutes": 1966,
+        "signal_summary": "Strong volcanic seismic signal detected with eruption confirmation"
+      },
+      "created_utc": "2026-10-01T02:52:03.962874+00:00"
+    }
+  ]
 }
