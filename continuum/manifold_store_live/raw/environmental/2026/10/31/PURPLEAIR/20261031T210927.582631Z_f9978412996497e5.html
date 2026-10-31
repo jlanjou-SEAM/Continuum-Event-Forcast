@@ -1,0 +1,2483 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading... by PurpleAir</title>
+  <meta property="og:title" content="Loading... by PurpleAir">
+  <meta property="og:url" content="https://api.purpleair.com/">
+  <meta name="twitter:title" content="Loading... by PurpleAir">
+  <link rel="canonical" href="https://api.purpleair.com/">
+  <script defer src="https://www.purpleair.com/site-frame/theme.js"></script>
+  <meta name="pa-api-origin" content="https://www.purpleair.com">
+  <meta name="pa-cookie-domain" content=".purpleair.com">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="/vendor/prettify.css" rel="stylesheet" media="screen">
+  <link href="/vendor/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="/css/style.css" rel="stylesheet" media="screen, print">
+  <script src="/vendor/polyfill.js"></script>
+ </head>
+ <body class="pa-frame-app-shell">
+  <a class="in-page-link visually-hidden skip-link" href="#MainContent">Skip to content</a>
+  <div id="site-frame-header" class="site-frame-section" data-pa-static-site-frame="true">
+   <style>.pa-site-frame {
+  /*
+   * --pa-frame-rem pins the frame's sizing base to a fixed 16px so every frame
+   * length resolves against it instead of the host page's `html { font-size }`.
+   * Merged hosts (map, API docs) set `html { font-size: 10px }`, which would
+   * otherwise shrink every frame `rem` to 62.5%; multiplying by this custom
+   * property keeps the frame's absolute sizes identical across every host.
+   */
+  --pa-frame-rem: 16px;
+
+  box-sizing: border-box;
+  color: var(--pa-frame-text);
+  font-family: system-ui, sans-serif;
+  font-size: calc(1 * var(--pa-frame-rem));
+  line-height: 1.5;
+}
+
+.pa-site-frame *,
+.pa-site-frame *::before,
+.pa-site-frame *::after {
+  box-sizing: inherit;
+}
+
+/*
+ * Undoes host rules on plain elements, such as Discourse's `button`, `li`, and `form`, for every
+ * element type the frame renders. The search overlay is mounted at body level, outside
+ * `.pa-site-frame`, so it is named here too. At 0,1,0 the reset still yields to every frame
+ * component rule that follows it.
+ */
+:is(.pa-site-frame, .pa-search-overlay) :where(
+  a,
+  button,
+  details,
+  summary,
+  form,
+  ul,
+  li,
+  h2,
+  p,
+  strong,
+  address,
+  img,
+  svg,
+  nav,
+  section,
+  div,
+  span
+) {
+  all: revert;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+.pa-site-frame :where(strong) {
+  font-weight: bolder;
+}
+
+/*
+ * Host form-control rules carry attribute selectors -- Discourse ships `input[type=search]`
+ * (0,1,1), `input[type=search]:focus` (0,2,1), `input[type=checkbox]` (0,1,1), and
+ * `label:not(...)` (0,1,1) -- so the 0,1,0 reset above cannot undo them. The overlay and the
+ * consent banner, the only surfaces with form controls, each have a fixed id, and resetting under
+ * that id outranks any class-based host rule. Component rules for these controls are scoped under
+ * the same id so they in turn outrank this reset.
+ */
+:is(#pa-site-frame-search-overlay, #pa-cookie-consent) :where(input, label) {
+  all: revert;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+.pa-site-frame [hidden] {
+  display: none !important;
+}
+
+/*
+ * Frame rules never set `color` or `text-decoration` on a link. They set these two properties
+ * instead, and the rule below applies them in every link state.
+ *
+ * A host stylesheet's link rules (Discourse ships `a:visited`, `a:hover`, and `a:active`, each
+ * 0,1,1, setting color, text-decoration, and cursor) outrank any single-class frame rule, so a
+ * visited or pressed frame link took the host's link color. Routing every link's color through one
+ * rule at 0,2,1 means that rule is the only one that has to outrank the host; a new link style
+ * needs no state-by-state override of its own. `browser-tests/hostStyleIsolation.spec.ts` checks
+ * this in a real browser, with each state forced.
+ */
+:is(.pa-site-frame, .pa-search-overlay) :is(a:link, a:visited) {
+  color: var(--pa-frame-anchor-color);
+  cursor: pointer;
+  text-decoration: var(--pa-frame-anchor-decoration);
+}
+
+.pa-site-frame :where(a) {
+  --pa-frame-anchor-color: var(--pa-frame-link);
+  --pa-frame-anchor-decoration: none;
+}
+
+.pa-site-frame :where(a:hover) {
+  --pa-frame-anchor-color: var(--pa-frame-link-hover);
+  --pa-frame-anchor-decoration: underline;
+
+  text-underline-offset: 0.2em;
+}
+
+.pa-site-frame :where(a:focus-visible, button:focus-visible, summary:focus-visible) {
+  border-radius: calc(0.25 * var(--pa-frame-rem));
+  outline: calc(0.1875 * var(--pa-frame-rem)) solid var(--pa-frame-focus);
+  outline-offset: calc(0.1875 * var(--pa-frame-rem));
+}
+
+.pa-site-frame :where(a[aria-current="page"]) {
+  --pa-frame-anchor-decoration: underline;
+
+  font-weight: 700;
+  text-underline-offset: 0.25em;
+}
+
+.pa-site-frame :where(ul) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pa-site-frame :where(button, summary) {
+  cursor: pointer;
+  font: inherit;
+}
+
+/*
+ * Every summary in the frame is a custom trigger -- an avatar circle, a hamburger glyph -- so none
+ * shows the native disclosure triangle. Stated once here so a new `<details>` inherits it, rather
+ * than per component where the copies drifted apart.
+ *
+ * Three declarations because the engines disagree on what draws the marker: WebKit honors only
+ * `::-webkit-details-marker`, while Blink and Gecko render it through `display: list-item` and drop
+ * it for either `list-style: none` or `::marker`. Plain descendant selectors, not `:where()`, so a
+ * host stylesheet on a foreign origin cannot outrank them.
+ *
+ * `display` and `cursor` restate the browser defaults against Discourse's `summary:first-of-type`
+ * (0,1,1). The tie goes to the frame because its `<style>` sits in the body, after every host
+ * stylesheet in the head; the component summary rules that follow keep overriding both.
+ */
+.pa-site-frame summary {
+  cursor: pointer;
+  display: list-item;
+  list-style: none;
+}
+
+.pa-site-frame summary::marker {
+  content: none;
+}
+
+.pa-site-frame summary::-webkit-details-marker {
+  display: none;
+}
+
+.pa-site-frame__visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: calc(0.0625 * var(--pa-frame-rem));
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: calc(0.0625 * var(--pa-frame-rem));
+}
+
+.pa-site-frame--header {
+  background-color: var(--pa-frame-surface);
+  color: var(--pa-frame-inverse);
+  position: relative;
+  z-index: 1000;
+}
+
+.pa-site-frame__main-header {
+  background-color: var(--pa-frame-brand);
+  border-block-end: calc(0.0625 * var(--pa-frame-rem)) solid var(--pa-frame-header-border);
+  position: relative;
+}
+
+.pa-site-frame__wave {
+  color: var(--pa-frame-inverse);
+  pointer-events: none;
+  position: absolute;
+}
+
+.pa-site-frame__wave path {
+  fill: none;
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-width: calc(0.125 * var(--pa-frame-rem));
+}
+
+.pa-site-frame__wave--header {
+  height: var(--pa-frame-header-height);
+  inset: 0 0 auto auto;
+  width: 50%;
+}
+
+.pa-site-frame__wave--header path:nth-child(1) {
+  opacity: 0.15;
+  stroke-width: 2.5;
+}
+
+.pa-site-frame__wave--header path:nth-child(2),
+.pa-site-frame__wave--header path:nth-child(3) {
+  opacity: 0.1;
+  stroke-width: 2;
+}
+
+.pa-site-frame__wave--header path:nth-child(4),
+.pa-site-frame__wave--header path:nth-child(5) {
+  opacity: 0.06;
+  stroke-width: 1.5;
+}
+
+.pa-site-frame__wave--footer {
+  color: var(--pa-frame-wave-primary);
+  height: calc(7.5 * var(--pa-frame-rem));
+  inset: 0 0 auto;
+  width: 100%;
+}
+
+.pa-site-frame__wave--footer path:nth-child(1) {
+  opacity: 0.12;
+  stroke-width: 2;
+}
+
+.pa-site-frame__wave--footer path:nth-child(2) {
+  opacity: 0.08;
+  stroke-width: 1.5;
+}
+
+.pa-site-frame__wave--footer path:nth-child(3) {
+  opacity: 0.06;
+  stroke-width: 1.5;
+}
+
+.pa-site-frame__wave--footer path:nth-child(4) {
+  color: var(--pa-frame-wave-secondary);
+  opacity: 0.07;
+  stroke-width: 1;
+}
+
+.pa-site-frame__wave--footer path:nth-child(5) {
+  color: var(--pa-frame-wave-secondary);
+  opacity: 0.05;
+  stroke-width: 1;
+}
+
+.pa-site-frame__header-inner {
+  align-items: center;
+  display: flex;
+  gap: calc(1 * var(--pa-frame-rem));
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: var(--pa-frame-content-max-width);
+  min-height: var(--pa-frame-header-height);
+  padding-inline: var(--pa-frame-compact-horizontal-padding);
+}
+
+.pa-site-frame__logo {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.pa-site-frame__logo img {
+  height: calc(2.25 * var(--pa-frame-rem));
+  object-fit: contain;
+  width: calc(8.75 * var(--pa-frame-rem));
+}
+
+.pa-site-frame__primary-navigation {
+  display: flex;
+  flex: 1 1 auto;
+  gap: calc(0.125 * var(--pa-frame-rem));
+  justify-content: center;
+}
+
+.pa-site-frame__mega-trigger {
+  --pa-frame-anchor-color: var(--pa-frame-trigger-text);
+
+  border-radius: calc(0.375 * var(--pa-frame-rem));
+  font-size: calc(0.875 * var(--pa-frame-rem));
+  font-weight: 500;
+  line-height: normal;
+  padding: calc(0.5 * var(--pa-frame-rem)) calc(0.75 * var(--pa-frame-rem));
+}
+
+.pa-site-frame__account-menu summary {
+  /* Flex contract matches www UserMenu avatarButton: a list-item summary with
+   * inherited line-height:1.5 grows ~6px under a photo <img>, so align-items:center
+   * on header-actions lifts the circle above search/cart. */
+  align-items: center;
+  color: var(--pa-frame-inverse);
+  display: inline-flex;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 0;
+  padding: var(--pa-frame-avatar-padding);
+}
+
+/*
+ * The avatar circle, which holds the visitor's initials until the runtime replaces them with the
+ * profile photo. Both states share this box so the swap does not move the header: the image fills
+ * the circle at the same size the initials occupy.
+ */
+.pa-site-frame__avatar {
+  align-items: center;
+  /* brand-dark: trigger-hover is a translucent wash and washes initials out on the purple header. */
+  background-color: var(--pa-frame-brand-dark);
+  border-radius: 50%;
+  color: var(--pa-frame-inverse);
+  display: flex;
+  font-size: var(--pa-frame-avatar-font-size);
+  height: var(--pa-frame-avatar-size);
+  justify-content: center;
+  overflow: hidden;
+  width: var(--pa-frame-avatar-size);
+}
+
+.pa-site-frame__avatar img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.pa-site-frame__mega-trigger:hover,
+.pa-site-frame__mega-trigger:focus-visible,
+.pa-site-frame__mega-trigger[aria-current="page"],
+.pa-site-frame__mega-trigger[data-pa-active-section] {
+  --pa-frame-anchor-color: var(--pa-frame-inverse);
+  --pa-frame-anchor-decoration: none;
+
+  background-color: var(--pa-frame-trigger-hover);
+}
+
+.pa-site-frame__account-menu ul {
+  /* Match www UserMenu: minWidth 200, raised shadow, no border, no outer padding. */
+  background-color: var(--pa-frame-surface);
+  border-radius: calc(0.5 * var(--pa-frame-rem));
+  box-shadow: var(--pa-frame-overlay-shadow);
+  list-style: none;
+  margin: 0;
+  min-width: calc(12.5 * var(--pa-frame-rem));
+  /* Clip row hover wash to the rounded corners (www dropdown overflow:hidden). */
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: calc(100% + calc(0.25 * var(--pa-frame-rem)));
+}
+
+.pa-site-frame__account-email {
+  /* www UserMenu TEXT_SOFT (#666 / text.soft). */
+  color: var(--pa-frame-text-soft);
+  /* FONT_SIZE.SM (13px) */
+  font-size: calc(0.8125 * var(--pa-frame-rem));
+  line-height: normal;
+  /* SPACING.MD / SM */
+  padding: calc(0.75 * var(--pa-frame-rem)) calc(0.75 * var(--pa-frame-rem)) calc(0.5 * var(--pa-frame-rem));
+  word-break: break-all;
+}
+
+.pa-site-frame__account-divider {
+  background-color: var(--pa-frame-border);
+  height: 1px;
+  /* SPACING.MD horizontal inset like www UserMenu divider */
+  margin-inline: calc(0.75 * var(--pa-frame-rem));
+  padding: 0;
+}
+
+.pa-site-frame__account-menu a,
+.pa-site-frame__account-menu button {
+  /* `color` styles the Sign Out button; the menu's links take the anchor properties. */
+  --pa-frame-anchor-color: var(--pa-frame-text);
+  --pa-frame-anchor-decoration: none;
+
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  color: var(--pa-frame-text);
+  cursor: pointer;
+  display: flex;
+  /* Host user-agent button styles must not enlarge Sign Out past link rows. */
+  font: inherit;
+  /* FONT_SIZE.MD (14px) -- host pages often inflate inherited body text. */
+  font-size: calc(0.875 * var(--pa-frame-rem));
+  font-weight: 400;
+  gap: calc(0.75 * var(--pa-frame-rem));
+  line-height: normal;
+  /* SPACING.MD */
+  padding: calc(0.75 * var(--pa-frame-rem));
+  text-align: start;
+  width: 100%;
+}
+
+.pa-site-frame__account-menu a:hover,
+.pa-site-frame__account-menu button:hover {
+  /* surface.subtle -- same wash as www UserMenu menuItemHovered (BG_SUBTLE_100). */
+  background-color: var(--pa-frame-footer-surface);
+}
+
+/*
+ * Anchored to the header (its positioned ancestor) like the React
+ * DesktopMenu panel, not the viewport: a fixed panel detaches from the
+ * header whenever content sits above it (skip link, host banners, scroll).
+ */
+.pa-site-frame__mega-panel {
+  background-color: var(--pa-frame-surface);
+  border-block-end: calc(0.0625 * var(--pa-frame-rem)) solid var(--pa-frame-border);
+  box-shadow: var(--pa-frame-mega-shadow);
+  color: var(--pa-frame-text);
+  inset: calc(var(--pa-frame-header-height) + calc(0.0625 * var(--pa-frame-rem))) 0 auto;
+  position: absolute;
+  z-index: 999;
+}
+
+.pa-site-frame__mega-panel-inner {
+  display: flex;
+  margin: 0 auto;
+  max-width: var(--pa-frame-content-max-width);
+  padding: calc(1.25 * var(--pa-frame-rem));
+}
+
+.pa-site-frame__mega-panel section {
+  flex: 1;
+  min-width: calc(10 * var(--pa-frame-rem));
+  padding-inline: calc(1 * var(--pa-frame-rem));
+}
+
+.pa-site-frame__mega-panel h2 {
+  color: var(--pa-frame-mega-heading-text);
+  font-size: calc(0.75 * var(--pa-frame-rem));
+  font-weight: 700;
+  letter-spacing: calc(0.05 * var(--pa-frame-rem));
+  line-height: normal;
+  margin: 0 0 calc(0.25 * var(--pa-frame-rem));
+  padding-inline: calc(0.5 * var(--pa-frame-rem));
+  text-transform: uppercase;
+}
+
+.pa-site-frame__mega-panel a {
+  --pa-frame-anchor-color: var(--pa-frame-mega-link-text);
+
+  border-radius: calc(0.25 * var(--pa-frame-rem));
+  display: block;
+  font-size: calc(0.875 * var(--pa-frame-rem));
+  line-height: normal;
+  padding: calc(0.5 * var(--pa-frame-rem));
+}
+
+.pa-site-frame__mega-panel a:hover,
+.pa-site-frame__mega-panel a[aria-current="page"] {
+  --pa-frame-anchor-decoration: none;
+
+  background-color: var(--pa-frame-footer-surface);
+}
+
+.pa-site-frame__mega-panel a[aria-current="page"] {
+  --pa-frame-anchor-color: var(--pa-frame-brand);
+
+  background-color: var(--pa-frame-brand-tint);
+  font-weight: 600;
+}
+
+.pa-site-frame__sub-navigation {
+  background-color: var(--pa-frame-surface);
+  border-block-end: calc(0.0625 * var(--pa-frame-rem)) solid var(--pa-frame-sub-navigation-border);
+  box-shadow: var(--pa-frame-subtle-shadow);
+  color: var(--pa-frame-sub-navigation-text);
+  overflow-x: auto;
+  overscroll-behavior-inline: none;
+  scrollbar-width: none;
+}
+
+.pa-site-frame__sub-navigation::-webkit-scrollbar {
+  display: none;
+}
+
+.pa-site-frame__sub-navigation > div {
+  align-items: center;
+  display: flex;
+  gap: calc(0.25 * var(--pa-frame-rem));
+  justify-content: center;
+  margin: 0 auto;
+  min-width: max-content;
+  padding-inline: calc(1 * var(--pa-frame-rem));
+}
+
+.pa-site-frame__sub-navigation a {
+  --pa-frame-anchor-color: var(--pa-frame-sub-navigation-text);
+
+  border-block-end: calc(0.125 * var(--pa-frame-rem)) solid transparent;
+  font-size: calc(0.8125 * var(--pa-frame-rem));
+  font-weight: 500;
+  line-height: normal;
+  padding: calc(0.75 * var(--pa-frame-rem));
+}
+
+.pa-site-frame__sub-navigation a:hover {
+  --pa-frame-anchor-color: var(--pa-frame-sub-navigation-text);
+  --pa-frame-anchor-decoration: none;
+}
+
+.pa-site-frame__sub-navigation a[aria-current="page"] {
+  --pa-frame-anchor-color: var(--pa-frame-brand);
+  --pa-frame-anchor-decoration: none;
+
+  border-block-end-color: var(--pa-frame-brand);
+  font-weight: 600;
+}
+
+.pa-site-frame__header-actions {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  gap: calc(0.75 * var(--pa-frame-rem));
+}
+
+.pa-site-frame__search-toggle {
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  border-radius: calc(0.375 * var(--pa-frame-rem));
+  color: var(--pa-frame-inverse);
+  display: inline-flex;
+  height: var(--pa-frame-header-action-size);
+  justify-content: center;
+  padding: 0;
+  width: var(--pa-frame-header-action-size);
+}
+
+.pa-site-frame__sign-out-icon {
+  fill: none;
+  flex: none;
+  /* 16px beside the 14px desktop row label, as in www UserMenu. */
+  height: calc(1 * var(--pa-frame-rem));
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  width: calc(1 * var(--pa-frame-rem));
+}
+
+.pa-site-frame__search-icon {
+  fill: none;
+  height: var(--pa-frame-header-action-icon-size);
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  width: var(--pa-frame-header-action-icon-size);
+}
+
+/*
+ * Federated search overlay. Rendered at document.body level by theme.js, so it
+ * escapes the header stacking context; the very high z-index keeps it above
+ * full-bleed map controls (the map geocoder sits at ~10002).
+ */
+.pa-search-overlay {
+  align-items: flex-start;
+  display: flex;
+  /* Match `.pa-site-frame` so body-mounted chrome does not inherit host typography. */
+  font-family: system-ui, sans-serif;
+  font-size: calc(1 * var(--pa-frame-rem));
+  inset: 0;
+  justify-content: center;
+  line-height: 1.5;
+  position: fixed;
+  z-index: 2147483000;
+}
+
+.pa-search-overlay[hidden] {
+  display: none;
+}
+
+.pa-search-overlay__backdrop {
+  background: var(--pa-frame-scrim);
+  inset: 0;
+  position: absolute;
+}
+
+.pa-search-overlay__panel {
+  background: var(--pa-frame-surface);
+  border-radius: calc(0.75 * var(--pa-frame-rem));
+  box-shadow: var(--pa-frame-overlay-shadow);
+  color: var(--pa-frame-text);
+  display: flex;
+  flex-direction: column;
+  margin-top: calc(5 * var(--pa-frame-rem));
+  max-height: 70vh;
+  max-width: calc(40 * var(--pa-frame-rem));
+  overflow: hidden;
+  position: relative;
+  width: calc(100% - calc(2 * var(--pa-frame-rem)));
+  z-index: 1;
+}
+
+.pa-search-overlay__form {
+  align-items: center;
+  border-block-end: calc(0.0625 * var(--pa-frame-rem)) solid var(--pa-frame-border);
+  display: flex;
+  gap: calc(0.5 * var(--pa-frame-rem));
+  padding: calc(0.75 * var(--pa-frame-rem)) calc(1 * var(--pa-frame-rem));
+}
+
+#pa-site-frame-search-overlay .pa-search-overlay__input {
+  background: transparent;
+  border: 0;
+  color: var(--pa-frame-text);
+  flex: 1 1 auto;
+  font-size: calc(1.125 * var(--pa-frame-rem));
+  /* The control's own line box, not the frame's 1.5, which would make the field 6px taller. */
+  line-height: normal;
+  min-width: 0;
+  outline: none;
+  padding: calc(0.5 * var(--pa-frame-rem)) 0;
+}
+
+.pa-search-overlay__close {
+  background: transparent;
+  border: 0;
+  color: var(--pa-frame-text);
+  cursor: pointer;
+  font-size: calc(1 * var(--pa-frame-rem));
+  font-weight: 600;
+  line-height: 1.25;
+  padding: calc(0.5 * var(--pa-frame-rem)) calc(0.75 * var(--pa-frame-rem));
+}
+
+.pa-search-overlay__results {
+  overflow-y: auto;
+  padding: calc(0.5 * var(--pa-frame-rem)) 0;
+}
+
+.pa-search-overlay__message {
+  color: var(--pa-frame-caption);
+  margin: 0;
+  padding: calc(1 * var(--pa-frame-rem));
+}
+
+.pa-search-overlay__group {
+  padding: calc(0.5 * var(--pa-frame-rem)) 0;
+}
+
+.pa-search-overlay__group-heading {
+  color: var(--pa-frame-caption);
+  font-size: calc(0.75 * var(--pa-frame-rem));
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+  padding: calc(0.25 * var(--pa-frame-rem)) calc(1 * var(--pa-frame-rem));
+  text-transform: uppercase;
+}
+
+.pa-search-overlay__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pa-search-overlay__expand {
+  background: transparent;
+  border: 0;
+  color: var(--pa-frame-link);
+  cursor: pointer;
+  font: inherit;
+  font-size: calc(0.875 * var(--pa-frame-rem));
+  font-weight: 600;
+  padding: calc(0.5 * var(--pa-frame-rem)) calc(1 * var(--pa-frame-rem));
+  text-align: start;
+}
+
+.pa-search-overlay__expand:hover,
+.pa-search-overlay__expand:focus {
+  color: var(--pa-frame-link-hover);
+}
+
+.pa-search-overlay__result {
+  --pa-frame-anchor-color: var(--pa-frame-text);
+  --pa-frame-anchor-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: calc(0.125 * var(--pa-frame-rem));
+  padding: calc(0.5 * var(--pa-frame-rem)) calc(1 * var(--pa-frame-rem));
+}
+
+.pa-search-overlay__result:hover,
+.pa-search-overlay__result:focus {
+  background: var(--pa-frame-footer-surface);
+}
+
+.pa-search-overlay__result-title {
+  font-weight: 600;
+}
+
+.pa-search-overlay__result-snippet {
+  color: var(--pa-frame-caption);
+  font-size: calc(0.875 * var(--pa-frame-rem));
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pa-search-overlay__advanced {
+  --pa-frame-anchor-color: var(--pa-frame-link);
+  --pa-frame-anchor-decoration: none;
+
+  border-block-start: calc(0.0625 * var(--pa-frame-rem)) solid var(--pa-frame-border);
+  display: block;
+  font-size: calc(1 * var(--pa-frame-rem));
+  font-weight: 600;
+  padding: calc(0.75 * var(--pa-frame-rem)) calc(1 * var(--pa-frame-rem));
+}
+
+.pa-search-overlay__advanced:hover,
+.pa-search-overlay__advanced:focus {
+  --pa-frame-anchor-color: var(--pa-frame-link-hover);
+}
+
+.pa-site-frame__cart-link {
+  --pa-frame-anchor-color: var(--pa-frame-inverse);
+  --pa-frame-anchor-decoration: none;
+
+  align-items: center;
+  border-radius: calc(0.375 * var(--pa-frame-rem));
+  display: inline-flex;
+  height: var(--pa-frame-header-action-size);
+  justify-content: center;
+  position: relative;
+  width: var(--pa-frame-header-action-size);
+  z-index: 2;
+}
+
+.pa-site-frame__cart-icon {
+  fill: currentcolor;
+  height: var(--pa-frame-header-action-icon-size);
+  width: var(--pa-frame-header-action-icon-size);
+}
+
+.pa-site-frame__cart-badge {
+  align-items: center;
+  background-color: var(--pa-frame-badge);
+  border-radius: 999px;
+  color: var(--pa-frame-inverse);
+  display: inline-flex;
+  font-size: calc(0.6875 * var(--pa-frame-rem));
+  font-weight: 700;
+  justify-content: center;
+  min-height: calc(1.125 * var(--pa-frame-rem));
+  min-width: calc(1.125 * var(--pa-frame-rem));
+  padding-inline: calc(0.25 * var(--pa-frame-rem));
+  position: absolute;
+  right: 0;
+  top: calc(0.125 * var(--pa-frame-rem));
+}
+
+.pa-site-frame--header .pa-site-frame__map-action {
+  --pa-frame-anchor-color: var(--pa-frame-brand);
+  --pa-frame-anchor-decoration: none;
+
+  align-items: center;
+  background-color: var(--pa-frame-surface);
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: calc(0.875 * var(--pa-frame-rem));
+  font-weight: 700;
+  gap: calc(0.375 * var(--pa-frame-rem));
+  letter-spacing: calc(0.01875 * var(--pa-frame-rem));
+  line-height: normal;
+  padding: calc(0.4375 * var(--pa-frame-rem)) calc(1 * var(--pa-frame-rem));
+}
+
+.pa-site-frame__map-action svg {
+  fill: none;
+  height: calc(0.9375 * var(--pa-frame-rem));
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  width: calc(0.9375 * var(--pa-frame-rem));
+}
+
+.pa-site-frame__auth-link {
+  --pa-frame-anchor-color: var(--pa-frame-inverse);
+  --pa-frame-anchor-decoration: none;
+
+  background-color: var(--pa-frame-brand);
+  border-radius: calc(0.375 * var(--pa-frame-rem));
+  font-size: calc(0.875 * var(--pa-frame-rem));
+  font-weight: 600;
+  line-height: normal;
+  padding: calc(0.5 * var(--pa-frame-rem)) calc(0.75 * var(--pa-frame-rem));
+  position: relative;
+  z-index: 2;
+}
+
+.pa-site-frame__account-menu {
+  position: relative;
+}
+
+.pa-site-frame__account-menu ul {
+  right: 0;
+}
+
+.pa-site-frame__mobile-navigation {
+  display: none;
+}
+
+/*
+ * In-menu Search row is only for the narrow disclosure panel. Hide it on wide
+ * viewports so it is never focusable when the hamburger is display:none.
+ */
+.pa-site-frame__mobile-search {
+  display: none;
+}
+
+.pa-site-frame--footer {
+  background-color: var(--pa-frame-footer-surface);
+  border-block-start: calc(0.0625 * var(--pa-frame-rem)) solid var(--pa-frame-border);
+  color: var(--pa-frame-soft-text);
+  overflow: hidden;
+  position: relative;
+}
+
+/*
+ * The frame ships both auth branches and the consumer reveals one. The `hidden` attribute alone is
+ * not enough: the UA rule it relies on loses to any author `display` on these elements, so the
+ * unrevealed branch would render alongside the revealed one. Two compound selectors put this above
+ * the single-class component rules that set display.
+ */
+.pa-site-frame [data-pa-auth][hidden] {
+  display: none;
+}
+
+/*
+ * Footer links take the footer's own muted palette. Without this rule they fall through to
+ * `.pa-site-frame :where(a)` and render the body link purple against the grey footer surface,
+ * while the headings, captions, and social links beside them stay grey. The selector is a plain
+ * descendant (0,1,1) so it outranks that `:where()`-wrapped rule; wrapping this one in `:where()`
+ * would tie at (0,1,0) and lose on source order. Hover restores the affordance that dropping the
+ * link color removes.
+ */
+.pa-site-frame--footer a {
+  --pa-frame-anchor-color: var(--pa-frame-soft-text);
+}
+
+.pa-site-frame--footer a:hover {
+  --pa-frame-anchor-color: var(--pa-frame-text);
+  --pa-frame-anchor-decoration: underline;
+}
+
+.pa-site-frame__footer-inner {
+  margin: 0 auto;
+  max-width: var(--pa-frame-footer-content-max-width);
+  padding: calc(4 * var(--pa-frame-rem)) var(--pa-frame-compact-horizontal-padding) calc(2 * var(--pa-frame-rem));
+  position: relative;
+}
+
+.pa-site-frame__footer-columns {
+  display: grid;
+  gap: calc(2 * var(--pa-frame-rem));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.pa-site-frame__footer-columns h2,
+.pa-site-frame__image-credits h2 {
+  color: var(--pa-frame-heading);
+  font-size: calc(1 * var(--pa-frame-rem));
+  letter-spacing: calc(0.03125 * var(--pa-frame-rem));
+  margin: 0 0 calc(0.75 * var(--pa-frame-rem));
+  text-transform: uppercase;
+}
+
+.pa-site-frame__footer-columns li + li {
+  margin-block-start: calc(0.5 * var(--pa-frame-rem));
+}
+
+.pa-site-frame__footer-columns address {
+  display: flex;
+  flex-direction: column;
+  font-size: calc(0.75 * var(--pa-frame-rem));
+  font-style: normal;
+  margin-block-start: calc(0.75 * var(--pa-frame-rem));
+}
+
+.pa-site-frame__image-credits {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-block: calc(3 * var(--pa-frame-rem)) calc(1.5 * var(--pa-frame-rem));
+  text-align: center;
+}
+
+.pa-site-frame__image-credits p {
+  font-size: calc(0.875 * var(--pa-frame-rem));
+  margin: 0 0 calc(0.5 * var(--pa-frame-rem));
+}
+
+.pa-site-frame__social-links {
+  display: flex;
+  gap: calc(1.5 * var(--pa-frame-rem));
+  justify-content: center;
+  margin-block-end: calc(2 * var(--pa-frame-rem));
+}
+
+.pa-site-frame__social-links a {
+  --pa-frame-anchor-color: var(--pa-frame-soft-text);
+
+  display: inline-flex;
+  padding: calc(0.5 * var(--pa-frame-rem));
+}
+
+.pa-site-frame__social-links svg {
+  fill: currentcolor;
+  height: calc(1.25 * var(--pa-frame-rem));
+  width: calc(1.25 * var(--pa-frame-rem));
+}
+
+.pa-site-frame__footer-bottom {
+  align-items: center;
+  border-block-start: calc(0.0625 * var(--pa-frame-rem)) solid var(--pa-frame-border);
+  display: flex;
+  flex-direction: column;
+  gap: calc(0.75 * var(--pa-frame-rem));
+  padding-block-start: calc(1.5 * var(--pa-frame-rem));
+}
+
+.pa-site-frame__legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: calc(0.75 * var(--pa-frame-rem));
+  gap: calc(0.5 * var(--pa-frame-rem)) calc(1 * var(--pa-frame-rem));
+  justify-content: center;
+}
+
+.pa-site-frame__footer-bottom p {
+  color: var(--pa-frame-caption);
+  font-size: calc(0.875 * var(--pa-frame-rem));
+  margin: 0;
+}
+
+.pa-site-frame__footer-bottom .pa-site-frame__trademark-notice {
+  font-size: calc(0.75 * var(--pa-frame-rem));
+  text-align: center;
+}
+
+/*
+ * The wrapper only pins the consent to the bottom and provides the float inset;
+ * the visible surface (background, radius, shadow) lives on __inner so the
+ * banner reads as a centered floating card, matching the universal (www) React
+ * consent rather than a full-bleed bar. The 16px (1 * rem) padding is the gap
+ * between the card and the viewport edges.
+ */
+.pa-cookie-consent {
+  bottom: 0;
+  color: var(--pa-frame-text);
+  inset-inline: 0;
+  padding: calc(1 * var(--pa-frame-rem));
+  position: fixed;
+  z-index: 1003;
+}
+
+.pa-cookie-consent[hidden] {
+  display: none !important;
+}
+
+/*
+ * Card surface matching universal's consent: max-width 960px (60 * rem),
+ * 12px (0.75 * rem) corners, and the 0 4px 24px 12% elevation shadow. Widths
+ * and radii are expressed against --pa-frame-rem so they stay fixed regardless
+ * of the host page's html font-size.
+ */
+.pa-cookie-consent__inner {
+  background-color: var(--pa-frame-surface);
+  border-radius: calc(0.75 * var(--pa-frame-rem));
+  box-shadow: var(--pa-frame-mega-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: calc(1 * var(--pa-frame-rem));
+  margin: 0 auto;
+  max-width: calc(60 * var(--pa-frame-rem));
+  padding: calc(1.25 * var(--pa-frame-rem));
+}
+
+/*
+ * Simple and customize views are mutually exclusive; only one is visible at a
+ * time. The simple prompt lays out as [message | actions] on wide screens (see
+ * the >=40rem query) and stacks on narrow ones; the customize panel is always a
+ * single column so the category toggles stay readable.
+ */
+.pa-cookie-consent__simple,
+.pa-cookie-consent__customize {
+  display: flex;
+  flex-direction: column;
+  gap: calc(1 * var(--pa-frame-rem));
+}
+
+.pa-cookie-consent__simple[hidden],
+.pa-cookie-consent__customize[hidden] {
+  display: none !important;
+}
+
+.pa-cookie-consent__title {
+  color: var(--pa-frame-heading);
+  font-size: calc(1.125 * var(--pa-frame-rem));
+  font-weight: 700;
+  margin: 0 0 calc(0.25 * var(--pa-frame-rem));
+}
+
+.pa-cookie-consent__message p,
+.pa-cookie-consent__subtitle {
+  color: var(--pa-frame-soft-text);
+  font-size: calc(0.9375 * var(--pa-frame-rem));
+  line-height: 1.4;
+  margin: 0;
+}
+
+.pa-cookie-consent__policy-link {
+  --pa-frame-anchor-color: var(--pa-frame-link);
+  --pa-frame-anchor-decoration: underline;
+
+  font-weight: 600;
+  text-underline-offset: 0.2em;
+}
+
+/* Scrollable category list, matching the universal panel's ~300px cap. */
+.pa-cookie-consent__options {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  max-height: calc(18.75 * var(--pa-frame-rem));
+  overflow-y: auto;
+  padding: 0;
+}
+
+.pa-cookie-consent__category {
+  align-items: center;
+  border-bottom: calc(0.0625 * var(--pa-frame-rem)) solid var(--pa-frame-border);
+  display: flex;
+  gap: calc(1 * var(--pa-frame-rem));
+  justify-content: space-between;
+  padding: calc(0.75 * var(--pa-frame-rem)) 0;
+}
+
+.pa-cookie-consent__category-info {
+  display: flex;
+  flex-direction: column;
+  gap: calc(0.125 * var(--pa-frame-rem));
+}
+
+.pa-cookie-consent__category-label {
+  color: var(--pa-frame-heading);
+  font-size: calc(1 * var(--pa-frame-rem));
+  font-weight: 600;
+}
+
+.pa-cookie-consent__category-desc {
+  color: var(--pa-frame-caption);
+  font-size: calc(0.8125 * var(--pa-frame-rem));
+  line-height: 1.4;
+}
+
+.pa-cookie-consent__always-on {
+  color: var(--pa-frame-soft-text);
+  flex: 0 0 auto;
+  font-size: calc(0.875 * var(--pa-frame-rem));
+  font-weight: 600;
+}
+
+/* Checkbox rendered as a switch: the input is transparent over a styled track. */
+#pa-cookie-consent .pa-cookie-consent__toggle {
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+#pa-cookie-consent .pa-cookie-consent__toggle input {
+  cursor: pointer;
+  height: 100%;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.pa-cookie-consent__toggle-track {
+  background-color: var(--pa-frame-border);
+  border-radius: calc(0.75 * var(--pa-frame-rem));
+  height: calc(1.5 * var(--pa-frame-rem));
+  position: relative;
+  transition: background-color 0.15s ease;
+  width: calc(2.5 * var(--pa-frame-rem));
+}
+
+.pa-cookie-consent__toggle-track::before {
+  background-color: var(--pa-frame-surface);
+  border-radius: 50%;
+  content: "";
+  height: calc(1.125 * var(--pa-frame-rem));
+  left: calc(0.1875 * var(--pa-frame-rem));
+  position: absolute;
+  top: calc(0.1875 * var(--pa-frame-rem));
+  transition: transform 0.15s ease;
+  width: calc(1.125 * var(--pa-frame-rem));
+}
+
+.pa-cookie-consent__toggle input:checked + .pa-cookie-consent__toggle-track {
+  background-color: var(--pa-frame-brand);
+}
+
+.pa-cookie-consent__toggle input:checked + .pa-cookie-consent__toggle-track::before {
+  transform: translateX(calc(1 * var(--pa-frame-rem)));
+}
+
+.pa-cookie-consent__toggle input:focus-visible + .pa-cookie-consent__toggle-track {
+  outline: calc(0.125 * var(--pa-frame-rem)) solid var(--pa-frame-focus);
+  outline-offset: calc(0.125 * var(--pa-frame-rem));
+}
+
+.pa-cookie-consent__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(0.75 * var(--pa-frame-rem));
+  justify-content: flex-end;
+}
+
+.pa-cookie-consent__button {
+  border-radius: calc(0.5 * var(--pa-frame-rem));
+  cursor: pointer;
+  font-size: calc(0.9375 * var(--pa-frame-rem));
+  font-weight: 600;
+  line-height: normal;
+  padding: calc(0.625 * var(--pa-frame-rem)) calc(1.25 * var(--pa-frame-rem));
+}
+
+.pa-cookie-consent__button[hidden] {
+  display: none !important;
+}
+
+.pa-cookie-consent__button--primary {
+  background-color: var(--pa-frame-brand);
+  border: calc(0.0625 * var(--pa-frame-rem)) solid var(--pa-frame-brand);
+  color: var(--pa-frame-inverse);
+}
+
+.pa-cookie-consent__button--secondary {
+  background-color: var(--pa-frame-surface);
+  border: calc(0.0625 * var(--pa-frame-rem)) solid var(--pa-frame-border);
+  color: var(--pa-frame-text);
+}
+
+.pa-cookie-consent__button--ghost {
+  background-color: transparent;
+  border: calc(0.0625 * var(--pa-frame-rem)) solid transparent;
+  color: var(--pa-frame-soft-text);
+}
+
+.pa-cookie-consent__button--primary:hover,
+.pa-cookie-consent__button--primary:focus-visible {
+  background-color: var(--pa-frame-brand-dark);
+  border-color: var(--pa-frame-brand-dark);
+  color: var(--pa-frame-inverse);
+}
+
+.pa-cookie-consent__button--secondary:hover,
+.pa-cookie-consent__button--secondary:focus-visible {
+  background-color: var(--pa-frame-footer-surface);
+}
+
+.pa-cookie-consent__button--ghost:hover,
+.pa-cookie-consent__button--ghost:focus-visible {
+  background-color: var(--pa-frame-footer-surface);
+  color: var(--pa-frame-text);
+}
+
+@media (width >= 40rem) {
+  .pa-cookie-consent__inner {
+    padding-inline: calc(1.25 * var(--pa-frame-rem));
+  }
+
+  .pa-cookie-consent__simple {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .pa-cookie-consent__actions {
+    flex: 0 0 auto;
+  }
+
+  .pa-site-frame__header-inner {
+    padding-inline: var(--pa-frame-compact-horizontal-padding);
+  }
+
+  .pa-site-frame__footer-inner {
+    padding-inline: var(--pa-frame-horizontal-padding);
+  }
+
+  .pa-site-frame__footer-columns {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (width < 40rem) {
+  .pa-site-frame__header-inner {
+    align-items: center;
+  }
+
+  .pa-site-frame__primary-navigation {
+    display: none;
+  }
+
+  .pa-site-frame__mobile-navigation {
+    display: block;
+    position: static;
+    z-index: 2;
+  }
+
+  .pa-site-frame__mobile-navigation > summary {
+    align-items: center;
+    backdrop-filter: blur(calc(0.5 * var(--pa-frame-rem)));
+    background-color: var(--pa-frame-menu-glass-background);
+    border: calc(0.0625 * var(--pa-frame-rem)) solid var(--pa-frame-glass-border);
+    border-radius: calc(0.5 * var(--pa-frame-rem));
+    color: var(--pa-frame-inverse);
+    display: flex;
+    font-weight: 700;
+    height: var(--pa-frame-header-action-size);
+    justify-content: center;
+    width: var(--pa-frame-header-action-size);
+  }
+
+  .pa-site-frame__menu-icon {
+    fill: none;
+    height: var(--pa-frame-header-action-icon-size);
+    stroke: currentcolor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2.5;
+    width: var(--pa-frame-header-action-icon-size);
+  }
+
+  .pa-site-frame__menu-icon--close,
+  .pa-site-frame__mobile-navigation[open] .pa-site-frame__menu-icon--open {
+    display: none;
+  }
+
+  .pa-site-frame__mobile-navigation[open] .pa-site-frame__menu-icon--close {
+    display: block;
+  }
+
+  /*
+   * www MobileMenu identity: 44px brand avatar + email, then the Account band.
+   * Sized independently of the desktop header avatar (36px brand-dark).
+   */
+  .pa-site-frame__mobile-identity {
+    align-items: center;
+    display: flex;
+    gap: calc(0.75 * var(--pa-frame-rem));
+    padding: calc(0.5 * var(--pa-frame-rem)) calc(1 * var(--pa-frame-rem)) calc(0.75 * var(--pa-frame-rem));
+  }
+
+  .pa-site-frame__mobile-identity .pa-site-frame__avatar {
+    background-color: var(--pa-frame-brand);
+    flex: 0 0 auto;
+    font-size: calc(1.125 * var(--pa-frame-rem));
+    font-weight: 700;
+    height: calc(2.75 * var(--pa-frame-rem));
+    width: calc(2.75 * var(--pa-frame-rem));
+  }
+
+  .pa-site-frame__mobile-identity-email {
+    color: var(--pa-frame-text);
+    flex: 1 1 auto;
+    font-size: calc(1 * var(--pa-frame-rem));
+    font-weight: 600;
+    line-height: normal;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .pa-site-frame__mobile-navigation > div {
+    background-color: var(--pa-frame-surface);
+    border-block-end: calc(0.0625 * var(--pa-frame-rem)) solid var(--pa-frame-border);
+    box-shadow: var(--pa-frame-overlay-shadow);
+    color: var(--pa-frame-text);
+    /*
+     * Flush under the purple bar. top:100% is the main-header padding edge; the
+     * 1px border sits just below that, and without the negative margin a light
+     * hairline (or the outer header's white surface) reads as a gap between the
+     * header and the sheet. Zero block-start padding -- rows carry their own.
+     */
+    inset: 100% 0 auto;
+    margin-block-start: calc(-0.0625 * var(--pa-frame-rem));
+    max-height: 75vh;
+    overflow-y: auto;
+    padding-block: 0 calc(0.75 * var(--pa-frame-rem));
+    position: absolute;
+  }
+
+  .pa-site-frame__mobile-navigation h2 {
+    background-color: var(--pa-frame-footer-surface);
+    color: var(--pa-frame-mobile-band-text);
+    font-size: calc(0.75 * var(--pa-frame-rem));
+    font-weight: 700;
+    letter-spacing: calc(0.0625 * var(--pa-frame-rem));
+    line-height: normal;
+    margin: 0;
+    padding: calc(1 * var(--pa-frame-rem)) calc(1 * var(--pa-frame-rem)) calc(0.5 * var(--pa-frame-rem));
+    text-transform: uppercase;
+  }
+
+  .pa-site-frame__mobile-navigation li a {
+    --pa-frame-anchor-color: var(--pa-frame-text);
+
+    align-items: center;
+    display: flex;
+    font-size: calc(1 * var(--pa-frame-rem));
+    font-weight: 500;
+    justify-content: space-between;
+    line-height: normal;
+    padding: calc(0.75 * var(--pa-frame-rem)) calc(1 * var(--pa-frame-rem));
+  }
+
+  .pa-site-frame__mobile-navigation li a::after {
+    color: var(--pa-frame-mobile-chevron);
+    content: "›";
+    font-size: calc(1.125 * var(--pa-frame-rem));
+  }
+
+  .pa-site-frame__mobile-navigation li a[aria-current="page"] {
+    --pa-frame-anchor-color: var(--pa-frame-brand-dark);
+    --pa-frame-anchor-decoration: none;
+
+    background-color: var(--pa-frame-mobile-active-background);
+    font-weight: 500;
+  }
+
+  .pa-site-frame__mobile-navigation button {
+    background-color: transparent;
+    border: 0;
+    color: var(--pa-frame-badge);
+    font-size: calc(0.875 * var(--pa-frame-rem));
+    font-weight: 600;
+    line-height: normal;
+    padding: calc(0.75 * var(--pa-frame-rem)) calc(1 * var(--pa-frame-rem));
+    text-align: start;
+    width: 100%;
+  }
+
+  /*
+   * Neutral like the account rows above it (signing out loses no data); the icon, not red, makes
+   * it easy to find. Matches www MobileMenu's Sign Out row.
+   */
+  .pa-site-frame__mobile-navigation .pa-site-frame__mobile-sign-out {
+    align-items: center;
+    color: var(--pa-frame-text);
+    display: flex;
+    font-size: calc(1 * var(--pa-frame-rem));
+    font-weight: 500;
+    gap: calc(0.75 * var(--pa-frame-rem));
+  }
+
+  /* SPACING.LG inset, matching the mobile rows' padding. */
+  .pa-site-frame__mobile-navigation .pa-site-frame__account-divider {
+    margin-inline: calc(1 * var(--pa-frame-rem));
+  }
+
+  .pa-site-frame__mobile-sign-out .pa-site-frame__sign-out-icon {
+    /* 18px beside the 16px mobile row label. */
+    height: calc(1.125 * var(--pa-frame-rem));
+    width: calc(1.125 * var(--pa-frame-rem));
+  }
+
+  .pa-site-frame__mobile-auth-link {
+    --pa-frame-anchor-color: var(--pa-frame-inverse);
+
+    background-color: var(--pa-frame-brand);
+    border-radius: calc(0.5 * var(--pa-frame-rem));
+    display: block;
+    font-size: calc(1 * var(--pa-frame-rem));
+    font-weight: 600;
+    line-height: normal;
+    margin: calc(0.5 * var(--pa-frame-rem)) calc(0.75 * var(--pa-frame-rem));
+    padding: calc(0.75 * var(--pa-frame-rem));
+    text-align: center;
+  }
+
+  .pa-site-frame__cart-link {
+    backdrop-filter: blur(calc(0.5 * var(--pa-frame-rem)));
+    background-color: var(--pa-frame-glass-background);
+    border: calc(0.0625 * var(--pa-frame-rem)) solid var(--pa-frame-glass-border);
+    border-radius: calc(0.5 * var(--pa-frame-rem));
+  }
+
+  /*
+   * Narrow bar keeps cart | map | hamburger. Header Search moves into the menu
+   * (see .pa-site-frame__mobile-search) so Map stays visible without clipping.
+   */
+  .pa-site-frame__header-actions > .pa-site-frame__search-toggle {
+    display: none;
+  }
+
+  .pa-site-frame__mobile-navigation > div > .pa-site-frame__mobile-search {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    color: var(--pa-frame-text);
+    display: block;
+    font-size: calc(1 * var(--pa-frame-rem));
+    font-weight: 600;
+    height: auto;
+    line-height: normal;
+    padding: calc(0.75 * var(--pa-frame-rem)) calc(1 * var(--pa-frame-rem));
+    text-align: start;
+    width: 100%;
+  }
+
+  .pa-site-frame__mega-panel {
+    display: none;
+  }
+
+  /*
+   * The map link stays in the narrow-viewport bar. Every host shows cart, map,
+   * and hamburger here; Search lives in the menu. Hiding Map here would remove
+   * it from the header entirely on phones -- that must never happen.
+   */
+  .pa-site-frame__auth-link,
+  .pa-site-frame__account-menu {
+    display: none;
+  }
+}
+
+
+.skip-link {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: calc(0.0625 * var(--pa-frame-rem));
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: calc(0.0625 * var(--pa-frame-rem));
+}
+
+.skip-link:focus {
+  background-color: #ffffff;
+  clip: auto;
+  clip-path: none;
+  color: #1a1a1a;
+  height: auto;
+  left: 0;
+  padding: calc(0.75 * var(--pa-frame-rem)) calc(1.5 * var(--pa-frame-rem));
+  position: fixed;
+  top: 0;
+  width: auto;
+  z-index: 1002;
+}
+
+/*
+ * Merged full-bleed hosts (the map especially) stack their own controls at very
+ * high z-indexes (Mapbox controls reach ~10002), which otherwise paint over the
+ * header and its drop-down mega panel, hiding the navigation. Lift the header
+ * stacking context and the panel above those controls on merged hosts only; the
+ * federated-search overlay sits far higher still (2147483000) so it stays on top.
+ */
+[data-pa-static-site-frame="true"] .pa-site-frame--header {
+  z-index: 10010;
+}
+
+[data-pa-static-site-frame="true"] .pa-site-frame__mega-panel {
+  z-index: 10011;
+}
+
+html {
+  height: 100%;
+}
+
+body.pa-frame-app-shell {
+  margin: 0;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+body.pa-frame-app-shell > #site-frame-header {
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 10010;
+}
+
+body.pa-frame-app-shell > #site-frame-header[data-pa-frame-header-hidden="true"] {
+  margin-top: calc(-1 * var(--pa-frame-shell-header-height, 56px));
+}
+
+body.pa-frame-app-shell > #site-frame-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  /*
+   * Positioning context for absolutely-positioned page content. The map fills its
+   * viewport with an absolutely-positioned #PageContainer inset to 0; anchoring that to
+   * the scroll region rather than the viewport makes the map fill exactly the area below
+   * the header with no JS header-height offset. Normal-flow content (API docs, marketing
+   * pages) is unaffected by a positioned scroll container.
+   */
+  position: relative;
+}
+
+</style>
+   <header class="pa-site-frame pa-site-frame--header" data-pa-site-frame="header" style="--pa-frame-rem:16px;--pa-frame-text:#1a1a1a;--pa-frame-soft-text:#6b7280;--pa-frame-text-soft:#666;--pa-frame-caption:#9ca3af;--pa-frame-inverse:#ffffff;--pa-frame-heading:#374151;--pa-frame-surface:#ffffff;--pa-frame-footer-surface:#f3f4f6;--pa-frame-overlay-shadow:0 calc(0.5 * var(--pa-frame-rem)) calc(1.5 * var(--pa-frame-rem)) color-mix(in srgb, #1a1a1a 12%, transparent);--pa-frame-scrim:color-mix(in srgb, #1a1a1a 55%, transparent);--pa-frame-mega-shadow:0 calc(0.25 * var(--pa-frame-rem)) calc(1.5 * var(--pa-frame-rem)) color-mix(in srgb, #1a1a1a 12%, transparent);--pa-frame-subtle-shadow:0 calc(0.0625 * var(--pa-frame-rem)) calc(0.1875 * var(--pa-frame-rem)) color-mix(in srgb, #1a1a1a 6%, transparent);--pa-frame-border:#dee2e6;--pa-frame-link:#8833aa;--pa-frame-link-hover:#882288;--pa-frame-focus:#2563eb;--pa-frame-brand:#aa44aa;--pa-frame-brand-dark:#882288;--pa-frame-badge:#dc2626;--pa-frame-header-border:color-mix(in srgb, #1a1a1a 10%, transparent);--pa-frame-trigger-text:color-mix(in srgb, #ffffff 85%, transparent);--pa-frame-trigger-hover:color-mix(in srgb, #ffffff 20%, transparent);--pa-frame-glass-background:color-mix(in srgb, #000000 25%, transparent);--pa-frame-menu-glass-background:color-mix(in srgb, #000000 30%, transparent);--pa-frame-glass-border:color-mix(in srgb, #ffffff 30%, transparent);--pa-frame-brand-tint:color-mix(in srgb, #aa44aa 9%, #ffffff);--pa-frame-sub-navigation-text:#666;--pa-frame-sub-navigation-border:#e8e4dc;--pa-frame-mobile-band-text:#555;--pa-frame-mobile-active-background:#f3e8f3;--pa-frame-mobile-chevron:#6b7280;--pa-frame-mega-heading-text:#6b7280;--pa-frame-mega-link-text:#555;--pa-frame-wave-primary:#059669;--pa-frame-wave-secondary:#28a745;--pa-frame-header-height:56px;--pa-frame-header-action-size:40px;--pa-frame-header-action-icon-size:22px;--pa-frame-avatar-size:36px;--pa-frame-avatar-padding:4px;--pa-frame-avatar-font-size:14px;--pa-frame-content-max-width:1280px;--pa-frame-footer-content-max-width:1024px;--pa-frame-horizontal-padding:24px;--pa-frame-compact-horizontal-padding:16px">
+    <div class="pa-site-frame__main-header" style="background-image:linear-gradient(to right, #aa44aa 0%, #aa44aa 67%, #ffffff 100%)">
+     <div aria-hidden="true" class="pa-site-frame__wave pa-site-frame__wave--header" data-pa-wave="header" style="background-image:url(&quot;data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20200%2056'%20preserveAspectRatio%3D'none'%3E%3Cpath%20d%3D'M0%2028%20Q25%2018%2050%2028%20T100%2028%20T150%2028%20T200%2028'%20stroke%3D'rgba(255%2C255%2C255%2C0.15)'%20stroke-width%3D'2.5'%20fill%3D'none'%2F%3E%3Cpath%20d%3D'M0%2018%20Q25%2010%2050%2018%20T100%2018%20T150%2018%20T200%2018'%20stroke%3D'rgba(255%2C255%2C255%2C0.10)'%20stroke-width%3D'2'%20fill%3D'none'%2F%3E%3Cpath%20d%3D'M0%2038%20Q25%2046%2050%2038%20T100%2038%20T150%2038%20T200%2038'%20stroke%3D'rgba(255%2C255%2C255%2C0.10)'%20stroke-width%3D'2'%20fill%3D'none'%2F%3E%3Cpath%20d%3D'M0%2010%20Q25%204%2050%2010%20T100%2010%20T150%2010%20T200%2010'%20stroke%3D'rgba(255%2C255%2C255%2C0.06)'%20stroke-width%3D'1.5'%20fill%3D'none'%2F%3E%3Cpath%20d%3D'M0%2046%20Q25%2052%2050%2046%20T100%2046%20T150%2046%20T200%2046'%20stroke%3D'rgba(255%2C255%2C255%2C0.06)'%20stroke-width%3D'1.5'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E&quot;);background-position:right center;background-repeat:repeat-x;background-size:auto 100%;pointer-events:none"></div>
+     <div class="pa-site-frame__header-inner">
+      <a class="pa-site-frame__logo" data-pa-internal-link="" href="https://www.purpleair.com/"><img alt="PurpleAir" src="data:image/png;base64,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"></a>
+      <nav aria-label="Primary" class="pa-site-frame__primary-navigation">
+       <a aria-controls="pa-site-frame-mega-panel" aria-expanded="false" class="pa-site-frame__mega-trigger" data-pa-internal-link="" data-pa-navigation-group="Store" href="https://www.purpleair.com/store">Store</a><a aria-controls="pa-site-frame-mega-panel" aria-expanded="false" class="pa-site-frame__mega-trigger" data-pa-internal-link="" data-pa-navigation-group="Solutions" href="https://www.purpleair.com/personal">Solutions</a><a aria-controls="pa-site-frame-mega-panel" aria-expanded="false" class="pa-site-frame__mega-trigger" data-pa-internal-link="" data-pa-navigation-group="Tools" href="https://www.purpleair.com/real-time-map">Tools</a><a aria-controls="pa-site-frame-mega-panel" aria-expanded="false" class="pa-site-frame__mega-trigger" data-pa-internal-link="" data-pa-navigation-group="Resources" href="https://www.purpleair.com/community">Resources</a><a aria-controls="pa-site-frame-mega-panel" aria-expanded="false" class="pa-site-frame__mega-trigger" data-pa-internal-link="" data-pa-navigation-group="Company" href="https://www.purpleair.com/about">Company</a>
+      </nav>
+      <div class="pa-site-frame__header-actions">
+       <button aria-controls="pa-site-frame-search-overlay" aria-expanded="false" aria-haspopup="dialog" aria-label="Search" class="pa-site-frame__search-toggle" type="button">
+        <svg aria-hidden="true" class="pa-site-frame__search-icon" focusable="false" viewBox="0 0 24 24">
+         <circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path>
+        </svg>
+        <span class="pa-site-frame__visually-hidden">Search</span>
+       </button>
+       <a class="pa-site-frame__cart-link" data-pa-internal-link="" href="https://www.purpleair.com/cart">
+        <svg aria-hidden="true" class="pa-site-frame__cart-icon" focusable="false" viewBox="0 0 24 24">
+         <path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"></path>
+        </svg>
+        <span class="pa-site-frame__visually-hidden">Cart</span>
+       </a><span class="pa-site-frame__map-link"><a class="pa-site-frame__map-action" data-pa-service="map" href="https://map.purpleair.com/">
+         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+          <path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4zM8 2v16M16 6v16"></path>
+         </svg>
+         <span>Map</span>
+        </a></span><a class="pa-site-frame__auth-link" data-pa-internal-link="" href="https://www.purpleair.com/login" data-pa-auth="anonymous">Sign In</a>
+       <details class="pa-site-frame__mobile-navigation">
+        <summary aria-label="Navigation menu">
+         <svg aria-hidden="true" class="pa-site-frame__menu-icon pa-site-frame__menu-icon--open" focusable="false" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+         </svg>
+         <svg aria-hidden="true" class="pa-site-frame__menu-icon pa-site-frame__menu-icon--close" focusable="false" viewBox="0 0 24 24">
+          <path d="M6 6l12 12M18 6 6 18"></path>
+         </svg>
+         <span class="pa-site-frame__visually-hidden">Menu</span>
+        </summary>
+        <div>
+         <button aria-controls="pa-site-frame-search-overlay" aria-expanded="false" aria-haspopup="dialog" class="pa-site-frame__search-toggle pa-site-frame__mobile-search" type="button">Search</button>
+         <a class="pa-site-frame__mobile-auth-link" data-pa-internal-link="" href="https://www.purpleair.com/login" data-pa-auth="anonymous">Sign In</a>
+         <section>
+          <h2>Store</h2>
+          <ul>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/store">All Products</a></li>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/store/air-quality-sensors">Air Quality Sensors</a></li>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/store/power-supplies">Power Supplies</a></li>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/store/accessories">Accessories</a></li>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/store/replacement-parts">Replacement Parts</a></li>
+          </ul>
+         </section>
+         <section>
+          <h2>Solutions</h2>
+          <ul>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/personal">Personal</a></li>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/business">Business</a></li>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/education">Education</a></li>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/research">Research</a></li>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/broadcasters">Broadcasters</a></li>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/government">Government</a></li>
+          </ul>
+         </section>
+         <section>
+          <h2>Tools</h2>
+          <ul>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/real-time-map">Real-Time Map</a></li>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/register">Register Your Sensor</a></li>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/utility">Sensor Utility</a></li>
+          </ul>
+         </section>
+         <section>
+          <h2>Resources</h2>
+          <ul>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/community">Community</a></li>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/faq">FAQ</a></li>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/papers">Scientific Papers</a></li>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/projects-and-integrations">Projects &amp; Integrations</a></li>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/api">API Documentation</a></li>
+          </ul>
+         </section>
+         <section>
+          <h2>Company</h2>
+          <ul>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/about">About PurpleAir</a></li>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/blog">Blog</a></li>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/press">Press</a></li>
+           <li><a data-pa-internal-link="" href="https://www.purpleair.com/contact">Contact</a></li>
+          </ul>
+         </section>
+        </div>
+       </details>
+      </div>
+     </div>
+    </div>
+    <div aria-label="Site navigation" class="pa-site-frame__mega-panel" data-pa-mega-panel="" hidden id="pa-site-frame-mega-panel" role="region">
+     <div class="pa-site-frame__mega-panel-inner">
+      <section>
+       <h2>Store</h2>
+       <ul>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/store">All Products</a></li>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/store/air-quality-sensors">Air Quality Sensors</a></li>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/store/power-supplies">Power Supplies</a></li>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/store/accessories">Accessories</a></li>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/store/replacement-parts">Replacement Parts</a></li>
+       </ul>
+      </section>
+      <section>
+       <h2>Solutions</h2>
+       <ul>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/personal">Personal</a></li>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/business">Business</a></li>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/education">Education</a></li>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/research">Research</a></li>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/broadcasters">Broadcasters</a></li>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/government">Government</a></li>
+       </ul>
+      </section>
+      <section>
+       <h2>Tools</h2>
+       <ul>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/real-time-map">Real-Time Map</a></li>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/register">Register Your Sensor</a></li>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/utility">Sensor Utility</a></li>
+       </ul>
+      </section>
+      <section>
+       <h2>Resources</h2>
+       <ul>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/community">Community</a></li>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/faq">FAQ</a></li>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/papers">Scientific Papers</a></li>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/projects-and-integrations">Projects &amp; Integrations</a></li>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/api">API Documentation</a></li>
+       </ul>
+      </section>
+      <section>
+       <h2>Company</h2>
+       <ul>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/about">About PurpleAir</a></li>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/blog">Blog</a></li>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/press">Press</a></li>
+        <li><a data-pa-internal-link="" href="https://www.purpleair.com/contact">Contact</a></li>
+       </ul>
+      </section>
+     </div>
+    </div>
+    <nav aria-label="Store" class="pa-site-frame__sub-navigation" data-pa-sub-navigation-group="Store" hidden>
+     <div>
+      <a data-pa-internal-link="" href="https://www.purpleair.com/store">All Products</a><a data-pa-internal-link="" href="https://www.purpleair.com/store/air-quality-sensors">Air Quality Sensors</a><a data-pa-internal-link="" href="https://www.purpleair.com/store/power-supplies">Power Supplies</a><a data-pa-internal-link="" href="https://www.purpleair.com/store/accessories">Accessories</a><a data-pa-internal-link="" href="https://www.purpleair.com/store/replacement-parts">Replacement Parts</a>
+     </div>
+    </nav>
+    <nav aria-label="Solutions" class="pa-site-frame__sub-navigation" data-pa-sub-navigation-group="Solutions" hidden>
+     <div>
+      <a data-pa-internal-link="" href="https://www.purpleair.com/personal">Personal</a><a data-pa-internal-link="" href="https://www.purpleair.com/business">Business</a><a data-pa-internal-link="" href="https://www.purpleair.com/education">Education</a><a data-pa-internal-link="" href="https://www.purpleair.com/research">Research</a><a data-pa-internal-link="" href="https://www.purpleair.com/broadcasters">Broadcasters</a><a data-pa-internal-link="" href="https://www.purpleair.com/government">Government</a>
+     </div>
+    </nav>
+    <nav aria-label="Tools" class="pa-site-frame__sub-navigation" data-pa-sub-navigation-group="Tools" hidden>
+     <div>
+      <a data-pa-internal-link="" href="https://www.purpleair.com/real-time-map">Real-Time Map</a><a data-pa-internal-link="" href="https://www.purpleair.com/register">Register Your Sensor</a><a data-pa-internal-link="" href="https://www.purpleair.com/utility">Sensor Utility</a>
+     </div>
+    </nav>
+    <nav aria-label="Resources" class="pa-site-frame__sub-navigation" data-pa-sub-navigation-group="Resources" hidden>
+     <div>
+      <a data-pa-internal-link="" href="https://www.purpleair.com/community">Community</a><a data-pa-internal-link="" href="https://www.purpleair.com/faq">FAQ</a><a data-pa-internal-link="" href="https://www.purpleair.com/papers">Scientific Papers</a><a data-pa-internal-link="" href="https://www.purpleair.com/projects-and-integrations">Projects &amp; Integrations</a><a data-pa-internal-link="" href="https://www.purpleair.com/api">API Documentation</a>
+     </div>
+    </nav>
+    <nav aria-label="Company" class="pa-site-frame__sub-navigation" data-pa-sub-navigation-group="Company" hidden>
+     <div>
+      <a data-pa-internal-link="" href="https://www.purpleair.com/about">About PurpleAir</a><a data-pa-internal-link="" href="https://www.purpleair.com/blog">Blog</a><a data-pa-internal-link="" href="https://www.purpleair.com/press">Press</a><a data-pa-internal-link="" href="https://www.purpleair.com/contact">Contact</a>
+     </div>
+    </nav>
+   </header>
+  </div>
+  <div id="site-frame-scroll">
+   <div id="PageContainer" class="page-container">
+    <main class="main-content" id="MainContent" role="main" tabindex="-1">
+     <script id="template-sidenav" type="text/x-handlebars-template">
+<nav id="scrollingNav">
+  <div class="sidenav-search">
+    <input class="form-control search" type="text" placeholder="{{__ "Filter..."}}">
+    <span class="search-reset">x</span>
+  </div>
+  <ul class="sidenav nav nav-list list">
+  {{#each nav}}
+    {{#if title}}
+      {{#if isHeader}}
+        {{#if isFixed}}
+          <li class="nav-fixed nav-header navbar-btn nav-list-item" data-group="{{group}}"><a href="#api-{{group}}">{{underscoreToSpace title}}</a></li>
+        {{else}}
+          <li class="nav-header nav-list-item" data-group="{{group}}"><a href="#api-{{group}}">{{underscoreToSpace title}}</a></li>
+        {{/if}}
+      {{else}}
+        <li class="{{#if hidden}}hide {{/if}}" data-group="{{group}}" data-name="{{name}}" data-version="{{version}}">
+          <a href="#api-{{group}}-{{name}}" class="nav-list-item">{{title}}</a>
+        </li>
+      {{/if}}
+    {{/if}}
+  {{/each}}
+  </ul>
+</nav>
+</script>
+     <script id="template-project" type="text/x-handlebars-template">
+  <div class="pull-left">
+    <h1>{{name}}</h1>
+    {{#if description}}<h2>{{{nl2br description}}}</h2>{{/if}}
+  </div>
+  {{#if template.withCompare}}
+  <div class="pull-right">
+    <div class="btn-group">
+      <button id="version" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown">
+        <strong>{{version}}</strong>&nbsp;<span class="caret"></span>
+      </button>
+      <ul id="versions" class="dropdown-menu open-left">
+        <li><a id="compareAllWithPredecessor" href="#">{{__ "Compare all with predecessor"}}</a></li>
+        <li class="divider"></li>
+        <li class="disabled"><a href="#">{{__ "show up to version:"}}</a></li>
+      {{#each versions}}
+        <li class="version"><a href="#">{{this}}</a></li>
+      {{/each}}
+      </ul>
+    </div>
+  </div>
+  {{/if}}
+  <div class="clearfix"></div>
+</script>
+     <script id="template-header" type="text/x-handlebars-template">
+  {{#if content}}
+    <div id="api-_">{{{content}}}</div>
+  {{/if}}
+</script>
+     <script id="template-footer" type="text/x-handlebars-template">
+  {{#if content}}
+    <div id="api-_footer">{{{content}}}</div>
+  {{/if}}
+</script>
+     <script id="template-generator" type="text/x-handlebars-template">
+  {{#if template.withGenerator}}
+    {{#if generator}}
+      <div class="content">
+        {{__ "Generated with"}} <a href="{{{generator.url}}}">{{{generator.name}}}</a> {{{generator.version}}} - {{{generator.time}}}
+      </div>
+    {{/if}}
+  {{/if}}
+</script>
+     <script id="template-sections" type="text/x-handlebars-template">
+  <section id="api-{{group}}">
+    <h1>{{underscoreToSpace title}}</h1>
+    {{#if description}}
+      <p>{{{nl2br description}}}</p>
+    {{/if}}
+    {{#each articles}}
+      <div id="api-{{group}}-{{name}}">
+        {{{article}}}
+      </div>
+    {{/each}}
+  </section>
+</script>
+     <script id="template-article" type="text/x-handlebars-template">
+  <article id="api-{{article.group}}-{{article.name}}-{{article.version}}" {{#if hidden}}class="hide"{{/if}} data-group="{{article.group}}" data-name="{{article.name}}" data-version="{{article.version}}" data-contenttype="{{article.contentType}}">
+    <div class="pull-left">
+      <h1>{{article.groupTitle}}{{#if article.title}} - {{article.title}}{{/if}}</h1>
+    </div>
+    {{#if template.withCompare}}
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <strong>{{article.version}}</strong>&nbsp;<span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">{{__ "compare changes to:"}}</a></li>
+        {{#each versions}}
+          <li class="version"><a href="#">{{this}}</a></li>
+        {{/each}}
+        </ul>
+      </div>
+    </div>
+    {{/if}}
+    <div class="clearfix"></div>
+
+    {{#if article.deprecated}}
+      <p class="deprecated"><span>{{__ "DEPRECATED"}}</span>
+        {{{markdown article.deprecated.content}}}
+      </p>
+    {{/if}}
+
+    {{#if article.description}}
+      <p>{{{nl2br article.description}}}</p>
+    {{/if}}
+    <span class="type type__{{toLowerCase article.type}}">{{toLowerCase article.type}}</span>
+    <pre class="prettyprint language-html" data-type="{{toLowerCase article.type}}"><code>{{article.url}}</code></pre>
+
+    {{#if article.permission}}
+      <p>
+        {{__ "Permission:"}}
+        {{#each article.permission}}
+          {{name}}
+          {{#if title}}
+          <button type="button" class="btn btn-info btn-xs" data-title="{{title}}" data-content="{{nl2br description}}" data-html="true" data-toggle="popover" data-placement="right" data-trigger="hover">
+              <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          </button>
+          {{/if}}
+        {{/each}}
+      </p>
+    {{/if}}
+
+    {{#if_gt article.examples.length compare=0}}
+      <ul class="nav nav-tabs nav-tabs-examples">
+        {{#each article.examples}}
+          <li{{#if_eq @index compare=0}} class="active"{{/if_eq}}>
+            <a href="#examples-{{../id}}-{{@index}}">{{title}}</a>
+          </li>
+        {{/each}}
+      </ul>
+
+      <div class="tab-content">
+      {{#each article.examples}}
+        <div class="tab-pane{{#if_eq @index compare=0}} active{{/if_eq}}" id="examples-{{../id}}-{{@index}}">
+          <pre class="prettyprint language-{{type}}" data-type="{{type}}"><code>{{content}}</code></pre>
+        </div>
+      {{/each}}
+      </div>
+    {{/if_gt}}
+
+    {{subTemplate "article-param-block" params=article.header _hasType=_hasTypeInHeaderFields section="header"}}
+    {{subTemplate "article-param-block" params=article.parameter _hasType=_hasTypeInParameterFields section="parameter"}}
+    {{subTemplate "article-param-block" params=article.success _hasType=_hasTypeInSuccessFields section="success"}}
+    {{subTemplate "article-param-block" params=article.error _col1="Name" _hasType=_hasTypeInErrorFields section="error"}}
+
+    {{subTemplate "article-sample-request" article=article id=id}}
+  </article>
+</script>
+     <script id="template-article-param-block" type="text/x-handlebars-template">
+  {{#if params}}
+    {{#each params.fields}}
+      <h2>{{{__ @key}}}</h2>
+      {{{this.[0].groupDescription}}}
+      <table>
+        <thead>
+          <tr>
+          <th style="width: 30%">{{#if ../_col1}}{{__ ../_col1}}{{else}}{{__ "Field"}}{{/if}}</th>
+            {{#if ../_hasType}}<th style="width: 10%">{{__ "Type"}}</th>{{/if}}
+            <th {{#if ../_hasType}}style="width: 60%"{{else}}style="width: 70%"{{/if}}>{{__ "Description"}}</th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each this}}
+          <tr>
+            <td class="code">{{{splitFill field "." "&nbsp;&nbsp;"}}}{{#if optional}} <span class="label label-optional">{{__ "optional"}}</span>{{/if}}</td>
+            {{#if ../../_hasType}}
+              <td>
+                {{{type}}}
+              </td>
+            {{/if}}
+            <td>
+            {{{nl2br description}}}
+            {{#if defaultValue}}<p class="default-value">{{__ "Default value:"}} <code>{{{defaultValue}}}</code></p>{{/if}}
+            {{#if size}}<p class="type-size">{{__ "Size range:"}} <code>{{{size}}}</code></p>{{/if}}
+            {{#if allowedValues}}<p class="type-size">{{__ "Allowed values:"}}
+              {{#each allowedValues}}
+                <code>{{{this}}}</code>{{#unless @last}}, {{/unless}}
+              {{/each}}
+              </p>
+            {{/if}}
+            </td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    {{/each}}
+    {{#if_gt params.examples.length compare=0}}
+      <ul class="nav nav-tabs nav-tabs-examples">
+      {{#each params.examples}}
+        <li{{#if_eq @index compare=0}} class="active"{{/if_eq}}>
+          <a href="#{{../section}}-examples-{{../id}}-{{@index}}">{{title}}</a>
+        </li>
+      {{/each}}
+      </ul>
+
+      <div class="tab-content">
+      {{#each params.examples}}
+        <div class="tab-pane{{#if_eq @index compare=0}} active{{/if_eq}}" id="{{../section}}-examples-{{../id}}-{{@index}}">
+        <pre class="prettyprint language-{{type}}" data-type="{{type}}"><code>{{{reformat content type}}}</code></pre>
+        </div>
+      {{/each}}
+      </div>
+    {{/if_gt}}
+  {{/if}}
+</script>
+     <script id="template-article-sample-request" type="text/x-handlebars-template">
+    {{#if article.sampleRequest}}
+      <h2>{{__ "Send a Sample Request"}}</h2>
+      <form class="form-horizontal">
+        <fieldset>
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="{{../id}}-sample-request-url"></label>
+              <div class="input-group">
+                <input id="{{../id}}-sample-request-url" type="text" class="form-control sample-request-url" value="{{article.sampleRequest.0.url}}" />
+                <span class="input-group-addon">{{__ "url"}}</span>
+              </div>
+            </div>
+
+      {{#if article.header}}
+        {{#if article.header.fields}}
+          <h3>{{__ "Headers"}}</h3>
+          {{#each article.header.fields}}
+            <h4><input type="radio" data-sample-request-header-group-id="sample-request-header-{{@index}}" name="{{../id}}-sample-request-header" value="{{@index}}" class="sample-request-header sample-request-switch" {{#if_eq @index compare=0}} checked{{/if_eq}} /> {{@key}}</h4>
+            <div class="{{../id}}-sample-request-header-fields{{#if_gt @index compare=0}} hide{{/if_gt}}">
+              {{#each this}}
+              <div class="form-group">
+                <label class="col-md-3 control-label" for="sample-request-header-field-{{field}}">{{field}}&nbsp;&nbsp;{{#if optional}}<span class="label label-optional">{{__ "optional"}}</span>{{/if}}</label>
+                <div class="input-group">
+                  <input type="text" placeholder="{{field}}" id="sample-request-header-field-{{field}}" class="form-control sample-request-header" data-sample-request-header-name="{{field}}" data-sample-request-header-group="sample-request-header-{{@../index}}">
+                  <span class="input-group-addon">{{{type}}}</span>
+                </div>
+              </div>
+              {{/each}}
+            </div>
+          {{/each}}
+        {{/if}}
+      {{/if}}
+
+      {{#if article.parameter}}
+        {{#if article.parameter.fields}}
+          <h3>{{__ "Parameters"}}</h3>
+          {{#each article.parameter.fields}}
+            <h4><input type="radio" data-sample-request-param-group-id="sample-request-param-{{@index}}"  name="{{../id}}-sample-request-param" value="{{@index}}" class="sample-request-param sample-request-switch" {{#if_eq @index compare=0}} checked{{/if_eq}} /> {{{@key}}}</h4>
+            <div class="form-group {{../id}}-sample-request-param-fields{{#if_gt @index compare=0}} hide{{/if_gt}}">
+              {{#each this}}
+                <label class="col-md-3 control-label" for="sample-request-param-field-{{field}}">{{field}}&nbsp;&nbsp;{{#if optional}}<span class="label label-optional">{{__ "optional"}}</span>{{/if}}</label>
+                <div class="input-group">
+                  <input id="sample-request-param-field-{{field}}" type="text" placeholder="{{field}}" class="form-control sample-request-param" data-sample-request-param-name="{{field}}" data-sample-request-param-type="{{type}}" data-sample-request-param-group="sample-request-param-{{@../index}}">
+                  <div class="input-group-addon">{{{type}}}</div>
+                </div>
+              {{/each}}
+            </div>
+          {{/each}}
+        {{/if}}
+      {{/if}}
+
+          <div class="form-group">
+            <div class="controls pull-right">
+              <button class="btn btn-primary sample-request-send" data-sample-request-type="{{article.type}}">{{__ "Send"}}</button>
+            </div>
+          </div>
+          <div class="form-group sample-request-request" style="display: none;">
+            <h3>
+              {{__ "Request"}}
+              <button class="btn btn-default btn-xs pull-right sample-request-clear">X</button>
+            </h3>
+            <pre class="prettyprint language-json" data-type="json"><code class="sample-request-request-json"></code></pre>
+          </div>
+          <div class="form-group sample-request-response" style="display: none;">
+            <h3>
+              {{__ "Response"}}
+              <button class="btn btn-default btn-xs pull-right sample-request-clear">X</button>
+            </h3>
+            <pre class="prettyprint language-json" data-type="json"><code class="sample-request-response-json"></code></pre>
+          </div>
+        </fieldset>
+      </form>
+    {{/if}}
+</script>
+     <script id="template-compare-article" type="text/x-handlebars-template">
+  <article id="api-{{article.group}}-{{article.name}}-{{article.version}}" {{#if hidden}}class="hide"{{/if}} data-group="{{article.group}}" data-name="{{article.name}}" data-version="{{article.version}}" data-compare-version="{{compare.version}}">
+    <div class="pull-left">
+      <h1>{{underscoreToSpace article.group}} - {{{showDiff article.title compare.title}}}</h1>
+    </div>
+
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="btn btn-success" disabled>
+          <strong>{{article.version}}</strong> {{__ "compared to"}}
+        </button>
+        <button class="version btn btn-danger dropdown-toggle" data-toggle="dropdown">
+          <strong>{{compare.version}}</strong>&nbsp;<span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">{{__ "compare changes to:"}}</a></li>
+          <li class="divider"></li>
+        {{#each versions}}
+          <li class="version"><a href="#">{{this}}</a></li>
+        {{/each}}
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    {{#if article.description}}
+      <p>{{{showDiff article.description compare.description "nl2br"}}}</p>
+    {{else}}
+      {{#if compare.description}}
+      <p>{{{showDiff "" compare.description "nl2br"}}}</p>
+      {{/if}}
+    {{/if}}
+
+    <pre class="prettyprint language-html" data-type="{{toLowerCase article.type}}"><code>{{{showDiff article.url compare.url}}}</code></pre>
+
+    {{subTemplate "article-compare-permission" article=article compare=compare}}
+
+    <ul class="nav nav-tabs nav-tabs-examples">
+    {{#each_compare_title article.examples compare.examples}}
+      {{#if typeSame}}
+        <li{{#if_eq index compare=0}} class="active"{{/if_eq}}>
+          <a href="#compare-examples-{{../../article.id}}-{{index}}">{{{showDiff source.title compare.title}}}</a>
+        </li>
+      {{/if}}
+
+      {{#if typeIns}}
+        <li{{#if_eq index compare=0}} class="active"{{/if_eq}}>
+          <a href="#compare-examples-{{../../article.id}}-{{index}}"><ins>{{{source.title}}}</ins></a>
+        </li>
+      {{/if}}
+
+      {{#if typeDel}}
+        <li{{#if_eq index compare=0}} class="active"{{/if_eq}}>
+          <a href="#compare-examples-{{../../article.id}}-{{index}}"><del>{{{compare.title}}}</del></a>
+        </li>
+      {{/if}}
+    {{/each_compare_title}}
+    </ul>
+
+    <div class="tab-content">
+    {{#each_compare_title article.examples compare.examples}}
+
+      {{#if typeSame}}
+        <div class="tab-pane{{#if_eq index compare=0}} active{{/if_eq}}" id="compare-examples-{{../../article.id}}-{{index}}">
+          <pre class="prettyprint language-{{source.type}}" data-type="{{source.type}}"><code>{{{showDiff source.content compare.content}}}</code></pre>
+        </div>
+      {{/if}}
+
+      {{#if typeIns}}
+        <div class="tab-pane{{#if_eq index compare=0}} active{{/if_eq}}" id="compare-examples-{{../../article.id}}-{{index}}">
+          <pre class="prettyprint language-{{source.type}}" data-type="{{source.type}}"><code>{{{source.content}}}</code></pre>
+        </div>
+      {{/if}}
+
+      {{#if typeDel}}
+        <div class="tab-pane{{#if_eq index compare=0}} active{{/if_eq}}" id="compare-examples-{{../../article.id}}-{{index}}">
+          <pre class="prettyprint language-{{source.type}}" data-type="{{compare.type}}"><code>{{{compare.content}}}</code></pre>
+        </div>
+      {{/if}}
+
+    {{/each_compare_title}}
+    </div>
+
+    {{subTemplate "article-compare-param-block" source=article.parameter compare=compare.parameter _hasType=_hasTypeInParameterFields section="parameter"}}
+    {{subTemplate "article-compare-param-block" source=article.success compare=compare.success _hasType=_hasTypeInSuccessFields section="success"}}
+    {{subTemplate "article-compare-param-block" source=article.error compare=compare.error _col1="Name" _hasType=_hasTypeInErrorFields section="error"}}
+
+    {{subTemplate "article-sample-request" article=article id=id}}
+
+  </article>
+</script>
+     <script id="template-article-compare-permission" type="text/x-handlebars-template">
+  <p>
+  {{__ "Permission:"}}
+  {{#each_compare_list_field article.permission compare.permission field="name"}}
+    {{#if source}}
+      {{#if typeSame}}
+        {{source.name}}
+        {{#if source.title}}
+          <button type="button" class="btn btn-info btn-xs" data-title="{{source.title}}" data-content="{{nl2br source.description}}" data-html="true" data-toggle="popover" data-placement="right" data-trigger="hover">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          </button>
+          {{#unless _last}}, {{/unless}}
+        {{/if}}
+      {{/if}}
+
+      {{#if typeIns}}
+        <ins>{{source.name}}</ins>
+        {{#if source.title}}
+          <button type="button" class="btn btn-info btn-xs" data-title="{{source.title}}" data-content="{{nl2br source.description}}" data-html="true" data-toggle="popover" data-placement="right" data-trigger="hover">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          </button>
+          {{#unless _last}}, {{/unless}}
+        {{/if}}
+      {{/if}}
+
+      {{#if typeDel}}
+        <del>{{source.name}}</del>
+        {{#if source.title}}
+          <button type="button" class="btn btn-info btn-xs" data-title="{{source.title}}" data-content="{{nl2br source.description}}" data-html="true" data-toggle="popover" data-placement="right" data-trigger="hover">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          </button>
+          {{#unless _last}}, {{/unless}}
+        {{/if}}
+      {{/if}}
+    {{else}}
+      {{#if typeSame}}
+        {{compare.name}}
+        {{#if compare.title}}
+          <button type="button" class="btn btn-info btn-xs" data-title="{{compare.title}}" data-content="{{nl2br compare.description}}" data-html="true" data-toggle="popover" data-placement="right" data-trigger="hover">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          </button>
+          {{#unless _last}}, {{/unless}}
+        {{/if}}
+      {{/if}}
+
+      {{#if typeIns}}
+        <ins>{{compare.name}}</ins>
+        {{#if compare.title}}
+          <button type="button" class="btn btn-info btn-xs" data-title="{{compare.title}}" data-content="{{nl2br compare.description}}" data-html="true" data-toggle="popover" data-placement="right" data-trigger="hover">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          </button>
+          {{#unless _last}}, {{/unless}}
+        {{/if}}
+      {{/if}}
+
+      {{#if typeDel}}
+        <del>{{compare.name}}</del>
+        {{#if compare.title}}
+          <button type="button" class="btn btn-info btn-xs" data-title="{{compare.title}}" data-content="{{nl2br compare.description}}" data-html="true" data-toggle="popover" data-placement="right" data-trigger="hover">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          </button>
+          {{#unless _last}}, {{/unless}}
+        {{/if}}
+      {{/if}}
+    {{/if}}
+  {{/each_compare_list_field}}
+  </p>
+</script>
+     <script id="template-article-compare-param-block" type="text/x-handlebars-template">
+  {{#if source}}
+    {{#each_compare_keys source.fields compare.fields}}
+      {{#if typeSame}}
+        <h2>{{__ source.key}}</h2>
+        <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">{{#if ../_col1}}{{__ ../_col1}}{{else}}{{__ "Field"}}{{/if}}</th>
+            {{#if ../_hasType}}<th style="width: 10%">{{__ "Type"}}</th>{{/if}}
+            <th {{#if ../_hasType}}style="width: 60%"{{else}}style="width: 70%"{{/if}}>{{__ "Description"}}</th>
+          </tr>
+        </thead>
+        {{subTemplate "article-compare-param-block-body" source=source.value compare=compare.value _hasType=../_hasType}}
+        </table>
+      {{/if}}
+
+      {{#if typeIns}}
+        <h2><ins>{{__ source.key}}</ins></h2>
+        <table class="ins">
+        <thead>
+          <tr>
+            <th style="width: 30%">{{#if ../_col1}}{{__ ../_col1}}{{else}}{{__ "Field"}}{{/if}}</th>
+            {{#if ../_hasType}}<th style="width: 10%">{{__ "Type"}}</th>{{/if}}
+            <th {{#if ../_hasType}}style="width: 60%"{{else}}style="width: 70%"{{/if}}>{{__ "Description"}}</th>
+          </tr>
+        </thead>
+        {{subTemplate "article-compare-param-block-body" source=source.value compare=source.value _hasType=../_hasType}}
+        </table>
+      {{/if}}
+
+      {{#if typeDel}}
+        <h2><del>{{__ compare.key}}</del></h2>
+        <table class="del">
+        <thead>
+          <tr>
+            <th style="width: 30%">{{#if ../_col1}}{{__ ../_col1}}{{else}}{{__ "Field"}}{{/if}}</th>
+            {{#if ../_hasType}}<th style="width: 10%">{{__ "Type"}}</th>{{/if}}
+            <th {{#if ../_hasType}}style="width: 60%"{{else}}style="width: 70%"{{/if}}>{{__ "Description"}}</th>
+          </tr>
+        </thead>
+        {{subTemplate "article-compare-param-block-body" source=compare.value compare=compare.value _hasType=../_hasType}}
+        </table>
+      {{/if}}
+    {{/each_compare_keys}}
+
+    {{#if source.examples}}
+    <ul class="nav nav-tabs nav-tabs-examples">
+    {{#each_compare_title source.examples compare.examples}}
+      {{#if typeSame}}
+        <li{{#if_eq index compare=0}} class="active"{{/if_eq}}>
+          <a href="#{{../../section}}-compare-examples-{{../../article.id}}-{{index}}">{{{showDiff source.title compare.title}}}</a>
+        </li>
+      {{/if}}
+
+      {{#if typeIns}}
+        <li{{#if_eq index compare=0}} class="active"{{/if_eq}}>
+          <a href="#{{../../section}}-compare-examples-{{../../article.id}}-{{index}}"><ins>{{{source.title}}}</ins></a>
+        </li>
+      {{/if}}
+
+      {{#if typeDel}}
+        <li{{#if_eq index compare=0}} class="active"{{/if_eq}}>
+          <a href="#{{../../section}}-compare-examples-{{../../article.id}}-{{index}}"><del>{{{compare.title}}}</del></a>
+        </li>
+      {{/if}}
+    {{/each_compare_title}}
+    </ul>
+
+    <div class="tab-content">
+    {{#each_compare_title source.examples compare.examples}}
+
+      {{#if typeSame}}
+        <div class="tab-pane{{#if_eq index compare=0}} active{{/if_eq}}" id="{{../../section}}-compare-examples-{{../../article.id}}-{{index}}">
+          <pre class="prettyprint language-{{source.type}}" data-type="{{source.type}}"><code>{{{showDiff source.content compare.content}}}</code></pre>
+        </div>
+      {{/if}}
+
+      {{#if typeIns}}
+        <div class="tab-pane{{#if_eq index compare=0}} active{{/if_eq}}" id="{{../../section}}-compare-examples-{{../../article.id}}-{{index}}">
+          <pre class="prettyprint language-{{source.type}}" data-type="{{source.type}}"><code>{{{source.content}}}</code></pre>
+        </div>
+      {{/if}}
+
+      {{#if typeDel}}
+        <div class="tab-pane{{#if_eq index compare=0}} active{{/if_eq}}" id="{{../../section}}-compare-examples-{{../../article.id}}-{{index}}">
+          <pre class="prettyprint language-{{source.type}}" data-type="{{compare.type}}"><code>{{{compare.content}}}</code></pre>
+        </div>
+      {{/if}}
+    {{/each_compare_title}}
+    </div>
+    {{/if}}
+  {{/if}}
+</script>
+     <script id="template-article-compare-param-block-body" type="text/x-handlebars-template">
+  <tbody>
+    {{#each_compare_field source compare}}
+      {{#if typeSame}}
+        <tr>
+          <td class="code">
+            {{{splitFill source.field "." "&nbsp;&nbsp;"}}}
+            {{#if source.optional}}
+              {{#if compare.optional}} <span class="label label-optional">{{__ "optional"}}</span>
+              {{else}} <span class="label label-optional label-ins">{{__ "optional"}}</span>
+              {{/if}}
+            {{else}}
+              {{#if compare.optional}} <span class="label label-optional label-del">{{__ "optional"}}</span>{{/if}}
+            {{/if}}
+          </td>
+
+        {{#if source.type}}
+          {{#if compare.type}}
+          <td>{{{showDiff source.type compare.type}}}</td>
+          {{else}}
+          <td>{{{source.type}}}</td>
+          {{/if}}
+        {{else}}
+          {{#if compare.type}}
+          <td>{{{compare.type}}}</td>
+          {{else}}
+            {{#if ../../../../_hasType}}<td></td>{{/if}}
+          {{/if}}
+        {{/if}}
+          <td>
+            {{{showDiff source.description compare.description "nl2br"}}}
+            {{#if source.defaultValue}}<p class="default-value">{{__ "Default value:"}} <code>{{{showDiff source.defaultValue compare.defaultValue}}}</code><p>{{/if}}
+          </td>
+        </tr>
+      {{/if}}
+
+      {{#if typeIns}}
+        <tr class="ins">
+          <td class="code">
+            {{{splitFill source.field "." "&nbsp;&nbsp;"}}}
+            {{#if source.optional}} <span class="label label-optional label-ins">{{__ "optional"}}</span>{{/if}}
+          </td>
+
+        {{#if source.type}}
+          <td>{{{source.type}}}</td>
+        {{else}}
+          {{{typRowTd}}}
+        {{/if}}
+
+          <td>
+            {{{nl2br source.description}}}
+            {{#if source.defaultValue}}<p class="default-value">{{__ "Default value:"}} <code>{{{source.defaultValue}}}</code><p>{{/if}}
+          </td>
+        </tr>
+      {{/if}}
+
+      {{#if typeDel}}
+        <tr class="del">
+          <td class="code">
+            {{{splitFill compare.field "." "&nbsp;&nbsp;"}}}
+            {{#if compare.optional}} <span class="label label-optional label-del">{{__ "optional"}}</span>{{/if}}
+          </td>
+
+        {{#if compare.type}}
+          <td>{{{compare.type}}}</td>
+        {{else}}
+          {{{typRowTd}}}
+        {{/if}}
+
+          <td>
+            {{{nl2br compare.description}}}
+            {{#if compare.defaultValue}}<p class="default-value">{{__ "Default value:"}} <code>{{{compare.defaultValue}}}</code><p>{{/if}}
+          </td>
+        </tr>
+      {{/if}}
+
+    {{/each_compare_field}}
+  </tbody>
+</script>
+     <div class="container-fluid" id="apidoc-shell">
+      <div id="sidenav" class="span2"></div>
+      <div id="content">
+       <div id="project"></div>
+       <div id="header"></div>
+       <div id="sections"></div>
+       <div id="footer"></div>
+       <div id="generator"></div>
+       <footer></footer>
+      </div>
+     </div>
+     <div id="loader">
+      <div class="spinner">
+       <div class="spinner-container container1">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+       </div>
+       <div class="spinner-container container2">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+       </div>
+       <div class="spinner-container container3">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+       </div>
+       <p>Loading...</p>
+      </div>
+     </div>
+     <script data-main="/main.js" src="/vendor/require.min.js" defer></script>
+    </main>
+    <div id="site-frame-footer" class="site-frame-section">
+     <footer class="pa-site-frame pa-site-frame--footer" data-pa-site-frame="footer" style="--pa-frame-rem:16px;--pa-frame-text:#1a1a1a;--pa-frame-soft-text:#6b7280;--pa-frame-text-soft:#666;--pa-frame-caption:#9ca3af;--pa-frame-inverse:#ffffff;--pa-frame-heading:#374151;--pa-frame-surface:#ffffff;--pa-frame-footer-surface:#f3f4f6;--pa-frame-overlay-shadow:0 calc(0.5 * var(--pa-frame-rem)) calc(1.5 * var(--pa-frame-rem)) color-mix(in srgb, #1a1a1a 12%, transparent);--pa-frame-scrim:color-mix(in srgb, #1a1a1a 55%, transparent);--pa-frame-mega-shadow:0 calc(0.25 * var(--pa-frame-rem)) calc(1.5 * var(--pa-frame-rem)) color-mix(in srgb, #1a1a1a 12%, transparent);--pa-frame-subtle-shadow:0 calc(0.0625 * var(--pa-frame-rem)) calc(0.1875 * var(--pa-frame-rem)) color-mix(in srgb, #1a1a1a 6%, transparent);--pa-frame-border:#dee2e6;--pa-frame-link:#8833aa;--pa-frame-link-hover:#882288;--pa-frame-focus:#2563eb;--pa-frame-brand:#aa44aa;--pa-frame-brand-dark:#882288;--pa-frame-badge:#dc2626;--pa-frame-header-border:color-mix(in srgb, #1a1a1a 10%, transparent);--pa-frame-trigger-text:color-mix(in srgb, #ffffff 85%, transparent);--pa-frame-trigger-hover:color-mix(in srgb, #ffffff 20%, transparent);--pa-frame-glass-background:color-mix(in srgb, #000000 25%, transparent);--pa-frame-menu-glass-background:color-mix(in srgb, #000000 30%, transparent);--pa-frame-glass-border:color-mix(in srgb, #ffffff 30%, transparent);--pa-frame-brand-tint:color-mix(in srgb, #aa44aa 9%, #ffffff);--pa-frame-sub-navigation-text:#666;--pa-frame-sub-navigation-border:#e8e4dc;--pa-frame-mobile-band-text:#555;--pa-frame-mobile-active-background:#f3e8f3;--pa-frame-mobile-chevron:#6b7280;--pa-frame-mega-heading-text:#6b7280;--pa-frame-mega-link-text:#555;--pa-frame-wave-primary:#059669;--pa-frame-wave-secondary:#28a745;--pa-frame-header-height:56px;--pa-frame-header-action-size:40px;--pa-frame-header-action-icon-size:22px;--pa-frame-avatar-size:36px;--pa-frame-avatar-padding:4px;--pa-frame-avatar-font-size:14px;--pa-frame-content-max-width:1280px;--pa-frame-footer-content-max-width:1024px;--pa-frame-horizontal-padding:24px;--pa-frame-compact-horizontal-padding:16px;background-image:linear-gradient(135deg, #f3f4f6, #ffffff)">
+      <svg aria-hidden="true" class="pa-site-frame__wave pa-site-frame__wave--footer" data-pa-wave="footer" focusable="false" preserveAspectRatio="none" viewBox="0 0 400 120">
+       <path d="M0 60 Q80 30 160 55 T320 45 T480 60"></path><path d="M-50 35 Q60 70 180 40 T350 55 T500 30"></path><path d="M0 85 Q100 60 200 90 T400 75"></path><path d="M-30 100 Q90 110 180 95 T360 105 T450 90"></path><path d="M0 18 Q120 8 220 22 T420 15"></path>
+      </svg>
+      <div class="pa-site-frame__footer-inner">
+       <nav aria-label="Footer" class="pa-site-frame__footer-columns">
+        <section aria-labelledby="pa-site-frame-footer-store">
+         <h2 id="pa-site-frame-footer-store">Store</h2>
+         <ul>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/store">All Products</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/store/air-quality-sensors">Air Quality Sensors</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/store/power-supplies">Power Supplies</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/store/accessories">Accessories</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/store/replacement-parts">Replacement Parts</a></li>
+         </ul>
+        </section>
+        <section aria-labelledby="pa-site-frame-footer-solutions">
+         <h2 id="pa-site-frame-footer-solutions">Solutions</h2>
+         <ul>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/personal">Personal</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/business">Business</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/education">Education</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/research">Research</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/broadcasters">Broadcasters</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/government">Government</a></li>
+         </ul>
+        </section>
+        <section aria-labelledby="pa-site-frame-footer-tools">
+         <h2 id="pa-site-frame-footer-tools">Tools</h2>
+         <ul>
+          <li><a class="pa-site-frame__map-action" data-pa-service="map" href="https://map.purpleair.com/">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+             <path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4zM8 2v16M16 6v16"></path>
+            </svg>
+            <span>Map</span>
+           </a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/real-time-map">Real-Time Map</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/register">Register Your Sensor</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/utility">Sensor Utility</a></li>
+         </ul>
+        </section>
+        <section aria-labelledby="pa-site-frame-footer-resources">
+         <h2 id="pa-site-frame-footer-resources">Resources</h2>
+         <ul>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/community">Community</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/faq">FAQ</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/papers">Scientific Papers</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/projects-and-integrations">Projects &amp; Integrations</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/api">API Documentation</a></li>
+         </ul>
+        </section>
+        <section aria-labelledby="pa-site-frame-footer-company">
+         <h2 id="pa-site-frame-footer-company">Company</h2>
+         <ul>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/about">About PurpleAir</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/blog">Blog</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/press">Press</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/contact">Contact</a></li>
+         </ul>
+         <address><strong>PurpleAir, Inc.</strong><span>860 W 14600 S, Suite 600</span><span>Bluffdale, UT 84065</span></address>
+        </section>
+       </nav>
+       <section class="pa-site-frame__image-credits">
+        <h2>Photo Credits</h2>
+        <p>Images credited to photographers, agencies, and other sources.</p>
+        <a data-pa-internal-link="" href="https://www.purpleair.com/credits">View all credits</a>
+       </section>
+       <div aria-label="Social media" class="pa-site-frame__social-links">
+        <a aria-label="Facebook" href="https://www.facebook.com/ThePurpleAir/" rel="noopener noreferrer" target="_blank">
+         <svg aria-label="Facebook" role="img" viewBox="0 0 24 24">
+          <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+         </svg>
+        </a><a aria-label="X" href="https://twitter.com/thepurpleair" rel="noopener noreferrer" target="_blank">
+         <svg aria-label="X" role="img" viewBox="0 0 24 24">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+         </svg>
+        </a><a aria-label="Instagram" href="https://www.instagram.com/thepurpleair" rel="noopener noreferrer" target="_blank">
+         <svg aria-label="Instagram" role="img" viewBox="0 0 24 24">
+          <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>
+         </svg>
+        </a><a aria-label="YouTube" href="https://youtube.com/@thepurpleair" rel="noopener noreferrer" target="_blank">
+         <svg aria-label="YouTube" role="img" viewBox="0 0 24 24">
+          <path d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.893 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.107 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5l6-3.5-6-3.5v7z"></path>
+         </svg>
+        </a>
+       </div>
+       <div class="pa-site-frame__footer-bottom">
+        <nav aria-label="Legal">
+         <ul class="pa-site-frame__legal-links">
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/policies/privacy-policy">Privacy Policy</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/policies/terms-of-service">Terms of Service</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/policies/refund-policy">Refund Policy</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/policies/shipping-policy">Shipping Policy</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/policies/warranty">Warranty</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/patents">Patents</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/trademarks">Trademarks</a></li>
+          <li><a data-pa-internal-link="" href="https://www.purpleair.com/do-not-sell">Do Not Sell My Info</a></li>
+          <li><a data-pa-host-action="cookie-settings" data-pa-host-action-event="purpleair:cookie-settings-requested" href="https://www.purpleair.com/policies/privacy-policy">Cookie Settings</a></li>
+         </ul>
+        </nav>
+        <p>© 2026 PurpleAir, Inc. All rights reserved.</p>
+        <p class="pa-site-frame__trademark-notice">PurpleAir® is a registered trademark of PurpleAir, Inc. in the United States and other countries. The PurpleAir logo is a registered trademark of PurpleAir, Inc. in the United States.</p>
+       </div>
+      </div>
+     </footer>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

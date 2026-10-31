@@ -1,0 +1,451 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <title>CPC - Climate Weather Linkage: Atmospheric Blocking</title>
+  <meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+  <meta content="NCEP Web Team" name="GENERATOR">
+  <link href="/nwscwi/main.css" type="text/css" rel="STYLESHEET">
+</head>
+<body leftmargin="0" background="/nwscwi/background.gif" 
+      topmargin="0" rightmargin="0" marginheight="0" marginwidth="0">
+
+<table cellspacing="0" cellpadding="0" width="100%" border="0" background="/nwscwi/topbanner.jpg" >
+	<tbody>
+		<tr>
+			<td align="right" height="19">
+				<a href="#contents"><img height="1" alt="Skip Navigation Links" src="/nwscwi/skipgraphic.gif" width="1" border="0"></a>
+				<a href="https://www.weather.gov/" class="homepagelinks"><SPAN class="nwslink">www.weather.gov</span></a>&nbsp;
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!-- -->
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+	<tbody>
+		<tr>
+			<td rowSpan="2"><A href="https://www.noaa.gov/">
+			<img height="78" alt="NOAA logo - Click to go to the NOAA home page" src="/nwscwi/noaaleft.jpg" width="85" border="0"></a></td>
+			<td align="left"><img height="20" alt="National Weather Service" src="/nwscwi/nws_title.jpg" width="500" border="0"></td>
+			<td rowspan="2" width="100%" background="/nwscwi/ncep_bkgrnd.jpg">&nbsp;</td>
+			<td rowspan="2" align="right"><a href="https://www.weather.gov/">
+			<img height="78" alt="NWS logo - Click to go to the NWS home page" src="/nwscwi/nwsright.jpg" width="85" border="0"></a></td>
+		</tr>
+		<tr>
+			<td><img height="58" alt="Climate Prediction Center" src="/nwscwi/cpc.jpg" width="500" border="0"></td>
+		</tr>
+	</tbody>
+</table>
+<!-- -->
+<table cellspacing="0" cellpadding="0" width="100%" background="/nwscwi/navbkgrnd.gif" border="0">
+	<tbody>
+		<tr>
+			<td align="left" width="135"><img height="23" alt="" src="/nwscwi/navbarleft.jpg" width="94" border="0"></td>
+			<td class="nav" align="center" width="10%">
+				<a href="/" class="menu" title="to the climate prediction center home page">home</a>
+			</td>
+			<td class="nav" align="center" width="10%">
+				<a href="/products/site_index.shtml" class="menu" title="to Climate Prediction Center site map">Site Map</a>
+			</td>
+			<td class="nav" align="right" width="10%">
+				<a href="https://www.weather.gov/news/" class="menu" title="to National Weather Service news page">News</a>
+			</td>
+			<td class="nav" align="right" width="19%">
+				<a href="https://www.weather.gov/organization/" class="menu">Organization</a>
+			</td>
+			<td class="searchinput" align="right" width="30%">
+				<form method="get" action="https://search.usa.gov/search" style="margin-bottom:0; margin-top:0;">
+				<label for="Search"><span class="yellow">Search</span>&nbsp;&nbsp;</label>
+				<input type="hidden" name="affiliate" value="weather.gov" />
+				<input type="hidden" name="v:project" value="firstgov" />
+				<input name="query" type="text" value="" size="20" maxlength="256" id="Search" />
+				<input type="submit" value="Go" />
+				</form>
+			</td>
+			<td align="right"><img height="23" alt="" src="/nwscwi/navbarendcap.jpg" width="24" border="0"></td>
+		</tr>
+	</tbody>
+</table>       <!-- Use virtual include, because this should be in a common place within your DocumentRoot. -->
+<table cellspacing="0" cellpadding="0" width="670" border="0">
+  <tr valign="top">
+    <td width="137"><br>
+            <table cellspacing="0" cellpadding="0" width="137" border="0">
+        <!-- Do not remove this section. You will need this when the City,St/zip search is implemented nationwide.-->
+        <!-- <tr align="left" valign="top">
+                <td class="searchinput">
+                  <div id="Layer2" style="position:absolute; width:200px; height:115px; z-index:2; visibility: hidden">Search by city or zip code. Press enter or select the go button to submit request</div>
+                  <form method="POST" action="http://www.srh.noaa.gov/zipcity.php">
+                  <span class="yellow">Local forecast by<br>&quot;City, St&quot; or Zip Code</span><br>
+                  <input type="text" name="inputstring" size="9" value="City, St">
+                  <input type="submit" name="Go2" value="Go"></form></td>
+        </tr> -->
+<!--
+         <tr>
+          <td class="searchinput" align="left">
+           <form method="get" action="http://firstgovsearch.gov/search"
+                 style="margin-bottom:0; margin-top:0;">
+            <label for="Search">
+            <span class="yellow">Search&nbsp;the CPC</span></label>
+            <input type="hidden" name="affiliate" value="ncep.noaa.gov" />
+            <input type="hidden" name="v:sources"
+                  value="firstgov-affiliates-search" />
+            <input type="hidden" name="v:project" value="firstgov" />
+            <input type="hidden" name="query"
+                  value="site:www.cpc.ncep.noaa.gov" />
+            <input name="query" type="text" value="All CPC" size="10" maxlength="256"
+                  id="Search"/>
+            <input type="submit" value="Go"  />
+           </form>
+          </td>
+         </tr>
+-->
+
+         <tr>
+          <td class="searchinput" align="left">
+
+           <form method="get" action="https://search.usa.gov/search"
+                 style="margin-bottom:0; margin-top:0;">
+            <label for="Search">
+            <span class="yellow">Search</span></label>
+            <input type="hidden" name="affiliate" value="ncep.noaa.gov" />
+            <input type="hidden" name="v:sources"
+                  value="firstgov-affiliates-search" />
+            <input type="hidden" name="v:project" value="firstgov" />
+            <input type="hidden" name="query"
+                  value="site:www.cpc.ncep.noaa.gov" />
+            <input name="query" type="text" value="" size="10" maxlength="256"
+                  id="Search"/>
+            <input type="submit" value="Go"  />
+           </form>
+
+          </td>
+         </tr>
+
+
+
+        <tr>
+          <td class="white" id="menuitem">
+
+            <a href="/products/forecasts/" class="menu"><font color="#F0E68C">Climate Outlooks</font></a><br><br>
+
+            <a href="/products/precip/CWlink/MJO/climwx.shtml" class="menu"><span class="yellow">Climate &amp; Weather Link</span></a><br>
+            &nbsp;&nbsp;&nbsp;<a href="/products/precip/CWlink/MJO/enso.shtml"class="menu">El Ni&ntilde;o/La Ni&ntilde;a</a><br>
+            &nbsp;&nbsp;&nbsp;<a href="/products/precip/CWlink/MJO/mjo.shtml"class="menu">MJO</a><br>
+            &nbsp;&nbsp;&nbsp;<a href="/products/precip/CWlink/daily_ao_index/teleconnections.shtml" class="menu">Teleconnections</a><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/products/precip/CWlink/daily_ao_index/ao.shtml" class="menu">AO</a><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/products/precip/CWlink/pna/nao.shtml" class="menu">NAO</a><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/products/precip/CWlink/pna/pna.shtml" class="menu">PNA</a><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/products/precip/CWlink/daily_ao_index/aao/aao.shtml" class="menu">AAO</a><br>
+            &nbsp;&nbsp;&nbsp;<a href="/products/precip/CWlink/MJO/block.shtml"class="menu">Blocking</a><br>
+            &nbsp;&nbsp;&nbsp;<a href="/products/precip/CWlink/stormtracks/mstrack.shtml"class="menu">Storm Tracks</a><br><br>
+
+<!--  
+            <a href="" class="menu"><font color="#F0E68C">Current Conditions</font></a><br><br>
+            <a href="" class="menu"><font color="#F0E68C">Climatology</font></a><br><br>
+            <a href="" class="menu"><font color="#F0E68C">Global Climate</font></a><br><br> 
+-->
+            <a href="/products/outreach/glossary.shtml" class="menu"><font color="#F0E68C">Climate Glossary</font></a><br><br>
+<!--            
+            <a href="" class="menu"><font color="#F0E68C">Education</font></a><br><br>          
+-->
+            <a href="/products/outreach/" class="menu"><font color="#F0E68C">Outreach</font></a><br><br>
+
+            <span class="yellow">About Us</span><br>
+            &nbsp;&nbsp;&nbsp;<a href="/information/who_we_are/mission.shtml">Our Mission</a><br>
+            &nbsp;&nbsp;&nbsp;<a href="/information/who_we_are/index.shtml">Who We Are</a><br><br>
+
+            <span class="yellow">Contact Us</span><br>
+            &nbsp;&nbsp;&nbsp;<a href="/comment-form.php">Web Team</a><br><br>
+            
+          </td>
+        </tr>
+         <TR><TD>&nbsp;</TD></TR>
+         <TR>
+          <TD class="white" id="menuitem">
+           <a href="https://www.usa.gov/"><img src="/nwscwi/usagov_logo_color_110wb.gif" alt="USA.gov is the U.S. Government's official Web portal to all Federal, state and local government Web resources and services." width="110" height="30" border="0"></a>
+          </TD>
+         </TR>
+      </table>
+   <!-- Use virtual include, because this should be in a common place within your DocumentRoot. -->
+    </td>
+    <td valign="top" align="center" width="533"><a name="contents"></a>
+      <!-- Content area -->
+<table border="0" cellPadding="2" cellSpacing="0" width="533">
+ <tr>
+  <td>
+   <font face="verdana,arial,serif" size="1" color="#000000"><a href="/" class="homepagelinks"><strong>HOME</strong></a> &gt;  <a href="/products/precip/CWlink/MJO/climwx.shtml" class="homepagelinks">Climate & Weather Linkage</a> &gt; Blocking</font>
+  </td>
+ </tr>
+ <tr><td>&nbsp;</td></tr>
+ <tr>
+  <td valign="top" align="center">
+   <img src="/www_images/block.gif" alt="" width="100" height="55">
+  </td>
+ </tr>
+ <tr>
+  <td valign="top"><a name="list"></a>
+   <table border="0" cellpadding="2" cellspacing="2" width="540">
+    <tr>
+     <td>
+      <ul>
+       <li type="square"><font face="verdana,arial,serif" size="2"><a href="#current"><strong>Current Conditions</strong></a></font></li>
+       <li type="square"><font face="verdana,arial,serif" size="2"><a href="#outlook"><strong>Outlooks</strong></a></font></li>
+<!--
+       <li type="square"><font face="verdana,arial,serif" size="2"><a href="#discussion"><strong>Expert Discussions</strong></a></font></li>
+-->
+       <li type="square"><font face="verdana,arial,serif" size="2"><a href="#composite"><strong>Composites</strong></a></font></li>
+<!--
+       <li type="square"><font face="verdana,arial,serif" size="2"><a href="#link"><strong>Linkage to Weather</strong></a></font></li>
+-->
+       <li type="square"><font face="verdana,arial,serif" size="2"><a href="#educational_material"><strong>Educational Material</strong></a></font></li>
+       <li type="square"><font face="verdana,arial,serif" size="2"><a href="#publication"><strong>Publications</strong></a></font></li>
+      </ul>
+     </td>
+    </tr>
+<tr>
+  <td>
+  <font color="#FF0000"><strong>(Questions/Comments/Suggestions? Send to: <A href="mailto:Laura.CiastoATnoaa.gov">Laura Ciasto</A>)</strong></font>
+  </td>
+ </tr>
+<hr>
+    <tr><td>&nbsp;</td></tr>
+    <tr>
+     <td><a name="current"></a>
+      <ul>
+       <li type="square"><font face="verdana,arial,serif" size="3"><strong>Current Conditions</strong></font></li>
+      </ul>
+      <table align="center" width="90%">
+       <tr>
+        <td>
+         <p ALIGN="JUSTIFY"> <font face="verdana,arial,serif" size="2"> All colored regions in the hovmoller plot below
+          depict regions where the flow is blocked according to the <a href="/products/precip/CWlink/blocking/index/index.nh.shtml"><strong>blocking 
+          index</strong></a>. The color scheme denotes the strength of the blocked flow as determined from the 500 hPa geopotential
+          height gradient measured from the blocking ridge equatorward (denoted GHGS in blocking index definition).  The
+          presence of an intense cutoff low equatorward of the blocking ridge can act to enhance the blocking strength.</font></p>
+         </td>
+        </tr>
+       </table>
+      </td>
+     </tr>
+     <tr><td>&nbsp;</td></tr>
+     <tr>
+      <td>
+       <p align="center"><IMG SRC="/products/precip/CWlink/blocking/real_time_nh/1panel_ghgs_obs_nh_nrm.gif" alt="Blocking Strength GHGS Observations"></p>
+       <p align="center"><IMG SRC="/products/precip/CWlink/blocking/real_time_nh/500gz_anomalies_nh.gif" alt="500 hecto pascals Geopotential Height and Anomalies">
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <table align="center" width="90%">
+       <tr>
+        <td>
+         <ul>
+          <li><font face="verdana,arial,serif" size="2"><a href="/products/precip/CWlink/blocking/real_time_sh/real_time_index_nrm.shtml"><strong> Observed Southern Hemisphere Blocking</strong></a></font><br><br></li>
+          <li><font face="verdana,arial,serif" size="2">Blocking Climatology <a href="/products/precip/CWlink/blocking/seasonal_nh/seasonal_nh.shtml"><strong>Northern Hemisphere</strong></a> and <a href="/products/precip/CWlink/blocking/seasonal_sh/seasonal_sh.shtml"><strong>Southern Hemisphere</strong></a></font><br><br></li>
+         </ul>
+        </td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p align="right"><a href="#list"><font size="2">[Back to the Top]</font></a></p>
+     </td>
+    </tr>
+    <tr>
+     <td><a name="outlook"></a>
+      <ul>
+       <li type="square"><font face="verdana,arial,serif" size="3"><strong>Outlooks</strong></font></li>
+      </ul>
+      <table align="center" width="90%">
+       <tr>
+        <td>
+         <ul>
+          <li><font face="verdana,arial,serif" size="2"><a href="/products/precip/CWlink/blocking/real_time_nh/real_time_obs2.shtml">GFS Hovmoller (NH)</a></font></li>
+          <li><font face="verdana,arial,serif" size="2"><a href="/products/precip/CWlink/blocking/real_time_nh/mrf1.nh.shtml">GFS 500 mb Days 1-4 (NH)</a></font></li>
+          <li><font face="verdana,arial,serif" size="2"><a href="/products/precip/CWlink/blocking/real_time_nh/mrf2.nh.shtml">GFS 500 mb Days 5-9 (NH)</a></font></li>
+          <li><font face="verdana,arial,serif" size="2"><a href="/products/precip/CWlink/blocking/real_time_nh/mrf3.nh.shtml">GFS 500 mb Days 10-14 (NH)</a></font></li>
+          <li><font face="verdana,arial,serif" size="2"><a href="/products/precip/CWlink/blocking/real_time_sh/mrf1.sh.shtml">GFS 500 mb Days 1-4 (SH)</a></font></li>
+          <li><font face="verdana,arial,serif" size="2"><a href="/products/precip/CWlink/blocking/real_time_sh/mrf2.sh.shtml">GFS 500 mb Days 5-9 (SH)</a></font></li>
+          <li><font face="verdana,arial,serif" size="2"><a href="/products/precip/CWlink/blocking/real_time_sh/mrf3.sh.shtml">GFS 500 mb Days 10-14 (SH)</a></font></li>
+	  <!--><li><font face="verdana,arial,serif" size="2"><a href="/products/precip/CWlink/blocking/real_time_nh/real_time_obs_ensm2.shtml">GFS Ensemble Hovmoller</a></font></li></-->
+          <li><font face="verdana,arial,serif" size="2"><a href="/products/precip/CWlink/blocking/real_time_sh/real_time_obs2.shtml">GFS Forecasts (Southern Hemisphere)</a></font></li>
+	  <!--><li><font face="verdana,arial,serif" size="2"><a href="/products/precip/CWlink/blocking/real_time_sh/real_time_obs_ensm2.shtml">GFS Ensemble Forecasts (Southern Hemisphere)</a></font></li></-->
+         </ul>
+        </td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p align="right"><a href="#list"><font size="2">[Back to the Top]</font></a></p>
+     </td>
+    </tr>
+<!--
+    <tr>
+     <td><a name="discussion"></a>
+      <ul>
+       <li type="square"><font face="verdana,arial,serif" size="3"><strong>Expert Discussions</strong></font></li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p align="right"><a href="#list"><font size="2">[Back to the Top]</font></a></p>
+     </td>
+    </tr>
+-->
+    <tr>
+     <td><a name="composite"></a>
+      <ul>
+       <li type="square"><font face="verdana,arial,serif" size="3"><strong>Composites</strong></font></li>
+      </ul>
+      <table align="center" width="90%">
+       <tr>
+        <td>
+         <font face="verdana,arial,serif" size="2">Using the <a href="/products/precip/CWlink/blocking/index/index.nh.shtml"><strong>blocking index</strong></a> of Tibaldi and Molteni (1990) we can consider the frequency of DJF "blocked days" for <a href="/research_papers/ncep_cpc_atlas/8/ensoyrs.txt"><strong> Neutral, Warm and Cold</strong></a> episodes as defined by the magnitude of the SST anomalies in the tropical Pacific.  Cold episodes are defined as [C+,C], warm episodes [W+,W], and neutral episodes as [W-,C-,N].  For each panel the number of DJF seasons is shown in square brackets.  We have also included in the middle panel on the right-hand side a plot of the neutral episodes defined simply as [N].  This can be compared with the middle left-hand side panel where neutral episodes have been defined as [W-,C-,N].  In each panel the DJF 51 year average has been plotted in red for ease of comparison.</font>
+        </td>
+       </tr>
+      </table>
+      <tr>
+       <td align="center">
+        <img src="/products/precip/CWlink/blocking/enso/enso_stratification.gif" alt="Frequency of December-January-February blocked day for Neutral, Warm and Cold ENSO episodes">
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table align="center" width="90%">
+         <tr>
+          <td>
+           <ul>
+            <li><font face="verdana,arial,serif" size="2"><a href="/products/precip/CWlink/blocking/enso/neutral.shtml"><strong>Individual Neutral DJF Seasons [W-,C-,N]</strong></a></font></li>
+            <li><font face="verdana,arial,serif" size="2"><a href="/products/precip/CWlink/blocking/enso/warm.shtml"><strong>Individual Warm DJF Seasons [W+,W]</strong></a></font></li>
+            <li><font face="verdana,arial,serif" size="2"><a href="/products/precip/CWlink/blocking/enso/cold.shtml"><strong>Individual Cold DJF Seasons [C+,C]</strong></a></font></li>
+           </ul>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p align="right"><a href="#list"><font size="2">[Back to the Top]</font></a></p>
+       </td>
+      </tr>
+<!--
+      <tr>
+       <td><a name="link"></a>
+        <ul>
+         <li type="square"><font face="verdana,arial,serif" size="3"><strong>Linkage to Weather</strong></font></li>
+        </ul>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p align="right"><a href="#list"><font size="2">[Back to the Top]</font></a></p>
+       </td>
+      </tr>
+-->
+      <tr>
+       <td><a name="educational_material"></a>
+        <ul>
+         <li type="square"><font face="verdana,arial,serif" size="3"><strong>Educational Material</strong></font></li>
+        </ul>
+       </td>
+      </tr>
+      <tr> 
+       <td>
+        <table align="center" width="90%">
+         <tr>
+          <td>
+           <p ALIGN=JUSTIFY><font face="verdana,arial,serif" size="2">Atmospheric blocking is commonly referred to as the situation when the normal zonal flow is interrupted by strong and persistent meridional flow.  The normal eastward progression of synoptic disturbances is obstructed leading to episodes of prolonged extreme weather conditions.  On intraseasonal time scales the persistent weather extremes can last from several days up to a few weeks, often accompanied by significant temperature and precipitation anomalies. Examples of the 500 hPa height and anomaly fields associated with mature blocking episodes over the <a href="/products/precip/CWlink/blocking/background/atlantic_case.shtml"><strong>northeastern Atlantic</strong></a> and the <a href="/products/precip/CWlink/blocking/background/pacific_case.shtml"><strong>North Pacific</strong></a>. These two regions are preferred areas for atmospheric blocking during the <a href="/products/precip/CWlink/blocking/seasonal_nh/seasonal_nh.shtml"><strong>northern hemisphere cold season</strong></a>.</font></p>
+           <p align="justify"><font face="verdana,arial,serif" size="2">A common finding among scientific studies is that these long-lived weather extremes are associated with recurrent atmospheric flow anomalies.  Numerous studies have found that the poor forecast skill beyond a few days results principally from the inability of numerical weather prediction models to simulate the onset and evolution of blocking flows.</font></p>
+           <ul>
+            <li><font face="verdana,arial,serif" size="2">Definition of <a href="/products/precip/CWlink/blocking/index/index.nh.shtml"><strong> Blocking Index Definition</strong></a></font><br><br></li>
+           </ul>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p align="right"><a href="#list"><font size="2">[Back to the Top]</font></a></p>
+       </td>
+      </tr>
+      <tr>
+       <td><a name="publication"></a>
+        <ul>
+         <li type="square"><font face="verdana,arial,serif" size="3"><strong>Publications</strong></font></li>
+        </ul>
+        <table align="center" width="90%">
+         <tr>
+          <td>
+           <p ALIGN="JUSTIFY"><font face="verdana,arial,serif" size="2">Carrera, M. L., R. W. Higgins, and V. E. Kousky, 2004:  Downstream weather impacts associated with atmospheric blocking over the Northeast Pacific.  J. Climate, in press.</font></p>
+           <p ALIGN="JUSTIFY"><font face="verdana,arial,serif" size="2">Chen, W. Y., and H. M. Van den Dool, 1995:  Low-frequency anomalies in the NMC MRF model and reality.  J. Climate, 8, 1369-1385.</font></p>
+           <p ALIGN="JUSTIFY"><font face="verdana,arial,serif" size="2">Chen, W. Y., and H. M. Van den Dool, 1997:  Asymmetric impact of tropical SST anomalies on atmospheric internal variability over the North Pacific.  J. Atmos. Sci., 54, 725-740.</font></p>
+           <p ALIGN="JUSTIFY"><font face="verdana,arial,serif" size="2">Chen, W. Y., and H. M. Van den Dool, 1999:  Significant change of extratropical natural variability and potential predictability associated with the El Nino/Southern Oscillation  Tellus, 51A, 790-802..</font></p>
+           <p ALIGN="JUSTIFY"><font face="verdaa,arial,serif" size="2">Higgins, R. W., and S. D. Schubert, 1994:  Simulated life cycles of persistent anticyclonic anomalies over the North Pacific:  Role of synoptic-scale eddies.  J. Atmos. Sci., 51, 3238-3260.</font></p>
+           <p ALIGN="JUSTIFY"><font face="verdana,arial,serif" size="2">Higgins, R. W., and S. D. Schubert, 1996:  Simulations of persistent North Pacific circulation anomalies and interhemispheric teleconnections.  J. Atmos. Sci., 53, 188-207.</font></p>
+           <p ALIGN="JUSTIFY"><font face="verdana,arial,serif" size="2">Higgins, R. W., and K. C. Mo, 1997:  Persistent North Pacific circulation anomalies and the tropical intraseasonal oscillation.  J. Climate, 10, 223-244.</font></p> 
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p align="right"><a href="#list"><font size="2">[Back to the Top]</font></a></p>
+       </td>
+      </tr>
+    </table>
+   </td>
+  </tr>
+ </table>
+<!-- End of Content -->
+            <!-- This is the body content file of the current sub-directory. -->
+      <TABLE cellSpacing="0" cellPadding="0" width="99%" border="0">
+	<TBODY>
+		<TR>
+			<TD colSpan="3"><HR></TD>
+		</TR>
+		<TR vAlign="top">
+			<TD class="gray">
+				<A href="http://www.noaa.gov/" class="homepagelinks"><SPAN class="gray">NOAA/</SPAN></A>
+				<A href="http://www.nws.noaa.gov/" class="homepagelinks"><SPAN class="gray">National Weather Service</SPAN></A><BR>
+				<A href="http://www.ncep.noaa.gov/" class="homepagelinks"><SPAN class="gray">National Centers for Environmental Prediction</SPAN></a><BR>
+				Climate Prediction Center<BR>
+				5830 University Research Court <BR>
+				Riverdale Park, MD 20737 <BR>
+				Page Author:<A href="/comment-form.html" class="homepagelinks"><SPAN class="gray"> Climate Prediction Center Internet Team</SPAN></A><BR>
+				Page last modified: December 12, 2005
+			</TD>
+			<TD>
+				<A href="http://www.weather.gov/disclaimer.php" class="homepagelinks">
+				<SPAN class="gray">Disclaimer</SPAN></A><br>
+				<A href="http://www.cio.noaa.gov/Policy_Programs/info_quality.html" class="homepagelinks">
+				<SPAN class="gray">Information Quality</SPAN></A><br>
+				<A href="http://www.nws.noaa.gov/credits.php" class="homepagelinks">
+				<SPAN class="gray">Credits</SPAN></A><br>
+				<A href="http://www.nws.noaa.gov/glossary/" class="homepagelinks">
+				<SPAN class="gray">Glossary</SPAN></A><br>
+			</TD>
+			<TD align="right"><A href="http://www.weather.gov/privacy.php" class="homepagelinks">
+				<SPAN class="gray">Privacy Policy</SPAN></A><br>
+				<A href="http://www.rdc.noaa.gov/%7Efoia/" class="homepagelinks">
+				<SPAN class="gray">Freedom of Information Act (FOIA)</SPAN></A><br>
+				<A href="http://www.nws.noaa.gov/admin.php" class="homepagelinks">
+				<SPAN class="gray">About Us</SPAN></A><br>
+				<A href="http://www.nws.noaa.gov/careers.php" class="homepagelinks">
+				<SPAN class="gray">Career Opportunities</SPAN></A><br>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+   <!-- Use virtual include, because this should be in a common place within your DocumentRoot. -->
+    </td>
+  </tr> 
+</table>
+</body>
+</html>

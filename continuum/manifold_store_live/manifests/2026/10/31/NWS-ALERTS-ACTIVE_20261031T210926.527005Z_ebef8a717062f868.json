@@ -1,0 +1,23 @@
+{
+  "candidate_id": "NWS-ALERTS-ACTIVE",
+  "provider": "NOAA/NWS",
+  "dataset": "Active weather alerts",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "weather",
+    "hazards"
+  ],
+  "retrieved_utc": "2026-10-31T21:09:26.527005Z",
+  "request_url": "https://api.weather.gov/alerts/active",
+  "final_url": "https://api.weather.gov/alerts/active",
+  "status_code": 200,
+  "content_type": "application/geo+json",
+  "byte_length": 1657157,
+  "sha256": "ebef8a717062f868f6ed8ccd087604e49784497ac38140829d92adbdb8257015",
+  "etag": "W/\"6f62ea64f4c7d8db5604e8485f9a9fb1:dtagent10337260504112723F6xZ:dtagent10337260504112723F6xZ\"",
+  "last_modified": null,
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/weather/2026/10/31/NWS-ALERTS-ACTIVE/20261031T210926.527005Z_ebef8a717062f868.json",
+  "parent_id": null,
+  "discovery_depth": 0
+}

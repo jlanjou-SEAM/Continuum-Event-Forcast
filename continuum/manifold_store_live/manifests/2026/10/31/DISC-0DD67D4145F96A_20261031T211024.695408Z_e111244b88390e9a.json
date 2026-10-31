@@ -1,0 +1,24 @@
+{
+  "candidate_id": "DISC-0DD67D4145F96A",
+  "provider": "Environment and Climate Change Canada",
+  "dataset": "items",
+  "sector": "public",
+  "country": "CA",
+  "scientific_regime": [
+    "weather",
+    "climate",
+    "hydrology"
+  ],
+  "retrieved_utc": "2026-10-31T21:10:24.695408Z",
+  "request_url": "https://api.weather.gc.ca/collections/climate-hourly/items?f=jsonld",
+  "final_url": "https://api.weather.gc.ca/collections/climate-hourly/items?f=jsonld",
+  "status_code": 200,
+  "content_type": "application/ld+json",
+  "byte_length": 79432,
+  "sha256": "e111244b88390e9a4d42bd6c9925902d68a6e1d2996b25efe4ad7ca47d9ce972",
+  "etag": null,
+  "last_modified": null,
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/weather/2026/10/31/DISC-0DD67D4145F96A/20261031T211024.695408Z_e111244b88390e9a.json",
+  "parent_id": "CANADA-GEOMET-COLLECTIONS",
+  "discovery_depth": 1
+}
