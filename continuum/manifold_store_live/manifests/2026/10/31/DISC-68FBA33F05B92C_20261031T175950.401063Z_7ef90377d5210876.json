@@ -1,0 +1,23 @@
+{
+  "candidate_id": "DISC-68FBA33F05B92C",
+  "provider": "NOAA/SWPC",
+  "dataset": "propagated-solar-wind.json",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "space_weather",
+    "geomagnetic"
+  ],
+  "retrieved_utc": "2026-10-31T17:59:50.401063Z",
+  "request_url": "https://services.swpc.noaa.gov/products/geospace/propagated-solar-wind.json",
+  "final_url": "https://services.swpc.noaa.gov/products/geospace/propagated-solar-wind.json",
+  "status_code": 200,
+  "content_type": "application/json",
+  "byte_length": 1179911,
+  "sha256": "7ef90377d5210876ee763025caf90ff18230c23d6c558790dc6f379641e224cf",
+  "etag": "\"120107-65f26a9359b28\"",
+  "last_modified": "Sat, 31 Oct 2026 17:58:32 GMT",
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/space_weather/2026/10/31/DISC-68FBA33F05B92C/20261031T175950.401063Z_7ef90377d5210876.json",
+  "parent_id": "SWPC-GEOSPACE",
+  "discovery_depth": 1
+}

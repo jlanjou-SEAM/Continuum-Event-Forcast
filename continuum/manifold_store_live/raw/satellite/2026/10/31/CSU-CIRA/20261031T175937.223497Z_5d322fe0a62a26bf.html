@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>CIRA - Cooperative Institute for Research in the Atmosphere &raquo; Connecting Models and Observations</title>
+	<link rel="icon" href="https://www.cira.colostate.edu/wp-content/themes/CIRA2019/favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="msapplication-TileImage" content="https://www.cira.colostate.edu/wp-content/themes/CIRA2019/favicon.png">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" defer>    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" defer>
+    <link rel='stylesheet' href='https://www.cira.colostate.edu/wp-content/themes/CIRA2019/css/media-styles.css' type='text/css' media='all' defer />
+	<link rel='stylesheet' href='https://www.cira.colostate.edu/wp-content/themes/CIRA2019/css/style.css?counter=183' type='text/css' media='all' defer />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js" referrerpolicy="origin"></script>
+    <script  src="https://www.cira.colostate.edu/wp-content/themes/CIRA2019/js/script.js?counter=15" type="text/javascript" defer></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Z72E8F5YW"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1Z72E8F5YW');
+    </script> 
+    <script async src="https://siteimproveanalytics.com/js/siteanalyze_1879.js"></script>
+    <meta name='robots' content='max-image-preview:large' />
+<link rel="alternate" type="application/rss+xml" title="CIRA - Cooperative Institute for Research in the Atmosphere &raquo; Feed" href="https://www.cira.colostate.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="CIRA - Cooperative Institute for Research in the Atmosphere &raquo; Comments Feed" href="https://www.cira.colostate.edu/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.cira.colostate.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cira.colostate.edu%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.cira.colostate.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cira.colostate.edu%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="wp-block-button-inline-css">
+.wp-block-button__link{align-content:center;box-sizing:border-box;cursor:pointer;display:inline-block;height:100%;text-align:center;word-break:break-word}.wp-block-button__link.aligncenter{text-align:center}.wp-block-button__link.alignright{text-align:right}:where(.wp-block-button__link){border-radius:9999px;box-shadow:none;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}.wp-block-button[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons>.wp-block-button.has-custom-width{max-width:none}.wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link{width:100%}.wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons>.wp-block-button[class*=wp-block-button__width]{width:calc(var(--wp--block-button--width)*1% - var(--wp--style--block-gap, .5em)*(1 - var(--wp--block-button--width)/100))}.wp-block-buttons>.wp-block-button.wp-block-button__width-25{width:calc(25% - var(--wp--style--block-gap, .5em)*.75)}.wp-block-buttons>.wp-block-button.wp-block-button__width-50{width:calc(50% - var(--wp--style--block-gap, .5em)*.5)}.wp-block-buttons>.wp-block-button.wp-block-button__width-75{width:calc(75% - var(--wp--style--block-gap, .5em)*.25)}.wp-block-buttons>.wp-block-button.wp-block-button__width-100{flex-basis:100%;width:100%}.wp-block-buttons.is-vertical>.wp-block-button[class*=wp-block-button__width]{width:calc(var(--wp--block-button--width)*1%)}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-25{width:25%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-50{width:50%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-75{width:75%}.wp-block-button.is-style-squared,.wp-block-button__link.wp-block-button.is-style-squared{border-radius:0}.wp-block-button.no-border-radius,.wp-block-button__link.no-border-radius{border-radius:0!important}:root :where(.wp-block-button .wp-block-button__link.is-style-outline),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link){border:2px solid;padding:.667em 1.333em}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-text-color)){color:currentColor}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background)){background-color:transparent;background-image:none}
+/*# sourceURL=https://www.cira.colostate.edu/wp-includes/blocks/button/style.min.css */
+</style>
+<style id="wp-block-cover-inline-css">
+.wp-block-cover,.wp-block-cover-image{align-items:center;background-position:50%;box-sizing:border-box;display:flex;justify-content:center;min-height:430px;overflow:hidden;overflow:clip;padding:1em;position:relative}.wp-block-cover .has-background-dim:not([class*=-background-color]),.wp-block-cover-image .has-background-dim:not([class*=-background-color]),.wp-block-cover-image.has-background-dim:not([class*=-background-color]),.wp-block-cover.has-background-dim:not([class*=-background-color]){background-color:#000}.wp-block-cover .has-background-dim.has-background-gradient,.wp-block-cover-image .has-background-dim.has-background-gradient{background-color:transparent}.wp-block-cover-image.has-background-dim:before,.wp-block-cover.has-background-dim:before{background-color:inherit;content:""}.wp-block-cover .wp-block-cover__background,.wp-block-cover .wp-block-cover__gradient-background,.wp-block-cover-image .wp-block-cover__background,.wp-block-cover-image .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim:not(.has-background-gradient):before,.wp-block-cover.has-background-dim:not(.has-background-gradient):before{bottom:0;left:0;opacity:.5;position:absolute;right:0;top:0}.wp-block-cover-image.has-background-dim.has-background-dim-10 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-10 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-10:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-10 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-10 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-10:not(.has-background-gradient):before{opacity:.1}.wp-block-cover-image.has-background-dim.has-background-dim-20 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-20 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-20:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-20 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-20 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-20:not(.has-background-gradient):before{opacity:.2}.wp-block-cover-image.has-background-dim.has-background-dim-30 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-30 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-30:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-30 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-30 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-30:not(.has-background-gradient):before{opacity:.3}.wp-block-cover-image.has-background-dim.has-background-dim-40 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-40 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-40:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-40 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-40 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-40:not(.has-background-gradient):before{opacity:.4}.wp-block-cover-image.has-background-dim.has-background-dim-50 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-50 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-50:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-50 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-50 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-50:not(.has-background-gradient):before{opacity:.5}.wp-block-cover-image.has-background-dim.has-background-dim-60 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-60 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-60:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-60 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-60 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-60:not(.has-background-gradient):before{opacity:.6}.wp-block-cover-image.has-background-dim.has-background-dim-70 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-70 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-70:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-70 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-70 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-70:not(.has-background-gradient):before{opacity:.7}.wp-block-cover-image.has-background-dim.has-background-dim-80 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-80 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-80:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-80 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-80 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-80:not(.has-background-gradient):before{opacity:.8}.wp-block-cover-image.has-background-dim.has-background-dim-90 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-90 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-90:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-90 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-90 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-90:not(.has-background-gradient):before{opacity:.9}.wp-block-cover-image.has-background-dim.has-background-dim-100 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-100 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-100:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-100 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-100 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-100:not(.has-background-gradient):before{opacity:1}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-0,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-0,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-0,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-0{opacity:0}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-10,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-10,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-10,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-10{opacity:.1}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-20,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-20,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-20,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-20{opacity:.2}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-30,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-30,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-30,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-30{opacity:.3}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-40,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-40,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-40,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-40{opacity:.4}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-50,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-50,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-50,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-50{opacity:.5}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-60,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-60,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-60,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-60{opacity:.6}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-70,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-70,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-70,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-70{opacity:.7}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-80,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-80,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-80,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-80{opacity:.8}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-90,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-90,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-90,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-90{opacity:.9}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-100,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-100,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-100,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-100{opacity:1}.wp-block-cover-image.alignleft,.wp-block-cover-image.alignright,.wp-block-cover.alignleft,.wp-block-cover.alignright{max-width:420px;width:100%}.wp-block-cover-image.aligncenter,.wp-block-cover-image.alignleft,.wp-block-cover-image.alignright,.wp-block-cover.aligncenter,.wp-block-cover.alignleft,.wp-block-cover.alignright{display:flex}.wp-block-cover .wp-block-cover__inner-container,.wp-block-cover-image .wp-block-cover__inner-container{color:inherit;position:relative;width:100%}.wp-block-cover-image.is-position-top-left,.wp-block-cover.is-position-top-left{align-items:flex-start;justify-content:flex-start}.wp-block-cover-image.is-position-top-center,.wp-block-cover.is-position-top-center{align-items:flex-start;justify-content:center}.wp-block-cover-image.is-position-top-right,.wp-block-cover.is-position-top-right{align-items:flex-start;justify-content:flex-end}.wp-block-cover-image.is-position-center-left,.wp-block-cover.is-position-center-left{align-items:center;justify-content:flex-start}.wp-block-cover-image.is-position-center-center,.wp-block-cover.is-position-center-center{align-items:center;justify-content:center}.wp-block-cover-image.is-position-center-right,.wp-block-cover.is-position-center-right{align-items:center;justify-content:flex-end}.wp-block-cover-image.is-position-bottom-left,.wp-block-cover.is-position-bottom-left{align-items:flex-end;justify-content:flex-start}.wp-block-cover-image.is-position-bottom-center,.wp-block-cover.is-position-bottom-center{align-items:flex-end;justify-content:center}.wp-block-cover-image.is-position-bottom-right,.wp-block-cover.is-position-bottom-right{align-items:flex-end;justify-content:flex-end}.wp-block-cover-image.has-custom-content-position.has-custom-content-position .wp-block-cover__inner-container,.wp-block-cover.has-custom-content-position.has-custom-content-position .wp-block-cover__inner-container{margin:0}.wp-block-cover-image.has-custom-content-position.has-custom-content-position.is-position-bottom-left .wp-block-cover__inner-container,.wp-block-cover-image.has-custom-content-position.has-custom-content-position.is-position-bottom-right .wp-block-cover__inner-container,.wp-block-cover-image.has-custom-content-position.has-custom-content-position.is-position-center-left .wp-block-cover__inner-container,.wp-block-cover-image.has-custom-content-position.has-custom-content-position.is-position-center-right .wp-block-cover__inner-container,.wp-block-cover-image.has-custom-content-position.has-custom-content-position.is-position-top-left .wp-block-cover__inner-container,.wp-block-cover-image.has-custom-content-position.has-custom-content-position.is-position-top-right .wp-block-cover__inner-container,.wp-block-cover.has-custom-content-position.has-custom-content-position.is-position-bottom-left .wp-block-cover__inner-container,.wp-block-cover.has-custom-content-position.has-custom-content-position.is-position-bottom-right .wp-block-cover__inner-container,.wp-block-cover.has-custom-content-position.has-custom-content-position.is-position-center-left .wp-block-cover__inner-container,.wp-block-cover.has-custom-content-position.has-custom-content-position.is-position-center-right .wp-block-cover__inner-container,.wp-block-cover.has-custom-content-position.has-custom-content-position.is-position-top-left .wp-block-cover__inner-container,.wp-block-cover.has-custom-content-position.has-custom-content-position.is-position-top-right .wp-block-cover__inner-container{margin:0;width:auto}.wp-block-cover .wp-block-cover__image-background,.wp-block-cover video.wp-block-cover__video-background,.wp-block-cover-image .wp-block-cover__image-background,.wp-block-cover-image video.wp-block-cover__video-background{border:none;bottom:0;box-shadow:none;height:100%;left:0;margin:0;max-height:none;max-width:none;-o-object-fit:cover;object-fit:cover;outline:none;padding:0;position:absolute;right:0;top:0;width:100%}.wp-block-cover .wp-block-cover__embed-background,.wp-block-cover-image .wp-block-cover__embed-background{border:none;bottom:0;box-shadow:none;height:100%;left:0;margin:0;max-height:none;max-width:none;outline:none;padding:0;pointer-events:none;position:absolute;right:0;top:0;width:100%}.wp-block-cover .wp-block-cover__embed-background .wp-block-embed__wrapper,.wp-block-cover-image .wp-block-cover__embed-background .wp-block-embed__wrapper{bottom:0;height:100%;left:0;margin:0;padding:0;position:absolute;right:0;top:0;width:100%}.wp-block-cover .wp-block-cover__embed-background .wp-block-embed__wrapper iframe,.wp-block-cover .wp-block-cover__embed-background iframe,.wp-block-cover-image .wp-block-cover__embed-background .wp-block-embed__wrapper iframe,.wp-block-cover-image .wp-block-cover__embed-background iframe{height:100vh;left:50%;min-height:100%;min-width:100%;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%);width:100vw}.wp-block-cover-image.has-parallax,.wp-block-cover.has-parallax,.wp-block-cover__image-background.has-parallax,video.wp-block-cover__video-background.has-parallax{background-attachment:fixed;background-repeat:no-repeat;background-size:cover}@supports (-webkit-touch-callout:inherit){.wp-block-cover-image.has-parallax,.wp-block-cover.has-parallax,.wp-block-cover__image-background.has-parallax,video.wp-block-cover__video-background.has-parallax{background-attachment:scroll}}@media (prefers-reduced-motion:reduce){.wp-block-cover-image.has-parallax,.wp-block-cover.has-parallax,.wp-block-cover__image-background.has-parallax,video.wp-block-cover__video-background.has-parallax{background-attachment:scroll}}.wp-block-cover-image.is-repeated,.wp-block-cover.is-repeated,.wp-block-cover__image-background.is-repeated,video.wp-block-cover__video-background.is-repeated{background-repeat:repeat;background-size:auto}.wp-block-cover-image-text,.wp-block-cover-image-text a,.wp-block-cover-image-text a:active,.wp-block-cover-image-text a:focus,.wp-block-cover-image-text a:hover,.wp-block-cover-text,.wp-block-cover-text a,.wp-block-cover-text a:active,.wp-block-cover-text a:focus,.wp-block-cover-text a:hover,section.wp-block-cover-image h2,section.wp-block-cover-image h2 a,section.wp-block-cover-image h2 a:active,section.wp-block-cover-image h2 a:focus,section.wp-block-cover-image h2 a:hover{color:#fff}.wp-block-cover-image .wp-block-cover.has-left-content{justify-content:flex-start}.wp-block-cover-image .wp-block-cover.has-right-content{justify-content:flex-end}.wp-block-cover-image.has-left-content .wp-block-cover-image-text,.wp-block-cover.has-left-content .wp-block-cover-text,section.wp-block-cover-image.has-left-content>h2{margin-left:0;text-align:left}.wp-block-cover-image.has-right-content .wp-block-cover-image-text,.wp-block-cover.has-right-content .wp-block-cover-text,section.wp-block-cover-image.has-right-content>h2{margin-right:0;text-align:right}.wp-block-cover .wp-block-cover-text,.wp-block-cover-image .wp-block-cover-image-text,section.wp-block-cover-image>h2{font-size:2em;line-height:1.25;margin-bottom:0;max-width:840px;padding:.44em;text-align:center;z-index:1}:where(.wp-block-cover-image:not(.has-text-color)),:where(.wp-block-cover:not(.has-text-color)){color:#fff}:where(.wp-block-cover-image.is-light:not(.has-text-color)),:where(.wp-block-cover.is-light:not(.has-text-color)){color:#000}:root :where(.wp-block-cover h1:not(.has-text-color)),:root :where(.wp-block-cover h2:not(.has-text-color)),:root :where(.wp-block-cover h3:not(.has-text-color)),:root :where(.wp-block-cover h4:not(.has-text-color)),:root :where(.wp-block-cover h5:not(.has-text-color)),:root :where(.wp-block-cover h6:not(.has-text-color)),:root :where(.wp-block-cover p:not(.has-text-color)){color:inherit}body:not(.editor-styles-wrapper) .wp-block-cover:not(.wp-block-cover:has(.wp-block-cover__background+.wp-block-cover__inner-container)) .wp-block-cover__video-background{z-index:0}body:not(.editor-styles-wrapper) .wp-block-cover:not(.wp-block-cover:has(.wp-block-cover__background+.wp-block-cover__inner-container)) .wp-block-cover__embed-background{z-index:0}body:not(.editor-styles-wrapper) .wp-block-cover:not(.wp-block-cover:has(.wp-block-cover__background+.wp-block-cover__inner-container)) .wp-block-cover__image-background{z-index:0}body:not(.editor-styles-wrapper) .wp-block-cover:not(.wp-block-cover:has(.wp-block-cover__background+.wp-block-cover__inner-container)) .wp-block-cover__background,body:not(.editor-styles-wrapper) .wp-block-cover:not(.wp-block-cover:has(.wp-block-cover__background+.wp-block-cover__inner-container)) .wp-block-cover__gradient-background,body:not(.editor-styles-wrapper) .wp-block-cover:not(.wp-block-cover:has(.wp-block-cover__background+.wp-block-cover__inner-container)).has-background-dim:not(.has-background-gradient):before{z-index:1}body:not(.editor-styles-wrapper) .wp-block-cover:not(.wp-block-cover:has(.wp-block-cover__background+.wp-block-cover__inner-container)) .wp-block-cover__inner-container{z-index:1}.has-modal-open body:not(.editor-styles-wrapper) .wp-block-cover:not(.wp-block-cover:has(.wp-block-cover__background+.wp-block-cover__inner-container)) .wp-block-cover__inner-container{z-index:auto}
+/*# sourceURL=https://www.cira.colostate.edu/wp-includes/blocks/cover/style.min.css */
+</style>
+<style id="wp-block-heading-inline-css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://www.cira.colostate.edu/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id="wp-block-image-inline-css">
+.wp-block-image>a,.wp-block-image>figure>a{display:inline-block}.wp-block-image img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}@media not (prefers-reduced-motion){.wp-block-image img.hide{visibility:hidden}.wp-block-image img.show{animation:show-content-image .4s}}.wp-block-image[style*=border-radius] img,.wp-block-image[style*=border-radius]>a{border-radius:inherit}.wp-block-image.has-custom-border img{box-sizing:border-box}.wp-block-image.aligncenter{text-align:center}.wp-block-image.alignfull>a,.wp-block-image.alignwide>a{width:100%}.wp-block-image.alignfull img,.wp-block-image.alignwide img{height:auto;width:100%}.wp-block-image .aligncenter,.wp-block-image .alignleft,.wp-block-image .alignright,.wp-block-image.aligncenter,.wp-block-image.alignleft,.wp-block-image.alignright{display:table}.wp-block-image .aligncenter>figcaption,.wp-block-image .alignleft>figcaption,.wp-block-image .alignright>figcaption,.wp-block-image.aligncenter>figcaption,.wp-block-image.alignleft>figcaption,.wp-block-image.alignright>figcaption{caption-side:bottom;display:table-caption}.wp-block-image .alignleft{float:left;margin:.5em 1em .5em 0}.wp-block-image .alignright{float:right;margin:.5em 0 .5em 1em}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.wp-block-image :where(figcaption){margin-bottom:1em;margin-top:.5em}.wp-block-image.is-style-circle-mask img{border-radius:9999px}@supports ((-webkit-mask-image:none) or (mask-image:none)) or (-webkit-mask-image:none){.wp-block-image.is-style-circle-mask img{border-radius:0;-webkit-mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-mode:alpha;-webkit-mask-position:center;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain}}:root :where(.wp-block-image.is-style-rounded img,.wp-block-image .is-style-rounded img){border-radius:9999px}.wp-block-image figure{margin:0}.wp-lightbox-container{display:flex;flex-direction:column;position:relative}.wp-lightbox-container img{cursor:zoom-in}.wp-lightbox-container img:hover+button{opacity:1}.wp-lightbox-container button{align-items:center;backdrop-filter:blur(16px) saturate(180%);background-color:rgba(90,90,90,.25);border:none;border-radius:4px;cursor:zoom-in;display:flex;height:20px;justify-content:center;opacity:0;padding:0;position:absolute;right:16px;text-align:center;top:16px;width:20px;z-index:100}@media not (prefers-reduced-motion){.wp-lightbox-container button{transition:opacity .2s ease}}.wp-lightbox-container button:focus-visible{outline:3px auto rgba(90,90,90,.25);outline:3px auto -webkit-focus-ring-color;outline-offset:3px}.wp-lightbox-container button:hover{cursor:pointer;opacity:1}.wp-lightbox-container button:focus{opacity:1}.wp-lightbox-container button:focus,.wp-lightbox-container button:hover,.wp-lightbox-container button:not(:hover):not(:active):not(.has-background){background-color:rgba(90,90,90,.25);border:none}.wp-lightbox-overlay{box-sizing:border-box;cursor:zoom-out;height:100vh;left:0;overflow:hidden;position:fixed;top:0;visibility:hidden;width:100%;z-index:100000}.wp-lightbox-overlay .wp-lightbox-close-button{align-items:center;cursor:pointer;display:flex;font-family:inherit;gap:8px;justify-content:center;line-height:1;min-height:40px;min-width:40px;padding:0 4px;position:absolute;right:calc(env(safe-area-inset-right) + 16px);top:calc(env(safe-area-inset-top) + 16px);z-index:5000000}.wp-lightbox-overlay .wp-lightbox-close-button:focus,.wp-lightbox-overlay .wp-lightbox-close-button:hover,.wp-lightbox-overlay .wp-lightbox-close-button:not(:hover):not(:active):not(.has-background){background:none;border:none}.wp-lightbox-overlay .wp-lightbox-close-button:has(.wp-lightbox-close-text:not([hidden])) .wp-lightbox-close-icon svg{height:1em;width:1em}.wp-lightbox-overlay .wp-lightbox-close-icon svg{display:block}.wp-lightbox-overlay .wp-lightbox-navigation-button-next,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{align-items:center;bottom:16px;cursor:pointer;display:flex;font-family:inherit;gap:4px;justify-content:center;line-height:1;min-height:40px;min-width:40px;padding:0 8px;position:absolute;z-index:2000002}.wp-lightbox-overlay .wp-lightbox-navigation-button-next[hidden],.wp-lightbox-overlay .wp-lightbox-navigation-button-prev[hidden]{display:none}@media (min-width:960px){.wp-lightbox-overlay .wp-lightbox-navigation-button-next,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{bottom:50%;transform:translateY(-50%)}}.wp-lightbox-overlay .wp-lightbox-navigation-button-next:focus,.wp-lightbox-overlay .wp-lightbox-navigation-button-next:hover,.wp-lightbox-overlay .wp-lightbox-navigation-button-next:not(:hover):not(:active):not(.has-background),.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:focus,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:hover,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:not(:hover):not(:active):not(.has-background){background:none;border:none;padding:0 8px}.wp-lightbox-overlay .wp-lightbox-navigation-button-next:has(.wp-lightbox-navigation-text:not([hidden])) .wp-lightbox-navigation-icon svg,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:has(.wp-lightbox-navigation-text:not([hidden])) .wp-lightbox-navigation-icon svg{display:block;height:1.5em;width:1.5em}.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{left:calc(env(safe-area-inset-left) + 16px)}.wp-lightbox-overlay .wp-lightbox-navigation-button-next{right:calc(env(safe-area-inset-right) + 16px)}.wp-lightbox-overlay .wp-lightbox-navigation-icon svg{vertical-align:middle}.wp-lightbox-overlay .lightbox-image-container{height:var(--wp--lightbox-container-height);left:50%;overflow:hidden;position:absolute;top:50%;transform:translate(-50%,-50%);transform-origin:top left;width:var(--wp--lightbox-container-width);z-index:2000001}.wp-lightbox-overlay .wp-block-image{align-items:center;box-sizing:border-box;display:flex;height:100%;justify-content:center;margin:0;position:relative;transform-origin:0 0;width:100%;z-index:3000000}.wp-lightbox-overlay .wp-block-image img{height:var(--wp--lightbox-image-height);min-height:var(--wp--lightbox-image-height);min-width:var(--wp--lightbox-image-width);width:var(--wp--lightbox-image-width)}.wp-lightbox-overlay .wp-block-image figcaption{display:none}.wp-lightbox-overlay button{background:none;border:none}.wp-lightbox-overlay .scrim{background-color:#fff;height:100%;opacity:.9;position:absolute;width:100%;z-index:2000000}.wp-lightbox-overlay.active{visibility:visible}@media not (prefers-reduced-motion){.wp-lightbox-overlay.active{animation:turn-on-visibility .25s both}.wp-lightbox-overlay.active img{animation:turn-on-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active){animation:turn-off-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active) img{animation:turn-off-visibility .25s both}.wp-lightbox-overlay.zoom.active{animation:none;opacity:1;visibility:visible}.wp-lightbox-overlay.zoom.active .lightbox-image-container{animation:lightbox-zoom-in .4s}.wp-lightbox-overlay.zoom.active .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.active .scrim{animation:turn-on-visibility .4s forwards}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active){animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container{animation:lightbox-zoom-out .4s}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .scrim{animation:turn-off-visibility .4s forwards}}@keyframes show-content-image{0%{visibility:hidden}99%{visibility:hidden}to{visibility:visible}}@keyframes turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}
+/*# sourceURL=https://www.cira.colostate.edu/wp-includes/blocks/image/style.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://www.cira.colostate.edu/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id="wp-block-buttons-inline-css">
+.wp-block-buttons{box-sizing:border-box}.wp-block-buttons.is-vertical{flex-direction:column}.wp-block-buttons.is-vertical>.wp-block-button:last-child{margin-bottom:0}.wp-block-buttons>.wp-block-button{display:inline-block;margin:0}.wp-block-buttons.is-content-justification-left{justify-content:flex-start}.wp-block-buttons.is-content-justification-left.is-vertical{align-items:flex-start}.wp-block-buttons.is-content-justification-center{justify-content:center}.wp-block-buttons.is-content-justification-center.is-vertical{align-items:center}.wp-block-buttons.is-content-justification-right{justify-content:flex-end}.wp-block-buttons.is-content-justification-right.is-vertical{align-items:flex-end}.wp-block-buttons.is-content-justification-space-between{justify-content:space-between}.wp-block-buttons.aligncenter{text-align:center}.wp-block-buttons:not(.is-content-justification-space-between,.is-content-justification-right,.is-content-justification-left,.is-content-justification-center) .wp-block-button.aligncenter{margin-left:auto;margin-right:auto;width:100%}.wp-block-buttons[style*=text-decoration] .wp-block-button,.wp-block-buttons[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons .wp-block-button__link{width:100%}.wp-block-button.aligncenter{text-align:center}
+/*# sourceURL=https://www.cira.colostate.edu/wp-includes/blocks/buttons/style.min.css */
+</style>
+<style id="wp-block-columns-inline-css">
+.wp-block-columns{box-sizing:border-box;display:flex;flex-wrap:wrap!important}@media (min-width:782px){.wp-block-columns{flex-wrap:nowrap!important}}.wp-block-columns{align-items:normal!important}.wp-block-columns.are-vertically-aligned-top{align-items:flex-start}.wp-block-columns.are-vertically-aligned-center{align-items:center}.wp-block-columns.are-vertically-aligned-bottom{align-items:flex-end}@media (max-width:781px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:100%!important}}@media (min-width:782px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column[style*=flex-basis]{flex-grow:0}}.wp-block-columns.is-not-stacked-on-mobile{flex-wrap:nowrap!important}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column[style*=flex-basis]{flex-grow:0}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}.wp-block-column{flex-grow:1;min-width:0;overflow-wrap:break-word;word-break:break-word}.wp-block-column.is-vertically-aligned-top{align-self:flex-start}.wp-block-column.is-vertically-aligned-center{align-self:center}.wp-block-column.is-vertically-aligned-bottom{align-self:flex-end}.wp-block-column.is-vertically-aligned-stretch{align-self:stretch}.wp-block-column.is-vertically-aligned-bottom,.wp-block-column.is-vertically-aligned-center,.wp-block-column.is-vertically-aligned-top{width:100%}
+/*# sourceURL=https://www.cira.colostate.edu/wp-includes/blocks/columns/style.min.css */
+</style>
+
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--cira-blue: #0d4e84;--wp--preset--color--rammb-blue: #353b90;--wp--preset--color--noaa-blue: #0085ca;--wp--preset--color--csu-yellow: #C8C372;--wp--preset--color--csu-green: #1E4D2B;--wp--preset--color--monte-white: #ffffff;--wp--preset--color--text-grey: #222;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: 24px; }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-flex){gap: 24px;}:root :where(.is-layout-grid){gap: 24px;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-cira-blue-color{color: var(--wp--preset--color--cira-blue) !important;}.has-rammb-blue-color{color: var(--wp--preset--color--rammb-blue) !important;}.has-noaa-blue-color{color: var(--wp--preset--color--noaa-blue) !important;}.has-csu-yellow-color{color: var(--wp--preset--color--csu-yellow) !important;}.has-csu-green-color{color: var(--wp--preset--color--csu-green) !important;}.has-monte-white-color{color: var(--wp--preset--color--monte-white) !important;}.has-text-grey-color{color: var(--wp--preset--color--text-grey) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-cira-blue-background-color{background-color: var(--wp--preset--color--cira-blue) !important;}.has-rammb-blue-background-color{background-color: var(--wp--preset--color--rammb-blue) !important;}.has-noaa-blue-background-color{background-color: var(--wp--preset--color--noaa-blue) !important;}.has-csu-yellow-background-color{background-color: var(--wp--preset--color--csu-yellow) !important;}.has-csu-green-background-color{background-color: var(--wp--preset--color--csu-green) !important;}.has-monte-white-background-color{background-color: var(--wp--preset--color--monte-white) !important;}.has-text-grey-background-color{background-color: var(--wp--preset--color--text-grey) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-cira-blue-border-color{border-color: var(--wp--preset--color--cira-blue) !important;}.has-rammb-blue-border-color{border-color: var(--wp--preset--color--rammb-blue) !important;}.has-noaa-blue-border-color{border-color: var(--wp--preset--color--noaa-blue) !important;}.has-csu-yellow-border-color{border-color: var(--wp--preset--color--csu-yellow) !important;}.has-csu-green-border-color{border-color: var(--wp--preset--color--csu-green) !important;}.has-monte-white-border-color{border-color: var(--wp--preset--color--monte-white) !important;}.has-text-grey-border-color{border-color: var(--wp--preset--color--text-grey) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<script id="bones-modernizr-js" src="https://www.cira.colostate.edu/wp-content/themes/CIRA2019/js/libs/modernizr.custom.min.js"></script>
+<script id="jquery-core-js" src="https://www.cira.colostate.edu/wp-includes/js/jquery/jquery.min.js"></script>
+<script id="jquery-migrate-js" src="https://www.cira.colostate.edu/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<link rel="https://api.w.org/" href="https://www.cira.colostate.edu/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.cira.colostate.edu/wp-json/wp/v2/pages/8" /><link rel="canonical" href="https://www.cira.colostate.edu/" />
+<link rel='shortlink' href='https://www.cira.colostate.edu/' />
+<link rel="icon" href="https://www.cira.colostate.edu/wp-content/uploads/sites/4/2019/05/cropped-ciraC-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://www.cira.colostate.edu/wp-content/uploads/sites/4/2019/05/cropped-ciraC-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.cira.colostate.edu/wp-content/uploads/sites/4/2019/05/cropped-ciraC-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://www.cira.colostate.edu/wp-content/uploads/sites/4/2019/05/cropped-ciraC-270x270.jpg" />
+<style id="core-block-supports-inline-css">
+.wp-container-core-columns-is-layout-7387b849{flex-wrap:nowrap;}.wp-container-core-buttons-is-layout-b65a6c2e{flex-wrap:nowrap;flex-direction:column;align-items:center;}
+/*# sourceURL=core-block-supports-inline-css */
+</style>
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+<a class="skip-to-content-link" href="#main" style="min-height:100px; min-width:100px; display:inline-block;">
+  Skip to page main content
+</a>
+
+<!-- Google Custom Search Element -->
+<!-- Search Modal -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fs-5" id="searchModalLabel">Search</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <script>
+                    (function() {
+                    var cx = '017747307670139239162:v9bv-vyxkz0';
+                    var gcse = document.createElement('script');
+                    gcse.type = 'text/javascript';
+                    gcse.async = true;
+                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(gcse, s);
+                    })();
+                </script>
+                <title for="googleSearch" class="sr_only">Search CIRA Website</title>
+                <gcse:search id="googleSearch"></gcse:search>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header id="header" role="banner">
+    <h1>
+    <span class="sr_only" >Cooperative Institute for Research in the Atmosphere</span>
+    <span class="sr_only" >CIRA</span>
+</h1>
+<!-- Nav Bar Holder -->
+<div class="csu-logo-switch">
+<nav class="navbar navbar-expand-xl fixed-top bg-light shadow">
+    <div style="width: 100% !important;margin: 0;">
+        <div class=""> 
+            <!-- Logos -->
+            <div class="row">
+                <div class="col-3 logos">
+                    <div class="navbar-csu-large">
+                        <a class="navbar-brand" id="csuLogoHeadSml" href="https://www.colostate.edu/">
+                        <picture>
+                            <img class="image" src="https://www.cira.colostate.edu/wp-content/themes/CIRA2019/library/images/CSU.png" style="height: 65px; width: auto; margin: 0;" alt="Coloardo State University">
+                        </picture>
+                        </a>
+                    </div>
+                    <div class="navbar-csu-full">
+                        <a class="navbar-brand" id="csuLogoHead" href="https://www.colostate.edu/">
+                        <picture>
+                            <img class="image" src="https://www.cira.colostate.edu/wp-content/themes/CIRA2019/library/images/CSU.png" style="height:60px; width:auto;" alt="Coloardo State University">
+                        </picture>
+                        </a>
+                    </div>
+                    <div class="navbar-csu-small">
+                        <a class="navbar-brand" id="csuLogoHeadSml" href="https://www.colostate.edu/">
+                        <picture>
+                            <img class="image" src="https://www.cira.colostate.edu/wp-content/themes/CIRA2019/library/images/CSU.png" alt="Coloardo State University" style="height:57px; width:auto;">
+                        </picture>
+                        </a>
+                    </div>
+                </div>
+                <!-- Navigation-->
+                    <div class="col-9">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="bi bi-list"></i>
+                        </button>
+                        <style>
+                            .navbar-collapse.show {
+                                background: white;
+                            }
+                        </style>
+                        <div class="collapse navbar-collapse" id="main_nav">
+                            <!-- Navigation Structure -->  
+                            <ul class="navbar-nav">
+                                <li class="nav-item active"> <h2 class="h6 title"><a class="nav-link" href="https://www.cira.colostate.edu">Home </a></h2></li>
+                                <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link dropdown-toggle h6" href="https://www.cira.colostate.edu/welcome-about/" data-bs-toggle="dropdown"> Welcome & About  </a>
+                                    <div class="dropdown-menu megamenu">
+                                        <div class="row g-3">
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <div class="col-megamenu">
+                                                    <h3 class="h6 title">About CIRA</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="/welcome-about/organizational-structure/">Organizational Structure</a></li>
+                                                        <li><a href="/welcome-about/vision-mission-statement/">Vision & Mission Statement</a></li>
+                                                        <li><a href="/welcome-about/strategic-plan/">Strategic Plan</a></li>
+                                                        <li><a href="/welcome-about/staff/">Staff Directory</a></li>
+                                                        <li><a href="/welcome-about/map-directions/">Map, Directions & Parking</a></li>
+                                                        <li><a href="/welcome-about/jobs/">Jobs</a></li>
+                                                        <li><a href="/cooperative-institute-research-atmosphere/staff-dashboard/room-schedules/">Room Schedules</a></li>
+                                                        <li><a href="/access-and-success/">Access and Success at CIRA</a></li>
+                                                        <li><a href="/by-project/">Themes & Projects</a></li>
+                                                        <li><a href="/welcome-about/collaborative-groups/">Collaborative Groups</a></li>
+
+                                                    </ul>
+                                                </div> 
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Themes</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="/themes/climate-weather-processes-2/">Climate and Weather Processes</a></li>
+                                                        <li><a href="/themes/data-distribution-2/">Data Distribution</a></li>
+                                                        <li><a href="/themes/education-and-outreach/">Education and Outreach</a></li>
+                                                        <li><a href="/themes/modeling-systems-research-2/">Modeling Systems Research</a></li>
+                                                        <li><a href="/themes/satellite-algorithm/">Satellite Algorithm Development, Training and Education</a></li>
+                                                        <li><a href="/teams/societal-impacts-of-weather-and-climate/">Societal and Economic Impact Studies</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Collaborative Groups</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="http://climate.atmos.colostate.edu/" target="_blank">Colorado Climate Center</a></li>
+                                                        <li><a href="/welcome-about/collaborative-groups/national-park-service/">National Park Service</a></li>
+                                                        <li><a href="http://rammb.cira.colostate.edu/" target="_blank">Regional and Mesoscale Meteorology Branch</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>    
+
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+
+                                <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link dropdown-toggle h6 title" href="https://www.cira.colostate.edu/by-team/" data-bs-toggle="dropdown"> Teams  </a>
+                                    <div class="dropdown-menu megamenu">
+                                        <div class="row g-3">
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Colorado Teams</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="/teams/earth-system-research-lab-esrl/">NOAA/Earth System Research Lab (ESRL) - Boulder, CO</a></li>
+                                                        <li><a href="/teams/air-quality/">Air Quality - Fort Collins, CO</a></li>
+                                                        <li><a href="https://www.atmos.colostate.edu/" target="_blank">Atmospheric Science (ATS) - Fort Collins, CO</a></li>
+                                                        <li><a href="/teams/carbon/">Carbon - Fort Collins, CO</a></li>
+                                                        <li><a href="/ml/">CIRA ML - Fort Collins, CO</a></li>
+                                                        <li><a href="/teams/cira-software-engineering-group-cseg/">CIRA Software Engineering Group (CSEG) - Fort Collins, CO</a></li>
+                                                        <li><a href="/teams/da/">Data Assimilation (DA) - Fort Collins, CO</a></li>
+                                                        <li><a href="/teams/dpc/">Data Processing Centers (DPC) - Fort Collins, CO</a></li>
+                                                        <li><a href="/teams/independent/">Independent - Fort Collins, CO</a></li>
+                                                        <li><a href="/teams/metsat/">MetSat - Fort Collins, CO</a></li>
+                                                        <li><a href="https://rammb.cira.colostate.edu/" target="_blank">Regional and Mesoscale Meteorology Branch (RAMMB) - Fort Collins, CO</a></li>
+                                                        <li><a href="/teams/training/">Training - Fort Collins, CO</a></li>
+                                                        <li><a href="https://rammb2.cira.colostate.edu/research/tropical-cyclones/" target="_blank">Tropical Cyclone - Fort Collins, CO</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Other Locations</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="/teams/nhc/">National Hurricane Center - Miami, FL</a></li>
+                                                        <li><a href="/teams/neat/">NESDIS Environmental Applications Team (NEAT) - College Park, MD</a></li>
+                                                        <li><a href="/teams/mdl/">NWS/Meteorological Development Laboratory (MDL) - Silver Spring, MD</a></li>
+                                                        <li><a href="/teams/societal-impacts-of-weather-and-climate">NWS/Service Delivery Evaluation Program - Silver Spring, MD</a></li>
+                                                        <li><a href="/teams/awc/">NWS/Aviation Weather Center (AWC) - Kansas City, MO</a></li>
+                                                        <li><a href="/teams/omao/">Office of Marine and Aviation Operations (OMAO-Training) - Kansas City, MO</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div> 
+
+                                        </div> 
+                                    </div>
+                                    
+                                </li>
+
+                                <li class="nav-item dropdown has-megamenu">
+                                <a class="h6 title nav-link dropdown-toggle" href="https://www.cira.colostate.edu/news-events/" data-bs-toggle="dropdown"> News & Events  </a>
+                                    <div class="dropdown-menu megamenu">
+                                        <div class="row g-3">
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">News</h3>
+                                                    <ul class="list-unstyled">
+                                                    <li><a href="/welcome-about/science-stories/">CIRA Science Stories</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Events</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="/news-events/conferences/">Conference</a></li>
+                                                        <li><a href="/news-events/seminars/">Seminars</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+
+                                <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link dropdown-toggle h6 title" href="https://www.cira.colostate.edu/by-project/" data-bs-toggle="dropdown"> Research & Publications  </a>
+                                    <div class="dropdown-menu megamenu">
+                                        <div class="row g-3">
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Research</h3>
+                                                    <ul class="list-unstyled">
+                                                    <li><a href="/by-project/">Research Projects </a></li>
+                                                    <li><a href="/themes/">Themes</a></li>
+                                                    <!-- <li><a href="">Scientific News</a></li> -->
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Publications</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="/by-project/publications/">CIRA Publications</a></li>
+                                                        <li><a href="https://rammb2.cira.colostate.edu/resources/publications/" target="_blank">RAMMB Publications</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+
+                                <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link dropdown-toggle h6 title" href="https://www.cira.colostate.edu/imagery-data/" data-bs-hover="dropdown"> Imagery & Data  </a>
+                                    <div class="dropdown-menu megamenu">
+                                        <div class="row g-3">
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Imagery</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="/welcome-about/collaborative-groups/national-park-service/">Air Quality Research</a></li>
+                                                        <li><a href="http://vista.cira.colostate.edu/improve/" target="_blank">Improve</a></li>
+                                                        <!-- <li><a href="http://views.cira.colostate.edu/" target="_blank">VIEWS</a></li> -->
+                                                        <li><a href="http://cat.cira.colostate.edu/" target="_blank">CIRA Algorithm Testbed</a></li>
+                                                        <li><a href="https://rammb-slider.cira.colostate.edu/" target="_blank">RAMMB Slider</a></li>
+                                                        <li><a href="https://satlib.cira.colostate.edu/" target="_blank">RAMMB-CIRA Satellite Library</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Data</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="https://www.cloudsat.cira.colostate.edu/data-products" target="_blank">CloudSat Data Processing Center</a></li>
+                                                        <li><a href="/imagery-data/ecmwf-nature-run/">ECMWF Nature Run</a></li>
+                                                        <li><a href="http://rammb.cira.colostate.edu/ramsdis/online/" target="_blank">RAMSDIS Online</a></li>
+                                                        <li><a href="http://rammb.cira.colostate.edu/ramsdis/online/goes-west_goes-east.asp" target="_blank">GOES-West / GOES-East</a></li>
+                                                        <li><a href="https://rammb.cira.colostate.edu/ramsdis/online/synthetic_forecast.asp" target="_blank">Synthetic Forecast Imagery</a></li>
+                                                        <li><a href="http://rammb.cira.colostate.edu/ramsdis/online/tropical.asp" target="_blank">Tropical Imagery</a></li>
+                                                        <li><a href="http://rammb.cira.colostate.edu/ramsdis/online/npp_viirs.asp" target="_blank">Suomi NPP VIIRS Imagery</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+
+                                <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link dropdown-toggle h6 title" href="https://www.cira.colostate.edu/contact-us/" data-bs-toggle="dropdown">  Contact Us  </a>
+                                    <div class="dropdown-menu megamenu">
+                                        <div class="row g-3">
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Connect with us</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="/welcome-about/jobs/">Jobs</a></li>
+                                                        <li><a href="/welcome-about/map-directions/">Map, Directions & Parking</a></li>
+                                                        <li><a href="https://www.facebook.com/CIRACSU/?ref=aymt_homepage_panel" target="_blank">Facebook</a></li>
+                                                        <li><a href="https://twitter.com/CIRA_CSU" target="_blank">Twitter</a></li>
+                                                        <li><a href="https://www.instagram.com/cira_csu/" target="_blank">Instagram</a></li>
+                                                        <li><a href="https://www.threads.com/@cira_csu" target="_blank">Threads</a></li>
+                                                        <li><a href="https://www.linkedin.com/company/cooperative-institute-for-research-in-the-atmosphere" target="_blank">LinkedIn</a></li>
+                                                        <li><a href="https://bsky.app/profile/cira-csu.bsky.social" target="_blank">BlueSky</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Staff Directory</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="/category/boulder/">Boulder, Colorado</a></li>
+                                                        <li><a href="/category/college-park/">College Park, Maryland</a></li>
+                                                        <li><a href="/category/fort-collins/">Fort Collins, Colorado</a></li>
+                                                        <li><a href="/category/kansas-city/">Kansas City, Missouri</a></li>
+                                                        <li><a href="/category/miami/">Miami, Florida</a></li>
+                                                        <li><a href="/category/silver-spring/">Silver Spring, Maryland</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div> 
+                                </li>
+                                
+                                <li class="nav-item"> 
+                                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#searchModal">
+                                    <i class="bi bi-search"></i>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item"> 
+                                                                            <h2 class="h6 title"><a class="nav-link" href="/cooperative-institute-research-atmosphere/staff-dashboard/">Login</a> </h2>
+                                                                    </li>
+                                <!-- //Navigation Structure -->
+                            </ul>
+                        </div>
+                    </div>
+                <!-- //Navigation -->
+            </div>       
+        </div>
+    </div> 
+</nav>
+</div>
+<div class="ciraLogoHead" style="display:none">
+<nav class="navbar fixed-top bg-light shadow">
+    <div style="width: 100% !important;margin: 0;">
+        <div class="">
+
+            <div class="ciraLogoHead row" style="display:none">
+               
+                    <div class="col-lg-11 col-md-11 col-sm-11">
+                    <section id="BrandLogo">
+                        <script>(function(){BrandLogo.style.cssText = 'opacity:0; height:67px; overflow:hidden;'})();</script>
+                        <h1><a href="http://colostate.edu">Colorado State University</a></h1>
+                        <h2 ><a href="/" style="display: inline;">
+
+                        <div class="align-middle" style="font-size:small; display:inline;"> Cooperative Institute for Research in the Atmosphere</div></a> 
+                        </h2>                   
+                        <script src="//static.colostate.edu/logo/reslogo/logo.min.js" async defer></script>
+                        <script>
+                            var logosettings = {
+                            screenSM: 580
+                            ,screenMD: 600
+                            ,screenLG: 800
+                            ,baseSize: 250
+                            ,fontSize: 'small' //large or small (default is small)
+                            };
+                        </script>
+                    </section>
+                    <style>
+                        #BrandLogo #signatureword, #BrandLogo #signaturecsu, #BrandLogo #signaturewordMD, #BrandLogo #signaturewordLG{ fill: #006144 !important;}
+                        #BrandLogo h2{ color: #006144 !important;}
+                        #BrandLogo #responsiveLogoSubsytem::before {
+                        border-color: #333;
+                        }
+                        .navbar-nav-pos {
+                        display: -webkit-box;
+                        }
+                        .dropdown-menu.megamenu{
+                        position: absolute;
+                        padding: 15px;
+                        width: 99%;
+                        }
+                        #scroll_nav {
+                        background: white;
+                        position: relative;
+                        }
+                        @media(max-width: 1080px){
+                        .navbar-nav-pos {
+                        display: block !important;
+                        }
+                        }
+                    </style>
+                    </div>
+              
+                  <!-- Navigation-->
+                <div class="col-lg-1 col-md-1 col-sm-1">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#scroll_nav" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
+                    </button>
+                </div>
+
+                    <div class="collapse" id="scroll_nav" style="box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) inset!important">
+                        <!-- Navigation Structure -->  
+                        <ul class="navbar-nav navbar-nav-pos justify-content-center">
+                        <li class="nav-item active"> <h2 class="h6 title"><a class="nav-link" href="https://www.cira.colostate.edu">Home </a></h2></li>
+                                <li class="nav-item dropdown has-megamenu">
+                                <a class="h6 nav-link dropdown-toggle"  role="button" href="https://www.cira.colostate.edu/welcome-about/" data-bs-toggle="dropdown"> Welcome & About  </a>
+                                    <div class="dropdown-menu megamenu">
+                                        <div class="row g-3">
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <div class="col-megamenu">
+                                                    <h3 class="h6 title">About CIRA</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="/welcome-about/organizational-structure/">Organizational Structure</a></li>
+                                                        <li><a href="/welcome-about/vision-mission-statement/">Vision & Mission Statement</a></li>
+                                                        <li><a href="/welcome-about/strategic-plan/">Strategic Plan</a></li>
+                                                        <li><a href="/welcome-about/staff/">Staff Directory</a></li>
+                                                        <li><a href="/welcome-about/map-directions/">Map, Directions & Parking</a></li>
+                                                        <li><a href="/welcome-about/jobs/">Jobs</a></li>
+                                                        <li><a href="/cooperative-institute-research-atmosphere/staff-dashboard/room-schedules/">Room Schedules</a></li>
+                                                        <li><a href="/access-and-success/">Access and Success at CIRA</a></li>
+                                                        <li><a href="/by-project/">Themes & Projects</a></li>
+                                                        <li><a href="/welcome-about/collaborative-groups/">Collaborative Groups</a></li>
+
+                                                    </ul>
+                                                </div> 
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Themes</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="/themes/climate-weather-processes-2/">Climate and Weather Processes</a></li>
+                                                        <li><a href="/themes/data-assimilation-2/">Data Assimilation</a></li>
+                                                        <li><a href="/themes/data-distribution-2/">Data Distribution</a></li>
+                                                        <li><a href="/themes/education-and-outreach/">Education and Outreach</a></li>
+                                                        <li><a href="/themes/modeling-systems-research-2/">Modeling Systems Research</a></li>
+                                                        <li><a href="/themes/satellite-algorithm/">Satellite Algorithm Development, Training and Education</a></li>
+                                                        <li><a href="/themes/societal-economic-impact-studies-2/">Societal and Economic Impact Studies</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Collaborative Groups</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="http://climate.atmos.colostate.edu/" target="_blank">Colorado Climate Center</a></li>
+                                                        <li><a href="/welcome-about/collaborative-groups/national-park-service/">National Park Service</a></li>
+                                                        <li><a href="http://rammb.cira.colostate.edu/" target="_blank">Regional and Mesoscale Meteorology Branch</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>    
+
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+
+                                <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link dropdown-toggle h6 title" href="https://www.cira.colostate.edu/by-team/" data-bs-toggle="dropdown"> Teams  </a>
+                                    <div class="dropdown-menu megamenu">
+                                        <div class="row g-3">
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Colorado Teams</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="/teams/earth-system-research-lab-esrl/">NOAA/Earth System Research Lab (ESRL) - Boulder, CO</a></li>
+                                                        <li><a href="/teams/air-quality/">Air Quality - Fort Collins, CO</a></li>
+                                                        <li><a href="https://www.atmos.colostate.edu/" target="_blank">Atmospheric Science (ATS) - Fort Collins, CO</a></li>
+                                                        <li><a href="/teams/carbon/">Carbon - Fort Collins, CO</a></li>
+                                                        <li><a href="/ml/">CIRA ML - Fort Collins, CO</a></li>
+                                                        <li><a href="/teams/cira-software-engineering-group-cseg/">CIRA Software Engineering Group (CSEG) - Fort Collins, CO</a></li>
+                                                        <li><a href="/teams/da/">Data Assimilation (DA) - Fort Collins, CO</a></li>
+                                                        <li><a href="/teams/dpc/">Data Processing Centers (DPC) - Fort Collins, CO</a></li>
+                                                        <li><a href="/teams/independent/">Independent - Fort Collins, CO</a></li>
+                                                        <li><a href="/teams/metsat/">MetSat - Fort Collins, CO</a></li>
+                                                        <li><a href="https://rammb.cira.colostate.edu/" target="_blank">Regional and Mesoscale Meteorology Branch (RAMMB) - Fort Collins, CO</a></li>
+                                                        <li><a href="/teams/training/">Training - Fort Collins, CO</a></li>
+                                                        <li><a href="https://rammb2.cira.colostate.edu/research/tropical-cyclones/" target="_blank">Tropical Cyclone - Fort Collins, CO</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Other Locations</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="/teams/nhc/">National Hurricane Center - Miami, FL</a></li>
+                                                        <li><a href="/teams/neat/">NESDIS Environmental Applications Team (NEAT) - College Park, MD</a></li>
+                                                        <li><a href="/teams/mdl/">NWS/Meteorological Development Laboratory (MDL) - Silver Spring, MD</a></li>
+                                                        <li><a href="/teams/awc/">NWS/Aviation Weather Center (AWC) - Kansas City, MO</a></li>
+                                                        <li><a href="/teams/omao/">Office of Marine and Aviation Operations (OMAO-Training) - Kansas City, MO</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div> 
+
+                                        </div> 
+                                    </div>
+                                    
+                                </li>
+
+                                <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link dropdown-toggle h6 title" href="https://www.cira.colostate.edu/news-events/" data-bs-toggle="dropdown"> News & Events  </a>
+                                    <div class="dropdown-menu megamenu">
+                                        <div class="row g-3">
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">News</h3>
+                                                    <ul class="list-unstyled">
+                                                    <li><a href="/welcome-about/science-stories/">CIRA Science Stories</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Events</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="/news-events/conferences/">Conference</a></li>
+                                                        <li><a href="/news-events/seminars/">Seminars</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+
+                                <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link dropdown-toggle h6 title" href="https://www.cira.colostate.edu/by-project/" data-bs-toggle="dropdown"> Research & Publications  </a></h2>
+                                    <div class="dropdown-menu megamenu">
+                                        <div class="row g-3">
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Research</h3>
+                                                    <ul class="list-unstyled">
+                                                    <li><a href="/by-project/">Research Projects </a></li>
+                                                    <li><a href="/themes/">Themes</a></li>
+                                                    <!-- <li><a href="">Scientific News</a></li> -->
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Publications</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="/by-project/publications/">CIRA Publications</a></li>
+                                                        <li><a href="https://rammb2.cira.colostate.edu/resources/publications/" target="_blank">RAMMB Publications</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+
+                                <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link dropdown-toggle h6 title" href="https://www.cira.colostate.edu/imagery-data/" data-bs-hover="dropdown"> Imagery & Data  </a>
+                                    <div class="dropdown-menu megamenu">
+                                        <div class="row g-3">
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Imagery</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="/welcome-about/collaborative-groups/national-park-service/">Air Quality Research</a></li>
+                                                        <li><a href="http://vista.cira.colostate.edu/improve/" target="_blank">Improve</a></li>
+                                                        <!-- <li><a href="http://views.cira.colostate.edu/" target="_blank">VIEWS</a></li> -->
+                                                        <li><a href="http://cat.cira.colostate.edu/" target="_blank">CIRA Algorithm Testbed</a></li>
+                                                        <li><a href="https://rammb-slider.cira.colostate.edu/" target="_blank">RAMMB Slider</a></li>
+                                                        <li><a href="https://satlib.cira.colostate.edu/" target="_blank">RAMMB-CIRA Satellite Library</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Data</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="https://www.cloudsat.cira.colostate.edu/data-products" target="_blank">CloudSat Data Processing Center</a></li>
+                                                        <li><a href="/imagery-data/ecmwf-nature-run/">ECMWF Nature Run</a></li>
+                                                        <li><a href="http://rammb.cira.colostate.edu/ramsdis/online/" target="_blank">RAMSDIS Online</a></li>
+                                                        <li><a href="http://rammb.cira.colostate.edu/ramsdis/online/goes-west_goes-east.asp" target="_blank">GOES-West / GOES-East</a></li>
+                                                        <li><a href="https://rammb.cira.colostate.edu/ramsdis/online/synthetic_forecast.asp" target="_blank">Synthetic Forecast Imagery</a></li>
+                                                        <li><a href="http://rammb.cira.colostate.edu/ramsdis/online/tropical.asp" target="_blank">Tropical Imagery</a></li>
+                                                        <li><a href="http://rammb.cira.colostate.edu/ramsdis/online/npp_viirs.asp" target="_blank">Suomi NPP VIIRS Imagery</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+
+                                <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link dropdown-toggle h6 title" href="https://www.cira.colostate.edu/contact-us/" data-bs-toggle="dropdown">  Contact Us  </a>
+                                    <div class="dropdown-menu megamenu">
+                                        <div class="row g-3">
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Connect with us</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="/welcome-about/jobs/">Jobs</a></li>
+                                                        <li><a href="/welcome-about/map-directions/">Map, Directions & Parking</a></li>
+                                                        <li><a href="https://www.facebook.com/CIRACSU/?ref=aymt_homepage_panel" target="_blank">Facebook</a></li>
+                                                        <li><a href="https://twitter.com/CIRA_CSU" target="_blank">Twitter</a></li>
+                                                        <li><a href="https://www.instagram.com/cira_csu/" target="_blank">Instagram</a></li>
+                                                        <li><a href="https://www.threads.com/@cira_csu" target="_blank">Threads</a></li>
+                                                        <li><a href="https://www.linkedin.com/company/cooperative-institute-for-research-in-the-atmosphere" target="_blank">LinkedIn</a></li>
+                                                        <li><a href="https://bsky.app/profile/cira-csu.bsky.social" target="_blank">BlueSky</a></li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="col-megamenu">
+                                                <h3 class="h6 title">Staff Directory</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="/category/boulder/">Boulder, Colorado</a></li>
+                                                        <li><a href="/category/college-park/">College Park, Maryland</a></li>
+                                                        <li><a href="/category/fort-collins/">Fort Collins, Colorado</a></li>
+                                                        <li><a href="/category/kansas-city/">Kansas City, Missouri</a></li>
+                                                        <li><a href="/category/miami/">Miami, Florida</a></li>
+                                                        <li><a href="/category/silver-spring/">Silver Spring, Maryland</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div> 
+                                </li>
+                                
+                                <li class="nav-item"> 
+                                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#searchModal">
+                                    <i class="bi bi-search"></i>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item"> 
+                                                                            <h2 class="h6 title"><a class="nav-link" href="/cooperative-institute-research-atmosphere/staff-dashboard/">Login</a> </h2>
+                                                                    </li>
+                                <!-- //Navigation Structure -->
+                        </ul>
+                    </div>
+               
+                <!-- //Navigation -->
+            </div>          
+        </div>
+    </div> 
+</nav>
+</div><div class="body_header_space">&nbsp;</div>
+<!-- Weather Bar -->
+
+<!-- Text and Image Banner / Social Icon Bar -->
+<div class="textHeader">
+    <div class="bg-light fullWidth">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-3">
+                    <a href="/">
+                        <img class="image" src="https://www.cira.colostate.edu/wp-content/themes/CIRA2019/library/images/cira18Logo.png" style="width:100%; max-width:350px;" alt="Cooperitive Institute for Research in the Atmosphere">
+                    </a>
+                    <div class="row px-2 mt-2 social_icons">
+                        <div class="col">
+                            <a href="https://www.facebook.com/CIRACSU/">
+                                <i class="bi bi-facebook"></i><p class="screen-reader-only">Like Us On Facebook</p></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://twitter.com/CIRA_CSU">
+                                <i class="bi bi-twitter-x"></i>
+                            <p class="screen-reader-only">Follow Us On X</p></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.instagram.com/cira_csu/">
+                            <i class="bi bi-instagram"></i>    
+                            <p class="screen-reader-only">Check out our Instagram</p></a>
+                        </div>
+                           <div class="col">
+                            <a href="https://www.threads.com/@cira_csu">
+                            <i class="bi bi-threads"></i>  
+                            <p class="screen-reader-only">Check out our Threads</p></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.linkedin.com/company/cooperative-institute-for-research-in-the-atmosphere/">
+                            <i class="bi bi-linkedin"></i>    
+                            <p class="screen-reader-only">Like Us On Linked In</p></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.youtube.com/@cira_csu">
+                                <i class="bi bi-youtube"></i>
+                            <p class="screen-reader-only">Like Us On YouTube</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <h1>Cooperative Institute for Research in the Atmosphere</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+<!-- Back to top button - function in script file -->
+<button onclick="topFunction()" id="myBtn" title="Go to top" href="#"><i class="bi bi-arrow-bar-up" style="font-size: 1.5rem; color: #008FB3;"></i><div class="sr_only">Back to Top</div></button>
+<div class="body_header_space">&nbsp;</div>
+<!-- Start main content block --  ends in footer.php -->
+    <div class="home-page" role="main" id="main" tabindex="0">
+<div class="container-xl main_container" id="main">
+    <div class="bg-light px-5 py-3 mt-5">
+        <div class="row">
+                            <div class="col-md-12 col-lg-8 col-sm-12">
+                    		
+    <h2 class="daily_imagery_title">Daily Loop:<br><a class="h4" href="https://satlib.cira.colostate.edu/loop_of_the_day/water-vapor-view-of-the-pacific-from-goes-west/">Water Vapor View of the Pacific From GOES-West</a></h2><div class="video-container">
+        <!-- Video -->
+                        <video muted="muted" id="videoblock_52b291bab7c2407d7e70ab4e5a59dd09" class="video_controler w-100" title="Water Vapor View of the Pacific From GOES-West" loop >
+                    <source src="https://satlib.cira.colostate.edu/wp-content/uploads/sites/23/2026/10/202610292100-202610302200_g18_abi_fd_mlwv_pacificwv_labels.mp4" type="video/mp4" >
+                </video> 
+                  
+    </div>	
+<script>
+    (function($) {
+        $(document).ready(function() {
+            $('video').attr('controls', true);
+            $('.video_details h2').hide();
+            $('.video_details .wp-block-post-terms').hide();
+            $('.video_details .wp-block-separator').hide();
+        });
+    })(jQuery);
+</script>
+<hr>
+<div class="lod_button_row">
+    
+    <div class="btn-group " role="group" aria-label="CIRA Satellite Library website links">
+        <a class="btn border border-2 border-secondary rounded-0" type="button" aria-label="CIRA Satellite Library" href="https://satlib.cira.colostate.edu/">CIRA Satellite Library</a>
+        <a class="btn border border-2 border-secondary rounded-0"  type="button" aria-label="Loop of the Day Archive" href="https://satlib.cira.colostate.edu/lod-goes">Loop of the Day Archive (2022 and earlier)</a>
+    </div>
+    <p>Imagery updates may not occur every day. For the most up-to-date visuals, please refer to the CIRA Satellite Library.</p>
+</div>
+                  </div>
+                <div class="col">
+                                            <div class="comBox">
+                            <h2><a href="https://www.cira.colostate.edu/welcome-about/science-stories/">Communications:</a></h2>
+                                                                                
+                            <p class="h3 fs-5"><a href="https://www.cira.colostate.edu/science-stories/cira-researchers-essential-to-efforts-led-by-google-deepmind-to-bring-ai-forecasting-to-the-national-hurricane-center-and-beyond/">CIRA researchers essential to efforts led by Google DeepMind to bring AI forecasting to the National Hurricane Center and beyond</a></p>
+                                                            <span class="badge bg-primary w-100 p-2">Featured Post</span>
+                                                        <p class="h6">Author: Theresa Barosh - October 29th, 2026</p>
+                            <p>Several CIRA researchers contributed to the recent Nature publication, Operational tropical cyclone forecasting with AI, introducing WeatherNext Cyclones. An AI-based operational weather model, WeatherNext Cyclones is used to forecast hurricanes – or tropical cyclones – around the world.</p>
+                                                                                </div>
+                                                            <!--                         <div class="faceBox" aria-hidden="true">
+                            <h3>Facebook Feed:</h3>
+                            <div aria-hidden="true">
+                                <div aria-hidden="true" class="fb-page" data-href="https://www.facebook.com/CIRACSU/" data-tabs="timeline" data-small-header="true" data-hide-cover="true" data-show-facepile="false">
+                                    <blockquote cite="https://www.facebook.com/CIRACSU/" class="fb-xfbml-parse-ignore" tabindex="0">
+                                    Facebook is being blocked by Tracking Protection, if you want to see what we are up to you can change your browser settings or view us on<a href="https://www.facebook.com/CIRACSU/"> Facebook directly.</a>
+                                    <div class="tinyFont" style="font-size: 10px;">If you want more information on how to adjust your Tracking Protection settings, you can visit this Mozilla forum<a href="https://support.mozilla.org/en-US/kb/tracking-protection"> here</a></div></blockquote>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            //FACEBOOK STUFF
+                            (function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s); js.id = id;
+                            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1';
+                            fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));
+                        </script>
+                     -->
+                </div>
+       
+
+        </div>
+            
+    </div>
+</div>
+
+<div class="wp-block-columns bg-light px-5 py-3 mt-5 is-layout-flex wp-container-core-columns-is-layout-7387b849 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-columns container is-layout-flex wp-container-core-columns-is-layout-7387b849 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading has-text-align-left">SLIDER Satellites</h2>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns container-xl main_container is-layout-flex wp-container-core-columns-is-layout-7387b849 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:25%">
+<div class="wp-block-cover aligncenter" style="min-height:572px;aspect-ratio:unset;"><img decoding="async" class="wp-block-cover__image-background wp-image-26708 size-full" alt="2024 Satellite Image of Eclipse" src="https://www.cira.colostate.edu/wp-content/uploads/sites/4/2026/01/satImgBg.png" style="object-position:82% 51%" data-object-fit="cover" data-object-position="82% 51%"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim" style="background-color:#484b4e"></span><div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow">
+<p class="has-text-align-center has-large-font-size wp-block-paragraph"></p>
+</div></div>
+</div>
+
+
+
+<div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-buttons is-vertical is-content-justification-center is-nowrap is-layout-flex wp-container-core-buttons-is-layout-b65a6c2e wp-block-buttons-is-layout-flex">
+<div class="wp-block-button has-custom-width wp-block-button__width-75 wp-block-button__width-100"><a class="wp-block-button__link has-monte-white-color has-cira-blue-background-color has-text-color has-background wp-element-button" href="https://rammb-slider.cira.colostate.edu/?sat=goes-18" style="border-radius:0px" target="_blank" rel="noreferrer noopener">GOES-18</a></div>
+
+
+
+<div class="wp-block-button has-custom-width wp-block-button__width-75"><a class="wp-block-button__link has-cira-blue-background-color has-background wp-element-button" href="https://slider.cira.colostate.edu/?sat=goes-19&amp;sec=full_disk&amp;x=10848&amp;y=10848&amp;z=0&amp;angle=0&amp;im=12&amp;ts=1&amp;st=0&amp;et=0&amp;speed=130&amp;motion=loop&amp;maps%5Bborders%5D=white&amp;p%5B0%5D=geocolor&amp;opacity%5B0%5D=1&amp;pause=0&amp;slider=-1&amp;hide_controls=0&amp;mouse_draw=0&amp;follow_feature=0&amp;follow_hide=0&amp;s=rammb-slider&amp;draw_color=FFD700&amp;draw_width=6" style="border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px">GOES-19</a></div>
+
+
+
+<div class="wp-block-button has-custom-width wp-block-button__width-75 wp-block-button__width-100"><a class="wp-block-button__link has-monte-white-color has-cira-blue-background-color has-text-color has-background wp-element-button" href="https://rammb-slider.cira.colostate.edu/?sat=himawari&amp;z=0&amp;im=12&amp;ts=1&amp;st=0&amp;et=0&amp;speed=130&amp;motion=loop&amp;maps%5Bborders%5D=white&amp;lat=0&amp;opacity%5B0%5D=1&amp;hidden%5B0%5D=0&amp;pause=0&amp;slider=-1&amp;hide_controls=0&amp;mouse_draw=0&amp;follow_feature=0&amp;follow_hide=0&amp;s=rammb-slider&amp;sec=full_disk&amp;p%5B0%5D=geocolor&amp;x=11008&amp;y=11008" style="border-radius:0px" target="_blank" rel="noreferrer noopener">Himawari-9</a></div>
+
+
+
+<div class="wp-block-button has-custom-width wp-block-button__width-75 wp-block-button__width-100"><a class="wp-block-button__link has-monte-white-color has-cira-blue-background-color has-text-color has-background wp-element-button" href="https://rammb-slider.cira.colostate.edu/?sat=meteosat-9" style="border-radius:0px" target="_blank" rel="noreferrer noopener">Meteosat-9</a></div>
+
+
+
+<div class="wp-block-button has-custom-width wp-block-button__width-75 wp-block-button__width-100"><a class="wp-block-button__link has-monte-white-color has-cira-blue-background-color has-text-color has-background wp-element-button" href="https://slider.cira.colostate.edu/?sat=meteosat-12&amp;sec=full_disk&amp;x=11136&amp;y=11136&amp;z=0&amp;angle=0&amp;im=12&amp;ts=1&amp;st=0&amp;et=0&amp;speed=130&amp;motion=loop&amp;maps%5Bborders%5D=white&amp;p%5B0%5D=geocolor&amp;opacity%5B0%5D=1&amp;pause=0&amp;slider=-1&amp;hide_controls=0&amp;mouse_draw=0&amp;follow_feature=0&amp;follow_hide=0&amp;s=rammb-slider&amp;draw_color=FFD700&amp;draw_width=6" style="border-radius:0px">Meteosat-12</a></div>
+
+
+
+<div class="wp-block-button has-custom-width wp-block-button__width-75 wp-block-button__width-100"><a class="wp-block-button__link has-monte-white-color has-cira-blue-background-color has-text-color has-background wp-element-button" href="https://rammb-slider.cira.colostate.edu/?sat=gk2a" style="border-radius:0px" target="_blank" rel="noreferrer noopener">GEO-KOMPSAT-2A</a></div>
+
+
+
+<div class="wp-block-button has-custom-width wp-block-button__width-75 wp-block-button__width-100"><a class="wp-block-button__link has-monte-white-color has-cira-blue-background-color has-text-color has-background wp-element-button" href="https://rammb-slider.cira.colostate.edu/?sat=jpss&amp;z=0&amp;im=12&amp;ts=1&amp;st=0&amp;et=0&amp;speed=130&amp;motion=loop&amp;maps%5Bborders%5D=white&amp;lat=0&amp;opacity%5B0%5D=1&amp;hidden%5B0%5D=0&amp;pause=0&amp;slider=-1&amp;hide_controls=0&amp;mouse_draw=0&amp;follow_feature=0&amp;follow_hide=0&amp;s=rammb-slider&amp;sec=northern_hemisphere&amp;p%5B0%5D=cira_geocolor&amp;x=16000&amp;y=16000" style="border-radius:0px" target="_blank" rel="noreferrer noopener">JPSS</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns container-xl main_container is-layout-flex wp-container-core-columns-is-layout-7387b849 wp-block-columns-is-layout-flex">
+<div class="wp-block-column container-xl main_container is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-columns bg-light px-5 py-3 mt-5 is-layout-flex wp-container-core-columns-is-layout-7387b849 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:25%"><div class="wp-block-image">
+<figure class="aligncenter size-thumbnail"><a href="https://www.colostate.edu/" target="_blank" rel="noreferrer noopener"><img decoding="async" width="150" height="150" src="https://www.cira.colostate.edu/wp-content/uploads/sites/4/2019/02/csuRam-150x150.png" alt="Colorado State University Ram Logo" class="wp-image-8093" srcset="https://www.cira.colostate.edu/wp-content/uploads/sites/4/2019/02/csuRam-150x150.png 150w, https://www.cira.colostate.edu/wp-content/uploads/sites/4/2019/02/csuRam-125x125.png 125w, https://www.cira.colostate.edu/wp-content/uploads/sites/4/2019/02/csuRam.png 289w" sizes="(max-width: 150px) 100vw, 150px" /></a></figure>
+</div>
+
+<div class="wp-block-image">
+<figure class="aligncenter size-thumbnail"><a href="https://www.noaa.gov/" target="_blank" rel="noreferrer noopener"><img decoding="async" width="150" height="150" src="https://www.cira.colostate.edu/wp-content/uploads/sites/4/2021/05/noaa_logo_color_for_himawari_true_color-150x150.png" alt="https://www.noaa.gov/" class="wp-image-10203" srcset="https://www.cira.colostate.edu/wp-content/uploads/sites/4/2021/05/noaa_logo_color_for_himawari_true_color-150x150.png 150w, https://www.cira.colostate.edu/wp-content/uploads/sites/4/2021/05/noaa_logo_color_for_himawari_true_color-300x300.png 300w, https://www.cira.colostate.edu/wp-content/uploads/sites/4/2021/05/noaa_logo_color_for_himawari_true_color-125x125.png 125w, https://www.cira.colostate.edu/wp-content/uploads/sites/4/2021/05/noaa_logo_color_for_himawari_true_color.png 541w" sizes="(max-width: 150px) 100vw, 150px" /></a></figure>
+</div></div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:75%">
+<h2 class="wp-block-heading">Our Mission</h2>
+
+
+
+<p class="wp-block-paragraph">The Cooperative Institute for Research in the Atmosphere (CIRA) serves as a nexus for multi-disciplinary cooperation between NOAA research scientists and Colorado State University research staff, faculty, and students, aligning NOAA-identified research theme areas with long-standing academic strengths of the University.</p>
+
+
+
+<p class="wp-block-paragraph">Our mission is: to foster additional collaboration with national and international agencies who are developing related capabilities; to affect the fundamental research conducted at the University towards NOAA’s operational needs; and to communicate our research and its practical implications to the scientific community and the public.</p>
+
+
+
+<p class="wp-block-paragraph">To this end, we are dedicated to providing high-quality training to ensure operational user proficiency; conducting outreach programs to K-12 education and the general public to promote environmental literacy; and to quantifying and communicating the significant positive societal impacts of NOAA research on our everyday lives.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns bg-light px-5 p-3 mt-5 is-layout-flex wp-container-core-columns-is-layout-7387b849 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-columns container-xl main_container is-layout-flex wp-container-core-columns-is-layout-7387b849 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading">Our Technology</h2>
+
+
+
+<p class="wp-block-paragraph">With NOAA and CSU support CIRA has operated a Geostationary Operational Environmental Satellite (GOES) Earth Station since 1980. Today our collection capability handles multiple simultaneous GOES transmissions, NOAA polar data, Himawari-8 and European MSG. CIRA also plays an important role in each new GOES satellite as one of the primary test sites for initial transmissions and sensor verification.</p>
+
+
+
+<p class="wp-block-paragraph">CIRA operates a high-technology infrastructure to support research in our major theme areas. The infrastructure contains over 300 workstations/servers, a satellite Earth Station with an online archive, several high-performance modelling clusters, and a high-speed network. With its expertise in data fusion, CIRA is developing systems and tools that will simplify the acquisition and manipulation of satellite and model data for scientific research.</p>
+</div>
+</div>
+</div>
+</div>
+ 
+</div><!-- end of body container started in head.PHP -->
+<footer class="footer pt-3" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter" >
+    <div class="container">
+        <div id="inner-footer">
+            <div class="row">
+                <!-- Address block: edit via Dashboard>Theme Options -->
+                <div class="col" tabindex="0">
+                    <div class="footerAddress">
+                        Cooperative Institute for Research in the Atmosphere<br/>
+                        Colorado State University<br/>
+                        3925A West Laporte Ave.<br/>
+                        Fort Collins, CO 80521<br/>
+                        <br/>
+                        Phone: 970-491-8448<br/>
+                        Fax: 970-491-8241
+                    </div>
+                     <div class="row px-2 mt-2 social_icons">
+                        <div class="col">
+                            <a href="https://www.facebook.com/CIRACSU/">
+                                <i class="bi bi-facebook"></i><p class="screen-reader-only">Like Us On Facebook</p></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://twitter.com/CIRA_CSU">
+                                <i class="bi bi-twitter-x"></i>
+                            <p class="screen-reader-only">Follow Us On X</p></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.instagram.com/cira_csu/">
+                            <i class="bi bi-instagram"></i>    
+                            <p class="screen-reader-only">Check out our Instagram</p></a>
+                        </div>
+                           <div class="col">
+                            <a href="https://www.threads.com/@cira_csu">
+                            <i class="bi bi-threads"></i>  
+                            <p class="screen-reader-only">Check out our Threads</p></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.linkedin.com/company/cooperative-institute-for-research-in-the-atmosphere/">
+                            <i class="bi bi-linkedin"></i>    
+                            <p class="screen-reader-only">Like Us On Linked In</p></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://bsky.app/profile/cira-csu.bsky.social">
+                            <i class="bi bi-bluesky"></i>    
+                            <p class="screen-reader-only">Follow Us On BlueSky</p></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.youtube.com/@cira_csu">
+                                <i class="bi bi-youtube"></i>
+                            <p class="screen-reader-only">Like Us On YouTube</p></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- CSU MENU: edit via Dashboard>Apperence>Menu -->
+                <div class="col csuMenu">
+                    <div class="menu-csu-menu-container"><ul id="menu-csu-menu" class="menu"><li id="menu-item-6677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6677"><a href="https://www.colostate.edu/disclaimer">Disclaimer</a></li>
+<li id="menu-item-6678" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6678"><a href="https://www.colostate.edu/equal-opportunity">Equal Opportunity</a></li>
+<li id="menu-item-6679" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6679"><a href="https://www.colostate.edu/privacy">Privacy Statement</a></li>
+<li id="menu-item-6680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6680"><a href="https://studentaffairs.colostate.edu/">Student Affairs</a></li>
+<li id="menu-item-6681" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6681"><a href="http://colostate.edu/">Colorado State University</a></li>
+</ul></div>                </div>
+                <!-- CIRA MENU: edit via Dashboard>Apperence>Menu -->
+                <div class="col">
+                    <nav role="navigation" aria-label="Additional Links">
+                        <div class="footer-links cf"><ul id="menu-cira-footer" class="footer-nav cf"><li id="menu-item-6742" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-8 current_page_item menu-item-6742"><a href="https://www.cira.colostate.edu/" aria-current="page">Home</a></li>
+<li id="menu-item-6743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6743"><a href="https://www.cira.colostate.edu/contact-us/">About Us</a></li>
+<li id="menu-item-6744" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6744"><a href="https://www.cira.colostate.edu/welcome-about/map-directions/">Map &#038; Directions</a></li>
+<li id="menu-item-7333" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7333"><a href="https://www.colostate.edu/privacy/">Privacy Policy</a></li>
+<li id="menu-item-6682" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6682"><a href="mailto:colostate.cira@gmail.com">Website Feedback</a></li>
+</ul></div>                    </nav>
+                    <a href="http://colostate.edu">
+                        <img class="csuLogo" style="width: 300px; min-height:44px; position:relative; ;" src="https://www.cira.colostate.edu/wp-content/themes/CIRA2019/library/images/csuLogoLong.png" alt="Colorado State University" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/sites/4/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/CIRA2019/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.cira.colostate.edu/wp-includes/js/wp-emoji-release.min.js"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://www.cira.colostate.edu/wp-includes/js/wp-emoji-loader.min.js
+</script>
+ <!-- Bootstrap Table Sources -->
+    </body>
+</html> <!-- end of site. what a ride! -->

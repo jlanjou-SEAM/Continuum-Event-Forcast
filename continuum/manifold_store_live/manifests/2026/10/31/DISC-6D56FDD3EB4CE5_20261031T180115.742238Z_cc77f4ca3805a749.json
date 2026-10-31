@@ -1,0 +1,24 @@
+{
+  "candidate_id": "DISC-6D56FDD3EB4CE5",
+  "provider": "MET Norway",
+  "dataset": "locations",
+  "sector": "public",
+  "country": "NO",
+  "scientific_regime": [
+    "weather",
+    "marine",
+    "air_quality"
+  ],
+  "retrieved_utc": "2026-10-31T18:01:15.742238Z",
+  "request_url": "https://api.met.no/weatherapi/radar/2.0/locations",
+  "final_url": "https://api.met.no/weatherapi/radar/2.0/locations",
+  "status_code": 200,
+  "content_type": "application/geo+json",
+  "byte_length": 38934,
+  "sha256": "cc77f4ca3805a74983eac1d64f0c3a3ae3663a326d3eba30aa7bc9f9728fe203",
+  "etag": null,
+  "last_modified": null,
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/weather/2026/10/31/DISC-6D56FDD3EB4CE5/20261031T180115.742238Z_cc77f4ca3805a749.json",
+  "parent_id": "METNO-API",
+  "discovery_depth": 1
+}

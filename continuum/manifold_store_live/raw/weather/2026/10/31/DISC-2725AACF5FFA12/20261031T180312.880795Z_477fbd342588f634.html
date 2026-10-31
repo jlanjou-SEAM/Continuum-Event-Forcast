@@ -1,0 +1,487 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//Dtd HTML 4.0 Transitional//EN">
+<html>
+
+<!-- 	Climate Prediction Center Week 3-4 Outlook page 		v0.1 2016.04.07
+<!-- 	Climate Prediction Center Week 3-4 Outlook page 		v0.2 2016.07.26
+
+	Programmer: Jonathan Hoopingarner
+	
+	RZDM:	/home/www/cpc/htdocs/products/prediction/WK34/index.php
+-->
+
+		
+	<head>
+		<title>Climate Prediction Center - Week 3-4 Outlook</title>
+		<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+		<meta name="DC.title" content="NOAA's Climate Prediction Center">
+		<meta name="DC.description" content="The CPC issues the official U.S. 8 to 14 day outlooks. These outlooks illustrate the probabilities of having above, normal, and below normal temperature and precipitation for the 6 to 10  day period, respectively.  The outlooks also include forecast 500 millibar heights for the 6 to 10  day period.">   <meta name="DC.date.reviewed" scheme="ISO8601" content="2005-12-12">
+		<meta name="DC.date.created" scheme="ISO8601" content="2001-01-01">
+		<meta name="DC.subject" content="Climate,Climate Prediction Center,National Weather Service,National Oceanic &amp; Atmospheric Administration,NOAA,El Nino,La Nina,ENSO,climate outlooks,El Nino Advisory,La Nina Advisory,droughts,hurricanes,Threats Assessment,Drought Assessment,Drought Monitor,CLimate Diagnostics Bulletin,6-10 day outlook,8-14 day outlook,6-10 day forecast,8-14 day forecast,MRF,UV Index,North Atlantic Oscillation,NAO,Pacific Decadal Oscillation,PDO,sea surface temperatures,SST,Palmer Drought Severity Index,African Desk,outlooks,expert assessments,monitoring,advisories,stratosphere,temperature,precipitation,snow cover,snowfall,soil moisture,OLR,ozone,degree days,CLIMATE,CLIMATE PredICTION center,EL NINO,LA NINA,CLIMATE OUTLOOKS,HURRICANES,ASSESSMENTS,SNOW,StrATOSPHERE,DROUGHT,OZONE,DEGREE DAYS">
+		<meta name="DC.format" content="text/html; charset=iso-8859-1">
+		<meta name="DC.language" scheme="DCTERMS.RFC1766" content="EN-US">
+		<meta name="DC.Distribution" content="Global">
+		<meta name="DC.robot" content="all">
+		<meta name="DC.creator" content="NOAA's Climate Prediction Center">
+		<meta name="DC.contributor" content="CPC Internet Team">
+		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+		<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/">
+		<link rel="DC.rights" href="http://www.weather.gov/disclaimer.php">
+		<link rel="stylesheet" type="text/css" href="/main.css">
+		<link href="/favicon.ico" rel="shortcut icon">  
+		<link href="/nwscwi/main.css" type="text/css" rel="STYLESHEET">
+
+		<script src="https://www.weather.gov/source/nws/govshutdown.js" defer></script>
+
+		<!-- Required Digital Analytics Program (DAP) code -->
+    	<script src="//dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&amp;subagency=NOAA" id="_fed_an_ua_tag"></script>
+	</head>
+
+	<body leftMargin="0" background="/nwscwi/background-white.gif" topMargin="0" marginheight="0" marginwidth="0">
+	
+		<!-- 	Climate Prediction General Header 01
+	Programmer: Jonathan Hoopingarner
+	
+	RZDM:
+-->
+
+<table cellSpacing="0" cellPadding="0" width="100%" border="0" background="/nwscwi/topbanner.jpg">
+	<tbody>
+		<tr>
+			<td align="right" height="19">
+				<a href="#contents">
+				<img height="1" alt="Skip Navigation Links" src="/nwscwi/skipgraphic.gif" width="1" border="0"></a>
+				<a href="http://www.nws.noaa.gov/" class="homepagelinks">
+				<span class="nwslink">www.nws.noaa.gov</span></a>&nbsp;
+			</td>
+		</tr>
+	</tbody>
+</table>
+ 
+		<!-- 	Climate Prediction General Header 02
+	Programmer: Jonathan Hoopingarner
+	
+	RZDM:
+-->
+
+<table cellSpacing="0" cellPadding="0" width="100%" border="0">
+	<tbody>
+		<tr>
+			<td rowSpan="2"><a href="http://www.noaa.gov/">
+				<img height="78" alt="NOAA logo - Click to go to the NOAA home page" src="/nwscwi/noaaleft.jpg" width="85" border="0"></a>
+			</td>
+			<td align="left">
+				<img height="20" alt="National Weather Service" src="/nwscwi/nws_title.jpg" width="500" border="0">
+			</td>
+			<td rowSpan="2" width="100%" background="/nwscwi/ncep_bkgrnd.jpg">
+				&nbsp;
+			</td>
+			<td rowSpan="2" align="right"><a href="http://www.nws.noaa.gov/">
+				<img height="78" alt="NWS logo - Click to go to the NWS home page" src="/nwscwi/nwsright.jpg" width="85" border="0"></a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<img height="58" alt="Climate Prediction Center" src="/nwscwi/cpc.jpg" width="500" border="0">
+			</td>
+		</tr>
+	</tbody>
+</table>
+ 
+		<!-- 	Climate Prediction NavBar
+	Programmer: Jonathan Hoopingarner
+	
+	RZDM:
+-->
+
+<table cellSpacing="0" cellPadding="0" width="100%" border="0" background="/nwscwi/navbkgrnd.gif">
+	<tbody>
+		<tr>
+			<td align="left" width="94">
+				<img height="23" alt="" src="/nwscwi/navbarleft.jpg" width="94" border="0">
+			</td>
+			<td class="nav" align="center" width="10%">
+				<a href="/products/site_index.shtml" class="menu" title="to Climate Prediction Center site map">Site Map</a>
+			</td>
+			<td class="nav" align="right" width="10%">
+				<a href="http://www.weather.gov/contact-media" class="menu" title="to National Weather Service news page">News</a>
+			</td>
+			<td class="nav" align="right" width="19%">
+				<a href="http://www.weather.gov/organization/" class="menu">Organization</a>
+			</td>
+			<td class="yellow" align="right" width="20%">
+				<form action="http://www.firstgov.gov/fgsearch/index.jsp" name="query"><label for="search">Search</label>&nbsp;
+			</td>
+			<td align="left" class="searchinput" width="20%" nowrap>
+				<input type="hidden" name="parsed" value="true">
+				<input type="hidden" name="rn" value="3">
+				<input type="hidden" name="in0" value="domain">
+				<input type="hidden" name="dom0" value="nws.noaa.gov, weather.gov, wrh.noaa.gov, srh.noaa.gov, crh.noaa.gov, prh.noaa.gov, arh.noaa.gov, alaska.net/~nwsar, erh.noaa.gov, ncep.noaa.gov, spc.noaa.gov, nhc.noaa.gov, sec.noaa.gov, aviationweather.gov, aviationweather.noaa.gov, weather.noaa.gov, roc.noaa.gov, nohrsc.nws.gov, nwstc.noaa.gov, wdtb.noaa.gov, npmoc.navy.mil, ndbc.noaa.gov">
+				<input type="text" name="mw0" value="Enter Search Here" id="search" size="20" maxlength="256">&nbsp;
+				<input type="submit" name="Go2" value="Go">
+			</td>
+			<td width="10%"></form>&nbsp;</td>
+			<td align="right">
+				<img height="23" alt="" src="/nwscwi/navbarendcap.jpg" width="24" border="0">
+			</td>
+		</tr>
+	</tbody>
+</table> 
+
+		<table cellSpacing="0" cellPadding="1" width="500" border="0">
+			<tbody>
+				<tr vAlign="top">
+					<td width="136"><br>
+						<table cellSpacing="0" cellPadding="0" width="136" border="0">
+							<tbody>
+							
+								<!-- 	Climate Prediction Search Box
+	Programmer: Jonathan Hoopingarner
+	
+	RZDM:
+-->
+
+<tr>
+	<td class="searchinput" align="left">
+		<form action="http://www.firstgov.gov/fgsearch/index.jsp" name="query">
+			<label for="search"><span class="yellow">Search the CPC</span></label>
+			<input type="hidden" name="parsed" value="true">
+			<input type="hidden" name="rn" value="3">
+			<input type="hidden" name="in0" value="domain">
+			<input type="hidden" name="dom0" value="www.cpc.ncep.noaa.gov">
+			<input type="text" name="mw0" id="search"  size="10" maxLength="256" value="CPC search">&nbsp;
+			<input type="submit" name="Go2" value="Go">
+		</form>
+	</td>
+</tr> 								
+								<!-- 	Climate Prediction Local Menu 01
+	Programmer: Jonathan Hoopingarner
+	
+	RZDM:
+-->
+
+<!--
+<tr>
+	<td class="white" colSpan="2">
+		<span class="yellow"><br>General Information</span><br>
+		&nbsp;&nbsp;&nbsp;<a href="./PDD_CPC_Weeks3-4TempOutlook.pdf" title="Product and Description" class="menu">Temp Product 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;description</a><br>
+		&nbsp;&nbsp;&nbsp;<a href="./PDD_CPC_Weeks3-4PrecipOutlooks.pdf" title="Product and Description" class="menu">Prcp Product 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;description</a><br>
+		&nbsp;&nbsp;&nbsp;<a href="./Forecast-Process-Format.pdf" title="On Process and Format" class="menu">On Process &
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Format</a><br>
+	</td>
+</tr>
+-->
+
+<tr>
+	<td class="white" colSpan="2">
+		<span class="yellow"><br>Forecast Tools</span><br>
+		&nbsp;&nbsp;&nbsp;<a href="./texts/Dynamical-Forecast-Guidance.pdf" title="to Dynamical model guidance" class="menu">Dynamical model<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;guidance</a><br>
+		&nbsp;&nbsp;&nbsp;<a href="./texts/Empirical-Statistical-Forecast-Guidance.pdf" title="to Statistical model guidance" class="menu">Statistical model<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;guidance</a><br>
+	</td>
+</tr>
+
+<tr>
+	<td class="white" colSpan="2">
+		<span class="yellow"><br>Verification</span><br>
+		&nbsp;&nbsp;&nbsp;<a href="./texts/Verification.pdf" title="Observations and Metrics" class="menu">Observations & &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Metrics</a><br>
+		&nbsp;&nbsp;&nbsp;<a href="/products/predictions/WK34/archives/" title="Past Outlooks (Archives)" class="menu">Past Outlooks</a><br>
+	</td>
+</tr>
+
+<tr>
+	<td class="white" colSpan="2">
+		<span class="yellow"><br>Related Outlooks</span><br>
+		&nbsp;&nbsp;&nbsp;<a href="./hawaii_outlooks.wk34.html" title="to Hawaiian outlooks" class="menu">Hawaiian Outlook</a><br>
+		&nbsp;&nbsp;&nbsp;<a href="/products/predictions/610day/" title="to 6 to 10 day outlooks" class="menu">6 to 10 Day</a><br>
+		&nbsp;&nbsp;&nbsp;<a href="/products/predictions/814day/" title="to 8 to 14 day outlooks" class="menu">8 to 14 Day</a><br>
+		&nbsp;&nbsp;&nbsp;<a href="/products/predictions/30day/" title="to 30 day outlooks" class="menu">30-day</a><br>
+		&nbsp;&nbsp;&nbsp;<a href="/products/predictions/90day/" title="to 90 day outlooks" class="menu">90-day</a><br>
+	</td>
+</tr>
+ 
+								
+								<!-- 	Climate Prediction About Us Menu
+	Programmer: Jonathan Hoopingarner
+	
+	RZDM:
+-->
+<tr>
+	<td class="white" colSpan="2">
+		<span class="yellow"><br>About Us</span><br>
+		&nbsp;&nbsp;&nbsp;<a href="/information/who_we_are/mission.shtml" class="menu">Our Mission</a><br>
+		&nbsp;&nbsp;&nbsp;<a href="/information/who_we_are/index.shtml" class="menu">Who We Are</a><br>
+	</td>
+</tr> 
+								<!-- 	Climate Prediction Contact Us Menu
+	Programmer: Jonathan Hoopingarner
+	
+	RZDM:
+-->
+
+<tr>
+	<td class="white" colSpan="2">
+		<span class="yellow"><br>Contact Us</span><br>
+		&nbsp;&nbsp;&nbsp;<a href="/information/personnel/contacts.shtml" class="menu">CPC Information</a><br>
+		&nbsp;&nbsp;&nbsp;<a href="/comment-form.html" class="menu">CPC Web Team</a><br>
+	</td>
+</tr> 								
+								
+								<tr>
+									<td>
+										<span class="yellow"><br>As of the May 19th, 2017, release, Week 3-4 outlooks precipitation outlooks are experimental, whereas the temperature outlooks are operational. Both are issued Friday between 3pm & 4pm Eastern Time. </span>
+									</td>
+								</tr>
+
+								<!-- 	Climate Prediction First Gov Menu
+	Programmer: Jonathan Hoopingarner
+	
+	RZDM:
+-->
+
+<tr>
+	<td align="center" class="white" id="menuitem">
+		<br><a href="http://www.firstgov.gov/"><img src="http://www.cpc.ncep.noaa.gov/nwscwi/usagov_logo_color_110wb.gif" alt="FirstGov.gov is the U.S. Government's official Web portal to all Federal, state and local government Web resources and services." width="110" height="30" border="0"></a>
+	</td>
+</tr> 
+							</tbody>
+						</table>
+					</td>
+					<td vAlign="top" width="100%">
+						<table border="0" cellPadding="2" cellSpacing="0" align="center" width="100%">
+							<tbody>
+								<tr>
+									<td colspan="2">
+										<font face="Verdana,arial,serif" size="2">
+										<a href="/index.php" class="homepagelinks"><b>HOME</b></a>&gt; 
+										<a href="/products/forecasts/" class="homepagelinks">Outlook Maps</a>&gt; 
+										Week 3-4 Outlooks										</font>
+									</td>
+								</tr>      
+								<tr>
+									<td colSpan="2"><hr></td>
+								</tr>
+								<tr>
+									<td align="center" colSpan="2">
+										<center><B><font face="Brush Script" size="6">Week 3-4 Outlooks</font></B></center>     
+									</td>
+								</tr>
+								<tr>
+									<td align="center" colSpan="2">
+										<center><B><font face="Brush Script" size="4" color="red">
+										Valid: 14 Nov 2026 to 27 Nov 2026<br>Updated: 30 Oct 2026										</center></b></font>
+									</td>
+								</tr>
+								<tr>
+									<td colSpan="2"><hr></td>
+								</tr>
+								
+								<!-- 	Climate Prediction SurveyFile Pointer
+	Programmer: Jonathan Hoopingarner
+	
+	RZDM:
+-->
+<!--
+<tr align="center" width="100%" bgcolor="#BBDBD7">
+	<td colSpan="3">
+		<font face="Verdana,Arial,serif" size="3">
+		<b>Please provide comments using the <a href="http://www.nws.noaa.gov/survey/nws-survey.php?code=EXWK34Precip">online survey.</a></b>
+		</font>
+	</td>
+</tr>
+
+<tr>
+	<td colSpan="2"><hr></td>
+</tr>
+-->
+ 								
+
+								<tr>
+									<td align="center">
+										<font face="Brush Script" size="4"><b>Temperature Probability</b></font><br><br>
+										<a href=./gifs/WK34temp.gif target="_self"><img src=./gifs/WK34temp.gif border="0" width="300" alt="Week 3-4 Outlooks - Temperature Probability"></a>
+									</td>
+									<td align="center">
+										<font face="Brush Script" size="4"><b>Precipitation Probability</b></font><br><br>	 
+										<a href=./gifs/WK34prcp.gif><img src=./gifs/WK34prcp.gif border="0" width="300" alt="Week 3-4 Outlooks - Precipitation Probability"></a> 		 
+									</td>
+								</tr>
+
+
+                                                                <tr align="center" width="100%">
+									<td colSpan="3">
+										<font face="Verdana,Arial,serif" size="3">
+										<b><br><a href="500mb.php">Week 3-4 500-hPa Height Outlook</a></b>
+										</font>
+									</td>
+								</tr>
+
+
+								<tr>
+									<td colSpan="2"><hr></td>
+								</tr>
+								<!-- 	Climate Prediction FAQFile Pointer
+	Programmer: Jonathan Hoopingarner
+	
+	RZDM:
+-->
+
+<tr align="center" width="100%" bgcolor="#BBDBD7">
+	<td colSpan="3">
+		<font face="Verdana,Arial,serif" size="3">
+		<b>Click <a href="./week34faq.php">HERE</a> for info about how to read Week 3-4 outlook maps</b><br>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td colSpan="2"><hr></td>
+</tr>
+ 
+								
+								<tr>
+									<td colSpan="2" width="100%">
+										<FONT FACE="Courier"><div align="left"><strong>
+										Prognostic Discussion for Week 3-4 Temperature and Precipitation Outlooks
+<br>NWS Climate Prediction Center College Park MD
+<br>300PM EDT Fri Oct 30 2026
+<br>
+<br>Week 3-4 Forecast Discussion Valid Sat Nov 14 2026-Fri Nov 27 2026
+<br>
+<br>For the current Week 3-4 Outlooks, both tropical and extratropical climate signals are considered alongside dynamical model guidance. In the tropical Pacific, ongoing El Niño conditions feature weekly relative sea surface temperature (SST) anomalies of approximately 2.5°C within the Niño 3.4 region. In the extratropics, a rare November stratospheric polar vortex disruption is unfolding, with forecasts indicating a transition into a major sudden stratospheric warming (SSW) in a week. Although this SSW will take place prior to the start of the forecast periods, its effects often persist for up to two months, typically manifesting as a negative Arctic Oscillation (AO) phase. Recent forecast guidance reflects a shift toward a negative AO. Concurrently, the Pacific-North American pattern is transitioning to a positive phase, an alignment typically associated with El Niño. A key consideration is how these various climate drivers and extratropical teleconnections will interact to shape temperature and precipitation patterns throughout the Week 3-4 period.
+<br>
+<br>The large-scale atmospheric circulation throughout the 2-week forecast period closely resembles a classic El Niño teleconnection pattern. The 500-hPa height field is dominated by a wave train marked by anomalous troughing over both the North Pacific and the southeastern Contiguous United States (CONUS), contrasted by anomalous ridging spanning much of Canada, the Arctic, and the northern tier of CONUS. While dynamical guidance broadly agrees on these primary features, the principal source of uncertainty centers on the Southeast trough, where models diverge regarding the strength and location. Additionally, anomalous troughing is present over the North Atlantic. The alignment of positive height anomalies over the Arctic alongside negative height anomalies across the North Atlantic and North Pacific projects onto a negative AO—a signature consistent with an SSW response. However, the area of positive heights extends farther south into North America than typically seen in a canonical negative AO pattern.
+<br>
+<br>Under the influence of ridging over much of the Great Lakes and Northern Plains, the Week 3-4 Temperature Outlook favors above-normal temperatures across the western coastline and northern tier of the CONUS. This spatial pattern of elevated probabilities aligns with typical El Niño conditions for this time of year. Conversely, increased uncertainty across dynamical and statistical tools regarding the anomalous troughing over the Southeast results in conflicting signals, leading to an Equal Chances forecast of above-, near-, or below-normal temperatures for both the Southeast and Southern Plains. For Alaska, warm SST anomalies in the Gulf of Alaska combined with prevailing southerly flow foster a tilt toward above-normal temperatures, particularly across the eastern regions of the state.
+<br>
+<br>Aligning with typical El Niño signals, the Week 3-4 Precipitation Outlook indicates heightened probabilities of above-normal precipitation from the Pacific Northwest extending into the Alaska Panhandle, driven by anomalous onshore flow associated with troughing. While dynamical models reliably project this feature, any westward shift in this troughing would diminish both onshore flow and expected precipitation anomalies. In addition, jet stream adjustments linked to El Niño support enhanced wetness across the Southeast. Conversely, anomalous ridging over the Northern Plains favors a slight tilt toward below-normal precipitation.
+<br>
+<br>The ongoing El Niño also impacts the Temperature and Precipitation Outlooks for Hawaii. There, above-normal temperatures and below-normal precipitation probabilities are consistently favored by dynamical model guidance.
+<br>
+<br>
+<br>Forecaster: Laura Ciasto
+<br>
+<br>The next week 3-4 outlook will be issued on Friday, Nov 06, 2026
+<br>
+<br>These outlooks are based on departures from the 1991-2020 base period
+<br>
+<br>These are three category outlooks consistent with what is currently used for the monthly and seasonal forecasts.
+<br>
+<br><br><br>The shading on the temperature map depicts the most favored category, either above-normal (A), below-normal (B), or near-normal (N) with the solid lines giving the probability ( >33%) of this more likely category (above, below, or near).
+<br>
+<br>The shading on the precipitation map depicts the most favored category, either above-median (A), below-median (B), or near-median with the solid lines giving the probability ( >33%) of this more likely category (above, below, or near).
+<br>
+<br>In areas where the likelihoods of 2-week mean temperatures and accumulated precipitation amounts are similar to climatological probabilities, equal chances (EC) is indicated.
+<br>
+<br><br><br>										</strong></div></FONT>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<tr align="center" width="100%" >
+											<td colSpan="3">
+											<a href="./texts/week34fcst.txt">An ASCII (w/ HTML markup tags) text version of the written forecast is available.</a>
+											</td>
+										</tr>
+									</td>
+									<td colSpan="3">
+										<hr>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						
+						<!-- 	Climate Prediction General Footer 02
+	Programmer: Jonathan Hoopingarner
+	
+	RZDM:
+-->
+
+<table cellspacing="0" cellpadding="0" width="50%" border="0" align="center">
+	<tbody>
+		<tr>
+			<td colspan="3">								
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" align="center">
+				<u>Related Topics</u><br>
+			</TD>
+		</TR>
+		<TR vAlign="top">
+			<td>
+				<br>
+				<a href="/products/predictions/610day/">6 to 10 Day Outlooks</a><br>
+				<a href="/products/predictions/814day/">8 to 14 Day Outlooks</a><br>								
+				<a href="/products/predictions/30day/">30-day Outlooks</a><br>
+				<a href="/products/predictions/30day/">90-day Outlooks</a><br>
+			</td>
+			<td>
+				&nbsp;
+			</td>
+			<td align="right">								
+				<br><a href="/information/who_we_are/mission.shtml">Our Mission</a><br>
+				<a href="/information/who_we_are/">Who We Are</a><br>
+				<a href="/information/personnel/contacts.shtml">CPC Information</a><br>
+				<a href="/comment-form.html">Email: CPC Web Team</a><br>
+			</td>
+		</tr>
+	</tbody>
+</table>
+ 
+						<!-- 	Climate Prediction General Footer 01
+	Programmer: Jonathan Hoopingarner
+	
+	RZDM:
+-->
+
+<table cellSpacing="0" cellPadding="0" width="96%" border="0" align="center">
+	<tbody>
+		<tr>
+			<td colSpan="3"><HR></td>
+		</tr>
+		<tr vAlign="top">
+			<td class="gray">
+				<a href="http://www.noaa.gov/" class="homepagelinks">
+				<span class="gray">NOAA/</span></a>
+				<a href="http://www.nws.noaa.gov/" class="homepagelinks">
+				<span class="gray">National Weather Service</span></a><br>
+				<a href="http://www.ncep.noaa.gov/" class="homepagelinks">
+				<span class="gray">National Centers for Environmental Prediction</span></a><br>
+								Climate Prediction Center<br>
+								5830 University Research Court<br>
+								College Park, Maryland 20740<br>
+								Page Author:<a href="http://www.cpc.ncep.noaa.gov/comment-form.html" class="homepagelinks">
+								<span class="gray"> Climate Prediction Center Internet Team</span></a><br>
+								Page last modified: Oct 10 2025			</td>
+			<td>
+				<a href="http://weather.gov/disclaimer.php" class="homepagelinks">
+				<span class="gray">Disclaimer</span></a><br>
+				<a href="http://www.noaanews.noaa.gov/stories/iq.htm" class="homepagelinks">
+				<span class="gray">Information Quality</span></a><br>
+				<a href="http://www.nws.noaa.gov/credits.php" class="homepagelinks">
+				<span class="gray">Credits</span></a><br>
+				<a href="http://www.nws.noaa.gov/glossary/" class="homepagelinks">
+				<span class="gray">Glossary</span></a><br>
+			</td>
+			<td align="right"><a href="http://weather.gov/privacy.php" class="homepagelinks">
+				<span class="gray">Privacy Policy</span></a><br>
+				<a href="http://www.rdc.noaa.gov/%7Efoia/" class="homepagelinks">
+				<span class="gray">Freedom of Information Act (FOIA)</span></a><br>
+				<a href="http://www.nws.noaa.gov/admin.php" class="homepagelinks">
+				<span class="gray">About Us</span></a><br>
+				<a href="http://www.nws.noaa.gov/careers.php" class="homepagelinks">
+				<span class="gray">Career Opportunities</span></a><br>
+			</td>
+		</tr>
+	</tbody>
+</table>
+ 
+						
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- -->
+	</body>
+	
+</html>

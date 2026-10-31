@@ -1,0 +1,594 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//Dtd HTML 4.0 Transitional//EN">
+<html>
+
+	<head>
+		<title>Weather Prediction Center | Extended Prediction Division &ndash; Climate Diagnostics Prediction &amp; Applications Workshop</title>
+		<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+		<meta name="subject.attribution" content="CDPW">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="/nwscwi/main.css" type="text/css" rel="STYLESHEET">
+		<style>
+			html { scroll-behavior: smooth; }
+			.cdpaw-info { font-size: 1.1rem; line-height: 1.6rem; margin: 2em 0; padding: 0 2em; }
+			.cdpaw-info a { font-weight: bold; }
+			.cdpaw-info > div { background: #e6e6e6; margin-bottom: 1em; padding: 1.2em 2em 1.4em; }
+			.cdpaw-info h3 { color: #0F268A; font-size: 22px; margin-bottom: 0.5em; }
+			.cdpaw-info h4 { font-size: 18px; margin-bottom: .5em; }
+      .cdpaw-info h4 + ul { margin-top: 0.5em; }
+      .cdpaw-info #cdpaw-announcement ol {
+        counter-reset: list;
+      }
+      .cdpaw-info #cdpaw-announcement ol > li {
+        list-style: none;
+        margin-bottom: 1rem;
+        position: relative;
+      }
+      .cdpaw-info #cdpaw-announcement ol > li:before {
+        counter-increment: list;
+        content: counter(list, decimal) ") ";
+        font-weight: bold;
+        left: -1.2em;
+        position: absolute;
+      }
+			.cdpaw-info li { margin-bottom: 10px; }
+      .cdpaw-info li ul li:first-of-type { margin-top: 10px; }
+			.cdpaw-info a.abstract-form-button,
+			.cdpaw-info a.registration-form-button {
+				background-color: #4caf50;
+				border-radius: 4px;
+				color: white;
+				cursor: pointer;
+				display: inline-block;
+				font-size: 1.1em;
+				margin: 0.5rem 0;
+				padding: .9rem 1.5rem;
+				text-align: center;
+				text-decoration: none;
+			}
+			.cdpaw-info h3 + a.abstract-form-button,
+			.cdpaw-info h3 + a.registration-form-button {
+				margin-left: -0.25rem;
+			}
+			.cdpaw-info a.abstract-form-button:hover,
+			.cdpaw-info a.registration-form-button:hover { background-color: #46a049; }
+			.cdpaw-info a.abstract-form-button:active,
+			.cdpaw-info a.registration-form-button:active { background-color: #3e8e41; }
+			.cdpaw-info a.abstract-form-button.disabled,
+			.cdpaw-info a.registration-form-button.disabled { background-color:#99989a; }
+			.cdpaw-info a.abstract-form-button.disabled:hover,
+			.cdpaw-info a.registration-form-button.disabled:hover { background-color: #8c8b8d; }
+			.cdpaw-info a.abstract-form-button.disabled:active,
+			.cdpaw-info a.registration-form-button.disabled:active { background-color: #807e81; }
+      .cdpaw-info .isDisabled {
+        color: currentColor;
+        cursor: not-allowed;
+        font-weight: bold;
+        opacity: 0.6;
+        text-decoration: underline;
+      }
+
+			.cdpaw-info .hotel-table {
+				max-width: 900px;
+				overflow: scroll;
+			}
+			.cdpaw-info table.hotel-info {
+				margin-top: 0.5rem;
+				white-space: nowrap;
+			}
+			.cdpaw-info table.hotel-info,
+			.cdpaw-info table.registration-pricing {
+				border-collapse: separate;
+				border-spacing: 0;
+				margin-bottom: 1.5rem;
+			}
+			.cdpaw-info table.hotel-info th,
+			.cdpaw-info table.hotel-info td,
+			.cdpaw-info table.registration-pricing th,
+			.cdpaw-info table.registration-pricing td {
+				border-bottom: 1px solid #cfcfcf;
+			}
+			/*.cdpaw-info table.registration-pricing th {
+				font-weight: bold;
+			}*/
+			.cdpaw-info table.hotel-info tr th:first-of-type,
+			/*.cdpaw-info table.hotel-info tr td:first-of-type,*/
+			.cdpaw-info table.registration-pricing tr th:first-of-type,
+			.cdpaw-info table.registration-pricing tr td:first-of-type {
+				padding-right: 1.5rem;
+				padding-left: 0;
+				text-align: left;
+			}
+			.cdpaw-info table.hotel-info th,
+			.cdpaw-info table.hotel-info td,
+			.cdpaw-info table.registration-pricing th,
+			.cdpaw-info table.registration-pricing td {
+				font-size: 0.8rem;
+				padding: 0.65rem 1rem 0.5rem;
+				text-align: center;
+			}
+			.cdpaw-info table.hotel-info tbody th,
+			.cdpaw-info table.hotel-info thead th:first-of-type {
+				background: #e6e6e6;
+				border-right: 1px solid #cfcfcf;
+				position: sticky;
+				left: 0;
+				z-index: 5;
+			}
+			.cdpaw-info table.hotel-info thead th:last-of-type,
+			.cdpaw-info table.hotel-info tbody tr > td:last-of-type {
+				background: #e6e6e6;
+				border-left: 1px solid #cfcfcf;
+				position: sticky;
+				right: 0;
+				z-index: 10;
+			}
+			.cdpaw-info table.hotel-info a.reservation-btn {
+				background: #0568d6;
+				color: #fff;
+				text-decoration: none;
+				border-radius: 4px;
+				padding: 4px 12px;
+			}
+			.cdpaw-info table.hotel-info a.reservation-btn:hover {
+				background: #035bbd;
+			}
+			.cdpaw-info table.hotel-info thead th,
+			.cdpaw-info table.registration-pricing thead th {
+				border-bottom: 1px solid #7f7f7f;
+				font-size: 0.93rem;
+			}
+		</style>
+	</head>
+
+	<body leftMargin="0" background="/nwscwi/background-white.gif" topMargin="0" marginheight="0" marginwidth="0">
+
+		
+<table cellspacing="0" cellpadding="0" width="100%" border="0" background="/nwscwi/topbanner.jpg" >
+	<tbody>
+		<tr>
+			<td align="right" height="19">
+				<a href="#contents"><img height="1" alt="skip navigation links" src="/nwscwi/skipgraphic.gif" width="1" border="0"></a>
+				<a href="https://www.weather.gov/" class="homepagelinks"><span class="nwslink">www.weather.gov</span></a>&nbsp;
+			</td>
+		</tr>
+	</tbody>
+</table>
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+	<tbody>
+		<tr>
+			<td rowspan="2">
+				<a href="https://www.noaa.gov/">
+				<img height="78" alt="NOAA logo - Click to go to the NOAA home page" src="/nwscwi/noaaleft.jpg" width="85" border="0"></a>
+			</td>
+			<td align="left">
+				<img height="20" alt="National Weather Service" src="/nwscwi/nws_title.jpg" width="500" border="0">
+			</td>
+			<td rowspan="2" width="100%" background="/nwscwi/ncep_bkgrnd.jpg">&nbsp;</td>
+			<td rowspan="2" align="right">
+				<a href="https://www.weather.gov/"><img height="78" alt="NWS logo - Click to go to the NWS home page" src="/nwscwi/nwsright.jpg" width="85" border="0"></a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<img height="58" alt="Climate Prediction Center" src="/nwscwi/cpc.jpg" width="500" border="0">
+			</td>
+		</tr>
+	</tbody>
+</table>
+<table cellspacing="0" cellpadding="0" width="100%" background="/nwscwi/navbkgrnd.gif" border="0">
+	<tbody>
+		<tr>
+			<td align="left" width="135">
+				<img height="23" alt="" src="/nwscwi/navbarleft.jpg" width="94" border="0">
+			</td>
+			<td class="nav" align="center" width="10%">
+				<a href="/" class="menu" title="to the Climate Prediction Center home page">Home</a>
+			</td>
+			<td class="nav" align="center" width="10%">
+				<a href="/products/site_index.shtml" class="menu" title="to site map">Site Map</a>
+			</td> 
+			<td class="nav" align="right" width="10%">
+				<a href="https://www.nws.noaa.gov/pa/" class="menu" title="to National Weather Service news page">News</a>
+			</td>
+			<td class="nav" align="right" width="19%">
+				<a href="https://www.weather.gov/organization.php" class="menu">Organization</a>
+			</td>
+			<td class="searchinput" align="right" width="30%">
+				<form method="get" action="https://search.usa.gov/search" style="margin-bottom:0; margin-top:0;">
+					<label for="search"><span class="yellow">Search</span>&nbsp;&nbsp;</label>
+					<input type="hidden" name="affiliate" value="nws.noaa.gov" />
+					<input type="hidden" name="v:project" value="firstgov" />
+					<input name="query" type="text" value="" size="20" maxlength="256" id="Search" />
+					<input type="submit" value="Go" />
+				</form>
+			</td>
+			<td align="right">
+				<img height="23" alt="" src="/nwscwi/navbarendcap.jpg" width="24" border="0">
+			</td>
+		</tr>
+	</tbody>
+</table>
+		<table cellSpacing="0" cellPadding="1" width="100%" border="0">
+			<tbody>
+				<tr vAlign="top">
+					<td width="135"><br>
+						<table cellSpacing="0" cellPadding="0" width="135" border="0">
+							<tbody>
+								<!-- 	Climate Prediction Search Box
+	Programmer: Jonathan Hoopingarner
+	
+	RZDM:
+-->
+
+<tr>
+	<td class="searchinput" align="left">
+		<form action="https://www.firstgov.gov/fgsearch/index.jsp" name="query">
+			<label for="search"><span class="yellow">Search the EPD</span></label>
+			<input type="hidden" name="parsed" value="true">
+			<input type="hidden" name="rn" value="3">
+			<input type="hidden" name="in0" value="domain">
+			<input type="hidden" name="dom0" value="www.cpc.ncep.noaa.gov">
+			<input type="text" name="mw0" id="search"  size="10" maxLength="256" value="Search">&nbsp;
+			<input type="submit" name="Go2" value="Go">
+		</form>
+	</td>
+</tr><tr>
+	<td class="white" colSpan="2">
+		<font color="#F0E68C">About Us</font>
+		<ul style="list-style-type: none; margin: 0;">
+			<li style="margin-left: -25px;"><a href="/information/who_we_are/mission.shtml" class="menu">Vision &amp; Mission</a></li>
+			<li style="margin-left: -25px;"><a href="/information/who_we_are/" class="menu">Who We Are</a></li>
+		</ul>
+		<br>
+	</td>
+</tr><tr>
+	<td class="white" colSpan="2">
+		<font color="#F0E68C">Contact Us</font>
+		<ul style="list-style-type: none; margin: 0;">
+			<!--<li style="margin-left: -25px;"><a href="/information/personnel/contacts.shtml" class="menu">CPC Information</a></li>-->
+			<li style="margin-left: -25px;"><a href="/comment-form.php" class="menu">Contact Us</a></li>
+		</ul>
+		<br>
+	</td>
+</tr><tr>
+	<td align='center' class='white' id='menuitem'><br>
+		<a href='https://www.firstgov.gov/'><img src='https://www.cpc.ncep.noaa.gov/nwscwi/firstgov_logo_color_110w.gif' alt="FirstGov.gov is the U.S. Government's official Web portal to all Federal, state, and local government Web resources and services" width='110' height='30' border='0'></a><br>
+	</td>
+</tr>							</tbody>
+						</table>
+					</td>
+					<td vAlign="top" width="100%">
+						<table border="0" cellPadding="2" cellSpacing="0" style="max-width:1000px;">
+							<tbody>
+								<tr>
+									<td>
+										<font face="Verdana,arial,serif" size="2">
+										<a href="/" class="homepagelinks"><b>HOME</b></a>&gt;
+										<a href="/products/outreach/" class="homepagelinks">Outreach </a>&gt;
+										Climate Diagnostics Prediction &amp; Applications Workshop										</font>
+										<br>
+									</td>
+								</tr>
+								<tr><td>&nbsp;</td></tr>
+								<tr>
+									<td vAlign="top" align="center" colspan="1">
+
+										<h1>NOAA's 50th Climate Diagnostics <br>Prediction &amp; Applications Workshop</h1>
+
+										<h2 style="color:red;font-size:1.25rem;">College Park, Maryland, USA<br>1&ndash;4 September 2026</h2>
+
+									</td>
+								</tr>
+								<tr>
+									<td>
+
+
+										<!--- Begin CDPW Info -->
+										<div class="cdpaw-info">
+										<!--- -->
+											<p class="skip-links">Skip to: 
+												<!--<a href="#cdpaw-agenda">Agenda</a> | --><a href="#cdpaw-presentations">Presentations</a> | <a href="#cdpaw-registration">Registration</a> | 
+                        <a href="#cdpaw-transportation">Transportation</a> | 
+                        <a href="#cdpaw-hotel-info">Hotel Information</a> | 
+                        <a href="#cdpaw-announcement">Announcement</a> | <a href="#cdpaw-abstracts">Abstract Submissions</a></p>
+										<!--- -->
+												
+												<div id="cdpaw-presentations">
+
+	<h3>Presentations</h3>
+
+  <p>Access files of CDPAW presentations from the <a href="presentations/">online version</a> of the workshop agenda.</p>
+
+  <a href="presentations/" class="abstract-form-button">View Presentations</a>
+ 
+  <p><b>PDF version:</b> <a href="programs/2026-cdpaw-agenda-082926.pdf">Workshop Agenda</a> <i style="color:#63686b;font-size:85%;">(Updated 8/29/26 10:54 am)</i><img src="/images/pdficon.png" style="margin-left:2px;margin-top:1px;vertical-align:text-top;height:17px;width:auto;" /></p> 
+
+	<!--
+	<p><a href="sessions/oral.php">Oral Session Agenda</a></p>
+
+	<p><a href="sessions/poster.php">Poster Session Agenda</a></p>
+
+
+	<h4 style="margin-top:2em;margin-bottom:0;">Transportation Information</h4>
+
+	<p style="margin-top:0.5em;"><a href="cdpw47-shuttle-service.pdf">Salt Lake Express shuttle service<img src="/images/pdficon.png" style="margin-left:2px;vertical-align:text-bottom;height:17px;width:auto;" /></a></p>
+	-->
+</div>
+<div id="cdpaw-registration">
+
+	<h3>Registration</h3>
+
+	
+	<p>Registration information can be found on the following page:</p>
+
+  
+  	  <p><a class="registration-form-button disabled" target="_blank">50th CDPAW Registration Closed</a></p>
+
+
+	<p><a class="isDisabled">Pre-order Lunch:</a> Order your lunches ahead of time from the NCWCP Kloud Cafe. We highly encourage you to order your lunches	ahead of time to beat the lines and avoid the hassle. <strong>Order by Monday 8/31</strong>. These boxed lunches are available for Tuesday, Wednesday, and Thursday	and will be delivered outside the auditorium.</p>
+
+	
+
+</div>
+<div id="cdpw-transportation">
+
+  <h3>Transportation</h3>
+    <p>CDPAW will be held in the large auditorium on the first floor of the NOAA Center for Weather and Climate Prediction (NCWCP) building.</p>
+
+    <p><b>NCWCP Address </b></br>
+    5830 University Research Court</br>
+    College Park, Maryland  20737</p>
+
+    <h4>Driving Directions</h4>
+    <ul>
+      <li><a href="http://goo.gl/maps/w1wKP">From Silver Spring, MD </a></li>
+      <li><a href="http://goo.gl/maps/dvOMl">From Reagan National Airport </a></li>
+      <li><a href="http://goo.gl/maps/qdApw">From Baltimore-Washington International Airport  </a></li>
+      <li><a href="http://goo.gl/maps/aQv6W">From Dulles Airport </a></li>
+    </ul>
+
+    <h4>Mass Transit</h4>
+    <ul>
+      <li><a href="https://www.wmata.com/">Metro</a> - the Green and Yellow metro lines stop at the College Park/University of Maryland Station. It is a 15-20 minute walk (to the east down River Road) 
+      from the station to the NCWCP building, or a UM Shuttle is available at peak times. </li>
+      <li><a href="https://transportation.umd.edu/sites/default/files/2026-05/104_CPM-summer.pdf">UM Shuttle bus 104</a> &amp; 
+      <a href="https://transportation.umd.edu/sites/default/files/2026-05/104_CPM-summer.pdf">Route by ID</a> - University shuttle can be used without ID (stops at the College Park Metro station - Bay D, the Hotel at UMD on Baltimore Avenue & Campus Drive, and NCWCP)
+      <ul>
+        <li><a href="docs/umd-shuttle-104-stops-to-noaa.pdf">Map of shuttle stops from The Hotel to the NOAA NCWCP building and back</a><img src="/images/pdficon.png" style="margin-left:2px;vertical-align:text-bottom;height:17px;width:auto;" /></li>
+      </ul></li>
+    </ul>
+    
+    <h4>Upon Arrival</h4>
+    <ul>
+      <li>If driving: please enter through the security gate using the right-most lane closest to the guard house and be prepared to show a form of identification to the guard. Proceed to the undercover parking garage (see map below). Parking is free.</li>
+      <li>Use the visitor entrance in the front of the building</li>
+      <li>Proceed to the right immediately after entering the building to access the auditorium and conference rooms location. Signage will be displayed. No need to register with the guards.</li>
+    </ul>
+
+    <div style="margin-top:0.5rem;margin-bottom:2.5rem;text-align:center;">
+      <a href="images/ParkingAtNCWCP.jpg"><img src="images/ParkingAtNCWCP.jpg" style="border:2px solid #0f268a;cursor:zoom-in;margin:0 auto;max-width:600px;height:auto;" title="Click to view larger" /></a>
+    </div>
+
+ <h3>Local Restaurant Options</h3>
+  <ul>
+    <li><a href="https://www.wholefoodsmarket.com/stores/riverdalepark?utm_source=google&utm_medium=organic&utm_campaign=listings">Whole Foods Market:</a> 6621-B Baltimore Ave, Riverdale, MD 20737</li>
+    <li><a href="http://www.denizensbrewingco.com/">Denizens Brewing Co: </a> 4550 Van Buren St, Riverdale, MD 20737, located by Whole Foods</li>
+    <li><a href="https://burtonsgrill.com/locations/md/riverdale-park/">Burtons Grill:</a> 4440 Van Buren St, Riverdale Park, MD 20737, located by Whole Foods</li>
+    <li><a href="http://www.franklinsbrewery.com/">Franklins Brewery:</a> 5123 Baltimore Ave, Hyattsville, MD 20781 </li>
+    <li><a href="https://iron-rooster.com/">Iron Rooster:</a> Located in the lobby of The Hotel at UMD</li>
+	<li><a href="http://gmxumd.com/?utm_source=googlemybusiness">GrillMarX:</a> Located in the lobby of The Hotel at UMD</li>
+    <li><a href="https://www.busboysandpoets.com/locations/?location=hyattsville&venue=hyattsville">Busboys and Poets:</a> 5331 Baltimore Ave, Hyattsville, Maryland 20781</li>
+    <li><a href="https://www.spice-6.com/">Spice 6 Modern Indian:</a> 5501 Baltimore Ave, Hyattsville, MD 20781</li>
+    <li><a href="https://aztecarestaurantcantinamd.com/">Azteca Cantina:</a> 9505 Baltimore Ave, College Park, MD 20740</li>
+    <li><a href="https://collegepark.life/listing-category/eat-drink/restaurant/">College Park Life Restaurant List</a></li>
+  </ul>
+</div><div id="cdpw-hotel-info">
+
+	<h3>Hotel Information</h3>
+	<p style="color:#747474;margin:1.25rem 0 0;">Scroll horizontally to view additional information for each hotel.</p>
+  <div class="hotel-table">
+		<table class="hotel-info">
+			<thead>
+				<tr>
+					<th>Hotel Name</th>
+					<th>Room Charge (per night)</th>
+					<th>Conference Code</th>
+					<th>Cancellation Policy</th>
+					<th>Reservation Block Released</th>
+					<th>Availability</th>
+					<th>Distance and Directions</th>
+					<th>Contact Information</th>
+					<th>Link</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>The Hotel at the UMD</th>
+					<td>$169</td>
+					<td>NOAA Climate Workshop Room Block</td>
+					<td>24 hours before arrival</td>
+					<td> August 1, 2026</td>
+					<td>Aug 31, Sep 1, 2, 3, 4</td>
+					<td><a href="https://maps.app.goo.gl/TK8q94WpfCzeQK8QA">2 miles away, 1 block from shuttle stop</a></td>
+					<td>301-277-7777</td>
+					<td><a href="https://reservations.travelclick.com/107316?groupID=5301973" class="reservation-btn">Reservation</a></td>
+				</tr>
+				<tr>
+					<th>Cambria College Park</th>
+					<td>$159</td>
+					<td>NOAA Climate Workshop</td>
+					<td>24 hours before arrival</td>
+					<td>August 7, 2026</td>
+					<td>Aug 31, Sep 1, 2, 3, 4</td>
+					<td><a href="https://www.cambriacollegepark.com/">2.4 miles away, 5 blocks from shuttle stop</a></td>
+					<td>301-595-2600 </td>
+					<td><a href="https://www.choicehotels.com/reservations/groups/MQ93H1" class="reservation-btn">Reservation</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- end div.hotel-table container -->
+
+  <h4>Additional Hotels</h4>
+  <p>Other Hotels nearby (please note there are no CDPAW roomblocks at these hotels).</p>
+  <ul>
+    <li><a href="https://www.ihg.com/holidayinn/hotels/us/en/college-park/wascb/hoteldetail">Holiday Inn College Park</a></li>
+    <li><a href="https://www.marriott.com/en-us/hotels/wasgl-residence-inn-greenbelt/overview/">Residence Inn Greenbelt</a></li>
+    <li><a href="https://www.hilton.com/en/hotels/dcagbgi-hilton-garden-inn-washington-dc-greenbelt/">Hilton Garden Inn Greenbelt </a></li>
+    <li><a href="http://choicehotels.com/maryland/college-park/comfort-inn-hotels/md611">Comfort Inn &amp; Suites College Park </a></li>
+    <li><a href="http://marriott.com/en-us/hotels/wasum-college-park-marriott-hotel-and-conference-center/overview/">College Park Marriott Hotel &amp; Conference Center</a></li>
+  </ul>
+ 
+</div>
+<div id="cdpw-announcement">
+
+<h3>Workshop Announcement</h3>
+
+<p>Dear Colleagues,</p> 
+<p>Please <b>SAVE-THE-DATE</b> for NOAA's 50th Climate Diagnostics Prediction and Applications Workshop (CDPAW). The workshop will be held at the NOAA Center for Weather and Climate Prediction (NCWCP) in <b>College Park, Maryland on September 1&ndash;4, 2026</b>. The workshop will be jointly hosted by the University of Maryland Earth System Science Interdisciplinary Center (ESSIC) and is co-sponsored by the Climate Prediction Center (CPC) of the National Centers for Environmental Prediction (NCEP) within the National Weather Service (NWS). This workshop marks the official joining of the Climate Diagnostics and Prediction Workshop (CDPW) and the Climate Prediction Applications Science Workshop (CPASW).</p> 
+
+<p>The workshop will feature oral presentations, invited speakers, panel discussions, and poster sessions.</p> 
+<ul>
+<li><b>When</b>: September 1&ndash;4, 2026 </li>
+<li><b>Where</b>: College Park, Maryland</li>
+<li><b>Abstract deadline</b>: June 22, 2026 (Submit your abstract at the bottom of the webpage)</li>
+</ul>
+<p>The workshop will focus on four major themes including:</p> 
+
+<ol>
+  <li><b>Emerging Technologies for Prediction of Subseasonal-to-Seasonal (S2S) Climate</b>: Advances in S2S prediction of precipitation, temperature, and high-impact climate and weather extremes. Emerging technologies include data-driven AI/ML prediction systems, weather regimes, forecasts of opportunity, new dynamical forecast systems, multi-model ensembles, post-processing, and hybrid statistical-dynamical methods. High-impact climate and weather extremes include drought, flooding, precipitation extremes, heatwaves, cold spells, severe weather, tropical cyclones, and wildfires. Contributions that verify impact-based dynamical and statistical forecasts and provide process-level diagnostics, such as investigating sources of predictability, including large-scale modes of S2S variability (e.g., ENSO, MJO, QBO), ocean–atmosphere–land interactions, and atmospheric teleconnections, are encouraged. </li>
+
+  <li><b>Advances in Monitoring and Diagnostics of S2S Climate</b>: Topics include advances in monitoring systems, tools, and methodologies (e.g., reanalyses) for key modes of S2S climate variability (e.g., ENSO) and high-impact hazards (e.g., drought monitoring); newly developed indices for characterizing these S2S variability and hazards; and recent progress in scientific understanding of these phenomena and their underlying processes, including through attribution diagnostics.</li>
+
+  <li><b>Applications of S2S climate information in Impact-based Decision Support Services (IDSS)</b>:  Use, evaluation, and tailoring of S2S climate data, forecasts, and knowledge to support actionable decision-making. Topics include applications of dynamical and statistical forecasts to the development of decision-relevant products, stakeholder engagement and partnerships, coproduction, and the delivery of impact-based services that address societal, economic, and environmental challenges.</li>
+
+  <li><b>Mid-Atlantic Regional Climate Analysis, Applications, and Services</b>:  Topics include advances in S2S climate analysis, monitoring, and prediction and in climate applications and services specific to the Mid-Atlantic.</li>
+</ol>
+
+<p>A <b>special session celebrating the 50-year legacy of NOAA’s Climate Workshop / CDPW</b>, featuring invited and contributed presentations on the history of S2S climate research, operations, and services at the Climate Prediction Center (CPC), the National Weather Service (NWS), and across the broader community; recognizing key achievements; highlighting major milestones, long-term impacts, and future vision.</p>
+
+<p>Thank you,</p>
+
+<p>The CDPAW 2026 Planning Committee</p>
+</div><div id="abstracts">
+
+	<h3>Abstract Submissions</h3>
+
+    <!--
+	 <p>Click the button below to submit an abstract for the workshop. You may also resubmit a previously submitted abstract. If you have any difficulties, or if you would like to delete a previous submission, please send an email to Hailan Wang	(<a href="mailto:hailan.wang@noaa.gov?cc=dan.collins@noaa.gov&subject=CDPW50%20Abstract%20Inquiry">hailan.wang[at]noaa.gov</a>) or
+	Dan Collins (<a href="mailto:dan.collins@noaa.gov?cc=dan.collins@noaa.gov&subject=CDPW50%20Abstract%20Inquiry">dan.collins[at]noaa.gov</a>) or
+  Jenna Meyers (<a href="mailto:jenna.meyers@noaa.gov?cc=jenna.meyers@noaa.gov&subject=CDPW50%20Abstract%20Inquiry">jenna.meyers[at]noaa.gov</a>).</p> 
+-->
+	    <!-- If custom form -->
+	  <!--<a href="../abstracts/" class="abstract-form-button">Submit an Abstract</a>-->
+
+	  <!-- If Google form -->
+    <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLScjHxlJlG6zsIWO9vBy6ibP2nXpXK4hK_i0FEuZwzdqT-yeQQ/viewform" class="abstract-form-button">Submit an Abstract</a> 
+    -->
+
+
+  	<!--<p style="color:#c00;font-weight:bold;">
+		Please email your abstract to Hailan Wang		(<a href="mailto:hailan.wang@noaa.gov?cc=dan.collins@noaa.gov&subject=CDPW50%20Abstract%20Inquiry">hailan.wang[at]noaa.gov</a>) or
+		Dan Collins (<a href="mailto:dan.collins@noaa.gov?cc=hailan.wang@noaa.gov&subject=CDPW50%20Abstract%20Inquiry">dan.collins[at]noaa.gov</a>).-->
+
+	<!--<p style="color:#c00;font-weight:bold;">
+		The abstract submission form will be available soon. In the meantime, please email your abstract to Hailan Wang		(<a href="mailto:hailan.wang@noaa.gov?cc=dan.collins@noaa.gov&subject=CDPW50%20Abstract%20Inquiry">hailan.wang[at]noaa.gov</a>) or
+		Dan Collins (<a href="mailto:dan.collins@noaa.gov?cc=hailan.wang@noaa.gov&subject=CDPW50%20Abstract%20Inquiry">dan.collins[at]noaa.gov</a>).
+	</p>-->
+
+
+
+
+  	<!-- <p>The abstract submission form will be available soon. If you have any questions or concerns, please email Hailan Wang	(<a href="mailto:hailan.wang@noaa.gov?cc=dan.collins@noaa.gov&subject=CDPAW50%20Abstract%20Inquiry">hailan.wang[at]noaa.gov</a>) or
+	Dan Collins (<a href="mailto:dan.collins@noaa.gov?cc=hailan.wang@noaa.gov&subject=CDPAW50%20Abstract%20Inquiry">dan.collins[at]noaa.gov</a>).
+</p> -->
+
+
+
+
+		<a class="abstract-form-button disabled">Abstract Submissions Closed</a>
+  <p><b>The submission deadline was Monday, June 22, 2026.</b></p>
+
+
+
+	<p>To sign up for or unsubscribe from Climate Diagnostics Prediction Workshop (CDPAW) news, <a href="https://www.lstsrv.ncep.noaa.gov/mailman/listinfo/ncep.list.cpc-cdworkshop">visit the CDPAW mailing list</a>.</p>
+
+</div>
+
+										</div><!--- End CDPAW Info -->
+
+									</td>
+								<tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- -->
+	</body>
+
+	<footer>
+		<table width="100%">
+			<tbody>
+				<tr>
+					<td width="135">
+					</td>
+					<td>
+						<!-- 	Climate Prediction General Footer 01
+	Programmer: Jonathan Hoopingarner
+	
+	RZDM:
+-->
+
+<table cellSpacing="0" cellPadding="0" width="96%" border="0" align="center">
+	<tbody>
+		<tr>
+			<td colspan="3">
+				<hr>
+			</td>
+		</tr>
+		<tr vAlign="top">
+			<td class="gray">
+				<a href="https://www.noaa.gov/" class="homepagelinks">
+				<span class="gray">NOAA/</span></a>
+				<a href="https://www.weather.gov/" class="homepagelinks">
+				<span class="gray">National Weather Service</span></a><br>
+				<a href="https://www.weather.gov/ncep/" class="homepagelinks">
+				<span class="gray">National Centers for Environmental Prediction</span></a><br>
+				Climate Prediction Center<br>
+5830 University Research Court<br>
+Riverdale Park, MD 20737<br>				Page Author:<a href="https://www.cpc.ncep.noaa.gov/comment-form.html" class="homepagelinks">
+				<span class="gray"> Climate Prediction Center Internet Team</span></a><br>
+				Page last modified: 			</td>
+			<td>
+				<a href="https://weather.gov/disclaimer.php" class="homepagelinks">
+				<span class="gray">Disclaimer</span></a><br>
+				<a href="https://www.noaa.gov/information-technology" class="homepagelinks">
+				<span class="gray">Information Quality</span></a><br>
+				<a href="https://www.weather.gov/credits.php" class="homepagelinks">
+				<span class="gray">Credits</span></a><br>
+				<a href="https://www.weather.gov/glossary/" class="homepagelinks">
+				<span class="gray">Glossary</span></a><br>
+			</td>
+			<td align="right"><a href="https://weather.gov/privacy.php" class="homepagelinks">
+				<span class="gray">Privacy Policy</span></a><br>
+				<a href="https://www.foia.gov/" class="homepagelinks">
+				<span class="gray">Freedom of Information Act (FOIA)</span></a><br>
+				<a href="https://www.weather.gov/admin.php" class="homepagelinks">
+				<span class="gray">About Us</span></a><br>
+				<a href="https://www.weather.gov/careers.php" class="homepagelinks">
+				<span class="gray">Career Opportunities</span></a><br>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br><br>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</footer>
+
+</html>
