@@ -320,6 +320,7 @@
         <div class="left-panel">
             <div id="loading" class="loading" style="display:none;">Loading events...</div>
             <div id="error" class="error" style="display:none;"></div>
+            <div id="feedStatus" role="status" style="padding:14px;margin-bottom:14px;background:#fff4d6;color:#302200;border-radius:8px;">Checking source freshness…</div>
             <div id="eventsContainer"></div>
         </div>
 
@@ -338,6 +339,21 @@
         const TRACKER_FILE = 'continuum/event_tracker.json';
         const MANIFOLD_FILE = 'continuum/output/volcanic_manifold_analysis.json';
         const LIVE_FEED_FILE = './public/data/live.json';
+        const EVIDENCE_MAX_AGE_MS = 2 * 60 * 60 * 1000;
+        function predictionEvidenceTime(event) {
+            const dates = (event.confidence_history || []).map(h => Date.parse(h.timestamp_utc)).filter(Number.isFinite);
+            const explicit = Date.parse(event.evidence_updated_utc);
+            if (Number.isFinite(explicit)) dates.push(explicit);
+            return dates.length ? Math.max(...dates) : null;
+        }
+        function hasFreshEvidence(event, now = Date.now()) {
+            const time = predictionEvidenceTime(event);
+            return time !== null && time <= now + 5 * 60 * 1000 && now - time < EVIDENCE_MAX_AGE_MS;
+        }
+        function eventIsActive(event) {
+            return String(event.status || '').toLowerCase() === 'active' ||
+                String(event.official_alert?.status || '').toLowerCase() === 'active';
+        }
 
         // Location database with (name, lat, lon, country, state/region)
         const VOLCANOES = {
@@ -977,6 +993,8 @@
 
             try {
                 let allEvents = [];
+                let feedLoaded = false;
+                let snapshotTime = null;
 
                 // Prefer the same-origin feed produced and deployed by the pipeline.
                 try {
@@ -985,6 +1003,8 @@
                     const live = await liveResponse.json();
                     if (live.schema !== 'SEAM_LIVE_FEED_V1') throw new Error('Unsupported live-feed schema');
                     allEvents = Object.values(live.events || {});
+                    feedLoaded = true;
+                    snapshotTime = live.generated_utc;
                     addLog(`📡 Live feed: ${allEvents.length} events (${live.generated_utc})`, 'info');
                 } catch (e) {
                     console.warn('Published live feed unavailable; falling back to repository data', e);
@@ -992,7 +1012,7 @@
 
                 // Try tracker first - with cache busting to ensure fresh data
                 try {
-                    if (allEvents.length > 0) throw new Error('live feed already loaded');
+                    if (feedLoaded) throw new Error('published feed already loaded');
                     const trackerUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${TRACKER_FILE}?t=${Date.now()}`;
                     const trackerResponse = await fetch(trackerUrl, { cache: 'no-store' });
                     if (trackerResponse.ok) {
@@ -1000,6 +1020,7 @@
                         const trackerEvents = Object.values(tracker.events || {});
                         if (trackerEvents.length > 0) {
                             allEvents = trackerEvents;
+                            snapshotTime = tracker.generated_utc;
                             addLog(`📊 Loaded ${allEvents.length} events from tracker (30-day history)`, 'info');
                         }
                     }
@@ -1008,7 +1029,7 @@
                 }
 
                 // If tracker empty, use manifold - with cache busting to ensure fresh data
-                if (allEvents.length === 0) {
+                if (!feedLoaded && allEvents.length === 0) {
                     const manifoldUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${MANIFOLD_FILE}?t=${Date.now()}`;
                     const manifoldResponse = await fetch(manifoldUrl, { cache: 'no-store' });
                     if (!manifoldResponse.ok) throw new Error(`HTTP ${manifoldResponse.status}`);
@@ -1049,13 +1070,14 @@
                 }
 
                 if (allEvents.length === 0) {
-                    container.innerHTML = '<div class="empty-state">No events yet. Waiting for data...</div>';
+                    container.innerHTML = '<div class="empty-state">No events in the published feed.</div>';
+                    document.getElementById('feedStatus').textContent = 'No current prediction evidence is available. An empty feed does not establish that conditions are safe.';
                     loading.style.display = 'none';
                     return;
                 }
 
                 // Monitor all events 50%+ confidence with valid location
-                const AGE_THRESHOLD_MS = 2 * 60 * 60 * 1000; // 2 hours
+                const AGE_THRESHOLD_MS = EVIDENCE_MAX_AGE_MS;
                 const CONFIDENCE_THRESHOLD = 0.50; // Monitor 50%+ confidence (WARNING+)
                 const now = new Date();
 
@@ -1070,40 +1092,28 @@
                     return false;
                 });
 
-                // Filter active events: status=active OR official alert active, regardless of first_detected_utc age
-                const criticalEvents = allCritical.filter(evt => {
-                    const isStatusActive = evt.status === 'active';
-                    const hasOfficialAlert = evt.official_alert?.status === 'ACTIVE';
-                    return isStatusActive || hasOfficialAlert;
-                }).sort((a, b) => {
-                    const aConf = a.confidence_history[a.confidence_history.length - 1].seam_phi;
-                    const bConf = b.confidence_history[b.confidence_history.length - 1].seam_phi;
-                    return bConf - aConf;
+                // Active status alone cannot make an old prediction current.
+                const criticalEvents = allCritical.filter(evt => eventIsActive(evt) && hasFreshEvidence(evt, now.getTime())).sort((a, b) => {
+                    return b.confidence_history.at(-1).seam_phi - a.confidence_history.at(-1).seam_phi;
                 });
-
-                // Stale events: active but with no recent updates
-                const staleEvents = allCritical.filter(evt => {
-                    const history = evt.confidence_history || [];
-                    if (!history.length) return false;
-
-                    const latest = history[history.length - 1];
-                    const lastUpdate = new Date(latest.timestamp_utc);
-                    const ageMs = now - lastUpdate;
-
-                    const isActive = evt.status === 'active' || evt.official_alert?.status === 'ACTIVE';
-                    return isActive && ageMs >= AGE_THRESHOLD_MS;
-                });
+                const staleEvents = allCritical.filter(evt => eventIsActive(evt) && !hasFreshEvidence(evt, now.getTime()));
+                const evidenceDates = allEvents.map(predictionEvidenceTime).filter(t => t !== null);
+                const latestEvidence = evidenceDates.length ? new Date(Math.max(...evidenceDates)).toISOString() : 'unavailable';
+                document.getElementById('feedStatus').textContent =
+                    `${criticalEvents.length ? 'Recent prediction evidence available.' : 'Current forecast unavailable: no fresh prediction evidence.'} ` +
+                    `Last prediction evidence: ${latestEvidence}. Snapshot written: ${snapshotTime || 'unavailable'}. ` +
+                    'The refresh clock checks the file; it does not run the prediction engine.';
 
                 addLog(`⚠️ ${criticalEvents.length} active events | 📋 ${staleEvents.length} stale (no recent update)`, 'warning');
 
                 if (criticalEvents.length === 0 && staleEvents.length === 0) {
-                    container.innerHTML = '<div class="empty-state">No events. System nominal.</div>';
-                    addLog('✅ No active events detected', 'info');
+                    container.innerHTML = '<div class="empty-state">No recent qualifying prediction evidence is available.</div>';
+                    addLog('No recent qualifying prediction evidence', 'info');
                     loading.style.display = 'none';
                     return;
                 }
 
-                container.innerHTML = '';
+                container.innerHTML = criticalEvents.length ? '' : '<div class="empty-state">Previous records are historical, not current forecasts. See the history log.</div>';
 
                 // CLEAR LOG AND REBUILD
                 const logContainer = document.getElementById('logContainer');
@@ -1131,13 +1141,13 @@
 
                 // Add stale events to log panel (right column)
                 if (staleEvents.length > 0) {
-                    addLog(`📋 STALE (no recent update)`, 'info');
+                    addLog(`📋 HISTORICAL RECORDS — not current forecasts`, 'info');
                     staleEvents.forEach(evt => {
                         const lastConf = evt.confidence_history[evt.confidence_history.length - 1].seam_phi;
-                        const ageMs = now - new Date(evt.first_detected_utc);
+                        const ageMs = predictionEvidenceTime(evt) === null ? NaN : now - predictionEvidenceTime(evt);
                         const ageHours = Math.floor(ageMs / (60*60*1000));
                         const formattedId = evt.formatted_id || `${evt.signature_class.substring(0,3)}_${evt.location.best_effort_lat?.toFixed(0)}_${evt.location.best_effort_lon?.toFixed(0)}`;
-                        addLog(`  └─ ${formattedId} ${(lastConf*100).toFixed(0)}% (${ageHours}h)`, 'watch');
+                        addLog(`  └─ ${formattedId} ${(lastConf*100).toFixed(0)}% (evidence age: ${Number.isFinite(ageHours) ? ageHours + "h" : "unknown"})`, 'watch');
                     });
                 }
 
@@ -1148,6 +1158,8 @@
 
             } catch (err) {
                 console.error('loadAndRender error:', err);
+                container.innerHTML = '';
+                document.getElementById('feedStatus').textContent = 'Current feed unavailable. Previous cards have been cleared.';
                 error.style.display = 'block';
                 error.innerHTML = `<strong>Error loading events:</strong> ${err.message}<br/><small>${err.stack}</small>`;
                 loading.style.display = 'none';
