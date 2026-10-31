@@ -1,0 +1,689 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<link rel="stylesheet" type="text/css" href="styles/winMenus.css">
+	<link rel="stylesheet" type="text/css" href="styles/winStyle.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<META HTTP-EQUIV="Expires" CONTENT="Mon, 06 Jan 1990 00:00:01 GMT"> 
+	<META http-equiv="Refresh" content="1800">
+	<meta name="keywords" content= "noaa, profiler, cap, network, cooperative, agency, fsl, radar, wind, data">
+	<title>CAP Profilers</title>
+
+<script language="JavaScript" type="text/javascript">
+ArySiteName = new Array( "ABTQC", "ARMOK", "ASTOR", "AMDQC", "BMTKS", "BPATX", "BBHAR", "BLTMD", "BO2OR", "BOROR", "BBYCA", "KSCFL", "FCPFL", "MIDFL", "MLNFL", "SCPFL", "RCOFL", "CFDUT", "CHANC", "CCOCA", "CTNNC", "FHHAZ", "CFCCA", "CCRCA", "CD2OR", "CDNOR", "DR2OR", "EGBQC", "CARON", "EPSTX", "191OR", "FKSWA", "FPDUT", "GNQQC", "GLAMN", "GDLWA", "GV2OR", "GRICA", "HRWQC", "HGDUT", "HPLMD", "HSNTX", "IRVCA", "JD2OR", "JZISC", "ARVWI", "LMNOK", "LPTTX", "LWSDE", "197OR", "LVRCA", "200OR", "LNMCO", "LAXCA", "RESTX", "LBKTX", "DALNS", "MRONC", "MSYQC", "MCGQC", "ACVCA", "MDCKS", "MKROK", "MMRCA", "NPSCA", "MCGQU", "MOVCA", "352OR", "PQLMS", "NCKQC", "EWNNC", "RUTNJ", "OTHOR", "OFTNC", "OHKTN", "446OR", "ONTCA", "OVECA", "PNRMD", "PVLCO", "265WA", "PTLCA", "PTMCA", "PTSCA", "PRWWI", "PV2OR", "PVEOR", "RTPNC", "RTPTX", "204OR", "SACCA", "SBACA", "SEAWA", "360OR", "SUACA", "SLDUT", "STWMA", "SNYFL", "DGWUT", "TCYCA", "TDEOR", "PAPAZ", "TCICA", "VISCA", "WWLWA", "WLMQC", "WC2OR", "WCOOR", "WPTWA", "WTNTX", "WHPCA", "WFCQC", "WILDE", "YKMWA", "YUMAZ" );
+AryLngName = new Array( "ABITIBI, QC", "ARM SGP OK", "ASTORIA OR", "AUMOND, QC", "BEAUMONT KS", "BEAUMONT PORT ARTHUR, TX", "BEE BRANCH, AR", "BELTSVILLE MD", "BOARDMAN (SODAR), OR", "BOARDMAN, OR", "BODEGA BAY CA", "CAPE CANAVERAL (50 MHZ) FL", "CAPE CANAVERAL (FALSECAPE) FL", "CAPE CANAVERAL (MERRITT) FL", "CAPE CANAVERAL (MOSQUITOLAGOON", "CAPE CANAVERAL (SOUTHCAPE) FL", "CAPE CANAVERAL (TI-CO) FL", "CARR, UT", "CHARLOTTE NC", "CHICO CA", "CLAYTON NC", "CMO AZ", "COLFAX CA", "CONCORD, CA", "CONDON (SODAR), OR", "CONDON, OR", "DECKER RANCH AIRSTRIP (SODAR), OR", "EGBERT, QC", "EGBERT ON", "EL PASO TX", "FAIRBANKS, OR", "FORKS WA", "FRIES PARK, UT", "GANANOQUE, QC", "GLACIAL RIDGE MN", "GOLDENDALE, WA (SODAR)", "GRASS VALLEY, OR", "GRIZZLY ISLAND", "HARROW", "HORIZONTAL GRID UT", "HORN POINT LAB", "HOUSTON COASTAL CENTER TX", "IRVINE CA", "JOHN DAY (SODAR), OR", "JOHNS ISLAND, SC", "LAKELAND, WI", "LAMONT OK ARM", "LAPORTE TX", "LEWES, DE", "LEXINGTON. OR", "LIVERMORE CA", "LOCUST GROVE, OR", "LONGMONT CO", "LOS ANGELES, CA", "LUBBOCK, TX (SODAR)", "LUBBOCK TX (REESE CENTER)", "LUNENBURG NS", "MARION,NC", "MARKSTAY", "MCGILL, QC", "MCKINLEYVILLE", "MEDICINE LODGE KS", "MEEKER, OK", "MIRAMAR CA", "MONTEREY CA", "MONTREAL QU", "MORENO VALLEY CA", "MORO, OR", "MOSS POINT MS", "NEGROCREEK, QC", "NEW BERN NC", "NEW BRUNSWICK, NJ", "NORTH BEND, OR", "OLD FORT,NC", "OLD HICKORY TN", "OLEX, OR", "ONTARIO CA", "OROVILLE", "PINEY RUN, MD", "PLATTEVILLE (449)", "PLYMOUTH, WA", "POINT LOMA CA", "POINT MUGU, CA", "POINT SUR CA", "PRENTICE, WI", "PRINEVILLE (SODAR), OR", "PRINEVILLE, OR", "RESEARCH TRIANGLE PARK, NC", "ROUND TOP,TX", "RUFUS, OR", "SACRAMENTO CA", "SANTA BARBARA", "SEATTLE WA", "SHELL ROCK ROAD, OR", "SIMI VALLEY UPPER AIR ATMOSPHERIC PROFILER", "SL-TEST, UT", "STOW MA", "SYDNEY FL", "TOWER GRID UT", "TRACY CA", "TROUTDALE, WA", "TUCSON AZ", "TWITCHELL ISLAND", "VISALIA CA", "WALLA WALLA, WA (SODAR)", "WALSINGHAM", "WASCO (SODAR), OR", "WASCO, OR", "WESTPORT WA", "WHARTON TX", "WHITEMAN AIRPORT PACOIMA CA", "WILBERFORCE, QC", "WILMINGTON DE", "YAKIMA, WA (SODAR)", "YUMA AZ" );
+AryLon = new Array( "-81.57", "-97.50", "-123.88", "-75.9", "-96.54", "-94.10", "-92.379900", "-76.8785", "-119.811766", "-119.811766", "-123.07", "-80.70", "-80.60", "-80.70", "-80.70", "-80.60", "-80.80", "-112.88778683", "-80.93", "-121.91", "-78.46", "-110.30", "-120.94", "-122.06", "-120.1705", "-120.166450", "-120.659415", "-79.78", "-79.79", "-106.50", "-121.06780", "-124.40", "-112.775993", "-76.247", "-96.26", "-120.8486", "-120.744273", "-121.90", "-82.892", "-113.17", "-76.14", "-95.04", "-117.73", "-120.70", "-80.01", "-89.73", "-97.5", "-95.06", "-75.085278", "-119.49100", "-121.90", "-120.74730", "-105.12", "-118.44", "-102.0496", "-102.00", "-63.60", "-81.9609", "-80.54", "-73.94", "-124.11", "-98.93", "-96.90", "-117.10", "-121.76", "-73.57", "-117.22", "-120.78070", "-88.53", "-80.859", "-77.05", "-74.43", "-124.240000", "-82.161", "-86.56", "-120.15550", "-117.58", "-121.629200", "-79.0121", "-104.73", "-119.40590", "-117.25", "-119.10", "-121.89", "-90.28", "-120.900835", "-120.90", "-78.87", "-96.746", "-120.67987", "-121.42", "-119.85", "-122.26", "-121.32397", "-118.7975", "-113.4505005", "-71.30", "-82.23", "-113.17", "-121.44", "-122.39", "-111.34", "-121.650200", "-119.39", "-118.2617", "-80.572", "-120.67", "-120.67", "-124.11", "-96.15", "-118.41", "-78.21", "-75.52", "-120.5510", "-114.50" );
+AryLat = new Array( "49.88", "36.60", "46.16", "46.45", "37.63", "30.10", "35.427100", "39.0554", "45.816185", "45.816185", "38.32", "28.63", "28.60", "28.60", "28.70", "28.40", "28.50", "40.1808661667", "35.21", "39.69", "35.59", "31.60", "39.08", "37.99", "45.246239", "45.244780", "45.170202", "44.23", "44.23", "31.77", "45.63102", "47.97", "40.214569167", "44.408", "47.72", "45.8061", "45.372959", "38.10", "42.037", "40.20", "38.59", "29.39", "33.69", "45.72", "32.70", "45.92", "36.6", "29.67", "38.770278", "45.50483", "37.70", "45.57451", "40.16", "33.94", "33.61006", "33.50", "44.60", "35.6547", "46.54", "45.41", "40.97", "37.28", "35.50", "32.90", "36.69", "45.50", "33.87", "45.51586", "30.47", "44.362", "35.08", "40.46", "43.420000", "35.643", "36.25", "45.55357", "34.06", "39.511930", "39.7057", "40.18", "45.93761", "32.70", "34.10", "36.30", "45.54", "44.285791", "44.29", "35.88", "29.963", "45.63742", "38.30", "34.43", "47.69", "45.37397", "34.29111", "40.1350785", "42.50", "27.97", "40.20", "37.68", "45.55", "32.51", "38.096890", "36.31", "46.0949", "42.638", "45.59", "45.59", "46.91", "29.26", "34.26", "45.06", "39.73", "46.5725", "32.80" );
+AryElev = new Array( "207", "310", "3", "217", "478", "5", "232", "53", "112", "112", "12", "1", "3", "3", "5", "3", "5", "1319.5", "220", "41", "76", "1444", "644", "14", "887", "891", "795", "251", "252", "1160", "166", "92", "1468.9", "120", "349", "503", "697.1", "0", "191", "1299", "4", "5", "122", "67.2", "16", "497", "310", "8", "7", "706", "108", "456", "1517", "47", "1017", "1018", "34", "384", "248", "29", "56", "585", "275", "126", "51", "92", "452", "731", "9", "315", "3", "10", "5", "434", "178", "356", "280", "56", "763", "1503", "116", "23", "2", "10", "481", "959", "969", "164", "137", "432", "6", "4", "11", "827", "279", "1291.4", "91", "27", "1299", "61", "12", "578", "0", "81", "381", "200", "462", "462", "5", "52", "300", "385", "28", "329", "97" );
+AryType = new Array( "3", "1", "1", "3", "1", "1", "1", "1", "4", "1", "1", "3", "1", "1", "1", "1", "1", "2", "1", "1", "1", "1", "1", "1", "4", "1", "4", "3", "1", "1", "4", "1", "2", "3", "1", "4", "4", "1", "3", "2", "1", "1", "1", "4", "1", "1", "1", "1", "1", "4", "1", "4", "1", "1", "4", "1", "1", "1", "3", "3", "1", "1", "1", "1", "1", "1", "1", "4", "1", "3", "1", "1", "1", "1", "1", "4", "1", "1", "1", "1", "4", "1", "1", "1", "1", "4", "1", "1", "1", "4", "1", "1", "1", "4", "1", "2", "1", "1", "2", "1", "1", "1", "1", "1", "4", "3", "4", "1", "1", "1", "1", "3", "1", "4", "1" );
+AryState = new Array( "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER", "OPER" );
+ArySrcOrg = new Array( "OQNET", "ARM", "PSD", "OQNET", "ANL/ARM", "TNRCC", "PSD", "MDE", "ARL", "ARL", "PSD", "KSC-CCAFS", "KSC-CCAFS", "KSC-CCAFS", "KSC-CCAFS", "KSC-CCAFS", "KSC-CCAFS", "DGP", "NCDE-DENR", "PSD", "PSD", "EPG", "PSD", "PSD", "NREL", "PSD", "NREL", "OQNET", "EC-CARE", "TNRCC", "VAISALA", "PSD", "DGP", "OQNET", "UND", "ANL", "PNNL", "CARB", "OQNET", "DPG", "MDE", "MMS", "SCQ", "ND", "PSD", "PSD", "ARM", "TNRCC", "DNREC", "VAISALA", "BAAQMD", "VAISALA", "DETECT", "SCQ", "NCSU", "TTU", "EC", "PSD", "OQNET", "OQNET", "PSL", "ARM", "ARM", "SDAPCD", "NPS-DM", "MCGILL", "SCQ", "VAISALA", "PSD", "OQNET", "PSD", "RU/NJDEP", "PSD", "PSD", "PSD", "VAISALA", "SCQ", "PSD", "MDE", "PSD", "VAISALA", "SDAPCD", "NPS-NAVAIR", "PSD", "PSD", "ARL", "PSD", "EPA", "PSD", "VAISALA", "SMAQMD", "PSD", "UW/NWS", "VAISALA", "VCAPCD", "DGP", "MDOEPAAB", "PSD", "DPG", "SJV-APCD", "PSD", "PSD", "PSD", "SJV-APCD", "ANL", "OQNET", "ARL", "PSD", "PSD", "PSD", "SCQ", "OQNET", "DNREC", "ANL", "YPG" );
+AryLatestWind = new Array( "2017/08/31 00:00", "2006/04/27 14:00", "2026/10/31 05:00", "2017/02/20 08:00", "2006/04/27 14:00", "2015/02/06 15:00", "2015/11/09 20:00", "2026/10/14 10:00", "2017/03/06 15:30", "2017/02/21 23:00", "2026/10/31 11:00", "2013/03/20 20:00", "2013/03/22 06:30", "2013/03/22 11:45", "2013/02/04 14:30", "2013/03/22 11:45", "2013/03/22 11:45", "2023/10/24 14:00", "2017/11/15 15:00", "2018/06/05 16:00", "2020/04/21 12:00", "2006/11/29 20:00", "2015/06/24 23:00", "2011/03/22 20:00", "2017/03/06 15:15", "2017/02/21 23:00", "2017/04/07 16:30", "2016/10/08 15:00", "2014/07/18 17:30", "2019/07/30 23:00", "2017/08/17 22:10", "2026/10/31 11:00", "2026/10/31 03:00", "2016/02/05 02:00", "2015/03/03 06:00", "2017/03/06 15:15", "2017/03/06 15:00", "2005/12/31 21:00", "2020/07/24 21:00", "2026/10/31 11:00", "2026/10/31 11:00", "2018/08/07 22:30", "2016/04/28 19:00", "2017/01/27 20:45", "2015/11/05 17:00", "2019/10/29 17:00", "2011/02/24 22:00", "2024/08/01 17:00", "2018/05/14 17:00", "2017/08/17 16:20", "2011/03/11 22:00", "2017/08/22 17:00", "2015/09/14 22:55", "2020/01/02 22:00", "2012/09/22 12:30", "2016/03/07 15:30", "2015/11/15 10:00", "2014/10/27 15:00", "2020/09/22 01:00", "2014/08/23 14:00", "2026/03/30 15:00", "2005/11/16 18:00", "2007/07/14 09:00", "2014/04/04 18:00", "2025/08/21 13:00", "2010/05/28 19:00", "2014/10/28 13:00", "2017/12/15 22:20", "2015/11/08 13:00", "2017/02/21 19:00", "2015/11/04 13:00", "2025/05/10 02:00", "2026/10/31 11:00", "2014/10/29 16:00", "2013/08/06 13:00", "2017/12/15 22:50", "2014/07/25 06:00", "2026/10/31 11:00", "2026/10/31 11:00", "2024/10/23 17:00", "2017/12/15 22:20", "2010/04/14 19:00", "2018/10/04 21:00", "2025/08/21 13:00", "2019/10/30 14:00", "2017/03/06 15:30", "2017/02/21 23:00", "2018/01/03 06:00", "2013/10/23 17:00", "2017/12/15 22:40", "2016/06/09 17:00", "2026/10/31 11:00", "2019/04/16 19:00", "2017/12/15 22:10", "2023/05/09 11:00", "2020/07/23 22:00", "2011/09/07 07:00", "2015/11/07 12:00", "2026/10/31 03:00", "2017/08/30 19:00", "2019/08/14 18:00", "2011/01/31 20:00", "2026/10/31 07:00", "2020/09/22 00:00", "2017/03/06 15:15", "2017/02/21 23:00", "2017/03/06 15:30", "2017/02/21 21:00", "2013/11/13 16:00", "2013/10/23 12:00", "2013/02/12 18:00", "2020/09/18 14:00", "2011/09/20 12:30", "2017/05/15 04:15", "2003/11/19 13:30" );
+AryLatestRass = new Array( "Unavailable", "2006/05/04 03:05", "2026/10/31 07:00", "Unavailable", "2006/05/04 03:05", "Unavailable", "2015/11/09 20:00", "2026/06/12 21:00", "Unavailable", "2016/12/31 00:00", "2026/10/31 11:00", "Unavailable", "Unavailable", "Unavailable", "Unavailable", "Unavailable", "Unavailable", "2020/07/23 07:40", "2017/11/15 16:00", "2018/06/05 16:00", "2016/03/21 10:00", "Unavailable", "Unavailable", "Unavailable", "Unavailable", "2017/02/21 23:00", "Unavailable", "Unavailable", "Unavailable", "Unavailable", "Unavailable", "2026/10/31 06:00", "2020/03/09 17:50", "Unavailable", "Unavailable", "Unavailable", "Unavailable", "2005/12/31 21:00", "Unavailable", "2020/06/15 10:35", "2026/10/31 05:00", "2018/08/07 22:30", "2016/04/28 19:00", "Unavailable", "Unavailable", "2019/10/29 17:00", "2011/02/24 21:05", "Unavailable", "2018/05/14 17:00", "Unavailable", "2011/03/22 13:00", "Unavailable", "Unavailable", "2020/01/06 03:00", "Unavailable", "2016/03/07 15:00", "2015/11/15 10:00", "Unavailable", "Unavailable", "Unavailable", "2026/03/30 14:00", "2005/11/16 16:05", "2007/07/14 08:05", "2014/04/04 18:00", "2025/08/19 18:00", "2010/05/28 19:00", "2014/10/28 13:00", "Unavailable", "Unavailable", "Unavailable", "Unavailable", "2025/05/09 17:00", "2026/10/31 11:00", "Unavailable", "Unavailable", "Unavailable", "2014/07/25 06:00", "2026/10/31 07:00", "2026/07/27 18:00", "2024/10/23 11:00", "Unavailable", "2010/04/14 18:55", "2018/10/04 20:00", "2025/08/21 13:00", "2019/10/30 10:00", "Unavailable", "2017/02/21 23:00", "2018/01/03 06:00", "Unavailable", "Unavailable", "2016/06/08 18:00", "2026/10/31 11:00", "2019/04/16 19:00", "Unavailable", "2023/05/09 09:00", "2020/07/18 08:10", "2011/09/07 07:00", "2002/05/31 17:00", "2020/07/23 03:40", "2017/09/11 22:30", "2019/08/14 18:00", "Unavailable", "Unavailable", "2009/11/05 16:00", "Unavailable", "Unavailable", "Unavailable", "2017/02/21 23:00", "2002/03/27 17:00", "Unavailable", "2013/02/12 16:00", "Unavailable", "2011/09/20 14:00", "Unavailable", "2003/11/19 13:30" );
+AryOldestWind = new Array( "2014/01/16 19:00", "2004/06/09 21:00", "2004/06/09 23:00", "2013/10/19 00:00", "2001/07/05 21:00", "2005/07/06 21:00", "2015/10/14 23:00", "2005/06/16 08:00", "2015/10/15 01:00", "2015/10/14 18:00", "1996/11/20 01:00", "1993/01/01 00:00", "2002/05/24 01:45", "2002/05/05 15:30", "2002/06/20 01:30", "1999/01/01 00:45", "2003/03/09 01:45", "2018/12/24 01:20", "2001/12/03 01:30", "2000/06/20 23:00", "2012/12/14 00:30", "2002/07/14 08:00", "2008/12/12 12:00", "2009/12/12 17:00", "2015/11/18 01:40", "2015/10/14 23:00", "2015/11/20 10:00", "2013/10/23 00:00", "2003/08/08 22:30", "1999/06/24 17:00", "2016/12/04 03:50", "2015/12/02 20:00", "2018/04/29 04:40", "2013/12/17 07:00", "2004/12/08 22:00", "2016/04/01 04:15", "2015/12/01 09:15", "2005/09/14 21:00", "2013/11/20 20:00", "2003/01/12 16:30", "2012/06/27 12:00", "2008/03/13 12:00", "2008/09/30 20:00", "2015/12/14 15:15", "2014/08/26 05:00", "2019/08/09 20:00", "2004/11/02 19:00", "2005/05/10 20:30", "2014/03/16 07:30", "2015/10/26 19:00", "2000/07/28 19:00", "2015/10/26 19:00", "2015/09/01 14:15", "1997/10/21 16:00", "2011/07/12 10:00", "2004/11/25 11:30", "2002/08/06 09:00", "2013/08/28 00:00", "2013/10/23 00:00", "2013/10/23 00:00", "2015/12/02 20:00", "2004/07/13 13:00", "2005/07/27 19:00", "2000/05/02 13:00", "1999/12/09 20:00", "1999/08/01 05:00", "2002/08/13 10:00", "2016/01/05 06:20", "2014/08/26 05:00", "2013/10/23 00:00", "2013/07/15 05:00", "1998/06/03 07:00", "2015/10/30 20:00", "2013/08/28 23:00", "2013/07/15 05:00", "2015/10/26 16:10", "1997/10/21 07:00", "2018/03/27 20:00", "2005/06/06 00:00", "2019/08/19 22:00", "2016/01/14 17:40", "1997/12/01 09:00", "2014/08/10 04:00", "2008/11/01 00:00", "2019/08/09 19:00", "2015/10/16 08:30", "2015/08/14 22:00", "2013/09/12 08:30", "2013/08/28 00:00", "2016/01/21 19:00", "1999/12/29 08:00", "2017/09/28 20:00", "1996/12/14 08:30", "2016/12/04 17:20", "2014/04/09 09:00", "2019/06/14 10:50", "1998/08/31 06:00", "2002/05/23 16:00", "1999/08/01 04:30", "2000/07/28 19:00", "2015/10/04 16:00", "2008/07/24 04:00", "2019/08/09 19:00", "1999/12/17 18:00", "2016/04/01 04:15", "2013/11/20 19:00", "2015/12/07 22:45", "2015/10/04 14:00", "2000/10/30 19:00", "2013/08/28 00:00", "2008/09/30 20:00", "2013/11/25 22:00", "2008/08/08 15:30", "2016/04/01 04:15", "2002/07/11 04:00" );
+AryOldestRass = new Array( "Unavailable", "2004/06/09 20:05", "2004/06/09 23:00", "Unavailable", "2004/06/09 23:05", "Unavailable", "2015/10/14 23:00", "2008/05/21 01:15", "Unavailable", "2015/10/14 18:00", "2004/11/15 19:00", "Unavailable", "Unavailable", "Unavailable", "Unavailable", "Unavailable", "Unavailable", "2019/06/14 16:35", "2004/06/09 23:00", "2004/06/09 23:00", "2013/09/11 19:00", "Unavailable", "Unavailable", "Unavailable", "Unavailable", "2015/10/14 23:00", "Unavailable", "Unavailable", "Unavailable", "Unavailable", "Unavailable", "2015/12/02 20:00", "2019/06/14 21:40", "Unavailable", "Unavailable", "Unavailable", "Unavailable", "2005/09/13 09:00", "Unavailable", "2004/06/09 23:00", "2012/07/01 07:15", "2008/03/13 07:00", "2008/09/30 09:00", "Unavailable", "Unavailable", "2019/08/09 20:00", "2004/11/02 18:05", "Unavailable", "2014/03/16 14:00", "Unavailable", "2006/12/01 16:00", "Unavailable", "Unavailable", "2004/06/09 23:00", "Unavailable", "2004/11/25 00:00", "2004/06/09 23:00", "Unavailable", "Unavailable", "Unavailable", "2015/12/02 20:00", "2004/07/15 06:05", "2005/07/27 20:05", "2004/06/09 20:00", "2004/06/09 23:00", "2004/07/13 17:00", "2004/06/09 23:00", "Unavailable", "Unavailable", "Unavailable", "Unavailable", "2004/06/09 23:00", "2015/10/30 20:00", "Unavailable", "Unavailable", "Unavailable", "2004/06/09 22:00", "2018/03/27 20:00", "2008/07/08 23:30", "2019/08/19 23:00", "Unavailable", "2004/06/09 21:00", "2014/08/18 00:00", "2017/09/28 20:00", "2019/08/09 19:00", "Unavailable", "2015/08/15 01:00", "2013/09/13 20:00", "Unavailable", "Unavailable", "2004/06/09 23:05", "2017/09/28 20:00", "2004/06/09 23:00", "Unavailable", "2014/07/23 19:15", "2019/06/14 21:35", "2004/05/17 01:00", "2002/05/23 16:00", "2004/06/09 19:30", "2007/02/03 06:30", "2015/10/04 16:00", "Unavailable", "Unavailable", "2005/09/14 04:00", "Unavailable", "Unavailable", "Unavailable", "2015/10/04 16:00", "2000/10/30 18:00", "Unavailable", "2008/09/30 09:00", "Unavailable", "2008/08/08 05:30", "Unavailable", "2002/07/10 07:30" );
+	
+	function imgMap_OnMouseOver(site_id)
+	{
+		//alert("MouseOverEvent");
+		popupWidth = 300;
+		Xoffset=-300;   // modify these values to ...
+		Yoffset=20;    // change the popup position.
+		
+		var i = site_id;
+		var type = ""
+		if (AryType[i] == "1")
+			type = "BLP";
+		else if (AryType[i] == "2")
+			type = "UHF";
+		else if (AryType[i] == "3")
+			type = "VHF";
+		else type = "Unknown";
+		var rassLine = "";
+		if (AryLatestRass[i] != "Unavailable")
+			rassLine = "&nbsp;&nbsp;Latest RASS: "+AryLatestRass[i]+"<br>\n"
+		var msg = 
+                                 "Site Location: "+AryLngName[i]+"<br>\n"+
+   "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Site ID: "+ArySiteName[i]+"<br>\n"+
+                  "&nbsp;&nbsp;&nbsp;Radar Type: "+type+"<br>\n"+
+		                    "&nbsp;Lat/Lon/Elev: "+AryLat[i]+"/"+AryLon[i]+"/"+AryElev[i]+"m<br>\n"+
+		                    "&nbsp;Latest Winds: "+AryLatestWind[i]+"<br>\n"+
+		                                          rassLine+
+        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provider: "+ArySrcOrg[i]+"<br>\n";
+		//alert("ImgMap Mouse Over msg="+ msg);
+		popup(msg,"white",popupWidth);
+	}
+</script>
+	<STYLE TYPE="text/css">
+		#dek {POSITION:absolute;VISIBILITY:hidden;Z-INDEX:200;}
+		.popup{	font-family : "Courier New", Courier, monospace; font-size : 12px; }
+
+		.green{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: smaller;
+			color: #00FF00;
+			font-weight : bold;
+		}
+		.yellow{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: smaller;
+			color: #FFFF00;
+			font-weight : bold;
+		}
+		.cyan{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: smaller;
+			color: #00FFFF;
+			font-weight : bold;
+		}
+		.blue{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: smaller;
+			color: #0000FF;
+			font-weight : bold;
+		}
+		.red{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: smaller;
+			color: #FF0000;
+			font-weight : bold;
+		}
+	</STYLE>
+</head>
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<DIV id="dek">
+<SCRIPT TYPE="text/javascript">
+<!--
+	Xoffset=-100;    // modify these values to ...
+	Yoffset= 20;    // change the popup position.
+	var old,skn,iex=(document.all),yyy=-1000;
+	var ns4=document.layers
+	var ns6=document.getElementById&&!document.all
+	//var ns6=document.getElementById;
+	var ie4=document.all
+	if (ns4)
+		skn=document.dek
+	else if (ns6)
+		skn=document.getElementById("dek").style
+	else if (ie4)
+		skn=document.all.dek.style
+	if(ns4)
+		document.captureEvents(Event.MOUSEMOVE);
+	else
+	{
+		skn.visibility="visible"
+		skn.display="none"
+	}
+	document.onmousemove=get_mouse;
+	function popup(msg,bak,wid){
+		var content="<TABLE  WIDTH="+wid+" BORDER=1 BORDERCOLOR=black CELLPADDING=2 CELLSPACING=0 "+
+		"BGCOLOR="+bak+"><TD class=popup ALIGN=left>"+msg+"</TD></TABLE>";
+		yyy=Yoffset;
+		 if(ns4){skn.document.write(content);skn.document.close();skn.visibility="visible"}
+		 if(ns6){document.getElementById("dek").innerHTML=content;skn.display=''}
+		 if(ie4){document.all("dek").innerHTML=content;skn.display=''}
+	}
+	function get_mouse(e){
+		var x=(ns4||ns6)?e.pageX:event.x+document.body.scrollLeft;
+		skn.left=x+Xoffset;
+		var y=(ns4||ns6)?e.pageY:event.y+document.body.scrollTop;
+		skn.top=y+yyy;
+	}
+	function kill(){
+		yyy=-1000;
+		if(ns4){skn.visibility="hidden";}
+		else if (ns6||ie4)
+		skn.display="none"
+	}
+/*	function getlegend() {
+		setup='toolbar=no,location=no,directories=no,status=no,menubar=no,width=280,height=221'
+		setup += 'scrollbars=no,resizable=no'
+		pop = window.open ("","pop",setup)
+		pop.document.write('<head>');
+		pop.document.write('<Title>');
+		pop.document.write('Legend');
+		pop.document.write('</Title>');
+		pop.document.write('</head>');
+		pop.document.write('<body bgcolor=#FFFFFF>');
+		pop.document.write('<CENTER><img src="/images/net_now_legend.gif">');
+		pop.document.write('<FORM><input type="button" value="Close Window" onClick="window.close()"></form>');
+		pop.document.write('</CENTER></body>'); 
+	}
+	function getraoblegend() {
+		setup='toolbar=no,location=no,directories=no,status=no,menubar=no,width=280,height=241'
+		setup += 'scrollbars=no,resizable=no'
+		pop = window.open ("","pop",setup)
+		pop.document.write('<head>');
+		pop.document.write('<Title>');
+		pop.document.write('Legend');
+		pop.document.write('</Title>');
+		pop.document.write('</head>');
+		pop.document.write('<body bgcolor=#FFFFFF>');
+		pop.document.write('<CENTER><img src="/images/raobKey.gif">');
+		pop.document.write('<FORM><input type="button" value="Close Window" onClick="window.close()"></form>');
+		pop.document.write('</CENTER></body>'); 
+	 }
+*/
+//-->
+</SCRIPT>
+</DIV>
+
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" summary="">
+<tr>
+	<td valign="top"   background="images/madis.png" nowrap height="61" width="108">
+		<!--img src="images/madis.png" alt="MADIS Logo" border="0"-->&nbsp;
+	</td>
+	
+	<td valign="top" background="images/capLogo3.gif" nowrap height="61" width="387">
+		<!--img src="images/capLogo2.gif" alt="CAP Logo" border="0"-->&nbsp;
+	</td>
+	<td width="80%" valign="top">
+		<table width="100%" border="0" cellpadding="0" cellspacing="0" summary="">
+			<tr>
+				<td valign="middle" height="28" nowrap align="center">
+					<span style="font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+						font-weight: bold; font-size: 17px;">
+						Welcome to http://madis-data.noaa.gov/cap
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td height="33" bgcolor="#28648C">
+					<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" summary="">
+						<tr>
+							<td align="center">
+								<a name="home" id="home" href="/cap/index.jsp" class="mainmenu" 
+								title="CAP Home Page">CAP PROFILERS</a>&nbsp;</td>
+							<td align="center">
+								&nbsp;<a name="status" href="/cap/sysStatus.jsp" 
+								class="mainmenu" title="CAP Site Status">STATUS</a>&nbsp;</td>
+							<td align="center">
+								&nbsp;<a name="data" href="/cap/data.jsp" 
+								class="mainmenu" title="CAP Data Displays">DATA</a>&nbsp;</td>
+							<!--<td align="center">-->
+								<!--&nbsp;<a name="news" href="/cap/news.jsp" -->
+								<!--class="mainmenu" title="CAP News">NEWS</a>&nbsp;</td>-->
+							<!--<td align="center">-->
+								<!--&nbsp;<a name="forums" href="/cap/forums.jsp" -->
+								<!--class="mainmenu" title="CAP Operations & Maintenance Forums">FORUMS</a>&nbsp;</td>-->
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</td>
+	<td valign="top" background="images/capSlope.gif" height="61" nowrap width="26">
+		<!--img src="images/capSlope.gif" alt="CAP Slope" border="0"-->
+	</td>
+	<td background="images/capFiller2.gif" align="center" valign="top">
+		<table border="0" cellpadding="0" cellspacing="0" summary="">
+			<tr>
+				<td>
+					<a href="/cap/?print=0" title="Show Menus">
+						<img src="images/screenIcon.gif" alt="Menus On" border="0" vspace="5"></a>
+				</td>
+				<td>
+					<a href="/cap/?print=1" title="Hide Menus">
+						<img src="images/paperIcon.gif" alt="Menus Off" border="0"></a>
+				</td>
+			</tr>		
+		</table>
+	</td>
+</tr>
+<tr>
+	<td colspan="4" height="5" bgcolor="#28648C"></td>
+</tr>
+</table>
+
+	<table summary="" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+
+			<td NOWRAP valign="top" class="submenu">
+				<!------------- CAP Submenu Links ---------------------------------  -->
+				<table width="170" cellpadding=5 cellspacing=1 summary="">
+					<tr>
+						<td valign="top" class="submenu">
+							<span class="submenuhead">Profilers</span><br>
+							<a class="submenu" 
+								href="/cap/sysInfo.jsp?capInfoView=Location">Site Location Info</a><br>		
+							<a class="submenu" 
+								href="/cap/sysInfo.jsp?capInfoView=Beam%2FMode+Info">Beam Mode Info</a><br>
+							<a class="submenu" 
+								href="/cap/sysStatus.jsp?capStatusView=Status+Map">Site Location Maps</a><br>		
+							<hr>		
+							<a class="submenu" 
+								href="/cap/agencies.jsp">Contacts</a><br>		
+							<a class="submenu" 	
+								href="/cap/agencies.jsp">Participating Agencies</a><br>		
+							<hr>
+						</td>
+					</tr>
+				</table>
+
+				<!------------- Search Submenu Links ---------------------------------  -->
+				<table cellpadding=5 cellspacing=1 summary="" width="170">
+					<tr>
+						<td valign="bottom" class="submenu">
+							<span class="submenuhead">Search:</span>
+						</td>
+					</tr>
+					<tr>
+						<td valign="top" class="submenu">
+							<form action="/jse/jsp/search.jsp?oe=english" target="_blank">
+								<input name="q" type="Text" width="26" maxlength="150"><p>
+								<input type="submit">
+								<input name="eo" type="Hidden" value="english">
+							</form>
+							<hr>		
+						</td>
+					</tr>
+				</table>
+
+				<!------------- Links Submenu Links ---------------------------------  -->
+				<table cellpadding=5 cellspacing=1 summary="" width="170">
+					<tr>
+						<td valign="top" class="submenu">
+							<span class="submenuhead">NOAA / DOC Links:</span><br>
+							<a class="submenu" 
+								href="/cap/index.jsp" 
+								title="CAP Home" 
+								target="_self">CAP Home</a><br>		
+							<a class="submenu" 
+								href="http://madis.noaa.gov/" 
+								title="MADIS HOME" 
+								target="_self">MADIS HOME</a><br>		
+							<br>
+							<br>		
+							<a class="submenu" href="http://esrl.noaa.gov/gsd/" 
+								title="ESRL Global Systems Division" 
+								target="_self">GSD Web Site</a><br>
+							<a class="submenu" href="http://esrl.noaa.gov/" 
+								title="Earth System Research Laboratory" 
+								target="_self">ESRL Web Site</a><br><br>
+							<a class="submenu" 
+								href="http://nws.noaa.gov/"
+								title="National Weather Service" 
+								target="_self">NWS Web Site</a><br>
+							<a class="submenu" 
+								href="http://spc.noaa.gov/" 
+								target="_blank">Storm Prediction Center</a><br>
+							<a class="submenu" 
+								href="http://www.oar.noaa.gov/" 
+								title="Office of Atmospheric Research Web Site" 
+								target="_self">OAR's Web Site</a><br>		
+							<a class="submenu" 
+								href="http://www.noaa.gov/" 
+								title="National Oceanic & Atmospheric Administration Web Site" 
+								target="_self">NOAA's Web Site</a><br>		
+							<a class="submenu" 
+								href="http://www.commerce.gov/" 
+								title="Department of Commerce Web Site" 
+								target="_self">DOC's Web Site</a><br>		
+							<hr>
+						</td>
+					</tr>
+				</table>
+
+			</td>
+
+			<td valign="top" width="100%">
+					<table cellpadding="5" cellspacing="0" border="0" summary="" width="100%">
+						<tr><td>
+
+							<table summary="" width="100%">
+								<tr><td valign="top">
+							<P class="normalText" align="left">
+							Cooperative Agency Profilers (CAP) is a cooperative venture between GSD (formerly FSL) 
+							and many participating agencies enabling GSD to; acquire profiler and RASS
+							data in near real-time, apply GSD's data quality control algorithms,  
+							and make these value-added data available on the web and 
+							to the National Weather Service.  At this time, data from approximately 
+							100 CAP sites from over 35 different agencies from around the world are 
+							being acquired by GSD. The majority of CAP systems are 915 MHz 
+							Boundary Layer Profilers, there are also several 449 MHz and 50 MHz 
+							profilers in the CAP network.
+							</P>
+							<p class="normalText" align="left">
+							The current status of CAP sites in the continental US are shown on the
+							map below. Stars represent sites that produce both wind and RASS data. Circles 
+							represent sites that only produce wind data. The colors of symbols represent 
+							how recently data from a site has been acquired (refer to legend above map).
+							</p>
+									<table align="center" summary="" width="540">
+										<tr>
+											<tr>
+												<td align="center" bgcolor="#969696">
+													<span class="green">Current</span>&nbsp;
+													<span class="yellow">1-3 Hour</span>&nbsp;
+													<span class="cyan">4-24 Hour</span>&nbsp;
+													<span class="blue">25-72 Hour</span>&nbsp;
+													<span class="red">&gt;72 Hour</span>
+												</td>
+											</tr>
+											<td align="center">
+
+										                     <!<img src="file:///common/data/apps/madis/current/private/cap/images/displayer/conus.jpg" border="1" hspace="5" -->
+										                     <img src="jsp_include/getCapImage.jsp?mapname=conus&id=1" border="1" hspace="5" 
+                                                                                                           
+													alt="Map of CONUS showing locations of operational CAP stations"
+													title="CONUS CAP Site Locations" 
+													usemap="#conusMap" name="conusMapImg" ismap>
+											</td>
+										</tr>
+										<tr>
+											<td align="center" class="footerText">
+												Current Operational CAP Stations in the Continental US.<br>
+												(Mouse-over site locations for information about the site) 
+												<br><br>
+											</td>
+										</tr>
+									</table>
+							</td></tr></table>
+
+							<table width="100%">
+								<tr>
+									<td valign="top">
+							<P class="normalText" align="left">
+							Boundary Layer Profilers also referred 
+							to as BLPs are small, relatively low-cost UHF Doppler 
+							radars used primarily to measure vertical profiles of horizontal winds. 
+							The BLPs have a minimum range of about 100 m above ground level (AGL), 
+							with range resolutions selectable from 60 m to 400 m. Depending on 
+							the configuration of the radar, and the atmospheric conditions, BLPs 
+							are capable of measuring wind up to about 3-5 km AGL. With the addition 
+							of an optional Radio Acoustic Sounding System (RASS), virtual 
+							temperature profiles up to about 1 km can also be obtained. 
+							</P>
+							<P class="normalText" align="left">
+							Unlike the radars used in the NOAA Profiler Network, the CAPs sites are operated 
+							in many different ways, are owned by about 30 different agencies, and are 
+							optimized for different applications. Most BLPs report hourly winds, 
+							although some may generate wind profiles as often as every 10 minutes. 
+							The radars may be in fixed locations and operated continuously, or 
+							they may be portable, and operated only during field campaigns. 
+							Therefore, the list of profilers available via our Web displays will be 
+							dynamically updated. 
+							</P>
+							<P class="normalText" align="left">
+							Normally, raw CAP data files are time-stamped using the starting time of their
+							acquisition period. Data time-stamps used for data displays on this site
+							are always the end-time of the acquisition period. 
+							The winds displayed at each height are averaged over the preceding hour 
+							(in the case of hourly winds), e.g., sub-hourly data processed between 
+							1600-1700 UTC would be averaged and displayed with the time stamp of 1700 UTC. 
+							The displayed winds have all "passed" our single-station quality control 
+							requirements (continuity in height and time, and a requirement that good 
+							vertical beam data is present) and typically represent high quality data. 
+							RASS temperatures follow the same time stamp convention and have also passed 
+							single-station quality control. BLP Web products are created based on
+							the reporting periods of a radars ranging from 1-hour to 10-minute cycles.
+							Generally hourly resolution data are available by 30 minutes past the hour, 
+							and 30-minute resolution data are available 20 minutes past the end 
+							of their cycle. 
+							</P>
+									</td>
+									<td valign="top">
+										<table align="right" summary="">
+											<tr>
+												<td align="center">
+													<img src="images/BLP_RASS.gif" border="1" hspace="5" 
+														alt="Typical Boundary Layer Profiler with RASS"
+														title="Typical Boundary Layer Profiler with RASS">
+												</td>
+											</tr>
+											<tr>
+												<td align="center" class="footerText">
+													Typical 915 MHz Boundary Layer Profiler with RASS<br> 
+												    (Photo Courtesy of 
+													<a href="http://gonzalo.er.anl.gov/ABLE/915rwp.html" 
+													class="alink">Argonne National Laboratory</a>)
+													<br><br>
+												</td>
+											</tr>
+											<tr>
+												<td align="center">
+													<img src="images/fortHuachuca.jpg" border="1" hspace="5" 
+														alt="449 MHz 1/4 Scale BLP"
+														title="449 MHz 1/4 Scale BLP">
+												</td>
+											</tr>
+											<tr>
+												<td align="center" class="footerText">
+													449 MHz Profiler at TARS Site in FT. Huachuca, AZ<br> 
+												    (Photo Courtesy of 
+													<a href="http://www.etl.noaa.gov/" 
+														class="alink"
+														 target="_blank">ESRL/PSD</a>)
+													<br><br>
+												</td>
+											</tr>
+											<tr>
+												<td align="center">
+													<img src="images/arm_50MHz.jpg" border="1" hspace="5" 
+														alt="50 MHz Profiler"
+														title="50 MHz Profiler">
+												</td>
+											</tr>
+											<tr>
+												<td align="center" class="footerText">
+													50 MHz Profiler at Lamont, OK<br>
+													with RASS in foreground<br> 
+												    (Photo Courtesy of 
+													<a href="http://www.arm.gov/" 
+														class="alink" 
+														target="_blank">
+														ARM</a>)
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+							
+
+						</td></tr>
+					</table>
+			</td>
+		</tr>
+	</table>
+	<map name="conusMap">
+		<AREA shape="RECT" coords="346,8,350,12" onMouseover="imgMap_OnMouseOver('0')" onMouseout="kill('0')" >
+		<AREA shape="RECT" coords="251,137,255,144" onMouseover="imgMap_OnMouseOver('1')" onMouseout="kill('1')" >
+		<AREA shape="RECT" coords="92,41,96,45" onMouseover="imgMap_OnMouseOver('2')" onMouseout="kill('2')" >
+		<AREA shape="RECT" coords="384,39,388,43" onMouseover="imgMap_OnMouseOver('3')" onMouseout="kill('3')" >
+		<AREA shape="RECT" coords="257,122,261,126" onMouseover="imgMap_OnMouseOver('4')" onMouseout="kill('4')" >
+		<AREA shape="RECT" coords="274,196,278,200" onMouseover="imgMap_OnMouseOver('5')" onMouseout="kill('5')" >
+		<AREA shape="RECT" coords="286,144,290,148" onMouseover="imgMap_OnMouseOver('6')" onMouseout="kill('6')" >
+		<AREA shape="RECT" coords="387,108,391,112" onMouseover="imgMap_OnMouseOver('7')" onMouseout="kill('7')" >
+		<AREA shape="RECT" coords="116,45,120,49" onMouseover="imgMap_OnMouseOver('8')" onMouseout="kill('8')" >
+		<AREA shape="RECT" coords="116,45,120,49" onMouseover="imgMap_OnMouseOver('9')" onMouseout="kill('9')" >
+		<AREA shape="RECT" coords="82,116,86,120" onMouseover="imgMap_OnMouseOver('10')" onMouseout="kill('10')" >
+		<AREA shape="RECT" coords="370,210,374,214" onMouseover="imgMap_OnMouseOver('11')" onMouseout="kill('11')" >
+		<AREA shape="RECT" coords="371,211,375,215" onMouseover="imgMap_OnMouseOver('12')" onMouseout="kill('12')" >
+		<AREA shape="RECT" coords="370,211,374,215" onMouseover="imgMap_OnMouseOver('13')" onMouseout="kill('13')" >
+		<AREA shape="RECT" coords="370,210,374,214" onMouseover="imgMap_OnMouseOver('14')" onMouseout="kill('14')" >
+		<AREA shape="RECT" coords="371,213,375,217" onMouseover="imgMap_OnMouseOver('15')" onMouseout="kill('15')" >
+		<AREA shape="RECT" coords="370,212,374,216" onMouseover="imgMap_OnMouseOver('16')" onMouseout="kill('16')" >
+		<AREA shape="RECT" coords="152,98,156,102" onMouseover="imgMap_OnMouseOver('17')" onMouseout="kill('17')" >
+		<AREA shape="RECT" coords="363,146,367,150" onMouseover="imgMap_OnMouseOver('18')" onMouseout="kill('18')" >
+		<AREA shape="RECT" coords="92,102,96,106" onMouseover="imgMap_OnMouseOver('19')" onMouseout="kill('19')" >
+		<AREA shape="RECT" coords="380,142,384,146" onMouseover="imgMap_OnMouseOver('20')" onMouseout="kill('20')" >
+		<AREA shape="RECT" coords="161,176,165,180" onMouseover="imgMap_OnMouseOver('21')" onMouseout="kill('21')" >
+		<AREA shape="RECT" coords="97,108,101,112" onMouseover="imgMap_OnMouseOver('22')" onMouseout="kill('22')" >
+		<AREA shape="RECT" coords="88,119,92,123" onMouseover="imgMap_OnMouseOver('23')" onMouseout="kill('23')" >
+		<AREA shape="RECT" coords="113,50,117,54" onMouseover="imgMap_OnMouseOver('24')" onMouseout="kill('24')" >
+		<AREA shape="RECT" coords="113,50,117,54" onMouseover="imgMap_OnMouseOver('25')" onMouseout="kill('25')" >
+		<AREA shape="RECT" coords="110,51,114,55" onMouseover="imgMap_OnMouseOver('26')" onMouseout="kill('26')" >
+		<AREA shape="RECT" coords="363,59,367,63" onMouseover="imgMap_OnMouseOver('27')" onMouseout="kill('27')" >
+		<AREA shape="RECT" coords="362,59,366,63" onMouseover="imgMap_OnMouseOver('28')" onMouseout="kill('28')" >
+		<AREA shape="RECT" coords="187,183,191,183" onMouseover="imgMap_OnMouseOver('29')" onMouseout="kill('29')" >
+		<AREA shape="RECT" coords="108,46,112,50" onMouseover="imgMap_OnMouseOver('30')" onMouseout="kill('30')" >
+		<AREA shape="RECT" coords="92,25,96,29" onMouseover="imgMap_OnMouseOver('31')" onMouseout="kill('31')" >
+		<AREA shape="RECT" coords="152,97,156,101" onMouseover="imgMap_OnMouseOver('32')" onMouseout="kill('32')" >
+		<AREA shape="RECT" coords="384,58,388,62" onMouseover="imgMap_OnMouseOver('33')" onMouseout="kill('33')" >
+		<AREA shape="RECT" coords="260,27,264,31" onMouseover="imgMap_OnMouseOver('34')" onMouseout="kill('34')" >
+		<AREA shape="RECT" coords="110,45,114,49" onMouseover="imgMap_OnMouseOver('35')" onMouseout="kill('35')" >
+		<AREA shape="RECT" coords="109,49,113,53" onMouseover="imgMap_OnMouseOver('36')" onMouseout="kill('36')" >
+		<AREA shape="RECT" coords="90,118,94,122" onMouseover="imgMap_OnMouseOver('37')" onMouseout="kill('37')" >
+		<AREA shape="RECT" coords="345,80,349,84" onMouseover="imgMap_OnMouseOver('38')" onMouseout="kill('38')" >
+		<AREA shape="RECT" coords="150,97,154,101" onMouseover="imgMap_OnMouseOver('39')" onMouseout="kill('39')" >
+		<AREA shape="RECT" coords="392,113,396,117" onMouseover="imgMap_OnMouseOver('40')" onMouseout="kill('40')" >
+		<AREA shape="RECT" coords="267,203,271,207" onMouseover="imgMap_OnMouseOver('41')" onMouseout="kill('41')" >
+		<AREA shape="RECT" coords="111,160,115,164" onMouseover="imgMap_OnMouseOver('42')" onMouseout="kill('42')" >
+		<AREA shape="RECT" coords="110,46,114,50" onMouseover="imgMap_OnMouseOver('43')" onMouseout="kill('43')" >
+		<AREA shape="RECT" coords="372,170,376,174" onMouseover="imgMap_OnMouseOver('44')" onMouseout="kill('44')" >
+		<AREA shape="RECT" coords="300,44,304,48" onMouseover="imgMap_OnMouseOver('45')" onMouseout="kill('45')" >
+		<AREA shape="RECT" coords="251,132,255,136" onMouseover="imgMap_OnMouseOver('46')" onMouseout="kill('46')" >
+		<AREA shape="RECT" coords="267,200,271,204" onMouseover="imgMap_OnMouseOver('47')" onMouseout="kill('47')" >
+		<AREA shape="RECT" coords="399,111,403,115" onMouseover="imgMap_OnMouseOver('48')" onMouseout="kill('48')" >
+		<AREA shape="RECT" coords="117,48,121,52" onMouseover="imgMap_OnMouseOver('49')" onMouseout="kill('49')" >
+		<AREA shape="RECT" coords="89,121,93,125" onMouseover="imgMap_OnMouseOver('50')" onMouseout="kill('50')" >
+		<AREA shape="RECT" coords="110,47,114,51" onMouseover="imgMap_OnMouseOver('51')" onMouseout="kill('51')" >
+		<AREA shape="RECT" coords="202,98,206,102" onMouseover="imgMap_OnMouseOver('52')" onMouseout="kill('52')" >
+		<AREA shape="RECT" coords="107,158,111,162" onMouseover="imgMap_OnMouseOver('53')" onMouseout="kill('53')" >
+		<AREA shape="RECT" coords="219,161,223,165" onMouseover="imgMap_OnMouseOver('54')" onMouseout="kill('54')" >
+		<AREA shape="RECT" coords="219,162,223,166" onMouseover="imgMap_OnMouseOver('55')" onMouseout="kill('55')" >
+		<AREA shape="RECT" coords="462,56,466,60" onMouseover="imgMap_OnMouseOver('56')" onMouseout="kill('56')" >
+		<AREA shape="RECT" coords="356,141,360,145" onMouseover="imgMap_OnMouseOver('57')" onMouseout="kill('57')" >
+		<AREA shape="RECT" coords="356,38,360,42" onMouseover="imgMap_OnMouseOver('58')" onMouseout="kill('58')" >
+		<AREA shape="RECT" coords="397,48,401,52" onMouseover="imgMap_OnMouseOver('59')" onMouseout="kill('59')" >
+		<AREA shape="RECT" coords="80,90,84,94" onMouseover="imgMap_OnMouseOver('60')" onMouseout="kill('60')" >
+		<AREA shape="RECT" coords="242,126,246,130" onMouseover="imgMap_OnMouseOver('61')" onMouseout="kill('61')" >
+		<AREA shape="RECT" coords="255,143,259,147" onMouseover="imgMap_OnMouseOver('62')" onMouseout="kill('62')" >
+		<AREA shape="RECT" coords="114,168,118,172" onMouseover="imgMap_OnMouseOver('63')" onMouseout="kill('63')" >
+		<AREA shape="RECT" coords="88,131,92,135" onMouseover="imgMap_OnMouseOver('64')" onMouseout="kill('64')" >
+		<AREA shape="RECT" coords="399,48,403,52" onMouseover="imgMap_OnMouseOver('65')" onMouseout="kill('65')" >
+		<AREA shape="RECT" coords="115,159,119,163" onMouseover="imgMap_OnMouseOver('66')" onMouseout="kill('66')" >
+		<AREA shape="RECT" coords="109,47,113,51" onMouseover="imgMap_OnMouseOver('67')" onMouseout="kill('67')" >
+		<AREA shape="RECT" coords="313,192,317,196" onMouseover="imgMap_OnMouseOver('68')" onMouseout="kill('68')" >
+		<AREA shape="RECT" coords="356,58,360,62" onMouseover="imgMap_OnMouseOver('69')" onMouseout="kill('69')" >
+		<AREA shape="RECT" coords="390,147,394,151" onMouseover="imgMap_OnMouseOver('70')" onMouseout="kill('70')" >
+		<AREA shape="RECT" coords="401,95,405,99" onMouseover="imgMap_OnMouseOver('71')" onMouseout="kill('71')" >
+		<AREA shape="RECT" coords="84,67,88,71" onMouseover="imgMap_OnMouseOver('72')" onMouseout="kill('72')" >
+		<AREA shape="RECT" coords="355,141,359,145" onMouseover="imgMap_OnMouseOver('73')" onMouseout="kill('73')" >
+		<AREA shape="RECT" coords="325,136,329,140" onMouseover="imgMap_OnMouseOver('74')" onMouseout="kill('74')" >
+		<AREA shape="RECT" coords="113,47,117,51" onMouseover="imgMap_OnMouseOver('75')" onMouseout="kill('75')" >
+		<AREA shape="RECT" coords="113,157,117,161" onMouseover="imgMap_OnMouseOver('76')" onMouseout="kill('76')" >
+		<AREA shape="RECT" coords="94,104,98,108" onMouseover="imgMap_OnMouseOver('77')" onMouseout="kill('77')" >
+		<AREA shape="RECT" coords="372,102,376,106" onMouseover="imgMap_OnMouseOver('78')" onMouseout="kill('78')" >
+		<AREA shape="RECT" coords="205,98,209,102" onMouseover="imgMap_OnMouseOver('79')" onMouseout="kill('79')" >
+		<AREA shape="RECT" coords="119,44,123,48" onMouseover="imgMap_OnMouseOver('80')" onMouseout="kill('80')" >
+		<AREA shape="RECT" coords="113,170,117,174" onMouseover="imgMap_OnMouseOver('81')" onMouseout="kill('81')" >
+		<AREA shape="RECT" coords="102,156,106,160" onMouseover="imgMap_OnMouseOver('82')" onMouseout="kill('82')" >
+		<AREA shape="RECT" coords="87,135,91,139" onMouseover="imgMap_OnMouseOver('83')" onMouseout="kill('83')" >
+		<AREA shape="RECT" coords="297,47,301,51" onMouseover="imgMap_OnMouseOver('84')" onMouseout="kill('84')" >
+		<AREA shape="RECT" coords="107,59,111,63" onMouseover="imgMap_OnMouseOver('85')" onMouseout="kill('85')" >
+		<AREA shape="RECT" coords="107,59,111,63" onMouseover="imgMap_OnMouseOver('86')" onMouseout="kill('86')" >
+		<AREA shape="RECT" coords="377,139,381,143" onMouseover="imgMap_OnMouseOver('87')" onMouseout="kill('87')" >
+		<AREA shape="RECT" coords="255,197,259,201" onMouseover="imgMap_OnMouseOver('88')" onMouseout="kill('88')" >
+		<AREA shape="RECT" coords="110,46,114,50" onMouseover="imgMap_OnMouseOver('89')" onMouseout="kill('89')" >
+		<AREA shape="RECT" coords="93,116,97,120" onMouseover="imgMap_OnMouseOver('90')" onMouseout="kill('90')" >
+		<AREA shape="RECT" coords="98,153,102,157" onMouseover="imgMap_OnMouseOver('91')" onMouseout="kill('91')" >
+		<AREA shape="RECT" coords="104,27,108,31" onMouseover="imgMap_OnMouseOver('92')" onMouseout="kill('92')" >
+		<AREA shape="RECT" coords="106,49,110,53" onMouseover="imgMap_OnMouseOver('93')" onMouseout="kill('93')" >
+		<AREA shape="RECT" coords="105,155,109,159" onMouseover="imgMap_OnMouseOver('94')" onMouseout="kill('94')" >
+		<AREA shape="RECT" coords="148,98,152,102" onMouseover="imgMap_OnMouseOver('95')" onMouseout="kill('95')" >
+		<AREA shape="RECT" coords="418,76,422,80" onMouseover="imgMap_OnMouseOver('96')" onMouseout="kill('96')" >
+		<AREA shape="RECT" coords="360,217,364,221" onMouseover="imgMap_OnMouseOver('97')" onMouseout="kill('97')" >
+		<AREA shape="RECT" coords="150,97,154,101" onMouseover="imgMap_OnMouseOver('98')" onMouseout="kill('98')" >
+		<AREA shape="RECT" coords="92,122,96,126" onMouseover="imgMap_OnMouseOver('99')" onMouseout="kill('99')" >
+		<AREA shape="RECT" coords="100,47,104,51" onMouseover="imgMap_OnMouseOver('100')" onMouseout="kill('100')" >
+		<AREA shape="RECT" coords="154,172,158,176" onMouseover="imgMap_OnMouseOver('101')" onMouseout="kill('101')" >
+		<AREA shape="RECT" coords="91,118,95,122" onMouseover="imgMap_OnMouseOver('102')" onMouseout="kill('102')" >
+		<AREA shape="RECT" coords="103,135,107,139" onMouseover="imgMap_OnMouseOver('103')" onMouseout="kill('103')" >
+		<AREA shape="RECT" coords="126,42,130,46" onMouseover="imgMap_OnMouseOver('104')" onMouseout="kill('104')" >
+		<AREA shape="RECT" coords="359,74,363,78" onMouseover="imgMap_OnMouseOver('105')" onMouseout="kill('105')" >
+		<AREA shape="RECT" coords="110,47,114,51" onMouseover="imgMap_OnMouseOver('106')" onMouseout="kill('106')" >
+		<AREA shape="RECT" coords="110,47,114,51" onMouseover="imgMap_OnMouseOver('107')" onMouseout="kill('107')" >
+		<AREA shape="RECT" coords="92,35,96,39" onMouseover="imgMap_OnMouseOver('108')" onMouseout="kill('108')" >
+		<AREA shape="RECT" coords="260,204,264,208" onMouseover="imgMap_OnMouseOver('109')" onMouseout="kill('109')" >
+		<AREA shape="RECT" coords="107,155,111,159" onMouseover="imgMap_OnMouseOver('110')" onMouseout="kill('110')" >
+		<AREA shape="RECT" coords="371,52,375,56" onMouseover="imgMap_OnMouseOver('111')" onMouseout="kill('111')" >
+		<AREA shape="RECT" coords="395,102,399,106" onMouseover="imgMap_OnMouseOver('112')" onMouseout="kill('112')" >
+		<AREA shape="RECT" coords="113,38,117,42" onMouseover="imgMap_OnMouseOver('113')" onMouseout="kill('113')" >
+		<AREA shape="RECT" coords="132,169,136,173" onMouseover="imgMap_OnMouseOver('114')" onMouseout="kill('114')" >
+	</MAP>
+
+		
+	<!-- Standard Footer -->
+	<TABLE cellSpacing="0" border="0" width="100%" cellpadding="2">
+		<TBODY>
+	  		<TR align="center">
+	    		<TD class="stdFooterTopLine">
+				<A href="disclaim.jsp" class="stdFooterTopLine">Disclaimer</A> 
+	      		&nbsp;&nbsp;|&nbsp;&nbsp; 
+				<A href="http://www.noaa.gov/privacy.html" target="_blank" class="stdFooterTopLine">
+					NOAA Privacy Policy</A> 
+	      		&nbsp;&nbsp;|&nbsp;&nbsp; 
+				<A href="http://www.noaa.gov/disclaimer.html" target="_blank" class="stdFooterTopLine">
+					NOAA Disclaimer For External Links</A>
+	      		&nbsp;&nbsp;|&nbsp;&nbsp; 
+				<A href="http://esrl.noaa.gov/gsd/search.html" target="_blank" class="stdFooterTopLine">
+					Search GSD</A>
+				</TD>
+			</tr>
+			<tr>
+				<td class="stdFooterBottomLine">
+					<div class="footerText" align="center">
+						<!--em>Please send comments or suggestions to:&nbsp; </em--!>
+						<!--a href="mailto:webmaster-dd.fsl@noaa.gov" class="alink"--!>
+						<!--em>webmaster-dd.fsl@noaa.gov</em></a--!>
+						<em>Please send comments or suggestions to:&nbsp; </em>
+						<a href="mailto:madis-support@noaa.gov" class="alink">
+						<em>MADIS support</em></a>
+					</div>
+					
+					<!-- Mod Date and Page Hit Counter -->
+					<div class="footerText" align="center">
+						<em>
+								Page Last Modified: <b>Undetermined</b>
+						</em>
+						<br>
+				
+						
+				
+						
+					</div>
+				</td>
+			</TR>
+		</TBODY>
+	</TABLE>
+		
+
+</body>
+</html>
+

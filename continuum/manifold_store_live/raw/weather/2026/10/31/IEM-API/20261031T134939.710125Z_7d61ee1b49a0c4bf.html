@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEM :: API Documentation</title>
+    <meta name="description" content="Iowa State University, Iowa Environmental Mesonet">
+    <meta name="author" content="daryl herzmann akrherz@iastate.edu">
+
+    <link href="/vendor/bootstrap/5.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons for UI and navigation -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="/css/iastate-iem.css" rel="stylesheet">
+
+    <!-- Any page specific headextra content here -->
+    
+    <!-- Essential Social Tags -->
+    <meta property="og:title" content="IEM :: API Documentation">
+    <meta property="og:description" content="Iowa Environmental Mesonet of Iowa State University">
+    <meta property="og:image" content="https://mesonet.agron.iastate.edu/images/logo_large.png">
+    <meta property="og:url" content="https://mesonet.agron.iastate.edu/api/">
+        <meta name="twitter:card" content="summary">
+
+    <!-- Non-essential -->
+    <meta name="twitter:creator" content="@akrherz">
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+  </head>
+
+  <body>
+    <a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
+<header>
+<!-- Mobile navbar: Simple single row with logo, search, and hamburger -->
+<nav class="navbar-site d-block d-lg-none" aria-label="Utility navigation">
+    <div class="container">
+        <div class="mobile-navbar-row d-flex align-items-center">
+            <div class="mobile-logo me-2">
+                <a href="/" title="Home">
+                    <img src="/images/logo_small.png" alt="IEM" height="30">
+                </a>
+            </div>
+            
+            <div class="mobile-search flex-fill me-2">
+                <form action="/search" method="GET" role="search">
+                    <input name="q" aria-label="Search" title="Search" placeholder="Search 'DSM' 'autoplot 100' 'street address'" type="text" class="form-control form-control-sm">
+                </form>
+            </div>
+            
+            <div class="mobile-menu d-flex align-items-center">
+                <!-- Utility toggler removed per design: keep only primary-nav toggler -->
+                <button type="button" class="navbar-toggler p-1 ms-2" data-bs-toggle="collapse" data-bs-target="#navbar-menu-collapse" aria-controls="navbar-menu-collapse" aria-expanded="false" aria-label="Toggle primary navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="visually-hidden">Primary navigation</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile site links (contact, disclaimer, apps) now unified target -->
+        <div class="collapse" id="mobile-nav-collapse">
+            <ul class="nav navbar-nav mobile-site-nav" aria-label="Utility navigation links">
+                <li class="nav-item"><a class="nav-link" href="/info/contacts.php">contact us</a></li>
+                <li class="nav-item"><a class="nav-link" href="/disclaimer.php">disclaimer</a></li>
+                <li class="nav-item"><a class="nav-link" href="/apps.php">apps</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Desktop navbar: ISU wordmark on left, search and links stacked on right -->
+<nav class="navbar-site d-none d-lg-block" aria-label="Utility navigation">
+    <div class="container">
+        <div class="desktop-navbar-row">
+            <div class="desktop-wordmark">
+                <a href="/" title="Home" class="wordmark-unit">
+                    <span class="wordmark-isu">Iowa State University</span>
+                    <span class="wordmark-unit-title">Iowa Environmental Mesonet</span>
+                </a>
+            </div>
+            
+            <div class="desktop-right">
+                <div class="desktop-search">
+                    <form action="/search" method="GET" role="search">
+                        <input name="q" aria-label="Search" title="Search" placeholder="Search 'DSM' 'autoplot 100' 'street address'" type="text" class="form-control">
+                    </form>
+                </div>
+                
+                <div class="desktop-links">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="/info/contacts.php">contact us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/disclaimer.php">disclaimer</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/apps.php">apps</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+</header>
+
+<!-- Main navigation menu navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom" aria-label="Primary navigation">
+    <div class="container">
+        <!-- Desktop IEM logo (visible in main nav on desktop) -->
+        <div class="d-none d-lg-block">
+            <a href="/"><img style="height: 50px;" alt="IEM" class="img-fluid float-start" src="/images/logo_small.png" /></a>
+        </div>
+        
+    <!-- Main navigation menu (collapsible on mobile) -->
+    <div class="navbar-collapse collapse" id="navbar-menu-collapse">
+            <div class="d-none d-lg-block">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                        href="#" aria-label="Home resources menu"> <i class="bi bi-house-fill" aria-hidden="true"></i><span class="visually-hidden">Home resources</span> </a>
+                        <ul class="dropdown-menu">
+<li><a class="dropdown-item" href="/projects/iao/">Iowa Atmospheric Observatory</a></li>
+<li><a class="dropdown-item" href="/">Iowa Environmental Mesonet</a></li>
+<li><a class="dropdown-item" href="https://cocorahs.org">CoCoRaHS</a></li>
+<li><a class="dropdown-item" href="https://dailyerosion.org">Daily Erosion Project</a></li>
+<li><a class="dropdown-item" href="https://weather.im">Weather.IM Project</a></li>
+                        </ul>
+                    </li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Apps</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="/apps.php">Application Index</a></li>
+<li><a class="dropdown-item" href="/plotting/auto/">Automated Data Plotting</a></li>
+<li><a class="dropdown-item" href="/climodat/">Climodat</a></li>
+<li><a class="dropdown-item" href="/climodat/monitor.php">Climodat Monitor</a></li>
+<li><a class="dropdown-item" href="/explorer/">IEM Explorer</a></li>
+<li><a class="dropdown-item" href="/rainfall/obhour.phtml">Hourly Precip</a></li>
+<li><a class="dropdown-item" href="/GIS/apps/rview/warnings.phtml">Interactive Radar</a></li>
+<li><a class="dropdown-item" href="/topics/pests/">Pest Maps + Forecasting</a></li>
+<li><a class="dropdown-item" href="/my/current.phtml">Sortable Currents</a></li>
+<li><a class="dropdown-item" href="/timemachine/">Time Machine</a></li>
+<li><a class="dropdown-item" href="/sites/windrose.phtml?station=AMW&amp;network=IA_ASOS">Wind Roses</a></li>
+</ul></li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Areas</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="/agweather/">Ag Weather/Climate Info</a></li>
+<li><a class="dropdown-item" href="/archive/">Archive Mainpage</a></li>
+<li><a class="dropdown-item" href="/climate/">Climate Mainpage</a></li>
+<li><a class="dropdown-item" href="/current/">Current Mainpage</a></li>
+<li><a class="dropdown-item" href="/dm/">Drought</a></li>
+<li><a class="dropdown-item" href="/GIS/">GIS Mainpage</a></li>
+<li><a class="dropdown-item" href="/nws/">NWS Mainpage</a></li>
+<li><a class="dropdown-item" href="/current/severe.phtml">Severe Weather Mainpage</a></li>
+</ul></li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Datasets</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="/COOP/extremes.php">Daily Climatology</a></li>
+<li><a class="dropdown-item" href="/request/daily.phtml">Daily Observations</a></li>
+<li><a class="dropdown-item" href="/info/datasets/">Dataset Documentation</a></li>
+<li><a class="dropdown-item" href="/iemre/">IEM Reanalysis</a></li>
+<li><a class="dropdown-item" href="/mos/">Model Output Statistics</a></li>
+<li><a class="dropdown-item" href="/docs/nexrad_mosaic/">NEXRAD Mosaic</a></li>
+<li><a class="dropdown-item" href="/request/gis/pireps.php">PIREP - Pilot Reports</a></li>
+<li><a class="dropdown-item" href="/roads/">Roads Mainpage</a></li>
+<li><a class="dropdown-item" href="/current/radar.phtml">RADAR &amp; Satellite</a></li>
+<li><a class="dropdown-item" href="/rainfall/">Rainfall Data</a></li>
+<li><a class="dropdown-item" href="/archive/raob/">Sounding Archive</a></li>
+<li><a class="dropdown-item" href="/smos/">Soil Moisture Satellite</a></li>
+</ul></li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Info</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="/info.php">Info Mainpage</a></li>
+<li><a class="dropdown-item" href="/onsite/features/past.php">Daily Features</a></li>
+<li><a class="dropdown-item" href="/info/links.php">Links</a></li>
+<li><a class="dropdown-item" href="/onsite/news.phtml">News</a></li>
+<li><a class="dropdown-item" href="/present/">Presentations</a></li>
+<li><a class="dropdown-item" href="/info/refs.php">Referenced By</a></li>
+<li><a class="dropdown-item" href="/sites/locate.php">Station Data and Metadata</a></li>
+<li><a class="dropdown-item" href="/QC/">Quality Control</a></li>
+<li><a class="dropdown-item" href="/info/variables.phtml">Variables</a></li>
+</ul></li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Networks</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="/sites/networks.php">Network Tables</a></li>
+<li><a class="dropdown-item" href="/ASOS/">ASOS/AWOS Airports</a></li>
+<li><a class="dropdown-item" href="/cocorahs/">CoCoRaHS - Citizen Science</a></li>
+<li><a class="dropdown-item" href="/DCP/">DCP/HADS/SHEF - Hydrological</a></li>
+<li><a class="dropdown-item" href="/COOP/">NWS COOP - Daily Climate</a></li>
+<li><a class="dropdown-item" href="/agclimate/">ISU Soil Moisture</a></li>
+<li><a class="dropdown-item" href="/nstl_flux/">NLAE Flux</a></li>
+<li><a class="dropdown-item" href="/RWIS/">RWIS - Roadway Weather</a></li>
+<li><a class="dropdown-item" href="/scan/">SCAN - NRCS Soil Climate</a></li>
+<li><a class="dropdown-item" href="/other/">Other</a></li>
+<li><a class="dropdown-item" href="/uscrn/">US Climate Reference</a></li>
+</ul></li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">NWS Data</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="/nws/">NWS Mainpage</a></li>
+<li><a class="dropdown-item" href="/lsr/">Local Storm Report App</a></li>
+<li><a class="dropdown-item" href="/cow/">IEM Cow (SBW Verification)</a></li>
+<li><a class="dropdown-item" href="/raccoon/">IEM Raccoon (SBW Powerpoints)</a></li>
+<li><a class="dropdown-item" href="/river/">River Summary</a></li>
+<li><a class="dropdown-item" href="/GIS/goes.phtml">Satellite Data</a></li>
+<li><a class="dropdown-item" href="/vtec/search.php">Search for Warnings</a></li>
+<li><a class="dropdown-item" href="/nws/sps_search/">Special Weather Statement (SPS) Search</a></li>
+<li><a class="dropdown-item" href="/nws/spc_outlook_search/">SPC Convective Outlook / MCD Search</a></li>
+<li><a class="dropdown-item" href="/GIS/apps/rview/watch.phtml">SPC Watches</a></li>
+<li><a class="dropdown-item" href="/nws/text.php">Text Archives Mainpage</a></li>
+<li><a class="dropdown-item" href="/wx/afos/list.phtml">Text Listing by WFO/Center/Product</a></li>
+<li><a class="dropdown-item" href="/wx/afos/">Text by Product ID</a></li>
+<li><a class="dropdown-item" href="/vtec/">VTEC Browser</a></li>
+</ul></li>
+<li class="nav-item dropdown active"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Services</a><ul class="dropdown-menu"><li><a class="dropdown-item active" href="/api/">API Mainpage</a></li>
+<li><a class="dropdown-item active" href="/api/#cgi">CGI / Bulk Data</a></li>
+<li><a class="dropdown-item" href="/request/grx/">Gibson Ridge Placefiles</a></li>
+<li><a class="dropdown-item" href="/projects/iembot/">iembot</a></li>
+<li><a class="dropdown-item active" href="/api/#json">JSON Webservices</a></li>
+<li><a class="dropdown-item" href="/request/ldm.php">LDM</a></li>
+<li><a class="dropdown-item" href="/request/maxcsv.py?help">Max CSV</a></li>
+<li><a class="dropdown-item" href="/ogc/">OGC Webservices</a></li>
+<li><a class="dropdown-item" href="/GIS/radmap_api.phtml">RadMap API</a></li>
+<li><a class="dropdown-item" href="/GIS/radview.phtml">RADAR Services</a></li>
+</ul></li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Webcams</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="/projects/webcam.php">Webcam mainpage</a></li>
+<li><a class="dropdown-item" href="/current/bloop.phtml">Build your own lapses</a></li>
+<li><a class="dropdown-item" href="/cool/">Cool lapses</a></li>
+<li><a class="dropdown-item" href="/current/viewer.phtml">IEM Webcam Viewer</a></li>
+<li><a class="dropdown-item" href="/current/isucams.phtml">ISU Campus Webcams</a></li>
+<li><a class="dropdown-item" href="/current/camlapse/">Recent lapses</a></li>
+<li><a class="dropdown-item" href="/current/webcam.php">Still images</a></li>
+</ul></li>
+                </ul>
+            </div>
+            <div class="d-lg-none py-2">
+                <div class="accordion" id="mobile-primary-nav-accordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="mobile-nav-home-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#mobile-nav-home-collapse" aria-expanded="false"
+                                aria-controls="mobile-nav-home-collapse">Home</button>
+                        </h2>
+                        <div id="mobile-nav-home-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="mobile-nav-home-heading" data-bs-parent="#mobile-primary-nav-accordion">
+                            <div class="accordion-body py-2">
+<a class="d-block py-1 text-decoration-none" href="/projects/iao/">Iowa Atmospheric Observatory</a>
+<a class="d-block py-1 text-decoration-none" href="/">Iowa Environmental Mesonet</a>
+<a class="d-block py-1 text-decoration-none" href="https://cocorahs.org">CoCoRaHS</a>
+<a class="d-block py-1 text-decoration-none" href="https://dailyerosion.org">Daily Erosion Project</a>
+<a class="d-block py-1 text-decoration-none" href="https://weather.im">Weather.IM Project</a>
+                            </div>
+                        </div>
+                    </div>
+<div class="accordion-item"><h2 class="accordion-header" id="mobile-nav-tab-0-heading"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-nav-tab-0-collapse" aria-expanded="false" aria-controls="mobile-nav-tab-0-collapse">Apps</button></h2><div id="mobile-nav-tab-0-collapse" class="accordion-collapse collapse" aria-labelledby="mobile-nav-tab-0-heading" data-bs-parent="#mobile-primary-nav-accordion"><div class="accordion-body py-2"><a class="d-block py-1 text-decoration-none" href="/apps.php">Application Index</a>
+<a class="d-block py-1 text-decoration-none" href="/plotting/auto/">Automated Data Plotting</a>
+<a class="d-block py-1 text-decoration-none" href="/climodat/">Climodat</a>
+<a class="d-block py-1 text-decoration-none" href="/climodat/monitor.php">Climodat Monitor</a>
+<a class="d-block py-1 text-decoration-none" href="/explorer/">IEM Explorer</a>
+<a class="d-block py-1 text-decoration-none" href="/rainfall/obhour.phtml">Hourly Precip</a>
+<a class="d-block py-1 text-decoration-none" href="/GIS/apps/rview/warnings.phtml">Interactive Radar</a>
+<a class="d-block py-1 text-decoration-none" href="/topics/pests/">Pest Maps + Forecasting</a>
+<a class="d-block py-1 text-decoration-none" href="/my/current.phtml">Sortable Currents</a>
+<a class="d-block py-1 text-decoration-none" href="/timemachine/">Time Machine</a>
+<a class="d-block py-1 text-decoration-none" href="/sites/windrose.phtml?station=AMW&amp;network=IA_ASOS">Wind Roses</a>
+</div></div></div>
+<div class="accordion-item"><h2 class="accordion-header" id="mobile-nav-tab-1-heading"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-nav-tab-1-collapse" aria-expanded="false" aria-controls="mobile-nav-tab-1-collapse">Areas</button></h2><div id="mobile-nav-tab-1-collapse" class="accordion-collapse collapse" aria-labelledby="mobile-nav-tab-1-heading" data-bs-parent="#mobile-primary-nav-accordion"><div class="accordion-body py-2"><a class="d-block py-1 text-decoration-none" href="/agweather/">Ag Weather/Climate Info</a>
+<a class="d-block py-1 text-decoration-none" href="/archive/">Archive Mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/climate/">Climate Mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/current/">Current Mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/dm/">Drought</a>
+<a class="d-block py-1 text-decoration-none" href="/GIS/">GIS Mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/nws/">NWS Mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/current/severe.phtml">Severe Weather Mainpage</a>
+</div></div></div>
+<div class="accordion-item"><h2 class="accordion-header" id="mobile-nav-tab-2-heading"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-nav-tab-2-collapse" aria-expanded="false" aria-controls="mobile-nav-tab-2-collapse">Datasets</button></h2><div id="mobile-nav-tab-2-collapse" class="accordion-collapse collapse" aria-labelledby="mobile-nav-tab-2-heading" data-bs-parent="#mobile-primary-nav-accordion"><div class="accordion-body py-2"><a class="d-block py-1 text-decoration-none" href="/COOP/extremes.php">Daily Climatology</a>
+<a class="d-block py-1 text-decoration-none" href="/request/daily.phtml">Daily Observations</a>
+<a class="d-block py-1 text-decoration-none" href="/info/datasets/">Dataset Documentation</a>
+<a class="d-block py-1 text-decoration-none" href="/iemre/">IEM Reanalysis</a>
+<a class="d-block py-1 text-decoration-none" href="/mos/">Model Output Statistics</a>
+<a class="d-block py-1 text-decoration-none" href="/docs/nexrad_mosaic/">NEXRAD Mosaic</a>
+<a class="d-block py-1 text-decoration-none" href="/request/gis/pireps.php">PIREP - Pilot Reports</a>
+<a class="d-block py-1 text-decoration-none" href="/roads/">Roads Mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/current/radar.phtml">RADAR &amp; Satellite</a>
+<a class="d-block py-1 text-decoration-none" href="/rainfall/">Rainfall Data</a>
+<a class="d-block py-1 text-decoration-none" href="/archive/raob/">Sounding Archive</a>
+<a class="d-block py-1 text-decoration-none" href="/smos/">Soil Moisture Satellite</a>
+</div></div></div>
+<div class="accordion-item"><h2 class="accordion-header" id="mobile-nav-tab-3-heading"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-nav-tab-3-collapse" aria-expanded="false" aria-controls="mobile-nav-tab-3-collapse">Info</button></h2><div id="mobile-nav-tab-3-collapse" class="accordion-collapse collapse" aria-labelledby="mobile-nav-tab-3-heading" data-bs-parent="#mobile-primary-nav-accordion"><div class="accordion-body py-2"><a class="d-block py-1 text-decoration-none" href="/info.php">Info Mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/onsite/features/past.php">Daily Features</a>
+<a class="d-block py-1 text-decoration-none" href="/info/links.php">Links</a>
+<a class="d-block py-1 text-decoration-none" href="/onsite/news.phtml">News</a>
+<a class="d-block py-1 text-decoration-none" href="/present/">Presentations</a>
+<a class="d-block py-1 text-decoration-none" href="/info/refs.php">Referenced By</a>
+<a class="d-block py-1 text-decoration-none" href="/sites/locate.php">Station Data and Metadata</a>
+<a class="d-block py-1 text-decoration-none" href="/QC/">Quality Control</a>
+<a class="d-block py-1 text-decoration-none" href="/info/variables.phtml">Variables</a>
+</div></div></div>
+<div class="accordion-item"><h2 class="accordion-header" id="mobile-nav-tab-4-heading"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-nav-tab-4-collapse" aria-expanded="false" aria-controls="mobile-nav-tab-4-collapse">Networks</button></h2><div id="mobile-nav-tab-4-collapse" class="accordion-collapse collapse" aria-labelledby="mobile-nav-tab-4-heading" data-bs-parent="#mobile-primary-nav-accordion"><div class="accordion-body py-2"><a class="d-block py-1 text-decoration-none" href="/sites/networks.php">Network Tables</a>
+<a class="d-block py-1 text-decoration-none" href="/ASOS/">ASOS/AWOS Airports</a>
+<a class="d-block py-1 text-decoration-none" href="/cocorahs/">CoCoRaHS - Citizen Science</a>
+<a class="d-block py-1 text-decoration-none" href="/DCP/">DCP/HADS/SHEF - Hydrological</a>
+<a class="d-block py-1 text-decoration-none" href="/COOP/">NWS COOP - Daily Climate</a>
+<a class="d-block py-1 text-decoration-none" href="/agclimate/">ISU Soil Moisture</a>
+<a class="d-block py-1 text-decoration-none" href="/nstl_flux/">NLAE Flux</a>
+<a class="d-block py-1 text-decoration-none" href="/RWIS/">RWIS - Roadway Weather</a>
+<a class="d-block py-1 text-decoration-none" href="/scan/">SCAN - NRCS Soil Climate</a>
+<a class="d-block py-1 text-decoration-none" href="/other/">Other</a>
+<a class="d-block py-1 text-decoration-none" href="/uscrn/">US Climate Reference</a>
+</div></div></div>
+<div class="accordion-item"><h2 class="accordion-header" id="mobile-nav-tab-5-heading"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-nav-tab-5-collapse" aria-expanded="false" aria-controls="mobile-nav-tab-5-collapse">NWS Data</button></h2><div id="mobile-nav-tab-5-collapse" class="accordion-collapse collapse" aria-labelledby="mobile-nav-tab-5-heading" data-bs-parent="#mobile-primary-nav-accordion"><div class="accordion-body py-2"><a class="d-block py-1 text-decoration-none" href="/nws/">NWS Mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/lsr/">Local Storm Report App</a>
+<a class="d-block py-1 text-decoration-none" href="/cow/">IEM Cow (SBW Verification)</a>
+<a class="d-block py-1 text-decoration-none" href="/raccoon/">IEM Raccoon (SBW Powerpoints)</a>
+<a class="d-block py-1 text-decoration-none" href="/river/">River Summary</a>
+<a class="d-block py-1 text-decoration-none" href="/GIS/goes.phtml">Satellite Data</a>
+<a class="d-block py-1 text-decoration-none" href="/vtec/search.php">Search for Warnings</a>
+<a class="d-block py-1 text-decoration-none" href="/nws/sps_search/">Special Weather Statement (SPS) Search</a>
+<a class="d-block py-1 text-decoration-none" href="/nws/spc_outlook_search/">SPC Convective Outlook / MCD Search</a>
+<a class="d-block py-1 text-decoration-none" href="/GIS/apps/rview/watch.phtml">SPC Watches</a>
+<a class="d-block py-1 text-decoration-none" href="/nws/text.php">Text Archives Mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/wx/afos/list.phtml">Text Listing by WFO/Center/Product</a>
+<a class="d-block py-1 text-decoration-none" href="/wx/afos/">Text by Product ID</a>
+<a class="d-block py-1 text-decoration-none" href="/vtec/">VTEC Browser</a>
+</div></div></div>
+<div class="accordion-item"><h2 class="accordion-header" id="mobile-nav-tab-6-heading"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-nav-tab-6-collapse" aria-expanded="false" aria-controls="mobile-nav-tab-6-collapse">Services</button></h2><div id="mobile-nav-tab-6-collapse" class="accordion-collapse collapse" aria-labelledby="mobile-nav-tab-6-heading" data-bs-parent="#mobile-primary-nav-accordion"><div class="accordion-body py-2"><a class="d-block py-1 text-decoration-none fw-semibold text-primary" href="/api/">API Mainpage</a>
+<a class="d-block py-1 text-decoration-none fw-semibold text-primary" href="/api/#cgi">CGI / Bulk Data</a>
+<a class="d-block py-1 text-decoration-none" href="/request/grx/">Gibson Ridge Placefiles</a>
+<a class="d-block py-1 text-decoration-none" href="/projects/iembot/">iembot</a>
+<a class="d-block py-1 text-decoration-none fw-semibold text-primary" href="/api/#json">JSON Webservices</a>
+<a class="d-block py-1 text-decoration-none" href="/request/ldm.php">LDM</a>
+<a class="d-block py-1 text-decoration-none" href="/request/maxcsv.py?help">Max CSV</a>
+<a class="d-block py-1 text-decoration-none" href="/ogc/">OGC Webservices</a>
+<a class="d-block py-1 text-decoration-none" href="/GIS/radmap_api.phtml">RadMap API</a>
+<a class="d-block py-1 text-decoration-none" href="/GIS/radview.phtml">RADAR Services</a>
+</div></div></div>
+<div class="accordion-item"><h2 class="accordion-header" id="mobile-nav-tab-7-heading"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-nav-tab-7-collapse" aria-expanded="false" aria-controls="mobile-nav-tab-7-collapse">Webcams</button></h2><div id="mobile-nav-tab-7-collapse" class="accordion-collapse collapse" aria-labelledby="mobile-nav-tab-7-heading" data-bs-parent="#mobile-primary-nav-accordion"><div class="accordion-body py-2"><a class="d-block py-1 text-decoration-none" href="/projects/webcam.php">Webcam mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/current/bloop.phtml">Build your own lapses</a>
+<a class="d-block py-1 text-decoration-none" href="/cool/">Cool lapses</a>
+<a class="d-block py-1 text-decoration-none" href="/current/viewer.phtml">IEM Webcam Viewer</a>
+<a class="d-block py-1 text-decoration-none" href="/current/isucams.phtml">ISU Campus Webcams</a>
+<a class="d-block py-1 text-decoration-none" href="/current/camlapse/">Recent lapses</a>
+<a class="d-block py-1 text-decoration-none" href="/current/webcam.php">Still images</a>
+</div></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<main role="main" id="main-content">
+  <div class="container">
+    
+<h1 class="mb-4">IEM Web Services and APIs</h1>
+
+<div class="alert alert-warning">
+<p><strong>Disclaimer:</strong> All of these services are provided as-is and
+without warranty.  You are free to use these services for any lawful purpose
+(including commercial whereby your company makes lots of money using these)
+and please do not sue us if they do not work as you expect or if one of them
+breaks during your critical time of need.</p>
+</div>
+
+<p>The primary goal of this website is to make data freely available in an
+open manner. This page presents details the IEM's various Web Services and
+Application Programming Interfaces (API). These services are structured into
+four categories.</p>
+
+<div class="row g-3 mb-4">
+  <div class="col-12 col-md-3">
+    <div class="card h-100">
+      <div class="card-body">
+        <h2 class="h5">API v1</h2>
+        <a class="btn btn-primary mb-2" href="/api/1/docs"><i class="bi bi-info-circle" aria-hidden="true"></i> <span class="visually-hidden">Info</span> IEM API v1 Docs</a>
+        <p>Represents a more formal API using the <a href="https://fastapi.tiangolo.com/">FastAPI</a> framework. This API generates JSON Table Schema responses and is more geared toward smallish requests that can be serviced within a second or two. The source code for these services is found within the <a href="https://github.com/akrherz/iem-web-services">iem-web-services repo</a>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-3">
+    <div class="card h-100">
+      <div class="card-body">
+        <h2 class="h5">Ad-hoc Services</h2>
+        <a class="btn btn-primary mb-2" href="#json"><i class="bi bi-info-circle" aria-hidden="true"></i> <span class="visually-hidden">Info</span> (Geo)-JSON Services</a>
+        <p>Represents a hodge-podge of services invented over the past many years that are not necessarily well thought out or structured. They individually have help pages that attempt to explain how to use them. The source code for these services is found with the main <a href="https://github.com/akrherz/iem/tree/main/pylib/iemweb">iem repo</a>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-3">
+    <div class="card h-100">
+      <div class="card-body">
+        <h2 class="h5">Ad-hoc CGI Services</h2>
+        <a class="btn btn-primary mb-2" href="#cgi"><i class="bi bi-info-circle" aria-hidden="true"></i> <span class="visually-hidden">Info</span> Scriptable CGI Services</a>
+        <p>Represents a collection of backends that often service various bulk data download portals. These services are heavily trafficked and typically emit simple CSV responses. None of these will do JSON, often due to various constraints. The source code for these services is found with the main <a href="https://github.com/akrherz/iem/tree/main/pylib/iemweb">iem repo</a>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-3">
+    <div class="card h-100">
+      <div class="card-body">
+        <h2 class="h5">OGC Services</h2>
+        <a class="btn btn-primary mb-2" href="/ogc/"><i class="bi bi-info-circle" aria-hidden="true"></i> <span class="visually-hidden">Info</span> OGC Services</a>
+        <p>Represents a collection of Open Geospatial Consortium services. The source code for these services is found with the main <a href="https://github.com/akrherz/iem/tree/main/pylib/iemweb">iem repo</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>But first, perhaps there are better alternatives!</h3>
+
+<blockquote>
+<p>The following is a list of other web service providers.  They all do a better
+job than this website does.  Some of these are commercial and this listing should
+not be implied as an endorsement. Of course, you can just search google for
+<a href="https://www.google.com/search?q=weather+api">Weather API</a> :)</p>
+
+<ul>
+ <li><a href="https://developer.baronweather.com/">Baron Weather</a></li>
+ <li><a href="https://openweathermap.org/api">OpenWeatherMap</a></li>
+ <li><a href="https://pirateweather.net">Pirate Weather</a></li>
+ <li><a href="https://realearth.ssec.wisc.edu/doc/api.php">SSEC RealEarth API</a></li>
+ <li><a href="https://synopticdata.com/">Synoptic Data PBC</a></li>
+ <li><a href="https://www.tomorrow.io/weather-api/">Tomorrow.io</a></li>
+ <li><a href="https://xweather.com/docs">Vaisala Xweather</a></li>
+ <li><a href="https://www.visualcrossing.com/weather-api">Visual Crossing Weather</a></li>
+ <li><a href="https://www.weatherbit.io/api/">Weatherbit API</a></li>
+</ul>
+</blockquote>
+
+<h3>
+<a href="#json" aria-label="Jump to JSON Services"><i class="bi bi-bookmark" aria-hidden="true"></i></a>
+<a name="json"></a>(Geo)-JSON Services</h3>
+
+<div class="row">
+<div class="col-md-4">
+
+<div class="card mb-3">
+  <div class="card-header">IEM Data / Metadata</div>
+  <div class="card-body">
+  <ul>
+    <li><a href="/json/climodat_stclimo.py?help">Climodat State Climatology</a></li>
+    <li><a href="/geojson/climodat_dayclimo.py?help">Climodat Day Climatology</a></li>
+    <li><a href="/json/current.py?help">Current Obs</a></li>
+    <li><a href="/geojson/7am.py?help">COOP and other data valid @ 7 AM</a></li>
+    <li><a href="/json/dcp_vars.py?help">HADS/DCP Reporting SHEF Vars</a></li>
+    <li><a href="/json/products.py?help">Archive IEM Web Products</a></li>
+    <li><a href="/geojson/network.py?help">Network GeoJSON</a></li>
+    <li><a href="/geojson/networks.py?help">Network Identifiers</a></li>
+    <li><a href="/json/reference.py?help">pyIEM reference data</a></li>
+    <li><a href="/geojson/recent_metar.py?help">Recent "Interesting" METAR Reports</a></li>
+    <li><a href="/json/stations.py?help">Station Metadata Changes</a></li>
+    <li><a href="/geojson/station_neighbors.py?help">Station Neighbors GeoJSON</a></li>
+    <li><a href="/json/tms.py?help">Tile Map Services metadata</a></li>
+    <li>Webcam Archive Metadata:
+        <a href="/geojson/webcam.py?help">GeoJSON</a> or
+        <a href="/json/webcams.py?help">JSON</a></li>
+  </ul>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header">Aviation Services</div>
+  <div class="card-body">
+  <ul>
+    <li><a href="/geojson/convective_sigmet.py?help">SIGMETs</a></li>
+  </ul>
+  </div>
+</div>
+
+
+</div>
+<div class="col-md-4">
+
+<div class="card mb-3">
+  <div class="card-header">NWS Data</div>
+  <div class="card-body">
+  <ul>
+      <li>CF6 Data: <a href="/geojson/cf6.py?help">GeoJSON</a> or
+      <a href="/json/cf6.py?help">JSON</a></li>
+      <li>CLI Data: <a href="/geojson/cli.py?help">GeoJSON</a> or
+      <a href="/json/cli.py?help">JSON</a> or <a href="/json/cli_audit.py?help">CLI Audit</a></li>
+      <li><a href="/geojson/coopobs.py?help">Daily COOP Obs GeoJSON</a></li>
+      <li><a href="/geojson/lsr.py?help">Local Storm Reports</a></li>
+      <li><a href="/geojson/nexrad_attr.py?help">NEXRAD Storm Attributes</a></li>
+      <li><a href="/json/ibw_tags.py?help">Impact Based Warning Tags</a></li>
+      <li><a href="/json/radar.py?help">NEXRAD/TWDR Archive Metadata</a></li>
+      <li><a href="/json/ridge_current.py?help">NEXRAD/TWDR Current Metadata</a></li>
+      <li><a href="/json/snowfall_observations_v2.py?help">Six Hour Snowfall over past 48 Hours</a></li>
+      <li><a href="/json/outlook_progression.py?help">SPC/WPC Outlook Progression by Point by Date</a></li>
+      <li><a href="/json/spcmcd.py?help">SPC Mesoscale Discussions</a></li>
+      <li><a href="/json/spcoutlook.py?help">SPC Outlooks</a></li>
+      <li><a href="/json/spc_bysize.py?help">SPC Outlooks by Size</a></li>
+      <li><a href="/json/spcwatch.py?help">SPC Watches</a></li>
+      <li><a href="/json/raob.py?help">Sounding/RAOB Data</a></li>
+      <li><a href="/geojson/sps.py?help">Special Weather Statements (SPS)</a></li>
+      <li><a href="/json/sps_by_point.py?help">Special Weather Statements (SPS) by Point</a></li>
+      <li><a href="/geojson/nwstext.py?help">NWS Text Data</a> GeoJSON (geo-encoded by issuance center)</li>
+      <li><a href="/json/nwstext_search.py?help">Text Product Metadata Search</a></li>
+      <li><a href="/json/wpcmpd.py?help">WPC Mesoscale Discussions</a></li>
+      <li><a href="/json/wpcoutlook.py?help">WPC Outlooks</a></li>
+  </ul>
+  </div>
+</div>
+
+
+</div>
+<div class="col-md-4">
+
+<div class="card mb-3">
+  <div class="card-header">NWS Watch, Warning, and Advisories</div>
+  <div class="card-body">
+  <ul>
+      <li><a href="/geojson/sbw.py?help">Storm Based Warnings</a></li>
+      <li><a href="/json/outlook_and_vtec.py?help">SPC/WPC Outlooks and Coincident Warnings</a></li>
+      <li><a href="/json/sbw_by_point.py?help">Storm Based Warnings by Point</a></li>
+      <li><a href="/geojson/sbw_county_intersect.py?help">SBW Polygon County Intersection</a></li>
+      <li><a href="/geojson/vtec_event.py?help">VTEC Event Data</a></li>
+      <li><a href="/json/vtec_events.py?help">VTEC Events</a></li>
+      <li><a href="/json/vtec_events_bypoint.py?help">VTEC Events by Point</a></li>
+      <li><a href="/json/vtec_events_bystate.py?help">VTEC Events by State</a></li>
+      <li><a href="/json/vtec_events_byugc.py?help">VTEC Events by UGC</a></a>
+      <li><a href="/json/vtec_events_bywfo.py?help">VTEC Events by WFO</a></li>
+      <li><a href="/json/vtec_max_etn.py?help">VTEC Max Event ID</a></li>
+  </ul>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header">Miscellaneous</div>
+  <div class="card-body">
+  <ul>
+    <li><a href="/geojson/winter_roads.py?help">Iowa Winter Road Conditions</a></li>
+    <li><a href="/json/state_ugc.py?help">NWS State UGC Codes</a></li>
+    <li><a href="/json/prism.py?help">PRISM</a></li>
+    <li><a href="/json/stage4.py?help">Stage IV</a></li>
+    <li><a href="/geojson/usdm.py?help">US Drought Monitor</a></li>
+  </ul>
+  </div>
+</div>
+
+</div>
+</div><!-- ./row -->
+
+<h3>
+<a href="#cgi" aria-label="Jump to CGI Services"><i class="bi bi-bookmark" aria-hidden="true"></i></a>
+<a name="cgi"></a>Scriptable CGI Services</h3>
+
+<p>Some of the IEM data services are not ammenable to being used within a API
+service that aims for sub-second response times.  These services also consume
+a lot of resources and are not as scalable.  As such, we have a few services
+rooted within <code>/cgi-bin/</code> style 2000s era web services.  There are primative
+help pages for these services:</p>
+
+<ul>
+<li><a href="/cgi-bin/request/asos.py?help">ASOS/METAR Data (/cgi-bin/request/asos.py)</a></li>
+<li><a href="/cgi-bin/request/asos1min.py?help">ASOS 1 Minute NCEI Data (/cgi-bin/request/asos1min.py)</a></li>
+<li><a href="/cgi-bin/request/scp.py?help">ASOS Satellite + Cloud Product (/cgi-bin/request/scp.py)</a></li>
+<li><a href="/cgi-bin/request/gis/awc_gairmets.py?help">AWC Graphical Airmets (/cgi-bin/request/gis/awc_gairmets.py)</a></li>
+<li><a href="/cgi-bin/request/gis/cwas.py?help">Center Weather Advisories (/cgi-bin/request/gis/cwas.py)</a></li>
+<li><a href="/cgi-bin/request/coopobs.py?help">NWS COOP Obs (/cgi-bin/request/coopobs.py)</a></li>
+<li><a href="/cgi-bin/request/hads.py?help">HADS/DCP/SHEF Data (/cgi-bin/request/hads.py)</a></li>
+<li><a href="/cgi-bin/request/grx_rings.py?help">Gibson Ridge Range Ring Placefile (/cgi-bin/request/grx_rings.py)</a></li>
+<li><a href="/cgi-bin/request/hml.py?help">HML Processed Data (/cgi-bin/request/hml.py)</a></li>
+<li><a href="/cgi-bin/request/hourlyprecip.py?help">Hourly Precip (/cgi-bin/request/hourlyprecip.py)</a></li>
+<li><a href="/cgi-bin/request/nass_iowa.py?help">Iowa NASS (/cgi-bin/request/nass_iowa.py)</a></li>
+<li><a href="/cgi-bin/request/normals.py?help">NCEI/IEM Climate Normals (/cgi-bin/request/normals.py)</a></li>
+<li><a href="/cgi-bin/request/isusm.py?help">Iowa State Soil Moisture Network (/cgi-bin/request/isusm.py)</a></li>
+<li><a href="/cgi-bin/request/coop.py?help">IEM Climodat stations (/cgi-bin/request/coop.py)</a></li>
+<li><a href="/cgi-bin/request/daily.py?help">IEM Computed Daily Summaries (/cgi-bin/request/daily.py)</a></li>
+<li><a href="/cgi-bin/request/gis/lsr.py?help">Local Storm Reports (/cgi-bin/request/gis/lsr.py)</a></li>
+<li><a href="/cgi-bin/request/metars.py?help">METARs (/cgi-bin/request/metars.py)</a></li>
+<li><a href="/cgi-bin/request/other.py?help">Miscellaneous/Other (/cgi-bin/request/other.py)</a></li>
+<li><a href="/cgi-bin/request/mos.py?help">Model Output Statistics (/cgi-bin/request/mos.py)</a></li>
+<li><a href="/cgi-bin/request/nlaeflux.py?help">NLAE Flux Stations (/cgi-bin/request/nlaeflux.py)</a></li>
+<li><a href="/cgi-bin/request/gis/nexrad_storm_attrs.py?help">NEXRAD Storm Attributes (/cgi-bin/request/gis/nexrad_storm_attrs.py)</a></li>
+<li><a href="/cgi-bin/afos/retrieve.py?help">NWS Text Data (/cgi-bin/afos/retrieve.py)</a></li>
+<li><a href="/cgi-bin/request/gis/watchwarn.py?help">NWS Watch/Warning/Advisories (/cgi-bin/request/gis/watchwarn.py)</a></li>
+<li><a href="/cgi-bin/request/gis/pireps.py?help">Pilot Reports PIREPS (/cgi-bin/request/gis/pireps.py)</a></li>
+<li><a href="/cgi-bin/request/raster2netcdf.py?help">RASTER 2 netcdf (/cgi-bin/request/raster2netcdf.py)</a></li>
+<li><a href="/cgi-bin/request/raob.py?help">RAOB Soundings (/cgi-bin/request/raob.py)</a></li>
+<li><a href="/cgi-bin/request/rwis.py?help">Roadway Weather Information (RWIS) (/cgi-bin/request/rwis.py)</a></li>
+<li><a href="/cgi-bin/request/scan.py?help">Soil Climate Analysis Network (/cgi-bin/request/scan.py)</a></li>
+<li><a href="/cgi-bin/request/gis/sigmets.py?help">SIGMETs (/cgi-bin/request/gis/sigmets.py)</a></li>
+<li><a href="/cgi-bin/request/smos.py?help">SMOS (/cgi-bin/request/smos.py)</a></li>
+<li><a href="/cgi-bin/request/gis/spc_mcd.py?help">SPC MCD (/cgi-bin/request/gis/spc_mcd.py)</a></li>
+<li><a href="/cgi-bin/request/gis/outlooks.py?help">SPC/WPC Outlooks (/cgi-bin/request/gis/outlooks.py)</a></li>
+<li><a href="/cgi-bin/request/gis/spc_watch.py?help">SPC Convective Watches (/cgi-bin/request/gis/spc_watch.py)</a></li>
+<li><a href="/cgi-bin/request/gis/sps.py?help">Special Weather Statements SPS (/cgi-bin/request/gis/sps.py)</a></li>
+<li><a href="/cgi-bin/request/talltowers.py?help">Talltowers (/cgi-bin/request/talltowers.py)</a></li>
+<li><a href="/cgi-bin/request/gis/watch_by_county.py?help">SPC Watch by County (/cgi-bin/request/gis/watch_by_county.py)</a></li>
+<li><a href="/cgi-bin/request/tempwind_aloft.py?help">Temp Winds Aloft (/cgi-bin/request/tempwind_aloft.py)</a></li>
+<li><a href="/cgi-bin/request/taf.py?help">Terminal Aerodome Forecast TAF (/cgi-bin/request/taf.py)</a></li>
+<li><a href="/cgi-bin/request/uscrn.py?help">US Climate Reference Network (/cgi-bin/request/uscrn.py)</a></li>
+<li><a href="/cgi-bin/request/gis/wpc_mpd.py?help">WPC Mesoscale Precip Discussions (/cgi-bin/request/gis/wpc_mpd.py)</a></li>
+<li><a href="/cgi-bin/mywindrose.py?help">Windrose Generator (/cgi-bin/mywindrose.py)</a></li>
+
+</ul>
+
+<h3>API Stability?</h3>
+
+<p>In general, we do not try to break things but bugs happen.  As always,
+please <a href="/info/contacts.php">email us</a> with any concerns you have.  We
+are extremely responsive to email :)
+  </div><!--/.container-->
+</main>
+<footer>
+    <div class="container" id="iem-footer" aria-label="Site footer">
+        <div class="row">
+
+            <!-- footer-associates -->
+            <section class="footer-associates col-sm-12 col-md-3">
+                <ul>
+                    <li><a href="https://iastate.edu"><img src="/vendor/img/isu-stacked.svg" class="wordmark-isu" alt="Iowa State University"></a></li>
+                    <li><a href="https://www.ag.iastate.edu">College of Ag</a></li>
+                    <li><a href="https://www.agron.iastate.edu">Department of Agronomy</a></li>
+                </ul>
+            </section>
+
+            <!-- footer-contact -->
+            <section class="footer-contact col-sm-12 col-md-3" aria-labelledby="footer-contact-heading">
+                <h2 id="footer-contact-heading" class="visually-hidden">Contact</h2>
+                <address class="mb-2">
+                    <strong>Department of Agronomy</strong><br>
+                    <a href="https://maps.google.com/?q=716+Farm+House+Ln+Ames,+IA+50011">716 Farm House Ln<br>
+                    Ames, IA 50011</a>
+                </address>
+                <a href="mailto:akrherz@iastate.edu">akrherz@iastate.edu</a><br>
+            </section>
+
+            <!-- footer-social -->
+            <section class="footer-social col-sm-12 col-md-3" aria-labelledby="footer-social-heading">
+                <h2 id="footer-social-heading" class="visually-hidden">Social media</h2>
+                <ul class=" labeled">
+                <li><a href="https://www.facebook.com/IEM-157789644737/"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Facebook</a></li>
+                <li><a href="https://x.com/akrherz"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Twitter</a></li>
+                <li><a href="https://github.com/akrherz/iem"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Github</a></li>
+                <li><a href="https://youtube.com/akrherz"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> YouTube</a></li>
+                <li><a href="/rss.php"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> RSS</a></li>
+                </ul>
+            </section>
+
+            <!-- footer-legal -->
+            <section class="footer-legal col-sm-12 col-md-3" aria-labelledby="footer-legal-heading">
+                <h2 id="footer-legal-heading" class="visually-hidden">Legal</h2>
+                <p>Copyright &copy; 2001-2026<br>
+                                Iowa State University<br>
+                                of Science and Technology<br>
+                                All rights reserved.</p>
+                <ul>
+                    <li><a href="https://www.policy.iastate.edu/policy/discrimination">Non-discrimination Policy</a></li>
+                    <li><a href="https://www.policy.iastate.edu/electronicprivacy">Privacy Policy</a></li>
+                    <li><a href="https://digitalaccess.iastate.edu">Digital Access &amp; Accessibility</a></li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+</footer>
+    <script src="/vendor/bootstrap/5.3.6/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/iastate-iem.js"></script>
+
+      </body>
+</html>

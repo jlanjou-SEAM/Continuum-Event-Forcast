@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Data BMKG yang tersedia dalam format terbuka dan mudah digunakan kembali, dengan tujuan untuk meningkatkan transparansi dan akuntabilitas pemerintah.">
+    <meta name="keywords" content="BMKG, Pemerintah, Indonesia Data, Terbuka, Cuaca, Gempabumi">
+    <meta name="author" content="BMKG">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Data Terbuka BMKG">
+    <meta property="og:image" content="https://data.bmkg.go.id/include/assets/img/splash.png">
+    <meta property="og:description" content="Data BMKG yang tersedia dalam format terbuka dan mudah digunakan kembali, dengan tujuan untuk meningkatkan transparansi dan akuntabilitas pemerintah.">
+    <meta property="og:url" content="https://data.bmkg.go.id">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@infoBMKG">
+    <meta name="twitter:creator" content="@infoBMKG">
+    <meta name="twitter:title" content="Data Terbuka BMKG">
+    <meta name="twitter:description" content="Data BMKG yang tersedia dalam format terbuka dan mudah digunakan kembali, dengan tujuan untuk meningkatkan transparansi dan akuntabilitas pemerintah.">
+    <meta name="twitter:image" content="https://data.bmkg.go.id/include/assets/img/splash.png">
+
+    <title>Data Terbuka BMKG</title>
+    <link rel="shortcut icon" href="include/assets/img/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="include/assets/img/favicon-60@3x.png" />
+    <style type="text/css">@font-face {font-family:'Lato';font-style:normal;font-weight:400;src:url(/cf-fonts/s/lato/5.2.7/latin-ext/400/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Lato';font-style:normal;font-weight:400;src:url(/cf-fonts/s/lato/5.2.7/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Lato';font-style:italic;font-weight:400;src:url(/cf-fonts/s/lato/5.2.7/latin/400/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Lato';font-style:italic;font-weight:400;src:url(/cf-fonts/s/lato/5.2.7/latin-ext/400/italic.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Roboto';font-style:normal;font-weight:500;src:url(/cf-fonts/s/roboto/5.2.10/latin-ext/500/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Roboto';font-style:normal;font-weight:500;src:url(/cf-fonts/s/roboto/5.2.10/symbols/500/normal.woff2);unicode-range:U+0001-000C,U+000E-001F,U+007F-009F,U+20DD-20E0,U+20E2-20E4,U+2150-218F,U+2190,U+2192,U+2194-2199,U+21AF,U+21E6-21F0,U+21F3,U+2218-2219,U+2299,U+22C4-22C6,U+2300-243F,U+2440-244A,U+2460-24FF,U+25A0-27BF,U+2800-28FF,U+2921-2922,U+2981,U+29BF,U+29EB,U+2B00-2BFF,U+4DC0-4DFF,U+FFF9-FFFB,U+10140-1018E,U+10190-1019C,U+101A0,U+101D0-101FD,U+102E0-102FB,U+10E60-10E7E,U+1D2C0-1D2D3,U+1D2E0-1D37F,U+1F000-1F0FF,U+1F100-1F1AD,U+1F1E6-1F1FF,U+1F30D-1F30F,U+1F315,U+1F31C,U+1F31E,U+1F320-1F32C,U+1F336,U+1F378,U+1F37D,U+1F382,U+1F393-1F39F,U+1F3A7-1F3A8,U+1F3AC-1F3AF,U+1F3C2,U+1F3C4-1F3C6,U+1F3CA-1F3CE,U+1F3D4-1F3E0,U+1F3ED,U+1F3F1-1F3F3,U+1F3F5-1F3F7,U+1F408,U+1F415,U+1F41F,U+1F426,U+1F43F,U+1F441-1F442,U+1F444,U+1F446-1F449,U+1F44C-1F44E,U+1F453,U+1F46A,U+1F47D,U+1F4A3,U+1F4B0,U+1F4B3,U+1F4B9,U+1F4BB,U+1F4BF,U+1F4C8-1F4CB,U+1F4D6,U+1F4DA,U+1F4DF,U+1F4E3-1F4E6,U+1F4EA-1F4ED,U+1F4F7,U+1F4F9-1F4FB,U+1F4FD-1F4FE,U+1F503,U+1F507-1F50B,U+1F50D,U+1F512-1F513,U+1F53E-1F54A,U+1F54F-1F5FA,U+1F610,U+1F650-1F67F,U+1F687,U+1F68D,U+1F691,U+1F694,U+1F698,U+1F6AD,U+1F6B2,U+1F6B9-1F6BA,U+1F6BC,U+1F6C6-1F6CF,U+1F6D3-1F6D7,U+1F6E0-1F6EA,U+1F6F0-1F6F3,U+1F6F7-1F6FC,U+1F700-1F7FF,U+1F800-1F80B,U+1F810-1F847,U+1F850-1F859,U+1F860-1F887,U+1F890-1F8AD,U+1F8B0-1F8BB,U+1F8C0-1F8C1,U+1F900-1F90B,U+1F93B,U+1F946,U+1F984,U+1F996,U+1F9E9,U+1FA00-1FA6F,U+1FA70-1FA7C,U+1FA80-1FA89,U+1FA8F-1FAC6,U+1FACE-1FADC,U+1FADF-1FAE9,U+1FAF0-1FAF8,U+1FB00-1FBFF;font-display:swap;}@font-face {font-family:'Roboto';font-style:normal;font-weight:500;src:url(/cf-fonts/s/roboto/5.2.10/greek/500/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Roboto';font-style:normal;font-weight:500;src:url(/cf-fonts/s/roboto/5.2.10/latin/500/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Roboto';font-style:normal;font-weight:500;src:url(/cf-fonts/s/roboto/5.2.10/greek-ext/500/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:'Roboto';font-style:normal;font-weight:500;src:url(/cf-fonts/s/roboto/5.2.10/cyrillic/500/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Roboto';font-style:normal;font-weight:500;src:url(/cf-fonts/s/roboto/5.2.10/vietnamese/500/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Roboto';font-style:normal;font-weight:500;src:url(/cf-fonts/s/roboto/5.2.10/cyrillic-ext/500/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Roboto';font-style:normal;font-weight:500;src:url(/cf-fonts/s/roboto/5.2.10/math/500/normal.woff2);unicode-range:U+0302-0303,U+0305,U+0307-0308,U+0310,U+0312,U+0315,U+031A,U+0326-0327,U+032C,U+032F-0330,U+0332-0333,U+0338,U+033A,U+0346,U+034D,U+0391-03A1,U+03A3-03A9,U+03B1-03C9,U+03D1,U+03D5-03D6,U+03F0-03F1,U+03F4-03F5,U+2016-2017,U+2034-2038,U+203C,U+2040,U+2043,U+2047,U+2050,U+2057,U+205F,U+2070-2071,U+2074-208E,U+2090-209C,U+20D0-20DC,U+20E1,U+20E5-20EF,U+2100-2112,U+2114-2115,U+2117-2121,U+2123-214F,U+2190,U+2192,U+2194-21AE,U+21B0-21E5,U+21F1-21F2,U+21F4-2211,U+2213-2214,U+2216-22FF,U+2308-230B,U+2310,U+2319,U+231C-2321,U+2336-237A,U+237C,U+2395,U+239B-23B7,U+23D0,U+23DC-23E1,U+2474-2475,U+25AF,U+25B3,U+25B7,U+25BD,U+25C1,U+25CA,U+25CC,U+25FB,U+266D-266F,U+27C0-27FF,U+2900-2AFF,U+2B0E-2B11,U+2B30-2B4C,U+2BFE,U+3030,U+FF5B,U+FF5D,U+1D400-1D7FF,U+1EE00-1EEFF;font-display:swap;}</style>
+    <link rel="stylesheet" href="include/assets/styles.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+</head>
+<body class="is-boxed has-animations">
+    <div class="body-wrap boxed-container">
+        <header class="site-header">
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0">
+                            <a href=".">
+                                <img src="include/assets/img/logo-bmkg.svg" width="48" height="auto">
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="hero text-center">
+                <div class="container-sm">
+                    <div class="hero-inner">
+                        <h1 class="hero-title h2-mobile mt-0 is-revealing">Data Terbuka BMKG</h1>
+                        <p class="hero-paragraph is-revealing">Data BMKG yang tersedia dalam format terbuka dan mudah digunakan kembali, dengan tujuan untuk meningkatkan transparansi dan akuntabilitas pemerintah, serta untuk meningkatkan partisipasi masyarakat dalam mengawal kinerja pemerintah.</p>
+                        <div class="control control-expanded">
+                            <a class="button button-primary button-shadow" href="#data">Telusuri Lebih Lanjut</a>
+                        </div>
+                        <div class="hero-browser">
+                            <div class="bubble-3 is-revealing">
+                                <svg width="427" height="286" viewBox="0 0 427 286" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs>
+                                        <path d="M213.5 286C331.413 286 427 190.413 427 72.5S304.221 16.45 186.309 16.45C68.396 16.45 0-45.414 0 72.5S95.587 286 213.5 286z" id="bubble-3-a"/>
+                                    </defs>
+                                    <g fill="none" fill-rule="evenodd">
+                                        <mask id="bubble-3-b" fill="#fff">
+                                            <use xlink:href="#bubble-3-a"/>
+                                        </mask>
+                                        <use fill="#4E8FF8" xlink:href="#bubble-3-a"/>
+                                        <path d="M64.5 129.77c117.913 0 213.5-95.588 213.5-213.5 0-117.914-122.779-56.052-240.691-56.052C-80.604-139.782-149-201.644-149-83.73c0 117.913 95.587 213.5 213.5 213.5z" fill="#1274ED" mask="url(#bubble-3-b)"/>
+                                        <path d="M381.5 501.77c117.913 0 213.5-95.588 213.5-213.5 0-117.914-122.779-56.052-240.691-56.052C236.396 232.218 168 170.356 168 288.27c0 117.913 95.587 213.5 213.5 213.5z" fill="#75ABF3" mask="url(#bubble-3-b)"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="bubble-4 is-revealing">
+                                <svg width="230" height="235" viewBox="0 0 230 235" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs>
+                                        <path d="M196.605 234.11C256.252 234.11 216 167.646 216 108 216 48.353 167.647 0 108 0S0 48.353 0 108s136.959 126.11 196.605 126.11z" id="bubble-4-a"/>
+                                    </defs>
+                                    <g fill="none" fill-rule="evenodd">
+                                        <mask id="bubble-4-b" fill="#fff">
+                                            <use xlink:href="#bubble-4-a"/>
+                                        </mask>
+                                        <use fill="#7CE8DD" xlink:href="#bubble-4-a"/>
+                                        <circle fill="#3BDDCC" mask="url(#bubble-4-b)" cx="30" cy="108" r="108"/>
+                                        <circle fill="#B1F1EA" opacity=".7" mask="url(#bubble-4-b)" cx="265" cy="88" r="108"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="bubble-2 is-revealing">
+                                <svg width="179" height="126" viewBox="0 0 179 126" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs>
+                                        <path d="M104.697 125.661c41.034 0 74.298-33.264 74.298-74.298s-43.231-7.425-84.265-7.425S0-28.44 0 12.593c0 41.034 63.663 113.068 104.697 113.068z" id="bubble-2-a"/>
+                                    </defs>
+                                    <g fill="none" fill-rule="evenodd">
+                                        <mask id="bubble-2-b" fill="#fff">
+                                            <use xlink:href="#bubble-2-a"/>
+                                        </mask>
+                                        <use fill="#838DEA" xlink:href="#bubble-2-a"/>
+                                        <path d="M202.697 211.661c41.034 0 74.298-33.264 74.298-74.298s-43.231-7.425-84.265-7.425S98 57.56 98 98.593c0 41.034 63.663 113.068 104.697 113.068z" fill="#626CD5" mask="url(#bubble-2-b)"/>
+                                        <path d="M43.697 56.661c41.034 0 74.298-33.264 74.298-74.298s-43.231-7.425-84.265-7.425S-61-97.44-61-56.407C-61-15.373 2.663 56.661 43.697 56.661z" fill="#B1B6F1" opacity=".64" mask="url(#bubble-2-b)"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="hero-browser-inner is-revealing">
+                                <img src="include/assets/img/intro.png" class="intro">
+                            </div>
+                            <div class="bubble-1 is-revealing">
+                                <svg width="61" height="52" viewBox="0 0 61 52" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs>
+                                        <path d="M32 43.992c17.673 0 28.05 17.673 28.05 0S49.674 0 32 0C14.327 0 0 14.327 0 32c0 17.673 14.327 11.992 32 11.992z" id="bubble-1-a"/>
+                                    </defs>
+                                    <g fill="none" fill-rule="evenodd">
+                                        <mask id="bubble-1-b" fill="#fff">
+                                            <use xlink:href="#bubble-1-a"/>
+                                        </mask>
+                                        <use fill="#FF6D8B" xlink:href="#bubble-1-a"/>
+                                        <path d="M2 43.992c17.673 0 28.05 17.673 28.05 0S19.674 0 2 0c-17.673 0-32 14.327-32 32 0 17.673 14.327 11.992 32 11.992z" fill="#FF4F73" mask="url(#bubble-1-b)"/>
+                                        <path d="M74 30.992c17.673 0 28.05 17.673 28.05 0S91.674-13 74-13C56.327-13 42 1.327 42 19c0 17.673 14.327 11.992 32 11.992z" fill-opacity=".8" fill="#FFA3B5" mask="url(#bubble-1-b)"/>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+		<section id="data" class="features section text-center">
+                <div class="container">
+                    <div class="features-inner section-inner has-bottom-divider">
+                        <div class="features-wrap">
+                            <div class="feature is-revealing">
+                                <div class="feature-inner inside-link">
+                                    <div class="feature-icon">
+                                        <img class="data-icon" src="include/assets/img/cuaca.svg">
+                                    </div>
+                                    <h3 class="feature-title">Data Prakiraan Cuaca</h3>
+                                    <p class="text-sm">Data prakiraan cuaca kelurahan dan desa di Indonesia dalam waktu 3 harian.</p>
+									<a class="all-link" href="prakiraan-cuaca"></a>
+									<div class="control control-expanded">
+										<a class="button button-primary button-shadow" href="prakiraan-cuaca">Selengkapnya</a>
+									</div>
+                                </div>
+                            </div>
+                            <div class="feature is-revealing">
+                                <div class="feature-inner inside-link">
+                                    <div class="feature-icon">
+                                        <img class="data-icon" src="include/assets/img/gempa.svg">
+                                    </div>
+                                    <h3 class="feature-title">Data Gempabumi</h3>
+                                    <p class="text-sm">Data kejadian gempabumi yang terjadi di seluruh wilayah Indonesia.</p>
+									<a class="all-link" href="gempabumi"></a>
+									<div class="control control-expanded">
+										<a class="button button-primary button-shadow" href="gempabumi">Selengkapnya</a>
+									</div>
+                                </div>
+                            </div>
+							<div class="feature is-revealing">
+                                <div class="feature-inner inside-link">
+                                    <div class="feature-icon">
+                                        <img class="data-icon" src="../include/assets/img/nowcast.svg">
+                                    </div>
+                                    <h3 class="feature-title">Peringatan Dini Cuaca</h3>
+                                    <p class="text-sm">Data peringatan dini cuaca (nowcast) hingga level kecamatan di Indonesia.</p>
+									<a class="all-link" href="../peringatan-dini-cuaca"></a>
+									<div class="control control-expanded">
+										<a class="button button-primary button-shadow" href="../peringatan-dini-cuaca">Selengkapnya</a>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="newsletter section">
+                <div class="container-sm">
+                    <div class="newsletter-inner section-inner">
+                        <div class="newsletter-header text-center is-revealing">
+                            <h2 class="section-title mt-0">Hubungi Kami</h2>
+                            <p class="section-paragraph">Silakan hubungi kami melalui email</p>
+                        </div>
+                        <div class="footer-form newsletter-form field field-grouped is-revealing">
+                            <div class="control control-expanded">
+                                <a class="button button-primary button-shadow" href="#">support[at]bmkg.go.id</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+		
+		<footer class="site-footer text-light">
+            <div class="container">
+                <div class="site-footer-inner">
+                    <div class="brand footer-brand">
+                        <a href="/">
+                            <img src="include/assets/img/logo-bmkg.svg" width="36" height="auto">
+                        </a>
+                    </div>
+                    <ul class="footer-links list-reset">
+                        <li>
+                            <a href="tentang">Tentang</a>
+                        </li>
+                        <li>
+                            <a href="https://www.bmkg.go.id" target="_blank">BMKG.go.id</a>
+                        </li>
+                    </ul>
+                    <ul class="footer-social-links list-reset">
+                        <li>
+                            <a href="https://twitter.com/infoBMKG" target="_blank">
+                                <span class="screen-reader-text">Twitter</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" role="img" aria-labelledby="twitter-icon">
+                                    <title id="twitter-icon">Twitter</title>
+                                    <path fill="#FFFFFF" d="M31.52 17.716c-.627.278-1.302.466-2.008.55.722-.432 1.275-1.116 1.536-1.933-.676.4-1.422.69-2.22.847-.637-.68-1.546-1.103-2.552-1.103-1.93 0-3.494 1.565-3.494 3.495 0 .273.03.54.09.796-2.904-.146-5.48-1.536-7.205-3.653-.3.52-.473 1.12-.473 1.76 0 1.212.617 2.28 1.555 2.908-.576-.017-1.115-.176-1.587-.436v.043c0 1.694 1.205 3.107 2.805 3.427-.295.082-.603.123-.923.123-.225 0-.444-.02-.657-.062.445 1.388 1.736 2.4 3.266 2.425-1.196.94-2.704 1.498-4.34 1.498-.283 0-.562-.013-.835-.046 1.55.99 3.385 1.568 5.36 1.568 6.43 0 9.944-5.323 9.944-9.94 0-.153-.003-.306-.01-.454.684-.492 1.278-1.108 1.745-1.81"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/infoBMKG" target="_blank">
+                                <span class="screen-reader-text">Facebook</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" role="img" aria-labelledby="facebook-icon">
+                                    <title id="facebook-icon">Facebook</title>
+                                    <path fill="#FFFFFF" d="M18.896 20.12h1.758v-1.708c0-.753.02-1.915.566-2.635.576-.762 1.368-1.28 2.73-1.28 2.218 0 3.15.316 3.15.316l-.438 2.605s-.73-.212-1.417-.212c-.684 0-1.296.245-1.296.93v1.985h2.803l-.194 2.547h-2.61v8.84h-3.297v-8.84h-1.758V20.12z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/infoBMKG" target="_blank">
+                                <span class="screen-reader-text">Instagram</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" role="img" aria-labelledby="instagram-icon">
+                                    <title id="instagram-icon">Instagram</title>
+                                    <path fill="#FFFFFF" d="M29.76 29.03v-7.373h-1.537c.152.48.23.975.23 1.49 0 .958-.243 1.838-.73 2.647-.485.807-1.146 1.447-1.98 1.918-.834.47-1.744.705-2.73.705-1.495 0-2.773-.514-3.835-1.543-1.062-1.027-1.593-2.27-1.593-3.726 0-.517.076-1.013.228-1.49H16.21v7.373c0 .2.065.37.2.5.13.14.296.2.494.2H29.07c.188 0 .352-.06.488-.2s.202-.3.202-.49zm-3.233-6.064c0-.94-.343-1.743-1.03-2.406-.686-.664-1.515-.996-2.486-.996-.96 0-1.78.332-2.47.996-.68.663-1.03 1.466-1.03 2.406 0 .942.35 1.743 1.03 2.407s1.51.996 2.48.996c.975 0 1.8-.34 2.49-1s1.03-1.47 1.03-2.41zm3.233-4.097v-1.88c0-.22-.076-.4-.23-.56-.15-.158-.336-.235-.556-.235h-1.98c-.22 0-.406.08-.558.233-.15.155-.228.34-.228.552v1.876c0 .22.076.404.228.556s.337.23.558.23h1.98c.22 0 .406-.078.557-.23.16-.15.23-.338.23-.558zm1.98-2.37v12.99c0 .61-.22 1.14-.66 1.58-.44.44-.967.66-1.582.66H16.502c-.614 0-1.142-.22-1.582-.66-.44-.44-.66-.97-.66-1.586V16.5c0-.614.22-1.142.66-1.582.44-.44.967-.66 1.582-.66h12.996c.615 0 1.14.22 1.582.66.44.44.66.967.66 1.58z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/infoBMKG" target="_blank">
+                                <span class="screen-reader-text">YouTube</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" role="img" aria-labelledby="youtube-icon">
+                                    <title id="youtube-icon">YouTube</title>
+                                    <path fill="#FFFFFF" d="M27.68 23c0-.3-.12-.52-.364-.657l-6.24-3.9c-.253-.163-.517-.172-.793-.025-.27.147-.402.374-.402.683v7.803c0 .31.136.537.404.682.13.067.256.1.378.1.164 0 .3-.042.416-.122l6.24-3.9c.243-.14.365-.36.365-.66zm6.242 0c0 .78-.004 1.39-.012 1.83-.008.438-.043.993-.104 1.662-.06.672-.15 1.27-.274 1.8-.13.592-.41 1.092-.84 1.5-.43.405-.935.64-1.512.705-1.804.203-4.53.303-8.18.303-3.65 0-6.375-.1-8.18-.304-.576-.064-1.082-.3-1.517-.706-.435-.407-.717-.907-.847-1.5-.114-.527-.2-1.127-.263-1.8-.06-.668-.095-1.223-.103-1.662-.008-.438-.012-1.05-.012-1.828 0-.78.004-1.39.012-1.828.008-.44.042-.995.103-1.665.062-.67.152-1.27.274-1.797.13-.593.41-1.093.84-1.5.432-.407.936-.642 1.513-.707 1.804-.203 4.53-.305 8.18-.305 3.648 0 6.375.102 8.18.305.576.065 1.08.3 1.516.707.436.406.718.906.85 1.5.112.528.2 1.127.26 1.797.062.67.097 1.226.104 1.665.008.438.012 1.048.012 1.83z"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer-copyright">&copy; 2026 - Badan Meteorologi, Klimatologi, dan Geofisika</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="include/assets/main.min.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a5331fdf9d3d9ab6',t:'MTc5MzQ1NDU4MQ=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5331fdf9d3d9ab6',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

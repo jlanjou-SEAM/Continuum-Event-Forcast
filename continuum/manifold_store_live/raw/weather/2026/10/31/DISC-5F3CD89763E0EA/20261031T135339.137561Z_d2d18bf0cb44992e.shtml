@@ -1,0 +1,1206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html lang="en">
+<head>
+<title>NCEP Meteorological Assimilation Data Ingest System (MADIS)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">    
+<meta name="author" content="MADIS Support Team">
+<link href="css/header.css" rel="stylesheet" type="text/css" >
+<!--<script type="text/javascript" src="/js/ForecastSearch.js"></script>-->
+
+    <!-- site-wide style sheets -->
+    <link rel="stylesheet" type="text/css" href="css/ncepmadis.css" media="all">
+    
+<!--    <link rel="stylesheet" type="text/css" href="css/print.css" media="print">-->
+    
+    <!-- A style sheet for submenus of submenus -->
+<!--    <link rel="stylesheet" type="text/css" href="css/gsd-more-submenus.css" media="all">-->
+    
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/gsd/css/ie.css" media="all"><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/gsd/css/ie7.css" media="all"><![endif]-->
+
+<script type="text/javascript" src="css/ie.js"></script>
+    
+<script id="_fed_an_js_tag" type="text/javascript" src="/federated-analytics.js?agency=OAR&amp;sub-agency=ESRLGSD&amp;sp=find&amp;yt=true"></script>
+
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="TMPC9-DCHA2-45L6L-3A6SC-8WMVB",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"TMPC9-DCHA2-45L6L-3A6SC-8WMVB";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="qyqup4ax2fklo2xf6lrq-f-e796576b2-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1320759","ak.ai":parseInt("795019",10),"ak.ol":"0","ak.cr":1,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"2fb48f8e","ak.r":46469,"ak.a2":n,"ak.m":"dscg","ak.n":"essl","ak.cport":9227,"ak.gh":"23.201.193.144","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1793454819","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==iiyqrgdKuJyyWBYjdCOXh/JDvoOGbtKa7dwl8YYgnF7oTKfwxn/Oh7kifjZTrn0eT0TQT4iie537hl9nkBLDJBoOdYeWyLLIVRP3305KTCboLBNLFca0zBbbME7/y3SU9kigfNvarS72TmM/PX8gHCxWJXzH07mQsBCcvrgnQtOy80IpjsxX7y9SQHvg4Ta64zJukcflnUixHlsoQvTgZbV3kIAFIvNXrb824O3q6icpzWK2wonP+SleRdYF9eShEqtlSYWfEGrH6F9WoaDSAs8oRYpkd6W/UTrWPDc/BNjIPdhz+WiKBMazTB9uFfmfKjSv6NTEiUoBVrIloZGKDiMgN4aEhsfuQM6YJKVZSAT9oSm8T8m/GXNWt4xuEIJgFksEKfA65klmtp2RqDaE43er/YQdS1TLX7dyxBdGB6g=","ak.pv":"4","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+<!--<body onload="startList()">-->
+
+<div id="container">
+<div class="header">
+
+  <div class="header-content">
+    <a href="https://www.noaa.gov" class="header-noaa-icon"><img src="images/header-noaa.png" alt="NOAA"></a>
+    <a href="https://www.weather.gov" class="header-nws-icon"><img src="images/header-nws.png" alt="NOAA"></a>
+    <a href="https://www.commerce.gov" class="header-doc"><img src="images/header_doc.png" alt="United States Department of Commerce"></a>
+    <div class="header-center-text"><a class="header-center-text" href="https://www.nco.ncep.noaa.gov">NCEP CENTRAL OPERATIONS</a></div>
+    <div class="header-noaa-text"><a class="header-noaa-text" href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a></div>
+  </div>
+</div>
+<div class="header-shadow"><div class="header-shadow-content"></div></div>
+
+     <!-- end major_header -->
+
+  <!-- major navigation -->
+<!-- Top Menu Navigation -->
+<div class="topnav">
+  <ul id="topnav">
+
+    <!-- Home Link -->
+    <li>
+      <div class="section-link">
+        <a href="#">home</a>
+      </div>
+    </li>
+
+    <!-- News Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/news">news</a>
+      </div>
+      <div class="drop">
+        <ul>
+          <li><a href="https://www.weather.gov/news">NWS News</a></li>
+          <li><a href="https://www.nws.noaa.gov/com/weatherreadynation/calendar.html">Events</a></li>
+          <li><a href="https://www.weather.gov/socialmedia">Social Media</a></li>
+          <li><a href="https://www.nws.noaa.gov/om/brochures.shtml">Pubs/Brochures/Booklets</a></li>
+          <li><a href="https://www.noaa.gov/NOAA-Communications">NWS Media Contacts</a></li>
+        </ul>
+      </div>
+    </li>
+
+    <!-- Search Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/search">search</a>
+      </div>
+      <div class="drop">
+        <div class="site-search">
+          <form method="get" action="https://search.usa.gov/search" style="margin-bottom: 0; margin-top: 0;">
+            <input type="hidden" name="v:project" value="firstgov">
+            <label for="query">Search For</label>
+            <input type="text" name="query" id="query" size="12" >
+            <input type="submit" value="Go" >
+            <p>
+              <input type="radio" name="affiliate" checked="checked" value="nws.noaa.gov" id="nws" >
+              <label for="nws" class="search-scope">NWS</label>
+              <input type="radio" name="affiliate" value="noaa.gov" id="noaa" >
+              <label for="noaa" class="search-scope">All NOAA</label>
+            </p>
+          </form>
+        </div>
+      </div>
+    </li>
+
+    <!-- Forecast Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/search">forecast</a>
+      </div>
+      <div class="drop">
+        <div id="forecast-lookup" class="site-search">
+          <form name="getForecast" id="getForecast" action="https://forecast.weather.gov/zipcity.php" method="get">
+            <label for="inputstring">Local forecast by <br>"City, St" or ZIP code</label>
+            <input id="inputstring" name="inputstring" type="text" size="12" value="Enter location ..." onclick="this.value=''" >
+            <input name="btnSearch" id="btnSearch" type="submit" value="Go" >
+            <div id="txtError">
+            <div id="errorNoResults" style="display:none;">Sorry, the location you searched for was not found. Please try another search.</div>
+            <div id="errorMultipleResults" style="display:none">Multiple locations were found. Please select one of the following:</div>
+            <div id="errorChoices" style="display:none"></div>
+              <input id="btnCloseError" type="button" value="Close" style="display:none" >
+            </div>
+            <div id="txtHelp"><a style="text-decoration: underline;" href="javascript:void(window.open('https://weather.gov/ForecastSearchHelp.html','locsearchhelp','status=0,toolbar=0,location=0,menubar=0,directories=0,resizable=1,scrollbars=1,height=500,width=530').focus());">Location Help</a></div>
+          </form>
+                        </div><!-- <div id="forecast-lookup"> -->
+          </div><!-- <div class="drop"> -->
+    </li>
+    <!-- About Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/about">about</a>
+      </div>
+      <div class="drop">
+          <ul>
+            <li><a href="https://www.weather.gov/about">About NWS</a></li>
+            <li><a href="https://www.weather.gov/organization">Organization</a></li>
+            <li><a href="https://sites.google.com/a/noaa.gov/nws-best-practices/">For NWS Employees</a></li>
+            <li><a href="https://www.weather.gov/international/">International</a></li>
+            <li><a href="https://www.weather.gov/organization/ncep">National Centers</a></li>
+            <li><a href="https://www.nws.noaa.gov/tg/">Products and Services</a></li>
+            <li><a href="https://www.weather.gov/contact">Contact Us</a></li>
+            <li><a href="https://w1.weather.gov/glossary/">Glossary</a></li>
+          </ul>
+        </div>
+    </li>
+
+  </ul><!-- End of top nav ul -->
+</div><!-- End of topnav div -->
+
+</div> <!-- end banner -->
+
+<div id="pbody">
+    <!-- minor navigation -->
+            <div style="width:160px" id="minor_nav">
+
+<!--<br>-->
+<ul style="word-wrap:break-word" id="vertnav">
+<br>
+   <li><a href="index.shtml">MADIS Home</a></li>
+</ul>
+<dl>
+ <dt>News</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <li><a href="madis_recent.shtml">What's Here - v4.0!</a></li>
+<!-- <li><a href="madis_comingsoon.shtml">What's Coming?</a></li>
+-->
+</ul>
+<dl>
+<dt>Data Information</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">  
+ <li><a href="madis_datasets.shtml">Overview</a></li>
+ <li>Descriptions&nbsp;&nbsp;>
+    <ul>
+       <li><a href="madis_sfc.shtml"><font color="FFFF66">Meteorological Surface</font></a></li>
+       <li class="indented_vertnav"><a href="madis_mesonet.shtml">Integrated Mesonet</a></li>
+       <li class="indented_vertnav"><a href="madis_cwop.shtml">Citizen Weather Observer Program (CWOP)</a></li>
+       <li class="indented_vertnav"><a href="madis_rwis_clarus.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+       <li class="indented_vertnav"><a href="national_mesonet.shtml">National Mesonet</a></li>
+       <li class="indented_vertnav"><a href="madis_metar.shtml">METAR</a></li>
+       <!--<li class="indented_vertnav"><a href="madis_OMO.shtml">1-minute ASOS</a></li>
+       --><li class="indented_vertnav"><a href="madis_maritime.shtml">Maritime</a></li>
+	<li class="indented_vertnav"><a href="madis_wxtelematics.shtml">Weather Telematics</a></li>
+       <li class="indented_vertnav"><a href="madis_nepp.shtml">New England Pilot Project (NEPP)</a></li>
+       <li class="indented_vertnav"><a href="madis_crn.shtml">Climate Reference Network (CRN)</a></li>
+       <li class="indented_vertnav"><a href="madis_ushcn.shtml">U.S. Climatology Net-Modernization (USHCN-M)</a></li>
+       <li><a href="madis_hydro.shtml"><font color="FFFF66">Hydrologic Surface</font></a></li>
+       <li><a href="madis_raob.shtml"><font color="FFFF66">Radiosonde</font></a></li>
+       <li><a href="madis_npn.shtml"><font color="FFFF66">NOAA Profiler Network</font></a></li>
+       <li><a href="madis_gpsmet.shtml"><font color="FFFF66">GPS-Met</font></a></li>
+       <li><a href="madis_acars.shtml"><font color="FFFF66">Aircraft Based </font></a></li>
+       <li><a href="madis_map.shtml"><font color="FFFF66">Multi-Agency Profiler (CAP)</font></a></li>
+       <li><a href="madis_rdmtr.shtml"><font color="FFFF66">Radiometer</font></a></li>
+       <li><a href="madis_satwnd.shtml"><font color="FFFF66">Satellite Wind</font></a></li>
+       <li><a href="madis_satsnd.shtml"><font color="FFFF66">Satellite Sounding</font></a></li>
+       <li><a href="madis_satrad.shtml"><font color="FFFF66">Satellite Radiance</font></a></li>
+       <li><a href="madis_snow.shtml"><font color="FFFF66">Snow</font></a></li>
+       <li><a href="madis_gapfillua.shtml"><font color="FFFF66">Gap-filling Upper Air</font></a></li>
+<!--       <li><a href="madis_wisdom.shtml"><font color="FFFF66">WISDOM Balloon Wind</font></a></li>-->
+       <li><a href="madis_RSAS.shtml"><font color="FFFF66">RSAS Sfc Analyses Grids</font></a></li>
+    </ul>
+ </li> 
+ <li>Variables&nbsp;&nbsp;>
+    <ul>
+       <li><font color="FFFF66">Meteorological Surface</font></li>
+       <li class="indented_vertnav"><a href="sfc_mesonet_variable_list.shtml">Mesonet/RWIS/National Mesonet</a></li>
+       <!--<li class="indented_vertnav"><a href="sfc_mesonet_variable_list.shtml">Citizen Weather Observer Program (CWOP)</a></li>
+       <li class="indented_vertnav"><a href="madis_rwis_variable_list.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+      --> <li class="indented_vertnav"><a href="sfc_urbanet_variable_list.shtml">National Mesonet Extended</a></li>
+       <li class="indented_vertnav"><a href="sfc_metar_variable_list.shtml">METAR (standard)</a></li>
+       <!--<li class="indented_vertnav"><a href="sfc_OMO_variable_list.shtml">1-minute ASOS</a></li>
+       --><li class="indented_vertnav"><a href="sfc_sao_variable_list.shtml">SAO</a></li>
+       <li class="indented_vertnav"><a href="sfc_maritime_variable_list.shtml">Maritime</a></li>
+	<li class="indented_vertnav"><a href="sfc_mobile_variable_list.shtml">Weather Telematics</a></li>
+       <li class="indented_vertnav"><a href="sfc_crn_variable_list.shtml">Climate Reference Network</a></li>
+       <li class="indented_vertnav"><a href="sfc_hcn_variable_list.shtml">Historical Climatology Network</a></li>
+       <li class="indented_vertnav"><a href="sfc_nepp_variable_list.shtml">New England Pilot Project</a></li>
+       <li><a href="hydro_variable_list.shtml"><font color="FFFF66">Hydrologic Surface</font></a></li>
+       <li><a href="raob_variable_list.shtml"><font color="FFFF66">Radiosonde</font></a></li>
+       <li><a href="npn_variable_list.shtml"><font color="FFFF66">NOAA Profiler Network</font></a></li>
+       <li><a href="gpsmet_variable_list.shtml"><font color="FFFF66">GPS-Met</font></a></li>
+       <li><a href="acars_variable_list.shtml"><font color="FFFF66">Aircraft Based</font></a></li>
+       <li><a href="acarsp_variable_list.shtml"><font color="FFFF66">Aircraft Based Profiles</font></a></li>
+       <li><a href="map_variable_list.shtml"><font color="FFFF66">Multi-Agency Profiler (CAP)</font></a></li>
+       <li><a href="rdmtr_variable_list.shtml"><font color="FFFF66">Radiometer</font></a></li>
+       <li><a href="satwnd_variable_list.shtml"><font color="FFFF66">Satellite Wind</font></a></li>
+       <li><a href="satsnd_variable_list.shtml"><font color="FFFF66">Satellite Sounding</font></a></li>
+       <li><a href="satrad_variable_list.shtml"><font color="FFFF66">Satellite Radiance</font></a></li>
+       <li><a href="snow_variable_list.shtml"><font color="FFFF66">Snow</font></a></li>
+       <li><a href="gapfillua_variable_list.shtml"><font color="FFFF66">Gap-filling Upper Air</font></a></li>
+<!--       <li><a href="wisdom_variable_list.shtml"><font color="FFFF66">WISDOM Balloon Wind</font></a></li>-->
+       <li><a href="rsas_variable_list.shtml"><font color="FFFF66">RSAS Sfc Analyses Grids</font></a></li>
+     </ul>
+ </li>
+ <li>Variables Metadata&nbsp;&nbsp;>
+    <ul>
+       <li><font color="FFFF66">Integrated Mesonet</font>
+       <li class="indented_vertnav"><a href="mesonet_precip.shtml">Precipitation</a></li>
+       <li class="indented_vertnav"><a href="mesonet_solar_radiation.shtml">Solar Radiation</a></li>
+       <li class="indented_vertnav"><a href="mesonet_soil_temperature.shtml">Soil Temperature</a></li>
+       <li class="indented_vertnav"><a href="mesonet_soil_moisture.shtml">Soil Moisture</a></li>
+    </li>
+       <li><font color="FFFF66">National Mesonet</font>
+       <li class="indented_vertnav"><a href="nmesonet_precip.shtml">Precipitation</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_solar_radiation.shtml">Solar Radiation</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_soil_temperature.shtml">Soil Temperature</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_soil_moisture.shtml">Soil Moisture</a></li>
+    </li>
+       <li><font color="FFFF66">OMO One Minute ASOS (HFMETAR)</font>
+       <li class="indented_vertnav"><a href="omo_precip.shtml">Precipitation</a></li>
+    </li>
+   </ul>
+<li>Quality Control&nbsp;&nbsp;>
+    <ul>
+   <li><a href="madis_qc.shtml">Overview</font></a></li>
+       <li><a href="madis_sfc_qc.shtml">Meteorological Surface</a></li>
+       <li><a href="madis_rwis_qc.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+       <li><a href="madis_hydro_qc.shtml">Hydrologic Surface</a></li>
+       <li><a href="madis_raob_qc.shtml">Radiosonde</a></li>
+       <li><a href="madis_npn_qc.shtml">NOAA Profiler Network</a></li>
+       <li><a href="madis_sfc_qc.shtml">Weather Telematics</a></li>
+       <li><a href="madis_acars_qc.shtml">Aircraft Based</a></li>
+       <li><a href="madis_acarsp_qc.shtml">Aircraft Based Profiles</a></li>
+       <li><a href="madis_map_qc.shtml">Multi-Agency Profiler (CAP)</a></li>
+       <li><a href="madis_rdmtr_qc.shtml">Radiometer</a></li>
+       <li><a href="madis_satwnd_qc.shtml">Satellite Wind</a></li>
+       <li><a href="madis_satsnd_qc.shtml">Satellite Sounding</a></li>
+       <li><a href="madis_snow_qc.shtml">Snow</a></li>
+       <li><a href="madis_gapfillua_qc.shtml">Gap-filling Upper Air</a></li>
+       <li><a href="madis_RSAS_qc.shtml">RSAS Surface Analysis</a>
+<!--	<li><a href="madis-data/qcms_messages.html">QC Summary Messages</a>
+    -->
+</ul>
+ </li>
+ <li>Restrictions&nbsp;&nbsp;>
+    <ul>
+       <li><a href="madis_restrictions.shtml">Overview</a></li>
+       <li><a href="mesonet_providers.shtml">Meteorological Surface</a></li>
+       <li><a href="hydro_providers.shtml">Hydrologic Surface</a></li>
+       <li><a href="acars_restrictions.shtml">Aircraft Based</a></li>
+    </ul>
+ </li>
+ <li><a href="MADISdataissues.shtml">Known Data Issues</a></li>
+</ul>
+<dl>
+<dt>User Access</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <!--<li><a href="user_resources.shtml">Overview</a></li>
+--> 
+<li><a href="data_application.shtml">Data Application Form</a></li>
+<li><!--<a href="https://madis-hweb.ncep.noaa.gov:8005/htdocs/index.shtml">--><a href="https://madis-data.ncep.noaa.gov/index.shtml">MADIS Distribution Services</a></li>
+<li><!--<a href="https://madis-hweb.ncep.noaa.gov:8005/htdocs/wmo_gdc.shtml">--><a href="https://madis-data.ncep.noaa.gov/wmo_gdc.shtml">GDC-ABO</a></li>
+<li><a href="https://madis-idm.ncep.noaa.gov/reset">Password Reset</a></li>
+</ul>
+<dl>
+<dt>Provider Information</dt>
+<ul style="word-wrap:break-word" id="vertnav">
+ <!--<li><a href="provider_resources.shtml">Overview</a></li>
+ <li><a href="network_info.shtml">Surface Provider List</a></li>
+--> 
+<li><a href="provider_resources.shtml">Overview</a></li>
+ <li><a href="mesonet_providers.shtml">Meteorological Surface</a></li>
+ <!--<li><a href="nmesonet_providers.shtml">National Mesonet/UrbaNet</a></li>-->
+ <li><a href="hydro_providers.shtml">Hydrological Surface</a></li>
+ <li><a href="map_providers.shtml">Multi-Agency Profiler (CAP)</a></li>
+ <!--<li><a href="rdmtr_providers.shtml">Radiometer</a></li>
+ -->
+<li><a href="snow_providers.shtml">Snow</a></li>
+<li><a href="madistosynoptic.shtml">Transitions to SYNOPTIC</a></li>
+ <!--<li>Quality Control&nbsp;&nbsp;>
+   <ul>
+ <li><a href="madis_smry_descrip.shtml">Summary</a></li>
+-->
+</ul>
+</dl>
+
+<dt>Support</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <li><a href="support_overview.shtml">Overview</a></li>
+ <li><a href="madis_monitoring.shtml">Data Outages</a></li>
+<!--
+ <li>FAQ&nbsp;&nbsp;>
+ <ul>
+     <li><a href="faq_accounts.shtml">Accounts</a></li>
+     <li><a href="faq_api.shtml">API</a></li>
+     <li><a href="faq_localization.shtml">AWIPS Localization</a></li>
+     <li><a href="faq_cwop.shtml">CWOP</a></li>
+     <li><a href="faq_datadisplay.shtml">Data Display</a></li>
+     <li><a href="faq_historicaldata.shtml">Historical Data</a></li>
+     <li><a href="faq_lastupdatetime.shtml">Last Update Time</a></li>
+     <li><a href="faq_netcdf.shtml">netCDF</a></li>
+     <li><a href="faq_providerdata.shtml">Provider Data</a></li>
+     <li><a href="faq_wfo.shtml">WFO</a></li>
+ </ul></li>
+-->
+ <li><a href="data_application.shtml#disclaimer">Disclaimer</a></li>
+ <li><a href="mailto:madis-support@noaa.gov">Contact Us</a></li>
+</ul>
+<dl>
+<dt>Related Links</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+<li><a href="https://gdc-abo.wmo.int/">WMO Global Data Center</a></li>
+<li><a href="https://madis-data.ncep.noaa.gov/index.shtml">MADIS Distribution Services</a></li>
+<li><a href="https://hads.ncep.noaa.gov/">HADS</a></li>
+<li><a href="https://amdar.ncep.noaa.gov/index.shtml">AMDAR</a></li>
+<li>&nbsp;</li>
+<li><a href="https://ruc.noaa.gov/amdar/">AMDAR Research</a></li>
+</li>
+<li>&nbsp;</li>
+</ul>
+</div>
+
+
+    <div id="content">
+    <a class="textvers" name="content_link">&nbsp;</a>
+
+
+<HTML>
+<HEAD>
+<TITLE>MADIS Hydrologic Surface Variables</TITLE>
+   <META NAME="description" CONTENT="MADIS (Meteorological Assimilation Data Ingest System)">
+   <META NAME="keywords" CONTENT="METEOROLOGICAL DATA, meteorological data, WEATHER DATA, weather data, METEOROLOGICAL DATA ACCESS, meteorological data access, METEOROLOGICAL DATA ASSIMILATION, meteorological data assimilation">
+<META NAME="generator" CONTENT="txt2html v1.28">
+
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="TMPC9-DCHA2-45L6L-3A6SC-8WMVB",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"TMPC9-DCHA2-45L6L-3A6SC-8WMVB";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="qyqup4ax2fklo2xf6lrq-f-e796576b2-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1320759","ak.ai":parseInt("795019",10),"ak.ol":"0","ak.cr":1,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"2fb48f8e","ak.r":46469,"ak.a2":n,"ak.m":"dscg","ak.n":"essl","ak.cport":9227,"ak.gh":"23.201.193.144","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1793454819","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==iiyqrgdKuJyyWBYjdCOXh/JDvoOGbtKa7dwl8YYgnF7oTKfwxn/Oh7kifjZTrn0eT0TQT4iie537hl9nkBLDJBoOdYeWyLLIVRP3305KTCboLBNLFca0zBbbME7/y3SU9kigfNvarS72TmM/PX8gHCxWJXzH07mQsBCcvrgnQtOy80IpjsxX7y9SQHvg4Ta64zJukcflnUixHlsoQvTgZbV3kIAFIvNXrb824O3q6icpzWK2wonP+SleRdYF9eShEqtlSYWfEGrH6F9WoaDSAs8oRYpkd6W/UTrWPDc/BNjIPdhz+WiKBMazTB9uFfmfKjSv6NTEiUoBVrIloZGKDiMgN4aEhsfuQM6YJKVZSAT9oSm8T8m/GXNWt4xuEIJgFksEKfA65klmtp2RqDaE43er/YQdS1TLX7dyxBdGB6g=","ak.pv":"4","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></HEAD>
+<BODY TEXT="#333333" BGCOLOR="#FFFFFF">
+<p><H1>Notes - MADIS Radiosonde Variables</H1>
+<p>
+<!--<H2>Notes (for all surface datasets)</H2>-->
+
+<OL>
+  <LI><a name="ua01"></a>The user can choose to retrieve the different radiosonde level types
+    individually, or can select an integrated sounding that will return all
+    levels combined and sorted in ascending order by height.
+  <UL>
+    <LI>The number of levels in the integrated sounding varies, with values
+      typically between 50 and 125.
+
+    <LI>Mandatory levels include the 21 mandatory isobaric levels plus the surface
+      level.
+
+    <LI>The pressures returned for wind levels have been calculated using a log(P)
+      interpolation.
+
+    <LI>The heights returned for significant, maximum wind, and tropopause levels
+      have been calculated using the hypsometric equation (if temperature is
+      available) or a log(P) interpolation (if temperature is missing).
+
+    <LI>If the user wants to easily identify pressure or heights that have been
+      interpolated, without identifying the type of level, he can check for the
+      character "I" in the QC data descriptor.
+
+  </UL><P>
+    For more information on the radiosonde level types and variables, see
+    Federal Meteorological Handbook 3 (FMH-3).  An HTML version of FMH-3 is
+    available at <A HREF="https://www.ofcm.gov/fmh3/text/default.htm">https://www.ofcm.gov/fmh3/text/default.htm.</A>
+
+<P><LI><a name="ua02"></a>Wind speed and direction are reported and stored in the database.  The user
+    can optionally select u &amp; v wind components and those will be calculated and
+    returned.  The QC results from speed and direction will be used In either
+    case, and if one of the map projections has been selected via the MSETDOM call,
+    the winds will be rotated to match the projection.
+
+<P><LI><a name="ua03"></a>The hydrostatic check applied to mandatory level heights and temperatures
+    can, under certain circumstances, decide that a reported value is wrong, and
+    offer a corrected value, which the user is encouraged to use instead of the
+    reported value.  The API default is to return the reported value.  The
+    MSETCOR call is used to indicate whether or not to use recommended
+    corrections.
+
+<P><LI><a name="ua04"></a>Air temperature is the temperature variable stored in the database.  The user
+    can optionally select virtual temperature, which will then be calculated by
+    the MADIS API.  The QC results from air temperature will apply in either
+    case.  Also note that if virtual temperature cannot be calculated (missing
+    or bad dewpoint or pressure), and the air temperature passed all QC checks,
+    the air temperature will be returned instead, and a QC data descriptor value
+    of "T" will be assigned.
+
+<P><LI><a name="ua05"></a>Dewpoint depression is the moisture variable reported and stored in the
+    database.  The user can optionally select dewpoint temperature, relative
+    humidity, specific humidity, absolute humidity, or water vapor mixing ratio.
+    These values will then be calculated by the MADIS API.  The QC results from
+    dewpoint depression will apply to any of the calculated variables.
+
+<P><LI><a name="ua06"></a>Level type codes:</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+         1        surface
+         2        mandatory
+         3        significant
+         4        wind
+         5        maximum wind
+         6        tropopause
+</PRE>
+
+<P><LI><a name="ua07"></a>The coded values for the sonde type are too extensive to list in this
+    document.  A relatively recent version can be found at:
+    <a href="http://www.northern-lighthouse.com/tables/BUFRtabF.htm#C02">
+    http://www.northern-lighthouse.com/tables/BUFRtabF.htm#C02.</a>
+
+
+<P><LI><a name="ua08"></a>Not all stations report release time, and the release time for those that do
+    report this value are generally +- 70 minutes from the "synoptic time".  The
+    synoptic time is what's reported in the observation time array by the
+    MRAOBSTA subroutine, and this is generally used as the nominal time of the
+    data for most applications (e.g., most times reported for the 00 hour file
+    will also be hour 00).
+
+<P>
+    All times reported in the MADIS API are in Universal Coordinated Time,
+    with the format of "YYJJJHHMM", where:</p>
+
+<br><PRE>
+    YY  = 2-digit year (good from 1980 - 2179)
+    JJJ = Julian date of the year (1-366)
+    HH  = Hour (0-23)<BR>
+    MM  = Minute (0-59)
+</PRE>
+<P>
+    If the release time is missing, the 9-character field will be
+    set to all blanks, e.g., "         ".
+<P>
+    Users of the MADIS API raobdump program will get the time output in their
+    chosen format, either YYJJJHHMM or YYYYMMDD_HHMM.
+
+</OL>
+<p><H1>Notes - MADIS NOAA Profiler Network Variables</H1>
+<p>
+
+<OL>
+  <LI><a name="npn01"></a>The NOAA wind profilers use two modes of operation:  a low mode that starts
+    at 500 m AGL and goes up to 9250 m AGL; a high mode that starts at 7500 m AGL
+    and goes up to 16250 m AGL.  The low and high modes overlap at 8 levels
+    reported between 7500 and 9250 AGL.  For both modes, the height increment
+    between levels is 250 m.  The user can choose to retrieve each mode
+    separately, or can request an integrated profile where the MADIS API will
+    decide which mode to use for each of the 8 levels in the overlap region.
+
+<P>
+    The returned signal strength is lower at the top of the low mode than it is
+    at the bottom of the high mode, thus all things being equal, the high mode
+    data is probably of better quality.  Therefore, the API will select high mode
+    data if both low and high mode wind QC values are good.  Otherwise, if one
+    mode has good quality then its data will be selected.
+
+<P>
+    The level type variable can be obtained by users wishing to know which modes
+    were actually used in the integrated profile.
+
+<P>
+    With the FSL database, all 72 levels are available, with a maximum of 64 in
+    the integrated profile.  The AWIPS database only has 43 levels available:
+
+<PRE>
+        Levels 1-28         Low mode levels 1-28
+               29-36        Overlap region (same logic as above)
+               37-43        High mode levels 12, 16, ..., 36 (every 4th level)
+</PRE>
+
+<P>
+    A user requesting low and high mode profiles from the AWIPS database should
+    reserve 36 and 15 levels, respectively, even though that adds up to greater
+    than the 43 levels actually available.  This allows for the overlap region
+    levels to appear in whichever mode may happen to be the case.  In other
+    words, high mode levels 1-8 (overlap region, if they exist) will be returned
+    in the first 8 levels of the user's arrays, followed by the 7 high mode
+    levels as described above, for a total of 15 user levels.
+
+
+<P><LI><a name="npn02"></a>The u and v wind components are reported and stored in the database. The user
+    can optionally select wind speed and direction and those will be calculated
+    and returned.  In either case, the results of QC checks applied to any form
+    of the winds will be used, and if one of the map projections has been
+    selected via the MSETDOM call, the winds will be rotated to match the
+    projection.
+
+<P><LI><a name="npn03"></a>The w wind component is actually the radial velocity measured with the
+    vertically-pointing antenna beam (with the sign negated).  Because the level
+    of error in the observed velocities is of the same magnitude as that expected
+    for this observation, the user should take care when interpreting this
+    variable.
+
+<P><LI><a name="npn04"></a>The wind speed and w standard deviations are derived from the velocity
+    variance observations, and the latter should be used for most applications.
+    However, these are included as they are the only variance information
+    reported in the AWIPS database, and on NWS and international communications
+    circuits for the profilers.
+
+<P>
+    Wind speed standard deviation is reported instead of the standard deviation
+    of the u and v wind components because the NPN profiler beams are not, in
+    general, oriented north and east in spite of the common terminology
+    "north beam" and "east beam".  Wind speed standard deviation Ws is determined
+    as follows:
+
+<PRE>
+        Wv**2 = velocity variance of the vertical beam
+        We**2 = velocity variance of the east beam
+        Wn**2 = velocity variance of the north beam
+        theta = angle between the vertical beam and the east or north beam
+        Ws    = [ (We**2 + Wn**2 - 2 cos**2(theta) Wv**2) ]**0.5 csc(theta)
+</PRE>
+
+<P>
+    As a reasonable approximation, the u and v component standard deviations are
+    equal and either equals Ws/(2**0.5).
+
+<P>
+    The reported W standard deviation is Wv defined above.
+
+<P><LI><a name="npn05"></a>The geometric heights are actually static, and can easily be calculated (see
+    note 1).  For ease of use, however, the MADIS API will return the heights
+    above MSL in this variable.  If the user selects pressure as the vertical
+    coordinate, the heights are converted to pressure using the U.S. Standard
+    Atmosphere calculation.
+
+<P><LI><a name="npn06"></a>The consensus numbers show how many 6-minute samples were used (4-10) to
+    create the hourly-averaged radial velocity for each level and antenna
+    direction.  If this number is 0, then less than 4 6-minute samples were
+    avaiable that were within a given velocity range of one another, and no
+    hourly average was created.
+
+<P>
+    The FSL database contains the consensus numbers for all 3 beams.  With the
+    AWIPS database, there are only two consensus numbers available:
+
+<PRE>
+        East/North     Minimum of the East and North consensus numbers
+        Vertical       Vertical consensus number (same as FSL database)
+</PRE>
+
+<P><LI><a name="npn07"></a>The signal power is not calibrated, therefore comparisons between profilers
+    are not recommended.
+
+<P>
+    The FSL database contains the signal powers for all three beams.  With the
+    AWIPS database, only the vertical beam signal power is available.
+
+<P><LI><a name="npn08"></a>The radial velocity uses the convention that positive values are towards the
+    radar receiver (e.g., the ground), and negative values are away from the
+    receiver.
+
+<P>
+    The radial velocities are not available in the AWIPS database.
+
+<P><LI><a name="npn09"></a>Level type codes:</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+         1        Low mode
+         2        High mode
+</PRE>
+
+</OL>
+
+<p><H1>Notes - MADIS Aircraft-Based Observations Variables</H1>
+<p>
+
+<OL>
+<p><LI><a name="abo01"></a>Wind speed and direction are reported and stored in the database.  The user
+    can optionally select u &amp; v wind components and those will be calculated and
+    returned.  The QC results from speed and direction will be used In either
+    case, and if one of the map projections has been selected via the MSETDOM call,
+    the winds will be rotated to match the projection.</p>
+
+  <LI><a name="abo02"></a>Air temperature is the temperature variable stored in the database.  For
+    aircraft that are also reporting dewpoint temperature (a minority) the user
+    can optionally select virtual temperature, which will then be calculated by
+    the MADIS API.  The QC results from air temperature will apply in either
+    case.  Also note that if virtual temperature cannot be calculated (missing
+    or bad dewpoint or pressure), and the air temperature passed all QC checks,
+    the air temperature will be returned instead, and a QC data descriptor value
+    of "T" will be assigned.
+
+  <p><LI><a name="abo03"></a>In the FSL database relative humidity is the moisture variable stored for
+    TAMDAR data, and water vapor mixing ratio is used for non-TAMDAR data.
+    Relative humidity is the form of moisture in the AWIPS database.  The
+    user can optionally select any of these variables, specific humidity,
+    dewpoint depression, or absolute humidity and these values will be
+    calculated by the MADIS API.  In all cases, the QC results from the
+    dewpoint temperature will be used (with the FSL database, there's currently
+    no QC in the AWIPS database).
+
+  <P><LI><a name="abo04"></a>The dewpoint temperatures are calculated from data reported by aircraft
+    equipped with the Water Vapor Sensing System (WVSS).  For detailed
+    information on the WVSS observations and their processing see the
+    documentation available at
+    <A HREF="https://www.eol.ucar.edu/field_projects/wvss">https://www.eol.ucar.edu/field_projects/wvss</A>.
+
+<P>
+    While the dewpoint temperatures are correct, the user should be aware that
+    there are inconsistencies related to the decoding at FSL of the other
+    water-vapor-related variables (rh probe, reported rh, water vapor mixing
+    ratios, reported water vapor QC, and mach number).  Therefore, the QC'ed
+    moisture information returned from the MADIS API (dewpoint, rh, ah, dewpoint
+    depression) are all calculated from the dewpoint temperatures.</p>
+
+<P>
+    Reported water vapor QC codes -- FSL database:
+
+<PRE>
+       Value      Meaning
+       -----      -------
+        45        Missing data
+        48        Normal operations, ground speed &gt; 60 knots
+        49        Normal operations, nonmeasurement mode,
+                  ground speed &lt; 60 knots
+        50        Small RH, RH measured is &lt; 1.5%; RH set to 1.5%
+        51        Humidity element is wet. RH at 5.0 volts for &lt; 120 seconds
+        52        Humidity element contaminated.
+                  RH at 5.0 volts for &gt; 120 seconds
+        53        Heater fail
+        54        Heater fail and wet/contaminated humidity element
+        55        Single validity bad.  One or more of the input parameters
+                  for the mixing ratio calculation are invalid: TOT_PRESS,
+                  MACH TAT_WVSS, or RH.  If RH is full scale, RH is
+                  considered valid to allow wet/contaminated status to be
+                  posted.
+        56        Numeric error. Calculated mixing ratio at or above 100,
+                  below 0.1-9, or negative, or absolute value of
+                  denominator of calculations is less than 10-15.
+        57        Dew point is greater than temperature
+</PRE>
+
+<P>
+    Reported water vapor QC codes -- AWIPS database:
+
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        Normal operations, measurement mode
+         1        Normal operations, nonmeasurement mode
+         2        Small RH
+         3        Humidity element is wet
+         4        Humidity element contaminated
+         5        Heater fail
+         6        Heater fail and wet/contaminated humidity element
+         7        At least one of the input parameters used in the calculation
+                  of mixing ratio is invalid
+         8        Numeric error
+         9        Sensor not installed
+        63        Missing data
+</PRE>
+
+<P><LI><a name="abo05"></a>The reported eddy dissipation rate (EDR) variables contain both
+    data values and embedded code values that are used to indicate reasons why
+    no data values are available.  Therefore, a user only interested in the data
+    values themselves should request the median and maximum EDR variables.  For
+    more information on the EDR observations see
+    <a href="https://www.rap.ucar.edu/research/turbulence/insitu.html">
+    https://www.rap.ucar.edu/research/turbulence/insitu.html</a>.
+
+<P>
+    Reported EDR "no data" codes:</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+        2.54      Bad CGA  - Insufficient vertical acceleration data
+        2.53      Bad ALT  - Altitude out of range
+        2.52      Bad MACH - Speed out of range
+        2.51      Bad MASS - Aircraft mass out of range
+        2.50      Bad FLAP - Flap angle out of range
+        2.49      Bad AUTO - Autopilot off
+</PRE>
+
+<P><LI><a name="abo06"></a>The altitude-determining physical variable is pressure.  This is converted
+    to altitude by using the U.S. Standard Atmosphere calculation.  The standard
+    atmosphere is used at all altitudes and under all pressure conditions.  Thus,
+    for instance, it is possible to have ACARS altitudes below ground level on
+    days with high atmospheric pressure.  (This is in contrast to other aviation
+    reports such as voice pireps that use a standard atmosphere to compute
+    altitude above 18,000 ft (MSL), but use the current altimeter setting for
+    lower altitudes).  The barometric-corrected height is used instead of a
+    pressure altitude below approximately 18,000 ft in AMDAR reports from
+    Japanese airlines.
+
+<P>
+    The user can request either altitude or pressure, and the MADIS API will do
+    the conversion and return the requested variable.  In either case, the QC
+    results from the altitude variable will be applied.</p>
+
+<P><LI><a name="abo07"></a>Aircraft roll angle flag -- FSL database:</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+        66        roll &gt; 5 degrees
+        71        roll &le; 5 degrees
+        78        not reported
+</PRE>
+
+<P>Aircraft roll angle flag -- AWIPS database:
+
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        good
+         1        bad
+</PRE>
+
+<P><LI><a name="abo08"></a>Some high-resolution ascent/descent observations are reported without times,
+    and/or location information.  In these cases the FSL decoder interpolates
+    the values and indicates that in the LINT and TINT interpolation indicator
+    codes.  The decoder used to create the data in the AWIPS database combines
+    these into one indicator, LTINT.  Here are the possible values for these
+    variables:
+
+    <P>LINT, TINT -- FSL database:
+
+<PRE>
+       Value      Meaning
+       -----      -------
+        105       interpolated
+        114       reported
+</PRE>
+
+    <P>LTINT -- AWIPS database:
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        time interpolated, latitude and longitude reported
+         1        time reported, latitude and longitude interpolated
+         2        time, latitude, and longitude interpolated
+         3        time, latitude, and longitude reported
+         7        missing value
+</PRE>
+<P>
+    For more information on the FSL decoder and its processing, see
+    <A HREF="https://amdar.noaa.gov">https://amdar.noaa.gov.</A>
+
+<P><LI><a name="abo09"></a>Decoding-correction indicator:</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+         84       temperature correction
+        102       longitude and wind direction flipped and observation
+                  time set to the report receipt time
+        108       lat/lon correction (other than interpolation)
+        114       no correction applied
+        116       observation time set to the report receipt time
+</PRE>
+
+<P><LI><a name="abo10"></a>Not all ACARS reports (North America) include the originating and
+    destination airport variables, and none of the AMDAR (most European and
+    Asian reports) have them.  When the ACARS reports are downlinked they are
+    picked up by a reporting ground station which exist at various airports
+    around the U.S.
+
+<P><LI><a name="abo11"></a>The observation time returned by the MACARSSTA subroutine is generally used
+    as the nominal time of the data for most applications, however, for
+    interested users, the time of actual ground data receipt are available in the
+    receipt time variable for ACARS reports.
+<P>
+    For AMDAR reports in the FSL database, and for all reports in the AWIPS
+    database, this is not the time of receipt, but a time reported in the header
+    of the raw data.
+<P>
+    All times reported in the MADIS API are in Universal Coordinated Time,
+    with the format of "YYJJJHHMM", where:
+
+<P><PRE>
+    YY  = 2-digit year (good from 1980 - 2179)
+    JJJ = Julian date of the year (1-366)
+    HH  = Hour (0-23)<BR>
+    MM  = Minute (0-59)
+</PRE>
+<P>
+    If the receipt time is missing, the 9-character field will be set to all
+    blanks, e.g., "         ".
+
+<P><LI><a name="abo12"></a>Icing condition:</p>
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        no ice is present
+         1        ice is present - Delta
+         4        ice is present - TAMDAR
+</PRE>
+
+<P><LI><a name="abo13"></a>Data platform type -- FSL database:</p>
+<PRE>
+       Value      Meaning
+       -----      -------
+         1        vertical-acceleration measuring aircraft
+         2        eddy dissipation rate measuring aircraft
+         3        vapor measuring aircraft
+         4        vertical gust measuring aircraft
+         5        ice measuring aircraft
+         6        eddy dissipation rate, RH, ice measuring aircraft
+</PRE>
+    <p>Data platform type -- AWIPS database:</p>
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        automatic
+         1        manned
+         2        hybrid, both manned and automatic
+</PRE>
+
+<P><LI><a name="abo14"></a>Source that provided the data -- FSL database:</p>
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        ACARS (direct to FSL from airlines)
+         1        MDCRS (from TG's BUFR file from ARINC)
+         2        appeared in both ACARS and MDCRS data streams
+         3        AMDAR data, including LH BUFR data
+         4        TAMDAR data from AirDat, LLC
+         5        Canadian AMDAR data from CMC
+         6        European AMDAR data
+</PRE>
+<p>    Source that provided the data -- AWIPS database:</p>
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        ASDAR
+         1        ASDAR (ACARS also available but not operative)
+         2        ASDAR (ACARS also available and operative)
+         3        ACARS
+         4        ACARS (ASDAR also available but not operative)
+         5        ACARS (ASDAR also available and operative)
+</PRE>
+
+<P><LI><a name="abo15"></a>Original specification of latitude and longitude:</p>
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        Actual location in seconds
+         1        Actual location in minutes
+         2        Actual location in degrees
+         3        Actual location in decidegrees
+         4        Actual location in centidegrees
+         5        Referenced to checkpoint in seconds
+         6        Referenced to checkpoint in minutes
+         7        Referenced to checkpoint in degrees
+         8        Referenced to checkpoint in decidegrees
+         9        Referenced to checkpoint in centidegrees
+        10        Actual location in tenths of a minute
+        11        Referenced to checkpoint in tenths of a minute
+</PRE>
+
+<P><LI><a name="abo16"></a>Phase of flight:</p>
+<PRE>
+       Value      Meaning
+       -----      -------
+         3        Level flight, routine observation (LVR)
+         4        Level flight, highest wind encountered (LVW)
+         5        Ascending (ASC)
+         6        Descending (DES)
+</PRE>
+
+<P><LI><a name="abo17"></a>The turbulence index is calculated from the median and maximum eddy
+dissipation rates, as follows:</p>
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        median < 0.1 | maximum < 0.1
+         1        median < 0.1 | 0.1 <= maximum < 0.2
+         2        0.1 <= median < 0.2 | 0.1 <= maximum < 0.2
+         3        median < 0.1 | 0.2 <= maximum < 0.3
+         4        0.1 <= median < 0.2 | 0.2 <= maximum < 0.3
+         5        0.2 <= median < 0.3 | 0.2 <= maximum < 0.3
+         6        median < 0.1 | 0.3 <= maximum < 0.4
+         7        0.1 <= median < 0.2 | 0.3 <= maximum < 0.4
+         8        0.2 <= median < 0.3 | 0.3 <= maximum < 0.4
+         9        0.3 <= median < 0.4 | 0.3 <= maximum < 0.4
+        10        median < 0.1 | 0.4 <= maximum < 0.5
+        11        0.1 <= median < 0.2 | 0.4 <= maximum < 0.5
+        12        0.2 <= median < 0.3 | 0.4 <= maximum < 0.5
+        13        0.3 <= median < 0.4 | 0.4 <= maximum < 0.5
+        14        0.4 <= median < 0.5 | 0.4 <= maximum < 0.5
+        15        median < 0.1 | 0.5 <= maximum
+        16        0.1 <= median < 0.2 | 0.5 <= maximum
+        17        0.2 <= median < 0.3 | 0.5 <= maximum
+        18        0.3 <= median < 0.4 | 0.5 <= maximum
+        19        0.4 <= median < 0.5 | 0.5 <= maximum
+        20        0.5 <= median | 0.5 <= maximum
+        63        Missing value
+</PRE>
+<P><LI><a name="abo18"></a>The platform with station name 00001152 is not actually a single aircraft.
+    This is a catch-all station name for reports that don't indicate the actual
+    aircraft.  Therefore, the position consistency and temporal consistency
+    checks aren't applied.
+
+<P><LI><a name="abo19"></a>The RH1, RH2, RHUNCER, TDUNCER, TASPEED, GPSHT and TRBTIME variables are
+    only available for TAMDAR reports.  See note 11 for a description of how
+    TRBTIME will be formatted by the MADIS API.
+
+<P><LI><a name="abo20"></a>The TAMDAR reports include two sensors used for relative humidity.  A
+    "consensus RH" is also reported as the primary moisture variable, and
+    this is what's used for RH, TD, etc.  Users interested in seeing the
+    values from both sensors can select the RH1 and RH2 variables.
+
+    <P>The RH uncertainty variable is the theoretical RSS (root-summed-squared)
+    uncertainty of the consensus RH value in percent.  Two error source
+    components are used in the RSS calculation:  temperature uncertainty
+    (assumed to be +/- 0.4C) and the RH sensor uncertainty (assumed to be
+    +/- 2% absolute error [not RH times 2%]).  Other inputs to the calculation
+    are air temperature, pressure altitude and indicated air speed.  The
+    uncertainty is additive with the reported humidity, so if RH is 30% and
+    RHUNCER is 20%, the estimated range of the RH is 30% +-20%, i.e., 10-50%.
+
+    <P>Dewpoint uncertainty is derived from the RH uncertanty variable in the
+    following way.  If the RH uncertainty is &ge; 0.49, the dewpoint uncertainty
+    is set to 999.  Otherwise, two subsidiary dewpoints are calculated by
+    assuming the RH is 1) RH + RHUNCER, and, 2) RH - RHUNCER.  The dewpoint
+    uncertainty is one-half the difference between 1) and 2).
+
+<P><LI><a name="abo21"></a>The MEDEDR, MAXEDR, TURBIDX and ICECOND variables for TAMDAR reports
+    are accompanied by level 1 QC results from the TAMDAR provider.  These
+    variables can also be reported by the other providers, but these do not
+    have any QC.  Therefore, API users interested in seeing the data from
+    these providers should request all data, not just data passing any
+    QC level.
+
+<P><LI><a name="abo22"></a>The eddy dissipation rates available in the ACARS and TAMDAR reports
+    are calculated using different algorithms.  The NCAR algorithm used
+    for ACARS calculates EDR from fluctuations in the vertical motion of
+    the aircraft (current algorithm), or fluctuations in the vertical
+    wind (proposed new algorithm).  The TAMDAR algorithm calculates EDR
+    from fluctuations in the horizontal wind, as revealed by fluctuations
+    in the indicated airspeed.  When the turbulence is isotropic, the NCAR
+    and TAMDAR algorithms should agree.
+
+</OL>
+
+<p><H1>Notes - MADIS Multi-Agency Profiler (CAP) Variables</H1>
+<p>
+
+<OL>
+  <LI><a name="map01"></a>The "Multi-Agency Profiler" dataset includes meteorological "profiles" from
+    several different kinds of observing systems, primarily including wind and
+    virtual temperature data from boundary layer profiling radars, and wind data
+    from SODARs.  Each station can have up to three modes of operation for winds,
+    and one mode for Radio Acoustic Sounding System (RASS) temperatures.  The
+    number of levels at which data are obtained, the spacing between the levels,
+    etc., are all a function of the "mode parameters" specified for each station,
+    and available to the user via the variable codes listed above.
+
+    The user can choose to retrieve each mode separately, or can request an
+    integrated profile where the MADIS API will return all modes (wind and RASS)
+    sorted in ascending order by height.
+
+    The level type variable can be obtained by users wishing to know which modes
+    were actually used in the integrated profile.
+
+    The station type variable is used to specify the type of observing system
+    that's in use, with these code values:
+
+       Value      Meaning
+       -----      -------
+         1        Boundary layer profiler
+         2        UHF tropospheric profiler
+         3        VHF tropospheric profiler
+         4        SODAR
+         5        Unspecified
+
+    The mode parameters, consensus numbers, etc., are only used for the profiler
+    station types.  The U/V gust and standard deviation variables, and the
+    mixing layer elevation, only apply to SODAR stations.
+<P>
+    The user can choose to retrieve each mode separately, or can request an
+    integrated profile where the MADIS API will return all modes (wind and RASS)
+    sorted in ascending order by height.
+<P>
+    The level type variable can be obtained by users wishing to know which modes
+    were actually used in the integrated profile.
+<P>
+    The station type variable is used to specify the type of observing system
+    that's in use, with these code values:
+<PRE>
+       Value      Meaning
+       -----      -------
+         1        Boundary layer profiler
+         2        UHF tropospheric profiler
+         3        VHF tropospheric profiler
+         4        SODAR
+         5        Unspecified
+</PRE>
+<P>
+    The mode parameters, consensus numbers, etc., are only used for the profiler
+    station types.  The U/V gust and standard deviation variables, and the
+    mixing layer elevation, only apply to SODAR stations.
+
+<P><LI><a name="map02"></a>All of the wind mode parameters are specified individually for each antenna
+    beam direction.  As there can be up to five antenna beams, an array of 5
+    elements will be returned for each station.
+
+<P><LI><a name="map03"></a>Depending on the station type, either u/v wind components or wind speed and
+    direction may be stored in the database.  The user can select either form
+    of the wind data and it will be calculated and returned from whichever form
+    is stored in the database.  The results of QC checks applied to any form
+    of the winds will be used, and if one of the map projections has been
+    selected via the MSETDOM call, the winds will be rotated to match the
+    projection.
+
+<P><LI><a name="map04"></a>The w wind component is actually the radial velocity measured with the
+    vertically-pointing antenna beam (with the sign negated).  Because the level
+    of error in the observed velocities is of the same magnitude as that expected
+    for this observation, the user should take care when interpreting this
+    variable.
+
+<P><LI><a name="map05"></a>The true vertical coordinate is height.  If the user selects pressure as the
+    vertical coordinate, the heights are converted to pressure using the U.S.
+    Standard Atmosphere calculation.
+
+<P><LI><a name="map06"></a>The basic averaging technique employed for profiling radars is the
+    "consensus average" applied to the radial velocities for each antenna beam,
+    in the case of winds, or to the temperatures for RASS.  This method
+    examines the number of records taken to locate the largest subset of
+    data values that are within a given window of each other.  The number of
+    values in the subset is called the "consensus number".  The consensus test
+    is passed when the consensus number is at least the minimum number specified
+    for the given station/beam/mode, otherwise the test has been failed and no
+    average value is created.
+
+<P><LI><a name="map07"></a>The radial velocity uses the convention that positive values are towards the
+    radar receiver (e.g., the ground), and negative values are away from the
+    receiver.
+
+<P><LI><a name="map08"></a>Level type codes:
+<br><br>
+<PRE>
+       Value      Meaning
+       -----      -------
+         1        Wind mode 1
+         2        Wind mode 2
+         3        Wind mode 3
+         4        RASS mode 1
+</PRE>
+<P><LI><a name="map09"></a>The profilers can have up to 5 antenna beam directions.  Typically,
+    for a 5-beam system, 2 beams will be in the N/S plane, 2 in the E/W
+    plane, and one beam will point in the vertical direction.  The names
+    of the beams generally indicate the plane (e.g., "NS 1" and "NS 2"),
+    while the azimuth and elevation variables define the exact pointing
+    direction.
+
+<P><LI><a name="map10"></a>Profiler data are averaged over some time interval, specified in the
+    averaging period variable.  By convention, the observation time is the
+    end of the averaging period.  For example, a 30-minute average with
+    observation time 12:00 covers data averaged over 11:30 - 12:00.
+
+<P><LI><a name="map11"></a>Vertical correction flag codes:
+<br><br><PRE>
+       Value      Meaning
+       -----      -------
+         1        Wind vertical correction:  off
+         2        Wind vertical correction:  on
+         3        Wind vertical correction:  unknown
+</PRE>
+<P>The profiler vertical correction, if selected, means that the radial
+    velocities for the oblique beams are corrected for vertical motion
+    using the radial velocity from the vertical beam.
+
+<P><LI><a name="map12"></a>All times reported in the MADIS API are in Universal Coordinated Time, with the
+    format of "YYJJJHHMM", where:
+<P>
+<PRE>
+    YY  = 2-digit year (good from 1980 - 2179)
+    JJJ = Julian date of the year (1-366)
+    HH  = Hour (0-23)
+    MM  = Minute (0-59)
+</PRE>
+<P>
+    If the time is missing, the 9-character field will be set to all blanks,
+    e.g., "         ".
+<P>
+    Users of the MADIS API mapdump program will get the time output in their chosen
+    format, either YYJJJHHMM or YYYYMMDD_HHMM.
+</OL>
+
+<p><H1>Notes - MADIS Gap-filling Upper Air Wind Variables</H1>
+<p>
+
+<OL>
+  <LI><a name="gap01"></a>Wind speed and direction are calculated from position change
+    informaton and are and stored in the database.  The user can
+    optionally select u & v wind components and those will be
+    calculated and returned.  The QC results from speed and direction
+    will be used in either case, and if one of the map projections has
+    been selected via the MSETDOM call, the winds will be rotated to
+    match the projection.</LI>
+<p>
+  <LI><a name="gap02"></a>The only quality control currently performed on the observed pressure,
+    air temperature, and relative humidity is to subjectively flag them as
+    bad, pending further work to determine the usefulness of these
+    observations.</LI>
+<p>
+  <LI><a name="gap03"></a>The cutdown flag is used to command the balloon to self-destruct.</LI>
+<PRE>
+
+       Value      Meaning
+       -----      -------
+         0        Cutdown not asserted
+         1        Cutdown asserted
+</PRE>
+<p>
+  <li><a name="gap04"></a>SHOUT AVAPS ELEV is GPS altitude.</li>
+<p>
+  <li><a name="gap05"></a>VENDORID is SONDEID</li>
+<p>
+  <li><a name="gap06"></a>PLATFRM is the name/type of observational platform (mobile or stationary)</li>
+</OL>
+
+
+<hr width="100%"><p align="right">Last updated 27 April 2017</p>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3463124-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</BODY>
+</HTML>
+
+
+      
+        <!-- force body content to include the floated "news" element -->
+	<div class="clear">
+        </div>
+    </div> <!-- end body content -->
+</div>   <!-- end pbody -->
+
+<!-- legal footer area -->
+        <div class="footer-legal">
+                                <div class="footer-legal-content">
+                        <div class="footer-legal-gov">
+                                <a href="https://www.usa.gov"><img src="images/usa_gov.png" alt="usa.gov" width="110" height="30" /></a>
+                        </div>
+
+                        <div class="footer-legal-column">
+                                <p>
+                                        <a href="https://www.commerce.gov">US Dept of Commerce</a><br />
+                                <a href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a><br />
+                                <a href="https://www.weather.gov" >National Weather Service</a><br />
+                                                5830 University Research Ct.<br />College Park, MD 20740<br />
+                                Web Master's Email: <a href='mailto:w-nws.webmaster@noaa.gov'>w-nws.webmaster@noaa.gov</a>                      </p>
+                        </div>
+
+                        <div class="footer-legal-column2">
+                                <a href="https://www.weather.gov/disclaimer">Disclaimer</a><br />
+                                <a href="https://www.cio.noaa.gov/services_programs/info_quality.html">Information Quality</a><br />
+                                <a href="https://www.weather.gov/help">Help</a><br />
+                                <a href="https://www.weather.gov/glossary">Glossary</a>
+                        </div>
+
+                        <div class="footer-legal-column3">
+                                <a href="https://www.weather.gov/privacy">Privacy Policy</a><br />
+                                <a href="https://www.noaa.gov/information-technology/foia">Freedom of Information Act (FOIA)</a><br />
+                                <a href="https://www.weather.gov/about">About Us</a><br />
+                                <a href="https://www.weather.gov/careers">Career Opportunities</a>
+                        </div>
+                </div>
+
+</div><!-- end of <div class="footer-legal">--> 
+
+</div><!-- End of content div -->
+</div><!-- End of center div -->
+
+</div> <!-- end container -->
+</body>
+</html>
+

@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en" dir="text_direction">
+  <head>
+    <!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TTF8M2Z');
+  ;(function (w, d, s, l, i) {
+    w[l] = w[l] || []
+    w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != 'dataLayer' ? '&l=' + l : ''
+    j.async = true
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+    f.parentNode.insertBefore(j, f)
+  })(window, document, 'script', 'dataLayer', 'GTM-TKQR8KP')
+</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<link href="https://api.waterdata.usgs.gov/ogcapi/v1/static/css/common.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="https://api.waterdata.usgs.gov/ogcapi/v1/static/css/custom.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="https://api.waterdata.usgs.gov/ogcapi/v1/static/css/wdfnviz.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="https://api.waterdata.usgs.gov/ogcapi/v1/static/css/site-alert.css" rel="stylesheet" type="text/css" media="screen" />
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <meta charset="utf-8" />
+    <title>
+      
+  
+    Daily values
+  
+      
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="language" content="" />
+    <meta name="description" content="USGS Water Data APIs" />
+    <meta name="keywords" content="geospatial,data,api,hydrology,USGS" />
+    <meta name="wda_environment_name" content="production-v1" />
+    <meta name="wda_build_version" content="1.11.2-7a153e8a" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/favicon/site.webmanifest" />
+    <link rel="shortcut icon" href="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/favicon/favicon.ico" />
+    <link rel="mask-icon" href="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/favicon/safari-pinned-tab.svg" color="#007150" />
+    <link rel="stylesheet" href="https://api.waterdata.usgs.gov/ogcapi/v1/static/css/default.css" />
+    <link rel="stylesheet" href="https://api.waterdata.usgs.gov/ogcapi/v1/static/css/main.css" />
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+    
+    <meta name="twitter:image:src"
+          content="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/logo.png" />
+    <meta property="og:image"
+          content="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/logo.png" />
+    <meta name="twitter:site" content="USGS Water Data APIs" />
+    <meta property="og:site_name" content="USGS Water Data APIs" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title"
+          content="
+  
+    Daily values
+  " />
+    <meta property="og:title"
+          content="
+  
+    Daily values
+  " />
+    <meta name="twitter:description" content="The United States Geological Survey (USGS) collects water data at monitoring locations across the United States using both automated sensors and manual data collection. These APIs provide access to that data, alongside metadata about data collections and monitoring locations, in standardized machine-readable formats.
+" />
+    <meta property="og:description" content="The United States Geological Survey (USGS) collects water data at monitoring locations across the United States using both automated sensors and manual data collection. These APIs provide access to that data, alongside metadata about data collections and monitoring locations, in standardized machine-readable formats.
+" />
+    <meta property="og:type" content="website" />
+    
+      
+        <link rel="next" type="application/geo+json" title="Items (next)" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?cursor=MDAwMDAwZDgtM2Y5Yi00MWQ2LTkzZjctNDBkOGE3M2U5NGU1&amp;f=html" />
+      
+    
+      
+        <link rel="alternate" type="application/geo+json" title="This document as GeoJSON" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=json" />
+      
+    
+      
+        <link rel="alternate" type="application/ld+json" title="This document as RDF (JSON-LD)" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=jsonld" />
+      
+    
+      
+        <link rel="canonical" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=html" />
+      
+    
+      
+        <link rel="alternate" type="text/csv; charset=utf-8" title="This document as CSV" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=csv" />
+      
+    
+      
+        <link rel="collection" type="application/json" title="Daily values" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily" />
+      
+    
+    
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+  <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster-src.js"></script>
+
+  </head>
+  <body>
+    <!-- BEGIN USGS Applications Header Template -->
+    <!-- Below: WDFN Analytics Tag -->
+    <noscript><iframe sandbox
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TTF8M2Z"
+        height="0"
+        width="0"
+        style="display: none;
+               visibility: hidden"></iframe></noscript>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe sandbox
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TKQR8KP"
+        height="0"
+        width="0"
+        style="display: none;
+               visibility: hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+    <section class="usa-banner" aria-label="Official website of the United States government">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img aria-hidden="true"
+               class="usa-banner__header-flag"
+               src="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/us_flag_small.png"
+               alt="" />
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+          <p class="usa-banner__header-text">An official website of the United States government</p>
+          <p class="usa-banner__header-action">Here’s how you know</p>
+        </div>
+        <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-default">
+          <span class="usa-banner__button-text">Here’s how you know</span>
+        </button>
+      </div>
+    </header>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner-default">
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img"
+               src="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/icon-dot-gov.svg"
+               role="img"
+               alt=""
+               aria-hidden="true" />
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Official websites use .gov</strong>
+              <br />
+              A <strong>.gov</strong> website belongs to an official
+              government organization in the United States.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img"
+               src="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/icon-https.svg"
+               role="img"
+               alt=""
+               aria-hidden="true" />
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Secure .gov websites use HTTPS</strong>
+              <br />
+              A <strong>lock</strong> (
+              <span class="icon-lock">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="52"
+                     height="64"
+                     viewBox="0 0 52 64"
+                     class="usa-banner__lock-image"
+                     role="img"
+                     aria-labelledby="banner-lock-description-default"
+                     focusable="false">
+                  <title id="banner-lock-title-default">Lock</title>
+                  <desc id="banner-lock-description-default">Locked padlock icon</desc>
+                  <path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z" />
+                </svg>
+              </span>) or <strong>https://</strong> means you’ve safely connected to the .gov website. Share sensitive
+              information only on official, secure websites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <div class="usa-overlay"></div>
+    <header class="usa-header usa-header--extended usgs-header" role="banner" style="width: 100%">
+  <div class="usgs-header-container">
+    <div class="usa-navbar">
+      <div class="usa-logo" id="extended-logo">
+        <a href="https://www.usgs.gov">
+          <img alt="USGS Home" src="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/logo.png" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <nav aria-label="Primary navigation" role="navigation" class="usa-nav">
+    <div class="usa-nav__inner">
+      <button class="usa-nav__close">
+        <img src="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/usa-icons/close.svg" role="img" alt="Close" />
+      </button>
+      <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item">
+          <a href="https://api.waterdata.usgs.gov/" class="usa-nav__link">
+            <span>Water Data APIs</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections" class="usa-nav__link">
+            <span>OGC API Catalog</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="nav-docs">
+            <span>Documentation</span>
+          </button>
+          <ul id="nav-docs" class="usa-nav__submenu" hidden="">
+            <li class="usa-nav__submenu-item">
+              <a href="https://api.waterdata.usgs.gov/docs/ogcapi">Long-form documentation</a>
+            </li>
+            <li class="usa-nav__submenu-item">
+              <a href="https://api.waterdata.usgs.gov/ogcapi/v1/openapi?f=html">OpenAPI/Swagger documentation</a>
+            </li>
+          </ul>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="https://waterdata.usgs.gov/" class="usa-nav__link">
+            <span>Water Data Home</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="nav-connect">
+            <span>Connect</span>
+          </button>
+          <ul id="nav-connect" class="usa-nav__submenu" hidden="">
+            <li class="usa-nav__submenu-item">
+              <a href="https://www.instagram.com/usgs_water/">USGS Water Resources Instagram</a>
+            </li>
+            <li class="usa-nav__submenu-item">
+              <a href="https://www.facebook.com/USGSWater/">USGS Water Resources Facebook</a>
+            </li>
+            <li class="usa-nav__submenu-item">
+              <a href="https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov">Questions or Comments</a>
+            </li>
+            <li class="usa-nav__submenu-item">
+              <a href="https://waterdata.usgs.gov/blog/">Water Data for the Nation Blog</a>
+            </li>
+          </ul>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="/signup/" class="usa-nav__link">
+            <span>Get an API Key</span>
+          </a>
+        </li>
+        
+        
+          
+        
+          
+            
+            <li class="usa-nav__primary-item" style="margin-left: auto; margin-right: 0">
+              <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=json" class="usa-nav__link">
+                <span>json</span>
+              </a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    
+  <main id="main-content">
+    
+    <div class="grid-container">
+      <nav class="usa-breadcrumb" aria-label="Breadcrumbs,," style="margin-top: 2rem; padding: 0">
+        <div class="usa-nav__inner">
+          <ol class="usa-breadcrumb__list">
+            
+  
+  <li class="usa-breadcrumb__list-item">
+    <a class="usa-breadcrumb__link" href="https://api.waterdata.usgs.gov/ogcapi/v1">Home</a>
+  </li>
+  <li class="usa-breadcrumb__list-item">
+    <a class="usa-breadcrumb__link" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections">Collections</a>
+  </li>
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="usa-breadcrumb__list-item">
+        <a class="usa-breadcrumb__link" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily">Daily values</a>
+      </li>
+      
+    
+  
+  <li class="usa-breadcrumb__list-item">
+    <a class="usa-breadcrumb__link" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items">Items</a>
+  </li>
+
+          </ol>
+        </div>
+      </nav>
+      
+  <section id="collection">
+    <h1>
+      
+        Daily values
+      
+    </h1>
+  </section>
+  <section id="map">
+    
+      <div class="col-sm-12">
+        <div id="items-map"></div>
+      </div>
+    
+  </section>
+  <section id="items">
+    
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-sm-12">
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            Limit:
+            <select id="limits" aria-label="Limits">
+              <option value="10">
+                10 (default)
+              </option>
+              <option value="100">100</option>
+              <option value="1000">1,000</option>
+              <option value="2000">2,000</option>
+            </select>
+            <script>
+          var select = document.getElementById('limits')
+          var defaultValue = select.getElementsByTagName('option')[0].value
+          let params = new URL(document.location).searchParams
+          select.value = params.get('limit') || defaultValue
+          select.addEventListener('change', (ev) => {
+            var limit = ev.target.value
+            document.location.search = `limit=${limit}`
+          })
+            </script>
+            <span class="float-right">
+              
+                
+                  <a role="button" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?cursor=MDAwMDAwZDgtM2Y5Yi00MWQ2LTkzZjctNDBkOGE3M2U5NGU1&amp;f=html">Next page</a>
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </span>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="col-12 col-6" style="overflow-x: scroll">
+        
+        <div class="usa-table-container" tabindex="0">
+          <table class="usa-table usa-table--striped">
+            <thead>
+              <tr>
+                
+                  <th>id</th>
+                
+                
+                  
+                    
+                    <th>time_series_id</th>
+                  
+                
+                  
+                    
+                    <th>monitoring_location_id</th>
+                  
+                
+                  
+                    
+                    <th>parameter_code</th>
+                  
+                
+                  
+                    
+                    <th>statistic_id</th>
+                  
+                
+                  
+                    
+                    <th>time</th>
+                  
+                
+                  
+                    
+                    <th>value</th>
+                  
+                
+                  
+                    
+                    <th>unit_of_measure</th>
+                  
+                
+                  
+                    
+                    <th>approval_status</th>
+                  
+                
+                  
+                    
+                    <th>qualifier</th>
+                  
+                
+                  
+                    
+                    <th>last_modified</th>
+                  
+                
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items/0000005f-657d-4d20-9dc2-dc13043cd9d0" title="0000005f-657d-4d20-9dc2-dc13043cd9d0">0000005f-...</a>
+                    </td>
+                  
+                  
+                    <td data-label="time_series_id">66605858a7a6465d928183ad4ca5832f</td>
+                  
+                    <td data-label="monitoring_location_id">USGS-07237500</td>
+                  
+                    <td data-label="parameter_code">00060</td>
+                  
+                    <td data-label="statistic_id">00003</td>
+                  
+                    <td data-label="time">2018-08-19</td>
+                  
+                    <td data-label="value">45.1</td>
+                  
+                    <td data-label="unit_of_measure">ft^3/s</td>
+                  
+                    <td data-label="approval_status">Approved</td>
+                  
+                    <td data-label="qualifier">None</td>
+                  
+                    <td data-label="last_modified">2025-03-11 16:15:52.985007+00:00</td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items/00000062-26a3-4756-b517-4f686ed88998" title="00000062-26a3-4756-b517-4f686ed88998">00000062-...</a>
+                    </td>
+                  
+                  
+                    <td data-label="time_series_id">4c67045060554e31af9c3020dfbdf038</td>
+                  
+                    <td data-label="monitoring_location_id">USGS-272317082290502</td>
+                  
+                    <td data-label="parameter_code">72020</td>
+                  
+                    <td data-label="statistic_id">00001</td>
+                  
+                    <td data-label="time">1997-11-12</td>
+                  
+                    <td data-label="value">14.26</td>
+                  
+                    <td data-label="unit_of_measure">ft</td>
+                  
+                    <td data-label="approval_status">Approved</td>
+                  
+                    <td data-label="qualifier">None</td>
+                  
+                    <td data-label="last_modified">2025-07-05 10:51:53.342016+00:00</td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items/00000071-fc70-4b3e-83a8-a5b3214afb86" title="00000071-fc70-4b3e-83a8-a5b3214afb86">00000071-...</a>
+                    </td>
+                  
+                  
+                    <td data-label="time_series_id">ba5f0ebc2f4f4f90be479d01c7815ce0</td>
+                  
+                    <td data-label="monitoring_location_id">USGS-01389005</td>
+                  
+                    <td data-label="parameter_code">00010</td>
+                  
+                    <td data-label="statistic_id">00002</td>
+                  
+                    <td data-label="time">1994-06-20</td>
+                  
+                    <td data-label="value">26.0</td>
+                  
+                    <td data-label="unit_of_measure">degC</td>
+                  
+                    <td data-label="approval_status">Approved</td>
+                  
+                    <td data-label="qualifier">None</td>
+                  
+                    <td data-label="last_modified">2026-01-15 19:11:52.638012+00:00</td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items/00000090-0955-4f75-8bf7-39a687496441" title="00000090-0955-4f75-8bf7-39a687496441">00000090-...</a>
+                    </td>
+                  
+                  
+                    <td data-label="time_series_id">2b105b5f4efc46a88e2443a0b03bab62</td>
+                  
+                    <td data-label="monitoring_location_id">USGS-02463500</td>
+                  
+                    <td data-label="parameter_code">00060</td>
+                  
+                    <td data-label="statistic_id">00003</td>
+                  
+                    <td data-label="time">1960-01-21</td>
+                  
+                    <td data-label="value">220</td>
+                  
+                    <td data-label="unit_of_measure">ft^3/s</td>
+                  
+                    <td data-label="approval_status">Approved</td>
+                  
+                    <td data-label="qualifier">None</td>
+                  
+                    <td data-label="last_modified">2025-07-04 05:24:37.234235+00:00</td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items/000000a9-398f-46db-acff-49acba7dbf25" title="000000a9-398f-46db-acff-49acba7dbf25">000000a9-...</a>
+                    </td>
+                  
+                  
+                    <td data-label="time_series_id">2d43238aae1f48b7befb86385fd098b6</td>
+                  
+                    <td data-label="monitoring_location_id">USGS-14063000</td>
+                  
+                    <td data-label="parameter_code">00060</td>
+                  
+                    <td data-label="statistic_id">00003</td>
+                  
+                    <td data-label="time">1936-03-17</td>
+                  
+                    <td data-label="value">158</td>
+                  
+                    <td data-label="unit_of_measure">ft^3/s</td>
+                  
+                    <td data-label="approval_status">Approved</td>
+                  
+                    <td data-label="qualifier">None</td>
+                  
+                    <td data-label="last_modified">2025-07-05 09:11:21.927105+00:00</td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items/000000ad-7347-405e-bc39-2c7c7b8dd3bf" title="000000ad-7347-405e-bc39-2c7c7b8dd3bf">000000ad-...</a>
+                    </td>
+                  
+                  
+                    <td data-label="time_series_id">9d7c5b0f46114c47b0202921417ff77c</td>
+                  
+                    <td data-label="monitoring_location_id">USGS-08088500</td>
+                  
+                    <td data-label="parameter_code">62614</td>
+                  
+                    <td data-label="statistic_id">00002</td>
+                  
+                    <td data-label="time">2020-03-20</td>
+                  
+                    <td data-label="value">998.01</td>
+                  
+                    <td data-label="unit_of_measure">ft</td>
+                  
+                    <td data-label="approval_status">Approved</td>
+                  
+                    <td data-label="qualifier">None</td>
+                  
+                    <td data-label="last_modified">2026-05-13 07:19:38.077283+00:00</td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items/000000b7-b043-44ea-a561-297cd0924246" title="000000b7-b043-44ea-a561-297cd0924246">000000b7-...</a>
+                    </td>
+                  
+                  
+                    <td data-label="time_series_id">b9fc93592a274aac84c4169f46d64711</td>
+                  
+                    <td data-label="monitoring_location_id">MO005-365559092030001</td>
+                  
+                    <td data-label="parameter_code">62611</td>
+                  
+                    <td data-label="statistic_id">00003</td>
+                  
+                    <td data-label="time">2025-02-12</td>
+                  
+                    <td data-label="value">998.94</td>
+                  
+                    <td data-label="unit_of_measure">ft</td>
+                  
+                    <td data-label="approval_status">Provisional</td>
+                  
+                    <td data-label="qualifier">None</td>
+                  
+                    <td data-label="last_modified">2026-09-23 21:31:22.552097+00:00</td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items/000000bc-5ef5-4e1d-9e29-26c56de8a650" title="000000bc-5ef5-4e1d-9e29-26c56de8a650">000000bc-...</a>
+                    </td>
+                  
+                  
+                    <td data-label="time_series_id">a96c0361a57d4b4eb749b0f9ccc2076d</td>
+                  
+                    <td data-label="monitoring_location_id">USGS-02423397</td>
+                  
+                    <td data-label="parameter_code">00065</td>
+                  
+                    <td data-label="statistic_id">00003</td>
+                  
+                    <td data-label="time">2021-12-10</td>
+                  
+                    <td data-label="value">1.30</td>
+                  
+                    <td data-label="unit_of_measure">ft</td>
+                  
+                    <td data-label="approval_status">Approved</td>
+                  
+                    <td data-label="qualifier">None</td>
+                  
+                    <td data-label="last_modified">2025-03-10 19:38:34.618451+00:00</td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items/000000c5-2c25-49bb-a6d6-6079cc997485" title="000000c5-2c25-49bb-a6d6-6079cc997485">000000c5-...</a>
+                    </td>
+                  
+                  
+                    <td data-label="time_series_id">df23c411d4b24ba1b729d85802acefe3</td>
+                  
+                    <td data-label="monitoring_location_id">MO005-375625091480401</td>
+                  
+                    <td data-label="parameter_code">72019</td>
+                  
+                    <td data-label="statistic_id">00003</td>
+                  
+                    <td data-label="time">1984-05-21</td>
+                  
+                    <td data-label="value">169.21</td>
+                  
+                    <td data-label="unit_of_measure">ft</td>
+                  
+                    <td data-label="approval_status">Approved</td>
+                  
+                    <td data-label="qualifier">None</td>
+                  
+                    <td data-label="last_modified">2025-08-30 21:39:14.275862+00:00</td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items/000000d8-3f9b-41d6-93f7-40d8a73e94e5" title="000000d8-3f9b-41d6-93f7-40d8a73e94e5">000000d8-...</a>
+                    </td>
+                  
+                  
+                    <td data-label="time_series_id">54e6de39c49d4776a07dbbe17a1c1a63</td>
+                  
+                    <td data-label="monitoring_location_id">USGS-08068400</td>
+                  
+                    <td data-label="parameter_code">00060</td>
+                  
+                    <td data-label="statistic_id">00003</td>
+                  
+                    <td data-label="time">2022-03-23</td>
+                  
+                    <td data-label="value">133</td>
+                  
+                    <td data-label="unit_of_measure">ft^3/s</td>
+                  
+                    <td data-label="approval_status">Approved</td>
+                  
+                    <td data-label="qualifier">None</td>
+                  
+                    <td data-label="last_modified">2026-01-15 22:56:58.285385+00:00</td>
+                  
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    
+  </section>
+
+    </div>
+  </main>
+  <footer style="background-color: #f0f0f0">
+    <div class="text-center">
+      Powered by 
+      
+      
+        <a title="pygeoapi" href="https://pygeoapi.io"><img alt="An image of the pygeoapi logo. The link goes to the pygeoapi homepage." src="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/pygeoapi.png" class="mx-1" title="pygeoapi logo" style="height: 24px; vertical-align: middle" /></a>
+      
+      0.24.0
+    </div>
+  </footer>
+  
+  
+    <script>
+  var map = L.map('items-map').setView([45, -75], 5);
+  // maxNativeZoom caps the deepest level actually requested from the tile service, letting
+  // Leaflet upscale for zooms above it. The USGSTopo cache 404s past level 16, and fitBounds()
+  // below goes to maxZoom on a single-feature collection, so without this the map lands on
+  // blank tiles. Absent from config, the layer just requests every level up to maxZoom.
+  map.addLayer(new L.TileLayer(
+      'https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}', {
+          maxZoom: 18,
+          maxNativeZoom: 16,
+          attribution: 'Basemap from <a href="https://www.usgs.gov/programs/national-geospatial-program/national-map">USGS National Map</a>'
+      }
+  ));
+  var geojson_data = [{"type":"Feature","properties":{"time_series_id":"66605858a7a6465d928183ad4ca5832f","monitoring_location_id":"USGS-07237500","parameter_code":"00060","statistic_id":"00003","time":"2018-08-19","value":"45.1","unit_of_measure":"ft^3/s","approval_status":"Approved","qualifier":null,"last_modified":"2025-03-11T16:15:52.985007+00:00"},"id":"0000005f-657d-4d20-9dc2-dc13043cd9d0","geometry":{"type":"Point","coordinates":[-99.2784383440768,36.4367033648087]}},{"type":"Feature","properties":{"time_series_id":"4c67045060554e31af9c3020dfbdf038","monitoring_location_id":"USGS-272317082290502","parameter_code":"72020","statistic_id":"00001","time":"1997-11-12","value":"14.26","unit_of_measure":"ft","approval_status":"Approved","qualifier":null,"last_modified":"2025-07-05T10:51:53.342016+00:00"},"id":"00000062-26a3-4756-b517-4f686ed88998","geometry":{"type":"Point","coordinates":[-82.4845404261539,27.3883772891982]}},{"type":"Feature","properties":{"time_series_id":"ba5f0ebc2f4f4f90be479d01c7815ce0","monitoring_location_id":"USGS-01389005","parameter_code":"00010","statistic_id":"00002","time":"1994-06-20","value":"26.0","unit_of_measure":"degC","approval_status":"Approved","qualifier":null,"last_modified":"2026-01-15T19:11:52.638012+00:00"},"id":"00000071-fc70-4b3e-83a8-a5b3214afb86","geometry":{"type":"Point","coordinates":[-74.26916666666666,40.896388888888886]}},{"type":"Feature","properties":{"time_series_id":"2b105b5f4efc46a88e2443a0b03bab62","monitoring_location_id":"USGS-02463500","parameter_code":"00060","statistic_id":"00003","time":"1960-01-21","value":"220","unit_of_measure":"ft^3/s","approval_status":"Approved","qualifier":null,"last_modified":"2025-07-04T05:24:37.234235+00:00"},"id":"00000090-0955-4f75-8bf7-39a687496441","geometry":{"type":"Point","coordinates":[-87.4475034994627,33.2112291673845]}},{"type":"Feature","properties":{"time_series_id":"2d43238aae1f48b7befb86385fd098b6","monitoring_location_id":"USGS-14063000","parameter_code":"00060","statistic_id":"00003","time":"1936-03-17","value":"158","unit_of_measure":"ft^3/s","approval_status":"Approved","qualifier":null,"last_modified":"2025-07-05T09:11:21.927105+00:00"},"id":"000000a9-398f-46db-acff-49acba7dbf25","geometry":{"type":"Point","coordinates":[-121.502802933593,43.6890101988964]}},{"type":"Feature","properties":{"time_series_id":"9d7c5b0f46114c47b0202921417ff77c","monitoring_location_id":"USGS-08088500","parameter_code":"62614","statistic_id":"00002","time":"2020-03-20","value":"998.01","unit_of_measure":"ft","approval_status":"Approved","qualifier":null,"last_modified":"2026-05-13T07:19:38.077283+00:00"},"id":"000000ad-7347-405e-bc39-2c7c7b8dd3bf","geometry":{"type":"Point","coordinates":[-98.4258860688216,32.8723447371618]}},{"type":"Feature","properties":{"time_series_id":"b9fc93592a274aac84c4169f46d64711","monitoring_location_id":"MO005-365559092030001","parameter_code":"62611","statistic_id":"00003","time":"2025-02-12","value":"998.94","unit_of_measure":"ft","approval_status":"Provisional","qualifier":null,"last_modified":"2026-09-23T21:31:22.552097+00:00"},"id":"000000b7-b043-44ea-a561-297cd0924246","geometry":{"type":"Point","coordinates":[-92.05,36.9330833333333]}},{"type":"Feature","properties":{"time_series_id":"a96c0361a57d4b4eb749b0f9ccc2076d","monitoring_location_id":"USGS-02423397","parameter_code":"00065","statistic_id":"00003","time":"2021-12-10","value":"1.30","unit_of_measure":"ft","approval_status":"Approved","qualifier":null,"last_modified":"2025-03-10T19:38:34.618451+00:00"},"id":"000000bc-5ef5-4e1d-9e29-26c56de8a650","geometry":{"type":"Point","coordinates":[-86.5624846821598,33.5345488590297]}},{"type":"Feature","properties":{"time_series_id":"df23c411d4b24ba1b729d85802acefe3","monitoring_location_id":"MO005-375625091480401","parameter_code":"72019","statistic_id":"00003","time":"1984-05-21","value":"169.21","unit_of_measure":"ft","approval_status":"Approved","qualifier":null,"last_modified":"2025-08-30T21:39:14.275862+00:00"},"id":"000000c5-2c25-49bb-a6d6-6079cc997485","geometry":{"type":"Point","coordinates":[-91.8012777777778,37.9403055555556]}},{"type":"Feature","properties":{"time_series_id":"54e6de39c49d4776a07dbbe17a1c1a63","monitoring_location_id":"USGS-08068400","parameter_code":"00060","statistic_id":"00003","time":"2022-03-23","value":"133","unit_of_measure":"ft^3/s","approval_status":"Approved","qualifier":null,"last_modified":"2026-01-15T22:56:58.285385+00:00"},"id":"000000d8-3f9b-41d6-93f7-40d8a73e94e5","geometry":{"type":"Point","coordinates":[-95.4838288214225,30.1921589980736]}}];
+
+  var items = new L.GeoJSON(geojson_data, {
+      onEachFeature: function (feature, layer) {
+          var url = 'https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items/' + feature.id + '?f=html';
+          var html = '<span><a href="' + url + '">' +  feature.id  + '</a></span>';
+          layer.bindPopup(html);
+      }
+  });
+  var markers = L.markerClusterGroup({
+      disableClusteringAtZoom: 9,
+      chunkedLoading: true,
+      chunkInterval: 500,
+  });
+  markers.clearLayers().addLayer(items);
+  map.addLayer(markers);
+
+  map.fitBounds(items.getBounds());
+    </script>
+  
+
+  <!-- BEGIN USGS Footer Template -->
+<footer class="footer">
+  <div class="tmp-container">
+    <!-- .footer-wrap -->
+    <!-- .footer-doi -->
+    <div class="footer-doi">
+      <!-- footer nav links -->
+      <ul class="menu nav">
+        <li class="first leaf menu-links menu-level-1"><a href="https://www.doi.gov/privacy">DOI Privacy Policy</a></li>
+        <li class="leaf menu-links menu-level-1"><a href="https://www.usgs.gov/policies-and-notices">Legal</a></li>
+        <li class="leaf menu-links menu-level-1">
+          <a href="https://www.usgs.gov/accessibility-and-us-geological-survey">Accessibility</a>
+        </li>
+        <li class="leaf menu-links menu-level-1"><a href="https://www.usgs.gov/sitemap">Site Map</a></li>
+        <li class="last leaf menu-links menu-level-1"><a href="https://answers.usgs.gov/">Contact USGS</a></li>
+      </ul>
+      <!--/ footer nav links -->
+    </div>
+    <!-- /.footer-doi -->
+    <hr />
+    <!-- .footer-utl-links -->
+    <div class="footer-doi">
+      <ul class="menu nav">
+        <li class="first leaf menu-links menu-level-1">
+          <a href="https://www.doi.gov/">U.S. Department of the Interior</a>
+        </li>
+        <li class="leaf menu-links menu-level-1"><a href="https://www.doioig.gov/">DOI Inspector General</a></li>
+        <li class="leaf menu-links menu-level-1"><a href="https://www.whitehouse.gov/">White House</a></li>
+        <li class="leaf menu-links menu-level-1">
+          <a href="https://www.whitehouse.gov/omb/management/egov/">E-gov</a>
+        </li>
+        <li class="leaf menu-links menu-level-1"><a href="https://www.doi.gov/pmb/eeo/no-fear-act">No Fear Act</a></li>
+        <li class="last leaf menu-links menu-level-1">
+          <a href="https://www.usgs.gov/about/organization/science-support/foia">FOIA</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.footer-utl-links -->
+    <!-- .footer-social-links -->
+    <div class="footer-social-links">
+      <ul class="social">
+        <li class="follow">Follow</li>
+        <li class="twitter">
+          <a href="https://twitter.com/usgs" target="_blank">
+            <i class="fa fa-twitter-square"><span class="only">Twitter</span></i>
+          </a>
+        </li>
+        <li class="facebook">
+          <a href="https://facebook.com/usgeologicalsurvey" target="_blank">
+            <i class="fa fa-facebook-square"><span class="only">Facebook</span></i>
+          </a>
+        </li>
+        <li class="github">
+          <a href="https://github.com/usgs" target="_blank">
+            <i class="fa fa-github"><span class="only">GitHub</span></i>
+          </a>
+        </li>
+        <li class="flickr">
+          <a href="https://flickr.com/usgeologicalsurvey" target="_blank">
+            <i class="fa fa-flickr"><span class="only">Flickr</span></i>
+          </a>
+        </li>
+        <li class="youtube">
+          <a href="https://youtube.com/usgs" target="_blank">
+            <i class="fa fa-youtube-play"><span class="only">YouTube</span></i>
+          </a>
+        </li>
+        <li class="instagram">
+          <a href="https://instagram.com/usgs" target="_blank">
+            <i class="fa fa-instagram"><span class="only">Instagram</span></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.footer-social-links -->
+  </div>
+  <!-- /.footer-wrap -->
+</footer>
+<!-- END USGS Footer Template- -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKQR8KP"
+        height="0"
+        width="0"
+        style="display: none;
+               visibility: hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <script>
+      // Requests and embeds JSON-LD representation of current page
+      var xhr = new XMLHttpRequest()
+      var path = window.location.protocol + '//' + window.location.host + window.location.pathname + '?f=jsonld'
+      xhr.open('GET', path)
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          var head = document.getElementsByTagName('head')[0]
+          var jsonld_datablock = document.createElement('script')
+          jsonld_datablock.type = 'application/ld+json'
+          //remove full context path, because search engines don't expect it here, pyld requires it.
+          jsonld_datablock.textContent = xhr.responseText.replace('docs/jsonldcontext.jsonld', '')
+          head.appendChild(jsonld_datablock)
+        }
+      }
+      xhr.send()
+  </script>
+  <script src="https://api.waterdata.usgs.gov/ogcapi/v1/static/js/wdfnviz.umd.js"></script>
+</body>
+</html>

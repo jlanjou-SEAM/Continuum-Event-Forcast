@@ -1,0 +1,1281 @@
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="NSF NCAR GDEX">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta class="foundation-mq">
+        <link rel="canonical" href="https://gdex.ucar.edu">
+        
+<link rel="icon" type="image/png" href="/static/img/app-favicons/gdex/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/static/img/app-favicons/gdex/favicon.svg" />
+<link rel="shortcut icon" href="/static/img/app-favicons/gdex/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/static/img/app-favicons/gdex/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="GDEX" />
+<link rel="manifest" href="/static/img/app-favicons/gdex/site.webmanifest" />
+
+        
+        
+        <!-- Load Font Awesome v6 core styles and the Solid and Brands styles -->
+        <link rel="preload" href="/static/unity/lib/fontawesome/css/fontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="stylesheet" href="/static/unity/lib/fontawesome/css/fontawesome.css">
+        <link rel="preload" href="/static/unity/lib/fontawesome/css/brands.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="stylesheet" href="/static/unity/lib/fontawesome/css/brands.css">
+        <link rel="preload" href="/static/unity/lib/fontawesome/css/solid.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="stylesheet" href="/static/unity/lib/fontawesome/css/solid.css">
+
+        <!-- Font Awesome v5 backward compatability -->
+        <link rel="preload" href="/static/unity/lib/fontawesome/css/v5-font-face.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link href="/static/unity/lib/fontawesome/css/v5-font-face.css" rel="stylesheet" />
+
+        <noscript>
+        <link rel="stylesheet" href="/static/unity/lib/fontawesome/css/fontawesome.css">
+        <link rel="stylesheet" href="/static/unity/lib/fontawesome/css/brands.css">
+        <link rel="stylesheet" href="/static/unity/lib/fontawesome/css/solid.css">
+        </noscript>
+
+        
+        <link rel="preload" href="/static/unity/lib/icomoon/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="stylesheet" href="/static/unity/lib/icomoon/style.css" as="style">
+        <noscript><link rel="stylesheet" href="/static/unity/lib/icomoon/style.css"></noscript>
+
+        
+        <link rel="preload" href="/static/unity/lib/icomoon2/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="stylesheet" href="/static/unity/lib/icomoon2/style.css" as="style">
+        <noscript><link rel="stylesheet" href="/static/unity/lib/icomoon2/style.css"></noscript>
+
+        
+        <link rel="preload" href="/static/unity/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="stylesheet" href="/static/unity/css/main.min.css">
+        <noscript><link rel="stylesheet" href="/static/unity/css/main.min.css"></noscript>
+        <link rel="preload" href="/static/unity/css/print.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" media="print">
+        <link rel="stylesheet" href="/static/unity/css/print.min.css" media="print">
+        <noscript><link rel="stylesheet" href="/static/unity/css/print.min.css" media="print"></noscript>
+
+        
+        <link rel="stylesheet" href="/static/css/gdexwebserver.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="/static/css/gdex-theme-vars.css" media="print" onload="this.media='all'">
+
+        
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"></noscript>
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"></noscript>
+        
+        
+        <link rel="stylesheet" href="/static/css/jquery-ui.min.css">
+        
+
+        <title>
+            
+                Home | NSF NCAR Geoscience Data Exchange
+            
+            
+                
+                
+            
+        </title>
+
+        
+        
+
+
+
+<script type="text/javascript" src="/static/js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery-ui.min.js"></script>
+
+<script language="javascript">
+    var gmap3_loaded = false;
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1Q6C0RXMYP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1Q6C0RXMYP'); 
+</script>
+
+
+<script language="javascript">
+    const mapped_urls = new Map();
+    mapped_urls.set('about', "/support/about-the-rda/");
+    mapped_urls.set('apps_api_desc', "/resources/web-services/rda-external-application-api/");
+    mapped_urls.set('daas', "/resources/daas/");
+    mapped_urls.set('data-citation', "/resources/citations/");
+    mapped_urls.set('metrics', "/resources/metrics/");
+    mapped_urls.set('services', "/resources/ancillary-services/");
+    mapped_urls.set('rda_web_services', "/resources/web-services/");
+
+    window.onload=respondToHashChange;
+    function respondToHashChange() {
+      var hash = document.location.hash.substr(1);
+      if (hash.charAt(0) == '!') {
+        hash = hash.substr(1);
+      }
+      if (hash.length > 0 && document.location.pathname.indexOf("ajax") < 0) {
+        var hash0 = hash;
+        var hash1 = "";
+        var idx = hash0.indexOf("/");
+        if (idx > 0) {
+          hash0 = hash0.substr(0, idx);
+          hash1 = hash0.substr(idx);
+        }
+        var m_url = mapped_urls.get(hash0);
+        if (m_url != undefined) {
+          alert("NOTICE: You are using a legacy URL that will not be supported in the future. If this was a bookmark, you should replace it with the new URL, to which you will now be redirected.");
+          document.location = m_url + hash1;
+        } else {
+          document.location = document.location.pathname + "ajax/#" + hash;
+        }
+      }
+    }
+</script>
+
+
+
+        
+        
+
+        
+        
+    <link rel="stylesheet" href="/static/home/css/home_page.css">
+    <link rel="preload" href="/static/vendor/swiper/css/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="/static/vendor/swiper/css/swiper-bundle.min.css">
+    <noscript><link rel="stylesheet" href="/static/vendor/swiper/css/swiper-bundle.min.css"></noscript>
+    <script src="/static/vendor/swiper/js/swiper-bundle.min.js"></script>
+
+    </head>
+
+    <body class="ncar">
+        
+
+
+
+<header>
+    <nav class="navbar navbar-expand-md navbar-light align-items-start py-0">
+        <div class="container-fluid px-0">
+            <div class="row gx-0 flex-grow-1">
+                
+                <div class="col-12">
+    <div class="container-lg">
+        <div class="row gx-0 py-md-1">
+                
+                <div class="col col-md-8 py-md-1">
+<div class="d-flex">
+    <div class="my-1 py-md-0 align-self-center logo-ncar">
+        <div class="mb-0">
+            <a href="/">
+                
+
+
+<picture>
+    <source srcset="/media/original_images/logo-ncar-2026.webp" type="image/webp">
+    <source srcset="/media/original_images/logo-ncar-2026.png"  type="image/jpeg+png">
+    <img class="img-fluid" src="/media/original_images/logo-ncar-2026.png" alt="NSF NCAR">
+</picture>
+
+            </a>
+        </div>
+    </div>
+    <div class="site-name mx-1 mx-md-2">
+        <a href="/">Geoscience Data Exchange (GDEX)</a>
+    </div>
+    <div class="ms-auto px-0 py-md-0 d-md-none justify-content-end mobile-toggler">
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Mobile Menu" class="navbar-toggler collapsed btn border-start" data-bs-target="#navbarSupportedContent1,#navbarSupportedContent2" data-bs-toggle="collapse" id="menuIcon" type="button"></button>
+    </div>
+</div>
+</div>
+                
+
+                
+                <div class="utility-menu col collapse d-none d-md-flex justify-content-end align-items-center pe-0">
+    <div class="px-2">
+        <a href="mailto:datahelp@ucar.edu">Contact Us</a>
+    </div>
+    
+        <div class="ps-2">
+            <a href="/accounts/login/?next=/" class="btn btn-pill btn-primary px-2 py-1 border-1" aria-label="Sign In">Sign In</a>
+        </div>
+    
+</div>
+
+                
+
+        </div>
+    </div>
+</div>
+                
+
+                
+                
+
+<div class="col-12 navbar-wrapper border-top">
+    <div class="container-lg collapse navbar-collapse" id="navbarSupportedContent1">
+        
+
+<ul class="menu navbar-nav me-auto mb-2 mb-md-0 align-items-center">
+    
+        <li class="nav-item dropdown d-flex flex-wrap justify-content-between">
+            
+                
+                    <a class="nav-link" aria-current="page" href="/gsearch/dataset-search/">Find Data</a>
+                
+            
+            
+                <button aria-expanded="false" aria-label="Expand/Collapse" class="btn dropdown-toggle px-3 px-md-0 mx-md-1" data-bs-toggle="dropdown" id="find-data" role="button" href="#"></button>
+                <ul class="dropdown-menu" aria-labelledby="find-data">
+                    
+                    <li>
+                        <a class="dropdown-item" href="/gsearch/dataset-search/">Search GDEX</a>
+                    </li>
+                    
+                    <li>
+                        <a class="dropdown-item" href="/datasets/collections/">Curated Dataset Collections</a>
+                    </li>
+                    
+                </ul>
+            
+        </li>
+    
+
+    
+        <li class="nav-item dropdown d-flex flex-wrap justify-content-between">
+            <a class="nav-link " aria-current="page" href="/about-gdex/">About</a>
+            
+                <button aria-expanded="false" aria-label="Expand/Collapse" class="btn dropdown-toggle px-3 px-md-0 mx-md-1" data-bs-toggle="dropdown" id="about" role="button" href="#"></button>
+                
+
+
+    <ul class="dropdown-menu" aria-labelledby="">
+        
+            <li class="">
+                <a class="dropdown-item" href="/about-gdex/empowering-scalable-collaborative-science/">Empowering Scalable, Collaborative Science</a>
+                
+            </li>
+        
+            <li class="">
+                <a class="dropdown-item" href="/about-gdex/a-20-year-legacy-of-open-climate-data-access/">History of GDEX</a>
+                
+            </li>
+        
+            <li class="">
+                <a class="dropdown-item" href="/about-gdex/ndcc-osdf/">Integration with OSDF Infrastructure</a>
+                
+            </li>
+        
+            <li class="">
+                <a class="dropdown-item" href="/about-gdex/metrics/">Most Popular Datasets and Usage Statistics</a>
+                
+            </li>
+        
+            <li class="">
+                <a class="dropdown-item" href="/about-gdex/data-policies/">Data Policies</a>
+                
+            </li>
+        
+    </ul>
+
+            
+        </li>
+    
+        <li class="nav-item dropdown d-flex flex-wrap justify-content-between">
+            <a class="nav-link " aria-current="page" href="/resources/">Resources</a>
+            
+                <button aria-expanded="false" aria-label="Expand/Collapse" class="btn dropdown-toggle px-3 px-md-0 mx-md-1" data-bs-toggle="dropdown" id="resources" role="button" href="#"></button>
+                
+
+
+    <ul class="dropdown-menu" aria-labelledby="">
+        
+            <li class="">
+                <a class="dropdown-item" href="/resources/getting-started/">Getting started</a>
+                
+            </li>
+        
+            <li class="">
+                <a class="dropdown-item" href="/resources/thredds/">THREDDS Data Server</a>
+                
+            </li>
+        
+            <li class="">
+                <a class="dropdown-item" href="/resources/gdex-notebook-examples/">Example Access and Analysis Notebooks</a>
+                
+            </li>
+        
+            <li class="">
+                <a class="dropdown-item" href="/resources/web-services/">Web Services</a>
+                
+            </li>
+        
+            <li class="">
+                <a class="dropdown-item" href="/resources/citations/">Data Citation</a>
+                
+            </li>
+        
+            <li class="">
+                <a class="dropdown-item" href="/resources/submit-new-dataset/">Submit New Dataset</a>
+                
+            </li>
+        
+            <li class=" dropdown">
+                <a class="dropdown-item" href="/resources/docs/">Documentation</a>
+                
+                    
+
+
+    <ul class="dropdown-menu" aria-labelledby="">
+        
+            <li class="">
+                <a class="dropdown-item" href="/resources/docs/dsmaint/">Dataset Maintenance</a>
+                
+            </li>
+        
+            <li class="">
+                <a class="dropdown-item" href="/resources/docs/mm-guide/">Guide to using the Metadata Manager</a>
+                
+            </li>
+        
+            <li class="">
+                <a class="dropdown-item" href="/resources/docs/search-browse/">Search and Browse Tools</a>
+                
+            </li>
+        
+            <li class="">
+                <a class="dropdown-item" href="/resources/docs/man-pages/">Man(ual) pages for GDEX utilities</a>
+                
+            </li>
+        
+    </ul>
+
+	            
+            </li>
+        
+            <li class="">
+                <a class="dropdown-item" href="/resources/ancillary-services/">Specialized and Additional Services</a>
+                
+            </li>
+        
+    </ul>
+
+            
+        </li>
+    
+        <li class="nav-item dropdown d-flex flex-wrap justify-content-between">
+            <a class="nav-link " aria-current="page" href="/support/">Support</a>
+            
+                <button aria-expanded="false" aria-label="Expand/Collapse" class="btn dropdown-toggle px-3 px-md-0 mx-md-1" data-bs-toggle="dropdown" id="support" role="button" href="#"></button>
+                
+
+
+    <ul class="dropdown-menu" aria-labelledby="">
+        
+            <li class=" dropdown">
+                <a class="dropdown-item" href="/support/faqs/">Frequently Asked Questions (FAQs)</a>
+                
+                    
+
+
+    <ul class="dropdown-menu" aria-labelledby="">
+        
+            <li class="">
+                <a class="dropdown-item" href="/support/faqs/faqs/">Ways to Download Data</a>
+                
+            </li>
+        
+    </ul>
+
+	            
+            </li>
+        
+            <li class="">
+                <a class="dropdown-item" href="/support/help-desk/">GDEX Data Help Desk</a>
+                
+            </li>
+        
+            <li class="">
+                <a class="dropdown-item" href="/support/ncar-hpc-user-support/">HPC User Support</a>
+                
+            </li>
+        
+    </ul>
+
+            
+        </li>
+    
+        <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/news/">News</a>
+            
+        </li>
+    
+</ul>
+
+        
+        
+    </div>
+</div>
+
+                
+
+                
+                <div class="col-12 mobile-utility-menu px-2 d-md-none">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent2">
+        <div class="py-2 contact">
+            <div>
+                <a href="/contact-us/">Contact Us</a>
+            </div>
+            
+                <div class="d-flex py-2">
+                    <a href="/accounts/login" class="btn btn-primary">Sign In</a>
+                </div>
+            
+        </div>
+    </div>
+</div>
+                
+            </div>
+        </div>
+    </nav>
+</header>
+
+        
+
+
+    
+
+    
+
+
+    
+
+    
+
+
+    
+
+    
+
+
+    
+
+    
+
+
+    
+
+    
+
+
+    
+
+    
+
+
+    
+
+    
+
+
+    
+
+    
+
+
+    
+
+    
+
+
+    
+
+    
+
+
+    
+
+    
+
+
+    
+
+    
+
+
+
+        <main class="container-lg py-3 pt-md-4">
+            
+
+
+
+            
+
+
+
+
+    
+    <section class="gdex-hero" style="background-image: url('/media/images/img1_2.original.jpg');" aria-labelledby="gdex-hero-heading">
+
+    <div class="gdex-hero__content position-relative">
+        <div class="container-lg">
+        <div class="row">
+            <!--gdex-hero__overlay-panel in bootstrap is: class="col-lg-5 col-xl-4 bg-dark bg-opacity-25 text-white p-4 rounded-3 maxWidth-sm" style="backdrop-filter: blur(8px); max-width: 500px;" -->
+            <div class="col-lg-5 col-xl-4 gdex-hero__overlay-panel">
+                <h1 class="gdex-hero__heading" id="gdex-hero-heading">
+                    <span class="gdex-hero__heading-highlight">GDEX.</span> The system of record for Earth system science.
+                </h1>
+                <div class="gdex-hero__description">
+                    
+                        <p><strong>GDEX</strong> is NSF NCAR's trusted platform for discovering, sharing, preserving, and analyzing Earth System Science data.</p>
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+
+
+
+<!-- SEARCH OUTER — negative margin overlaps the hero -->
+<div class="gdex-search-outer">
+    <div class="container-lg">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="gdex-search-block">
+                    <h2 class="gdex-search-block__title" id="gdex-search-block-title">Search for Data</h2>
+                    <form action="/gsearch/dataset-search/" method="get" id="gdex-home-search-form" role="search" aria-labelledby="gdex-search-block-title">
+                        <div class="gdex-search-bar">
+                            <input
+                                type="text"
+                                name="q"
+                                id="gdex-home-search-input"
+                                class="gdex-search-bar__input"
+                                placeholder="Data keyword search or dataset number"
+                                aria-label="Search datasets"
+                            >
+                            <button type="submit" class="gdex-search-bar__btn" aria-label="Search">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                                <span>Search</span>
+                            </button>
+                        </div>
+                    </form>
+                    <script>
+                        document.getElementById('gdex-home-search-form').addEventListener('submit', function (e) {
+                            if (!document.getElementById('gdex-home-search-input').value.trim()) {
+                                e.preventDefault();
+                            }
+                        });
+                        window.addEventListener('pageshow', function () {
+                            document.getElementById('gdex-home-search-input').value = '';
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CHIPS -->
+<div class="gdex-search-chips">
+    <div class="container-lg">
+        <p class="gdex-search-chips__label" id="gdex-search-chips-label">Explore specialized datasets</p>
+        <div class="d-flex flex-wrap gap-3 justify-content-center" role="group" aria-labelledby="gdex-search-chips-label">
+            
+            <a href="/gsearch/dataset-search/?q=&amp;filter-match-any.tags=AI%20Ready" class="gdex-chip">
+                <div class="gdex-chip__icon-zone">
+                    <i class="fa-solid fa-robot" aria-hidden="true"></i>
+                </div>
+                <div class="gdex-chip__text-zone">
+                    <strong>AI Ready Datasets</strong>
+                    <small class="d-block">Datasets prepared for AI/ML workflows</small>
+                </div>
+            </a>
+            
+            <a href="/gsearch/dataset-search/?q=&amp;filter-match-any.format=Zarr" class="gdex-chip">
+                <div class="gdex-chip__icon-zone">
+                    <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                </div>
+                <div class="gdex-chip__text-zone">
+                    <strong>Zarr Format Datasets</strong>
+                    <small class="d-block">Analysis-ready, Cloud-optimized data</small>
+                </div>
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+
+<div class="gdex-waves-wrapper">
+<img src="/static/unity/img/UCAR-Waves-Lines-Only.png" alt="" aria-hidden="true" class="gdex-waves-img">
+
+
+
+
+<!-- FEATURE CARDS -->
+<section class="gdex-features-section" aria-labelledby="gdex-features-heading">
+    <div class="container-lg">
+        <h2 class="gdex-section-title" id="gdex-features-heading">What You Can Do With GDEX</h2>
+        <div class="row row-cols-2 row-cols-md-2 row-cols-lg-3 g-4">
+            
+            <div class="col">
+                <div class="gdex-feature-card">
+                    <div class="gdex-feature-card__icon">
+                        
+                            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        
+                    </div>
+                    <h4 class="gdex-feature-card__title">Explore All Datasets</h4>
+                    <div class="gdex-feature-card__desc"><p data-block-key="ww4cp">Browse our dataset collections by category, location, or time</p></div>
+                   
+                    
+                    <a href="http://gdex.ucar.edu/gdex-search/" class="gdex-feature-card__link stretched-link">
+                    
+                        Browse datasets &rarr;
+                    </a>
+                
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="gdex-feature-card">
+                    <div class="gdex-feature-card__icon">
+                        
+                            <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        
+                    </div>
+                    <h4 class="gdex-feature-card__title">GDEX API</h4>
+                    <div class="gdex-feature-card__desc"><p data-block-key="olw1i">Search GDEX datasets and submit data subset requests with the GDEX API client</p></div>
+                   
+                    
+                    <a href="http://gdex.ucar.edu/resources/web-services/" class="gdex-feature-card__link stretched-link">
+                    
+                        View API docs &rarr;
+                    </a>
+                
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="gdex-feature-card">
+                    <div class="gdex-feature-card__icon">
+                        
+                            <i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i>
+                        
+                    </div>
+                    <h4 class="gdex-feature-card__title">Deposit Data</h4>
+                    <div class="gdex-feature-card__desc"><p data-block-key="sxt0y">Request to deposit data in GDEX</p></div>
+                   
+                    
+                    <a href="http://gdex.ucar.edu/resources/submit-new-dataset/" class="gdex-feature-card__link stretched-link">
+                    
+                        Submit dataset &rarr;
+                    </a>
+                
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="gdex-feature-card">
+                    <div class="gdex-feature-card__icon">
+                        
+                            <i class="icon-jupyter-logomark" aria-hidden="true"></i>
+                        
+                    </div>
+                    <h4 class="gdex-feature-card__title">JupyterLab</h4>
+                    <div class="gdex-feature-card__desc"><p data-block-key="b4wy1">Access and process GDEX data with Jupyter Notebooks and Open OnDemand</p></div>
+                   
+                    
+                    <a href="http://gdex.ucar.edu/resources/gdex-notebook-examples/" class="gdex-feature-card__link stretched-link">
+                    
+                        Jupyter Lab resources &rarr;
+                    </a>
+                
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="gdex-feature-card">
+                    <div class="gdex-feature-card__icon">
+                        
+                            <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
+                        
+                    </div>
+                    <h4 class="gdex-feature-card__title">NSF NCAR Compute</h4>
+                    <div class="gdex-feature-card__desc"><p data-block-key="b4wy1">Request an allocation on NSF NCAR Community Compute Services</p></div>
+                   
+                    
+                    <a href="https://arc.ucar.edu/xras_submit/opportunities" class="gdex-feature-card__link stretched-link" target="_blank" rel="noopener noreferrer">
+                    
+                        Request compute access &rarr;
+                    </a>
+                
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="gdex-feature-card">
+                    <div class="gdex-feature-card__icon">
+                        
+                            <i class="fa-solid fa-chart-column" aria-hidden="true"></i>
+                        
+                    </div>
+                    <h4 class="gdex-feature-card__title">By the Numbers</h4>
+                    <div class="gdex-feature-card__desc"><p data-block-key="b4wy1">Key metrics and statistics about GDEX usage, including lists of popular and AI-Ready datasets</p></div>
+                   
+                    
+                    <a href="http://gdex.ucar.edu/about-gdex/metrics/" class="gdex-feature-card__link stretched-link">
+                    
+                        View metrics &rarr;
+                    </a>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- POPULAR DATASETS -->
+<section class="gdex-popular-section" aria-labelledby="gdex-popular-heading">
+    <div class="container-lg">
+
+        <div class="d-flex align-items-center justify-content-between mb-2">
+            <h2 class="gdex-section-title mb-0" id="gdex-popular-heading">Explore Popular Datasets</h2>
+            <a href="/gsearch/popular/" class="gdex-popular-section__view-all">
+                View all datasets &rarr;
+            </a>
+        </div>
+
+        <div class="gdex-datasets-swiper-wrapper">
+            <div class="swiper gdex-datasets-swiper">
+                <div class="swiper-wrapper" id="gdex-popular-datasets-wrapper">
+                    <!-- slides injected by JS after API call -->
+                </div>
+            </div>
+            <div class="gdex-swiper-prev" role="button" tabindex="0" aria-label="Previous datasets"><i class="fas fa-chevron-left" aria-hidden="true"></i></div>
+            <div class="gdex-swiper-next" role="button" tabindex="0" aria-label="Next datasets"><i class="fas fa-chevron-right" aria-hidden="true"></i></div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+(function () {
+    var default_img = '/images/ds_logos/default_200_200.png';
+    var placeholderImgs = [
+        '/media/original_images/hero_earth.png',
+        '/media/original_images/image_X2hGX6H.png'
+    ];
+    var apiUrl = '/api/metrics/top_datasets/';
+
+    function fmt(n) { return Number(n).toLocaleString(); }
+    function fmtVol(tb) {
+        var n = parseFloat(tb);
+        if (n >= 1000) return (n / 1000).toFixed(1) + ' PB';
+        if (n < 1) return Math.round(n * 1024) + ' GB';
+        return Math.round(n) + ' TB';
+    }
+
+    fetch(apiUrl)
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+            var wrapper = document.getElementById('gdex-popular-datasets-wrapper');
+            data.top_datasets.forEach(function (ds, i) {
+                var img;
+                if (ds.dslogo) {
+                    img = '/images/ds_logos/' + ds.dslogo;
+                } else {
+                  //  img = placeholderImgs[i % placeholderImgs.length];
+                    img = default_img;
+                }
+                var circleClass = 'gdex-dataset-card__circle' +
+                    (img === default_img ? ' gdex-dataset-card__circle--no-border' : '');
+                var slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                slide.innerHTML =
+                    '<a href="/datasets/' + ds.dataset + '/" class="gdex-dataset-card">' +
+                        '<div class="' + circleClass + '">' +
+                            '<img src="' + img + '" alt="' + ds.OName + '">' +
+                        '</div>' +
+                        '<div class="gdex-dataset-card__body">' +
+                            '<div class="gdex-dataset-card__size">#' + ds.index + '</div>' +
+                            '<h4 class="gdex-dataset-card__name">' + ds.OName + '</h4>' +
+                            '<div class="gdex-dataset-card__meta">' +
+                                '<span class="gdex-dataset-card__badge">' + fmt(ds['Total Number of Unique Users']) + ' users</span>' +
+                                '<span class="gdex-dataset-card__badge">' + fmtVol(ds['Total Volume Downloaded (TB)']) + ' downloaded</span>' +
+                            '</div>' +
+                        '</div>' +
+                    '</a>';
+                wrapper.appendChild(slide);
+            });
+
+            new Swiper('.gdex-datasets-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 24,
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                navigation: {
+                    prevEl: '.gdex-swiper-prev',
+                    nextEl: '.gdex-swiper-next',
+                },
+                breakpoints: {
+                    640:  { slidesPerView: 1 },
+                    768:  { slidesPerView: 1 },
+                    1024: { slidesPerView: 2 },
+                    1400: { slidesPerView: 3 },
+                }
+            });
+        })
+        .catch(function () {
+            document.getElementById('gdex-popular-datasets-wrapper').closest('.gdex-datasets-swiper-wrapper').style.display = 'none';
+        });
+
+    // The prev/next controls are role="button" divs (Swiper needs plain
+    // elements, not real <button>s, to attach its own nav behavior), so
+    // native Enter/Space activation isn't provided automatically.
+    document.querySelectorAll('.gdex-swiper-prev, .gdex-swiper-next').forEach(function (el) {
+        el.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                el.click();
+            }
+        });
+    });
+}());
+</script>
+
+
+
+
+
+<!-- METRICS -->
+
+
+    
+    <section class="gdex-metrics-section" style="background-image: url('/media/images/bannerimage2.original.jpg');" aria-labelledby="gdex-metrics-heading">
+
+    <div class="container-lg">
+
+        <h2 class="gdex-metrics-section__title" id="gdex-metrics-heading">GDEX By the Numbers</h2>
+
+        
+        <div class="gdex-metrics-carousel">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4" id="gdex-metrics-row">
+            <div class="col">
+                <div class="gdex-metric">
+                    <div class="gdex-metric__icon"><i class="icon-data-software-services" aria-hidden="true"></i></div>
+                    <div class="gdex-metric__value" id="gdex-metric-datasets">&hellip;</div>
+                    <div class="gdex-metric__label">Total Datasets</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="gdex-metric">
+                    <div class="gdex-metric__icon"><i class="icon-documents" aria-hidden="true"></i></div>
+                    <div class="gdex-metric__value" id="gdex-metric-citations">&hellip;</div>
+                    <div class="gdex-metric__label">Total Citations</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="gdex-metric">
+                    <div class="gdex-metric__icon"><i class="icon-our-staff" aria-hidden="true"></i></div>
+                    <div class="gdex-metric__value" id="gdex-metric-users">&hellip;</div>
+                    <div class="gdex-metric__label">Unique IPs</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="gdex-metric">
+                    <div class="gdex-metric__icon"><i class="icon-observations" aria-hidden="true"></i></div>
+                    <div class="gdex-metric__value" id="gdex-metric-downloaded">&hellip;</div>
+                    <div class="gdex-metric__label">Data Downloaded</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="gdex-metric">
+                    <div class="gdex-metric__icon"><i class="icon-computational-resources" aria-hidden="true"></i></div>
+                    <div class="gdex-metric__value" id="gdex-metric-volume">&hellip;</div>
+                    <div class="gdex-metric__label">Size of GDEX</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="gdex-metric">
+                    <div class="gdex-metric__icon"><i class="icon-what-we-offer" aria-hidden="true"></i></div>
+                    <div class="gdex-metric__value" id="gdex-metric-requests">&hellip;</div>
+                    <div class="gdex-metric__label">Customized Requests</div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="gdex-metrics-carousel__arrow gdex-metrics-carousel__arrow--prev" aria-label="Show previous metrics">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="gdex-metrics-carousel__arrow gdex-metrics-carousel__arrow--next" aria-label="Show next metrics">
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
+        </div>
+
+    </div>
+</section>
+
+
+<script>
+(function () {
+    function fmt(n) { return Number(n).toLocaleString(); }
+
+    function countUp(el, target, suffix, isFloat) {
+        var duration = 1800;
+        var startTime = null;
+        suffix = suffix || '';
+        function step(ts) {
+            if (!startTime) startTime = ts;
+            var progress = Math.min((ts - startTime) / duration, 1);
+            var eased = 1 - Math.pow(1 - progress, 3);
+            var current = target * eased;
+            el.textContent = isFloat
+                ? current.toFixed(2) + suffix
+                : fmt(Math.floor(current)) + suffix;
+            if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+    }
+
+    var metrics = [
+        { url: '/api/metrics/total_datasets/',    id: 'gdex-metric-datasets',   get: function (d) { return d.value; } },
+        { url: '/api/metrics/total_citations/',   id: 'gdex-metric-citations',   get: function (d) { return d.value; } },
+        { url: '/api/metrics/unique_users/',      id: 'gdex-metric-users',       get: function (d) { return d.ips; } },
+        { url: '/api/metrics/volume_downloaded/', id: 'gdex-metric-downloaded',  get: function (d) { return d.volume; }, suffix: ' PB', float: true },
+        { url: '/api/metrics/gdex_volume/',       id: 'gdex-metric-volume',      get: function (d) { return d.value; }, suffix: ' PB', float: true },
+        { url: '/api/metrics/total_requests/',    id: 'gdex-metric-requests',    get: function (d) { return d.value; } },
+    ];
+
+    function runAll() {
+        metrics.forEach(function (m) {
+            fetch(m.url)
+                .then(function (r) { return r.json(); })
+                .then(function (data) {
+                    var el = document.getElementById(m.id);
+                    if (!el) return;
+                    var target = parseFloat(m.get(data));
+                    if (isNaN(target)) { el.textContent = '—'; return; }
+                    countUp(el, target, m.suffix, m.float);
+                })
+                .catch(function () {
+                    var el = document.getElementById(m.id);
+                    if (el) el.textContent = '—';
+                });
+        });
+    }
+
+    var section = document.querySelector('.gdex-metrics-section');
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+            if (entries[0].isIntersecting) {
+                observer.unobserve(section);
+                runAll();
+            }
+        }, { threshold: 0.15 });
+        observer.observe(section);
+    } else {
+        runAll();
+    }
+
+    // Mobile-only: arrow buttons scroll the metrics row by one card's width.
+    // On desktop this row isn't scrollable (see mobile media query in home_page.css),
+    // so the buttons simply have nothing to do there.
+    var row = document.getElementById('gdex-metrics-row');
+    var prevBtn = document.querySelector('.gdex-metrics-carousel__arrow--prev');
+    var nextBtn = document.querySelector('.gdex-metrics-carousel__arrow--next');
+
+    function scrollByOneCard(direction) {
+        var card = row.querySelector('.col');
+        if (!card) return;
+        row.scrollBy({ left: direction * card.offsetWidth, behavior: 'smooth' });
+    }
+
+    prevBtn.addEventListener('click', function () { scrollByOneCard(-1); });
+    nextBtn.addEventListener('click', function () { scrollByOneCard(1); });
+}());
+</script>
+
+
+</div><!-- end gdex-waves-wrapper -->
+
+        </main>
+        
+        
+
+<footer>
+    <div id="org-footer" class="org-footer d-print-none">
+        <div class="container-lg">
+            <div class="row">
+                
+
+<div class="col-12 col-md-5 py-2">
+    <div class="accordion" id="accordionNCAR">
+        <div id="ncarHeader" class="d-flex justify-content-between">
+            <h3 class="pb-mb-2">NSF NCAR</h3>
+                <button class="btn text-light px-2 collapsed" href="#ncarCollapseMenu" id="ncarCollapseButton" aria-label="NCAR Organization" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="ncarCollapseMenu"></button>
+        </div>
+        <div id="ncarCollapseMenu" class="collapse" aria-labelledby="ncarHeader" data-parent="#accordionNCAR">
+            <ul class="nav flex-column">
+                
+                    <li class="nav-item "><a class="nav-link" href="https://ncar.ucar.edu/">NSF NCAR Homepage</a></li>
+                
+                    <li class="nav-item "><a class="nav-link" href="https://www2.acom.ucar.edu/">ACOM | Atmospheric Chemistry Observations &amp; Modeling</a></li>
+                
+                    <li class="nav-item "><a class="nav-link" href="https://www.cgd.ucar.edu/">CGD Laboratory</a></li>
+                
+                    <li class="nav-item "><a class="nav-link" href="https://www2.cisl.ucar.edu/">CISL | Computational &amp; Information Systems</a></li>
+                
+                    <li class="nav-item "><a class="nav-link" href="https://edec.ucar.edu/">EdEC | Education, Engagement &amp; Early-Career Development</a></li>
+                
+                    <li class="nav-item "><a class="nav-link" href="https://www.eol.ucar.edu/">EOL | Earth Observing Laboratory</a></li>
+                
+                    <li class="nav-item "><a class="nav-link" href="https://www2.hao.ucar.edu/">HAO | High Altitude Observatory</a></li>
+                
+                    <li class="nav-item "><a class="nav-link" href="https://www.mmm.ucar.edu/">MMM | Mesoscale &amp; Microscale Meteorology</a></li>
+                
+                    <li class="nav-item "><a class="nav-link" href="https://ral.ucar.edu/">RAL | Research Applications Laboratory</a></li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+                
+
+<div class="col-12 col-md py-2">
+    <div class="accordion" id="accordionUCAR">
+        <div id="ucarHeader" class="d-flex justify-content-between">
+            <h3 class="pb-mb-2">UCAR</h3>
+            <button class="btn px-2 text-light collapsed" href="#ucarCollapseMenu" id="ucarCollapseButton" aria-label="UCAR Organization" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="ucarCollapseMenu"></button>
+        </div>
+        <div id="ucarCollapseMenu" class="collapse" aria-labelledby="ucarHeader" data-parent="#accordionUCAR">
+            <ul class="nav flex-column">
+                
+                    <li class="nav-item "><a class="nav-link" href="https://www.ucar.edu/">UCAR Homepage</a></li>
+                
+                    <li class="nav-item "><a class="nav-link" href="https://www.ucar.edu/community-programs">Community Programs</a></li>
+                
+                    <li class="nav-item "><a class="nav-link" href="https://www.ucar.edu/what-we-offer/education-training">Education &amp; Training</a></li>
+                
+                    <li class="nav-item "><a class="nav-link" href="https://sundog.ucar.edu/">For Staff</a></li>
+                
+                    <li class="nav-item "><a class="nav-link" href="https://www.ucar.edu/what-we-do/advocacy/office-government-relations">Government Relations &amp; External Engagement</a></li>
+                
+                    <li class="nav-item "><a class="nav-link" href="https://www.ucar.edu/who-we-are/membership">Member Institutions</a></li>
+                
+                    <li class="nav-item "><a class="nav-link" href="https://www.ucar.edu/what-we-do/tech-transfer-engagement">Tech Transfer &amp; Engagement</a></li>
+                
+                    <li class="nav-item "><a class="nav-link" href="https://www.ucar.edu/what-we-do/university-collaboration">University Collaboration</a></li>
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+                
+
+<div class="col-12 col-md py-2">
+<div class="social pt-2">
+    <h4>Follow GDEX</h4>
+    <div class="social-icons text-light">
+        
+            <a href="https://bsky.app/profile/ncar-gdex.bsky.social" aria-label="Bluesky">
+                <i class="fa-brands fa-bluesky">
+                </i>
+            </a>
+        
+            <a href="https://github.com/orgs/NCAR/teams/gdex/teams" aria-label="Github">
+                <i class="fa-brands fa-github">
+                </i>
+            </a>
+        
+    </div>
+</div>
+
+
+<div class="d-flex pt-3">
+    <a class="text-center" href="https://www.coretrustseal.org/"><img class="img-fluid w-75" src="/media/images/CoreTrustSeal-logo-transparent.max-165x165_CFkaI4S.png"></a>
+    <div class="d-flex align-items-center text-light fst-italic">
+        Certified repository committed to FAIR and open science
+    </div>
+</div>
+
+</div>
+
+            </div>
+        </div>
+    </div>
+
+    
+
+<div id="legal-footer" class="legal-footer py-3">
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-12 d-print-none">
+                <p class="copyright pe-md-2">© 2026 UCAR</p>
+                <ul class="nav flex-column flex-md-row">
+                    
+                        <li class="nav-item ">
+                            <a class="nav-link" href="https://www.ucar.edu/privacy-notice">Privacy</a>
+                        </li>
+                    
+                        <li class="nav-item ">
+                            <a class="nav-link" href="https://www.ucar.edu/cookie-other-tracking-technologies-notice">Cookies</a>
+                        </li>
+                    
+                        <li class="nav-item ">
+                            <a class="nav-link" href="https://www.ucar.edu/accessibility">Web Accessibility</a>
+                        </li>
+                    
+                        <li class="nav-item ">
+                            <a class="nav-link" href="https://www.ucar.edu/terms-of-use">Terms of Use</a>
+                        </li>
+                    
+                        <li class="nav-item ">
+                            <a class="nav-link" href="https://www.ucar.edu/notification-copyright-infringement-digital-millenium-copyright-act">Copyright Issues</a>
+                        </li>
+                    
+                        <li class="nav-item ">
+                            <a class="nav-link" href="https://nsf.gov">Sponsored by U.S. NSF</a>
+                        </li>
+                    
+                        <li class="nav-item ">
+                            <a class="nav-link" href="https://www.ucar.edu/who-we-are/ethics">Report Ethics Concern</a>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 text-gray-light">
+                <span class="d-block d-md-inline pt-2 pt-md-0"><b>Postal Address:</b></span>
+                <span>P.O. Box 3000, Boulder, CO 80307-3000</span>
+                <span class="d-none d-md-inline">&bull;</span>
+                <span class="d-block d-md-inline pt-2 pt-md-0"><b>Shipping Address:</b></span>
+                <span>3090 Center Green Drive, Boulder, CO 80301</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <div id="nsf-footer" class="nsf-footer py-3">
+        <div class="container-lg">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-1 pb-3 pb-md-0 me-md-3">
+                    
+
+
+<picture>
+    <source srcset="/media/original_images/NSF_Official_logo.webp" type="image/webp">
+    <source srcset="/media/original_images/NSF_Official_logo.png"  type="image/jpeg+png">
+    <img class="img-fluid" src="/media/original_images/NSF_Official_logo.png" alt="NSF Logo">
+</picture>
+
+                </div>
+                <div class="col-12 col-md-10 flex-md-grow-1">
+                    <p class="mb-0">
+                        This material is based upon work supported by the NSF National Center for Atmospheric Research, a major facility sponsored by the U.S. National Science Foundation and managed by the University Corporation for Atmospheric Research. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the <a href="https://nsf.gov" target="_blank">U.S. National Science Foundation.</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+
+<script type="text/javascript">
+
+function popModalWindow(w, h) {
+  document.getElementById('modal-window-content').innerHTML = '<center><span class="modal-loader"></span></center>';
+  mw = document.getElementById('modal-window');
+  mc = document.getElementById('modal-window-close');
+  if (w) {
+    mw.style.width = '75%';
+    if (h) {
+      mw.style.height = '60%';
+    }
+  }
+  mw_width = parseFloat(mw.offsetWidth) / document.body.offsetWidth;
+  mw.style.left = (1. - mw_width) / 2. * 100. + '%';
+  mc_width = parseFloat(mc.offsetWidth) / document.body.offsetWidth;
+  border_width = parseFloat(mw.style.borderWidth) / document.body.offsetWidth;
+  mc.style.left = parseFloat(mw.style.left) + (mw_width * 100.) - (mc_width / 2. * 100.) + - (border_width / 2. * 100.) + '%';
+  win_height = window.innerHeight
+      ? window.innerHeight
+      : document.body.clientHeight;
+  mw.style.top = (win_height - parseInt(mw.offsetHeight)) / 2 + 'px';
+  mc.style.top = parseInt(mw.style.top) - (mc.offsetHeight / 2) + (parseInt(mw.style.borderWidth) / 2) + 'px';
+  document.getElementById('shader').classList.replace('invisible', 'visible');
+  mw.classList.replace('invisible', 'visible');
+  mc.classList.replace('invisible', 'visible');
+}
+
+function hideModalWindow() {
+  document.getElementById('modal-window').classList.replace('visible', 'invisible');
+  document.getElementById('modal-window-close').classList.replace('visible', 'invisible');
+  document.getElementById('shader').classList.replace('visible', 'invisible');
+}
+
+function popModalWindowWithGetUrl(w, h, u) {
+  popModalWindow(w, h);
+  getAjaxContent('GET', null, u, 'modal-window-content');
+}
+
+function popModalWindowWithPostUrl(w, h, u, p) {
+  popModalWindow(w, h);
+  getAjaxContent('POST', p, u, 'modal-window-content');
+}
+
+function popModalWindowWithHTML(w, h, html) {
+  popModalWindow(w, h);
+  document.getElementById('modal-window-content').innerHTML = html;
+}
+
+function popConfirm(m, a, w, h) {
+  popModalWindowWithHTML(w, h, '<center><p>' + m + '</p><div><a class="btn btn-primary px-1 py-1 border-1" style="pointer" href="javascript:void(0)" onclick="' + a + ';this.onclick=null">Yes</a>&nbsp;&nbsp;<a class="btn btn-primary px-1 py-1 border-1" style="cursor: pointer" href="javascript:void(0)" onclick="hideModalWindow()">No</a></div></center>');
+}
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="/static/css/modal.css">
+
+
+<div id="modal-window" class="invisible" style="width: 600px; height: 300px; padding: 10px; border: 15px solid #1a658f">
+    <div id="modal-window-wrapper">
+        <div id="modal-window-content">
+            <center>
+                <img id="modal-loader">
+                <div id="modal-loader-text"></div>
+            </center>
+        </div>
+    </div>
+</div>
+<div id="modal-window-close" class="invisible" style="width: 30px; height: 30px" onclick="hideModalWindow()"></div>
+<div id="shader" class="invisible"></div>
+
+
+        <input type="hidden" name="csrfmiddlewaretoken" value="Yc31pJiL7GI5dV2AXCa2guCMhN54MfJqglJgVyNrDxQ7Pfd5BmAI5uDyeGo3U3fp">
+    </body>
+    
+    <script src="/static/unity/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/unity/js/main.min.js"></script>
+    <script src="/static/unity/js/unity-gdex.js"></script>
+    
+</html>

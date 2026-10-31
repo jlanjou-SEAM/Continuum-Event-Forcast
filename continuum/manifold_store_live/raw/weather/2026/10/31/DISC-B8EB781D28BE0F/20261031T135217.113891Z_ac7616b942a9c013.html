@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>رصد الزلازل - المركز الوطني للأرصاد</title>
+        <link href='/resources/build/39.b138284b.css' rel='stylesheet'><link href='/resources/build/996.ca0b8610.css' rel='stylesheet'><link href='/resources/build/app.23708b6d.css' rel='stylesheet'>        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+    </head>
+    <body class="fullscreen lang-ar">
+        <div class="wrapper">
+                            <header class="header py-lg-0">
+    <div class="d-flex justify-content-center justify-content-lg-between align-items-center">
+        <div class="me-xl-5">
+            <a href="https://www.ncm.gov.ae?lang=ar" target="_blank">
+                <img src="/resources/build/images/ncm-logo-black@2x.png" class="img-fluid ncm-logo ncm-logo-link" role="button" alt="ncm-logo"/>
+                <img src="/resources/build/images/mobile/ncm-logo-mobile@2x.png" class="img-fluid ncm-logo-small ncm-logo-link" role="button" alt="ncm-logo"/>
+            </a>
+        </div>
+        <div class="menu-container align-self-center d-none d-lg-block">
+            
+<nav class="navbar navbar-expand-lg pb-0">
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto mb-2 align-items-center mb-lg-0">
+                        <li class="nav-item position-relative main-menu">
+                <a href="#" class="nav-link px-0 layer-link" data-default data-layer="events" data-region="uae">
+                    آخر الهزات                </a>
+
+                <div class="position-absolute submenu" aria-labelledby="latest-events">
+                    <ul class="nav flex-column">
+                        <li class="nav-item p-0">
+                            <a class="nav-link layer-link" href="#" data-layer="events" data-region="uae">
+                                الخليج العربي                            </a>
+                        </li>
+                        <li class="nav-item p-0">
+                            <a class="nav-link layer-link" href="#" data-layer="events" data-region="world">
+                                العالم                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            
+            
+                        <li class="nav-item position-relative main-menu">
+                <a href="#" class="nav-link px-0 layer-link" data-layer="stations" data-type="ems">
+                    شبكة رصد الزلازل                </a>
+                <div class="position-absolute submenu">
+                    <ul class="nav flex-column" aria-labelledby="seismic-network">
+                        <li class="nav-item p-0">
+                            <a class="nav-link layer-link" href="#" data-layer="stations" data-type="ems">
+                                محطات رصد الزلازل                            </a>
+                        </li>
+                        <li class="nav-item p-0">
+                            <a class="nav-link layer-link" href="#" data-layer="stations" data-type="sms">
+                                محطات الحركة القوية                            </a>
+                        </li>
+                        <li class="nav-item p-0">
+                            <a class="nav-link layer-link" href="#" data-layer="stations" data-type="shms">
+                                نظام مراقبة سلامة المباني                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            
+            
+            
+                            <li class="nav-item lang">
+                    <a href="https://eqplus.ncm.gov.ae/login?lang=ar" class="nav-link px-0">
+                        دخول                    </a>
+                </li>
+            
+            <li class="nav-item lang">
+                <a href="/?lang=en" class="nav-link px-0">
+                    English                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+        </div>
+        <div class="time-container align-self-center d-none d-lg-flex mx-xl-4" id="desktopClock">
+
+        </div>
+    </div>
+
+    <button class="btn btn-offcanvas-toggle position-absolute d-lg-none lines-button x hamburger-icon">
+        <span class="lines"></span>
+    </button>
+</header>
+                <main class="main-content flex-grow-1 position-relative">
+                    <div class="d-lg-none offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" data-bs-backdrop="false" aria-labelledby="offcanvasMenu">
+    <div class="offcanvas-header">
+        <div class="w-100 position-relative">
+            <div class="time-container d-flex align-items-center justify-content-center" id="mobileClock">
+
+            </div>
+            <div class="text-center mt-3">
+                <a href="/?lang=en" class="btn btn-lang-switch px-4 rounded-1 font-en">
+                    English                </a>
+            </div>
+                            <div class="text-center mt-3">
+                    <a href="https://eqplus.ncm.gov.ae/login?lang=ar" class="btn px-4 rounded-1 btn-login font-en">
+                        دخول                    </a>
+                </div>
+                    </div>
+    </div>
+
+    <div class="offcanvas-body">
+        <ul class="list-unstyled mobile-menu">
+                        <li class="menu-events">
+                <a class="layer-link" href="#" data-layer="events" data-region="uae">
+                    آخر الهزات                </a>
+            </li>
+            
+            
+                        <li class="menu-stations has-submenu">
+                <a href="#">
+                    شبكة رصد الزلازل                </a>
+                <ul class="list-unstyled">
+                    <li>
+                        <a class="layer-link" href="#" data-layer="stations" data-type="ems">
+                            محطات رصد الزلازل                        </a>
+                    </li>
+                    <li>
+                        <a class="layer-link" href="#" data-layer="stations" data-type="sms">
+                            محطات الحركة القوية                        </a>
+                    </li>
+                    <li>
+                        <a class="layer-link" href="#" data-layer="stations" data-type="shms">
+                            نظام مراقبة سلامة المباني                        </a>
+                    </li>
+                </ul>
+            </li>
+            
+            
+                    </ul>
+    </div>
+</div>
+                    <div class="position-relative" id="app-root"></div>
+                </main>
+                <script>
+    var ncmsettings = function () {
+        return {
+            'locale': 'ar',
+            'basemap_url': 'https://tiles2.ncm.gov.ae',
+            'assets_base_url': '',
+                                                            'epicenter': 1,'faults_central_asia': 1,'faults_regional': 1,'faults_tectonic_plate': 1,'faults_uae': 1,'felt_it_form': 1,'latest_events': 1,'mmi': 1,'regional_threat_map': 1,'stations_network': 1,'threat_table': 1,'travel_time_map': 1,'tsunami_bulletin_1': 1,        };
+    }();
+</script>
+                    </div>
+
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL3T0RZKKV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-RL3T0RZKKV', {
+	        cookie_domain: 'earthquakes.ncm.gov.ae',
+	        cookie_flags: 'SameSite=None;Secure'
+        });
+    </script>
+<script src='/resources/build/runtime.65179b2f.js'></script><script src='/resources/build/14.4fe01209.js'></script><script src='/resources/build/39.4d7f81c4.js'></script><script src='/resources/build/app.db5c41d7.js'></script>    </body>
+</html>

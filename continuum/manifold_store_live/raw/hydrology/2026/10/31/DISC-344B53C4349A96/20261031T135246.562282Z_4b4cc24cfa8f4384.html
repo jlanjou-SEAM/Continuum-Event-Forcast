@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="en" dir="text_direction">
+  <head>
+    <!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TTF8M2Z');
+  ;(function (w, d, s, l, i) {
+    w[l] = w[l] || []
+    w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != 'dataLayer' ? '&l=' + l : ''
+    j.async = true
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+    f.parentNode.insertBefore(j, f)
+  })(window, document, 'script', 'dataLayer', 'GTM-TKQR8KP')
+</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<link href="https://api.waterdata.usgs.gov/ogcapi/v1/static/css/common.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="https://api.waterdata.usgs.gov/ogcapi/v1/static/css/custom.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="https://api.waterdata.usgs.gov/ogcapi/v1/static/css/wdfnviz.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="https://api.waterdata.usgs.gov/ogcapi/v1/static/css/site-alert.css" rel="stylesheet" type="text/css" media="screen" />
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <meta charset="utf-8" />
+    <title>
+      
+  
+    Daily values environmental data retrieval (EDR)
+  
+      
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="language" content="" />
+    <meta name="description" content="USGS Water Data APIs" />
+    <meta name="keywords" content="geospatial,data,api,hydrology,USGS" />
+    <meta name="wda_environment_name" content="production-v1" />
+    <meta name="wda_build_version" content="1.11.2-7a153e8a" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/favicon/site.webmanifest" />
+    <link rel="shortcut icon" href="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/favicon/favicon.ico" />
+    <link rel="mask-icon" href="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/favicon/safari-pinned-tab.svg" color="#007150" />
+    <link rel="stylesheet" href="https://api.waterdata.usgs.gov/ogcapi/v1/static/css/default.css" />
+    <link rel="stylesheet" href="https://api.waterdata.usgs.gov/ogcapi/v1/static/css/main.css" />
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+    
+    <meta name="twitter:image:src"
+          content="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/logo.png" />
+    <meta property="og:image"
+          content="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/logo.png" />
+    <meta name="twitter:site" content="USGS Water Data APIs" />
+    <meta property="og:site_name" content="USGS Water Data APIs" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title"
+          content="
+  
+    Daily values environmental data retrieval (EDR)
+  " />
+    <meta property="og:title"
+          content="
+  
+    Daily values environmental data retrieval (EDR)
+  " />
+    <meta name="twitter:description" content="The United States Geological Survey (USGS) collects water data at monitoring locations across the United States using both automated sensors and manual data collection. These APIs provide access to that data, alongside metadata about data collections and monitoring locations, in standardized machine-readable formats.
+" />
+    <meta property="og:description" content="The United States Geological Survey (USGS) collects water data at monitoring locations across the United States using both automated sensors and manual data collection. These APIs provide access to that data, alongside metadata about data collections and monitoring locations, in standardized machine-readable formats.
+" />
+    <meta property="og:type" content="website" />
+    
+      
+        <link rel="next" type="application/geo+json" title="Locations (next)" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily/locations?cursor=QVIwMDgtMzUzMDMyMDkwMTYwNTAx&amp;f=html" />
+      
+    
+      
+        <link rel="alternate" type="application/geo+json" title="This document as GeoJSON" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily/locations?f=json" />
+      
+    
+      
+        <link rel="alternate" type="application/ld+json" title="This document as RDF (JSON-LD)" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily/locations?f=jsonld" />
+      
+    
+      
+        <link rel="canonical" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily/locations?f=html" />
+      
+    
+      
+        <link rel="alternate" type="text/csv; charset=utf-8" title="This document as csv" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily/locations?f=csv" />
+      
+    
+      
+        <link rel="collection" type="application/json" title="Daily values environmental data retrieval (EDR)" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily" />
+      
+    
+    
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+  <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster-src.js"></script>
+
+  </head>
+  <body>
+    <!-- BEGIN USGS Applications Header Template -->
+    <!-- Below: WDFN Analytics Tag -->
+    <noscript><iframe sandbox
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TTF8M2Z"
+        height="0"
+        width="0"
+        style="display: none;
+               visibility: hidden"></iframe></noscript>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe sandbox
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TKQR8KP"
+        height="0"
+        width="0"
+        style="display: none;
+               visibility: hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+    <section class="usa-banner" aria-label="Official website of the United States government">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img aria-hidden="true"
+               class="usa-banner__header-flag"
+               src="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/us_flag_small.png"
+               alt="" />
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+          <p class="usa-banner__header-text">An official website of the United States government</p>
+          <p class="usa-banner__header-action">Here’s how you know</p>
+        </div>
+        <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-default">
+          <span class="usa-banner__button-text">Here’s how you know</span>
+        </button>
+      </div>
+    </header>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner-default">
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img"
+               src="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/icon-dot-gov.svg"
+               role="img"
+               alt=""
+               aria-hidden="true" />
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Official websites use .gov</strong>
+              <br />
+              A <strong>.gov</strong> website belongs to an official
+              government organization in the United States.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img"
+               src="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/icon-https.svg"
+               role="img"
+               alt=""
+               aria-hidden="true" />
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Secure .gov websites use HTTPS</strong>
+              <br />
+              A <strong>lock</strong> (
+              <span class="icon-lock">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="52"
+                     height="64"
+                     viewBox="0 0 52 64"
+                     class="usa-banner__lock-image"
+                     role="img"
+                     aria-labelledby="banner-lock-description-default"
+                     focusable="false">
+                  <title id="banner-lock-title-default">Lock</title>
+                  <desc id="banner-lock-description-default">Locked padlock icon</desc>
+                  <path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z" />
+                </svg>
+              </span>) or <strong>https://</strong> means you’ve safely connected to the .gov website. Share sensitive
+              information only on official, secure websites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <div class="usa-overlay"></div>
+    <header class="usa-header usa-header--extended usgs-header" role="banner" style="width: 100%">
+  <div class="usgs-header-container">
+    <div class="usa-navbar">
+      <div class="usa-logo" id="extended-logo">
+        <a href="https://www.usgs.gov">
+          <img alt="USGS Home" src="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/logo.png" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <nav aria-label="Primary navigation" role="navigation" class="usa-nav">
+    <div class="usa-nav__inner">
+      <button class="usa-nav__close">
+        <img src="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/usa-icons/close.svg" role="img" alt="Close" />
+      </button>
+      <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item">
+          <a href="https://api.waterdata.usgs.gov/" class="usa-nav__link">
+            <span>Water Data APIs</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections" class="usa-nav__link">
+            <span>OGC API Catalog</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="nav-docs">
+            <span>Documentation</span>
+          </button>
+          <ul id="nav-docs" class="usa-nav__submenu" hidden="">
+            <li class="usa-nav__submenu-item">
+              <a href="https://api.waterdata.usgs.gov/docs/ogcapi">Long-form documentation</a>
+            </li>
+            <li class="usa-nav__submenu-item">
+              <a href="https://api.waterdata.usgs.gov/ogcapi/v1/openapi?f=html">OpenAPI/Swagger documentation</a>
+            </li>
+          </ul>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="https://waterdata.usgs.gov/" class="usa-nav__link">
+            <span>Water Data Home</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="nav-connect">
+            <span>Connect</span>
+          </button>
+          <ul id="nav-connect" class="usa-nav__submenu" hidden="">
+            <li class="usa-nav__submenu-item">
+              <a href="https://www.instagram.com/usgs_water/">USGS Water Resources Instagram</a>
+            </li>
+            <li class="usa-nav__submenu-item">
+              <a href="https://www.facebook.com/USGSWater/">USGS Water Resources Facebook</a>
+            </li>
+            <li class="usa-nav__submenu-item">
+              <a href="https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov">Questions or Comments</a>
+            </li>
+            <li class="usa-nav__submenu-item">
+              <a href="https://waterdata.usgs.gov/blog/">Water Data for the Nation Blog</a>
+            </li>
+          </ul>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="/signup/" class="usa-nav__link">
+            <span>Get an API Key</span>
+          </a>
+        </li>
+        
+        
+          
+        
+          
+            
+            <li class="usa-nav__primary-item" style="margin-left: auto; margin-right: 0">
+              <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily/locations?f=json" class="usa-nav__link">
+                <span>json</span>
+              </a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    
+  <main id="main-content">
+    
+    <div class="grid-container">
+      <nav class="usa-breadcrumb" aria-label="Breadcrumbs,," style="margin-top: 2rem; padding: 0">
+        <div class="usa-nav__inner">
+          <ol class="usa-breadcrumb__list">
+            
+  
+  <li class="usa-breadcrumb__list-item">
+    <a class="usa-breadcrumb__link" href="https://api.waterdata.usgs.gov/ogcapi/v1">Home</a>
+  </li>
+  <li class="usa-breadcrumb__list-item">
+    <a class="usa-breadcrumb__link" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections">Collections</a>
+  </li>
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="usa-breadcrumb__list-item">
+        <a class="usa-breadcrumb__link" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily">Daily values...</a>
+      </li>
+      
+    
+  
+  <li class="usa-breadcrumb__list-item">
+    <a class="usa-breadcrumb__link" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily/locations">Items</a>
+  </li>
+
+          </ol>
+        </div>
+      </nav>
+      
+  <section id="collection">
+    <h1>
+      
+        Daily values environmental data retrieval (EDR)
+      
+    </h1>
+  </section>
+  <section id="map">
+    
+      <div class="col-sm-12">
+        <div id="items-map"></div>
+      </div>
+    
+  </section>
+  <section id="items">
+    
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-sm-12">
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            Limit:
+            <select id="limits" aria-label="Limits">
+              <option value="10">
+                10 (default)
+              </option>
+              <option value="100">100</option>
+              <option value="1000">1,000</option>
+              <option value="2000">2,000</option>
+            </select>
+            <script>
+          var select = document.getElementById('limits')
+          var defaultValue = select.getElementsByTagName('option')[0].value
+          let params = new URL(document.location).searchParams
+          select.value = params.get('limit') || defaultValue
+          select.addEventListener('change', (ev) => {
+            var limit = ev.target.value
+            document.location.search = `limit=${limit}`
+          })
+            </script>
+            <span class="float-right">
+              
+                
+                  <a role="button" href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily/locations?cursor=QVIwMDgtMzUzMDMyMDkwMTYwNTAx&amp;f=html">Next page</a>
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </span>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="col-12 col-6" style="overflow-x: scroll">
+        
+        <div class="usa-table-container" tabindex="0">
+          <table class="usa-table usa-table--striped">
+            <thead>
+              <tr>
+                
+                  <th>id</th>
+                
+                
+                  
+                
+                  
+                    
+                    <th>agency_code</th>
+                  
+                
+                  
+                    
+                    <th>agency_name</th>
+                  
+                
+                  
+                    
+                    <th>monitoring_location_number</th>
+                  
+                
+                  
+                    
+                    <th>monitoring_location_name</th>
+                  
+                
+                  
+                    
+                    <th>district_code</th>
+                  
+                
+                  
+                    
+                    <th>country_code</th>
+                  
+                
+                  
+                    
+                    <th>country_name</th>
+                  
+                
+                  
+                    
+                    <th>state_code</th>
+                  
+                
+                  
+                    
+                    <th>state_name</th>
+                  
+                
+                  
+                    
+                    <th>county_code</th>
+                  
+                
+                  
+                    
+                    <th>county_name</th>
+                  
+                
+                  
+                    
+                    <th>minor_civil_division_code</th>
+                  
+                
+                  
+                    
+                    <th>site_type_code</th>
+                  
+                
+                  
+                    
+                    <th>site_type</th>
+                  
+                
+                  
+                    
+                    <th>hydrologic_unit_code</th>
+                  
+                
+                  
+                    
+                    <th>basin_code</th>
+                  
+                
+                  
+                    
+                    <th>altitude</th>
+                  
+                
+                  
+                    
+                    <th>altitude_accuracy</th>
+                  
+                
+                  
+                    
+                    <th>altitude_method_code</th>
+                  
+                
+                  
+                    
+                    <th>altitude_method_name</th>
+                  
+                
+                  
+                    
+                    <th>vertical_datum</th>
+                  
+                
+                  
+                    
+                    <th>vertical_datum_name</th>
+                  
+                
+                  
+                    
+                    <th>horizontal_positional_accuracy_code</th>
+                  
+                
+                  
+                    
+                    <th>horizontal_positional_accuracy</th>
+                  
+                
+                  
+                    
+                    <th>horizontal_position_method_code</th>
+                  
+                
+                  
+                    
+                    <th>horizontal_position_method_name</th>
+                  
+                
+                  
+                    
+                    <th>original_horizontal_datum</th>
+                  
+                
+                  
+                    
+                    <th>original_horizontal_datum_name</th>
+                  
+                
+                  
+                    
+                    <th>drainage_area</th>
+                  
+                
+                  
+                    
+                    <th>contributing_drainage_area</th>
+                  
+                
+                  
+                    
+                    <th>time_zone_abbreviation</th>
+                  
+                
+                  
+                    
+                    <th>uses_daylight_savings</th>
+                  
+                
+                  
+                    
+                    <th>construction_date</th>
+                  
+                
+                  
+                    
+                    <th>aquifer_code</th>
+                  
+                
+                  
+                    
+                    <th>national_aquifer_code</th>
+                  
+                
+                  
+                    
+                    <th>aquifer_type_code</th>
+                  
+                
+                  
+                    
+                    <th>well_constructed_depth</th>
+                  
+                
+                  
+                    
+                    <th>hole_constructed_depth</th>
+                  
+                
+                  
+                    
+                    <th>depth_source_code</th>
+                  
+                
+                  
+                    
+                    <th>revision_note</th>
+                  
+                
+                  
+                    
+                    <th>revision_created</th>
+                  
+                
+                  
+                    
+                    <th>revision_modified</th>
+                  
+                
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily/locations/AR008-342230091140501" title="AR008-342230091140501">AR008-342...</a>
+                    </td>
+                  
+                  
+                    <td data-label="agency_code">AR008</td>
+                  
+                    <td data-label="agency_name">Arkansas Natural Resources Commission</td>
+                  
+                    <td data-label="monitoring_location_number">342230091140501</td>
+                  
+                    <td data-label="monitoring_location_name">04S02W04CA1 AR-9A WU</td>
+                  
+                    <td data-label="district_code">05</td>
+                  
+                    <td data-label="country_code">US</td>
+                  
+                    <td data-label="country_name">United States of America</td>
+                  
+                    <td data-label="state_code">05</td>
+                  
+                    <td data-label="state_name">Arkansas</td>
+                  
+                    <td data-label="county_code">001</td>
+                  
+                    <td data-label="county_name">Arkansas County</td>
+                  
+                    <td data-label="minor_civil_division_code">92973</td>
+                  
+                    <td data-label="site_type_code">GW</td>
+                  
+                    <td data-label="site_type">Well</td>
+                  
+                    <td data-label="hydrologic_unit_code">080203030601</td>
+                  
+                    <td data-label="basin_code">None</td>
+                  
+                    <td data-label="altitude">188</td>
+                  
+                    <td data-label="altitude_accuracy">4.3</td>
+                  
+                    <td data-label="altitude_method_code">N</td>
+                  
+                    <td data-label="altitude_method_name">Interpolated from Digital Elevation Model</td>
+                  
+                    <td data-label="vertical_datum">NAVD88</td>
+                  
+                    <td data-label="vertical_datum_name">North American Vertical Datum of 1988</td>
+                  
+                    <td data-label="horizontal_positional_accuracy_code">1</td>
+                  
+                    <td data-label="horizontal_positional_accuracy">Accurate to + or - .1 sec (Differentially-Corrected GPS).</td>
+                  
+                    <td data-label="horizontal_position_method_code">G</td>
+                  
+                    <td data-label="horizontal_position_method_name">Mapping grade GPS unit (handheld accuracy range 12 to 40 ft)</td>
+                  
+                    <td data-label="original_horizontal_datum">NAD83</td>
+                  
+                    <td data-label="original_horizontal_datum_name">North American Datum of 1983</td>
+                  
+                    <td data-label="drainage_area">None</td>
+                  
+                    <td data-label="contributing_drainage_area">None</td>
+                  
+                    <td data-label="time_zone_abbreviation">CST</td>
+                  
+                    <td data-label="uses_daylight_savings">Y</td>
+                  
+                    <td data-label="construction_date">None</td>
+                  
+                    <td data-label="aquifer_code">110ALVM</td>
+                  
+                    <td data-label="national_aquifer_code">N100MSRVVL</td>
+                  
+                    <td data-label="aquifer_type_code">None</td>
+                  
+                    <td data-label="well_constructed_depth">100</td>
+                  
+                    <td data-label="hole_constructed_depth">None</td>
+                  
+                    <td data-label="depth_source_code">O</td>
+                  
+                    <td data-label="revision_note">None</td>
+                  
+                    <td data-label="revision_created">None</td>
+                  
+                    <td data-label="revision_modified">None</td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily/locations/AR008-343851091585401" title="AR008-343851091585401">AR008-343...</a>
+                    </td>
+                  
+                  
+                    <td data-label="agency_code">AR008</td>
+                  
+                    <td data-label="agency_name">Arkansas Natural Resources Commission</td>
+                  
+                    <td data-label="monitoring_location_number">343851091585401</td>
+                  
+                    <td data-label="monitoring_location_name">01S09W04DC1 LO-62 WU</td>
+                  
+                    <td data-label="district_code">05</td>
+                  
+                    <td data-label="country_code">US</td>
+                  
+                    <td data-label="country_name">United States of America</td>
+                  
+                    <td data-label="state_code">05</td>
+                  
+                    <td data-label="state_name">Arkansas</td>
+                  
+                    <td data-label="county_code">085</td>
+                  
+                    <td data-label="county_name">Lonoke County</td>
+                  
+                    <td data-label="minor_civil_division_code">None</td>
+                  
+                    <td data-label="site_type_code">GW</td>
+                  
+                    <td data-label="site_type">Well</td>
+                  
+                    <td data-label="hydrologic_unit_code">080204010102</td>
+                  
+                    <td data-label="basin_code">None</td>
+                  
+                    <td data-label="altitude">226</td>
+                  
+                    <td data-label="altitude_accuracy">1.6</td>
+                  
+                    <td data-label="altitude_method_code">N</td>
+                  
+                    <td data-label="altitude_method_name">Interpolated from Digital Elevation Model</td>
+                  
+                    <td data-label="vertical_datum">NAVD88</td>
+                  
+                    <td data-label="vertical_datum_name">North American Vertical Datum of 1988</td>
+                  
+                    <td data-label="horizontal_positional_accuracy_code">T</td>
+                  
+                    <td data-label="horizontal_positional_accuracy">Accurate to + or - 10 sec.</td>
+                  
+                    <td data-label="horizontal_position_method_code">M</td>
+                  
+                    <td data-label="horizontal_position_method_name">Interpolated from map</td>
+                  
+                    <td data-label="original_horizontal_datum">NAD27</td>
+                  
+                    <td data-label="original_horizontal_datum_name">North American Datum of 1927</td>
+                  
+                    <td data-label="drainage_area">None</td>
+                  
+                    <td data-label="contributing_drainage_area">None</td>
+                  
+                    <td data-label="time_zone_abbreviation">CST</td>
+                  
+                    <td data-label="uses_daylight_savings">Y</td>
+                  
+                    <td data-label="construction_date">None</td>
+                  
+                    <td data-label="aquifer_code">110ALVM</td>
+                  
+                    <td data-label="national_aquifer_code">N100MSRVVL</td>
+                  
+                    <td data-label="aquifer_type_code">None</td>
+                  
+                    <td data-label="well_constructed_depth">135</td>
+                  
+                    <td data-label="hole_constructed_depth">None</td>
+                  
+                    <td data-label="depth_source_code">O</td>
+                  
+                    <td data-label="revision_note">None</td>
+                  
+                    <td data-label="revision_created">None</td>
+                  
+                    <td data-label="revision_modified">None</td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily/locations/AR008-345753091032200" title="AR008-345753091032200">AR008-345...</a>
+                    </td>
+                  
+                  
+                    <td data-label="agency_code">AR008</td>
+                  
+                    <td data-label="agency_name">Arkansas Natural Resources Commission</td>
+                  
+                    <td data-label="monitoring_location_number">345753091032200</td>
+                  
+                    <td data-label="monitoring_location_name">04N01W13BD2 ST-3a WU</td>
+                  
+                    <td data-label="district_code">05</td>
+                  
+                    <td data-label="country_code">US</td>
+                  
+                    <td data-label="country_name">United States of America</td>
+                  
+                    <td data-label="state_code">05</td>
+                  
+                    <td data-label="state_name">Arkansas</td>
+                  
+                    <td data-label="county_code">123</td>
+                  
+                    <td data-label="county_name">St. Francis County</td>
+                  
+                    <td data-label="minor_civil_division_code">93981</td>
+                  
+                    <td data-label="site_type_code">GW</td>
+                  
+                    <td data-label="site_type">Well</td>
+                  
+                    <td data-label="hydrologic_unit_code">080203040101</td>
+                  
+                    <td data-label="basin_code">None</td>
+                  
+                    <td data-label="altitude">207</td>
+                  
+                    <td data-label="altitude_accuracy">1.6</td>
+                  
+                    <td data-label="altitude_method_code">N</td>
+                  
+                    <td data-label="altitude_method_name">Interpolated from Digital Elevation Model</td>
+                  
+                    <td data-label="vertical_datum">NAVD88</td>
+                  
+                    <td data-label="vertical_datum_name">North American Vertical Datum of 1988</td>
+                  
+                    <td data-label="horizontal_positional_accuracy_code">1</td>
+                  
+                    <td data-label="horizontal_positional_accuracy">Accurate to + or - .1 sec (Differentially-Corrected GPS).</td>
+                  
+                    <td data-label="horizontal_position_method_code">G</td>
+                  
+                    <td data-label="horizontal_position_method_name">Global positioning system (GPS), Standard Positioning Service (SPS) or Precise Positioning Service (PPS)</td>
+                  
+                    <td data-label="original_horizontal_datum">NAD83</td>
+                  
+                    <td data-label="original_horizontal_datum_name">North American Datum of 1983</td>
+                  
+                    <td data-label="drainage_area">None</td>
+                  
+                    <td data-label="contributing_drainage_area">None</td>
+                  
+                    <td data-label="time_zone_abbreviation">CST</td>
+                  
+                    <td data-label="uses_daylight_savings">Y</td>
+                  
+                    <td data-label="construction_date">None</td>
+                  
+                    <td data-label="aquifer_code">110ALVM</td>
+                  
+                    <td data-label="national_aquifer_code">N100MSRVVL</td>
+                  
+                    <td data-label="aquifer_type_code">None</td>
+                  
+                    <td data-label="well_constructed_depth">140</td>
+                  
+                    <td data-label="hole_constructed_depth">None</td>
+                  
+                    <td data-label="depth_source_code">None</td>
+                  
+                    <td data-label="revision_note">None</td>
+                  
+                    <td data-label="revision_created">None</td>
+                  
+                    <td data-label="revision_modified">None</td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily/locations/AR008-345937091091100" title="AR008-345937091091100">AR008-345...</a>
+                    </td>
+                  
+                  
+                    <td data-label="agency_code">AR008</td>
+                  
+                    <td data-label="agency_name">Arkansas Natural Resources Commission</td>
+                  
+                    <td data-label="monitoring_location_number">345937091091100</td>
+                  
+                    <td data-label="monitoring_location_name">04N02W01AD2 MO-6b WU</td>
+                  
+                    <td data-label="district_code">05</td>
+                  
+                    <td data-label="country_code">US</td>
+                  
+                    <td data-label="country_name">United States of America</td>
+                  
+                    <td data-label="state_code">05</td>
+                  
+                    <td data-label="state_name">Arkansas</td>
+                  
+                    <td data-label="county_code">095</td>
+                  
+                    <td data-label="county_name">Monroe County</td>
+                  
+                    <td data-label="minor_civil_division_code">91515</td>
+                  
+                    <td data-label="site_type_code">GW</td>
+                  
+                    <td data-label="site_type">Well</td>
+                  
+                    <td data-label="hydrologic_unit_code">080203020705</td>
+                  
+                    <td data-label="basin_code">None</td>
+                  
+                    <td data-label="altitude">215</td>
+                  
+                    <td data-label="altitude_accuracy">4.3</td>
+                  
+                    <td data-label="altitude_method_code">N</td>
+                  
+                    <td data-label="altitude_method_name">Interpolated from Digital Elevation Model</td>
+                  
+                    <td data-label="vertical_datum">NAVD88</td>
+                  
+                    <td data-label="vertical_datum_name">North American Vertical Datum of 1988</td>
+                  
+                    <td data-label="horizontal_positional_accuracy_code">1</td>
+                  
+                    <td data-label="horizontal_positional_accuracy">Accurate to + or - .1 sec (Differentially-Corrected GPS).</td>
+                  
+                    <td data-label="horizontal_position_method_code">G</td>
+                  
+                    <td data-label="horizontal_position_method_name">Mapping grade GPS unit (handheld accuracy range 12 to 40 ft)</td>
+                  
+                    <td data-label="original_horizontal_datum">NAD83</td>
+                  
+                    <td data-label="original_horizontal_datum_name">North American Datum of 1983</td>
+                  
+                    <td data-label="drainage_area">None</td>
+                  
+                    <td data-label="contributing_drainage_area">None</td>
+                  
+                    <td data-label="time_zone_abbreviation">CST</td>
+                  
+                    <td data-label="uses_daylight_savings">Y</td>
+                  
+                    <td data-label="construction_date">None</td>
+                  
+                    <td data-label="aquifer_code">110ALVM</td>
+                  
+                    <td data-label="national_aquifer_code">N100MSRVVL</td>
+                  
+                    <td data-label="aquifer_type_code">None</td>
+                  
+                    <td data-label="well_constructed_depth">140</td>
+                  
+                    <td data-label="hole_constructed_depth">None</td>
+                  
+                    <td data-label="depth_source_code">None</td>
+                  
+                    <td data-label="revision_note">None</td>
+                  
+                    <td data-label="revision_created">None</td>
+                  
+                    <td data-label="revision_modified">None</td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily/locations/AR008-350148091313801" title="AR008-350148091313801">AR008-350...</a>
+                    </td>
+                  
+                  
+                    <td data-label="agency_code">AR008</td>
+                  
+                    <td data-label="agency_name">Arkansas Natural Resources Commission</td>
+                  
+                    <td data-label="monitoring_location_number">350148091313801</td>
+                  
+                    <td data-label="monitoring_location_name">05N05W27AB1 PR-51 WU</td>
+                  
+                    <td data-label="district_code">05</td>
+                  
+                    <td data-label="country_code">US</td>
+                  
+                    <td data-label="country_name">United States of America</td>
+                  
+                    <td data-label="state_code">05</td>
+                  
+                    <td data-label="state_name">Arkansas</td>
+                  
+                    <td data-label="county_code">117</td>
+                  
+                    <td data-label="county_name">Prairie County</td>
+                  
+                    <td data-label="minor_civil_division_code">91083</td>
+                  
+                    <td data-label="site_type_code">GW</td>
+                  
+                    <td data-label="site_type">Well</td>
+                  
+                    <td data-label="hydrologic_unit_code">08020303</td>
+                  
+                    <td data-label="basin_code">None</td>
+                  
+                    <td data-label="altitude">196</td>
+                  
+                    <td data-label="altitude_accuracy">1.6</td>
+                  
+                    <td data-label="altitude_method_code">N</td>
+                  
+                    <td data-label="altitude_method_name">Interpolated from Digital Elevation Model</td>
+                  
+                    <td data-label="vertical_datum">NAVD88</td>
+                  
+                    <td data-label="vertical_datum_name">North American Vertical Datum of 1988</td>
+                  
+                    <td data-label="horizontal_positional_accuracy_code">S</td>
+                  
+                    <td data-label="horizontal_positional_accuracy">Accurate to + or - 1 sec.</td>
+                  
+                    <td data-label="horizontal_position_method_code">G</td>
+                  
+                    <td data-label="horizontal_position_method_name">Mapping grade GPS unit (handheld accuracy range 12 to 40 ft)</td>
+                  
+                    <td data-label="original_horizontal_datum">NAD83</td>
+                  
+                    <td data-label="original_horizontal_datum_name">North American Datum of 1983</td>
+                  
+                    <td data-label="drainage_area">None</td>
+                  
+                    <td data-label="contributing_drainage_area">None</td>
+                  
+                    <td data-label="time_zone_abbreviation">CST</td>
+                  
+                    <td data-label="uses_daylight_savings">Y</td>
+                  
+                    <td data-label="construction_date">None</td>
+                  
+                    <td data-label="aquifer_code">110ALVM</td>
+                  
+                    <td data-label="national_aquifer_code">N100MSRVVL</td>
+                  
+                    <td data-label="aquifer_type_code">U</td>
+                  
+                    <td data-label="well_constructed_depth">130</td>
+                  
+                    <td data-label="hole_constructed_depth">None</td>
+                  
+                    <td data-label="depth_source_code">O</td>
+                  
+                    <td data-label="revision_note">None</td>
+                  
+                    <td data-label="revision_created">None</td>
+                  
+                    <td data-label="revision_modified">None</td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily/locations/AR008-350452091004301" title="AR008-350452091004301">AR008-350...</a>
+                    </td>
+                  
+                  
+                    <td data-label="agency_code">AR008</td>
+                  
+                    <td data-label="agency_name">Arkansas Natural Resources Commission</td>
+                  
+                    <td data-label="monitoring_location_number">350452091004301</td>
+                  
+                    <td data-label="monitoring_location_name">05N01E05AD1 ST-9b2 WU</td>
+                  
+                    <td data-label="district_code">05</td>
+                  
+                    <td data-label="country_code">US</td>
+                  
+                    <td data-label="country_name">United States of America</td>
+                  
+                    <td data-label="state_code">05</td>
+                  
+                    <td data-label="state_name">Arkansas</td>
+                  
+                    <td data-label="county_code">123</td>
+                  
+                    <td data-label="county_name">St. Francis County</td>
+                  
+                    <td data-label="minor_civil_division_code">91680</td>
+                  
+                    <td data-label="site_type_code">GW</td>
+                  
+                    <td data-label="site_type">Well</td>
+                  
+                    <td data-label="hydrologic_unit_code">080202031506</td>
+                  
+                    <td data-label="basin_code">None</td>
+                  
+                    <td data-label="altitude">199</td>
+                  
+                    <td data-label="altitude_accuracy">1.6</td>
+                  
+                    <td data-label="altitude_method_code">N</td>
+                  
+                    <td data-label="altitude_method_name">Interpolated from Digital Elevation Model</td>
+                  
+                    <td data-label="vertical_datum">NAVD88</td>
+                  
+                    <td data-label="vertical_datum_name">North American Vertical Datum of 1988</td>
+                  
+                    <td data-label="horizontal_positional_accuracy_code">1</td>
+                  
+                    <td data-label="horizontal_positional_accuracy">Accurate to + or - .1 sec (Differentially-Corrected GPS).</td>
+                  
+                    <td data-label="horizontal_position_method_code">G</td>
+                  
+                    <td data-label="horizontal_position_method_name">Mapping grade GPS unit (handheld accuracy range 12 to 40 ft)</td>
+                  
+                    <td data-label="original_horizontal_datum">NAD83</td>
+                  
+                    <td data-label="original_horizontal_datum_name">North American Datum of 1983</td>
+                  
+                    <td data-label="drainage_area">None</td>
+                  
+                    <td data-label="contributing_drainage_area">None</td>
+                  
+                    <td data-label="time_zone_abbreviation">CST</td>
+                  
+                    <td data-label="uses_daylight_savings">Y</td>
+                  
+                    <td data-label="construction_date">None</td>
+                  
+                    <td data-label="aquifer_code">110ALVM</td>
+                  
+                    <td data-label="national_aquifer_code">N100MSRVVL</td>
+                  
+                    <td data-label="aquifer_type_code">U</td>
+                  
+                    <td data-label="well_constructed_depth">105</td>
+                  
+                    <td data-label="hole_constructed_depth">None</td>
+                  
+                    <td data-label="depth_source_code">O</td>
+                  
+                    <td data-label="revision_note">None</td>
+                  
+                    <td data-label="revision_created">None</td>
+                  
+                    <td data-label="revision_modified">None</td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily/locations/AR008-350608090370001" title="AR008-350608090370001">AR008-350...</a>
+                    </td>
+                  
+                  
+                    <td data-label="agency_code">AR008</td>
+                  
+                    <td data-label="agency_name">Arkansas Natural Resources Commission</td>
+                  
+                    <td data-label="monitoring_location_number">350608090370001</td>
+                  
+                    <td data-label="monitoring_location_name">06N04E25CD1 ST-47 WU</td>
+                  
+                    <td data-label="district_code">05</td>
+                  
+                    <td data-label="country_code">US</td>
+                  
+                    <td data-label="country_name">United States of America</td>
+                  
+                    <td data-label="state_code">05</td>
+                  
+                    <td data-label="state_name">Arkansas</td>
+                  
+                    <td data-label="county_code">123</td>
+                  
+                    <td data-label="county_name">St. Francis County</td>
+                  
+                    <td data-label="minor_civil_division_code">91539</td>
+                  
+                    <td data-label="site_type_code">GW</td>
+                  
+                    <td data-label="site_type">Well</td>
+                  
+                    <td data-label="hydrologic_unit_code">080202031502</td>
+                  
+                    <td data-label="basin_code">None</td>
+                  
+                    <td data-label="altitude">202</td>
+                  
+                    <td data-label="altitude_accuracy">1.6</td>
+                  
+                    <td data-label="altitude_method_code">N</td>
+                  
+                    <td data-label="altitude_method_name">Interpolated from Digital Elevation Model</td>
+                  
+                    <td data-label="vertical_datum">NAVD88</td>
+                  
+                    <td data-label="vertical_datum_name">North American Vertical Datum of 1988</td>
+                  
+                    <td data-label="horizontal_positional_accuracy_code">S</td>
+                  
+                    <td data-label="horizontal_positional_accuracy">Accurate to + or - 1 sec.</td>
+                  
+                    <td data-label="horizontal_position_method_code">G</td>
+                  
+                    <td data-label="horizontal_position_method_name">Mapping grade GPS unit (handheld accuracy range 12 to 40 ft)</td>
+                  
+                    <td data-label="original_horizontal_datum">NAD83</td>
+                  
+                    <td data-label="original_horizontal_datum_name">North American Datum of 1983</td>
+                  
+                    <td data-label="drainage_area">None</td>
+                  
+                    <td data-label="contributing_drainage_area">None</td>
+                  
+                    <td data-label="time_zone_abbreviation">CST</td>
+                  
+                    <td data-label="uses_daylight_savings">Y</td>
+                  
+                    <td data-label="construction_date">None</td>
+                  
+                    <td data-label="aquifer_code">110ALVM</td>
+                  
+                    <td data-label="national_aquifer_code">N100MSRVVL</td>
+                  
+                    <td data-label="aquifer_type_code">U</td>
+                  
+                    <td data-label="well_constructed_depth">130</td>
+                  
+                    <td data-label="hole_constructed_depth">None</td>
+                  
+                    <td data-label="depth_source_code">O</td>
+                  
+                    <td data-label="revision_note">None</td>
+                  
+                    <td data-label="revision_created">None</td>
+                  
+                    <td data-label="revision_modified">None</td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily/locations/AR008-352211090540301" title="AR008-352211090540301">AR008-352...</a>
+                    </td>
+                  
+                  
+                    <td data-label="agency_code">AR008</td>
+                  
+                    <td data-label="agency_name">Arkansas Natural Resources Commission</td>
+                  
+                    <td data-label="monitoring_location_number">352211090540301</td>
+                  
+                    <td data-label="monitoring_location_name">09N02E32DA2 CR-57 WU</td>
+                  
+                    <td data-label="district_code">05</td>
+                  
+                    <td data-label="country_code">US</td>
+                  
+                    <td data-label="country_name">United States of America</td>
+                  
+                    <td data-label="state_code">05</td>
+                  
+                    <td data-label="state_name">Arkansas</td>
+                  
+                    <td data-label="county_code">037</td>
+                  
+                    <td data-label="county_name">Cross County</td>
+                  
+                    <td data-label="minor_civil_division_code">None</td>
+                  
+                    <td data-label="site_type_code">GW</td>
+                  
+                    <td data-label="site_type">Well</td>
+                  
+                    <td data-label="hydrologic_unit_code">080202050303</td>
+                  
+                    <td data-label="basin_code">None</td>
+                  
+                    <td data-label="altitude">None</td>
+                  
+                    <td data-label="altitude_accuracy">None</td>
+                  
+                    <td data-label="altitude_method_code">None</td>
+                  
+                    <td data-label="altitude_method_name">None</td>
+                  
+                    <td data-label="vertical_datum">None</td>
+                  
+                    <td data-label="vertical_datum_name">None</td>
+                  
+                    <td data-label="horizontal_positional_accuracy_code">T</td>
+                  
+                    <td data-label="horizontal_positional_accuracy">Accurate to + or - 10 sec.</td>
+                  
+                    <td data-label="horizontal_position_method_code">M</td>
+                  
+                    <td data-label="horizontal_position_method_name">Interpolated from map</td>
+                  
+                    <td data-label="original_horizontal_datum">NAD27</td>
+                  
+                    <td data-label="original_horizontal_datum_name">North American Datum of 1927</td>
+                  
+                    <td data-label="drainage_area">None</td>
+                  
+                    <td data-label="contributing_drainage_area">None</td>
+                  
+                    <td data-label="time_zone_abbreviation">CST</td>
+                  
+                    <td data-label="uses_daylight_savings">Y</td>
+                  
+                    <td data-label="construction_date">None</td>
+                  
+                    <td data-label="aquifer_code">110ALVM</td>
+                  
+                    <td data-label="national_aquifer_code">N100MSRVVL</td>
+                  
+                    <td data-label="aquifer_type_code">None</td>
+                  
+                    <td data-label="well_constructed_depth">150</td>
+                  
+                    <td data-label="hole_constructed_depth">None</td>
+                  
+                    <td data-label="depth_source_code">O</td>
+                  
+                    <td data-label="revision_note">None</td>
+                  
+                    <td data-label="revision_created">None</td>
+                  
+                    <td data-label="revision_modified">None</td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily/locations/AR008-352923090581201" title="AR008-352923090581201">AR008-352...</a>
+                    </td>
+                  
+                  
+                    <td data-label="agency_code">AR008</td>
+                  
+                    <td data-label="agency_name">Arkansas Natural Resources Commission</td>
+                  
+                    <td data-label="monitoring_location_number">352923090581201</td>
+                  
+                    <td data-label="monitoring_location_name">10N01E15DA1 PO-2a WU</td>
+                  
+                    <td data-label="district_code">05</td>
+                  
+                    <td data-label="country_code">US</td>
+                  
+                    <td data-label="country_name">United States of America</td>
+                  
+                    <td data-label="state_code">05</td>
+                  
+                    <td data-label="state_name">Arkansas</td>
+                  
+                    <td data-label="county_code">111</td>
+                  
+                    <td data-label="county_name">Poinsett County</td>
+                  
+                    <td data-label="minor_civil_division_code">92796</td>
+                  
+                    <td data-label="site_type_code">GW</td>
+                  
+                    <td data-label="site_type">Well</td>
+                  
+                    <td data-label="hydrologic_unit_code">080203020603</td>
+                  
+                    <td data-label="basin_code">None</td>
+                  
+                    <td data-label="altitude">230</td>
+                  
+                    <td data-label="altitude_accuracy">4.3</td>
+                  
+                    <td data-label="altitude_method_code">N</td>
+                  
+                    <td data-label="altitude_method_name">Interpolated from Digital Elevation Model</td>
+                  
+                    <td data-label="vertical_datum">NAVD88</td>
+                  
+                    <td data-label="vertical_datum_name">North American Vertical Datum of 1988</td>
+                  
+                    <td data-label="horizontal_positional_accuracy_code">1</td>
+                  
+                    <td data-label="horizontal_positional_accuracy">Accurate to + or - .1 sec (Differentially-Corrected GPS).</td>
+                  
+                    <td data-label="horizontal_position_method_code">G</td>
+                  
+                    <td data-label="horizontal_position_method_name">Global positioning system (GPS), Standard Positioning Service (SPS) or Precise Positioning Service (PPS)</td>
+                  
+                    <td data-label="original_horizontal_datum">NAD83</td>
+                  
+                    <td data-label="original_horizontal_datum_name">North American Datum of 1983</td>
+                  
+                    <td data-label="drainage_area">None</td>
+                  
+                    <td data-label="contributing_drainage_area">None</td>
+                  
+                    <td data-label="time_zone_abbreviation">CST</td>
+                  
+                    <td data-label="uses_daylight_savings">Y</td>
+                  
+                    <td data-label="construction_date">None</td>
+                  
+                    <td data-label="aquifer_code">110ALVM</td>
+                  
+                    <td data-label="national_aquifer_code">N100MSRVVL</td>
+                  
+                    <td data-label="aquifer_type_code">None</td>
+                  
+                    <td data-label="well_constructed_depth">145</td>
+                  
+                    <td data-label="hole_constructed_depth">None</td>
+                  
+                    <td data-label="depth_source_code">O</td>
+                  
+                    <td data-label="revision_note">None</td>
+                  
+                    <td data-label="revision_created">None</td>
+                  
+                    <td data-label="revision_modified">None</td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    <td data-label="id">
+                      <a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily/locations/AR008-353032090160501" title="AR008-353032090160501">AR008-353...</a>
+                    </td>
+                  
+                  
+                    <td data-label="agency_code">AR008</td>
+                  
+                    <td data-label="agency_name">Arkansas Natural Resources Commission</td>
+                  
+                    <td data-label="monitoring_location_number">353032090160501</td>
+                  
+                    <td data-label="monitoring_location_name">10N08E08AA1 MI-44 WU</td>
+                  
+                    <td data-label="district_code">05</td>
+                  
+                    <td data-label="country_code">US</td>
+                  
+                    <td data-label="country_name">United States of America</td>
+                  
+                    <td data-label="state_code">05</td>
+                  
+                    <td data-label="state_name">Arkansas</td>
+                  
+                    <td data-label="county_code">093</td>
+                  
+                    <td data-label="county_name">Mississippi County</td>
+                  
+                    <td data-label="minor_civil_division_code">94050</td>
+                  
+                    <td data-label="site_type_code">GW</td>
+                  
+                    <td data-label="site_type">Well</td>
+                  
+                    <td data-label="hydrologic_unit_code">080202031101</td>
+                  
+                    <td data-label="basin_code">None</td>
+                  
+                    <td data-label="altitude">226</td>
+                  
+                    <td data-label="altitude_accuracy">1.6</td>
+                  
+                    <td data-label="altitude_method_code">N</td>
+                  
+                    <td data-label="altitude_method_name">Interpolated from Digital Elevation Model</td>
+                  
+                    <td data-label="vertical_datum">NAVD88</td>
+                  
+                    <td data-label="vertical_datum_name">North American Vertical Datum of 1988</td>
+                  
+                    <td data-label="horizontal_positional_accuracy_code">S</td>
+                  
+                    <td data-label="horizontal_positional_accuracy">Accurate to + or - 1 sec.</td>
+                  
+                    <td data-label="horizontal_position_method_code">G</td>
+                  
+                    <td data-label="horizontal_position_method_name">Mapping grade GPS unit (handheld accuracy range 12 to 40 ft)</td>
+                  
+                    <td data-label="original_horizontal_datum">NAD83</td>
+                  
+                    <td data-label="original_horizontal_datum_name">North American Datum of 1983</td>
+                  
+                    <td data-label="drainage_area">None</td>
+                  
+                    <td data-label="contributing_drainage_area">None</td>
+                  
+                    <td data-label="time_zone_abbreviation">CST</td>
+                  
+                    <td data-label="uses_daylight_savings">Y</td>
+                  
+                    <td data-label="construction_date">None</td>
+                  
+                    <td data-label="aquifer_code">110ALVM</td>
+                  
+                    <td data-label="national_aquifer_code">N100MSRVVL</td>
+                  
+                    <td data-label="aquifer_type_code">U</td>
+                  
+                    <td data-label="well_constructed_depth">100</td>
+                  
+                    <td data-label="hole_constructed_depth">None</td>
+                  
+                    <td data-label="depth_source_code">O</td>
+                  
+                    <td data-label="revision_note">None</td>
+                  
+                    <td data-label="revision_created">None</td>
+                  
+                    <td data-label="revision_modified">None</td>
+                  
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    
+  </section>
+
+    </div>
+  </main>
+  <footer style="background-color: #f0f0f0">
+    <div class="text-center">
+      Powered by 
+      
+      
+        <a title="pygeoapi" href="https://pygeoapi.io"><img alt="An image of the pygeoapi logo. The link goes to the pygeoapi homepage." src="https://api.waterdata.usgs.gov/ogcapi/v1/static/img/pygeoapi.png" class="mx-1" title="pygeoapi logo" style="height: 24px; vertical-align: middle" /></a>
+      
+      0.24.0
+    </div>
+  </footer>
+  
+  
+    <script>
+  var map = L.map('items-map').setView([45, -75], 5);
+  // maxNativeZoom caps the deepest level actually requested from the tile service, letting
+  // Leaflet upscale for zooms above it. The USGSTopo cache 404s past level 16, and fitBounds()
+  // below goes to maxZoom on a single-feature collection, so without this the map lands on
+  // blank tiles. Absent from config, the layer just requests every level up to maxZoom.
+  map.addLayer(new L.TileLayer(
+      'https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}', {
+          maxZoom: 18,
+          maxNativeZoom: 16,
+          attribution: 'Basemap from <a href="https://www.usgs.gov/programs/national-geospatial-program/national-map">USGS National Map</a>'
+      }
+  ));
+  var geojson_data = [{"type":"Feature","properties":{"id":"AR008-342230091140501","agency_code":"AR008","agency_name":"Arkansas Natural Resources Commission","monitoring_location_number":"342230091140501","monitoring_location_name":"04S02W04CA1 AR-9A WU","district_code":"05","country_code":"US","country_name":"United States of America","state_code":"05","state_name":"Arkansas","county_code":"001","county_name":"Arkansas County","minor_civil_division_code":"92973","site_type_code":"GW","site_type":"Well","hydrologic_unit_code":"080203030601","basin_code":null,"altitude":188.0,"altitude_accuracy":4.3,"altitude_method_code":"N","altitude_method_name":"Interpolated from Digital Elevation Model","vertical_datum":"NAVD88","vertical_datum_name":"North American Vertical Datum of 1988","horizontal_positional_accuracy_code":"1","horizontal_positional_accuracy":"Accurate to + or - .1 sec (Differentially-Corrected GPS).","horizontal_position_method_code":"G","horizontal_position_method_name":"Mapping grade GPS unit (handheld accuracy range 12 to 40 ft)","original_horizontal_datum":"NAD83","original_horizontal_datum_name":"North American Datum of 1983","drainage_area":null,"contributing_drainage_area":null,"time_zone_abbreviation":"CST","uses_daylight_savings":"Y","construction_date":null,"aquifer_code":"110ALVM","national_aquifer_code":"N100MSRVVL","aquifer_type_code":null,"well_constructed_depth":100.0,"hole_constructed_depth":null,"depth_source_code":"O","revision_note":null,"revision_created":null,"revision_modified":null},"id":"AR008-342230091140501","geometry":{"type":"Point","coordinates":[-91.2416833333333,34.3778305555556]}},{"type":"Feature","properties":{"id":"AR008-343851091585401","agency_code":"AR008","agency_name":"Arkansas Natural Resources Commission","monitoring_location_number":"343851091585401","monitoring_location_name":"01S09W04DC1 LO-62 WU","district_code":"05","country_code":"US","country_name":"United States of America","state_code":"05","state_name":"Arkansas","county_code":"085","county_name":"Lonoke County","minor_civil_division_code":null,"site_type_code":"GW","site_type":"Well","hydrologic_unit_code":"080204010102","basin_code":null,"altitude":226.0,"altitude_accuracy":1.6,"altitude_method_code":"N","altitude_method_name":"Interpolated from Digital Elevation Model","vertical_datum":"NAVD88","vertical_datum_name":"North American Vertical Datum of 1988","horizontal_positional_accuracy_code":"T","horizontal_positional_accuracy":"Accurate to + or - 10 sec.","horizontal_position_method_code":"M","horizontal_position_method_name":"Interpolated from map","original_horizontal_datum":"NAD27","original_horizontal_datum_name":"North American Datum of 1927","drainage_area":null,"contributing_drainage_area":null,"time_zone_abbreviation":"CST","uses_daylight_savings":"Y","construction_date":null,"aquifer_code":"110ALVM","national_aquifer_code":"N100MSRVVL","aquifer_type_code":null,"well_constructed_depth":135.0,"hole_constructed_depth":null,"depth_source_code":"O","revision_note":null,"revision_created":null,"revision_modified":null},"id":"AR008-343851091585401","geometry":{"type":"Point","coordinates":[-91.9818070316152,34.647592424216]}},{"type":"Feature","properties":{"id":"AR008-345753091032200","agency_code":"AR008","agency_name":"Arkansas Natural Resources Commission","monitoring_location_number":"345753091032200","monitoring_location_name":"04N01W13BD2 ST-3a WU","district_code":"05","country_code":"US","country_name":"United States of America","state_code":"05","state_name":"Arkansas","county_code":"123","county_name":"St. Francis County","minor_civil_division_code":"93981","site_type_code":"GW","site_type":"Well","hydrologic_unit_code":"080203040101","basin_code":null,"altitude":207.0,"altitude_accuracy":1.6,"altitude_method_code":"N","altitude_method_name":"Interpolated from Digital Elevation Model","vertical_datum":"NAVD88","vertical_datum_name":"North American Vertical Datum of 1988","horizontal_positional_accuracy_code":"1","horizontal_positional_accuracy":"Accurate to + or - .1 sec (Differentially-Corrected GPS).","horizontal_position_method_code":"G","horizontal_position_method_name":"Global positioning system (GPS), Standard Positioning Service (SPS) or Precise Positioning Service (PPS)","original_horizontal_datum":"NAD83","original_horizontal_datum_name":"North American Datum of 1983","drainage_area":null,"contributing_drainage_area":null,"time_zone_abbreviation":"CST","uses_daylight_savings":"Y","construction_date":null,"aquifer_code":"110ALVM","national_aquifer_code":"N100MSRVVL","aquifer_type_code":null,"well_constructed_depth":140.0,"hole_constructed_depth":null,"depth_source_code":null,"revision_note":null,"revision_created":null,"revision_modified":null},"id":"AR008-345753091032200","geometry":{"type":"Point","coordinates":[-91.0549222222222,34.9636777777778]}},{"type":"Feature","properties":{"id":"AR008-345937091091100","agency_code":"AR008","agency_name":"Arkansas Natural Resources Commission","monitoring_location_number":"345937091091100","monitoring_location_name":"04N02W01AD2 MO-6b WU","district_code":"05","country_code":"US","country_name":"United States of America","state_code":"05","state_name":"Arkansas","county_code":"095","county_name":"Monroe County","minor_civil_division_code":"91515","site_type_code":"GW","site_type":"Well","hydrologic_unit_code":"080203020705","basin_code":null,"altitude":215.0,"altitude_accuracy":4.3,"altitude_method_code":"N","altitude_method_name":"Interpolated from Digital Elevation Model","vertical_datum":"NAVD88","vertical_datum_name":"North American Vertical Datum of 1988","horizontal_positional_accuracy_code":"1","horizontal_positional_accuracy":"Accurate to + or - .1 sec (Differentially-Corrected GPS).","horizontal_position_method_code":"G","horizontal_position_method_name":"Mapping grade GPS unit (handheld accuracy range 12 to 40 ft)","original_horizontal_datum":"NAD83","original_horizontal_datum_name":"North American Datum of 1983","drainage_area":null,"contributing_drainage_area":null,"time_zone_abbreviation":"CST","uses_daylight_savings":"Y","construction_date":null,"aquifer_code":"110ALVM","national_aquifer_code":"N100MSRVVL","aquifer_type_code":null,"well_constructed_depth":140.0,"hole_constructed_depth":null,"depth_source_code":null,"revision_note":null,"revision_created":null,"revision_modified":null},"id":"AR008-345937091091100","geometry":{"type":"Point","coordinates":[-91.15165,34.9980805555556]}},{"type":"Feature","properties":{"id":"AR008-350148091313801","agency_code":"AR008","agency_name":"Arkansas Natural Resources Commission","monitoring_location_number":"350148091313801","monitoring_location_name":"05N05W27AB1 PR-51 WU","district_code":"05","country_code":"US","country_name":"United States of America","state_code":"05","state_name":"Arkansas","county_code":"117","county_name":"Prairie County","minor_civil_division_code":"91083","site_type_code":"GW","site_type":"Well","hydrologic_unit_code":"08020303","basin_code":null,"altitude":196.0,"altitude_accuracy":1.6,"altitude_method_code":"N","altitude_method_name":"Interpolated from Digital Elevation Model","vertical_datum":"NAVD88","vertical_datum_name":"North American Vertical Datum of 1988","horizontal_positional_accuracy_code":"S","horizontal_positional_accuracy":"Accurate to + or - 1 sec.","horizontal_position_method_code":"G","horizontal_position_method_name":"Mapping grade GPS unit (handheld accuracy range 12 to 40 ft)","original_horizontal_datum":"NAD83","original_horizontal_datum_name":"North American Datum of 1983","drainage_area":null,"contributing_drainage_area":null,"time_zone_abbreviation":"CST","uses_daylight_savings":"Y","construction_date":null,"aquifer_code":"110ALVM","national_aquifer_code":"N100MSRVVL","aquifer_type_code":"U","well_constructed_depth":130.0,"hole_constructed_depth":null,"depth_source_code":"O","revision_note":null,"revision_created":null,"revision_modified":null},"id":"AR008-350148091313801","geometry":{"type":"Point","coordinates":[-91.527825,35.0302138888889]}},{"type":"Feature","properties":{"id":"AR008-350452091004301","agency_code":"AR008","agency_name":"Arkansas Natural Resources Commission","monitoring_location_number":"350452091004301","monitoring_location_name":"05N01E05AD1 ST-9b2 WU","district_code":"05","country_code":"US","country_name":"United States of America","state_code":"05","state_name":"Arkansas","county_code":"123","county_name":"St. Francis County","minor_civil_division_code":"91680","site_type_code":"GW","site_type":"Well","hydrologic_unit_code":"080202031506","basin_code":null,"altitude":199.0,"altitude_accuracy":1.6,"altitude_method_code":"N","altitude_method_name":"Interpolated from Digital Elevation Model","vertical_datum":"NAVD88","vertical_datum_name":"North American Vertical Datum of 1988","horizontal_positional_accuracy_code":"1","horizontal_positional_accuracy":"Accurate to + or - .1 sec (Differentially-Corrected GPS).","horizontal_position_method_code":"G","horizontal_position_method_name":"Mapping grade GPS unit (handheld accuracy range 12 to 40 ft)","original_horizontal_datum":"NAD83","original_horizontal_datum_name":"North American Datum of 1983","drainage_area":null,"contributing_drainage_area":null,"time_zone_abbreviation":"CST","uses_daylight_savings":"Y","construction_date":null,"aquifer_code":"110ALVM","national_aquifer_code":"N100MSRVVL","aquifer_type_code":"U","well_constructed_depth":105.0,"hole_constructed_depth":null,"depth_source_code":"O","revision_note":null,"revision_created":null,"revision_modified":null},"id":"AR008-350452091004301","geometry":{"type":"Point","coordinates":[-90.4903,35.045625]}},{"type":"Feature","properties":{"id":"AR008-350608090370001","agency_code":"AR008","agency_name":"Arkansas Natural Resources Commission","monitoring_location_number":"350608090370001","monitoring_location_name":"06N04E25CD1 ST-47 WU","district_code":"05","country_code":"US","country_name":"United States of America","state_code":"05","state_name":"Arkansas","county_code":"123","county_name":"St. Francis County","minor_civil_division_code":"91539","site_type_code":"GW","site_type":"Well","hydrologic_unit_code":"080202031502","basin_code":null,"altitude":202.0,"altitude_accuracy":1.6,"altitude_method_code":"N","altitude_method_name":"Interpolated from Digital Elevation Model","vertical_datum":"NAVD88","vertical_datum_name":"North American Vertical Datum of 1988","horizontal_positional_accuracy_code":"S","horizontal_positional_accuracy":"Accurate to + or - 1 sec.","horizontal_position_method_code":"G","horizontal_position_method_name":"Mapping grade GPS unit (handheld accuracy range 12 to 40 ft)","original_horizontal_datum":"NAD83","original_horizontal_datum_name":"North American Datum of 1983","drainage_area":null,"contributing_drainage_area":null,"time_zone_abbreviation":"CST","uses_daylight_savings":"Y","construction_date":null,"aquifer_code":"110ALVM","national_aquifer_code":"N100MSRVVL","aquifer_type_code":"U","well_constructed_depth":130.0,"hole_constructed_depth":null,"depth_source_code":"O","revision_note":null,"revision_created":null,"revision_modified":null},"id":"AR008-350608090370001","geometry":{"type":"Point","coordinates":[-90.6309444444444,35.1021666666667]}},{"type":"Feature","properties":{"id":"AR008-352211090540301","agency_code":"AR008","agency_name":"Arkansas Natural Resources Commission","monitoring_location_number":"352211090540301","monitoring_location_name":"09N02E32DA2 CR-57 WU","district_code":"05","country_code":"US","country_name":"United States of America","state_code":"05","state_name":"Arkansas","county_code":"037","county_name":"Cross County","minor_civil_division_code":null,"site_type_code":"GW","site_type":"Well","hydrologic_unit_code":"080202050303","basin_code":null,"altitude":null,"altitude_accuracy":null,"altitude_method_code":null,"altitude_method_name":null,"vertical_datum":null,"vertical_datum_name":null,"horizontal_positional_accuracy_code":"T","horizontal_positional_accuracy":"Accurate to + or - 10 sec.","horizontal_position_method_code":"M","horizontal_position_method_name":"Interpolated from map","original_horizontal_datum":"NAD27","original_horizontal_datum_name":"North American Datum of 1927","drainage_area":null,"contributing_drainage_area":null,"time_zone_abbreviation":"CST","uses_daylight_savings":"Y","construction_date":null,"aquifer_code":"110ALVM","national_aquifer_code":"N100MSRVVL","aquifer_type_code":null,"well_constructed_depth":150.0,"hole_constructed_depth":null,"depth_source_code":"O","revision_note":null,"revision_created":null,"revision_modified":null},"id":"AR008-352211090540301","geometry":{"type":"Point","coordinates":[-90.9015973397607,35.3640655944716]}},{"type":"Feature","properties":{"id":"AR008-352923090581201","agency_code":"AR008","agency_name":"Arkansas Natural Resources Commission","monitoring_location_number":"352923090581201","monitoring_location_name":"10N01E15DA1 PO-2a WU","district_code":"05","country_code":"US","country_name":"United States of America","state_code":"05","state_name":"Arkansas","county_code":"111","county_name":"Poinsett County","minor_civil_division_code":"92796","site_type_code":"GW","site_type":"Well","hydrologic_unit_code":"080203020603","basin_code":null,"altitude":230.0,"altitude_accuracy":4.3,"altitude_method_code":"N","altitude_method_name":"Interpolated from Digital Elevation Model","vertical_datum":"NAVD88","vertical_datum_name":"North American Vertical Datum of 1988","horizontal_positional_accuracy_code":"1","horizontal_positional_accuracy":"Accurate to + or - .1 sec (Differentially-Corrected GPS).","horizontal_position_method_code":"G","horizontal_position_method_name":"Global positioning system (GPS), Standard Positioning Service (SPS) or Precise Positioning Service (PPS)","original_horizontal_datum":"NAD83","original_horizontal_datum_name":"North American Datum of 1983","drainage_area":null,"contributing_drainage_area":null,"time_zone_abbreviation":"CST","uses_daylight_savings":"Y","construction_date":null,"aquifer_code":"110ALVM","national_aquifer_code":"N100MSRVVL","aquifer_type_code":null,"well_constructed_depth":145.0,"hole_constructed_depth":null,"depth_source_code":"O","revision_note":null,"revision_created":null,"revision_modified":null},"id":"AR008-352923090581201","geometry":{"type":"Point","coordinates":[-90.9682944444445,35.4905166666667]}},{"type":"Feature","properties":{"id":"AR008-353032090160501","agency_code":"AR008","agency_name":"Arkansas Natural Resources Commission","monitoring_location_number":"353032090160501","monitoring_location_name":"10N08E08AA1 MI-44 WU","district_code":"05","country_code":"US","country_name":"United States of America","state_code":"05","state_name":"Arkansas","county_code":"093","county_name":"Mississippi County","minor_civil_division_code":"94050","site_type_code":"GW","site_type":"Well","hydrologic_unit_code":"080202031101","basin_code":null,"altitude":226.0,"altitude_accuracy":1.6,"altitude_method_code":"N","altitude_method_name":"Interpolated from Digital Elevation Model","vertical_datum":"NAVD88","vertical_datum_name":"North American Vertical Datum of 1988","horizontal_positional_accuracy_code":"S","horizontal_positional_accuracy":"Accurate to + or - 1 sec.","horizontal_position_method_code":"G","horizontal_position_method_name":"Mapping grade GPS unit (handheld accuracy range 12 to 40 ft)","original_horizontal_datum":"NAD83","original_horizontal_datum_name":"North American Datum of 1983","drainage_area":null,"contributing_drainage_area":null,"time_zone_abbreviation":"CST","uses_daylight_savings":"Y","construction_date":null,"aquifer_code":"110ALVM","national_aquifer_code":"N100MSRVVL","aquifer_type_code":"U","well_constructed_depth":100.0,"hole_constructed_depth":null,"depth_source_code":"O","revision_note":null,"revision_created":null,"revision_modified":null},"id":"AR008-353032090160501","geometry":{"type":"Point","coordinates":[-90.2591611111111,35.5107083333333]}}];
+
+  var items = new L.GeoJSON(geojson_data, {
+      onEachFeature: function (feature, layer) {
+          var url = 'https://api.waterdata.usgs.gov/ogcapi/v1/collections/edr/daily/locations/' + feature.id + '?f=html';
+          var html = '<span><a href="' + url + '">' +  feature.id  + '</a></span>';
+          layer.bindPopup(html);
+      }
+  });
+  var markers = L.markerClusterGroup({
+      disableClusteringAtZoom: 9,
+      chunkedLoading: true,
+      chunkInterval: 500,
+  });
+  markers.clearLayers().addLayer(items);
+  map.addLayer(markers);
+
+  map.fitBounds(items.getBounds());
+    </script>
+  
+
+  <!-- BEGIN USGS Footer Template -->
+<footer class="footer">
+  <div class="tmp-container">
+    <!-- .footer-wrap -->
+    <!-- .footer-doi -->
+    <div class="footer-doi">
+      <!-- footer nav links -->
+      <ul class="menu nav">
+        <li class="first leaf menu-links menu-level-1"><a href="https://www.doi.gov/privacy">DOI Privacy Policy</a></li>
+        <li class="leaf menu-links menu-level-1"><a href="https://www.usgs.gov/policies-and-notices">Legal</a></li>
+        <li class="leaf menu-links menu-level-1">
+          <a href="https://www.usgs.gov/accessibility-and-us-geological-survey">Accessibility</a>
+        </li>
+        <li class="leaf menu-links menu-level-1"><a href="https://www.usgs.gov/sitemap">Site Map</a></li>
+        <li class="last leaf menu-links menu-level-1"><a href="https://answers.usgs.gov/">Contact USGS</a></li>
+      </ul>
+      <!--/ footer nav links -->
+    </div>
+    <!-- /.footer-doi -->
+    <hr />
+    <!-- .footer-utl-links -->
+    <div class="footer-doi">
+      <ul class="menu nav">
+        <li class="first leaf menu-links menu-level-1">
+          <a href="https://www.doi.gov/">U.S. Department of the Interior</a>
+        </li>
+        <li class="leaf menu-links menu-level-1"><a href="https://www.doioig.gov/">DOI Inspector General</a></li>
+        <li class="leaf menu-links menu-level-1"><a href="https://www.whitehouse.gov/">White House</a></li>
+        <li class="leaf menu-links menu-level-1">
+          <a href="https://www.whitehouse.gov/omb/management/egov/">E-gov</a>
+        </li>
+        <li class="leaf menu-links menu-level-1"><a href="https://www.doi.gov/pmb/eeo/no-fear-act">No Fear Act</a></li>
+        <li class="last leaf menu-links menu-level-1">
+          <a href="https://www.usgs.gov/about/organization/science-support/foia">FOIA</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.footer-utl-links -->
+    <!-- .footer-social-links -->
+    <div class="footer-social-links">
+      <ul class="social">
+        <li class="follow">Follow</li>
+        <li class="twitter">
+          <a href="https://twitter.com/usgs" target="_blank">
+            <i class="fa fa-twitter-square"><span class="only">Twitter</span></i>
+          </a>
+        </li>
+        <li class="facebook">
+          <a href="https://facebook.com/usgeologicalsurvey" target="_blank">
+            <i class="fa fa-facebook-square"><span class="only">Facebook</span></i>
+          </a>
+        </li>
+        <li class="github">
+          <a href="https://github.com/usgs" target="_blank">
+            <i class="fa fa-github"><span class="only">GitHub</span></i>
+          </a>
+        </li>
+        <li class="flickr">
+          <a href="https://flickr.com/usgeologicalsurvey" target="_blank">
+            <i class="fa fa-flickr"><span class="only">Flickr</span></i>
+          </a>
+        </li>
+        <li class="youtube">
+          <a href="https://youtube.com/usgs" target="_blank">
+            <i class="fa fa-youtube-play"><span class="only">YouTube</span></i>
+          </a>
+        </li>
+        <li class="instagram">
+          <a href="https://instagram.com/usgs" target="_blank">
+            <i class="fa fa-instagram"><span class="only">Instagram</span></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.footer-social-links -->
+  </div>
+  <!-- /.footer-wrap -->
+</footer>
+<!-- END USGS Footer Template- -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKQR8KP"
+        height="0"
+        width="0"
+        style="display: none;
+               visibility: hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <script>
+      // Requests and embeds JSON-LD representation of current page
+      var xhr = new XMLHttpRequest()
+      var path = window.location.protocol + '//' + window.location.host + window.location.pathname + '?f=jsonld'
+      xhr.open('GET', path)
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          var head = document.getElementsByTagName('head')[0]
+          var jsonld_datablock = document.createElement('script')
+          jsonld_datablock.type = 'application/ld+json'
+          //remove full context path, because search engines don't expect it here, pyld requires it.
+          jsonld_datablock.textContent = xhr.responseText.replace('docs/jsonldcontext.jsonld', '')
+          head.appendChild(jsonld_datablock)
+        }
+      }
+      xhr.send()
+  </script>
+  <script src="https://api.waterdata.usgs.gov/ogcapi/v1/static/js/wdfnviz.umd.js"></script>
+</body>
+</html>

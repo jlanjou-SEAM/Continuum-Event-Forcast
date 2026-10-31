@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Keywords"
+          content="National Center of Meteorology, NCMS, NCM, UAE, Weather, Wind, Wind Forecast, UAE Weather, Weather Forecast, UAE Weather Forecast, UAE MET, UAE Marine, Weather Charts, Meteorology, UAE Meteorology, Seismology, UAE Seismology, Abu Dhabi Weather, Dubai Weather, UAE Climate, UAE Temperature, UAE Weather Forecast, Automatic Weather Stations, Numerical Weather Prediction, Radars Images, Satellite Images, GCC Met, GCC Weather, GCC Meteorology,  المركز الوطني للأرصاد الجوية , الإمارات , طقس الإمارات , الأرصاد , التنبؤات الجوية , وزارة شؤون الرئاسة , طقس أبوظبي , طقس دبي , مناخ الإمارات , تنبؤات الطقس , الحالة الجوية , أجواء الطقس , الزلازل , خرائط الزلازل , التقارير الزلزالية , المناخ , التقرير المناخي , التقارير المناخية , أجواء الإمارات , مطر , غيث , محطات الطقس , المحطات الأوتوماتيكية , خرائط الطقس , خريطة الإمارات , التنبؤات العددية , مودل التنبؤات العددية , رادار الطقس , الرياح , رادار , صور الأقمار الاصطناعية , الرياح ‎,رادار الامارات, مركز الارصاد الجوية,"/>
+    <title>UAE Polars Observatory - NCM</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+    <link href='https://polar.ncm.gov.ae/resources/build/22.f3925b7d.css' rel='stylesheet'><link href='https://polar.ncm.gov.ae/resources/build/app.350f9b48.css' rel='stylesheet'><link href='https://polar.ncm.gov.ae/resources/build/home.6eb17d23.css' rel='stylesheet'>    <style>
+        body > main {
+            display: none;
+        }
+
+        .page-loader {
+            width: 50px;
+            aspect-ratio: 1;
+            display: grid;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 10;
+            transform: translate(-25px, -50px);
+        }
+
+        .page-loader::before,
+        .page-loader::after {
+            content: "";
+            grid-area: 1/1;
+            --c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
+            background: var(--c) 50% 0,
+            var(--c) 50% 100%,
+            var(--c) 100% 50%,
+            var(--c) 0 50%;
+            background-size: 12px 12px;
+            animation: l12 1s infinite;
+        }
+
+        .page-loader::before {
+            margin: 4px;
+            filter: hue-rotate(45deg);
+            background-size: 8px 8px;
+            animation-timing-function: linear
+        }
+
+        @keyframes l12 {
+            100% {
+                transform: rotate(.5turn)
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="lang-en page-home">
+<script>0</script>
+<div class="page-loader"></div>
+<main class="d-flex flex-column vh-100 app-root">
+    
+<header class="px-lg-2 px-xl-4 px-xxl-5 w-100">
+    <div class="h-100 px-xxl-5 d-flex justify-content-center justify-content-lg-between align-items-center">
+        <div class="uaepolar-logo d-none d-lg-block">
+            <a href="/" title="UAE Polars Observatory">
+                <img class="img-fluid" src="https://polar.ncm.gov.ae/resources/images/logos/uaepo-logo-v2.png" alt="UAE Polars Observatory">
+            </a>
+        </div>
+
+                    <div class="app-menu d-none d-lg-block">
+                <nav class="navbar navbar-expand py-0">
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+                            
+                <li role="button" class="nav-item d-inline-flex align-items-center position-relative ">
+                    <a class="nav-link font-inter" href="/" title="Home" >
+                        Home                    </a>
+
+                                    </li>
+                            
+                <li role="button" class="nav-item d-inline-flex align-items-center position-relative has-submenu">
+                    <a class="nav-link font-inter" href="#" title="Map" >
+                        Map                    </a>
+
+                                            <div class="position-absolute submenu">
+                            <ul class="nav flex-column">
+                                                                    <li class="nav-item p-0">
+                                        <a class="nav-link font-inter" href="/#observations" title="Observations Stations" >
+                                            Observations Stations                                        </a>
+                                    </li>
+                                                                    <li class="nav-item p-0">
+                                        <a class="nav-link font-inter" href="/#seismic" title="Seismic Stations" >
+                                            Seismic Stations                                        </a>
+                                    </li>
+                                                            </ul>
+                        </div>
+                                    </li>
+                            
+                <li role="button" class="nav-item d-inline-flex align-items-center position-relative has-submenu">
+                    <a class="nav-link font-inter" href="#" title="Expeditions" >
+                        Expeditions                    </a>
+
+                                            <div class="position-absolute submenu">
+                            <ul class="nav flex-column">
+                                                                    <li class="nav-item p-0">
+                                        <a class="nav-link font-inter" href="/page/expeditions-antarctica" title="Antarctica" >
+                                            Antarctica                                        </a>
+                                    </li>
+                                                            </ul>
+                        </div>
+                                    </li>
+                            
+                <li role="button" class="nav-item d-inline-flex align-items-center position-relative has-submenu">
+                    <a class="nav-link font-inter" href="#" title="News" >
+                        News                    </a>
+
+                                            <div class="position-absolute submenu">
+                            <ul class="nav flex-column">
+                                                                    <li class="nav-item p-0">
+                                        <a class="nav-link font-inter" href="/page/news-ncm-expedition" title="NCM scientific expedition to South Pole" >
+                                            NCM scientific expedition to South Pole                                        </a>
+                                    </li>
+                                                                    <li class="nav-item p-0">
+                                        <a class="nav-link font-inter" href="/page/news-uae-treaty" title="UAE and Antarctic Treaty System" >
+                                            UAE and Antarctic Treaty System                                        </a>
+                                    </li>
+                                                                    <li class="nav-item p-0">
+                                        <a class="nav-link font-inter" href="/page/news-launch-prp" title="Launch of Polar Research Project" >
+                                            Launch of Polar Research Project                                        </a>
+                                    </li>
+                                                                    <li class="nav-item p-0">
+                                        <a class="nav-link font-inter" href="/page/news-bulgarian-mission" title="Bulgarian Mission to Antarctica" >
+                                            Bulgarian Mission to Antarctica                                        </a>
+                                    </li>
+                                                                    <li class="nav-item p-0">
+                                        <a class="nav-link font-inter" href="/page/news-workshop-ncm" title="Workshop at NCM" >
+                                            Workshop at NCM                                        </a>
+                                    </li>
+                                                                    <li class="nav-item p-0">
+                                        <a class="nav-link font-inter" href="/page/events" title="Upcoming Events" >
+                                            Upcoming Events                                        </a>
+                                    </li>
+                                                            </ul>
+                        </div>
+                                    </li>
+                            
+                <li role="button" class="nav-item d-inline-flex align-items-center position-relative has-submenu">
+                    <a class="nav-link font-inter" href="#" title="WMO" >
+                        WMO                    </a>
+
+                                            <div class="position-absolute submenu">
+                            <ul class="nav flex-column">
+                                                                    <li class="nav-item p-0">
+                                        <a class="nav-link font-inter" href="/page/wmo-role-in-antarctic" title="WMO role in Antarctica" >
+                                            WMO role in Antarctica                                        </a>
+                                    </li>
+                                                                    <li class="nav-item p-0">
+                                        <a class="nav-link font-inter" href="/page/wmo-role-in-arctic" title="WMO role in Arctic" >
+                                            WMO role in Arctic                                        </a>
+                                    </li>
+                                                                    <li class="nav-item p-0">
+                                        <a class="nav-link font-inter" href="/page/wmo-role-in-third-pole" title="WMO role in Third Pole" >
+                                            WMO role in Third Pole                                        </a>
+                                    </li>
+                                                            </ul>
+                        </div>
+                                    </li>
+                            
+                <li role="button" class="nav-item d-inline-flex align-items-center position-relative ">
+                    <a class="nav-link font-inter" href="/page/links" title="Links" >
+                        Links                    </a>
+
+                                    </li>
+                    </ul>
+    </div>
+</nav>
+            </div>
+        
+        <div class="ncm-logo">
+            <a href="https://www.ncm.gov.ae" title="National Center of Meteorology">
+                <img class="img-fluid" src="https://polar.ncm.gov.ae/resources/images/logos/ncm-pc-logo-v2@2x.png?version=1" alt="National Center of Meteorology">
+            </a>
+        </div>
+
+        <div class="menu-icon position-absolute top-50 translate-middle-y d-lg-none">
+            <button class="btn-offcanvas-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#appMenuMobile" aria-controls="appMenuMobile">
+                <img class="i-nav-list-blue" src="https://polar.ncm.gov.ae/resources/images/icons/icon-nav.svg" alt="">
+            </button>
+        </div>
+    </div>
+</header>
+
+    <div class="d-lg-none offcanvas offcanvas-start" tabindex="-1" id="appMenuMobile" aria-labelledby="appMenuMobileLabel">
+        <div class="offcanvas-header flex-column p-lg-4">
+            <div class="ncm-logo mb-5">
+                <a href="https://www.ncm.gov.ae" title="National Center of Meteorology">
+                    <img class="img-fluid" src="https://polar.ncm.gov.ae/resources/images/logos/ncm-pc-logo-v2@2x.png" alt="National Center of Meteorology">
+                </a>
+            </div>
+
+            <div class="uaepolar-logo">
+                <a href="/" title="UAE Polars Observatory">
+                    <img class="img-fluid" src="https://polar.ncm.gov.ae/resources/images/logos/uaepo-logo-v2.png" alt="UAE Polars Observatory">
+                </a>
+            </div>
+
+            <div class="close-icon position-absolute">
+                <button class="bg-transparent border-0" data-bs-dismiss="offcanvas" aria-label="Close" type="button">
+                    <img src="https://polar.ncm.gov.ae/resources/images/icons/icon-close.svg" alt="">
+                </button>
+            </div>
+        </div>
+
+        <div class="offcanvas-body position-relative my-4 px-5">
+            
+<ul class="list-unstyled mb-lg-0 menu-list">
+            
+        <li>
+            <a class="d-flex align-items-center px-3 py-2 text-decoration-none font-inter "
+               href="/"
+               title="Home"
+                           >
+                <span>Home</span>
+                <img class="ms-3 icon invisible" src="https://polar.ncm.gov.ae/resources/images/icons/arrow_next.svg" alt=""/>
+            </a>
+
+                    </li>
+            
+        <li>
+            <a class="d-flex align-items-center px-3 py-2 text-decoration-none font-inter has-submenu"
+               href="#"
+               title="Map"
+                           >
+                <span>Map</span>
+                <img class="ms-3 icon " src="https://polar.ncm.gov.ae/resources/images/icons/arrow_next.svg" alt=""/>
+            </a>
+
+                            <div class="mb-submenu px-5 my-4">
+                    <div class="mb-4 p-2 title close-mobile-menu shadow-sm" role="button">
+                        <img class="me-1" src="https://polar.ncm.gov.ae/resources/images/icons/arrow_previous.svg" alt=""/>
+                        <span class="font-inter">Map</span>
+                    </div>
+
+                    
+<ul class="list-unstyled mb-lg-0 menu-list">
+            
+        <li>
+            <a class="d-flex align-items-center px-3 py-2 text-decoration-none font-inter "
+               href="/#observations"
+               title="Observations Stations"
+                           >
+                <span>Observations Stations</span>
+                <img class="ms-3 icon invisible" src="https://polar.ncm.gov.ae/resources/images/icons/arrow_next.svg" alt=""/>
+            </a>
+
+                    </li>
+            
+        <li>
+            <a class="d-flex align-items-center px-3 py-2 text-decoration-none font-inter "
+               href="/#seismic"
+               title="Seismic Stations"
+                           >
+                <span>Seismic Stations</span>
+                <img class="ms-3 icon invisible" src="https://polar.ncm.gov.ae/resources/images/icons/arrow_next.svg" alt=""/>
+            </a>
+
+                    </li>
+    </ul>
+                </div>
+                    </li>
+            
+        <li>
+            <a class="d-flex align-items-center px-3 py-2 text-decoration-none font-inter has-submenu"
+               href="#"
+               title="Expeditions"
+                           >
+                <span>Expeditions</span>
+                <img class="ms-3 icon " src="https://polar.ncm.gov.ae/resources/images/icons/arrow_next.svg" alt=""/>
+            </a>
+
+                            <div class="mb-submenu px-5 my-4">
+                    <div class="mb-4 p-2 title close-mobile-menu shadow-sm" role="button">
+                        <img class="me-1" src="https://polar.ncm.gov.ae/resources/images/icons/arrow_previous.svg" alt=""/>
+                        <span class="font-inter">Expeditions</span>
+                    </div>
+
+                    
+<ul class="list-unstyled mb-lg-0 menu-list">
+            
+        <li>
+            <a class="d-flex align-items-center px-3 py-2 text-decoration-none font-inter "
+               href="/page/expeditions-antarctica"
+               title="Antarctica"
+                           >
+                <span>Antarctica</span>
+                <img class="ms-3 icon invisible" src="https://polar.ncm.gov.ae/resources/images/icons/arrow_next.svg" alt=""/>
+            </a>
+
+                    </li>
+    </ul>
+                </div>
+                    </li>
+            
+        <li>
+            <a class="d-flex align-items-center px-3 py-2 text-decoration-none font-inter has-submenu"
+               href="#"
+               title="News"
+                           >
+                <span>News</span>
+                <img class="ms-3 icon " src="https://polar.ncm.gov.ae/resources/images/icons/arrow_next.svg" alt=""/>
+            </a>
+
+                            <div class="mb-submenu px-5 my-4">
+                    <div class="mb-4 p-2 title close-mobile-menu shadow-sm" role="button">
+                        <img class="me-1" src="https://polar.ncm.gov.ae/resources/images/icons/arrow_previous.svg" alt=""/>
+                        <span class="font-inter">News</span>
+                    </div>
+
+                    
+<ul class="list-unstyled mb-lg-0 menu-list">
+            
+        <li>
+            <a class="d-flex align-items-center px-3 py-2 text-decoration-none font-inter "
+               href="/page/news-ncm-expedition"
+               title="NCM scientific expedition to South Pole"
+                           >
+                <span>NCM scientific expedition to South Pole</span>
+                <img class="ms-3 icon invisible" src="https://polar.ncm.gov.ae/resources/images/icons/arrow_next.svg" alt=""/>
+            </a>
+
+                    </li>
+            
+        <li>
+            <a class="d-flex align-items-center px-3 py-2 text-decoration-none font-inter "
+               href="/page/news-uae-treaty"
+               title="UAE and Antarctic Treaty System"
+                           >
+                <span>UAE and Antarctic Treaty System</span>
+                <img class="ms-3 icon invisible" src="https://polar.ncm.gov.ae/resources/images/icons/arrow_next.svg" alt=""/>
+            </a>
+
+                    </li>
+            
+        <li>
+            <a class="d-flex align-items-center px-3 py-2 text-decoration-none font-inter "
+               href="/page/news-launch-prp"
+               title="Launch of Polar Research Project"
+                           >
+                <span>Launch of Polar Research Project</span>
+                <img class="ms-3 icon invisible" src="https://polar.ncm.gov.ae/resources/images/icons/arrow_next.svg" alt=""/>
+            </a>
+
+                    </li>
+            
+        <li>
+            <a class="d-flex align-items-center px-3 py-2 text-decoration-none font-inter "
+               href="/page/news-bulgarian-mission"
+               title="Bulgarian Mission to Antarctica"
+                           >
+                <span>Bulgarian Mission to Antarctica</span>
+                <img class="ms-3 icon invisible" src="https://polar.ncm.gov.ae/resources/images/icons/arrow_next.svg" alt=""/>
+            </a>
+
+                    </li>
+            
+        <li>
+            <a class="d-flex align-items-center px-3 py-2 text-decoration-none font-inter "
+               href="/page/news-workshop-ncm"
+               title="Workshop at NCM"
+                           >
+                <span>Workshop at NCM</span>
+                <img class="ms-3 icon invisible" src="https://polar.ncm.gov.ae/resources/images/icons/arrow_next.svg" alt=""/>
+            </a>
+
+                    </li>
+            
+        <li>
+            <a class="d-flex align-items-center px-3 py-2 text-decoration-none font-inter "
+               href="/page/events"
+               title="Upcoming Events"
+                           >
+                <span>Upcoming Events</span>
+                <img class="ms-3 icon invisible" src="https://polar.ncm.gov.ae/resources/images/icons/arrow_next.svg" alt=""/>
+            </a>
+
+                    </li>
+    </ul>
+                </div>
+                    </li>
+            
+        <li>
+            <a class="d-flex align-items-center px-3 py-2 text-decoration-none font-inter has-submenu"
+               href="#"
+               title="WMO"
+                           >
+                <span>WMO</span>
+                <img class="ms-3 icon " src="https://polar.ncm.gov.ae/resources/images/icons/arrow_next.svg" alt=""/>
+            </a>
+
+                            <div class="mb-submenu px-5 my-4">
+                    <div class="mb-4 p-2 title close-mobile-menu shadow-sm" role="button">
+                        <img class="me-1" src="https://polar.ncm.gov.ae/resources/images/icons/arrow_previous.svg" alt=""/>
+                        <span class="font-inter">WMO</span>
+                    </div>
+
+                    
+<ul class="list-unstyled mb-lg-0 menu-list">
+            
+        <li>
+            <a class="d-flex align-items-center px-3 py-2 text-decoration-none font-inter "
+               href="/page/wmo-role-in-antarctic"
+               title="WMO role in Antarctica"
+                           >
+                <span>WMO role in Antarctica</span>
+                <img class="ms-3 icon invisible" src="https://polar.ncm.gov.ae/resources/images/icons/arrow_next.svg" alt=""/>
+            </a>
+
+                    </li>
+            
+        <li>
+            <a class="d-flex align-items-center px-3 py-2 text-decoration-none font-inter "
+               href="/page/wmo-role-in-arctic"
+               title="WMO role in Arctic"
+                           >
+                <span>WMO role in Arctic</span>
+                <img class="ms-3 icon invisible" src="https://polar.ncm.gov.ae/resources/images/icons/arrow_next.svg" alt=""/>
+            </a>
+
+                    </li>
+            
+        <li>
+            <a class="d-flex align-items-center px-3 py-2 text-decoration-none font-inter "
+               href="/page/wmo-role-in-third-pole"
+               title="WMO role in Third Pole"
+                           >
+                <span>WMO role in Third Pole</span>
+                <img class="ms-3 icon invisible" src="https://polar.ncm.gov.ae/resources/images/icons/arrow_next.svg" alt=""/>
+            </a>
+
+                    </li>
+    </ul>
+                </div>
+                    </li>
+            
+        <li>
+            <a class="d-flex align-items-center px-3 py-2 text-decoration-none font-inter "
+               href="/page/links"
+               title="Links"
+                           >
+                <span>Links</span>
+                <img class="ms-3 icon invisible" src="https://polar.ncm.gov.ae/resources/images/icons/arrow_next.svg" alt=""/>
+            </a>
+
+                    </li>
+    </ul>
+        </div>
+    </div>
+    <main class="main-content flex-fill">
+        
+<div class="map-container position-relative overflow-hidden">
+    <div id="marker-details-wrapper" class="position-absolute"></div>
+    <div id="map"></div>
+    <div class="pole position-absolute d-flex flex-lg-column justify-content-center">
+        <div class="dimensions me-2 me-md-4 me-lg-0 mb-lg-4">
+            <button class="font-inter station-type" type="button" data-type="north">North Pole</button>
+        </div>
+        <div class="dimensions me-2 me-md-4 me-lg-0 mb-lg-4">
+            <button class="font-inter station-type" type="button" data-type="south">South Pole</button>
+        </div>
+        <div class="dimensions">
+            <button class="font-inter station-type" type="button" data-type="ncm">NCM Station</button>
+        </div>
+    </div>
+    <div class="uaepolar-logo position-absolute start-50 translate-middle-x d-lg-none">
+        <a href="/" title="UAE Polars Observatory">
+            <img class="img-fluid" src="https://polar.ncm.gov.ae/resources/images/logos/uaepo-logo@2x.png?version=1"
+                 alt="UAE Polars Observatory">
+        </a>
+    </div>
+    <div class="mapboxgl-attribution-text position-absolute bottom-0">
+        &copy; <a href="https://www.ncm.gov.ae" target="_blank" rel="noreferrer noopener">NCM</a>
+        <span> | </span>
+        <a href="https://www.mapbox.com/about/maps/" target="_blank" title="Mapbox" aria-label="Mapbox">&copy;
+            Mapbox</a>
+        <span> | </span>
+        <a href="https://www.openstreetmap.org/about/" target="_blank" title="OpenStreetMap" aria-label="OpenStreetMap">&copy;
+            OpenStreetMap</a>
+        <span> | </span>
+        <a href="https://www.maxar.com/" target="_blank" title="Maxar" aria-label="Maxar">&copy; Maxar</a>
+    </div>
+</div>
+
+<div class="latest-news-wrapper d-none d-lg-block">
+    <div class="container-xxl">
+        <h1 class="title position-relative mt-4 mb-5 ps-3 font-inter">Latest News:</h1>
+        <div class="row gx-lg-4">
+            <div class="col-lg-4">
+                <a class="news-container position-relative events text-decoration-none d-inline-block h-100 w-100" href="/page/bulgarian-mission" title="Bulgarian Mission to Antarctica">
+                    <div class="news-content position-absolute font-inter">
+                        <button type="button">EVENTS</button>
+                        <div class="mt-3 description">Bulgarian Mission to Antarctica</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <a class="news-container position-relative workshop text-decoration-none d-inline-block h-100 w-100" href="/page/workshop-ncm" title="Workshop at National Center of Meteorology">
+                    <div class="news-content position-absolute font-inter">
+                        <button type="button">WORKSHOP</button>
+                        <div class="mt-3 description">Workshop at National Center of Meteorology</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <a class="news-container position-relative news text-decoration-none d-inline-block h-100 w-100" href="/page/presidential-affairs" title="Presidential Affairs Workshop">
+                    <div class="news-content position-absolute font-inter">
+                        <button type="button">NEWS</button>
+                        <div class="mt-3 description">Presidential Affairs Workshop</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ncm-crew-wrapper position-relative d-none d-lg-block">
+    <div class="container-xxl h-100">
+        <div class="crew-section h-100 position-relative">
+            <div class="info position-absolute">
+                <div class="red-dot mb-4"></div>
+                <h1 class="text-white font-inter title">NCM Expeditors</h1>
+                <div class="description font-inter">Observatory mission to the Poles</div>
+                <div class="mt-5">
+                    <button class="font-inter me-3" type="button">Ahmed Al Kaabi</button>
+                    <button class="font-inter" type="button">Badr Al Ameri</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="steering-committee d-none d-lg-block">
+    <div class="container-xxl">
+        <h1 class="title position-relative mt-4 mb-5 ps-3 font-inter">Steering Committee:</h1>
+        <div class="p-4">
+            <div class="d-none d-lg-block d-xl-none">
+                <div id="steeringCommitteeIndicators3" class="carousel slide">
+    
+    <div class="carousel-indicators">
+                    <button type="button"
+                    data-bs-target="#steeringCommitteeIndicators3"
+                    class="active"
+                    aria-current="true"                    data-bs-slide-to="0"
+            >
+            </button>
+                    <button type="button"
+                    data-bs-target="#steeringCommitteeIndicators3"
+                    class=""
+                                        data-bs-slide-to="1"
+            >
+            </button>
+                    <button type="button"
+                    data-bs-target="#steeringCommitteeIndicators3"
+                    class=""
+                                        data-bs-slide-to="2"
+            >
+            </button>
+            </div>
+
+    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                <div class="row gx-lg-4">
+                                            <div class="col-lg-4 col-xl-3">
+                            <div class="card border-0 p-3 position-relative">
+                                                                    <img class="img-fluid"
+                                         src="https://polar.ncm.gov.ae/resources/images/committee/sc-mm.jpg"
+                                         alt="H.E. Mariam AlMheiri"
+                                         title="H.E. Mariam AlMheiri"
+                                    >
+                                                                <div class="card-body px-0">
+                                    <h5 class="card-title font-inter">H.E. Mariam AlMheiri</h5>
+                                    <p class="card-text font-inter">Chair, UAE Polar Mission Steering Committee <br> Chair, International Affairs Office, Presidential Court</p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-lg-4 col-xl-3">
+                            <div class="card border-0 p-3 position-relative">
+                                                                    <img class="img-fluid"
+                                         src="https://polar.ncm.gov.ae/resources/images/committee/sc-ab.jpg"
+                                         alt="H.E. Abdulla Balalaa"
+                                         title="H.E. Abdulla Balalaa"
+                                    >
+                                                                <div class="card-body px-0">
+                                    <h5 class="card-title font-inter">H.E. Abdulla Balalaa</h5>
+                                    <p class="card-text font-inter">Deputy Chair, UAE Polar Mission Steering Committee <br> Assistant Minister for Energy and Sustainability Affairs at Ministry of Foreign Affairs</p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-lg-4 col-xl-3">
+                            <div class="card border-0 p-3 position-relative">
+                                                                    <img class="img-fluid"
+                                         src="https://polar.ncm.gov.ae/resources/images/committee/sc-ha.jpg"
+                                         alt="H.E. Huda AlHashimi"
+                                         title="H.E. Huda AlHashimi"
+                                    >
+                                                                <div class="card-body px-0">
+                                    <h5 class="card-title font-inter">H.E. Huda AlHashimi</h5>
+                                    <p class="card-text font-inter">Deputy Minister of Cabinet Affairs for Strategic Affairs – Ministry of Cabinet Affairs</p>
+                                </div>
+                            </div>
+                        </div>
+                                    </div>
+            </div>
+                    <div class="carousel-item ">
+                <div class="row gx-lg-4">
+                                            <div class="col-lg-4 col-xl-3">
+                            <div class="card border-0 p-3 position-relative">
+                                                                    <img class="img-fluid"
+                                         src="https://polar.ncm.gov.ae/resources/images/committee/sc-am.jpg"
+                                         alt="H.E. Dr Abdulla AlMandoos"
+                                         title="H.E. Dr Abdulla AlMandoos"
+                                    >
+                                                                <div class="card-body px-0">
+                                    <h5 class="card-title font-inter">H.E. Dr Abdulla AlMandoos</h5>
+                                    <p class="card-text font-inter">Director General of the National Center of Meteorology <br> President, World Meteorological Organization</p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-lg-4 col-xl-3">
+                            <div class="card border-0 p-3 position-relative">
+                                                                    <img class="img-fluid"
+                                         src="https://polar.ncm.gov.ae/resources/images/committee/sc-kf.jpg"
+                                         alt="Dr. Khadija Al Faqih"
+                                         title="Dr. Khadija Al Faqih"
+                                    >
+                                                                <div class="card-body px-0">
+                                    <h5 class="card-title font-inter">Dr. Khadija Al Faqih</h5>
+                                    <p class="card-text font-inter">Strategic Expert, Advanced Technology Research Council</p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-lg-4 col-xl-3">
+                            <div class="card border-0 p-3 position-relative">
+                                                                    <div class="no-image"></div>
+                                                                <div class="card-body px-0">
+                                    <h5 class="card-title font-inter">Faris Al Mazroeui</h5>
+                                    <p class="card-text font-inter">Advisor, Presidential Court</p>
+                                </div>
+                            </div>
+                        </div>
+                                    </div>
+            </div>
+                    <div class="carousel-item ">
+                <div class="row gx-lg-4">
+                                            <div class="col-lg-4 col-xl-3">
+                            <div class="card border-0 p-3 position-relative">
+                                                                    <div class="no-image"></div>
+                                                                <div class="card-body px-0">
+                                    <h5 class="card-title font-inter">Sumaya Aloraifi</h5>
+                                    <p class="card-text font-inter">Chairman's Office Director, International Affairs Office, Presidential Court</p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-lg-4 col-xl-3">
+                            <div class="card border-0 p-3 position-relative">
+                                                                    <img class="img-fluid"
+                                         src="https://polar.ncm.gov.ae/resources/images/committee/sc-ws.jpg"
+                                         alt="Wassim Said"
+                                         title="Wassim Said"
+                                    >
+                                                                <div class="card-body px-0">
+                                    <h5 class="card-title font-inter">Wassim Said</h5>
+                                    <p class="card-text font-inter">Chairman's Advisor, International Affairs Office, Presidential Court Polar Dialogue Advisory Committee Member</p>
+                                </div>
+                            </div>
+                        </div>
+                                    </div>
+            </div>
+            </div>
+</div>
+            </div>
+
+            <div class="d-none d-xl-block">
+                <div id="steeringCommitteeIndicators4" class="carousel slide">
+    
+    <div class="carousel-indicators">
+                    <button type="button"
+                    data-bs-target="#steeringCommitteeIndicators4"
+                    class="active"
+                    aria-current="true"                    data-bs-slide-to="0"
+            >
+            </button>
+                    <button type="button"
+                    data-bs-target="#steeringCommitteeIndicators4"
+                    class=""
+                                        data-bs-slide-to="1"
+            >
+            </button>
+            </div>
+
+    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                <div class="row gx-lg-4">
+                                            <div class="col-lg-4 col-xl-3">
+                            <div class="card border-0 p-3 position-relative">
+                                                                    <img class="img-fluid"
+                                         src="https://polar.ncm.gov.ae/resources/images/committee/sc-mm.jpg"
+                                         alt="H.E. Mariam AlMheiri"
+                                         title="H.E. Mariam AlMheiri"
+                                    >
+                                                                <div class="card-body px-0">
+                                    <h5 class="card-title font-inter">H.E. Mariam AlMheiri</h5>
+                                    <p class="card-text font-inter">Chair, UAE Polar Mission Steering Committee <br> Chair, International Affairs Office, Presidential Court</p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-lg-4 col-xl-3">
+                            <div class="card border-0 p-3 position-relative">
+                                                                    <img class="img-fluid"
+                                         src="https://polar.ncm.gov.ae/resources/images/committee/sc-ab.jpg"
+                                         alt="H.E. Abdulla Balalaa"
+                                         title="H.E. Abdulla Balalaa"
+                                    >
+                                                                <div class="card-body px-0">
+                                    <h5 class="card-title font-inter">H.E. Abdulla Balalaa</h5>
+                                    <p class="card-text font-inter">Deputy Chair, UAE Polar Mission Steering Committee <br> Assistant Minister for Energy and Sustainability Affairs at Ministry of Foreign Affairs</p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-lg-4 col-xl-3">
+                            <div class="card border-0 p-3 position-relative">
+                                                                    <img class="img-fluid"
+                                         src="https://polar.ncm.gov.ae/resources/images/committee/sc-ha.jpg"
+                                         alt="H.E. Huda AlHashimi"
+                                         title="H.E. Huda AlHashimi"
+                                    >
+                                                                <div class="card-body px-0">
+                                    <h5 class="card-title font-inter">H.E. Huda AlHashimi</h5>
+                                    <p class="card-text font-inter">Deputy Minister of Cabinet Affairs for Strategic Affairs – Ministry of Cabinet Affairs</p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-lg-4 col-xl-3">
+                            <div class="card border-0 p-3 position-relative">
+                                                                    <img class="img-fluid"
+                                         src="https://polar.ncm.gov.ae/resources/images/committee/sc-am.jpg"
+                                         alt="H.E. Dr Abdulla AlMandoos"
+                                         title="H.E. Dr Abdulla AlMandoos"
+                                    >
+                                                                <div class="card-body px-0">
+                                    <h5 class="card-title font-inter">H.E. Dr Abdulla AlMandoos</h5>
+                                    <p class="card-text font-inter">Director General of the National Center of Meteorology <br> President, World Meteorological Organization</p>
+                                </div>
+                            </div>
+                        </div>
+                                    </div>
+            </div>
+                    <div class="carousel-item ">
+                <div class="row gx-lg-4">
+                                            <div class="col-lg-4 col-xl-3">
+                            <div class="card border-0 p-3 position-relative">
+                                                                    <img class="img-fluid"
+                                         src="https://polar.ncm.gov.ae/resources/images/committee/sc-kf.jpg"
+                                         alt="Dr. Khadija Al Faqih"
+                                         title="Dr. Khadija Al Faqih"
+                                    >
+                                                                <div class="card-body px-0">
+                                    <h5 class="card-title font-inter">Dr. Khadija Al Faqih</h5>
+                                    <p class="card-text font-inter">Strategic Expert, Advanced Technology Research Council</p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-lg-4 col-xl-3">
+                            <div class="card border-0 p-3 position-relative">
+                                                                    <div class="no-image"></div>
+                                                                <div class="card-body px-0">
+                                    <h5 class="card-title font-inter">Faris Al Mazroeui</h5>
+                                    <p class="card-text font-inter">Advisor, Presidential Court</p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-lg-4 col-xl-3">
+                            <div class="card border-0 p-3 position-relative">
+                                                                    <div class="no-image"></div>
+                                                                <div class="card-body px-0">
+                                    <h5 class="card-title font-inter">Sumaya Aloraifi</h5>
+                                    <p class="card-text font-inter">Chairman's Office Director, International Affairs Office, Presidential Court</p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-lg-4 col-xl-3">
+                            <div class="card border-0 p-3 position-relative">
+                                                                    <img class="img-fluid"
+                                         src="https://polar.ncm.gov.ae/resources/images/committee/sc-ws.jpg"
+                                         alt="Wassim Said"
+                                         title="Wassim Said"
+                                    >
+                                                                <div class="card-body px-0">
+                                    <h5 class="card-title font-inter">Wassim Said</h5>
+                                    <p class="card-text font-inter">Chairman's Advisor, International Affairs Office, Presidential Court Polar Dialogue Advisory Committee Member</p>
+                                </div>
+                            </div>
+                        </div>
+                                    </div>
+            </div>
+            </div>
+</div>
+            </div>
+
+        </div>
+
+        <p class="committee-txt px-5 font-inter">
+            A decree by H.H Sheikh Mansour, Vice President of the United Arab Emirates, Deputy Prime Minister, and Chairman of the Presidential Court,
+            established a steering committee, chaired by H.E. Mariam AlMheiri, Head of International Affairs at the Presidential Court.<br><br>
+            The Steering Committee is dedicated to guiding the strategic direction of the Emirates Polar Program, and ensuring its successful implementation by providing oversight, making key recommendations and decisions, and aligning the wider program with core objectives and goals of the United Arab Emirates.
+        </p>
+        <p class="committee-txt px-5 font-inter">
+        The Steering Committee is dedicated to guiding the strategic direction of the Emirates Polar Program, and ensuring its successful implementation by providing oversight, making key recommendations and decisions, and aligning the wider program with core objectives and goals of the United Arab Emirates.
+        </p>
+    </div>
+</div>
+
+<script>
+    window.PolarResearch = {
+        options: {"locale":"en","assets_base_url":"https:\/\/polar.ncm.gov.ae\/resources","forecast_last_update":"2026103113"},
+    };
+</script>
+    </main>
+    
+<footer class="py-4 py-lg-5">
+    <div class="container-xxl">
+        <div class="d-flex flex-column-reverse flex-lg-row justify-content-lg-center align-items-center">
+            <div class="logo me-lg-5">
+                <a href="https://www.ncm.gov.ae" rel="noreferrer noopener" title="National Center of Meteorology" target="_blank">
+                    <img class="img-fluid" src="https://polar.ncm.gov.ae/resources/images/logos/ncm_white_logo_footer@2x.png" alt="National Center of Meteorology">
+                </a>
+            </div>
+            <div class="copyrights mb-3 mb-lg-0 font-inter">
+                <div>&copy; <a href="https://www.ncm.gov.ae" rel="noreferrer noopener" class="text-decoration-none" title="National Center of Meteorology" target="_blank">NCM</a>
+                    <a href="https://www.ncm.gov.ae" rel="noreferrer noopener" class="text-decoration-none" title="National Center of Meteorology" target="_blank">National Center of Meteorology</a>
+                    2026                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</main>
+<script src='https://polar.ncm.gov.ae/resources/build/runtime.5fce9222.js'></script><script src='https://polar.ncm.gov.ae/resources/build/806.ab96ff9b.js'></script><script src='https://polar.ncm.gov.ae/resources/build/app.7508b11f.js'></script><script src='https://polar.ncm.gov.ae/resources/build/672.b6e1be56.js'></script><script src='https://polar.ncm.gov.ae/resources/build/home.c8a18e13.js'></script><script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "National Center of Meteorology (NCM)",
+        "url": "https://www.ncm.gov.ae",
+        "logo": "https://assets.ncm.gov.ae/ncms/images/footer-logo-ncms.png",
+        "sameAs": [
+            "https://www.facebook.com/officialuaeweather",
+            "https://www.youtube.com/user/uaeweather",
+            "https://instagram.com/officialuaeweather",
+            "https://twitter.com/NCMS_media"
+        ]
+    }
+</script>
+</body>
+
+</html>

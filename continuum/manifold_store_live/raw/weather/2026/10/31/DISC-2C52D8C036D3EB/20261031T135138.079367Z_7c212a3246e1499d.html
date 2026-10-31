@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html lang="de">
+    <head>
+        <link href="/font-awesome/css/fontawesome.css" rel="stylesheet">
+        <link href="/font-awesome/css/brands.css" rel="stylesheet">
+        <link href="/font-awesome/css/solid.css" rel="stylesheet"><meta charset="utf-8" />
+            <meta name="generator" content="ckan 2.11.3" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" value="GeoSphere Austria Data Hub" /><title>
+            GeoSphere Austria Data Hub
+        </title>
+        <link rel="shortcut icon" href="/images/favicon.ico" />
+        <link href="/webassets/webassets-external/15acdc9d30465d56bff2c29b159ca522_bootstrap-gsa.css" rel="stylesheet"/>
+<link href="/webassets/webassets-external/4e060e103b8524a86f00feeb81ac1ec2_gsa_bootstrap_override.css" rel="stylesheet"/>
+<link href="/webassets/webassets-external/cda0217288a5bd98749b37d073e7b3a6_introjs.min.css" rel="stylesheet"/>
+                <script src="/webassets/webassets-external/484a4c0f1ad48ecb10882ba03a139d01_bootstrap.bundle.min.js" type="text/javascript"></script>
+<script src="/webassets/webassets-external/a2fad25365d61f2960ede15e63d9edc0_gsa.js" type="text/javascript"></script>
+<script src="/webassets/webassets-external/c6efd9ebe9e3f6dd739554dac7b695f8_intro.min.js" type="text/javascript"></script>
+<script src="/webassets/webassets-external/d7542347c60ba0d537ea693db881a65a_mark.min.js" type="text/javascript"></script>
+            <script defer data-domain="data.hub.geosphere.at" src="https://plausible.hub-infra.geosphere.at/js/script.js"></script>
+        </head>
+        <body 
+    
+        data-site-root="https://data.hub.geosphere.at/"
+        data-locale-root="https://data.hub.geosphere.at/"
+    
+><div id="pageHolder" class="position-relative">
+        
+        
+            <div class="position-sticky top-0 z-2">
+    <nav id="navbar" class="navbar navbar-expand-lg flex-grow-1 py-0">
+        <div class="container">
+            <a href="/" class="navbar-brand p-0">
+                <img class="logo" src="/images/logo_negativ_midnight.svg" alt="image"/>
+            </a>
+            <div class="ms-auto d-flex align-items-center d-lg-none">
+                <div class="nav-item dropdown px-2 d-flex align-items-center gsa-lang-separator">
+                    
+                    
+                    
+                    
+                    <a class="nav-link dropdown-toggle text-white d-flex align-items-center px-2 py-0 gsa-language-toggle"
+                       href="#"
+                       id="languageDropdownMobile"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        
+                            DE
+                        
+                        <img class="gsa-language-chevron"
+                             src="/images/Arrow_Up_Lime_16px.svg"
+                             alt=""
+                             aria-hidden="true"/>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end border-0"
+                        aria-labelledby="languageDropdownMobile">
+                        
+                            <li>
+                                <a class="dropdown-item"
+                                   href="/en/group/stationsdaten?lang=en">English</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+                <button type="button"
+                        class="navbar-toggler border-0"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarToggler"
+                        aria-controls="navbarToggler"
+                        aria-expanded="false"
+                        aria-label="Navigationsmenü ein- oder ausblenden">
+                    <span class="text-white" style="font-size: 2em;">≡</span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ms-auto gsa-navbar-nav">
+                    <li class="nav-item px-1 px-lg-2">
+                        <a class="nav-link"
+                           href="/dataset/"
+                           data-cy="link-datasets">Daten</a>
+                    </li>
+                    <li class="nav-item px-1 px-lg-2">
+                        <a class="nav-link"
+                           href="/group/"
+                           data-cy="link-groups">Gruppen</a>
+                    </li>
+                    <li class="nav-item px-1 px-lg-2">
+                        <a class="nav-link"
+                           href="/showcase/"
+                           data-cy="link-showcases">Showcases</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown px-1 px-lg-2 gsa-about-dropdown">
+                        <a class="nav-link dropdown-toggle text-white d-flex align-items-center gsa-nav-dropdown-toggle"
+                           href="#"
+                           id="aboutDropdown"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-expanded="false"
+                           data-cy="link-about">Über uns
+                            <img class="gsa-nav-chevron"
+                                 src="/images/Arrow_Up_Lime_16px.svg"
+                                 alt=""
+                                 aria-hidden="true"/>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li>
+                                <a class="dropdown-item"
+                                   href="/about"
+                                   data-cy="link-about-info">Info</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                   href="/about/news"
+                                   data-cy="link-about-news">News</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                   href="/about/faqs"
+                                   data-cy="link-about-faqs">FAQs</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                        <li class="nav-item px-1 px-lg-2">
+                            <a class="nav-link"
+                               href="/user/login"
+                               data-cy="login-button">Login</a>
+                        </li>
+                    
+                    <li class="nav-item dropdown px-2 d-none d-lg-flex align-items-center gsa-lang-separator">
+                        
+                        
+                        
+                        
+                        <a class="nav-link dropdown-toggle text-white d-flex align-items-center px-2 py-0 gsa-language-toggle"
+                           href="#"
+                           id="languageDropdown"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            
+                                DE
+                            
+                            <img class="gsa-language-chevron"
+                                 src="/images/Arrow_Up_Lime_16px.svg"
+                                 alt=""
+                                 aria-hidden="true"/>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end border-0"
+                            aria-labelledby="languageDropdown">
+                            
+                                <li>
+                                    <a class="dropdown-item"
+                                       href="/en/group/stationsdaten?lang=en">English</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<script>
+    window.addEventListener("DOMContentLoaded", (event) => {
+        const navbar = document.querySelector(".navbar");
+        let ticking = false;
+
+        document.addEventListener('scroll',() => {
+            if (!ticking) {
+                ticking = true;
+                let lastKnownScrollPosition = window.scrollY;
+                window.requestAnimationFrame(() => {
+                    if (lastKnownScrollPosition > 120)
+                        navbar.classList.add("gsa-shrank");
+                    else if (lastKnownScrollPosition <= 1) {
+                        window.scrollTo(0, 0);
+                        navbar.classList.remove("gsa-shrank");
+                    }
+                    ticking = false;
+                });
+            }
+        });
+    });
+</script>
+        
+            
+        
+        <div class="d-md-flex flex-row">
+            <div class="flex-shrink-0">
+                
+            </div>
+            <div class="flex-grow-1 overflow-auto">
+                <div class="bg-white pb-5">
+                    
+                        <div class="container-fluid gsa-container">
+    
+</div>
+                    
+                    
+                        <div class="container-fluid pt-5 gsa-container">
+                            <div class="row justify-content-center m-0">
+                                <div class="col p-0">
+    
+    
+    
+    <div class="row mb-4">
+        <div class="col col-md-9">
+            
+            
+            <h2>Stationsdaten</h2>
+            <div class="group-description"><p>Punktmessungen aller Standorte</p></div>
+            
+        </div>
+        
+            <div class="col-md-3">
+                <img src="https://data.hub.geosphere.at/uploads/group/stationsdaten.png"
+                     alt="image"
+                     width="100%"/>
+                
+                
+            </div>
+        
+    </div>
+    <div class="row justify-content-center mb-4">
+        <div class="col">
+            
+
+
+<form id="group-search-form"
+      method="get"
+      class="row align-items-center">
+    <div class="col-md"
+         >
+        <div class="gsa-input-holder">
+    <input class="form-control"
+           id=""
+           type="text"
+           placeholder="Suche"
+           name="q"
+           value=""
+           autocomplete="off"
+           />
+    <span class="gsa-input-icon">
+        <i class="bi bi-search"></i>
+    </span>
+</div>
+    </div>
+    
+    
+    
+        <div class="col-md-auto">
+            <select id="field-order-by"
+                    name="sort"
+                    class="form-select"
+                    
+                    onchange="this.form.submit()">
+                
+                    
+                        <option value="score desc, metadata_modified desc"
+                                >
+                            Relevanz
+                        </option>
+                    
+                
+                    
+                        <option value="title_string asc"
+                                >
+                            Name aufsteigend
+                        </option>
+                    
+                
+                    
+                        <option value="title_string desc"
+                                >
+                            Name absteigend
+                        </option>
+                    
+                
+                    
+                        <option value="metadata_modified desc"
+                                >
+                            Zuletzt geändert
+                        </option>
+                    
+                
+                    
+                
+            </select>
+        </div>
+    
+</form>
+
+
+        </div>
+    </div>
+    <!-- pagination & dataset count info TOP -->
+    <div class="row mb-4 align-items-center">
+        <div class="col-auto">
+            
+        </div>
+        <div class="col">
+            
+
+    
+
+    1 -
+    8 von
+    8
+    Datensätzen
+
+        </div>
+    </div>
+    <!-- search results -->
+    
+        
+    
+        
+            
+                
+
+
+
+    <div class="card mb-4" data-cy="dataset" data-intro="Schauen wir uns diesen Datensatz genauer an" >
+        <div class="card-body" style="padding: 1.25rem 1.5rem;">
+            <div class="row">
+                <div class="col">
+                    <a class="text-decoration-none h5 d-block card-title mb-3 stretched-link"
+                       href="/dataset/klima-v2-1h">
+                        Stationsdaten-v2 (1 h): Stationsdaten für Österreich in stündlicher Auflösung mit...
+                    </a>
+                </div>
+                
+                <div class="col-auto mb-3" data-intro="Für diesen Datensatz existieren folgende Möglichkeiten zum Download.
+                    <br>
+                    <br>
+                    Wenn Sie wollen, klicken Sie auf einen Datensatz, um dessen Details und Möglichkeiten zum Herunterladen anzuzeigen."
+                    data-step="99" >
+                    
+                        <span href="/dataset/klima-v2-1h"
+                              class="badge rounded-pill text-secondary bg-white border border-secondary">Web-UI</span>
+                    
+                        <span href="/dataset/klima-v2-1h"
+                              class="badge rounded-pill text-secondary bg-white border border-secondary">API</span>
+                    
+                </div>
+            </div>
+            <p class="card-text">Dieser Datensatz beinhaltet Stundenwerte einer Vielzahl meteorologischer bzw. klimatologischer Parameter. Je nach Parameter kann es sich beim Stundenwert um einen Momentanwert zur vollen Stunde, einen Mittelwert über die letzte Stunde, einen...</p>
+            
+            
+                <p class="card-text small me-4" data-intro="Diesem Datensatz sind einige Keywords zugeordnet." >
+                    
+                        
+                            Niederschlag,
+                        
+                    
+                        
+                            Temperatur,
+                        
+                    
+                        
+                            Druck,
+                        
+                    
+                        
+                            Strahlung,
+                        
+                    
+                        
+                            Wind,
+                        
+                    
+                        
+                            Schnee,
+                        
+                    
+                        
+                            Sonnenschein,
+                        
+                    
+                        
+                            Feuchtemaße
+                        
+                    
+                </p>
+            
+        </div>
+        <div class="gsa-arrow-link">
+            <img src="/images/gsa-arrow-link-white.svg">
+        </div>
+    </div>
+
+            
+                
+
+
+
+    <div class="card mb-4" data-cy="dataset" >
+        <div class="card-body" style="padding: 1.25rem 1.5rem;">
+            <div class="row">
+                <div class="col">
+                    <a class="text-decoration-none h5 d-block card-title mb-3 stretched-link"
+                       href="/dataset/klima-v2-1y">
+                        Stationsdaten-v2 (1 y): Stationsdaten für Österreich in jährlicher Auflösung mit...
+                    </a>
+                </div>
+                
+                <div class="col-auto mb-3" >
+                    
+                        <span href="/dataset/klima-v2-1y"
+                              class="badge rounded-pill text-secondary bg-white border border-secondary">Web-UI</span>
+                    
+                        <span href="/dataset/klima-v2-1y"
+                              class="badge rounded-pill text-secondary bg-white border border-secondary">API</span>
+                    
+                </div>
+            </div>
+            <p class="card-text">Dieser Datensatz beinhaltet ausschließlich abgeleitete klimatologische Parameter auf Jahresbasis, die aus Stunden-, Tages- und Monatswerten berechnet wurden, und deckt zusammen mit den Datensätzen Stationsdaten für Österreich in täglicher...</p>
+            
+            
+                <p class="card-text small me-4" >
+                    
+                        
+                            Niederschlag,
+                        
+                    
+                        
+                            Temperatur,
+                        
+                    
+                        
+                            Druck,
+                        
+                    
+                        
+                            Wind,
+                        
+                    
+                        
+                            Bewölkung,
+                        
+                    
+                        
+                            Sichtweite,
+                        
+                    
+                        
+                            Schnee,
+                        
+                    
+                        
+                            Beobachtete Wettererscheinung,
+                        
+                    
+                        
+                            Sonnenschein,
+                        
+                    
+                        
+                            Feuchtemaße,
+                        
+                    
+                        
+                            Gewitter
+                        
+                    
+                </p>
+            
+        </div>
+        <div class="gsa-arrow-link">
+            <img src="/images/gsa-arrow-link-white.svg">
+        </div>
+    </div>
+
+            
+                
+
+
+
+    <div class="card mb-4" data-cy="dataset" >
+        <div class="card-body" style="padding: 1.25rem 1.5rem;">
+            <div class="row">
+                <div class="col">
+                    <a class="text-decoration-none h5 d-block card-title mb-3 stretched-link"
+                       href="/dataset/klima-v2-10min">
+                        Stationsdaten-v2 (10 min): Stationsdaten für Österreich in zehnminütiger Auflösung mit...
+                    </a>
+                </div>
+                
+                <div class="col-auto mb-3" >
+                    
+                        <span href="/dataset/klima-v2-10min"
+                              class="badge rounded-pill text-secondary bg-white border border-secondary">Web-UI</span>
+                    
+                        <span href="/dataset/klima-v2-10min"
+                              class="badge rounded-pill text-secondary bg-white border border-secondary">API</span>
+                    
+                </div>
+            </div>
+            <p class="card-text">Dieser Datensatz beinhaltet Messdaten von 1992 bis heute in 10 minütiger Auflösung. Die Wetterstationen der GeoSphere Austria bilden das einzige umfassende meteorologische Messnetz in Österreich. Sie stellen das Rückgrat von Wettervorhersage,...</p>
+            
+            
+                <p class="card-text small me-4" >
+                    
+                        
+                            Niederschlag,
+                        
+                    
+                        
+                            Temperatur,
+                        
+                    
+                        
+                            Druck,
+                        
+                    
+                        
+                            Strahlung,
+                        
+                    
+                        
+                            Wind,
+                        
+                    
+                        
+                            Schnee,
+                        
+                    
+                        
+                            Sonnenschein,
+                        
+                    
+                        
+                            Feuchtemaße
+                        
+                    
+                </p>
+            
+        </div>
+        <div class="gsa-arrow-link">
+            <img src="/images/gsa-arrow-link-white.svg">
+        </div>
+    </div>
+
+            
+                
+
+
+
+    <div class="card mb-4" data-cy="dataset" >
+        <div class="card-body" style="padding: 1.25rem 1.5rem;">
+            <div class="row">
+                <div class="col">
+                    <a class="text-decoration-none h5 d-block card-title mb-3 stretched-link"
+                       href="/dataset/klima-v2-1m">
+                        Stationsdaten-v2 (1 m): Stationsdaten für Österreich in monatlicher Auflösung mit...
+                    </a>
+                </div>
+                
+                <div class="col-auto mb-3" >
+                    
+                        <span href="/dataset/klima-v2-1m"
+                              class="badge rounded-pill text-secondary bg-white border border-secondary">Web-UI</span>
+                    
+                        <span href="/dataset/klima-v2-1m"
+                              class="badge rounded-pill text-secondary bg-white border border-secondary">API</span>
+                    
+                </div>
+            </div>
+            <p class="card-text">Dieser Datensatz beinhaltet Monatswerte einer Vielzahl meteorologischer bzw. klimatologischer Parameter. Für alle Klima-Beobachtungstermine ist der Monatsmittelwert der entsprechenden Größen angegeben. Die drei Klima-Beobachtungstermine (I, II,...</p>
+            
+            
+                <p class="card-text small me-4" >
+                    
+                        
+                            Niederschlag,
+                        
+                    
+                        
+                            Temperatur,
+                        
+                    
+                        
+                            Druck,
+                        
+                    
+                        
+                            Strahlung,
+                        
+                    
+                        
+                            Wind,
+                        
+                    
+                        
+                            Bewölkung,
+                        
+                    
+                        
+                            Sichtweite,
+                        
+                    
+                        
+                            Schnee,
+                        
+                    
+                        
+                            Beobachtete Wettererscheinung,
+                        
+                    
+                        
+                            Sonnenschein,
+                        
+                    
+                        
+                            Feuchtemaße
+                        
+                    
+                </p>
+            
+        </div>
+        <div class="gsa-arrow-link">
+            <img src="/images/gsa-arrow-link-white.svg">
+        </div>
+    </div>
+
+            
+                
+
+
+
+    <div class="card mb-4" data-cy="dataset" >
+        <div class="card-body" style="padding: 1.25rem 1.5rem;">
+            <div class="row">
+                <div class="col">
+                    <a class="text-decoration-none h5 d-block card-title mb-3 stretched-link"
+                       href="/dataset/klima-v2-1d">
+                        Stationsdaten-v2 (1 d): Stationsdaten für Österreich in täglicher Auflösung mit...
+                    </a>
+                </div>
+                
+                <div class="col-auto mb-3" >
+                    
+                        <span href="/dataset/klima-v2-1d"
+                              class="badge rounded-pill text-secondary bg-white border border-secondary">Web-UI</span>
+                    
+                        <span href="/dataset/klima-v2-1d"
+                              class="badge rounded-pill text-secondary bg-white border border-secondary">API</span>
+                    
+                </div>
+            </div>
+            <p class="card-text">Dieser Datensatz beinhaltet Tages- und Terminwerte einer Vielzahl meteorologischer bzw. klimatologischer Parameter. Die drei Klima-Beobachtungstermine (I, II, III) haben sich in Österreich im Laufe der Zeit verändert. Bis 1971 wurden die Klima-...</p>
+            
+            
+                <p class="card-text small me-4" >
+                    
+                        
+                            Niederschlag,
+                        
+                    
+                        
+                            Temperatur,
+                        
+                    
+                        
+                            Druck,
+                        
+                    
+                        
+                            Strahlung,
+                        
+                    
+                        
+                            Wind,
+                        
+                    
+                        
+                            Bewölkung,
+                        
+                    
+                        
+                            Sichtweite,
+                        
+                    
+                        
+                            Schnee,
+                        
+                    
+                        
+                            Beobachtete Wettererscheinung,
+                        
+                    
+                        
+                            Sonnenschein,
+                        
+                    
+                        
+                            Feuchtemaße
+                        
+                    
+                </p>
+            
+        </div>
+        <div class="gsa-arrow-link">
+            <img src="/images/gsa-arrow-link-white.svg">
+        </div>
+    </div>
+
+            
+                
+
+
+
+    <div class="card mb-4" data-cy="dataset" >
+        <div class="card-body" style="padding: 1.25rem 1.5rem;">
+            <div class="row">
+                <div class="col">
+                    <a class="text-decoration-none h5 d-block card-title mb-3 stretched-link"
+                       href="/dataset/histalp-v1-1y">
+                        HISTALP - Homogenisierte Stationsdaten und abgeleitete Datensätze
+                    </a>
+                </div>
+                
+                <div class="col-auto mb-3" >
+                    
+                        <span href="/dataset/histalp-v1-1y"
+                              class="badge rounded-pill text-secondary bg-white border border-secondary">API</span>
+                    
+                </div>
+            </div>
+            <p class="card-text">Auf der Webseite können Homogenisierte langjähre Klimazeitreihen für den Alpenraum in monatlicher zeitlicher Auflösung sowie daraus abgeleitete Gitterdatensätze und Regionsmittelwerte gefunden werden. Ebenso sind über diese Seite homogenisierten...</p>
+            
+            
+                <p class="card-text small me-4" >
+                    
+                        
+                            Niederschlag,
+                        
+                    
+                        
+                            Strahlung,
+                        
+                    
+                        
+                            Temperatur
+                        
+                    
+                </p>
+            
+        </div>
+        <div class="gsa-arrow-link">
+            <img src="/images/gsa-arrow-link-white.svg">
+        </div>
+    </div>
+
+            
+                
+
+
+
+    <div class="card mb-4" data-cy="dataset" >
+        <div class="card-body" style="padding: 1.25rem 1.5rem;">
+            <div class="row">
+                <div class="col">
+                    <a class="text-decoration-none h5 d-block card-title mb-3 stretched-link"
+                       href="/dataset/synop-v1-1h">
+                        Synopdaten für Österreich
+                    </a>
+                </div>
+                
+                <div class="col-auto mb-3" >
+                    
+                        <span href="/dataset/synop-v1-1h"
+                              class="badge rounded-pill text-secondary bg-white border border-secondary">Web-UI</span>
+                    
+                        <span href="/dataset/synop-v1-1h"
+                              class="badge rounded-pill text-secondary bg-white border border-secondary">API</span>
+                    
+                </div>
+            </div>
+            <p class="card-text">Etwa 150 der ca. 270 teilautomatischen Messstationen (TAWES) werden als SYNOP-Stationen klassifiziert. An etwa 65 Standorten werden neben automatischen Messungen Zusatzbeobachtungen nach WMO-Kriterien von Betreuerinnen und Betreuern zu den...</p>
+            
+            
+                <p class="card-text small me-4" >
+                    
+                        
+                            Erdbodenzustand,
+                        
+                    
+                        
+                            Druck,
+                        
+                    
+                        
+                            Temperatur,
+                        
+                    
+                        
+                            Niederschlag,
+                        
+                    
+                        
+                            Feuchtemaße,
+                        
+                    
+                        
+                            Schnee,
+                        
+                    
+                        
+                            Sichtweite,
+                        
+                    
+                        
+                            Sonnenschein,
+                        
+                    
+                        
+                            Wind,
+                        
+                    
+                        
+                            Bewölkung
+                        
+                    
+                </p>
+            
+        </div>
+        <div class="gsa-arrow-link">
+            <img src="/images/gsa-arrow-link-white.svg">
+        </div>
+    </div>
+
+            
+                
+
+
+
+    <div class="card mb-4" data-cy="dataset" >
+        <div class="card-body" style="padding: 1.25rem 1.5rem;">
+            <div class="row">
+                <div class="col">
+                    <a class="text-decoration-none h5 d-block card-title mb-3 stretched-link"
+                       href="/dataset/tawes-v1-10min">
+                        TAWES Messstationen (Rohdaten) Zehnminutendaten für Österreich v1
+                    </a>
+                </div>
+                
+                <div class="col-auto mb-3" >
+                    
+                        <span href="/dataset/tawes-v1-10min"
+                              class="badge rounded-pill text-secondary bg-white border border-secondary">API</span>
+                    
+                </div>
+            </div>
+            <p class="card-text">Dieser Datensatz beinhaltet die ungeprüften Messdaten (Rohdaten) der jeweils letzten 3 Monate bis heute in einer Auflösung von 10 Minuten und wird in Echtzeit bespielt. Die Wetterstationen der GeoSphere Austria bilden das einzige flächendeckende...</p>
+            
+            
+                <p class="card-text small me-4" >
+                    
+                        
+                            Temperatur,
+                        
+                    
+                        
+                            Strahlung,
+                        
+                    
+                        
+                            Druck,
+                        
+                    
+                        
+                            Feuchtemaße,
+                        
+                    
+                        
+                            Niederschlag,
+                        
+                    
+                        
+                            Schnee,
+                        
+                    
+                        
+                            Sonnenschein,
+                        
+                    
+                        
+                            Wind
+                        
+                    
+                </p>
+            
+        </div>
+        <div class="gsa-arrow-link">
+            <img src="/images/gsa-arrow-link-white.svg">
+        </div>
+    </div>
+
+            
+        
+    
+
+    
+    <!-- pagination bottom -->
+    
+</div>
+                            </div>
+                        </div>
+                    
+                </div>
+                    <footer class="text-white py-5">
+    <div class="container-fluid gsa-container">
+        <div class="row">
+            <div class="col-md-5 mb-3 mb-md-0">
+                <p class="text-capitalize fw-semibold">UNSERE MISSION</p>
+                <p class="m-0">
+                    Der GeoSphere Austria Data Hub stellt qualitativ hochwertige Datensätze für Forschung sowie öffentliche & kommerzielle Nutzung zur Verfügung. Durch die Bereitstellung moderner Datendienste ist es unser Ziel, Innovation zu fördern und unterschiedliche Disziplinen mit Daten unseres Planeten zu unterstützen.
+                </p>
+            </div>
+            <div class="col-md-2 mb-3 mb-md-0">
+                <p class="text-capitalize fw-semibold">ÜBER UNS</p>
+                <a class="text-capitalize text-decoration-none text-white d-block"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   href="/contact">KONTAKT</a>
+                <a class="text-capitalize text-decoration-none text-white d-block"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   href="https://www.geosphere.at/de/impressum">IMPRESSUM</a>
+                <a class="text-capitalize text-decoration-none text-white d-block"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   href="/legal">RECHTLICHES</a>
+            </div>
+            <div class="col-md-3 mb-3 mb-md-0">
+                <p class="text-capitalize fw-semibold">WEITERE INFORMATIONEN</p>
+                <a class="text-capitalize text-decoration-none text-white d-block"
+                   href="/about">DOKUMENTATIONEN</a>
+                <a class="text-capitalize text-decoration-none text-white d-block"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   href="https://dataset.api.hub.geosphere.at/v1/docs/">API</a>
+            </div>
+            <div class="col-md-2 mb-3 mb-md-0">
+                <p class="text-capitalize fw-semibold mb-1">SOZIALE MEDIEN</p>
+                <div class="d-flex align-items-center">
+                    <a target="_blank"
+                       rel="noopener noreferrer"
+                       href="https://twitter.com/GeoSphere_AT"
+                       class="d-inline-block me-2">
+                        <i class="bi bi-twitter text-white fs-4"></i>
+                    </a>
+                    <a target="_blank"
+                       rel="noopener noreferrer"
+                       href="https://www.flickr.com/photos/geosphere_austria/"
+                       class="d-inline-block me-2">
+                        <svg style="width: 30px; height:28px;">
+                            <use xlink:href="/images/icons.svg#flickr"/>
+                        </svg>
+                    </a>
+                    <a target="_blank"
+                       rel="noopener noreferrer"
+                       href="https://www.facebook.com/GeoSphere.at/"
+                       class="d-inline-block me-2">
+                        <i class="bi bi-facebook text-white fs-4"></i>
+                    </a>
+                    <a target="_blank"
+                       rel="noopener noreferrer"
+                       href="https://at.linkedin.com/company/geosphereaustria"
+                       class="d-inline-block me-2">
+                        <i class="bi bi-linkedin text-white fs-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4" style="margin-bottom: 50px">
+            <div class="col-md">
+                <div class="border-top border-white pt-4">
+                    <a href="/" class="logo">
+                        <img src="/images/logo_inverse.png" alt="image" style="width:200px">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+                </div>
+        </div>
+    </div>
+            
+        </body>
+    </html>

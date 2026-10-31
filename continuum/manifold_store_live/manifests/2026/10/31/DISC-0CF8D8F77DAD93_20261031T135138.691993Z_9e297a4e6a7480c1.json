@@ -1,0 +1,24 @@
+{
+  "candidate_id": "DISC-0CF8D8F77DAD93",
+  "provider": "IPMA",
+  "dataset": "t2m-p1d-continental-obssup-idw-concelhos-20d.csv",
+  "sector": "public",
+  "country": "PT",
+  "scientific_regime": [
+    "weather",
+    "marine",
+    "seismic"
+  ],
+  "retrieved_utc": "2026-10-31T13:51:38.691993Z",
+  "request_url": "https://api.ipma.pt/open-data/observation/climate/temperature/t2m-p1d-continental-obssup-idw-concelhos-20d.csv",
+  "final_url": "https://api.ipma.pt/open-data/observation/climate/temperature/t2m-p1d-continental-obssup-idw-concelhos-20d.csv",
+  "status_code": 200,
+  "content_type": "text/csv",
+  "byte_length": 904060,
+  "sha256": "9e297a4e6a7480c1719c4c30aea34b938612020bac8382d95ca339d641e6b156",
+  "etag": "\"20be6-dcb7c-65f1a3fa9fbf4\"",
+  "last_modified": "Sat, 31 Oct 2026 03:10:02 GMT",
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/weather/2026/10/31/DISC-0CF8D8F77DAD93/20261031T135138.691993Z_9e297a4e6a7480c1.csv",
+  "parent_id": "IPMA-API",
+  "discovery_depth": 1
+}

@@ -1,0 +1,604 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html lang="en">
+<head>
+<title>NCEP Meteorological Assimilation Data Ingest System (MADIS)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">    
+<meta name="author" content="MADIS Support Team">
+<link href="css/header.css" rel="stylesheet" type="text/css" >
+<!--<script type="text/javascript" src="/js/ForecastSearch.js"></script>-->
+
+    <!-- site-wide style sheets -->
+    <link rel="stylesheet" type="text/css" href="css/ncepmadis.css" media="all">
+    
+<!--    <link rel="stylesheet" type="text/css" href="css/print.css" media="print">-->
+    
+    <!-- A style sheet for submenus of submenus -->
+<!--    <link rel="stylesheet" type="text/css" href="css/gsd-more-submenus.css" media="all">-->
+    
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/gsd/css/ie.css" media="all"><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/gsd/css/ie7.css" media="all"><![endif]-->
+
+<script type="text/javascript" src="css/ie.js"></script>
+    
+<script id="_fed_an_js_tag" type="text/javascript" src="/federated-analytics.js?agency=OAR&amp;sub-agency=ESRLGSD&amp;sp=find&amp;yt=true"></script>
+
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="TMPC9-DCHA2-45L6L-3A6SC-8WMVB",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"TMPC9-DCHA2-45L6L-3A6SC-8WMVB";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="qyqup4ax2fkkk2xf6lra-f-b99411bef-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1320759","ak.ai":parseInt("795019",10),"ak.ol":"0","ak.cr":1,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"2fb48921","ak.r":46469,"ak.a2":n,"ak.m":"dscg","ak.n":"essl","ak.cport":9229,"ak.gh":"23.201.193.144","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1793454818","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==5hESqHvj2BJSlkuS6LAFIamyEGffFq9Y9747kbJqvzbKXVfPV8EQWAPcYFp7Pfg3r92OMSuDzveu1mi6UGAppgsZBIMsBwESSv23nxnCE13kDhxyulVI5yhARs7qy52Jhjn1Nm83Yn/uFtdsWB/iL9rLCW/qMUXW5mbx9G2MYxUJ0ybj2J1LwY5lYRu3vZMTy80p2dZ0h0M2xOmP6qTrEHyqRVYiAZGg/QYE+6mDT+FGZ7U3ECbdCYjF+zjgd0/xaBQ/EwJ5mvD7t5GTvQlEIHHuov64CFiIODN/vdWA/F9hCNnWZjTxOnIqsyC5fS59jP+3te9mzPDlYQEYkPtb52IrPbthUiK/eeiZmH3L77HVZANn0NIvcaZ5B3ft0m+Wvp9KODGr/JgvEsLbaKIqP/KGf3TAtB2oBcVnaOS5rPw=","ak.pv":"4","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+<!--<body onload="startList()">-->
+
+<div id="container">
+<div class="header">
+
+  <div class="header-content">
+    <a href="https://www.noaa.gov" class="header-noaa-icon"><img src="images/header-noaa.png" alt="NOAA"></a>
+    <a href="https://www.weather.gov" class="header-nws-icon"><img src="images/header-nws.png" alt="NOAA"></a>
+    <a href="https://www.commerce.gov" class="header-doc"><img src="images/header_doc.png" alt="United States Department of Commerce"></a>
+    <div class="header-center-text"><a class="header-center-text" href="https://www.nco.ncep.noaa.gov">NCEP CENTRAL OPERATIONS</a></div>
+    <div class="header-noaa-text"><a class="header-noaa-text" href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a></div>
+  </div>
+</div>
+<div class="header-shadow"><div class="header-shadow-content"></div></div>
+
+     <!-- end major_header -->
+
+  <!-- major navigation -->
+<!-- Top Menu Navigation -->
+<div class="topnav">
+  <ul id="topnav">
+
+    <!-- Home Link -->
+    <li>
+      <div class="section-link">
+        <a href="#">home</a>
+      </div>
+    </li>
+
+    <!-- News Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/news">news</a>
+      </div>
+      <div class="drop">
+        <ul>
+          <li><a href="https://www.weather.gov/news">NWS News</a></li>
+          <li><a href="https://www.nws.noaa.gov/com/weatherreadynation/calendar.html">Events</a></li>
+          <li><a href="https://www.weather.gov/socialmedia">Social Media</a></li>
+          <li><a href="https://www.nws.noaa.gov/om/brochures.shtml">Pubs/Brochures/Booklets</a></li>
+          <li><a href="https://www.noaa.gov/NOAA-Communications">NWS Media Contacts</a></li>
+        </ul>
+      </div>
+    </li>
+
+    <!-- Search Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/search">search</a>
+      </div>
+      <div class="drop">
+        <div class="site-search">
+          <form method="get" action="https://search.usa.gov/search" style="margin-bottom: 0; margin-top: 0;">
+            <input type="hidden" name="v:project" value="firstgov">
+            <label for="query">Search For</label>
+            <input type="text" name="query" id="query" size="12" >
+            <input type="submit" value="Go" >
+            <p>
+              <input type="radio" name="affiliate" checked="checked" value="nws.noaa.gov" id="nws" >
+              <label for="nws" class="search-scope">NWS</label>
+              <input type="radio" name="affiliate" value="noaa.gov" id="noaa" >
+              <label for="noaa" class="search-scope">All NOAA</label>
+            </p>
+          </form>
+        </div>
+      </div>
+    </li>
+
+    <!-- Forecast Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/search">forecast</a>
+      </div>
+      <div class="drop">
+        <div id="forecast-lookup" class="site-search">
+          <form name="getForecast" id="getForecast" action="https://forecast.weather.gov/zipcity.php" method="get">
+            <label for="inputstring">Local forecast by <br>"City, St" or ZIP code</label>
+            <input id="inputstring" name="inputstring" type="text" size="12" value="Enter location ..." onclick="this.value=''" >
+            <input name="btnSearch" id="btnSearch" type="submit" value="Go" >
+            <div id="txtError">
+            <div id="errorNoResults" style="display:none;">Sorry, the location you searched for was not found. Please try another search.</div>
+            <div id="errorMultipleResults" style="display:none">Multiple locations were found. Please select one of the following:</div>
+            <div id="errorChoices" style="display:none"></div>
+              <input id="btnCloseError" type="button" value="Close" style="display:none" >
+            </div>
+            <div id="txtHelp"><a style="text-decoration: underline;" href="javascript:void(window.open('https://weather.gov/ForecastSearchHelp.html','locsearchhelp','status=0,toolbar=0,location=0,menubar=0,directories=0,resizable=1,scrollbars=1,height=500,width=530').focus());">Location Help</a></div>
+          </form>
+                        </div><!-- <div id="forecast-lookup"> -->
+          </div><!-- <div class="drop"> -->
+    </li>
+    <!-- About Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/about">about</a>
+      </div>
+      <div class="drop">
+          <ul>
+            <li><a href="https://www.weather.gov/about">About NWS</a></li>
+            <li><a href="https://www.weather.gov/organization">Organization</a></li>
+            <li><a href="https://sites.google.com/a/noaa.gov/nws-best-practices/">For NWS Employees</a></li>
+            <li><a href="https://www.weather.gov/international/">International</a></li>
+            <li><a href="https://www.weather.gov/organization/ncep">National Centers</a></li>
+            <li><a href="https://www.nws.noaa.gov/tg/">Products and Services</a></li>
+            <li><a href="https://www.weather.gov/contact">Contact Us</a></li>
+            <li><a href="https://w1.weather.gov/glossary/">Glossary</a></li>
+          </ul>
+        </div>
+    </li>
+
+  </ul><!-- End of top nav ul -->
+</div><!-- End of topnav div -->
+
+</div> <!-- end banner -->
+
+<div id="pbody">
+    <!-- minor navigation -->
+            <div style="width:160px" id="minor_nav">
+
+<!--<br>-->
+<ul style="word-wrap:break-word" id="vertnav">
+<br>
+   <li><a href="index.shtml">MADIS Home</a></li>
+</ul>
+<dl>
+ <dt>News</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <li><a href="madis_recent.shtml">What's Here - v4.0!</a></li>
+<!-- <li><a href="madis_comingsoon.shtml">What's Coming?</a></li>
+-->
+</ul>
+<dl>
+<dt>Data Information</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">  
+ <li><a href="madis_datasets.shtml">Overview</a></li>
+ <li>Descriptions&nbsp;&nbsp;>
+    <ul>
+       <li><a href="madis_sfc.shtml"><font color="FFFF66">Meteorological Surface</font></a></li>
+       <li class="indented_vertnav"><a href="madis_mesonet.shtml">Integrated Mesonet</a></li>
+       <li class="indented_vertnav"><a href="madis_cwop.shtml">Citizen Weather Observer Program (CWOP)</a></li>
+       <li class="indented_vertnav"><a href="madis_rwis_clarus.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+       <li class="indented_vertnav"><a href="national_mesonet.shtml">National Mesonet</a></li>
+       <li class="indented_vertnav"><a href="madis_metar.shtml">METAR</a></li>
+       <!--<li class="indented_vertnav"><a href="madis_OMO.shtml">1-minute ASOS</a></li>
+       --><li class="indented_vertnav"><a href="madis_maritime.shtml">Maritime</a></li>
+	<li class="indented_vertnav"><a href="madis_wxtelematics.shtml">Weather Telematics</a></li>
+       <li class="indented_vertnav"><a href="madis_nepp.shtml">New England Pilot Project (NEPP)</a></li>
+       <li class="indented_vertnav"><a href="madis_crn.shtml">Climate Reference Network (CRN)</a></li>
+       <li class="indented_vertnav"><a href="madis_ushcn.shtml">U.S. Climatology Net-Modernization (USHCN-M)</a></li>
+       <li><a href="madis_hydro.shtml"><font color="FFFF66">Hydrologic Surface</font></a></li>
+       <li><a href="madis_raob.shtml"><font color="FFFF66">Radiosonde</font></a></li>
+       <li><a href="madis_npn.shtml"><font color="FFFF66">NOAA Profiler Network</font></a></li>
+       <li><a href="madis_gpsmet.shtml"><font color="FFFF66">GPS-Met</font></a></li>
+       <li><a href="madis_acars.shtml"><font color="FFFF66">Aircraft Based </font></a></li>
+       <li><a href="madis_map.shtml"><font color="FFFF66">Multi-Agency Profiler (CAP)</font></a></li>
+       <li><a href="madis_rdmtr.shtml"><font color="FFFF66">Radiometer</font></a></li>
+       <li><a href="madis_satwnd.shtml"><font color="FFFF66">Satellite Wind</font></a></li>
+       <li><a href="madis_satsnd.shtml"><font color="FFFF66">Satellite Sounding</font></a></li>
+       <li><a href="madis_satrad.shtml"><font color="FFFF66">Satellite Radiance</font></a></li>
+       <li><a href="madis_snow.shtml"><font color="FFFF66">Snow</font></a></li>
+       <li><a href="madis_gapfillua.shtml"><font color="FFFF66">Gap-filling Upper Air</font></a></li>
+<!--       <li><a href="madis_wisdom.shtml"><font color="FFFF66">WISDOM Balloon Wind</font></a></li>-->
+       <li><a href="madis_RSAS.shtml"><font color="FFFF66">RSAS Sfc Analyses Grids</font></a></li>
+    </ul>
+ </li> 
+ <li>Variables&nbsp;&nbsp;>
+    <ul>
+       <li><font color="FFFF66">Meteorological Surface</font></li>
+       <li class="indented_vertnav"><a href="sfc_mesonet_variable_list.shtml">Mesonet/RWIS/National Mesonet</a></li>
+       <!--<li class="indented_vertnav"><a href="sfc_mesonet_variable_list.shtml">Citizen Weather Observer Program (CWOP)</a></li>
+       <li class="indented_vertnav"><a href="madis_rwis_variable_list.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+      --> <li class="indented_vertnav"><a href="sfc_urbanet_variable_list.shtml">National Mesonet Extended</a></li>
+       <li class="indented_vertnav"><a href="sfc_metar_variable_list.shtml">METAR (standard)</a></li>
+       <!--<li class="indented_vertnav"><a href="sfc_OMO_variable_list.shtml">1-minute ASOS</a></li>
+       --><li class="indented_vertnav"><a href="sfc_sao_variable_list.shtml">SAO</a></li>
+       <li class="indented_vertnav"><a href="sfc_maritime_variable_list.shtml">Maritime</a></li>
+	<li class="indented_vertnav"><a href="sfc_mobile_variable_list.shtml">Weather Telematics</a></li>
+       <li class="indented_vertnav"><a href="sfc_crn_variable_list.shtml">Climate Reference Network</a></li>
+       <li class="indented_vertnav"><a href="sfc_hcn_variable_list.shtml">Historical Climatology Network</a></li>
+       <li class="indented_vertnav"><a href="sfc_nepp_variable_list.shtml">New England Pilot Project</a></li>
+       <li><a href="hydro_variable_list.shtml"><font color="FFFF66">Hydrologic Surface</font></a></li>
+       <li><a href="raob_variable_list.shtml"><font color="FFFF66">Radiosonde</font></a></li>
+       <li><a href="npn_variable_list.shtml"><font color="FFFF66">NOAA Profiler Network</font></a></li>
+       <li><a href="gpsmet_variable_list.shtml"><font color="FFFF66">GPS-Met</font></a></li>
+       <li><a href="acars_variable_list.shtml"><font color="FFFF66">Aircraft Based</font></a></li>
+       <li><a href="acarsp_variable_list.shtml"><font color="FFFF66">Aircraft Based Profiles</font></a></li>
+       <li><a href="map_variable_list.shtml"><font color="FFFF66">Multi-Agency Profiler (CAP)</font></a></li>
+       <li><a href="rdmtr_variable_list.shtml"><font color="FFFF66">Radiometer</font></a></li>
+       <li><a href="satwnd_variable_list.shtml"><font color="FFFF66">Satellite Wind</font></a></li>
+       <li><a href="satsnd_variable_list.shtml"><font color="FFFF66">Satellite Sounding</font></a></li>
+       <li><a href="satrad_variable_list.shtml"><font color="FFFF66">Satellite Radiance</font></a></li>
+       <li><a href="snow_variable_list.shtml"><font color="FFFF66">Snow</font></a></li>
+       <li><a href="gapfillua_variable_list.shtml"><font color="FFFF66">Gap-filling Upper Air</font></a></li>
+<!--       <li><a href="wisdom_variable_list.shtml"><font color="FFFF66">WISDOM Balloon Wind</font></a></li>-->
+       <li><a href="rsas_variable_list.shtml"><font color="FFFF66">RSAS Sfc Analyses Grids</font></a></li>
+     </ul>
+ </li>
+ <li>Variables Metadata&nbsp;&nbsp;>
+    <ul>
+       <li><font color="FFFF66">Integrated Mesonet</font>
+       <li class="indented_vertnav"><a href="mesonet_precip.shtml">Precipitation</a></li>
+       <li class="indented_vertnav"><a href="mesonet_solar_radiation.shtml">Solar Radiation</a></li>
+       <li class="indented_vertnav"><a href="mesonet_soil_temperature.shtml">Soil Temperature</a></li>
+       <li class="indented_vertnav"><a href="mesonet_soil_moisture.shtml">Soil Moisture</a></li>
+    </li>
+       <li><font color="FFFF66">National Mesonet</font>
+       <li class="indented_vertnav"><a href="nmesonet_precip.shtml">Precipitation</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_solar_radiation.shtml">Solar Radiation</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_soil_temperature.shtml">Soil Temperature</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_soil_moisture.shtml">Soil Moisture</a></li>
+    </li>
+       <li><font color="FFFF66">OMO One Minute ASOS (HFMETAR)</font>
+       <li class="indented_vertnav"><a href="omo_precip.shtml">Precipitation</a></li>
+    </li>
+   </ul>
+<li>Quality Control&nbsp;&nbsp;>
+    <ul>
+   <li><a href="madis_qc.shtml">Overview</font></a></li>
+       <li><a href="madis_sfc_qc.shtml">Meteorological Surface</a></li>
+       <li><a href="madis_rwis_qc.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+       <li><a href="madis_hydro_qc.shtml">Hydrologic Surface</a></li>
+       <li><a href="madis_raob_qc.shtml">Radiosonde</a></li>
+       <li><a href="madis_npn_qc.shtml">NOAA Profiler Network</a></li>
+       <li><a href="madis_sfc_qc.shtml">Weather Telematics</a></li>
+       <li><a href="madis_acars_qc.shtml">Aircraft Based</a></li>
+       <li><a href="madis_acarsp_qc.shtml">Aircraft Based Profiles</a></li>
+       <li><a href="madis_map_qc.shtml">Multi-Agency Profiler (CAP)</a></li>
+       <li><a href="madis_rdmtr_qc.shtml">Radiometer</a></li>
+       <li><a href="madis_satwnd_qc.shtml">Satellite Wind</a></li>
+       <li><a href="madis_satsnd_qc.shtml">Satellite Sounding</a></li>
+       <li><a href="madis_snow_qc.shtml">Snow</a></li>
+       <li><a href="madis_gapfillua_qc.shtml">Gap-filling Upper Air</a></li>
+       <li><a href="madis_RSAS_qc.shtml">RSAS Surface Analysis</a>
+<!--	<li><a href="madis-data/qcms_messages.html">QC Summary Messages</a>
+    -->
+</ul>
+ </li>
+ <li>Restrictions&nbsp;&nbsp;>
+    <ul>
+       <li><a href="madis_restrictions.shtml">Overview</a></li>
+       <li><a href="mesonet_providers.shtml">Meteorological Surface</a></li>
+       <li><a href="hydro_providers.shtml">Hydrologic Surface</a></li>
+       <li><a href="acars_restrictions.shtml">Aircraft Based</a></li>
+    </ul>
+ </li>
+ <li><a href="MADISdataissues.shtml">Known Data Issues</a></li>
+</ul>
+<dl>
+<dt>User Access</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <!--<li><a href="user_resources.shtml">Overview</a></li>
+--> 
+<li><a href="data_application.shtml">Data Application Form</a></li>
+<li><!--<a href="https://madis-hweb.ncep.noaa.gov:8005/htdocs/index.shtml">--><a href="https://madis-data.ncep.noaa.gov/index.shtml">MADIS Distribution Services</a></li>
+<li><!--<a href="https://madis-hweb.ncep.noaa.gov:8005/htdocs/wmo_gdc.shtml">--><a href="https://madis-data.ncep.noaa.gov/wmo_gdc.shtml">GDC-ABO</a></li>
+<li><a href="https://madis-idm.ncep.noaa.gov/reset">Password Reset</a></li>
+</ul>
+<dl>
+<dt>Provider Information</dt>
+<ul style="word-wrap:break-word" id="vertnav">
+ <!--<li><a href="provider_resources.shtml">Overview</a></li>
+ <li><a href="network_info.shtml">Surface Provider List</a></li>
+--> 
+<li><a href="provider_resources.shtml">Overview</a></li>
+ <li><a href="mesonet_providers.shtml">Meteorological Surface</a></li>
+ <!--<li><a href="nmesonet_providers.shtml">National Mesonet/UrbaNet</a></li>-->
+ <li><a href="hydro_providers.shtml">Hydrological Surface</a></li>
+ <li><a href="map_providers.shtml">Multi-Agency Profiler (CAP)</a></li>
+ <!--<li><a href="rdmtr_providers.shtml">Radiometer</a></li>
+ -->
+<li><a href="snow_providers.shtml">Snow</a></li>
+<li><a href="madistosynoptic.shtml">Transitions to SYNOPTIC</a></li>
+ <!--<li>Quality Control&nbsp;&nbsp;>
+   <ul>
+ <li><a href="madis_smry_descrip.shtml">Summary</a></li>
+-->
+</ul>
+</dl>
+
+<dt>Support</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <li><a href="support_overview.shtml">Overview</a></li>
+ <li><a href="madis_monitoring.shtml">Data Outages</a></li>
+<!--
+ <li>FAQ&nbsp;&nbsp;>
+ <ul>
+     <li><a href="faq_accounts.shtml">Accounts</a></li>
+     <li><a href="faq_api.shtml">API</a></li>
+     <li><a href="faq_localization.shtml">AWIPS Localization</a></li>
+     <li><a href="faq_cwop.shtml">CWOP</a></li>
+     <li><a href="faq_datadisplay.shtml">Data Display</a></li>
+     <li><a href="faq_historicaldata.shtml">Historical Data</a></li>
+     <li><a href="faq_lastupdatetime.shtml">Last Update Time</a></li>
+     <li><a href="faq_netcdf.shtml">netCDF</a></li>
+     <li><a href="faq_providerdata.shtml">Provider Data</a></li>
+     <li><a href="faq_wfo.shtml">WFO</a></li>
+ </ul></li>
+-->
+ <li><a href="data_application.shtml#disclaimer">Disclaimer</a></li>
+ <li><a href="mailto:madis-support@noaa.gov">Contact Us</a></li>
+</ul>
+<dl>
+<dt>Related Links</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+<li><a href="https://gdc-abo.wmo.int/">WMO Global Data Center</a></li>
+<li><a href="https://madis-data.ncep.noaa.gov/index.shtml">MADIS Distribution Services</a></li>
+<li><a href="https://hads.ncep.noaa.gov/">HADS</a></li>
+<li><a href="https://amdar.ncep.noaa.gov/index.shtml">AMDAR</a></li>
+<li>&nbsp;</li>
+<li><a href="https://ruc.noaa.gov/amdar/">AMDAR Research</a></li>
+</li>
+<li>&nbsp;</li>
+</ul>
+</div>
+
+
+    <div id="content">
+    <a class="textvers" name="content_link">&nbsp;</a>
+
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (X11; I; HP-UX B.10.20 9000/755) [Netscape]">
+   <TITLE>MADIS Multi-Agency Profiler Station Table</TITLE>
+
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="TMPC9-DCHA2-45L6L-3A6SC-8WMVB",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"TMPC9-DCHA2-45L6L-3A6SC-8WMVB";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="qyqup4ax2fkkk2xf6lra-f-b99411bef-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1320759","ak.ai":parseInt("795019",10),"ak.ol":"0","ak.cr":1,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"2fb48921","ak.r":46469,"ak.a2":n,"ak.m":"dscg","ak.n":"essl","ak.cport":9229,"ak.gh":"23.201.193.144","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1793454818","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==5hESqHvj2BJSlkuS6LAFIamyEGffFq9Y9747kbJqvzbKXVfPV8EQWAPcYFp7Pfg3r92OMSuDzveu1mi6UGAppgsZBIMsBwESSv23nxnCE13kDhxyulVI5yhARs7qy52Jhjn1Nm83Yn/uFtdsWB/iL9rLCW/qMUXW5mbx9G2MYxUJ0ybj2J1LwY5lYRu3vZMTy80p2dZ0h0M2xOmP6qTrEHyqRVYiAZGg/QYE+6mDT+FGZ7U3ECbdCYjF+zjgd0/xaBQ/EwJ5mvD7t5GTvQlEIHHuov64CFiIODN/vdWA/F9hCNnWZjTxOnIqsyC5fS59jP+3te9mzPDlYQEYkPtb52IrPbthUiK/eeiZmH3L77HVZANn0NIvcaZ5B3ft0m+Wvp9KODGr/JgvEsLbaKIqP/KGf3TAtB2oBcVnaOS5rPw=","ak.pv":"4","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></HEAD>
+<BODY TEXT="#333333" BGCOLOR="#FFFFFF" LINK="#006699" VLINK="#999900" ALINK="#999900">
+<p>
+<H1>MADIS Multi-Agency Profiler Station Table</H1>
+
+<br><a href="map_legend.shtml" target="wwz" onClick="window.open('map_legend.shtml','wwz','width=550,height=600,resizable,scrollbars,toolbar')">Table Column Reference</a>
+<br>
+
+<pre>
+<!--top (delete to bottom, then insert SiteSourceFreqInstr.whatever)-->
+197OR 4 0 VAISALA    NSFC    45.50   119.49    706   10 LEXINGTON, OR                  VAISALA
+200OR 4 0 VAISALA    NSFC    45.57  -120.75    456   10 LOCUST GROVE, OR               VAISALA
+265WA 4 0 VAISALA    NSFC    45.94  -119.41    265   10 PLYMOUTH, WA                   VAISALA
+343OR 4 0 VAISALA    NSFC    45.63  -121.07    166   10 FAIRBANKS, OR                  VAISALA
+352OR 4 0 VAISALA    NSFC    45.52  -120.78    731   10 MORO, OR                       VAISALA
+446OR 4 0 VAISALA    NSFC    45.55  -120.16    356   10 OLEX, OR                       VAISALA
+WC2OR 4 0 VAISALA    NSFC    45.59  -120.67    436   10 WASCO AIRPORT, OR              VAISALA
+CL2OR 4 0 PNNL       YSFC    45.67  -121.89     28   10 Cascade Locks, OR              Pacific Northwest National Labroatory
+HR2OR 4 0 PNNL       YSFC    45.71  -121.52     25   10 Hood River, OR                 Pacific Northwest National Laboratory
+UM2OR 4 0 PNNL       YSFC    45.92  -119.34     86   10 Umatilla, OR                   Pacific Northwest National Laboratory
+JD2OR 4 0 PNNL       YSFC    45.72  -120.70     67   10 John Day, OR                   Pacific Northwest National Laboratory
+ACVCA 1 1 PSD        YSFC    40.97  -124.11     56   60 MCKINLEYVILLE CA               NOAA ESRL PHYSICAL SCIENCES DIVISION
+ALZC1 0 0 PSD        YSFC    39.20  -120.82   1048   60 ALTA CA                        NOAA ESRL PHYSICAL SCIENCES DIVISION
+ANWNE 1 1 PSD        YSFC    42.58  -100.00    793   60 AINSWORTH NE                   NOAA ESRL PHYSICAL SCIENCES DIVISION
+ASTOR 1 1 PSD        YSFC    46.16  -123.88      3   60 ASTORIA OR                     NOAA ESRL PHYSICAL SCIENCES DIVISION
+BACCO 1 1 PSD        YSFC    40.05  -105.00   1577   15 ERIE (3 GHZ)                   NOAA ESRL PHYSICAL SCIENCES DIVISION
+BBLCA 0 0 PSD        YSFC    39.81  -122.37    160   60 BLACK BUTTE LAKE CA            NOAA ESRL PHYSICAL SCIENCES DIVISION
+BBNC1 0 0 PSD        YSFC    39.31  -120.52   1754   60 BIG BEND CA                    NOAA ESRL PHYSICAL SCIENCES DIVISION
+BBYCA 1 1 PSD        YSFC    38.32  -123.07     12   60 BODEGA BAY CA                  NOAA ESRL PHYSICAL SCIENCES DIVISION
+BD2TX 4 0 ANL        YSFC    31.18   -99.33    548   10 BRADY, TX (SODAR)              ARGONNE NATIONAL LABORATORY
+BKFCA 1 1 PSD        NSFC    35.35  -118.96    123   60 BAKERSFIELD CA                 NOAA ESRL PHYSICAL SCIENCES DIVISION
+BKRCA 0 0 PSD        YSFC    35.14  -116.10    258   60 BAKER (P618) CA                NOAA ESRL PHYSICAL SCIENCES DIVISION
+BLOC1 0 0 PSD        YSFC    39.28  -120.71   1604   60 BLUE CANYON CA                 NOAA ESRL PHYSICAL SCIENCES DIVISION
+BNAID 0 0 PSD        YSFC    48.73  -116.29    696   60 BOUNDARY AIR (P025) ID         NOAA ESRL PHYSICAL SCIENCES DIVISION
+BOCAZ 0 0 PSD        YSFC    31.56  -110.54   1566   60 BLACK OAK AZ                   NOAA ESRL PHYSICAL SCIENCES DIVISION
+CCOCA 1 1 PSD        YSFC    39.69  -121.91     41   60 CHICO CA                       NOAA ESRL PHYSICAL SCIENCES DIVISION
+CCRCA 1 0 PSD        YSFC    37.99  -122.06     14   60 CONCORD, CA                    NOAA ESRL PHYSICAL SCIENCES DIVISION
+CCYCA 0 0 PSD        YSFC    36.02  -120.29     50   60 CEDARCYN (P298) CA             NOAA ESRL PHYSICAL SCIENCES DIVISION
+CDNOR 1 1 PSD        YSFC    45.24  -120.17    891   60 CONDON OR                      NOAA ESRL PHYSICAL SCIENCES DIVISION
+CFCCA 1 0 PSD        YSFC    39.08  -120.94    643   60 COLFAX CA                      NOAA ESRL PHYSICAL SCIENCES DIVISION
+CFFCA 1 0 PSD        NSFC    39.08  -120.94    644   15 COLFAX CA (FMCW) (3GHZ)        NOAA ESRL PHYSICAL SCIENCES DIVISION
+CFXC1 0 0 PSD        YSFC    39.09  -120.95    731   60 COLFAX CA                      NOAA ESRL PHYSICAL SCIENCES DIVISION
+CIMC1 0 0 PSD        YSFC    38.74  -120.66   1006   60 CAMINO CA                      NOAA ESRL PHYSICAL SCIENCES DIVISION
+CINC1 0 0 PSD        YSFC    39.93  -122.03     50   60 CORNING (P344) CA              NOAA ESRL PHYSICAL SCIENCES DIVISION
+CJKFL 2 0 PSD        NSFC    24.70   -81.50      3   60 CUDJOE KEY, FL (TARS 449)      NOAA ESRL PHYSICAL SCIENCES DIVISION
+CLNCA 0 0 PSD        YSFC    38.83  -123.02     99   60 CLOVERDALE - NORTH CA          NOAA ESRL PHYSICAL SCIENCES DIVISION
+CLSTX 1 1 PSD        YSFC    30.53   -96.43     68   60 COLLEGE STATION,TX             NOAA ESRL PHYSICAL SCIENCES DIVISION
+CNACA 0 0 PSD        YSFC    33.86  -117.61    300   60 CORONA (CNPP) CA               NOAA ESRL PHYSICAL SCIENCES DIVISION
+COCTX 1 1 PSD        NSFC    32.47  -100.92    665   60 COLORADO CITY, TX              NOAA ESRL PHYSICAL SCIENCES DIVISION
+COSCA 0 0 PSD        YSFC    34.84  -114.97    607   60 CAMINOSUBS (P625) CA           NOAA ESRL PHYSICAL SCIENCES DIVISION
+CSBOR 0 0 PSD        YSFC    43.40  -124.25     27   60 COOS BAY (P365) OR             NOAA ESRL PHYSICAL SCIENCES DIVISION
+CTNNC 1 0 PSD        NSFC    35.59   -78.46     76   15 CLAYTON NC                     NOAA ESRL PHYSICAL SCIENCES DIVISION AND CAROLINA DEPARTMENT OF ENVIRONMENT AND NATURAL RESOURCES, DIVISION OF AIR QUALITY
+CVACA 0 0 PSD        YSFC    38.09  -120.95     41   60 CALAVERA (P309Z) CA            NOAA ESRL PHYSICAL SCIENCES DIVISION
+CZCCA 1 0 PSD        YSFC    38.61  -123.22    475   15 CAZADERO CA (3GHZ)             NOAA ESRL PHYSICAL SCIENCES DIVISION
+DEMNM 2 0 PSD        NSFC    32.03  -107.86   1290   60 DEMMING, NM (TARS 449MHZ)      NOAA ESRL PHYSICAL SCIENCES DIVISION
+DGSWA 0 0 PSD        YSFC    48.05  -123.13    191   60 DUNGENESS (P436) WA            NOAA ESRL PHYSICAL SCIENCES DIVISION
+DOACA 0 0 PSD        YSFC    35.74  -119.24     63   60 DELANO_AIR (P565) CA           NOAA ESRL PHYSICAL SCIENCES DIVISION
+DRNNV 0 0 PSD        YSFC    39.57  -119.79   1527   60 DRI_RENO (P090) NV             NOAA ESRL PHYSICAL SCIENCES DIVISION
+DSCCA 0 0 PSD        YSFC    32.98  -115.49     74   60 SDSU CENTER (P499) CA          NOAA ESRL PHYSICAL SCIENCES DIVISION
+DUCAZ 0 0 PSD        YSFC    34.26  -110.01   1930   60 DUECE CLUB (P015) AZ           NOAA ESRL PHYSICAL SCIENCES DIVISION
+DYLWA 0 0 PSD        YSFC    47.00  -118.57    480   60 DRY LIND (P020) WA             NOAA ESRL PHYSICAL SCIENCES DIVISION
+EGPTX 2 0 PSD        NSFC    28.39  -100.28    224   60 EAGLE PASS, TX (TARS 449MHZ)   NOAA ESRL PHYSICAL SCIENCES DIVISION
+ELGAZ 0 0 PSD        YSFC    31.59  -110.51   1471   60 ELGIN AZ                       NOAA ESRL PHYSICAL SCIENCES DIVISION
+EWNNC 1 0 PSD        YSFC    35.08   -77.05      3   60 NEW BERN NC                    NOAA ESRL PHYSICAL SCIENCES DIVISION
+FBKAZ 0 0 PSD        YSFC    31.72  -110.19   1174   60 FAIRBANK AZ                    NOAA ESRL PHYSICAL SCIENCES DIVISION
+FFAC1 0 0 PSD        YSFC    38.47  -121.65      7   60 FINCH FARMS (P268) CA          NOAA ESRL PHYSICAL SCIENCES DIVISION
+FHAAZ 2 0 PSD        NSFC    31.49  -110.30   1494   60 FT. HUACHUCA, AZ (TARS 449MHZ) NOAA ESRL PHYSICAL SCIENCES DIVISION
+FKSWA 1 1 PSD        YSFC    47.97  -124.40     95   60 FORKS WA                       NOAA ESRL PHYSICAL SCIENCES DIVISION
+FMSAZ 0 0 PSD        YSFC    31.57  -110.55   1535   60 FREEMAN SPRINGS AZ             NOAA ESRL PHYSICAL SCIENCES DIVISION
+FOHC1 0 0 PSD        YSFC    39.04  -120.80   1041   60 FORESTHILL CA                  NOAA ESRL PHYSICAL SCIENCES DIVISION
+FTHID 0 0 PSD        YSFC    46.80  -116.98    844   60 FOOT HILL (P422) ID            NOAA ESRL PHYSICAL SCIENCES DIVISION
+GEKC1 0 0 PSD        YSFC    39.07  -120.56   1719   60 GREEK STORE CA                 NOAA ESRL PHYSICAL SCIENCES DIVISION
+GMNCA 1 1 PSD        YSFC    34.72  -118.80    912   60 GORMAN, CA                     NOAA ESRL PHYSICAL SCIENCES DIVISION
+GMPCA 0 0 PSD        YSFC    33.05  -114.83    591   60 GLAMIS PEAK (CMPK) CA          NOAA ESRL PHYSICAL SCIENCES DIVISION
+GNBCO 1 1 PSD        YSFC    40.09  -105.92   2504   60 GRANBY CO                      NOAA ESRL PHYSICAL SCIENCES DIVISION
+GSNCA 0 0 PSD        YSFC    38.72  -122.90     68   60 GEYSERVILLE - NORTHEAST CA     NOAA ESRL PHYSICAL SCIENCES DIVISION
+GSWCA 0 0 PSD        YSFC    38.70  -122.97     58   60 GEYSERVILLE - WEST CA          NOAA ESRL PHYSICAL SCIENCES DIVISION
+GTSNM 0 0 PSD        YSFC    35.13  -107.88   1992   60 GRANTS (P107) NM               NOAA ESRL PHYSICAL SCIENCES DIVISION
+HBKCA 0 0 PSD        YSFC    41.90  -122.57    715   60 HORNBROOK CA                   NOAA ESRL PHYSICAL SCIENCES DIVISION
+HCPCA 0 0 PSD        YSFC    41.79  -123.39    366   60 HAPPY CAMP CA                  NOAA ESRL PHYSICAL SCIENCES DIVISION
+HDMCA 0 0 PSD        YSFC    37.80  -119.86   1396   60 HODGDON MEADOW CA              NOAA ESRL PHYSICAL SCIENCES DIVISION
+HLECA 0 0 PSD        YSFC    38.98  -123.09    168   60 HOPLAND - NORTHEAST CA         NOAA ESRL PHYSICAL SCIENCES DIVISION
+HLNCA 0 0 PSD        YSFC    39.06  -123.15    167   60 HOPLAND - NORTH CA             NOAA ESRL PHYSICAL SCIENCES DIVISION
+HMBCA 0 0 PSD        YSFC    40.88  -124.07     21   60 HUMBOLDT (P058) CA             NOAA ESRL PHYSICAL SCIENCES DIVISION
+HYSCA 0 0 PSD        YSFC    39.28  -120.53   2014      HUYSINK CA                     NOAA ESRL PHYSICAL SCIENCES DIVISION
+IDPCA 0 0 PSD        YSFC    36.80  -118.19   1196   60 INDEPENDENCE CA                NOAA ESRL PHYSICAL SCIENCES DIVISION
+JCBCA 0 0 PSD        YSFC    32.62  -116.17    823   60 JACUMBA (P066) CA              NOAA ESRL PHYSICAL SCIENCES DIVISION
+JTNTX 1 1 ANL        YSFC    33.01  -100.98    707   10 JAYTON, TX (SODAR)             ARGONNE NATIONAL LABORATORY
+KLHC1 0 0 PSD        YSFC    41.56  -124.09    235   60 KLAMATH (P316) CA              NOAA ESRL PHYSICAL SCIENCES DIVISION
+KNVCA 0 0 PSD        YSFC    35.75  -118.42    816   60 KERNVILLE CA                   NOAA ESRL PHYSICAL SCIENCES DIVISION
+LCDCA 0 0 PSD        YSFC    37.10  -121.65    105   60 LACROSSE DRIVE (P217) CA       NOAA ESRL PHYSICAL SCIENCES DIVISION
+LGGC1 0 0 PSD        YSFC    39.86  -123.72    258   60 LEGGETT (P315) CA              NOAA ESRL PHYSICAL SCIENCES DIVISION
+LGROR 0 0 PSD        YSFC    45.23  -118.01    888   60 LA GRANDE (P022) OR            NOAA ESRL PHYSICAL SCIENCES DIVISION
+LJSPR 2 0 PSD        NSFC    17.98   -67.08     34   60 PUERTO RICO (TARS 449MHZ)      NOAA ESRL PHYSICAL SCIENCES DIVISION
+LQTCA 0 0 PSD        YSFC    33.58  -116.23      4   60 LA QUINTA (P491) CA            NOAA ESRL PHYSICAL SCIENCES DIVISION
+LSOCA 0 0 PSD        YSFC    35.30  -120.86   1075   60 LOS OSOS CA                    NOAA ESRL PHYSICAL SCIENCES DIVISION
+MCAID 0 0 PSD        YSFC    44.90  -116.10   1522   60 MCCALL AIR (P023) ID           NOAA ESRL PHYSICAL SCIENCES DIVISION
+MFATX 2 0 PSD        NSFC    30.43  -104.32   1447   60 MARFA, TX (TARS 449MHZ)        NOAA ESRL PHYSICAL SCIENCES DIVISION
+MNTCO 0 0 PSD        YSFC    38.44  -107.64   2456   60 MONTROSE (P029) CO             NOAA ESRL PHYSICAL SCIENCES DIVISION
+MPICA 1 0 PSD        YSFC    37.51  -120.04    610   15 MARIPOSA, CA                   NOAA ESRL PHYSICAL SCIENCES DIVISION
+MRONC 1 1 PSD        YSFC    35.65   -81.96    384   60 MARION,NC                      NOAA ESRL PHYSICAL SCIENCES DIVISION
+MTACA 0 0 PSD        YSFC    36.74  -120.36     50   60 MENDOTA (P304) CA              NOAA ESRL PHYSICAL SCIENCES DIVISION
+NDNCA 0 0 PSD        YSFC    39.33  -120.37   2103   60 NORDEN CA                      NOAA ESRL PHYSICAL SCIENCES DIVISION
+NVCCA 0 0 PSD        YSFC    39.39  -120.98   1055   60 NEVADA CITY CA                 NOAA ESRL PHYSICAL SCIENCES DIVISION
+OCRCA 0 0 PSD        YSFC    39.27  -120.36   1886   60 ONION CREEK CA                 NOAA ESRL PHYSICAL SCIENCES DIVISION
+OFCNC 1 1 PSD        YSFC    35.64   -82.16    434   60 OLD FORT,NC                    NOAA ESRL PHYSICAL SCIENCES DIVISION
+OHKTN 1 0 PSD        YSFC    36.25   -86.56    178   60 OLD HICKORY TN                 NOAA ESRL PHYSICAL SCIENCES DIVISION
+OMMCA 0 0 PSD        YSFC    37.61  -119.00   2765   60 OLD MAMMOTH (P630) CA          NOAA ESRL PHYSICAL SCIENCES DIVISION
+ONSCA 0 0 PSD        YSFC    37.20  -119.57    684   60 O'NEALS CA                     NOAA ESRL PHYSICAL SCIENCES DIVISION
+OTCOR 0 0 PSD        YSFC    42.26  -121.78   1391   60 OIT CAMPUS (P380) OR           NOAA ESRL PHYSICAL SCIENCES DIVISION
+OTHOR 1 1 PSD        YSFC    43.42  -124.24      5   60 NORTH BEND OR                  NOAA ESRL PHYSICAL SCIENCES DIVISION
+OVLCA 0 0 PSD        YSFC    39.53  -121.49    114   60 OROVILLE CA                    NOAA ESRL PHYSICAL SCIENCES DIVISION
+PAPAZ 1 1 PSD        NSFC    32.51  -111.34    578   60 TUCSON AZ                      NOAA ESRL PHYSICAL SCIENCES DIVISION
+PFDCA 0 0 PSD        YSFC    36.83  -119.33    184   60 PINE FLAT DAM CA               NOAA ESRL PHYSICAL SCIENCES DIVISION
+PLDCA 0 0 PSD        YSFC    37.35  -120.20    128   60 PLANADA (P305) CA              NOAA ESRL PHYSICAL SCIENCES DIVISION
+PNSCA 0 0 PSD        YSFC    34.91  -120.65    285   60 POINT_SAL (P513) CA            NOAA ESRL PHYSICAL SCIENCES DIVISION
+PRVCA 0 0 PSD        YSFC    36.03  -119.06    133   60 PORTERVILLE (P056) CA          NOAA ESRL PHYSICAL SCIENCES DIVISION
+PTCCA 1 0 PSD        NSFC    36.30  -121.89     10   15 POINT SUR CA (3GHZ)            NOAA ESRL PHYSICAL SCIENCES DIVISION
+PVEOR 1 1 PSD        YSFC    44.29  -120.90    959   60 PRINEVILLE OR                  NOAA ESRL PHYSICAL SCIENCES DIVISION
+RDHWA 0 0 PSD        YSFC    48.67  -118.73   1163   60 RADIO HILL (P021) WA           NOAA ESRL PHYSICAL SCIENCES DIVISION
+RFSOR 0 0 PSD        YSFC    45.69  -120.73    451   60 RUFUS OR                       NOAA ESRL PHYSICAL SCIENCES DIVISION
+RGCTX 2 0 PSD        NSFC    26.57   -98.82    103   60 RIO GRAND CITY, TX (TARS 449)  NOAA ESRL PHYSICAL SCIENCES DIVISION
+RSLOR 0 0 PSD        YSFC    45.02  -123.86     53   60 ROSE LODGE (P395) OR           NOAA ESRL PHYSICAL SCIENCES DIVISION
+RTPTX 1 0 PSD        YSFC    29.96   -96.75    137   60 ROUND TOP,TX                   NOAA ESRL PHYSICAL SCIENCES DIVISION
+RVDWA 1 0 PSD        YSFC    47.31  -121.85    301   15 RAVENSDALE WA                  NOAA ESRL PHYSICAL SCIENCES DIVISION
+SBOCA 0 0 PSD        YSFC    34.20  -117.34    602   60 SAN BERNARDINO CA              NOAA ESRL PHYSICAL SCIENCES DIVISION
+SERCA 0 0 PSD        YSFC    37.09  -119.75    361   60 SJEXPRANGE (P725) CA           NOAA ESRL PHYSICAL SCIENCES DIVISION
+SFRWA 0 0 PSD        YSFC    46.93  -123.92     24   60 STAFFORD CR (P398) WA          NOAA ESRL PHYSICAL SCIENCES DIVISION
+SKGCO 0 0 PSD        YSFC    39.99  -105.26   1672   60 BOULDER CO                     NOAA ESRL PHYSICAL SCIENCES DIVISION
+SLRCA 0 0 PSD        YSFC    37.06  -121.07     81   60 SAN LUIS RESERVOIR CA          NOAA ESRL PHYSICAL SCIENCES DIVISION
+SMSCA 0 0 PSD        YSFC    34.26  -119.10    121   60 SOMIS (P729) CA                NOAA ESRL PHYSICAL SCIENCES DIVISION
+SMTCA 0 0 PSD        YSFC    38.83  -120.69   1105   60 SLATE MOUNTAIN (P140) CA       NOAA ESRL PHYSICAL SCIENCES DIVISION
+SNSCA 1 1 PSD        YSFC    33.28  -119.52     17   60 SAN NICOLAS ISLAND, CA         NOAA ESRL PHYSICAL SCIENCES DIVISION
+SPDCA 1 1 PSD        YSFC    39.13  -120.80   1066   15 SUGAR PINE CA (3GHZ)           NOAA ESRL PHYSICAL SCIENCES DIVISION
+SPRAZ 0 0 PSD        YSFC    36.15  -109.52   1729   60 SPIDER ROCK (P011) AZ          NOAA ESRL PHYSICAL SCIENCES DIVISION
+SPVCA 0 0 PSD        YSFC    36.79  -118.80    450   60 SPRINGVILLE CA                 NOAA ESRL PHYSICAL SCIENCES DIVISION
+SSHOR 0 0 PSD        YSFC    44.30  -121.57    963   60 SISTERS HSL (P387) OR          NOAA ESRL PHYSICAL SCIENCES DIVISION
+STDCA 1 1 PSD        YSFC    40.72  -122.43    183   15 SHASTA DAM, CA                 NOAA ESRL PHYSICAL SCIENCES DIVISION
+STNCA 0 0 PSD        YSFC    38.50  -122.70    157   60 SANTA ROSA - NORTHEAST CA      NOAA ESRL PHYSICAL SCIENCES DIVISION
+SWYWA 1 1 PSD        YSFC    47.08  -122.36    129   60 SPANAWAY                       NOAA ESRL PHYSICAL SCIENCES DIVISION
+TDEOR 1 1 PSD        YSFC    45.55  -122.39     12   60 TROUTDALE OR                   NOAA ESRL PHYSICAL SCIENCES DIVISION
+UKECA 0 0 PSD        YSFC    39.15  -123.19    181   60 UKIAH - EAST CA                NOAA ESRL PHYSICAL SCIENCES DIVISION
+VDJCA 0 0 PSD        YSFC    34.19  -114.60    268   60 VIDAL JUNCTION (P623) CA       NOAA ESRL PHYSICAL SCIENCES DIVISION
+VISCA 1 1 PSD        NSFC    36.31  -119.39     81   60 VISALIA CA                     NOAA ESRL PHYSICAL SCIENCES DIVISION
+VNDCA 0 0 PSD        YSFC    34.56  -120.62    -11   60 VNDP_SCGN (VNDP) CA            NOAA ESRL PHYSICAL SCIENCES DIVISION
+WCAOR 0 0 PSD        YSFC    45.59  -120.67    436   60 WASCO AIRPORT (P445) OR        NOAA ESRL PHYSICAL SCIENCES DIVISION
+WCCCA 0 0 PSD        YSFC    37.80  -120.64    113   60 WILD CREEK (P306) CA           NOAA ESRL PHYSICAL SCIENCES DIVISION
+WCOOR 1 1 PSD        YSFC    45.59  -120.67    462   60 WASCO OR                       NOAA ESRL PHYSICAL SCIENCES DIVISION
+WDLCA 0 0 PSD        YSFC    40.73  -122.32    275   60 WONDERLAND (P349) CA           NOAA ESRL PHYSICAL SCIENCES DIVISION
+WNECA 0 0 PSD        YSFC    38.57  -122.78     91   60 WINDSOR - EAST CA              NOAA ESRL PHYSICAL SCIENCES DIVISION
+WPCWA 1 1 PSD        YSFC    46.91  -124.11      5   15 WESTPORT (3GHZ)                NOAA ESRL PHYSICAL SCIENCES DIVISION
+WPTWA 1 0 PSD        YSFC    46.91  -124.11      5   60 WESTPORT WA                    NOAA ESRL PHYSICAL SCIENCES DIVISION
+WRPOR 0 0 PSD        YSFC    43.45  -119.00   1330   60 WRIGHTS POINT (P392) OR        NOAA ESRL PHYSICAL SCIENCES DIVISION
+WSEAZ 0 0 PSD        YSFC    31.68  -110.28   1286   60 WHETSTONE AZ                   NOAA ESRL PHYSICAL SCIENCES DIVISION
+WTNTX 1 0 PSD        YSFC    29.26   -96.15     52   60 WHARTON TX                     NOAA ESRL PHYSICAL SCIENCES DIVISION
+YKMWA 4 0 PSD        NSFC    46.57  -120.55    346   15 YAKIMA WA                      ARGONNE NATIONAL LABORATORY
+YMAAZ 2 0 PSD        NSFC    33.01  -114.25    311   60 YUMA, AZ (TARS 449MHZ)         NOAA ESRL PHYSICAL SCIENCES DIVISION
+<!--bottom-->
+</pre>
+<HR WIDTH="100%">
+<!--<br><H2><u>Legend</u></H2>
+<table>
+<tr><td><b>Column 1</b></td><td>Site ID</td><td></td></tr>
+<tr><td><b>Column 2</b></td><td>Station Type</td><td>See note 1</td></tr>
+<tr><td><b>Column 3</b></td><td>RASS temperatures 0 - no, 1 - yes</td><td></td></tr>
+<tr><td><b>Column 4</b></td><td>Provider Name</td><td></td></tr>
+<tr><td><b>Column 5</b></td><td>Surface Data Y/N</td><td>See note 2</td></tr>
+<tr><td><b>Column 6</b></td><td>Latitude</td><td></td></tr>
+<tr><td><b>Column 7</b></td><td>Longitude</td><td></td></tr>
+<tr><td><b>Column 8</b></td><td>Elev (m)</td><td></td></tr>
+<tr><td><b>Column 9</b></td><td>Reporting Interval (minutes)</td><td></td></tr>
+<tr><td><b>Column 10</b></td><td>Station Location</td><td></td></tr>
+<tr><td><b>Column 11</b></td><td>Provider Organization</td><td></td></tr>
+</table>
+<p>
+<h2><u>Notes</u></h2>
+<br><pre>
+1. 1 = Boundary layer profiler
+   2 = UHF tropospheric profiler
+   3 = VHF tropospheric profiler
+
+2. Stations labeled "YSFC" have surface observations that can be obtained
+   from MADIS, in the MAP (Multi-Agency Profiler) mesonet.
+
+Stations in the Southern and Eastern Hemispheres are automatically
+omitted from D2D menus.
+</pre>
+<br>-->
+<p align="right">Last updated 15 March 2017</p>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3463124-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</BODY>
+</HTML>
+      
+        <!-- force body content to include the floated "news" element -->
+	<div class="clear">
+        </div>
+    </div> <!-- end body content -->
+</div>   <!-- end pbody -->
+
+<!-- legal footer area -->
+        <div class="footer-legal">
+                                <div class="footer-legal-content">
+                        <div class="footer-legal-gov">
+                                <a href="https://www.usa.gov"><img src="images/usa_gov.png" alt="usa.gov" width="110" height="30" /></a>
+                        </div>
+
+                        <div class="footer-legal-column">
+                                <p>
+                                        <a href="https://www.commerce.gov">US Dept of Commerce</a><br />
+                                <a href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a><br />
+                                <a href="https://www.weather.gov" >National Weather Service</a><br />
+                                                5830 University Research Ct.<br />College Park, MD 20740<br />
+                                Web Master's Email: <a href='mailto:w-nws.webmaster@noaa.gov'>w-nws.webmaster@noaa.gov</a>                      </p>
+                        </div>
+
+                        <div class="footer-legal-column2">
+                                <a href="https://www.weather.gov/disclaimer">Disclaimer</a><br />
+                                <a href="https://www.cio.noaa.gov/services_programs/info_quality.html">Information Quality</a><br />
+                                <a href="https://www.weather.gov/help">Help</a><br />
+                                <a href="https://www.weather.gov/glossary">Glossary</a>
+                        </div>
+
+                        <div class="footer-legal-column3">
+                                <a href="https://www.weather.gov/privacy">Privacy Policy</a><br />
+                                <a href="https://www.noaa.gov/information-technology/foia">Freedom of Information Act (FOIA)</a><br />
+                                <a href="https://www.weather.gov/about">About Us</a><br />
+                                <a href="https://www.weather.gov/careers">Career Opportunities</a>
+                        </div>
+                </div>
+
+</div><!-- end of <div class="footer-legal">--> 
+
+</div><!-- End of content div -->
+</div><!-- End of center div -->
+
+</div> <!-- end container -->
+</body>
+</html>
+

@@ -1,0 +1,712 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html lang="en">
+<head>
+<title>NCEP Meteorological Assimilation Data Ingest System (MADIS)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">    
+<meta name="author" content="MADIS Support Team">
+<link href="css/header.css" rel="stylesheet" type="text/css" >
+<!--<script type="text/javascript" src="/js/ForecastSearch.js"></script>-->
+
+    <!-- site-wide style sheets -->
+    <link rel="stylesheet" type="text/css" href="css/ncepmadis.css" media="all">
+    
+<!--    <link rel="stylesheet" type="text/css" href="css/print.css" media="print">-->
+    
+    <!-- A style sheet for submenus of submenus -->
+<!--    <link rel="stylesheet" type="text/css" href="css/gsd-more-submenus.css" media="all">-->
+    
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/gsd/css/ie.css" media="all"><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/gsd/css/ie7.css" media="all"><![endif]-->
+
+<script type="text/javascript" src="css/ie.js"></script>
+    
+<script id="_fed_an_js_tag" type="text/javascript" src="/federated-analytics.js?agency=OAR&amp;sub-agency=ESRLGSD&amp;sp=find&amp;yt=true"></script>
+
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="TMPC9-DCHA2-45L6L-3A6SC-8WMVB",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"TMPC9-DCHA2-45L6L-3A6SC-8WMVB";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="qyqup4ax2fkkk2xf6ieq-f-44bc75766-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1320759","ak.ai":parseInt("795019",10),"ak.ol":"0","ak.cr":1,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"136b900e","ak.r":46469,"ak.a2":n,"ak.m":"dscg","ak.n":"essl","ak.cport":9305,"ak.gh":"23.201.193.133","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1793454601","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==7k03pf+pEP2QFQK0KiD/STUy1tAc4mK6BIgdXXFRLSWrR4OrSl6xbjqRKBo0yuj21QcBD+gwbgEQvrXH2zHDb90wiIYou7dLF/Ltvfe4S8PqurpvG0qlGNBXxMV5m8BILXgfwASN8HM28i6C6H3Bbzpt6jZfrzVGEPpfcM3aoiXREpc+iZ1QGkD87/OWGQJf+eDyGxUGWGG9Kv6G9qDpdv80y2cRfe4EtaJs8im1BN1yDDvCfDUoOBnz4rkDSfK6JuAkBYywKlaUizSNaCo1tPBz2z53MYYm/hEC8yJVSi/i8nDKSqK5Y6W53hPZPWL6iXImw7NQiY96CTfaIoojbqixR9BMyqApq2j6DEdZbWHRjDSMv1tbED5q4//ps5NWl+WZCmRoxeeZA4+XpDEaDHXU50q0sYrnVR/vswV7ASg=","ak.pv":"4","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+<!--<body onload="startList()">-->
+
+<div id="container">
+<div class="header">
+
+  <div class="header-content">
+    <a href="https://www.noaa.gov" class="header-noaa-icon"><img src="images/header-noaa.png" alt="NOAA"></a>
+    <a href="https://www.weather.gov" class="header-nws-icon"><img src="images/header-nws.png" alt="NOAA"></a>
+    <a href="https://www.commerce.gov" class="header-doc"><img src="images/header_doc.png" alt="United States Department of Commerce"></a>
+    <div class="header-center-text"><a class="header-center-text" href="https://www.nco.ncep.noaa.gov">NCEP CENTRAL OPERATIONS</a></div>
+    <div class="header-noaa-text"><a class="header-noaa-text" href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a></div>
+  </div>
+</div>
+<div class="header-shadow"><div class="header-shadow-content"></div></div>
+
+     <!-- end major_header -->
+
+  <!-- major navigation -->
+<!-- Top Menu Navigation -->
+<div class="topnav">
+  <ul id="topnav">
+
+    <!-- Home Link -->
+    <li>
+      <div class="section-link">
+        <a href="#">home</a>
+      </div>
+    </li>
+
+    <!-- News Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/news">news</a>
+      </div>
+      <div class="drop">
+        <ul>
+          <li><a href="https://www.weather.gov/news">NWS News</a></li>
+          <li><a href="https://www.nws.noaa.gov/com/weatherreadynation/calendar.html">Events</a></li>
+          <li><a href="https://www.weather.gov/socialmedia">Social Media</a></li>
+          <li><a href="https://www.nws.noaa.gov/om/brochures.shtml">Pubs/Brochures/Booklets</a></li>
+          <li><a href="https://www.noaa.gov/NOAA-Communications">NWS Media Contacts</a></li>
+        </ul>
+      </div>
+    </li>
+
+    <!-- Search Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/search">search</a>
+      </div>
+      <div class="drop">
+        <div class="site-search">
+          <form method="get" action="https://search.usa.gov/search" style="margin-bottom: 0; margin-top: 0;">
+            <input type="hidden" name="v:project" value="firstgov">
+            <label for="query">Search For</label>
+            <input type="text" name="query" id="query" size="12" >
+            <input type="submit" value="Go" >
+            <p>
+              <input type="radio" name="affiliate" checked="checked" value="nws.noaa.gov" id="nws" >
+              <label for="nws" class="search-scope">NWS</label>
+              <input type="radio" name="affiliate" value="noaa.gov" id="noaa" >
+              <label for="noaa" class="search-scope">All NOAA</label>
+            </p>
+          </form>
+        </div>
+      </div>
+    </li>
+
+    <!-- Forecast Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/search">forecast</a>
+      </div>
+      <div class="drop">
+        <div id="forecast-lookup" class="site-search">
+          <form name="getForecast" id="getForecast" action="https://forecast.weather.gov/zipcity.php" method="get">
+            <label for="inputstring">Local forecast by <br>"City, St" or ZIP code</label>
+            <input id="inputstring" name="inputstring" type="text" size="12" value="Enter location ..." onclick="this.value=''" >
+            <input name="btnSearch" id="btnSearch" type="submit" value="Go" >
+            <div id="txtError">
+            <div id="errorNoResults" style="display:none;">Sorry, the location you searched for was not found. Please try another search.</div>
+            <div id="errorMultipleResults" style="display:none">Multiple locations were found. Please select one of the following:</div>
+            <div id="errorChoices" style="display:none"></div>
+              <input id="btnCloseError" type="button" value="Close" style="display:none" >
+            </div>
+            <div id="txtHelp"><a style="text-decoration: underline;" href="javascript:void(window.open('https://weather.gov/ForecastSearchHelp.html','locsearchhelp','status=0,toolbar=0,location=0,menubar=0,directories=0,resizable=1,scrollbars=1,height=500,width=530').focus());">Location Help</a></div>
+          </form>
+                        </div><!-- <div id="forecast-lookup"> -->
+          </div><!-- <div class="drop"> -->
+    </li>
+    <!-- About Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/about">about</a>
+      </div>
+      <div class="drop">
+          <ul>
+            <li><a href="https://www.weather.gov/about">About NWS</a></li>
+            <li><a href="https://www.weather.gov/organization">Organization</a></li>
+            <li><a href="https://sites.google.com/a/noaa.gov/nws-best-practices/">For NWS Employees</a></li>
+            <li><a href="https://www.weather.gov/international/">International</a></li>
+            <li><a href="https://www.weather.gov/organization/ncep">National Centers</a></li>
+            <li><a href="https://www.nws.noaa.gov/tg/">Products and Services</a></li>
+            <li><a href="https://www.weather.gov/contact">Contact Us</a></li>
+            <li><a href="https://w1.weather.gov/glossary/">Glossary</a></li>
+          </ul>
+        </div>
+    </li>
+
+  </ul><!-- End of top nav ul -->
+</div><!-- End of topnav div -->
+
+</div> <!-- end banner -->
+
+<div id="pbody">
+    <!-- minor navigation -->
+            <div style="width:160px" id="minor_nav">
+
+<!--<br>-->
+<ul style="word-wrap:break-word" id="vertnav">
+<br>
+   <li><a href="index.shtml">MADIS Home</a></li>
+</ul>
+<dl>
+ <dt>News</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <li><a href="madis_recent.shtml">What's Here - v4.0!</a></li>
+<!-- <li><a href="madis_comingsoon.shtml">What's Coming?</a></li>
+-->
+</ul>
+<dl>
+<dt>Data Information</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">  
+ <li><a href="madis_datasets.shtml">Overview</a></li>
+ <li>Descriptions&nbsp;&nbsp;>
+    <ul>
+       <li><a href="madis_sfc.shtml"><font color="FFFF66">Meteorological Surface</font></a></li>
+       <li class="indented_vertnav"><a href="madis_mesonet.shtml">Integrated Mesonet</a></li>
+       <li class="indented_vertnav"><a href="madis_cwop.shtml">Citizen Weather Observer Program (CWOP)</a></li>
+       <li class="indented_vertnav"><a href="madis_rwis_clarus.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+       <li class="indented_vertnav"><a href="national_mesonet.shtml">National Mesonet</a></li>
+       <li class="indented_vertnav"><a href="madis_metar.shtml">METAR</a></li>
+       <!--<li class="indented_vertnav"><a href="madis_OMO.shtml">1-minute ASOS</a></li>
+       --><li class="indented_vertnav"><a href="madis_maritime.shtml">Maritime</a></li>
+	<li class="indented_vertnav"><a href="madis_wxtelematics.shtml">Weather Telematics</a></li>
+       <li class="indented_vertnav"><a href="madis_nepp.shtml">New England Pilot Project (NEPP)</a></li>
+       <li class="indented_vertnav"><a href="madis_crn.shtml">Climate Reference Network (CRN)</a></li>
+       <li class="indented_vertnav"><a href="madis_ushcn.shtml">U.S. Climatology Net-Modernization (USHCN-M)</a></li>
+       <li><a href="madis_hydro.shtml"><font color="FFFF66">Hydrologic Surface</font></a></li>
+       <li><a href="madis_raob.shtml"><font color="FFFF66">Radiosonde</font></a></li>
+       <li><a href="madis_npn.shtml"><font color="FFFF66">NOAA Profiler Network</font></a></li>
+       <li><a href="madis_gpsmet.shtml"><font color="FFFF66">GPS-Met</font></a></li>
+       <li><a href="madis_acars.shtml"><font color="FFFF66">Aircraft Based </font></a></li>
+       <li><a href="madis_map.shtml"><font color="FFFF66">Multi-Agency Profiler (CAP)</font></a></li>
+       <li><a href="madis_rdmtr.shtml"><font color="FFFF66">Radiometer</font></a></li>
+       <li><a href="madis_satwnd.shtml"><font color="FFFF66">Satellite Wind</font></a></li>
+       <li><a href="madis_satsnd.shtml"><font color="FFFF66">Satellite Sounding</font></a></li>
+       <li><a href="madis_satrad.shtml"><font color="FFFF66">Satellite Radiance</font></a></li>
+       <li><a href="madis_snow.shtml"><font color="FFFF66">Snow</font></a></li>
+       <li><a href="madis_gapfillua.shtml"><font color="FFFF66">Gap-filling Upper Air</font></a></li>
+<!--       <li><a href="madis_wisdom.shtml"><font color="FFFF66">WISDOM Balloon Wind</font></a></li>-->
+       <li><a href="madis_RSAS.shtml"><font color="FFFF66">RSAS Sfc Analyses Grids</font></a></li>
+    </ul>
+ </li> 
+ <li>Variables&nbsp;&nbsp;>
+    <ul>
+       <li><font color="FFFF66">Meteorological Surface</font></li>
+       <li class="indented_vertnav"><a href="sfc_mesonet_variable_list.shtml">Mesonet/RWIS/National Mesonet</a></li>
+       <!--<li class="indented_vertnav"><a href="sfc_mesonet_variable_list.shtml">Citizen Weather Observer Program (CWOP)</a></li>
+       <li class="indented_vertnav"><a href="madis_rwis_variable_list.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+      --> <li class="indented_vertnav"><a href="sfc_urbanet_variable_list.shtml">National Mesonet Extended</a></li>
+       <li class="indented_vertnav"><a href="sfc_metar_variable_list.shtml">METAR (standard)</a></li>
+       <!--<li class="indented_vertnav"><a href="sfc_OMO_variable_list.shtml">1-minute ASOS</a></li>
+       --><li class="indented_vertnav"><a href="sfc_sao_variable_list.shtml">SAO</a></li>
+       <li class="indented_vertnav"><a href="sfc_maritime_variable_list.shtml">Maritime</a></li>
+	<li class="indented_vertnav"><a href="sfc_mobile_variable_list.shtml">Weather Telematics</a></li>
+       <li class="indented_vertnav"><a href="sfc_crn_variable_list.shtml">Climate Reference Network</a></li>
+       <li class="indented_vertnav"><a href="sfc_hcn_variable_list.shtml">Historical Climatology Network</a></li>
+       <li class="indented_vertnav"><a href="sfc_nepp_variable_list.shtml">New England Pilot Project</a></li>
+       <li><a href="hydro_variable_list.shtml"><font color="FFFF66">Hydrologic Surface</font></a></li>
+       <li><a href="raob_variable_list.shtml"><font color="FFFF66">Radiosonde</font></a></li>
+       <li><a href="npn_variable_list.shtml"><font color="FFFF66">NOAA Profiler Network</font></a></li>
+       <li><a href="gpsmet_variable_list.shtml"><font color="FFFF66">GPS-Met</font></a></li>
+       <li><a href="acars_variable_list.shtml"><font color="FFFF66">Aircraft Based</font></a></li>
+       <li><a href="acarsp_variable_list.shtml"><font color="FFFF66">Aircraft Based Profiles</font></a></li>
+       <li><a href="map_variable_list.shtml"><font color="FFFF66">Multi-Agency Profiler (CAP)</font></a></li>
+       <li><a href="rdmtr_variable_list.shtml"><font color="FFFF66">Radiometer</font></a></li>
+       <li><a href="satwnd_variable_list.shtml"><font color="FFFF66">Satellite Wind</font></a></li>
+       <li><a href="satsnd_variable_list.shtml"><font color="FFFF66">Satellite Sounding</font></a></li>
+       <li><a href="satrad_variable_list.shtml"><font color="FFFF66">Satellite Radiance</font></a></li>
+       <li><a href="snow_variable_list.shtml"><font color="FFFF66">Snow</font></a></li>
+       <li><a href="gapfillua_variable_list.shtml"><font color="FFFF66">Gap-filling Upper Air</font></a></li>
+<!--       <li><a href="wisdom_variable_list.shtml"><font color="FFFF66">WISDOM Balloon Wind</font></a></li>-->
+       <li><a href="rsas_variable_list.shtml"><font color="FFFF66">RSAS Sfc Analyses Grids</font></a></li>
+     </ul>
+ </li>
+ <li>Variables Metadata&nbsp;&nbsp;>
+    <ul>
+       <li><font color="FFFF66">Integrated Mesonet</font>
+       <li class="indented_vertnav"><a href="mesonet_precip.shtml">Precipitation</a></li>
+       <li class="indented_vertnav"><a href="mesonet_solar_radiation.shtml">Solar Radiation</a></li>
+       <li class="indented_vertnav"><a href="mesonet_soil_temperature.shtml">Soil Temperature</a></li>
+       <li class="indented_vertnav"><a href="mesonet_soil_moisture.shtml">Soil Moisture</a></li>
+    </li>
+       <li><font color="FFFF66">National Mesonet</font>
+       <li class="indented_vertnav"><a href="nmesonet_precip.shtml">Precipitation</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_solar_radiation.shtml">Solar Radiation</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_soil_temperature.shtml">Soil Temperature</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_soil_moisture.shtml">Soil Moisture</a></li>
+    </li>
+       <li><font color="FFFF66">OMO One Minute ASOS (HFMETAR)</font>
+       <li class="indented_vertnav"><a href="omo_precip.shtml">Precipitation</a></li>
+    </li>
+   </ul>
+<li>Quality Control&nbsp;&nbsp;>
+    <ul>
+   <li><a href="madis_qc.shtml">Overview</font></a></li>
+       <li><a href="madis_sfc_qc.shtml">Meteorological Surface</a></li>
+       <li><a href="madis_rwis_qc.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+       <li><a href="madis_hydro_qc.shtml">Hydrologic Surface</a></li>
+       <li><a href="madis_raob_qc.shtml">Radiosonde</a></li>
+       <li><a href="madis_npn_qc.shtml">NOAA Profiler Network</a></li>
+       <li><a href="madis_sfc_qc.shtml">Weather Telematics</a></li>
+       <li><a href="madis_acars_qc.shtml">Aircraft Based</a></li>
+       <li><a href="madis_acarsp_qc.shtml">Aircraft Based Profiles</a></li>
+       <li><a href="madis_map_qc.shtml">Multi-Agency Profiler (CAP)</a></li>
+       <li><a href="madis_rdmtr_qc.shtml">Radiometer</a></li>
+       <li><a href="madis_satwnd_qc.shtml">Satellite Wind</a></li>
+       <li><a href="madis_satsnd_qc.shtml">Satellite Sounding</a></li>
+       <li><a href="madis_snow_qc.shtml">Snow</a></li>
+       <li><a href="madis_gapfillua_qc.shtml">Gap-filling Upper Air</a></li>
+       <li><a href="madis_RSAS_qc.shtml">RSAS Surface Analysis</a>
+<!--	<li><a href="madis-data/qcms_messages.html">QC Summary Messages</a>
+    -->
+</ul>
+ </li>
+ <li>Restrictions&nbsp;&nbsp;>
+    <ul>
+       <li><a href="madis_restrictions.shtml">Overview</a></li>
+       <li><a href="mesonet_providers.shtml">Meteorological Surface</a></li>
+       <li><a href="hydro_providers.shtml">Hydrologic Surface</a></li>
+       <li><a href="acars_restrictions.shtml">Aircraft Based</a></li>
+    </ul>
+ </li>
+ <li><a href="MADISdataissues.shtml">Known Data Issues</a></li>
+</ul>
+<dl>
+<dt>User Access</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <!--<li><a href="user_resources.shtml">Overview</a></li>
+--> 
+<li><a href="data_application.shtml">Data Application Form</a></li>
+<li><!--<a href="https://madis-hweb.ncep.noaa.gov:8005/htdocs/index.shtml">--><a href="https://madis-data.ncep.noaa.gov/index.shtml">MADIS Distribution Services</a></li>
+<li><!--<a href="https://madis-hweb.ncep.noaa.gov:8005/htdocs/wmo_gdc.shtml">--><a href="https://madis-data.ncep.noaa.gov/wmo_gdc.shtml">GDC-ABO</a></li>
+<li><a href="https://madis-idm.ncep.noaa.gov/reset">Password Reset</a></li>
+</ul>
+<dl>
+<dt>Provider Information</dt>
+<ul style="word-wrap:break-word" id="vertnav">
+ <!--<li><a href="provider_resources.shtml">Overview</a></li>
+ <li><a href="network_info.shtml">Surface Provider List</a></li>
+--> 
+<li><a href="provider_resources.shtml">Overview</a></li>
+ <li><a href="mesonet_providers.shtml">Meteorological Surface</a></li>
+ <!--<li><a href="nmesonet_providers.shtml">National Mesonet/UrbaNet</a></li>-->
+ <li><a href="hydro_providers.shtml">Hydrological Surface</a></li>
+ <li><a href="map_providers.shtml">Multi-Agency Profiler (CAP)</a></li>
+ <!--<li><a href="rdmtr_providers.shtml">Radiometer</a></li>
+ -->
+<li><a href="snow_providers.shtml">Snow</a></li>
+<li><a href="madistosynoptic.shtml">Transitions to SYNOPTIC</a></li>
+ <!--<li>Quality Control&nbsp;&nbsp;>
+   <ul>
+ <li><a href="madis_smry_descrip.shtml">Summary</a></li>
+-->
+</ul>
+</dl>
+
+<dt>Support</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <li><a href="support_overview.shtml">Overview</a></li>
+ <li><a href="madis_monitoring.shtml">Data Outages</a></li>
+<!--
+ <li>FAQ&nbsp;&nbsp;>
+ <ul>
+     <li><a href="faq_accounts.shtml">Accounts</a></li>
+     <li><a href="faq_api.shtml">API</a></li>
+     <li><a href="faq_localization.shtml">AWIPS Localization</a></li>
+     <li><a href="faq_cwop.shtml">CWOP</a></li>
+     <li><a href="faq_datadisplay.shtml">Data Display</a></li>
+     <li><a href="faq_historicaldata.shtml">Historical Data</a></li>
+     <li><a href="faq_lastupdatetime.shtml">Last Update Time</a></li>
+     <li><a href="faq_netcdf.shtml">netCDF</a></li>
+     <li><a href="faq_providerdata.shtml">Provider Data</a></li>
+     <li><a href="faq_wfo.shtml">WFO</a></li>
+ </ul></li>
+-->
+ <li><a href="data_application.shtml#disclaimer">Disclaimer</a></li>
+ <li><a href="mailto:madis-support@noaa.gov">Contact Us</a></li>
+</ul>
+<dl>
+<dt>Related Links</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+<li><a href="https://gdc-abo.wmo.int/">WMO Global Data Center</a></li>
+<li><a href="https://madis-data.ncep.noaa.gov/index.shtml">MADIS Distribution Services</a></li>
+<li><a href="https://hads.ncep.noaa.gov/">HADS</a></li>
+<li><a href="https://amdar.ncep.noaa.gov/index.shtml">AMDAR</a></li>
+<li>&nbsp;</li>
+<li><a href="https://ruc.noaa.gov/amdar/">AMDAR Research</a></li>
+</li>
+<li>&nbsp;</li>
+</ul>
+</div>
+
+
+    <div id="content">
+    <a class="textvers" name="content_link">&nbsp;</a>
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <meta name="description" content="MADIS (Meteorological Assimilation Data Ingest System)">
+   <meta name="keywords" content="METEOROLOGICAL DATA, meteorological data, WEATHER DATA, weather data, METEOROLOGICAL DATA ACCESS, meteorological data access, METEOROLOGICAL DATA ASSIMILATION, meteorological data assimilation"><title>NCEP Meteorological Assimilation Data Ingest System (MADIS)</title>
+
+<style type="text/css">
+<!--
+
+#banner {
+background-image:url(./images/banner_bkgd.jpg);
+background-repeat:repeat-x;
+}
+
+.requiredLinks {
+background:#000066;
+font-family:Arial, Helvetica, sans-serif;
+font-size: .9em;
+font-weight:bold;
+color:#FFFFFF;
+padding-top: .5em;
+height:1.5em;
+text-align:center;
+}
+
+.requiredLinks a{
+color:#FFFFFF;
+text-decoration:none;
+}
+-->
+</style>
+<script id="_fed_an_js_tag" type="text/javascript" src="/federated-analytics.js?agency=OAR&amp;sub-agency=ESRLGSD&amp;sp=find&amp;yt=true"></script>
+
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="TMPC9-DCHA2-45L6L-3A6SC-8WMVB",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"TMPC9-DCHA2-45L6L-3A6SC-8WMVB";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="qyqup4ax2fkkk2xf6ieq-f-44bc75766-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1320759","ak.ai":parseInt("795019",10),"ak.ol":"0","ak.cr":1,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"136b900e","ak.r":46469,"ak.a2":n,"ak.m":"dscg","ak.n":"essl","ak.cport":9305,"ak.gh":"23.201.193.133","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1793454601","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==7k03pf+pEP2QFQK0KiD/STUy1tAc4mK6BIgdXXFRLSWrR4OrSl6xbjqRKBo0yuj21QcBD+gwbgEQvrXH2zHDb90wiIYou7dLF/Ltvfe4S8PqurpvG0qlGNBXxMV5m8BILXgfwASN8HM28i6C6H3Bbzpt6jZfrzVGEPpfcM3aoiXREpc+iZ1QGkD87/OWGQJf+eDyGxUGWGG9Kv6G9qDpdv80y2cRfe4EtaJs8im1BN1yDDvCfDUoOBnz4rkDSfK6JuAkBYywKlaUizSNaCo1tPBz2z53MYYm/hEC8yJVSi/i8nDKSqK5Y6W53hPZPWL6iXImw7NQiY96CTfaIoojbqixR9BMyqApq2j6DEdZbWHRjDSMv1tbED5q4//ps5NWl+WZCmRoxeeZA4+XpDEaDHXU50q0sYrnVR/vswV7ASg=","ak.pv":"4","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body bgcolor="#ffffff" text="#333333">
+<br>
+<h1>What's Here - Version 4.0.12!</h1>
+<br>
+<h2>May 2025 - Version 4.0.12</h2>
+<br>
+<ul>
+<li>Increase mesonet max records 30% to 500,000</li>
+<li>Change HADS database key from GOES ID to NWSLI</li>
+<li>Add sfcdump latest arriving time filter for the last 30 to 60 minutes</li>
+<li>In the MADIS API the OMO hourly precipitation was changed from hourly accumulation (PCP1H) to ASOS hourly accumulation (PCP1HA).  ASOS start of the hour is minute 40-60, depending on the site.</li>
+<li>Add timestamps to web pages</li>
+<li>Increase MadisAircraft/MadisAircraftPublic to display the last 30 days</li>
+<li>Remove the use of the local disk use by the MadisAircraft/MadisAircraftPublic wildfly display</li>
+<li>Fixed acarsProfile reports to include all aircraft profiles</li>
+<li>SNOTEL monthly precip data fix</li>
+<li>Add null data and java errors checks to SNOTEL hourly, daily, and monthly data</li>
+<li>New API version 4.7</li>
+<li>MADIS using large memory model</li>
+<li>SNOTEL ingest only runs on OPS</li>
+<li>Change web map display to use USGS National map.</li>
+<li>Add null data and java errors checks to SNOTEL hourly, daily, and monthly data</li>
+<li>Increase Vaisala pulls timeout to 30 seconds</li>
+<br>
+<li>NWS Access to Aircraft Weather Data</li>
+<li>NWS meteorologists at WFOs, CWSUs, AWC, AAWU, RFCs, and National Centers have access to aircraft weather data from over 3,000 commercial aircraft flying in North America.</li>
+<li>Access for the past 25+ years was from a page hosted by GSL at https://ruc.noaa.gov/amdar/java</li>
+<li>That web site was deactivated October 1st and will no longer be available.</li>
+<li>The web site to access these data is now hosted at IDP, and requires a login and password issued by</li>
+<li>MADIS. To request one, go to https://madis.ncep.noaa.gov/data_application.shtml</li>
+<li>While waiting for a login and password, you can access data from 125 aircraft equipped with water vapor sensors at https://madis-data.ncep.noaa.gov/MadisAircraftPublic/ This web site is in the public domain, so can be shared with the private sector and public. (Remember that this web site does not have wind and temperature data from the other 3,000 aircraft available on the password restricted site).</li>
+<li>If there are problems with the MADIS web page during regular daytime hours, please report it to NCEP.List.MADIS_Support@noaa.gov and madis-support@noaa.gov  After hours support is from sdm@noaa.gov</li>
+<li>Questions about web page functionality can be sent to madis-support@noaa.gov</li>
+<br>
+<br>
+<h1>Past Versions</h1>
+<br>
+<h2>July 2024 - Version 4.0.11</h2>
+<ul>
+<li>MADIS now uses VLAB as its software repository</li>
+<li>Add second maritime BUFR tank data</li>
+<li>Remove WXXM dups and no-data records</li>
+<li>Remove any legacy MADIS svn ops code from the build</li>
+<li>Capture all go-live changes during the transition from 2.0 to 4.0</li>
+<li>Add one-minute AFWS precip data to hydro netCDF files</li>
+<li>Change http .gov urls to https</li>
+<li>Add sub-minute time field to SNOTEL time pulls to fix temperature data latency</li>
+<li>Increase MADIS API’s max hydro records (MXHYDRO_P) to 80000</li>
+<li>Change hydro netcdf file maxStaticIds to 40000</li>
+<li>Change mesonet netcdf file maxStaticIds to 75000</li>
+<li>Fix height and period of wind waves</li>
+<li>Fix HADS bugs</li>
+<br>
+<br>
+<h2>March 2023 - Version 4.0.8</h2>
+<ul>
+<li>MADIS now runs on RHEl-8, PostgreSQL 12, and Java Development Kit 11</li>
+<li>CWOP accounts managed by MADIS.</li>
+<li>CWOP data being ingested directly from APRSWXNET and CWOP servers. No longer relying on findu.com to provide this service.</li>
+<li>CAP profiler ingest and processing moved to MADIS operational systems.</li>
+<li>The ingestion of HF-ASOS and EDR data moved to MADIS operational systems.</li>
+<li>Aircraft Based Observations now include data collected from AFIRS (Automated Flight Information Reporting System) and Mode S EHS (Mode S Enhanced Surveillance) systems.</li>
+<li>Initial version of HADS that handles Iridium and cell modem pathways.</li>
+<li>Enhancements to the MADIS API V4.5.</li>
+<li>SNOTEL improvements:</li>
+	<ul><li>BUFR message output.</li>
+	    <li>SNOLITE data added.</li>
+	    <li>SNOTEL daily min/max changed to hour 2400 of current day instead of hour 0000 of the next day.</li>
+	</ul>
+<li>The ability for all MADIS surface station provider changes and additions to be handled by the NCO Tier-2 support team and Synoptic, which means provider additions and changes can be made weekly instead of waiting on a MADIS version release.</li>
+<li>Aircraft Based Observations (ABO) display enhanced to provide mouse over data display capabilities.</li>
+<li>Additional HADS, AFWS, SNOTEL, MADIS mesonet providers and stations.</li>
+<li>MADIS mesonet, snow, and hydro pages updated automatically to reflect weekly additions and changes.</li>
+<li>MADIS real-time changes captured weekly and provided as metadata to NCEI.</li>
+<li>Enhancements to madis-data.ncep.noaa.gov website.</li>
+<li>DNS addition that points to the MADIS amdar web site <a href="https://amdar.ncep.noaa.gov"> amdar.noaa.gov</a> instead of the OAR/GSL web site. Enhancements to amdar.ncep.noaa.gov.</li>
+<li>DNS addition that points to the MADIS CWOP home page <a href="https://madis.ncep.noaa.gov/madis_cwop.shtml">cwop.noaa.gov</a>. Enhancements to madis.ncep.noaa.gov/madis_cwop.shtml.</li>
+</ul>
+<br>
+<h2>2020 - Version 3.0</h2>
+<ul>
+<li>AFWS Provider updates</li>
+<li>CWOP updates</li>
+<li>Start of provider validation on MADIS data ingest standard</li>
+</ul>
+<br>
+<h2>2018 - Version 2.2</h2>
+<ul>
+<li>MADIS now handles all Clarus QC plus <a href="madis_rwis_qc_notes.shtml">QC descriptions</a> have been added for tiers 1-3</li>
+<!--<li>Clarus Functionality Transitioned to MADIS <i>(some observation types/variables restricted)</i></li>
+<ul>
+<li>not there - The ability for MADIS to handle all Clarus road and atmospheric observations</li>
+<li>Enhancements to MADIS subscription and distribution services to handle Clarus QC - greg will give link</li>
+<li>The addition of all RWIS providers to MADIS - as providers give MADIS authorization to proceed and sign NWS data sharing agreements</li>
+	<li>new providers</li>
+<li>The ability for MADIS to handle all Clarus QC plus QC descriptions added for tiers 1-3</li>
+</ul>
+<li>A new look at a data discovery concept using SHOUT technologies</li>
+-->
+<li>The World Meteorological Organizations' (WMOs) Global Data Center announced in May 2017 that MADIS will be providing a common data interface for all WMOs.</li>
+<li>Hydrometeorological Automated Data System (HADS) new sites additions/changes.</li>
+<li>Automated Flood Warning System (AFWS) new providers added:</li>
+	<ul>
+	<li>Fort Collins, CO (FORTC)</li>
+	<li>Calcasieu, LA (CALCA)</li>
+	<li>City of Salem, OR (SALEM)</li>
+	<li>City of Richmond, VA (RICHM)</li>
+	<li>Tulsa (TULSA)</li>
+	<li>Snohomish, WA (SNOHO)</li>
+	<li>Hays County, TX (HAYSC)</li>
+	<li>Harris County Flood Control District, TX (HCFCD)</li>
+        <li>Washington County, PA (WASPA)</li>
+        <li>Grand Prairie, TX (GPTEX)</li>
+        <li>Fort Worth, TX (CFWTX)</li>
+        <li>Kansas City Metro Alert Network (KCMET)</li>
+        <li>City of New Orleans (CNOLA)</li>
+        <li>Lavaca Navidad River Authority (LNRAT)</li>
+        <li>Comal County, TX (COMAL)</li>
+        <li>City of San Antonio, TX (CSATX)</li>
+        <li>Southwest Florida Water Management District, FL (SWFWM)</li>
+        <li>City of Belton, TX (BELTX)</li>
+        <li>Trempealeau County, WI (TCOWI)</li>
+        <li>Pine Island, Minnesota (PINEI)</li>
+        <li>Bureau of Indian Affairs (Lakewood, CO central office) (USBIA)</li>
+	</ul>
+<li>National Mesonet and IOOS new providers added:</li>
+<ul>
+<li>Washington State University Ag Met (WSAgMet)</li>
+<li>Colorado State University Ag Weather (CoAgMet)</li>
+<li>Kentucky Mesonet (KYMN2)</li>
+<li>University of Delaware (DEOS2)</li>
+<li>South Dakota Mesonet (SDSMeso)</li>
+<li>Iowa Environmental Mesonet (IEM)</li>
+<li>University of Alabama Huntsville (CRN2-Al)</li>
+<li>Coastal Carolina (CC-ECONet)</li>
+<li>North Dakota Agricultural Weather Network (NDAWN)</li>
+<li>Pennylvania State University</li>
+	<ul>
+	<li>Allegheny Co Air Quality (PSU-ACAQ)</li>
+	<li>COPAMS (PSU-COPAMS)</li>
+	<li>Pennsylvania Turnpike (PSU-PATC)</li>	
+	</ul>
+</ul>
+<li>Road Weather Information Systems (RWIS) new providers added:</li>
+<ul>
+<li>Illinois Department of Transportation (ILDOT) (McHenry County)</li> 
+<li>Arizona Department of Transportation (AZDOT)</li>
+<li>Delaware Department of Transportation (DEDOT2)</li>
+<li>California Department of Transportation (CADOT)</li>
+<!--<li>Connecticut Department of Transportation (CTDOT)</li>
+--><li>Montana Department of Transportation (MTDOT)</li>
+<li>New York Department of Transportation (NYDOT)</li>
+<li>Oregon Department of Transportation (ORDOT)</li>
+<li>South Carolina Department of Transportation (SCDOT)</li>
+<li>South Dakota Department of Transportation (SDDOT)</li>
+<li>Pennsylvania Department of Transportation (PADOT)</li>
+</ul>
+<!--<li>1-hr Satellite winds from NCO BUFR tanks</li>
+-->
+<li>Applications Program Interface (API) updates for RWIS, Mobile and SHOUT</li>
+<li>Enhanced metadata for Clarus and National Mesonet</li>
+<li>SNOTEL updates/changes</li>
+<li>CWOP new sites added/updated</li>
+<li>Provider and sub-provider station counts updated</li>
+<li>Updates to MADIS-Data website</li>
+<li>Initial release of AMDAR website</li>
+<!--<li>1 minute ASOS observations</li>
+--></ul>
+<br>
+<h2>May 2017 - Version 2.1.5.10</h2>
+<ul>
+<li>Hydrometeorological Automated Data System (HADS) new sites additions/changes</li>
+<li>SNOTEL updates/changes</li>
+<li>Added Data Provider - New York State Mesonet</li>
+<li>Added Data Provider - Nebraska Mesonet</li>
+<li>New Aircraft public data display available <a href="/MadisAircraftPublic/">here</a></li>
+<ul><li>Water Vapor sensor data available</li></ul>
+<li>CWOP new sites added/updated</li>
+</ul>
+</ul>
+<h2>December 2016 - Version 2.1.5</h2>
+<ul>
+<li>MADIS ESRI Graphical display of ABO data enhanced to include Aircraft sounding displays <i>(restricted prior to 48 hours elapsed from observation hour)</i></li>
+<li>API upgrade to include WISDOM, Clarus, and mobile data sets</li>
+<li>Hydrometeorological Automated Data System / Automated Flood Warning System (HADS/AFWS)</li>
+<li>SNOw TELemetry (SNOTEL)</li>
+<li>Eddy Disemination Rate (EDR)</li>
+<li>Surface mobile dataset <i>(NOAA only)</i></li>
+<li>Florida Department of Environmental Protection (FLDEP)</li>
+<li>Sensing Hazards with Operational Unmanned Technology (SHOUT) AVAPS data</li>
+<li>Georgia Department of Transportation (GADOT) is now public data access</li>
+<li>CWOP new sites added/updated</li> 
+</ul>
+
+<h2>August 2016 - Version 2.1.4</h2>
+<ul>
+<li>Data providers Restored, Added or Enhanced</li>
+  <ul>
+  <li>MOComAgNet - <a href="http://agebb.missouri.edu/weather/stations/index.htm">University of Missouri</a></li>
+  <li>indot - <a href="http://www.in.gov/dot">Indiana Department of Transportation</a> (<i>road variables by sponsored access only)</i></li>
+  <li>ksdot - <a href="http://www.ksdot.org">Kansas Department of
+Transportation</a> <i>(sponsored access only)</i></li>
+  <li>madot - <a href="http://www.massdot.state.ma.us/">Massachusetts Department of Transportation</a> <i>(sponsored access only)</i></li>
+  <li>medot - <a href="http://www.maine.gov/mdot/">Maine Department of
+Transportation</a> <i>(road variables by sponsored access only)</i></li>
+  <li>midot - <a href="http://michigan.gov/mdot/">Michigan Department of Transportation</a></li>
+  <li>mndot - <a href="http://rwis.dot.state.mn.us/">Minnesota Department of
+Transportation</a> <i>(road variables by sponsored access only)</i></li>
+  <li>modot - <a href="http://www.modot.org/">Missouri Department of Transportation</a></li>
+  <li>nddot - <a href="http://www.dot.nd.gov/">North Dakota Department of Transportation</a></li>
+  <li>nhdot - <a href="http://www.nh.gov/dot/index.htm">New Hampshire Department of Transportation</a> <i>(road variables by sponsored access only)</i></li>
+  <li>ohdot - <a href="http://www.dot.state.oh.us">Ohio Department of Transportation</a></li>
+  <li>widot - <a href="http://www.dot.state.wi.us/">Wisconsin Department of
+Transportation</a> <i>(road variables by sponsored access only)</i></li>
+<!--  <li>Snow Telemetry (<a href="http://www.wcc.nrcs.usda.gov/snow/">SNOTEL</a>)
+  <p>
+  An automated system of snowpack and related climate sensors operated by the Natural Resources Conservation Service (NRCS) of the United States Department of Agriculture in the Western United States.</p>--></li>
+  <li>WT-Meso - <a href="http://www.mesonet.ttu.edu/">West Texas Mesonet</a></li>
+  <li>MAP - <a href="madis_map.shtml">
+Multi-Agency Profiler (MAP) dataset</a></li>
+<li>1-minute ASOS (formerly known as High-Frequency METAR (HF-METAR))</li>
+<li>Non-Federal AWOS DIGIWX</a></li>
+<!--  <li>Weather Information Exchange Model (WXXM) aircraft</li>-->
+</ul>
+<li>Providers Reduced or Not Available</li>
+<ul>
+<li>ARLFRD - missing derived product PCP1H</li>
+<li>WYDOT - stations 45 and 47 missing <i>(road variables by sponsored access only)</i></li>
+<li>VTDOT - being provided by MesoWest (Q4 FY16 for direct feed)</li>
+</ul>
+<li>Additional Changes</li>
+<ul>
+<li>Added Automated Flood Warning System (AFWS) product</li>
+<li>Added ACARS Weather Information Exchange Model (WXXM) product</li>
+<li>Restored TAMDAR dataset <i>(highly restricted)</i></li>
+<li>WVSS-II added for Public aircraft data</li>
+<li>Added MADIS Aircraft display using ESRI basemaps</li>
+<li>Revised MADIS Metadata site using ESRI basemaps</li>
+<li>GPS-Met data moved from Public to NOAA-only dissemination</li>
+<li>Revised list of data providers and station count for each provider (sub-provider station counts will be revised in future updates)</li>
+</ul>
+</ul>
+<h2>November 2015 - Version 2.1.3</h2>
+<ul>
+<li>Removed grib1 dependencies</li>
+<li>Added a verification script for real-time processing and data-recovery</li>
+<li>Changed surface display to ESRI from google maps</li>
+<li>Changed acars upper pressure range to 1042 from 1026 per airline (A4A) request</li>
+<li>Reduced DECODE ncsyn calls</li>
+<li>Fix Aircraft array out of bounds bug</li>
+<li>Add real-time and data-recover build scripts</li>
+<li>Provider syncing: NEPP, AKDOT, NHDOT, APRSWXNET, fort_greeley, MOComAgNet, WYDOT, AJKNDBC, AKDOT, GADOT</li>
+<li>Fix DR decode cleanup so it keeps 36+ days of files</li>
+<li>Fix aircraft archive data </li>
+<li>Handle LDM no-harm no-foul pipe issues</li>
+<li>Fix sfcdump api issue with un-initicialized variables</li>
+</ul>
+
+<h2>January 2015 - MADIS Transition Completed</h2>
+MADIS has transitioned to operations at 
+ the NWS National Centers for Environmental Prediction <a href="http://www.ncep.noaa.gov/">(NCEP)</a> Central Operations <a href="http://www.nco.ncep.noaa.gov/">(NCO)</a>, 
+ with archive capabilities provided by the National Environmental Satellite, Data, and Information Service's <a href="http://www.nesdis.noaa.gov">(NESDIS)</a> 
+ National Climatic Data Center <a href="http://www.ncdc.noaa.gov/">(NCDC)</a>. NCO will provide operational and 
+ MADIS help desk support at madis-support@noaa.gov. The <a href="https://www.esrl.noaa.gov/gsd/ato/iwds/">MADIS development team</a> at NOAA's Office of Oceanic and Atmospheric Reasearch <a href="http://research.noaa.gov/">(OAR)</a>
+ Earth System Research Laboratory <a href="https://www.esrl.noaa.gov">(ESRL)</a> Global Systems Division <a href="https://esrl.noaa.gov/gsd/">(GSD)</a> will provide enhancements and software maintenance support.</p>
+
+<br>
+
+<hr><p align="right">
+Last updated Jun 17,2024 
+</p>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><!--<script src="Meteorological%20Assimilation%20Data%20Ingest%20System%20%28MADIS%29_files/ga.js" type="text/javascript"></script>-->
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3463124-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!--</body>-->
+      
+        <!-- force body content to include the floated "news" element -->
+	<div class="clear">
+        </div>
+    </div> <!-- end body content -->
+</div>   <!-- end pbody -->
+
+<!-- legal footer area -->
+        <div class="footer-legal">
+                                <div class="footer-legal-content">
+                        <div class="footer-legal-gov">
+                                <a href="https://www.usa.gov"><img src="images/usa_gov.png" alt="usa.gov" width="110" height="30" /></a>
+                        </div>
+
+                        <div class="footer-legal-column">
+                                <p>
+                                        <a href="https://www.commerce.gov">US Dept of Commerce</a><br />
+                                <a href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a><br />
+                                <a href="https://www.weather.gov" >National Weather Service</a><br />
+                                                5830 University Research Ct.<br />College Park, MD 20740<br />
+                                Web Master's Email: <a href='mailto:w-nws.webmaster@noaa.gov'>w-nws.webmaster@noaa.gov</a>                      </p>
+                        </div>
+
+                        <div class="footer-legal-column2">
+                                <a href="https://www.weather.gov/disclaimer">Disclaimer</a><br />
+                                <a href="https://www.cio.noaa.gov/services_programs/info_quality.html">Information Quality</a><br />
+                                <a href="https://www.weather.gov/help">Help</a><br />
+                                <a href="https://www.weather.gov/glossary">Glossary</a>
+                        </div>
+
+                        <div class="footer-legal-column3">
+                                <a href="https://www.weather.gov/privacy">Privacy Policy</a><br />
+                                <a href="https://www.noaa.gov/information-technology/foia">Freedom of Information Act (FOIA)</a><br />
+                                <a href="https://www.weather.gov/about">About Us</a><br />
+                                <a href="https://www.weather.gov/careers">Career Opportunities</a>
+                        </div>
+                </div>
+
+</div><!-- end of <div class="footer-legal">--> 
+
+</div><!-- End of content div -->
+</div><!-- End of center div -->
+
+</div> <!-- end container -->
+</body>
+</html>
+

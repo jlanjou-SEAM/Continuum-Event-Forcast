@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!-------------------------------------------------->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1Q1BML6E5"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-E1Q1BML6E5');
+        </script>
+        <!-------------------------------------------------->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+
+        <meta charset="utf-8">
+        <title>Climate Monitoring | National Centers for Environmental Information (NCEI)</title>
+        <meta name="description" content="Climate Monitoring at the National Centers for Environmental Information">
+        <meta name="keywords" content="climate monitoring, climate assessment, temperature, precipitation, drought monitoring, snow climatology, climate map, climate index, climate extremes, global anomalies, sea surface temperature, Palmer drought index">
+        <meta name="author" content="NCEI.Monitoring.Info@noaa.gov">
+        <!-- remove the 300ms tap delay for mobile optimization -->
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="shortcut icon" href="https://www.ncei.noaa.gov/themes/custom/ncei/favicon.ico" type="image/vnd.microsoft.icon">
+
+        <link rel="stylesheet" media="all"   href="/monitoring-content/lib/css/reset.css">
+        <link rel="stylesheet" media="all"   href="/cmb-lib/assets/jquery-ui-1.13.2/jquery-ui.min.css">
+        <link rel="stylesheet" media="all"   href="/cmb-lib/assets/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" media="all"   href="/cmb-lib/assets/fontawesome6/css/all.min.css">
+        <link rel="stylesheet" media="all"   href="/monitoring-content/lib/css/monitoring.css">
+        <link rel="stylesheet" media="print" href="/monitoring-content/lib/css/print.css">
+        
+        <link rel="stylesheet" href="/monitoring-content/climate-monitoring/css/climate-monitoring.css">
+
+        <script src="/cmb-lib/assets/jquery-3.7.1.min.js"></script>
+        <script src="/cmb-lib/assets/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+        <script src="/cmb-lib/assets/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/cmb-lib/js/xss-prevention.js"></script>
+        <script src="/cmb-lib/js/search-monitoring.js"></script>
+        <script src="/cmb-lib/js/img-overlay.js"></script>
+        <script src="/cmb-lib/js/alerts.js"></script>
+        <script src="/cmb-lib/js/skip-to-main.js"></script>
+        <script src="/cmb-lib/js/overflow-block.js"></script>
+        
+    </head>
+    <body>
+        <a class="skip-to-main" href="#main-content" tabindex="0">Skip to main content</a>
+        <header role="banner">
+            <div class="print" id="print-head"><img alt="NOAA Logo" src="/monitoring-content/lib/images/noaa-logo.png"> NOAA's National Centers for Environmental Information</div>
+            <span id="backToTop" title="Back to Top"><span></span></span>
+            <div class="ncei-header-footer-container">
+                <div class="ncei-header-footer">
+                    <div class="ncei-header-footer-inner">
+                        <div class="ncei-footer-third-width">
+                            <div class="ncei-header-logo">
+                                <a href="https://www.ncei.noaa.gov/"><img src="/monitoring-content/lib/images/ncei/logo.svg" title="Link to NCEI's Homepage" alt="Link to NCEI's Homepage"></a>
+                            </div>
+                        </div>
+                        <div class="ncei-footer-third-width"><div class="product-name"><h1>Climate Monitoring</h1></div></div><div id="search-monitoring-div" class="ncei-footer-third-width"><input id="search-monitoring" name="search-monitoring" autocomplete="on" placeholder="Search Monitoring Products"><span id="monitoring-search-icon"><span></span></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-container">
+                <div class="ncei-app-inner container">
+                    <div class="ncei-footer-two-thirds-width"><nav role="navigation" aria-label="Breadcrumbs"><ol class="app-breadcrumbs"><li class="app-breadcrumb-item"><a title="NCEI Home" href="/">Home</a></li><li class="app-breadcrumb-item"><a title="Climate Monitoring" href="/access/monitoring/products/">Climate Monitoring</a></li></ol></nav></div>
+                    <div class="ncei-footer-third-width" id="next-release"><a href="/access/monitoring/dyk/monthly-releases">October U.S. Release: Mon, 9 Nov 2026, 11:00 AM EST</a></div>
+                </div>
+            </div>
+            <div class="alerts"></div>
+        </header>
+        <main role="main" id="main-content" tabindex="-1">
+            <div id="page-content-container">
+                <div id="page-content" class="container">
+
+<div id="toggle-latest" class="absolute small pointer-cursor smallPad center">
+    <span>↑ Hide</span> Info
+</div>
+
+<div id="latest">
+    <p style="margin-right: 105px;">
+        NCEI maintains a suite of monitoring services that track key climate indicators using objective methods to
+        provide historical context for current environmental conditions. Climate Monitoring services supply detailed
+        information about temperature and precipitation, snow and ice, drought and wildfire, storms and wind, and
+        weather patterns.
+    </p>
+
+    <div class="marginBottom">
+        <h2>Latest Monitoring Information</h2>
+
+        <div id="events" class="hidden">
+            <h3>Recent Events</h3>
+
+            <div id="events-container" class="overflow-block">
+                <!-- 20250925-socal-flooding -->
+                <!----------------------------->
+                <a class="card content-card" data-bs-toggle="modal" data-bs-target="#socal-flooding-20250925">
+                    <div class="card-body card-title">
+                        Southern California Flooding
+                    </div>
+                    <div class="card-body card-description">
+                        Remnants of Tropical Cyclone Mario produced up to four inches of rain over southern California in just two days, triggering flash floods, mudslides, and one fatality.
+                    </div>
+                    <div class="card-body">
+                        <button class="btn btn-primary">
+                            More Info&hellip;
+                        </button>
+                    </div>
+                </a>
+
+                <div class="modal fade" id="socal-flooding-20250925" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <div class="modal-title">Southern California Flooding</div>
+                                <div class="italic center">Published: September 25, 2025</div>
+                            </div>
+                            <div class="modal-body text-left">
+                                <p>Remnants of Tropical Cyclone Mario brought three to four inches of rainfall over southern California between September 17 and 19. This amount of rain over a climatologically dry area is equivalent to receiving several months' worth of precipitation in under 48 Hours. One particular mesonet station, located in Forest Falls, recorded 1.77 inches of precipitation in just one hour&mdash;an extreme rainfall event that happens, on average, once every 25 years. This amount of rainfall in a short time period brought flash flooding and mudslides in numerous areas, including Riverside and San Bernardino Counties. One fatality was reported, and multiple vehicle rescues were performed by local emergency management. In total, over 30 flood reports were received by local National Weather Service offices.</p>
+
+                                <div class="flex-wrap">
+                                    <div style="min-width:450px">
+                                        <a href="/monitoring-content/sotc/national/2025/sep/mrms_20250919_total.png">
+                                            <img alt="2-Day (Preliminary) Total Precipitation Estimates Ending 2025-09-19 12UTC" width="100%" style="max-width:2035px;" src="/monitoring-content/sotc/national/2025/sep/mrms_20250919_total.png">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!----------------------------->
+                <!-- 20250925-socal-flooding -->
+
+                <!-- 20250922-northeast-drought -->
+                <!-------------------------------->
+                <a class="card content-card" data-bs-toggle="modal" data-bs-target="#northeast-drought-20250922">
+                    <div class="card-body card-title">
+                        Northeast Drought
+                    </div>
+                    <div class="card-body card-description">
+                        The extent of drought in the Northeast expanded rapidly, covering 36.25% of the region by
+                        September 9, compared to 0.20% just five weeks earlier.
+                    </div>
+                    <div class="card-body">
+                        <button class="btn btn-primary">
+                            More Info&hellip;
+                        </button>
+                    </div>
+                </a>
+
+                <div class="modal fade" id="northeast-drought-20250922" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <div class="modal-title">Drought Across the Northeast</div>
+                                <div class="italic center">Published: September 16, 2025</div>
+                                <div class="italic center">Updated: September 23, 2025</div>
+                            </div>
+                            <div class="modal-body text-left">
+                                <p>Over the past seven weeks, July 29 to September 16, the Northeast has plunged into a historically significant drought, with conditions deteriorating at a rapid rate. According to the U.S. Drought Monitor (USDM), a region that was almost entirely drought-free in early August now has over 40% of its area in moderate to extreme drought. This rapid decline has led to record-breaking milestones across New England. For the first time in the 25-plus-year history of the USDM, a portion of Vermont has been classified with extreme (D3) drought. At the same time, neighboring New Hampshire is experiencing its largest area of D3 drought ever recorded. This severe lack of rainfall has led to mounting impacts, including failing wells, critically low streamflows, widespread agricultural losses, and an elevated wildfire risk across the hardest-hit states.</p>
+
+                                <div class="flex-wrap">
+                                    <div style="min-width:450px">
+                                        <a href="/monitoring-content/sotc/drought/2025/09/20250916_rcc_northeast_chng_7W.png">
+                                            <img alt="U.S. Drought Monitor Class Change - Northeast 7 Week, September 16, 2025 compared to July 29, 2025" width="100%" style="max-width:3300px;" src="/monitoring-content/sotc/drought/2025/09/20250916_rcc_northeast_chng_7W.png">
+                                        </a>
+                                    </div>
+
+                                    <div style="min-width:450px">
+                                        <a href="/monitoring-content/sotc/drought/2025/09/20250916_northeast_usdm_legend.gif">
+                                            <img alt="U.S. Drought Monitor, Northeast, July 29, 2025-September 16, 2025" width="100%" style="max-width:1056px;" src="/monitoring-content/sotc/drought/2025/09/20250916_northeast_usdm_legend.gif">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-------------------------------->
+                <!-- 20250922-northeast-drought -->
+
+                <!-- 20250914-nd-tornadoes -->
+                <!--------------------------->
+                <a class="card content-card" data-bs-toggle="modal" data-bs-target="#nd-tornadoes-20250914">
+                    <div class="card-body card-title">
+                        September 14 Tornado Outbreak
+                    </div>
+                    <div class="card-body card-description">
+                        A rare tornado outbreak occurred across the Dakotas over the weekend where nearly two dozen
+                        tornadoes were reported.
+                    </div>
+                    <div class="card-body">
+                        <button class="btn btn-primary">
+                            More Info&hellip;
+                        </button>
+                    </div>
+                </a>
+
+                <div class="modal fade" id="nd-tornadoes-20250914" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <div class="modal-title">North Dakota Tornado Outbreak</div>
+                                <div class="italic center">Published: September 18, 2025</div>
+                            </div>
+                            <div class="modal-body text-left">
+                                <p>A rare September tornado outbreak extended from north-central South Dakota to central North Dakota on September 14. Of the 21 tornadoes reported across the region, 19 preliminary reports occurred in North Dakota. North Dakota typically experiences <a href="/monitoring-content/societal-impacts/tornadoes/images/avg-torn-sep-1991-2020.png">one tornado in September</a> and an <a href="/monitoring-content/societal-impacts/tornadoes/images/avg-torn-ann-1991-2020.png">annual average of 30 tornadoes</a>. Preliminary storm counts for 2025 indicate 68 tornadoes were reported in North Dakota through mid-September (227% of average), which, if confirmed, would be a new annual record for the state (61 tornadoes in 1999). The September 14 outbreak accounted for over one-quarter of this preliminary total. Notably, 2025's highest daily tornado count for North Dakota (21) occurred on June 20, when a <a href="/access/monitoring/monthly-report/tornadoes/202506">derecho</a> traversed the state.</p>
+
+                                <div class="flex-wrap">
+                                    <div style="min-width:450px">
+                                        <a href="/monitoring-content/sotc/tornadoes/2025/sep/sep14-outlook.gif">
+                                            <img alt="SPC Day 1 Outlook, Valid: 1630Z Sun 9/14 - 1200Z Mon 9/15" width="100%" style="max-width:821px;" src="/monitoring-content/sotc/tornadoes/2025/sep/sep14-outlook.gif">
+                                        </a>
+                                    </div>
+
+                                    <div style="min-width:450px">
+                                        <a href="/monitoring-content/sotc/tornadoes/2025/sep/spc-nd-2025-map.gif">
+                                            <img alt="Preliminary Tornado Report for North Dakota 1 Jan, 2025 - 17 Sep, 2025" width="100%" style="max-width:713px;" src="/monitoring-content/sotc/tornadoes/2025/sep/spc-nd-2025-map.gif">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--------------------------->
+                <!-- 20250914-nd-tornadoes -->
+
+                <!-- 20250915-quiet-atl-tropics -->
+                <!-------------------------------->
+                <a class="card content-card" data-bs-toggle="modal" data-bs-target="#quiet-atl-tropics-20250915">
+                    <div class="card-body card-title">
+                        Quiet Atlantic Tropics
+                    </div>
+                    <div class="card-body card-description">
+                        For only the second time since 1950, no named storms formed in the Atlantic between August 25
+                        and September 15. The only other occurrence was in 1992, prior to Hurricane Andrew.
+                    </div>
+                    <div class="card-body">
+                        <button class="btn btn-primary">
+                            More Info&hellip;
+                        </button>
+                    </div>
+                </a>
+
+                <div class="modal fade" id="quiet-atl-tropics-20250915" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <div class="modal-title">North Atlantic Tropical Cyclone Activity</div>
+                                <div class="italic center">Published: September 18, 2025</div>
+                            </div>
+                            <div class="modal-body text-left">
+                                The 2025 Atlantic hurricane season has been unusually quiet during its peak. No named storms formed between August 24th and September 15th, a rare lull last seen in 1992. Additionally, no hurricane has formed in the Atlantic since hurricane Erin in mid-August. Through mid-September, the season has produced only six named storms and one hurricane, making it one of the least active starts in decades. This lack of activity is attributed to unfavorable conditions, including dry stable air, wind shear, and dust, which have prevented tropical waves from organizing in the main development region of the Atlantic.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-------------------------------->
+                <!-- 20250915-quiet-atl-tropics -->
+            </div>
+
+            <p class="italic">More information about recent events will be available in our September 2025 <a href="/access/monitoring/monthly-report/">monthly monitoring reports</a>, scheduled for release on Friday, October 10, 2025 (global) and Tuesday, October 14, 2025 (U.S.).</p>
+        </div>
+
+        <hr>
+
+        <div id="cag-data">
+            <div id="data-select" class="marginBottom">
+                <div id="data-parameter-select" class="hidden">
+                    <button class="btn selected" data-dataparameter="parameter-tavg">
+                        Temp<span class="longname">erature</span>
+                    </button>
+                    <button class="btn" data-dataparameter="parameter-pcp">
+                        Precip<span class="longname">itation</span>
+                    </button>
+                </div>
+
+                <div id="data-scope-select">
+                    <button class="btn btn-primary selected" data-datascope="scope-national">National</button>
+                    <button class="btn btn-primary" data-datascope="scope-global">Global</button>
+                </div>
+            </div>
+
+            <div id="data"></div>
+        </div>
+
+        <hr>
+    </div>
+</div>
+
+<div id="products-section">
+    <h2 class="bigMarginRight">Products By Category</h2>
+    
+    <div id="product-categories">
+        <div id="categories"></div>
+        <div id="scopes-products">
+            <div id="scopes-div"><ul id="scopes" class="tabs no-scopes"><li>&nbsp;</li></ul></div>
+            <div id="products"></div>
+        </div>
+    </div>
+</div>
+<script>
+const base       = "\/access\/monitoring\/products";
+const categories = {"all":"All Products","monthly":"Monthly Climate Reports","cag":"Climate at a Glance","temp":"Temperature","prcp":"Precipitation","snowice":"Snow and Ice","droughtfire":"Drought and Wildfire","stormswind":"Storms and Wind","wxpatterns":"Weather Patterns","datasets":"Key Datasets","etc":"Other Monitoring"};
+const products   = {"climate-at-a-glance":{"name":"Climate at a Glance","description":"Historical and spatial comparisons of local, county, state, regional, national, and global meteorological data to determine trends and patterns","keywords":"temperature, precipication, rain, drought, palmers, cooling degree days, heating degree days, United States, National, globe, global, county maps, state maps, climate division maps, regional maps, county time series, state time series, climate division time series, regional time series, county charts, state charts, climate division charts, regional charts, county rankings, state rankings, climate division rankings, regional rankings","doi":false,"scope":["National","Global"],"categoryWeights":{"cag":1,"temp":20,"prcp":12,"droughtfire":8},"docrootpath":"\/cag\/","approotpath":"\/access\/monitoring\/climate-at-a-glance\/","content":"\/monitoring-content\/cag","cloud":"https:\/\/storage.googleapis.com\/noaa-ncei-ipg\/datasets\/cag","analytics":true,"monitoring":true,"hideProduct":false},"monthly-report":{"name":"Monthly Climate Reports","description":"A collection of monthly summaries recapping climate-related occurrences on both a global and national scale","keywords":"monthly report, regional, historical, temperature, troposphere, tropospheric, stratosphere, stratospheric, rain, precipitation, snow, ice, drought, synoptic, weather, climate, tornado, tornadoes, tornadic activity, storms, wind, hail, fire, wildfires, wild fire, hurricanes, typhoons, cyclones, tropical storms","doi":false,"scope":["National","Global"],"categoryWeights":{"monthly":12},"docrootpath":"\/sotc\/","approotpath":"\/access\/monitoring\/monthly-report\/","content":"\/monitoring-content\/sotc","analytics":true,"monitoring":true,"hideProduct":false},"monthly-report\/national":{"name":"Monthly National Climate Report","description":"An analysis of national temperatures and precipitation each month, placing the data into a historical perspective","keywords":"National Monthly Climate Report, monthly national report, National Monthly Report, temperatures, precipiation, rain, anomalies, ranks, trends, national, United States","doi":false,"scope":["National"],"categoryWeights":{"monthly":11,"temp":15,"prcp":10},"docrootpath":"\/sotc\/national","approotpath":"\/access\/monitoring\/monthly-report\/national","analytics":false,"monitoring":true,"hideProduct":true},"monthly-report\/global":{"name":"Monthly Global Climate Report","description":"An analysis of global temperatures and precipitation, placing the data into a historical perspective","keywords":"Global Monthly Climate Report, monthly global report, Global Monthly Report, temperatures, precipiation, rain, anomalies, ranks, trends, globe, global","doi":false,"scope":["Global"],"categoryWeights":{"monthly":10,"temp":16,"prcp":9},"docrootpath":"\/sotc\/global","approotpath":"\/access\/monitoring\/monthly-report\/global","analytics":false,"monitoring":true,"hideProduct":true},"monthly-report\/snow":{"name":"Monthly National Snow and Ice Report","description":"A national view of snow and ice conditions by month, placing the data and significant events into a historical perspective","keywords":"National Monthly Snow and Ice Report, snow, ice, blizzard, snow storm, national, United States","doi":false,"scope":["National"],"categoryWeights":{"monthly":6,"snowice":6},"docrootpath":"\/sotc\/snow","approotpath":"\/access\/monitoring\/monthly-report\/snow","analytics":false,"monitoring":true,"hideProduct":true},"monthly-report\/drought":{"name":"Monthly Drought Report","description":"A monthly discussion of U.S. drought status, with narrative and graphics","keywords":"Drought Monthly Report, drought, precipitation, rain, global, regional, statewide, national, United States","doi":false,"scope":["National","Global"],"categoryWeights":{"monthly":7,"droughtfire":12},"docrootpath":"\/sotc\/drought","approotpath":"\/access\/monitoring\/monthly-report\/drought","analytics":false,"monitoring":true,"hideProduct":true},"monthly-report\/synoptic":{"name":"Monthly Synoptic Discussion","description":"A summary of synoptic activity in the U.S.","keywords":"Synoptic Monthly Discussion, monthly synoptic report, synoptic, weather patterns, national, United States","doi":false,"scope":["National"],"categoryWeights":{"monthly":5,"wxpatterns":10},"docrootpath":"\/sotc\/synoptic","approotpath":"\/access\/monitoring\/monthly-report\/synoptic","analytics":false,"monitoring":true,"hideProduct":true},"monthly-report\/tornadoes":{"name":"Monthly Tornadoes Report","description":"A summary of tornadic activity in the Contiguous U.S.","keywords":"National National Monthly Tornado Report, Monthly Tornado Report, tornadoes, national, United States","doi":false,"scope":["National"],"categoryWeights":{"monthly":4,"stormswind":4},"docrootpath":"\/sotc\/tornadoes","approotpath":"\/access\/monitoring\/monthly-report\/tornadoes","analytics":false,"monitoring":true,"hideProduct":true},"monthly-report\/fire":{"name":"Monthly Wildfires Report","description":"A summary of wildfires in the U.S. and related weather and climate conditions","keywords":"Monthly Wildfire Report, Wildfires Monthly Report, Wildfire Monthly Report, fires, national, United States","doi":false,"scope":["National"],"categoryWeights":{"monthly":3,"droughtfire":11},"docrootpath":"\/sotc\/fire","approotpath":"\/access\/monitoring\/monthly-report\/fire","analytics":false,"monitoring":true,"hideProduct":true},"monthly-report\/global-drought":{"name":"Global Drought Narrative","description":"A monthly narrative on the state of global drought","keywords":"global, drought","doi":false,"scope":["Global"],"categoryWeights":{"monthly":2,"temp":14},"docrootpath":"\/sotc\/global-drought","approotpath":"\/access\/monitoring\/monthly-report\/global-drought","analytics":false,"monitoring":true,"hideProduct":true},"monthly-report\/global-regions":{"name":"Monthly Regional Analysis","description":"A summary of global regional temperature anomalies, placing the data into a historical perspective","keywords":"Regional Monthly Analysis, temperatures, precipiation, rain, anomalies, ranks, trends, regions, regional","doi":false,"scope":["Global"],"categoryWeights":{"monthly":2,"temp":14},"docrootpath":"\/sotc\/global-regions","approotpath":"\/access\/monitoring\/monthly-report\/global-regions","analytics":false,"monitoring":true,"hideProduct":true},"monthly-report\/tropical-cyclones":{"name":"Monthly Tropical Cyclones Report","description":"A breakdown of hurricanes, typhoons, cyclones, and tropical storms across the globe","keywords":"Monthly Tropical Cyclone Report, Tropical Cyclones Monthly Report, Tropical Cyclone Monthly Report, hurricanes, tropical cyclones, typhoons, ocean basin, globe, global","doi":false,"scope":["Global"],"categoryWeights":{"monthly":9,"stormswind":5},"docrootpath":"\/sotc\/tropical-cyclones","approotpath":"\/access\/monitoring\/monthly-report\/tropical-cyclones","analytics":false,"monitoring":true,"hideProduct":true},"monthly-report\/global-snow":{"name":"Monthly Global Snow and Ice Report","description":"A global view of snow and ice, placing the data into a historical perspective","keywords":"Global Snow and Ice Monthly Report, snow, ice, blizzard, snow storm, anomalies, ranks, trends, globe, global","doi":false,"scope":["Global"],"categoryWeights":{"monthly":8,"snowice":7},"docrootpath":"\/sotc\/global-snow","approotpath":"\/access\/monitoring\/monthly-report\/global-snow","analytics":false,"monitoring":true,"hideProduct":true},"monthly-report\/upper-air":{"name":"Monthly Upper Air Report","description":"Tropospheric and stratospheric temperatures, with data placed into historical perspective","keywords":"Upper Air Monthly Report, temperatures, temperature anomalies, atmosphere, MSU, troposphere, stratosphere, microwave sounding unit, trends, globe, global","doi":false,"scope":["Global"],"categoryWeights":{"monthly":1,"wxpatterns":9},"docrootpath":"\/sotc\/upper-air","approotpath":"\/access\/monitoring\/monthly-report\/upper-air","analytics":false,"monitoring":true,"hideProduct":true},"monthly-report\/rss":{"name":"Monthly Report RSS Feed","description":"RSS feed of the NCEI Monthly Report","keywords":"RSS Feed for the Monthly Report, sotc rss, monthly report, regional, historical, temperature, troposphere, tropospheric, stratosphere, stratospheric, rain, precipitation, snow, ice, drought, synoptic, weather, climate, tornado, tornadoes, tornadic activity, storms, wind, hail, fire, wildfires, wild fire, hurricanes, typhoons, cyclones, tropical storms","doi":false,"scope":["National","Global"],"categoryWeights":{"monthly":12},"docrootpath":"\/sotc\/rss.xml","approotpath":"\/access\/monitoring\/monthly-report\/rss.xml","analytics":false,"monitoring":true,"hideProduct":true},"monthly-report\/hazards":{"name":"Global Hazards","description":"Weather-related hazards and disasters around the world","keywords":"global, hazards, natural disasters","doi":false,"scope":["Global"],"categoryWeights":[],"docrootpath":"\/sotc\/hazards","approotpath":"\/access\/monitoring\/monthly-report\/hazards","monitoring":true,"analytics":false,"hideProduct":true,"hideSearch":true},"monthly-report\/enso":{"name":"El Ni\u00f1o\/Southern Oscillation","description":"Atmospheric and oceanic conditions related to ENSO","keywords":"El Ni\u00f1o Southern Oscillation, ENSO, La Nina, Warm-Event, Cold-Event, Equatorial Upwelling, Zonal Winds, SSTs, Sea Level, OLR, Outgoing Longwave Radiation, Southern Oscillation Index","doi":false,"scope":["Global"],"categoryWeights":[],"docrootpath":"\/sotc\/enso","approotpath":"\/access\/monitoring\/monthly-report\/enso","monitoring":true,"analytics":false,"hideProduct":true,"hideSearch":true},"drought.gov":{"name":"National Integrated Drought Information System (NIDIS)","description":"The National Integrated Drought Information System (NIDIS) is a multi-agency partnership that coordinates drought monitoring, forecasting, planning, and information at national, tribal, state, and local levels.","keywords":"","doi":false,"scope":["National","Global"],"categoryWeights":{"droughtfire":9},"docrootpath":"https:\/\/www.drought.gov\/","approotpath":"https:\/\/www.drought.gov\/","monitoring":false,"hideProduct":false},"national-temperature-index":{"name":"National Indices","description":"Several different methodologies to estimate the temperature and precipitation history of the contiguous United States, including NCEI's current operational version. Users can graph, compare and save the output from these different methods.","keywords":"national-indices, nti, crn, USCRN, climdiv, nclimdiv, ushcn","doi":false,"scope":["National"],"categoryWeights":{"temp":1,"prcp":1},"docrootpath":"\/temp-and-precip\/national-temperature-index\/","approotpath":"\/access\/monitoring\/national-temperature-index\/","content":"\/monitoring-content\/temp-and-precip\/national-indices","analytics":true,"monitoring":true,"hideProduct":false},"us-maps":{"name":"U.S. Maps","description":"Daily, Weekly, Month-to-Date, Projected, 1-Month, 3-Month, 6-Month, 12-Month, and Year-to-Date National, Regional, Statewide, Divisional, County, and Gridded Temperature and Precipitation Maps","keywords":"temperature, precipitation, rain, heating degree days, cooling degree days, maps, us maps, u.s. maps, United States maps, national maps","doi":false,"scope":["National"],"categoryWeights":{"temp":19,"prcp":11},"docrootpath":"\/temp-and-precip\/us-maps\/","approotpath":"\/access\/monitoring\/us-maps\/","content":"\/monitoring-content\/temp-and-precip\/us-maps","analytics":true,"monitoring":true,"hideProduct":false},"us-trends":{"name":"National Trends","description":"National trends for Mean Temperature, Maximum Temperature, Minimum Temperature, and Precipitation for each month and season for the most recent complete 30-year period and the complete period of record","keywords":"maximum, minimum, temperature, precipitation, rain, trends, United States, national, us trends","doi":false,"scope":["National"],"categoryWeights":{"temp":1,"prcp":1},"docrootpath":"\/temp-and-precip\/us-trends\/","approotpath":"\/access\/monitoring\/us-trends\/","content":"\/monitoring-content\/temp-and-precip\/us-trends","analytics":true,"monitoring":true,"hideProduct":false},"uspa":{"name":"U.S. Percentage Areas (Very Warm\/Cold, Very Wet\/Dry)","breadcrumb":"U.S. Percentage Areas","description":"This product shows, for each month, season and year since 1895, how much of the contiguous United States experienced extreme (top or bottom 10%) temperature and precipitation conditions.","keywords":"extreme, temperature, precipitation, rain, United States, US Percentage Areas, national","doi":false,"categoryWeights":{"temp":1,"prcp":1},"scope":["National"],"docrootpath":"\/temp-and-precip\/uspa\/","approotpath":"\/access\/monitoring\/uspa\/","content":"\/monitoring-content\/temp-and-precip\/uspa","analytics":true,"monitoring":true,"hideProduct":false},"ghcn-gridded-products":{"name":"Global Maps","description":"Global Gridded Monthly, Seasonal, and Annual Global Temperature Anomalies, Precipitation, and Extremes maps","keywords":"global-maps, rain, maps, monthly, gridded, temperature anomalies, precipitation, GHCN, global historical climatology network, data, current anomalies, products","doi":false,"categoryWeights":{"temp":18},"scope":["Global"],"docrootpath":"\/temp-and-precip\/ghcn-gridded-products\/","approotpath":"\/access\/monitoring\/global-maps\/","content":"\/monitoring-content\/temp-and-precip\/ghcn-gridded-products","analytics":true,"monitoring":true,"hideProduct":false},"msu":{"name":"Microwave Sounding Unit Temperature Anomalies","breadcrumb":"MSU Temperature Anomalies","description":"Temperature history for three different layers of the atmosphere: lower troposphere, middle troposphere, and lower stratosphere. These are different parts of the atmosphere than the more familiar surface temperature","keywords":"","doi":false,"scope":["Global"],"categoryWeights":{"temp":1},"docrootpath":"\/temp-and-precip\/msu\/","approotpath":"\/access\/monitoring\/msu\/","content":"\/monitoring-content\/temp-and-precip\/msu","analytics":true,"monitoring":true,"hideProduct":false},"nadm":{"name":"North American Drought Monitor (NADM)","breadcrumb":"NADM","description":"Maps, narratives, indicators, and data depicting areas of drought and abnormally dry conditions across the North American continent, compiled from national analyses prepared in the U.S., Canada, and Mexico","keywords":"standardized precipitation index, spi, percent of long-term average precipitation, palmer drought index, precipitation climatology","doi":false,"scope":["National","Global"],"categoryWeights":{"droughtfire":10},"docrootpath":"\/temp-and-precip\/drought\/nadm\/","approotpath":"\/access\/monitoring\/nadm\/","content":"\/monitoring-content\/temp-and-precip\/drought\/nadm\/","analytics":true,"monitoring":true,"hideProduct":false},"weekly-palmers":{"name":"Weekly Palmer Drought Indices","description":"Weekly Palmer-type maps and time series beginning in 2005","keywords":"weekly palmers","doi":false,"scope":["National"],"categoryWeights":{"droughtfire":2},"docrootpath":"\/temp-and-precip\/drought\/weekly-palmers\/","approotpath":"\/access\/monitoring\/weekly-palmers\/","content":"\/monitoring-content\/temp-and-precip\/drought\/weekly-palmers","analytics":true,"monitoring":true,"hideProduct":false},"drought-recovery":{"name":"Drought Termination and Amelioration","breadcrumb":"Drought Recovery","description":"Estimations of drought recovery in the Contiguous U.S. based on Palmer drought analysis using varying scenarios","keywords":"","doi":false,"scope":["National"],"categoryWeights":{"droughtfire":3},"docrootpath":"\/temp-and-precip\/drought\/recovery\/","approotpath":"\/access\/monitoring\/drought-recovery\/","content":"\/monitoring-content\/temp-and-precip\/drought\/recovery","analytics":true,"monitoring":true,"hideProduct":false},"usapi-pcp":{"name":"USAPI Precipitation","description":"U.S. Affiliate Pacific Islands weekly, monthly, and seasonal precipitation totals, percentiles, and ranks","keywords":"rain","doi":false,"scope":["Global"],"categoryWeights":{"droughtfire":4},"docrootpath":"\/temp-and-precip\/drought\/usapi-pcp\/","approotpath":"\/access\/monitoring\/usapi-pcp\/","content":"\/monitoring-content\/temp-and-precip\/drought\/usapi-pcp","analytics":true,"monitoring":true,"hideProduct":false},"nadiia":{"name":"North America Drought Indices and Indicators Assessment","breadcrumb":"NADIIA","description":"Information about the effectiveness of drought indices and indicators are across North America","keywords":"rain","doi":false,"scope":["Global"],"categoryWeights":{"droughtfire":4},"docrootpath":"\/temp-and-precip\/drought\/nadiia\/","approotpath":"\/access\/monitoring\/nadiia\/","content":"\/monitoring-content\/temp-and-precip\/drought\/nadiia\/","analytics":true,"monitoring":true,"hideProduct":false},"historical-palmers":{"name":"Historical Palmer Drought Indices","breadcrumb":"Historical Palmers","description":"Create year-over-year animations of various Palmer-type drought analyses","keywords":"historical palmers, palmer z-index, pdsi, phdi, pmdi, palmer drought severity index, palmer modified drought index, palmer hydrological drought index, animate, loop","doi":false,"scope":["National"],"categoryWeights":{"droughtfire":5},"docrootpath":"\/temp-and-precip\/drought\/historical-palmers\/","approotpath":"\/access\/monitoring\/historical-palmers\/","content":"\/monitoring-content\/temp-and-precip\/drought\/historical-palmers\/","analytics":true,"monitoring":true,"hideProduct":false},"scec":{"name":"State Climate Extremes Committee (SCEC)","breadcrumb":"SCEC","shortname":"SCEC","description":"The State Climate Extremes Committee (SCEC) was created in 2006 in response to the need for proper and comprehensive evaluation of meteorological observations which may have tied or exceeded existing statewide all-time record values.","keywords":"records","doi":false,"scope":["National"],"categoryWeights":{"etc":14,"extremes":4},"docrootpath":"\/extremes\/scec\/","approotpath":"\/access\/monitoring\/scec\/","content":"\/monitoring-content\/extremes\/scec","analytics":true,"monitoring":true,"hideProduct":false},"ncec":{"name":"National Climate Extremes Committee (NCEC)","breadcrumb":"NCEC","description":"Established in 1997, the NCEC's main goal is to assess the scientific merit of extreme climatological and meteorological events.","keywords":"records","doi":false,"scope":["National"],"categoryWeights":{"etc":13,"extremes":3},"docrootpath":"\/extremes\/ncec\/","approotpath":"\/access\/monitoring\/ncec\/","content":"\/monitoring-content\/extremes\/ncec","analytics":true,"monitoring":true,"hideProduct":false},"cei":{"name":"U.S. Climate Extremes Index (CEI)","breadcrumb":"CEI","description":"The U.S. Climate Extremes Index (CEI) quantifies observed climate variability in temperature, precipitation, and drought within the contiguous United States.","keywords":"US Climate Extremes Index, USCEI, US CEI, rain","doi":false,"scope":["National"],"categoryWeights":{"temp":13,"prcp":8,"droughtfire":7,"snowice":5,"extremes":6},"docrootpath":"\/extremes\/cei\/","approotpath":"\/access\/monitoring\/cei\/","content":"\/monitoring-content\/extremes\/cei","analytics":true,"monitoring":true,"hideProduct":false},"streaks":{"name":"U.S. Streaks","description":"Stations that experience consecutive days with temperature\/precipitation values which exceed or fall short of various thresholds","keywords":"US Streaks, rain","doi":false,"scope":["National"],"categoryWeights":{"temp":1,"prcp":1,"extremes":2},"docrootpath":"\/extremes\/streaks\/","approotpath":"\/access\/monitoring\/streaks\/","content":"\/monitoring-content\/extremes\/streaks","analytics":true,"monitoring":true,"hideProduct":false},"wildfires":{"name":"U.S. Wildfires","description":"U.S. Wildfire data and statistics","keywords":"US Wildfires, us fires, u.s. fires, societal impacts","doi":false,"scope":["National"],"categoryWeights":{"droughtfire":8},"docrootpath":"\/societal-impacts\/wildfires\/","approotpath":"\/access\/monitoring\/wildfires\/","content":"\/monitoring-content\/societal-impacts\/wildfires","analytics":true,"monitoring":true,"hideProduct":false},"tornadoes":{"name":"U.S. Tornadoes","description":"U.S. Tornadoes data and statistics","keywords":"US Tornadoes, tornadic activity, societal impacts","doi":false,"scope":["National"],"categoryWeights":{"stormswind":2},"docrootpath":"\/societal-impacts\/tornadoes\/","approotpath":"\/access\/monitoring\/tornadoes\/","content":"\/monitoring-content\/societal-impacts\/tornadoes","analytics":true,"monitoring":true,"hideProduct":false},"redti":{"name":"Residential Energy Demand Temperature Index (REDTI)","breadcrumb":"REDTI","description":"Time series plots of the Residential Energy Demand Temperature Index (REDTI) which is based on population weighted heating and cooling degree days","keywords":"societal impacts","doi":false,"scope":["National"],"categoryWeights":{"temp":1},"docrootpath":"\/societal-impacts\/redti\/","approotpath":"\/access\/monitoring\/redti\/","content":"\/monitoring-content\/societal-impacts\/redti","analytics":true,"monitoring":true,"hideProduct":false},"wind":{"name":"U.S. Wind Climatology","description":"Monthly wind component maps for the Contiguous U.S.","keywords":"US Wind Climatology, societal impacts","doi":false,"scope":["National"],"categoryWeights":{"stormswind":1},"docrootpath":"\/societal-impacts\/wind\/","approotpath":"\/access\/monitoring\/wind\/","content":"\/monitoring-content\/societal-impacts\/wind","analytics":true,"monitoring":true,"hideProduct":false},"https:\/\/gdis-noaa.hub.arcgis.com":{"name":"Global Drought Information System (GDIS)","description":"A tool for exploring global drought data and learning more about global drought resources, research, and education","keywords":"","doi":false,"scope":["Global"],"categoryWeights":{"droughtfire":1,"etc":1},"docrootpath":"https:\/\/gdis-noaa.hub.arcgis.com\/","approotpath":"https:\/\/gdis-noaa.hub.arcgis.com\/","monitoring":false,"hideProduct":false},"daily-snow":{"name":"Daily U.S. Snowfall and Snow Depth","breadcrumb":"Daily Snow","description":"GHCN Daily snowfall and snow depth observations","keywords":"US Snowfall, daily snow depth snowfall","doi":false,"scope":["National"],"categoryWeights":{"snowice":9},"docrootpath":"\/snow-and-ice\/daily-snow\/","approotpath":"\/access\/monitoring\/daily-snow\/","content":"\/monitoring-content\/snow-and-ice\/daily-snow","analytics":true,"monitoring":true,"hideProduct":false},"snowfall-extremes":{"name":"Snowfall Extremes","description":"1-day, 2-day, and 3-day, maximum snowfall extremes for each county in the United States by State and their locations","keywords":"","doi":false,"scope":["National"],"categoryWeights":{"snowice":8,"extremes":5},"docrootpath":"\/snow-and-ice\/snowfall-extremes\/","approotpath":"\/access\/monitoring\/snowfall-extremes\/","content":"\/monitoring-content\/snow-and-ice\/snowfall-extremes","analytics":true,"monitoring":true,"hideProduct":false},"snow-and-ice-extent":{"name":"Sea Ice and Snow Cover Extent","description":"Global sea ice and snow cover extent values, anomlies, graphs and tables","keywords":"extent, sea ice, snow, snow cover, northern hemisphere, southern hemisphere, global, globe","doi":false,"scope":["Global"],"categoryWeights":{"snowice":1},"docrootpath":"\/snow-and-ice\/extent\/","approotpath":"\/access\/monitoring\/snow-and-ice-extent\/","content":"\/monitoring-content\/snow-and-ice\/extent","analytics":true,"monitoring":true,"hideProduct":false},"regional-sea-ice":{"name":"Regional Sea Ice","description":"Regional sea ice extent and area values, anomlies, graphs and tables","keywords":"","doi":false,"scope":["Global"],"categoryWeights":{"snowice":1},"docrootpath":"\/snow-and-ice\/regional-sea-ice\/","approotpath":"\/access\/monitoring\/regional-sea-ice\/","content":"\/monitoring-content\/snow-and-ice\/regional-sea-ice","analytics":true,"monitoring":true,"hideProduct":false},"rsi":{"name":"Regional Snowfall Index (RSI)","breadcrumb":"RSI","description":"Regional characterization and ranking of high-impact snowstorms","keywords":"","doi":false,"scope":["National"],"categoryWeights":{"snowice":1,"stormswind":3},"docrootpath":"\/snow-and-ice\/rsi\/","approotpath":"\/access\/monitoring\/rsi\/","content":"\/monitoring-content\/snow-and-ice\/rsi","analytics":true,"monitoring":true,"hideProduct":false},"enso":{"name":"El Ni\u00f1o \/ Southern Oscillation (ENSO)","breadcrumb":"ENSO","description":"Information on the El Ni\u00f1o Southern Oscillation (ENSO), a periodic fluctuation in sea surface temperature and air pressure in the equatorial Pacific Ocean","keywords":"teleconnections, weather patterns, El Ni\u00f1o Southern Oscillation ENSO La Nina Warm-Event Cold-Event Equatorial Pacific Upwelling Zonal Winds SSTs sea surface temperatures Sea Level OLR Southern Oscillation Index Outgoing Longwave Radiation OLR Southern Oscillation Index SOI","doi":false,"scope":["Global"],"categoryWeights":{"wxpatterns":8},"docrootpath":"\/teleconnections\/enso\/","approotpath":"\/access\/monitoring\/enso\/","content":"\/monitoring-content\/teleconnections\/enso","analytics":true,"monitoring":true,"hideProduct":false},"nao":{"name":"North Atlantic Oscillation (NAO)","description":"Information on the North Atlantic Oscillation (NAO) index, which is based on the surface sea-level pressure difference between the Subtropical (Azores) High and the Subpolar Low","keywords":"teleconnections, weather patterns, North Atlantic Oscillation NAO surface sea-level pressure Azores Subtropical High Subpolar Low","doi":false,"scope":["Global"],"categoryWeights":{"wxpatterns":1},"docrootpath":"\/teleconnections\/nao\/","approotpath":"\/access\/monitoring\/nao\/","content":"\/monitoring-content\/teleconnections\/nao","analytics":true,"monitoring":true,"hideProduct":false},"pdo":{"name":"Pacific Decadal Oscillation (PDO)","description":"Information on the Pacific Decadal Oscillation (PDO), often described as a long-lived El Ni\u00f1o-like pattern of Pacific climate variability","keywords":"teleconnections, weather patterns, Pacific Decadal Oscillation PDO","doi":false,"scope":["Global"],"categoryWeights":{"wxpatterns":1},"docrootpath":"\/teleconnections\/pdo\/","approotpath":"\/access\/monitoring\/pdo\/","content":"\/monitoring-content\/teleconnections\/pdo","analytics":true,"monitoring":true,"hideProduct":false},"ao":{"name":"Arctic Oscillation (AO)","description":"Information on the Arctic Oscillation (AO), a large scale mode of climate variability, also referred to as the Northern Hemisphere annular mode","keywords":"teleconnections, weather patterns, Arctic Oscillation AO","doi":false,"scope":["Global"],"categoryWeights":{"wxpatterns":1},"docrootpath":"\/teleconnections\/ao\/","approotpath":"\/access\/monitoring\/ao\/","content":"\/monitoring-content\/teleconnections\/ao","analytics":true,"monitoring":true,"hideProduct":false},"pna":{"name":"Pacific-North American Index (PNA)","description":"One of the most prominent modes of low-frequency variability in the Northern Hemisphere extratropics, appearing in all months except June and July","keywords":"Pacific-North American pattern, Pacific\/North American pattern, Northern Hemisphere, extratropics, teleconnections, weather patterns","doi":false,"scope":["Global"],"categoryWeights":{"wxpatterns":1},"docrootpath":"\/teleconnections\/pna\/","approotpath":"\/access\/monitoring\/pna\/","content":"\/monitoring-content\/teleconnections\/pna","analytics":true,"monitoring":true,"hideProduct":false},"dyk":{"name":"Did You Know?","description":"A suite of notes that attempt to explain or clarify complex climate phenomena, Climate Monitoring products and methodologies, and climate system insights","keywords":"climate monitoring, climate assessment, temperature, precipitation, drought monitoring, snow climatology, climate map, climate index, climate extremes, global anomalies, sea surface temperature, Palmer drought index, iguanas","doi":false,"scope":["National","Global"],"categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/","approotpath":"\/access\/monitoring\/dyk\/","content":"\/monitoring-content\/monitoring-references\/dyk","analytics":true,"monitoring":true,"hideProduct":false},"dyk\/ak-climate-divisions":{"name":"Alaska Climate Divisions FAQs","description":"Did You Know? Alaska Climate Divisions Frequently Asked Questions","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/ak-climate-divisions","approotpath":"\/access\/monitoring\/dyk\/ak-climate-divisions","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/anomalies-vs-temperature":{"name":"Anomalies vs. Temperature","description":"Did You Know? Temperature Anomalies versus Absolute Temperature","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/anomalies-vs-temperature","approotpath":"\/access\/monitoring\/dyk\/anomalies-vs-temperature","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/arctic-ice":{"name":"Arctic Sea Ice Measurements","description":"Did You Know? How arctic sea ice is measured","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/arctic-ice","approotpath":"\/access\/monitoring\/dyk\/arctic-ice","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/billions-calculations":{"name":"Billion-Dollar Disasters: Calculating the Costs","description":"Did You Know? 7 things to know about NCEI's U.S. Billion-Dollar Disasters data: How the costs are calculated","keywords":"US Billion-Dollar Disasters, billions calculations","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/billions-calculations","approotpath":"\/access\/monitoring\/dyk\/billions-calculations","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/binomial-filter":{"name":"Binomial Filter","description":"Did You Know? The binomial filter smoothing technique","keywords":"smoothing","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/binomial-filter","approotpath":"\/access\/monitoring\/dyk\/binomial-filter","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/climate-division-database-transition":{"name":"Climate Division Dataset Transition","description":"Did You Know? NCEI's transition from the station-based Climate Division Database to a 5-km gridded dataset","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/climate-division-database-transition","approotpath":"\/access\/monitoring\/dyk\/climate-division-database-transition","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/climatologically-dry":{"name":"Climatologically Dry","description":"Did You Know? What does it mean to be \"Climatologically Dry\"?","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/climatologically-dry","approotpath":"\/access\/monitoring\/dyk\/climatologically-dry","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/cei":{"name":"Climate Extremes Index","description":"Did You Know? An explanation of the U.S. Climate Extremes Index","keywords":"US Climate Extremes Index, U.S. Climate Extremes Index, USCEI, US CEI","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/cei","approotpath":"\/access\/monitoring\/dyk\/cei","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/monthly-releases":{"name":"Climate Monitoring Releases","description":"Did You Know? Calendar of upcoming releases for the monthly U.S. and Global Reports","keywords":"releases, US Report releases, US Monthly Report releases, monthly releases, monthly report releases","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/monthly-releases","approotpath":"\/access\/monitoring\/dyk\/monthly-releases","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/climat":{"name":"CLIMAT Messages","description":"Did You Know? How global meterological data is transmitted worldwide","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/climat","approotpath":"\/access\/monitoring\/dyk\/climat","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/ranking-definition":{"name":"Climatological Rankings","description":"Did You Know? Calculating national climatological rankings","keywords":"conus, contiguous united states, alaska","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/ranking-definition","approotpath":"\/access\/monitoring\/dyk\/ranking-definition","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/coral-reef-bleaching":{"name":"Coral Reef Bleaching","description":"Did You Know? The effects warmer oceans have on coral reefs","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/coral-reef-bleaching","approotpath":"\/access\/monitoring\/dyk\/coral-reef-bleaching","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/deadfuelmoisture":{"name":"Dead Fuel Moisture","description":"Did You Know? Fuel moisture index and how it is used to determine wildfire potential","keywords":"fire, forest fire, wild fire, wildfire","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/deadfuelmoisture","approotpath":"\/access\/monitoring\/dyk\/deadfuelmoisture","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/drought-definition":{"name":"Definition of Drought","description":"Did You Know? The four types of drought","keywords":"meteorological drought, hydrological drought, agricultural drought, socioeconomic drought, drought definition","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/drought-definition","approotpath":"\/access\/monitoring\/dyk\/drought-definition","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/drought-indicators":{"name":"Drought Indicators","description":"Did You Know? A list of various drought indicators and indices used by drought analysts","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/drought-indicators","approotpath":"\/access\/monitoring\/dyk\/drought-indicators","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/colorado-basin-drought":{"name":"Drought in the Colorado River Basin","description":"Did You Know? The decade-long drought that devestated Lake Mead","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/colorado-basin-drought","approotpath":"\/access\/monitoring\/dyk\/colorado-basin-drought","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/drought-aridity":{"name":"Drought vs. Aridity","description":"Did You Know? The differences between drought and aridity","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/drought-aridity","approotpath":"\/access\/monitoring\/dyk\/drought-aridity","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/el-nino":{"name":"El Ni\u00f1o: A Historical Perspective","description":"Did You Know? Understanding potential impacts of El Ni\u00f1o across the United States based on previous El Ni\u00f1o events","keywords":"strong el ni\u00f1o, enso, elnino","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/el-nino","approotpath":"\/access\/monitoring\/dyk\/el-nino","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/500mb-flow":{"name":"Explanation of the 500 mb Flow","description":"Did You Know? Why meteorologists use the 500 millibar chart","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/500mb-flow","approotpath":"\/access\/monitoring\/dyk\/500mb-flow","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/future-drought":{"name":"Future Drought","description":"Did You Know? The nature of drought in the future","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/future-drought","approotpath":"\/access\/monitoring\/dyk\/future-drought","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/global-prcp-percentiles":{"name":"Global Precipitation Percentile Maps","description":"Did You Know? Mapping global precipitation climatological rankings","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/global-prcp-percentiles","approotpath":"\/access\/monitoring\/dyk\/global-prcp-percentiles","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/global-mntp-percentiles":{"name":"Global Temperature Anomaly Percentile Maps","description":"Did You Know? Mapping global temperature anomaly climatological rankings","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/global-mntp-percentiles","approotpath":"\/access\/monitoring\/dyk\/global-mntp-percentiles","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/global-precision":{"name":"Global Temperature Uncertainty","description":"Did You Know? Understanding and interpreting global temperature uncertainty","keywords":"global precision, global temperature anomaly","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/global-precision","approotpath":"\/access\/monitoring\/dyk\/global-precision","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/global-regions":{"name":"Global Regions Definitions","description":"Did You Know? Maps of global regions","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/global-regions","approotpath":"\/access\/monitoring\/dyk\/global-regions","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/groundwater":{"name":"Groundwater Drought Indicators","description":"Did You Know? How groundwarter is calculated","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/groundwater","approotpath":"\/access\/monitoring\/dyk\/groundwater","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/loess":{"name":"LOESS","description":"Did You Know? Locally estimated scatterplot smoothing","keywords":"filter","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/loess","approotpath":"\/access\/monitoring\/dyk\/loess","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/measuring-drought":{"name":"Measuring Drought","description":"Did You Know? Quantitative measures to determine drought severity","keywords":"Palmer Drought Indices, Palmer Drought Index, Palmer Z-Index, Palmer Crop Moisture Stress Index CMSI, Palmer Drought Severity Index, PDSI, Palmer Drought Index, PDI,Palmer Hydrological Drought Index, PHDI, Standardized Precipitation Index, spi","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/measuring-drought","approotpath":"\/access\/monitoring\/dyk\/measuring-drought","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/national-data-flow":{"name":"National Data Flow","description":"Did You Know? Data collection and processing at NCEI","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/national-data-flow","approotpath":"\/access\/monitoring\/dyk\/national-data-flow","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/nclimdiv-tmax-tmin":{"name":"nClimDiv Maximum and Minimum Temperatures","description":"Did You Know? Trends, rankings, and adjustments","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/nclimdiv-tmax-tmin","approotpath":"\/access\/monitoring\/dyk\/nclimdiv-tmax-tmin","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/palmer-history":{"name":"Palmer Drought Index","description":"Did You Know? A brief history of the Palmer Drought Index","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/palmer-history","approotpath":"\/access\/monitoring\/dyk\/palmer-history","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/potential-evapotranspiration":{"name":"Potential Evapotranspiration","description":"Did You Know? Determining the amount of water evaporated and transpired by plants in assessing drought","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/potential-evapotranspiration","approotpath":"\/access\/monitoring\/dyk\/potential-evapotranspiration","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/bastrop-lost-pines":{"name":"Reforestation of Bastrop Lost Pines","description":"Did You Know? The replanting effor of Bastrop State Park's Lost Pines after the most destructive wildfires in the Texas history","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/bastrop-lost-pines","approotpath":"\/access\/monitoring\/dyk\/bastrop-lost-pines","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/rcc":{"name":"Regional Climate Centers","description":"Did You Know? How RCCs support NOAA's climate services","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/rcc","approotpath":"\/access\/monitoring\/dyk\/rcc","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/rsi":{"name":"Regional Snowfall Index (RSI)","description":"Did You Know? Explaning the RSI","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/rsi","approotpath":"\/access\/monitoring\/dyk\/rsi","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/satellite-drought":{"name":"Satellite-Based Drought Indicators","description":"Did You Know? Using satellites to determine drought","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/satellite-drought","approotpath":"\/access\/monitoring\/dyk\/satellite-drought","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/soil-moisture-models":{"name":"Soil Moisture Water Balance Models","description":"Did You Know? Using models to get an idea of what the national soil moisture conditions are","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/soil-moisture-models","approotpath":"\/access\/monitoring\/dyk\/soil-moisture-models","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/sh-snowcover":{"name":"Southern Hemisphere Snow Cover Extent","description":"Did You Know? Why snow cover extent is not calculated for the Southern Hemisphere","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/sh-snowcover","approotpath":"\/access\/monitoring\/dyk\/sh-snowcover","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/spi-description":{"name":"Standardized Precipitation Index (SPI)","description":"Did You Know? A breif explaination of the SPI","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/spi-description","approotpath":"\/access\/monitoring\/dyk\/spi-description","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/sotc-rss":{"name":"Monthly Report RSS Feed","description":"Did You Know? The NCEI Monthly Report has an RSS feed.","keywords":"sotc rss","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/sotc-rss","approotpath":"\/access\/monitoring\/dyk\/sotc-rss","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/streamflow-indicators":{"name":"Streamflow Drought Indicators","description":"Did You Know? Calculating stremflow levels in determining drought","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/streamflow-indicators","approotpath":"\/access\/monitoring\/dyk\/streamflow-indicators","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/subtropical-highs":{"name":"Subtropical Highs","description":"Did You Know? The meteorological significance of subtropical highs","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/subtropical-highs","approotpath":"\/access\/monitoring\/dyk\/subtropical-highs","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/tornadocount":{"name":"Tornado Count","description":"Did You Know? The process of determing accurate tornado counts","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/tornadocount","approotpath":"\/access\/monitoring\/dyk\/tornadocount","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/us-climate-divisions":{"name":"U.S. Climate Divisions","description":"Did You Know? A background on the Divisional Dataset used at NCEI","keywords":"US Climate Divisions","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/us-climate-divisions","approotpath":"\/access\/monitoring\/dyk\/us-climate-divisions","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/us-normals":{"name":"U.S. Climate Normals","description":"Did You Know? Climatological normals for the United States and its territories","keywords":"US Climate Normals, us normals, u.s. normals, u.s. climate normals","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/us-normals","approotpath":"\/access\/monitoring\/dyk\/us-normals","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/drought-legend":{"name":"U.S. Drought Monitor Scale","description":"Did You Know? Five-tiered scale adopted by the USDM to quantify drought intensity","keywords":"US Drought Monitor Scale","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/drought-legend","approotpath":"\/access\/monitoring\/dyk\/drought-legend","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/ushcn-transition":{"name":"USHCN Version 2.5 Transition","description":"Did You Know? The transition to using USHCN v2.5 in September 2012","keywords":"","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/ushcn-transition","approotpath":"\/access\/monitoring\/dyk\/ushcn-transition","analytics":false,"monitoring":true,"hideProduct":true},"dyk\/water-demand-et":{"name":"Water Supply vs. Water Demand","description":"Did You Know? Precipitation versus evapotranspiration in determining drought","keywords":"Water Supply vs Water Demand, Water Demand vs. Water Supply, Water Demand vs Water Supply","categoryWeights":{"etc":15},"docrootpath":"\/monitoring-references\/dyk\/water-demand-et","approotpath":"\/access\/monitoring\/dyk\/water-demand-et","analytics":false,"monitoring":true,"hideProduct":true},"reference-maps":{"name":"Geographical Reference Maps","description":"U.S. Climate Divisions, U.S. Climate Regions, Contiguous U.S. Major River Basins as designated by the U.S. Water Resources Council, Miscellaneous regions in the Contiguous U.S., U.S. Census Divisions, National Weather Service Regions, the major agricultural belts in the Contiguous U.S. (Corn, Cotton, Primary Corn and Soybean, Soybean, Spring Wheat, Winter Wheat)","keywords":"US, geographic reference maps, U.S. Climate Regions, CONUS Climate Divisions, Alaska Climate Divisions, National Weather Service Regions, U.S. Census Divisions, U.S. River Basins, Corn Belt, Cotton Belt, Primary Hard Red Winter Wheat Belt, Primary Corn and Soybean Belt, Soybean Belt, Spring Wheat Belt, Winter Wheat Belt, Great Plains, Southern Plains and Gulf Coast, Rockies and Westward","doi":false,"scope":["National"],"categoryWeights":{"etc":12},"docrootpath":"\/monitoring-references\/maps\/","approotpath":"\/access\/monitoring\/reference-maps\/","content":"\/monitoring-content\/monitoring-references\/maps","analytics":true,"monitoring":true,"hideProduct":false},"nws-resources":{"name":"National Weather Service List of NCEI Resources","description":"A list of NCEI Resources compiled for our partners at the National Weather Service (NWS) to help NWS personnel navigate NCEI data, products and services to better help service customers","keywords":"","doi":false,"scope":["National"],"categoryWeights":{"etc":1},"docrootpath":"\/monitoring-references\/nws-resources\/","approotpath":"\/access\/monitoring\/nws-resources\/","content":"\/monitoring-content\/monitoring-references\/nws-resources","analytics":true,"monitoring":true,"hideProduct":false},"daily-weather-records":{"name":"Daily Weather Records","description":"U.S. and Global daily records compiled from a subset of stations in the Global Historical Climatological Network (GHCN)","keywords":"","doi":false,"scope":["National","Global"],"categoryWeights":{"temp":1,"prcp":1,"snowice":1,"extremes":1},"docrootpath":"https:\/\/www.ncdc.noaa.gov\/cdo-web\/datatools\/records","approotpath":"https:\/\/www.ncdc.noaa.gov\/cdo-web\/datatools\/records","monitoring":false,"hideProduct":false},"us-climate-normals":{"name":"Climate Normals","description":"Three-decade averages of climatological variables including temperature, precipitation, snowfall, heating and cooling degree days, frost\/freeze dates, and growing degree days","keywords":"rain","doi":false,"scope":["Global"],"categoryWeights":{"datasets":12},"docrootpath":"https:\/\/www.ncei.noaa.gov\/products\/land-based-station\/us-climate-normals","approotpath":"\/products\/land-based-station\/us-climate-normals","monitoring":false,"hideProduct":false},"cdr":{"name":"Climate Data Record (CDR) Program","description":"Climate records from satellite data","keywords":"","doi":false,"scope":["Global"],"categoryWeights":{"datasets":11},"docrootpath":"https:\/\/www.ncei.noaa.gov\/products\/climate-data-records","approotpath":"\/products\/climate-data-records","monitoring":false,"hideProduct":false},"crn":{"name":"U.S. Climate Reference Network (USCRN)","description":"NOAA's premiere surface reference network","keywords":"US Climate Reference Network, US CRN","doi":false,"scope":["Global"],"categoryWeights":{"datasets":10},"docrootpath":"https:\/\/www.ncei.noaa.gov\/access\/crn\/","approotpath":"\/access\/crn\/","monitoring":false,"hideProduct":false},"ersst":{"name":"Extended Reconstructed Sea Surface Temperature (ERSST)","description":"global monthly sea surface temperature dataset derived from the International Comprehensive Ocean\u2013Atmosphere Dataset (ICOADS)","keywords":"","doi":false,"scope":["Global"],"categoryWeights":{"datasets":9},"docrootpath":"https:\/\/www.ncei.noaa.gov\/products\/extended-reconstructed-sst","approotpath":"\/products\/extended-reconstructed-sst","monitoring":false,"hideProduct":false},"land-based-station":{"name":"Land-Based Station","description":"An integrated database of climate summaries from land surface stations across the globe that have been subjected to a common suite of quality assurance reviews","keywords":"Global Historical Climatology Network, GHCN","doi":false,"scope":["Global"],"categoryWeights":{"datasets":8},"docrootpath":"https:\/\/www.ncei.noaa.gov\/products\/land-based-station","approotpath":"\/products\/land-based-station","monitoring":false,"hideProduct":false},"homr":{"name":"Historical Observing Metadata Repository (HOMR)","description":"NCEI's integrated station history database that provides in situ or land-based station metadata","keywords":"","doi":false,"scope":["Global"],"categoryWeights":{"datasets":7},"docrootpath":"https:\/\/www.ncei.noaa.gov\/access\/homr\/","approotpath":"\/access\/homr\/","monitoring":false,"hideProduct":false},"ibtracs":{"name":"International Best Track Archive for Climate Stewardship (IBTrACS)","description":"Archive of tropical cyclone track data","keywords":"","doi":false,"scope":["Global"],"categoryWeights":{"datasets":6},"docrootpath":"https:\/\/www.ncei.noaa.gov\/products\/international-best-track-archive","approotpath":"\/products\/international-best-track-archive","monitoring":false,"hideProduct":false},"icoads":{"name":"International Comprehensive Ocean-Atmosphere Data Set (ICOADS)","description":"Largest collection of verified surface marine observations in the world","keywords":"","doi":false,"scope":["Global"],"categoryWeights":{"datasets":5},"docrootpath":"https:\/\/icoads.noaa.gov\/","approotpath":"https:\/\/icoads.noaa.gov\/","monitoring":false,"hideProduct":false},"isd":{"name":"Integrated Surface Database (ISD)","description":"global hourly and synoptic observations compiled from numerous sources into a single common ASCII format and common data model","keywords":"","doi":false,"scope":["Global"],"categoryWeights":{"datasets":4},"docrootpath":"https:\/\/www.ncei.noaa.gov\/products\/land-based-station\/integrated-surface-database","approotpath":"\/products\/land-based-station\/integrated-surface-database","monitoring":false,"hideProduct":false},"climdiv":{"name":"Gridded Climate Datasets (nClimGrid)","description":"Spatially-interpolated 5-km gridded dataset derived from Global Historical Climatology Network (GHCN) data","keywords":"","doi":false,"scope":["Global"],"categoryWeights":{"datasets":3},"docrootpath":"https:\/\/www.ncei.noaa.gov\/pub\/data\/cirs\/climdiv\/","approotpath":"\/pub\/data\/cirs\/climdiv\/","monitoring":true,"hideProduct":false},"noaaglobaltemp":{"name":"NOAA Merged Land Ocean Global Surface Temperature Analysis (NOAAGlobalTemp)","description":"Spatially gridded (5\u00b0 \u00d7 5\u00b0) monthly global surface temperature dataset","keywords":"","doi":false,"scope":["Global"],"categoryWeights":{"datasets":2},"docrootpath":"https:\/\/www.ncei.noaa.gov\/products\/land-based-station\/noaa-global-temp","approotpath":"\/products\/land-based-station\/noaa-global-temp","monitoring":false,"hideProduct":false},"paleoclimatology-data":{"name":"Paleoclimatology Data","description":"Paleoclimatology data derived from natural sources such as tree rings, ice cores, corals, and ocean and lake sediments","keywords":"World Data Service for Paleoclimatology, WDS Paleo, Applied Research Service for Paleoclimatology","doi":false,"scope":["Global"],"categoryWeights":{"datasets":1},"docrootpath":"https:\/\/www.ncei.noaa.gov\/products\/paleoclimatology","approotpath":"\/products\/paleoclimatology","monitoring":false,"hideProduct":false},"billions":{"name":"Billion-Dollar Weather and Climate Disasters","breadcrumb":"Billions","description":"Summary of U.S. billion-dollar weather and climate related disaster research, methodology, and data sources","keywords":"US Billion-dollar disasters, overview, mapping, time series, mapping, summary statistics, events, frequently asked questions, faq, references, statistics, costs, summary, events, descriptions, hurricanes, tropical cyclones, hurricanes, droughts, tornadoes, tornadic activity, severe storms, winter storms, wildfires, flooding, interactive, disaster research, mapping, frequency, national, U.S., United States, billz, billionz","doi":"10.25921\/stkw-7w73","scope":["National"],"categoryWeights":{"extremes":7,"stormswind":6,"droughtfire":13},"docrootpath":"\/billions\/","approotpath":"\/access\/billions\/","content":"\/monitoring-content\/billions","analytics":true,"monitoring":true,"hideProduct":false},"avlwx":{"name":"Asheville Weather Conditions","description":"Weather Conditions atop the Grove Arcade in Asheville, NC","keywords":"Asheville, Current, Weather, Asheville Weather, Asheville Current Weather, Current Weather Conditions, Asheville Current Weather Conditions, Conditions, Asheville Current Conditions, Current Conditions","doi":false,"author":"Jesse.Enloe@noaa.gov","categoryWeights":{"etc":1},"docrootpath":"\/avlwx\/","approotpath":"\/access\/asheville-weather\/","content":"\/monitoring-content\/avlwx","monitoring":false,"analytics":true,"hideProduct":true},"past-weather":{"name":"Past Weather","description":"View and download weather station observation history","keywords":"local, weather, observations, climate, weather, records, temperature, maximum temperature, minimum temperature, average temperature, precipication, snow, snowfall, snow depth, nomral, average, high, low, oberserved, observations, past wx, past-wx","doi":false,"categoryWeights":{"etc":1},"docrootpath":"https:\/\/www.ncei.noaa.gov\/access\/past-weather\/","approotpath":"\/access\/past-weather\/","content":"\/monitoring-content\/past-weather","monitoring":false,"analytics":true,"hideProduct":true},"climate-monitoring":{"name":"Climate Monitoring","description":"Climate Monitoring at the National Centers for Environmental Information","keywords":"climate monitoring, climate assessment, temperature, precipitation, drought monitoring, snow climatology, climate map, climate index, climate extremes, global anomalies, sea surface temperature, Palmer drought index","doi":false,"categoryWeights":[],"docrootpath":"\/climate-monitoring\/","approotpath":"\/access\/monitoring\/products\/","content":"\/monitoring-content\/climate-monitoring","monitoring":true,"analytics":false,"hideProduct":true,"hideSearch":true},"monitoring-template":{"name":"###PAGE-TITLE###","description":"###PAGE-DESCRIPTION###","keywords":"###PAGE-KEYWORDS###","doi":false,"categoryWeights":[],"docrootpath":"","approotpath":"","monitoring":true,"analytics":false,"hideProduct":true,"hideSearch":true},"template":{"name":"###PAGE-TITLE###","description":"###PAGE-DESCRIPTION###","keywords":"###PAGE-KEYWORDS###","doi":false,"categoryWeights":[],"docrootpath":"","approotpath":"","monitoring":false,"analytics":false,"hideProduct":true,"hideSearch":true},"404":{"name":"Page or Resource Not Found (404 Error)","description":"The National Centers for Environmental Information's (NCEI) climate monitoring and assessment of temperature, precipitation, drought monitoring, snow climatology, climate map, climate index, climate extremes, global anomalies, sea surface temperature, drought, etc","keywords":"climate monitoring, climate assessment, temperature, precipitation, drought monitoring, snow climatology, climate map, climate index, climate extremes, global anomalies, sea surface temperature, drought","doi":false,"categoryWeights":[],"docrootpath":"\/","approotpath":"\/","monitoring":false,"analytics":false,"hideProduct":true,"hideSearch":true}};
+const parameters = {"national":{"tavg":{"title":"National Temperature","location":"110","return":"value","timescales":[1,3],"map":"gridded-tavg-rank","highest":"Warmest","lowest":"Coolest","precision":2},"pcp":{"title":"National Precipitation","location":"110","return":"value","timescales":[1,3],"map":"gridded-prcp-rank","highest":"Wettest","lowest":"Driest","precision":2}},"global":{"tavg":{"title":"Global Temperature Anomaly","scope":"global","location":"globe","surface":"land_ocean","return":"anomaly","map":"map-blended-mntp","timescales":[1,"season"],"highest":"Warmest","lowest":"Coolest","precision":2},"pcp":{"title":"Global Precipitation Percentile","scope":"global","location":"globe","surface":"land_ocean","return":"percentile","map":"map-percentile-gpcp","timescales":[1,"season"],"highest":"Wettest","lowest":"Driest","precision":2}}};
+const endDates   = {"national":202609,"global":202609,"global-pcp":202609};
+const monthNames = [
+    '', 'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'
+];
+
+let init          = true;
+let scopes        = [];
+let scope         = 'all';
+let category      = undefined;
+let dataparameter = 'parameter-tavg';
+let datascope     = 'scope-national';
+
+$(document).ready(function(){
+    displayDynamicContent();
+    displayCategories();
+
+    window.addEventListener('resize', setListCss);
+    setListCss();
+
+    $('#toggle-latest').click(function(){
+        toggleLatest($('#latest').is(':visible'));
+    });
+});
+
+function toggleLatest(isVisible) {
+    $('#latest').slideToggle('slow', function(){
+        $('#toggle-latest span').text(isVisible ? '↓ Show' : '↑ Hide');
+    });
+}
+
+function displayDynamicContent() {
+    (async function fetchDataSequentially() {
+        for (const scope in parameters) {
+            const scopeParameters = parameters[scope];
+            const date = endDates[scope];
+
+            for (const parameter in scopeParameters) {
+                const attr = scopeParameters[parameter];
+                const paramDate = Number('date' in attr ? attr.date : date);
+
+                // Await the completion of getData before proceeding
+                await getData(scope, parameter, attr, paramDate);
+            }
+        }
+    })();
+
+    $('#data-parameter-select button').click(function(){
+        $('#data-parameter-select button').removeClass('selected');
+        $(this).addClass('selected');
+        dataparameter = $(this).data('dataparameter');
+        updateData();
+    });
+    $('#data-scope-select button').click(function(){
+        $('#data-scope-select button').removeClass('selected');
+        $(this).addClass('selected');
+        datascope = $(this).data('datascope');
+        updateData();
+    });
+}
+
+function updateData() {
+    $('#data-select button').removeClass('selected');
+    $(`#data-scope-select button[data-datascope="${datascope}"]`).addClass('selected');
+    //$(`#data-parameter-select button[data-dataparameter="${dataparameter}"]`).addClass('selected');
+
+    $('#data .data-entry').hide();
+    //$(`#data .data-entry.${datascope}.${dataparameter}`).show();
+    $(`#data .data-entry.${datascope}`).show();
+}
+
+function getData(scope, parameter, attr, date) {
+    const baseUrl = 'https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance';
+    const globalSurface = scope === 'global' ? `${encodeURIComponent(attr.surface)}/` : '';
+    const url = `${baseUrl}/${encodeURIComponent(scope)}/rankings/${encodeURIComponent(attr.location)}/${encodeURIComponent(parameter)}/${globalSurface}${Number(date)}/data.json`;
+
+    $.ajax({
+        url: url,
+        dataType: 'JSON'
+    }).done(function(jsonData){
+        parameter    = sanitizeHTML(parameter);
+        date         = Number(date);
+        attrScope    = sanitizeHTML(scope);
+        attrLocation = sanitizeHTML(attr.location);
+
+        const title = sanitizeHTML(jsonData.description.title).replace(' Rankings', '');
+        const units = sanitizeHTML(jsonData.description.units).
+            replace('Degrees Fahrenheit', '\u00b0F').
+            replace('Degrees Celsius', '\u00b0C').
+            replace('Inches', '\u0022').
+            replace('Millimeters', 'mm');
+        const basePeriod = sanitizeHTML(jsonData.description.mean
+            ? jsonData.description.mean
+            : jsonData.description.baseperiod
+        );
+        const year  = Number(date.toString().slice(0, 4));
+        const month = Number(date.toString().slice(-2));
+        const textTimescales = {
+            "ytd" : false,
+            "season" : false
+        };
+
+        $.each(['ytd', 'season'], function (ndx, textTs) {
+            attr.timescales = [ 1 ];
+            // check if "ytd" or "season" is in timescales
+            if ($.inArray(textTs, attr.timescales) !== -1) {
+                // remove text timescale from timescales
+                attr.timescales.splice(attr.timescales.indexOf(textTs), 1);
+
+                let textTs = month;
+                if (textTs === 'season') {
+                    // season: 3-month period ending February, May, August, and November
+                    if (month != 2 && month != 5 && month != 8 && month != 11) {
+                        return;
+                    }
+                    intTs = 3;
+                }
+
+                // if integer timescale isn't already in timescales
+                if ($.inArray(intTs, attr.timescales) === -1) {
+                    // add integer timescale to timescales
+                    attr.timescales.push(intTs);
+                    // and sort
+                    attr.timescales.sort();
+
+                    // set reference
+                    textTimescales[textTs] = intTs;
+                }
+            }
+        });
+
+        $.each(attr.timescales, function (ndx, timescale) {
+            if (!Number.isInteger(timescale)) {
+                return;
+            }
+
+            let mapDate;
+            if (attrScope === 'global' && timescale > 1) {
+                let begYear = Number(date.toString().slice(0, 4));
+                let begMonth = month - (timescale - 1);
+
+                if (begMonth < 1) {
+                    begYear -= 1;
+                    begMonth += 12;
+                }
+
+                mapDate = `${begYear}${String(begMonth).padStart(2, '0')}-${date}`;
+            } else {
+                mapDate = date;
+            }
+
+            const attrMap = sanitizeHTML(attr.map);
+            const map = attrScope === 'national'
+                ? `/access/monitoring/us-maps/${attrMap}/${timescale}/${date}.png`
+                : `/monitoring-content/sotc/global/${attrMap}/${attrMap}-${mapDate}.png`;
+            const tsKey    = `${timescale}-month`;
+            const value    = 'value' in jsonData.data[tsKey] ? jsonData.data[tsKey].value : null;
+            const id       = escapeHtml(`${scope}-${attr.location}-${parameter}-${timescale}-${date}`);
+            const lowRank  = Number(jsonData.data[tsKey].lowRank);
+            const highRank = Number(jsonData.data[tsKey].highRank);
+            const por      = Math.abs(highRank + lowRank) + 1;
+            const anom     = jsonData.data[tsKey].departure;
+
+            const rank     = lowRank < highRank ? lowRank : highRank;
+            const hiloest  = sanitizeHTML(lowRank < highRank ? attr.lowest : attr.highest);
+            const anomText = anom === 0
+                ? 'equal to'
+                : `${anom}${units} ${anom > 0 ? 'above' : 'below'}`;
+
+            const scopeClass = `scope-${attrScope}`;
+            const tsClass = `timescale-${timescale}` +
+                (textTimescales[timescale]
+                    ? ` timescale-${Object.keys(textTimescales).find(key => textTimescales[key] === timescale)}`
+                    : '');
+            const paramClass = `parameter-${['land_ocean', 'land', 'ocean'].includes(parameter) ? 'tavg' : parameter}`;
+
+            const dataEntry = document.createElement('div');
+            dataEntry.classList.add('data-entry', 'relative', scopeClass, paramClass, tsClass);
+
+            /* Loader */
+            /**********/
+            const loaderOverlay = document.createElement('div');
+            dataEntry.appendChild(loaderOverlay);
+            loaderOverlay.classList.add('loader-overlay');
+            loaderOverlay.id = `loader-${id}`;
+            const noaaLoader = document.createElement('div');
+            loaderOverlay.appendChild(noaaLoader);
+            noaaLoader.classList.add('noaa-loader');
+            const loaderImg = document.createElement('img');
+            loaderImg.src = '/monitoring-content/lib/images/noaa-loader.gif';
+            noaaLoader.appendChild(loaderImg);
+            /**********/
+            /* Loader */
+
+            const dataValuesRow = document.createElement('div');
+            dataEntry.appendChild(dataValuesRow);
+            dataValuesRow.className = 'data-values';
+
+            const parameterColumn = document.createElement('div');
+            dataValuesRow.appendChild(parameterColumn);
+            parameterColumn.className = 'parameter';
+            const dateHeader = document.createElement('div');
+            parameterColumn.appendChild(dateHeader);
+            dateHeader.className = 'bold';
+            dateHeader.innerHTML = getDateDisplay(date, timescale);
+            const attrTitle = document.createElement('div');
+            parameterColumn.appendChild(attrTitle);
+            attrTitle.innerHTML = sanitizeHTML(attr.title).
+                replace('Temperature', 'Temp<span class=\"longname\">erature</span>').
+                replace('Anomaly', 'Anom<span class=\"longname\">aly</span>').
+                replace('Precipitation', 'Precip<span class=\"longname\">itation</span>');
+
+            if (value) {
+                const dataValueColumn = document.createElement('div');
+                dataValuesRow.appendChild(dataValueColumn);
+                dataValueColumn.classList.add('value', 'right');
+                const valueHeader = document.createElement('div');
+                dataValueColumn.appendChild(valueHeader);
+                valueHeader.className = 'bold';
+                valueHeader.textContent = 'Value';
+                const valueDisplay = document.createTextNode(value.toFixed(attr.precision) + units);
+                dataValueColumn.appendChild(valueDisplay);
+            }
+
+            const anomalyColumn = document.createElement('div');
+            dataValuesRow.appendChild(anomalyColumn);
+            anomalyColumn.classList.add('anom', 'right');
+            const anomalyHeader = document.createElement('div');
+            anomalyColumn.appendChild(anomalyHeader);
+            anomalyHeader.className = 'bold';
+            anomalyHeader.innerHTML = 'Anom<span class="longname">aly</span>';
+            const anomDisplay = document.createTextNode((anom > 0 ? '+' : '') + anom.toFixed(attr.precision) + units);
+            anomalyColumn.appendChild(anomDisplay);
+
+            const rankColumn = document.createElement('div');
+            dataValuesRow.appendChild(rankColumn);
+            rankColumn.classList.add('rank', 'right');
+            const rankHeader = document.createElement('div');
+            rankColumn.appendChild(rankHeader);
+            rankHeader.className = 'bold';
+            rankHeader.textContent = 'Rank';
+            const rankDisplay = document.createTextNode(rank > 1 && rank < por ? addOrdinalSuffix(rank) : 'Record');
+            rankColumn.appendChild(rankDisplay);
+            const hiLoDiv = document.createElement('div');
+            hiLoDiv.className = 'hi-lo-est';
+            hiLoDiv.textContent = ` ${hiloest}`;
+            rankColumn.appendChild(hiLoDiv);
+
+            const mapRow = document.createElement('div');
+            dataEntry.appendChild(mapRow);
+            mapRow.classList.add('map', 'center', attrScope + '-map');
+
+            const mapAnchor = document.createElement('a');
+            mapRow.appendChild(mapAnchor);
+            mapAnchor.href = map;
+            mapAnchor.dataset.scope = attrScope;
+            mapAnchor.dataset.parameter = parameter;
+            mapAnchor.dataset.timescale = timescale;
+            mapAnchor.dataset.return = attr.return;
+            mapAnchor.dataset.date = date;
+            const mapImg = document.createElement('img');
+            mapAnchor.appendChild(mapImg);
+            mapImg.src = map;
+            mapImg.setAttribute('width', '100%')
+            //mapImg.style.width = '100%';
+            mapImg.alt = title.replace(`${monthNames[month]} ${year}`, getDateDisplay(date, timescale, false));
+
+            $('#data').append(dataEntry);
+
+            $(mapImg).on('load', function() {
+                $(`#loader-${id}`).remove();
+            }).on('error', function() {
+                $(`#loader-${id}`).remove();
+            });
+
+
+            imgClick();
+            $('.data-entry .map a').click(monitoringMapClick);
+
+            updateData();
+        });
+    }).fail(function(){
+        goBackOneMonth(scope, parameter, attr, date);
+    });
+}
+
+function goBackOneMonth(scope, parameter, attr, date){
+    date = Number(date);
+    let year  = Number(date.toString().slice(0, 4));
+    let month = Number(date.toString().slice(-2)) - 1;
+    if (month < 1) {
+        year -= 1;
+        month += 12;
+    }
+    const currentDate = new Date();
+
+    // Don't keep going back past previous year
+    if (year >= currentDate.getFullYear() - 1) {
+        date = Number(`${year}${String(month).padStart(2, '0')}`);
+        getData(scope, parameter, attr, date);
+    } else {
+        return false;
+    }
+}
+
+function monitoringMapClick(){
+    const mapScope     = sanitizeHTML($(this).data('scope'));
+    const mapScopeName = mapScope.charAt(0).toUpperCase() + mapScope.slice(1);
+    const mapTimescale = Number($(this).data('timescale'));
+    const mapParameter = sanitizeHTML($(this).data('parameter'));
+    //const mapReturn    = sanitizeHTML($(this).data('return'));
+    const date         = Number($(this).data('date'));
+    const mapsLinkDate = date;
+
+    // global seasonal maps
+    if (mapScope === 'global' && mapTimescale === '3') {
+        let mapYear  = date.toString().slice(0, 4);
+        let mapMonth = date.toString().slice(-2);
+
+        if (mapMonth === '02') {
+            mapsLinkDate = mapYear + '14';
+        } else if (mapMonth === '05') {
+            mapsLinkDate = mapYear + '15';
+        } else if (mapMonth === '08') {
+            mapsLinkDate = mapYear + '16';
+        } else if (mapMonth === '11') {
+            mapsLinkDate = mapYear + '17';
+        }
+    }
+
+    const modalFooter = document.createElement('div');
+    modalFooter.className = 'modal-footer';
+    $('#image-modal .modal-dialog .modal-content').append(modalFooter);
+
+    // Maps
+    const mapsAnchor = document.createElement('a');
+    modalFooter.appendChild(mapsAnchor);
+    mapsAnchor.classList.add('btn', 'btn-primary');
+    mapsAnchor.href = `/access/monitoring/${
+       mapScope === 'global'
+            ? 'ghcn-gridded-products/maps'
+            : `us-maps/maps/${mapTimescale}`
+    }/${mapsLinkDate}`;
+    mapsAnchor.textContent = `${mapScopeName} Maps`;
+
+    // Climate at a Glance
+    const cagAnchor = document.createElement('a');
+    modalFooter.appendChild(cagAnchor);
+    cagAnchor.classList.add('btn', 'btn-primary');
+    cagAnchor.href = `/access/monitoring/climate-at-a-glance/${
+        mapScope === 'national'
+            ? `county/mapping/110/${mapParameter}/${date}/${mapTimescale}`
+            : `${mapScope}/mapping/${mapParameter}/${date}`/* + `/${mapReturn}`*/
+    }`;
+    cagAnchor.textContent = 'Climate at a Glance';
+
+    // Monthly Report
+    const sotcAnchor = document.createElement('a');
+    modalFooter.appendChild(sotcAnchor);
+    sotcAnchor.classList.add('btn', 'btn-primary');
+    sotcAnchor.href = `/access/monitoring/monthly-report/${mapScope}/${date}`;
+    sotcAnchor.textContent = `${mapScopeName} Climate Report`;
+
+    // Close
+    const closeButton = document.createElement('button');
+    modalFooter.appendChild(closeButton);
+    closeButton.className = 'btn';
+    closeButton.type = 'button';
+    closeButton.dataset.bsDismiss = 'modal';
+    closeButton.textContent = 'Close';
+}
+
+function addOrdinalSuffix(num) {
+    if (isNaN(num) || !Number.isInteger(num) ||  num < 1) {
+        return num;
+    }
+
+    if (num % 100 >= 11 && num % 100 <= 13) {
+        return num + "th";
+    }
+
+    switch (num % 10) {
+        case 1:
+            return num + "st";
+        case 2:
+            return num + "nd";
+        case 3:
+            return num + "rd";
+        default:
+            return num + "th";
+    }
+}
+
+function getDateDisplay(date, timescale, tags = true){
+    date = Number(date);
+    timescale = Number(timescale);
+
+    let dateDisplay = '';
+    const year = date.toString().slice(0, 4);
+    const nmon = Number(date.toString().slice(-2));
+
+    if (timescale > 1) {
+        let begYear  = date.toString().slice(0, 4);
+        let begMonth = Number(String(date).slice(-2)) - (timescale - 1);
+
+        if (begMonth < 1) {
+            begYear -= 1;
+            begMonth += 12;
+        }
+
+        if (tags) {
+            dateDisplay = monthNames[begMonth].replace(/(\w{3})(\w+)/, '$1<span class="longname">$2</span>');
+        } else {
+            dateDisplay = monthNames[begMonth];
+        }
+        dateDisplay += begYear < year ? ` ${begYear}-` : '-';
+    }
+
+    if (tags) {
+        dateDisplay += monthNames[nmon].replace(/(\w{3})(\w+)/, '$1<span class="longname">$2</span>');
+     } else {
+        dateDisplay += monthNames[nmon];
+     }
+     dateDisplay += ` ${year}`;
+
+    return dateDisplay;
+}
+
+function displayCategories() {
+    $('#categories').html('<ul></ul>');
+    $.each(categories, function(cat, name){
+        $('#categories ul').append(
+            `<li id="${cat}"><a href="#${cat}" class="category" data-category="${cat}">${name}</a></li>`
+        );
+    });
+
+    // initial category view from hash or first category in list
+    const initCat = (window.location.hash && window.location.hash.substring(1,) in categories
+        ? window.location.hash.substring(1,)
+        : Object.keys(categories)[0]);
+
+    categorySelect(initCat);
+
+    $('.category').click(function(){
+        categorySelect($(this).data('category'));
+        return false;
+    })
+}
+
+function categorySelect(reqCategory) {
+    category = sanitizeHTML(reqCategory);
+    if (category in categories) {
+        $('#categories ul li').removeClass('selected');
+        $(`#categories ul li#${category}`).addClass('selected');
+        displayProductsByCategory(category);
+
+        if (!init) {
+            if (category === 'all') {
+                window.history.pushState({ category: category }, null, window.location.pathname);
+                window.location.hash = ''; // Explicitly remove the hash
+            } else {
+                window.history.pushState({ category: category }, null, `#${category}`);
+            }
+        }
+        init = false;
+    }
+}
+
+function displayProductsByCategory(reqCategory) {
+    scopes = [];
+    $('#products').html('');
+
+    $.each(products, function(prod, product){
+        if (
+            product.hideProduct !== true &&
+            'categoryWeights' in product &&
+            (reqCategory in product.categoryWeights || reqCategory === 'all')
+        ) {
+            appendProduct(product.approotpath, product, reqCategory);
+        }
+    });
+
+    sortList(reqCategory, (reqCategory === 'all' || reqCategory === 'dataset' ? false : true));
+    setListCss();
+    addScopes();
+}
+
+function appendProduct(url, product, reqCategory){
+    // add scopes
+    let scopeClass = '';
+    $.each(product.scope, function(ndx, s){
+        scopeClass += ` ${s.toLowerCase().replace(' ', '-')}`;
+        if (!scopes.includes(s)) scopes.push(s);
+    });
+
+    const sort = String(product.categoryWeights?.[reqCategory] ?? 0).padStart(2, '0');
+    $('#products').append(`
+        <a class="card content-card product all${scopeClass}" data-sort="sort${sort}" href="${url}">
+            <div class="card-body card-title">
+                ${product.name.replace('El Nino', 'El Ni&ntilde;o')}
+            </div>
+            ${product.description
+                ? `<div class="card-body card-description">
+                     ${product.description.replace('El Nino', 'El Ni&ntilde;o')}
+                    </div>`
+                : ''
+            }
+            <div class="card-body">
+                <button class="btn btn-primary">Access Now</button>
+            </div>
+        </a>
+    `);
+}
+
+function addScopes(){
+    if (scopes.length > 1 && $('#products .card').length > 1) {
+        $('#scopes-div').html(`
+            <ul id="scopes" class="tabs">
+                <li id="show-all" class="${scope === 'all' ? 'selected' : ''}">
+                    <a data-scope="all" href="#">All</a>
+                </li>
+            </ul>
+        `);
+        $('#scopes').removeClass('no-scopes');
+        $.each(scopes, function(ndx, s){
+            let thisScope = s.toLowerCase().replace(' ', '-');
+            $('#scopes').append(`
+                <li id="show-${thisScope}"${scope === thisScope ? ' class="selected"' : ''}>
+                    <a data-scope="${thisScope}" href="#">${s}</a>
+                </li>
+            `);
+        });
+
+        if ($('#scopes li').hasClass('selected')) {
+            $('.product').hide();
+            $(`.${scope}`).show();
+        } else {
+            $('#scopes li').removeClass('selected');
+            $('#scopes li:first-of-type').addClass('selected');
+        }
+
+        $('#scopes a').click(function(){
+            scope = $(this).data('scope');
+            scopeChange();
+            return false;
+        });
+    } else {
+        $('#scopes').addClass('no-scopes');
+        $('.product').show();
+    }
+}
+
+function scopeChange() {
+    $('#scopes li').removeClass('selected');
+    $(`#show-${scope}`).addClass('selected');
+    $('.product').hide();
+    $(`.${scope}`).show();
+    setListCss();
+}
+
+function offSearchFocus(){
+    if ($('#search-products').val() === '') {
+        categorySelect(category);
+    }
+}
+
+function setListCss() {
+    const length = $(`#products .card.${scope}`).length;
+    let pct = 33.3;
+
+    if (window.innerWidth >= 992) {
+        $('#scopes, #show-north-america').show();
+        $('#categories').css('paddingTop', '3em');
+        pct = length < 3 ? 100 / length : 33.3;
+    } else if (window.innerWidth >= 768) {
+        $('#scopes').show();
+        $('#show-north-america').hide();
+        $('#categories').css('paddingTop', '3em');
+        if (scope === 'north-america') {
+            scope = 'all';
+            scopeChange();
+        }
+        pct = length === 1 ? 100 : 50;
+    } else {
+        if (scope !== 'all') {
+            scope = 'all';
+            scopeChange();
+        }
+        $('#scopes').hide();
+        $('#categories').css('paddingTop', '0.5em');
+        pct = 100;
+    }
+
+    $('#products .card').css('flex', `0 0 calc(${pct}% - 10px)`);
+}
+
+function sortList(reqCategory, reverse) {
+    const items = $('#products > ul > li').get();
+
+    items.sort((a, b) => {
+        const keyA = reqCategory === 'all' || reqCategory === 'dataset' ? $(a).text() : $(a).data('sort');
+        const keyB = reqCategory === 'all' || reqCategory === 'dataset' ? $(b).text() : $(b).data('sort');
+
+        if (keyA === keyB) {
+            return 0;
+        }
+
+        return reverse ? (keyA < keyB ? 1 : -1) : (keyA > keyB ? 1 : -1);
+    });
+
+    $('#products ul').append(items);
+}</script>
+
+
+                </div>
+            </div>
+        </main>
+        <footer role="contentinfo">
+            <div class="ncei-header-footer-container">
+                <div class="ncei-header-footer">
+                    <div class="ncei-header-footer-inner">
+                        <div class="ncei-footer-half-width">
+                            <div class="ncei-footer-logo">
+                                <a href="https://www.ncei.noaa.gov">
+                                    <img src="/monitoring-content/lib/images/ncei/logo_bw.svg" title="Link to NCEI's Homepage" alt="Link to NCEI's Homepage">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ncei-footer-quarter-width">
+                            <p class="ncei-header-footer-title">FOLLOW US</p>
+                            <ul>
+                                <li>
+                                    <a href="https://www.facebook.com/NOAANCEI/">
+                                        @NOAANCEI
+                                        <img src="/monitoring-content/lib/images/ncei/facebook-icon.png" width="100" height="100" title="NCEI Facebook" alt="NCEI Facebook">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/noaadata/">
+                                        @NOAAData
+                                        <img src="/monitoring-content/lib/images/ncei/instagram-icon.png" width="100" height="100" title="NOAA Data Instagram" alt="NOAA Data Instagram">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/NOAANCEI">
+                                        @NOAANCEI
+                                        <img src="/monitoring-content/lib/images/ncei/logo-x.png" width="100" height="102" title="NOAA NCEI Twitter" alt="NOAA NCEI Twitter">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.ncei.noaa.gov/news.xml">
+                                        News Feed
+                                        <img src="/monitoring-content/lib/images/ncei/rss-icon.png" width="100" height="100" title="NCEI RSS Feed" alt="NCEI RSS Feed">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ncei-footer-quarter-width">
+                            <p class="ncei-header-footer-title">CONTACT US</p>
+                            <ul>
+                                <li><a href="mailto:ncei.info@noaa.gov">Email: ncei.info@noaa.gov</a></li>
+                                <li><a href="tel:8282714800">Phone: (828) 271-4800</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="/cmb-lib/js/back-to-top.js"></script>
+        <script src="https://touchpoints.app.cloud.gov/touchpoints/7786849c.js" async></script>
+        <script async src="https://siteimproveanalytics.com/js/siteanalyze_6294131.js"></script>
+    <script id="_fed_an_ua_tag" type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NOAA"></script></body>
+</html>

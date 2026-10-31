@@ -1,0 +1,488 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+
+<title>NOAA-USAID ITWCVP</title>
+
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta content="NCEP Web Team" name="GENERATOR">
+
+<link rel="stylesheet" href="/nwscwi/main.css" type="text/css">
+<link rel="stylesheet" href="./css/styles.css" type="text/css">
+
+</head>
+
+<body leftmargin="0" background="/nwscwi/background-white.gif" topmargin="0" rightmargin="0" marginheight="0" marginwidth="0">
+
+
+<table cellspacing="0" cellpadding="0" width="100%" border="0" background="/nwscwi/topbanner.jpg" >
+	<tbody>
+		<tr>
+			<td align="right" height="19">
+				<a href="#contents"><img height="1" alt="Skip Navigation Links" src="/nwscwi/skipgraphic.gif" width="1" border="0"></a>
+				<a href="https://www.weather.gov/" class="homepagelinks"><SPAN class="nwslink">www.weather.gov</span></a>&nbsp;
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!-- -->
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+	<tbody>
+		<tr>
+			<td rowSpan="2"><A href="https://www.noaa.gov/">
+			<img height="78" alt="NOAA logo - Click to go to the NOAA home page" src="/nwscwi/noaaleft.jpg" width="85" border="0"></a></td>
+			<td align="left"><img height="20" alt="National Weather Service" src="/nwscwi/nws_title.jpg" width="500" border="0"></td>
+			<td rowspan="2" width="100%" background="/nwscwi/ncep_bkgrnd.jpg">&nbsp;</td>
+			<td rowspan="2" align="right"><a href="https://www.weather.gov/">
+			<img height="78" alt="NWS logo - Click to go to the NWS home page" src="/nwscwi/nwsright.jpg" width="85" border="0"></a></td>
+		</tr>
+		<tr>
+			<td><img height="58" alt="Climate Prediction Center" src="/nwscwi/cpc.jpg" width="500" border="0"></td>
+		</tr>
+	</tbody>
+</table>
+<!-- -->
+<table cellspacing="0" cellpadding="0" width="100%" background="/nwscwi/navbkgrnd.gif" border="0">
+	<tbody>
+		<tr>
+			<td align="left" width="135"><img height="23" alt="" src="/nwscwi/navbarleft.jpg" width="94" border="0"></td>
+			<td class="nav" align="center" width="10%">
+				<a href="/" class="menu" title="to the climate prediction center home page">home</a>
+			</td>
+			<td class="nav" align="center" width="10%">
+				<a href="/products/site_index.shtml" class="menu" title="to Climate Prediction Center site map">Site Map</a>
+			</td>
+			<td class="nav" align="right" width="10%">
+				<a href="https://www.weather.gov/news/" class="menu" title="to National Weather Service news page">News</a>
+			</td>
+			<td class="nav" align="right" width="19%">
+				<a href="https://www.weather.gov/organization/" class="menu">Organization</a>
+			</td>
+			<td class="searchinput" align="right" width="30%">
+				<form method="get" action="https://search.usa.gov/search" style="margin-bottom:0; margin-top:0;">
+				<label for="Search"><span class="yellow">Search</span>&nbsp;&nbsp;</label>
+				<input type="hidden" name="affiliate" value="weather.gov" />
+				<input type="hidden" name="v:project" value="firstgov" />
+				<input name="query" type="text" value="" size="20" maxlength="256" id="Search" />
+				<input type="submit" value="Go" />
+				</form>
+			</td>
+			<td align="right"><img height="23" alt="" src="/nwscwi/navbarendcap.jpg" width="24" border="0"></td>
+		</tr>
+	</tbody>
+</table>       <!-- Use virtual include, because this should be in a common place within your DocumentRoot. -->
+
+<table cellspacing="0" cellpadding="0" width="950" border="0">
+
+  <tr valign="top">
+  
+    <td width="137"><br>
+      <table cellspacing="0" cellpadding="2" width="137" border="0">
+  <!-- Do not remove this section. You will need this when the City,St/zip search is implemented nationwide.-->
+  <!-- <tr align="left" valign="top">
+                <td class="searchinput">
+                  <div id="Layer2" style="position:absolute; width:200px; height:115px; z-index:2; visibility: hidden">Search by city or zip code. Press enter or select the go button to submit request</div>
+                  <form method="POST" action="http://www.srh.noaa.gov/zipcity.php">
+                  <span class="yellow">Local forecast by<br>&quot;City, St&quot; or Zip Code</span><br>
+                  <input type="text" name="inputstring" size="9" value="City, St">
+                  <input type="submit" name="Go2" value="Go"></form></td>
+        </tr> -->
+  <tr>
+    <td class="searchinput" align="left">
+      <form
+        method="get"
+        action="http://firstgovsearch.gov/search"
+        style="margin-bottom: 0; margin-top: 0"
+      >
+        <label for="Search">
+          <span class="yellow">Search&nbsp;the CPC</span></label
+        >
+        <input type="hidden" name="affiliate" value="ncep.noaa.gov" />
+        <input
+          type="hidden"
+          name="v:sources"
+          value="firstgov-affiliates-search"
+        />
+        <input type="hidden" name="v:project" value="firstgov" />
+        <input type="hidden" name="query" value="site:www.cpc.ncep.noaa.gov" />
+        <input
+          name="query"
+          type="text"
+          value=""
+          size="10"
+          maxlength="256"
+          id="Search"
+        />
+        <input type="submit" value="Go" />
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td class="white" id="menuitem">
+      <br />
+      <span class="yellow"
+        ><a href="/products/international/menus/intro.html"
+          >Introduction</a
+        ></span
+      ><br /><br />
+
+      <span class="yellow">USRCC</span><br />
+      &nbsp;&nbsp;&nbsp;<a href="http://usregionalclimatecenter.noaa.gov"
+        >US Reg Clim Center</a
+      ><br />
+      <br />
+
+      <span class="yellow">Climate Forecasts</span><br />
+      &nbsp;&nbsp;&nbsp;<a href="/products/international/nmme/nmme.shtml"
+        >NMME</a
+      ><br />
+      <br />
+
+      <span class="yellow">Short & Medium Range Forecasts</span><br />
+      &nbsp;&nbsp;&nbsp;<a
+        href="/products/international/cpci/data/africa_region.shtml"
+        >GFS & GEFS</a
+      ><br />
+      <br />
+      <span class="yellow">Special Products</span><br />
+      &nbsp;&nbsp;&nbsp;<a href="/products/international/africa/africa.shtml"
+        >Africa</a
+      ><br />
+      &nbsp;&nbsp;&nbsp;<a href="/products/international/casia/casia.shtml"
+        >Central Asia</a
+      ><br />
+      &nbsp;&nbsp;&nbsp;<a
+        href="/products/international/camerica/camerica.shtml"
+        >C.Amer & Caribbean</a
+      ><br />
+
+       &nbsp;&nbsp;&nbsp;<a
+        href="/products/international/nsamerica/nsamerica.shtml"
+        >N. South America</a
+      ><br />
+
+      &nbsp;&nbsp;&nbsp;<a href="/products/international/sasia/sasia.shtml"
+        >South Asia</a
+      ><br />
+      &nbsp;&nbsp;&nbsp;<a href="/products/international/yemen_rfe/yemen.shtml"
+        >Yemen</a
+      ><br />
+      <br />
+
+      <span class="yellow">Subseasonal</span><br />
+      &nbsp;&nbsp;&nbsp;<a
+        href="https://www.cpc.ncep.noaa.gov/products/international/drought/cons_precip.shtml"
+        >Prcp consolidation</a
+      >
+      <br />
+
+      <br />
+      <span class="yellow">Drought</span><br />
+      &nbsp;&nbsp;&nbsp;<a
+        href="https://www.cpc.ncep.noaa.gov/products/international/drought/drought.shtml"
+        >Monitoring and Forecasting</a
+      ><br />
+
+            <br />
+      <span class="yellow">Flood</span><br />
+      &nbsp;&nbsp;&nbsp;<a
+        href="https://ftp.cpc.ncep.noaa.gov/International/flood/flood_outlook_experimental.html"
+        >Flood Forecasting</a
+      ><br />
+
+      <br />
+      <span class="yellow">Heat Hazards</span><br />
+      &nbsp;&nbsp;&nbsp;<a href="https://www.cpc.ncep.noaa.gov/products/international/heathazard/index.html"
+        >Monitoring and Forecasting</a
+      ><br />
+      <br />
+
+      <span class="yellow">FEWS.NET Support </span><br />
+      &nbsp;&nbsp;&nbsp;<a
+        href="https://www.cpc.ncep.noaa.gov/products/international/FEWS_REPORT/"
+        >Monthly Country Reports</a
+      ><br />
+      <br />
+
+      <span class="yellow">General Products</span><br />
+      &nbsp;&nbsp;&nbsp;<a href="/products/international/global/global.shtml"
+        >Global</a
+      ><br />
+      &nbsp;&nbsp;&nbsp;<a
+        href="/products/international/australia/australia.shtml"
+        >Southeast Asia</a
+      ><br />
+      &nbsp;&nbsp;&nbsp;<a href="/products/international/easia/easia.shtml"
+        >East Asia</a
+      ><br />
+      &nbsp;&nbsp;&nbsp;<a href="/products/international/europe/europe.shtml"
+        >Europe</a
+      ><br />
+      <!--&nbsp;&nbsp;&nbsp;<a href="/products/international/australia/australia.shtml">Maritime</a><br> -->
+      <!--&nbsp;&nbsp;&nbsp;<a href="/products/international/casia/casia.shtml">Middle East</a><br> -->
+      <!--&nbsp;&nbsp;&nbsp;<a href="/products/international/namerica/namerica.shtml">North America</a><br>-->
+      &nbsp;&nbsp;&nbsp;<a href="http://www.cpc.ncep.noaa.gov/">North America</a
+      ><br />
+      &nbsp;&nbsp;&nbsp;<a
+        href="/products/international/samerica/samerica.shtml"
+        >South America</a
+      ><br />
+      <br />
+      <span class="yellow">Ocean Regions</span><br />
+      &nbsp;&nbsp;&nbsp;<a href="/products/international/ocean_monitoring/pacific/PO_monitoring_fcsts/po_index.shtml"
+        >Pacific</a
+      ><br />
+      &nbsp;&nbsp;&nbsp;<a
+        href="/products/international/ocean_monitoring/atlantic/AO_monitoring_fcsts/ao_index.shtml"
+        >Atlantic</a
+      ><br />
+      <!--&&nbsp;&nbsp;&nbsp;<a href="/products/international/natl/natl.shtml">North Atlantic</a><br>-->
+      <!--&&nbsp;&nbsp;&nbsp;<a href="/products/international/satl/satl.shtml">South Atlantic</a><br>-->
+      &nbsp;&nbsp;&nbsp;<a href="https://www.cpc.ncep.noaa.gov/products/international/ocean_monitoring/indian/IO_monitoring_fcsts/io_index.shtml"
+        >Indian </a
+      ><br />
+      &nbsp;&nbsp;&nbsp;<a href="/products/international/tc/tc.shtml"
+        >Cyclone Monitoring</a
+      ><br />
+      <br />
+      <span class="yellow">CPC Briefing Pages</span><br />
+      &nbsp;&nbsp;&nbsp;<a
+        href="http://www.cpc.ncep.noaa.gov/products/JAWF_Monitoring/"
+        >JAWF</a
+      ><br />
+      &nbsp;&nbsp;&nbsp;<a
+        href="http://www.cpc.ncep.noaa.gov/products/Global_Monsoons/Global-Monsoon.shtml"
+        >Global Monsoons</a
+      ><br />
+      &nbsp;&nbsp;&nbsp;<a
+        href="http://www.cpc.ncep.noaa.gov/products/precip/CWlink/MJO/index.primjo.html"
+        >Global Hazards</a
+      ><br />
+      <br />
+      <span class="yellow">NCEP CFS</span><br />
+      &nbsp;&nbsp;&nbsp;<a
+        href="http://www.cpc.ncep.noaa.gov/products/people/wwang/cfs_fcst/"
+        >Expl. Forecasts</a
+      ><br />
+      <br />
+      <span class="yellow">African Training Desk</span><br />
+      &nbsp;&nbsp;&nbsp;<a
+        href="/products/international/menu/intro.shtml#Introduction"
+        >Introduction</a
+      ><br />
+      &nbsp;&nbsp;&nbsp;<a
+        href="/products/international/menu/intro.shtml#Requirements"
+        >Requirements</a
+      ><br />
+      &nbsp;&nbsp;&nbsp;<a
+        href="/products/international/menu/intro.shtml#Curriculum"
+        >Curriculum</a
+      ><br />
+      &nbsp;&nbsp;&nbsp;<a href="/products/international/visitors/"
+        >Visitor Countries</a
+      ><br /><br />
+      <br />
+      <span class="yellow">Training Program</span><br />
+      <br />
+      <span class="yellow">Other Links</span><br />
+      &nbsp;&nbsp;&nbsp;<a href="http://www.fews.net/Pages/default.aspx"
+        >FEWS-NET</a
+      ><br />
+      &nbsp;&nbsp;&nbsp;<a
+        href="http://www.cpc.ncep.noaa.gov/products/international/data.shtml"
+        >Data Archives</a
+      ><br />
+      <br />
+      <span class="yellow">About Us</span><br />
+      &nbsp;&nbsp;&nbsp;<a href="/information/who_we_are/mission.shtml"
+        >Our Mission</a
+      ><br />
+      &nbsp;&nbsp;&nbsp;<a href="/information/who_we_are/index.shtml"
+        >Who We Are</a
+      ><br /><br />
+
+      <span class="yellow">Contact Us</span><br />
+      &nbsp;&nbsp;&nbsp;<a href="/information/personnel/contacts.shtml"
+        >CPC Information</a
+      ><br />
+      &nbsp;&nbsp;&nbsp;<a href="/comment-form.html">CPC Web Team</a
+      ><br /><br />
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="white" id="menuitem">
+      <a href="http://www.usa.gov/"
+        ><img
+          src="/nwscwi/usagov_logo_color_110wb.gif"
+          alt="USA.gov is the U.S. Government's official Web portal to all Federal, state and local government Web resources and services."
+          width="110"
+          height="30"
+          border="0"
+      /></a>
+    </td>
+  </tr>
+</table>
+   <!-- Use virtual include, because this should be in a common place within your DocumentRoot. -->
+    </td>
+	
+    <td valign="top" align="center" width="950" style="text-align:justify"><a name="contents"></a>
+      <html>
+<head>
+<title>six in one</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script type="text/javascript">
+<!--
+
+function changeImagemap(newImage) {
+    document ['worldmap'].src = eval(newImage + ".src");
+}
+
+world = new Image();
+world.src  = "w2_global.png";
+africa = new Image();
+africa.src  = "w2_africa.png";
+camerica = new Image();
+camerica.src  = "w2_camerica.png";
+namerica = new Image();
+namerica.src  = "w2_namerica.png";
+samerica = new Image();
+samerica.src  = "w2_samerica.png";
+sasia = new Image();
+sasia.src  = "w2_sasia.png";
+china = new Image();
+china.src  = "w2_easia.png";
+europe = new Image();
+europe.src  = "w2_europe.png";
+australia = new Image();
+australia.src  = "w2_australia.png";
+
+
+//-->
+</script>
+
+</head>
+<body>
+
+<table border="0" width="650" bgcolor="#FFFFFF">
+  <tr>
+  <td align="left" bgcolor="EEEEEE">
+   <font face="verdana,arial,serif" size="1" color="#000000"><a href="/index.html" class="homepagelinks"><strong>HOME</strong></a> &gt;
+   <a href="/products/international/" class="homepagelinks">International</a> &gt; International Weather and Climate</font>
+  <br>
+  </td>
+ </tr>
+<tr>
+ <td>
+  <table border="0" width="650" bgcolor="#EEEEEE">
+  <tr>
+  <td align="center" bgcolor="EEEEEE">
+   <h2 align="center"><font face="verdana,arial,serif" size="4" color="#000000">Climate Prediction Center - International Desks </font></h2>
+<div>
+<img  border="0" name="worldmap" src="w2_global.png" alt="" usemap="#world-map" />
+</div>
+
+<div>
+<map name="world-map">
+<area shape="rect" coords="252,84,372,204" href="./africa/africa.shtml" alt=""
+ onMouseOver="changeImagemap('africa')"
+ onMouseOut="changeImagemap('world')">
+
+<area shape="rect" coords="96,97,192,133" href="./camerica/camerica.shtml" alt=""
+ onMouseOver="changeImagemap('camerica')"
+ onMouseOut="changeImagemap('world')">
+
+<area shape="rect" coords="23,14,202,109" href="http://www.cpc.ncep.noaa.gov/" alt=""
+ onMouseOver="changeImagemap('namerica')"
+ onMouseOut="changeImagemap('world')">
+
+<area shape="rect" coords="142,122,240,240" href="./samerica/samerica.shtml" alt=""
+ onMouseOver="changeImagemap('samerica')"
+ onMouseOut="changeImagemap('world')">
+
+<area shape="rect" coords="360,85,480,156" href="./sasia/sasia.shtml" alt=""
+ onMouseOver="changeImagemap('sasia')"
+ onMouseOut="changeImagemap('world')">
+
+<area shape="rect" coords="408,13,552,120" href="./china/east_asia.shtml" alt=""
+ onMouseOver="changeImagemap('china')"
+ onMouseOut="changeImagemap('world')">
+
+<area shape="rect" coords="228,14,394,96" href="./europe/europe.shtml" alt=""
+ onMouseOver="changeImagemap('europe')"
+ onMouseOut="changeImagemap('world')">
+
+<area shape="rect" coords="419,134,550,230" href="./australia/australia.shtml" alt=""
+ onMouseOver="changeImagemap('australia')"
+ onMouseOut="changeImagemap('world')">
+
+<area shape="rect" coords="0,0,562,281" href="./global/global.shtml" alt=""
+ onMouseOver="changeImagemap('world')"
+ onMouseOut="changeImagemap('world')">
+</div>
+<br>
+</td></tr>
+</table>
+<p align="center"><strong>IR LOOP</strong></p>
+<!--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+<TABLE BORDER="0" WIDTH="655" ALIGN="center" BGCOLOR="#FFFFFF">
+<TR>
+      <TD width="145" height="15" align="center" bgcolor="#aabbcc"><a href="/products/international/irloop/24hr/global_irloop.html"><b>Global</b><br></TD>
+      <TD width="170" height="15" align="center" bgcolor="#aabbcc"><a href="/products/international/irloop/24hr/asia_pacific_irloop.html"><b>AsiaPcific</b></a><br></TD>
+      <TD width="170" height="15" align="center" bgcolor="#aabbcc"><a href="/products/international/irloop/24hr/atlind_irloop.html"><b>Atlantic&Indian</b></a><br></TD>
+      <TD width="170" height="15" align="center" bgcolor="#aabbcc"><a href="/products/international/irloop/24hr/atl_pacific_irloop.html"><b>Atlantic&Pacific</b></a><br></TD>
+</TR>
+</TABLE>
+<!--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+<br>
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+<!-- 4. Insert Contents -->
+</body>
+</html>
+            <!-- This is the body content file of the current sub-directory. -->
+      <table cellspacing="0" cellpadding="0" width="99%" border="0">
+	<tbody>
+		<tr>
+			<td colspan="3"><hr></td>
+		</tr>
+		<tr valign="top">
+			<td class="gray">
+				<a href="http://www.noaa.gov/" class="homepagelinks"><span class="gray">NOAA/</span></a>
+				<a href="http://www.nws.noaa.gov/" class="homepagelinks"><span class="gray">National Weather Service</span></a><br>
+				<a href="http://www.ncep.noaa.gov/" class="homepagelinks"><span class="gray">NOAA Center for Weather and Climate Prediction </span></a><br>
+				Climate Prediction Center<br>
+				5830 University Research Court <br>
+				Riverdale Park, MD 20737 <br>
+				Page Author:<a href="/comment-form.html" class="homepagelinks"><span class="gray"> Climate Prediction Center Internet Team</span></a><br>
+   <!-- Use virtual include, because this should be in a common place within your DocumentRoot. -->
+      Page last modified: February 12, 2012
+      			</td>
+			<td>
+				<a href="http://www.weather.gov/disclaimer.php" class="homepagelinks"><span class="gray">Disclaimer</span></a><br>
+				<a href="http://www.cio.noaa.gov/Policy_Programs/info_quality.html" class="homepagelinks"><span class="gray">Information Quality</span></a><br>
+				<a href="http://www.nws.noaa.gov/credits.php" class="homepagelinks"><span class="gray">Credits</span></a><br>
+				<a href="http://www.nws.noaa.gov/glossary/" class="homepagelinks"><span class="gray">Glossary</span></a><br>
+			</td>
+			<td align="right">
+				<a href="http://www.weather.gov/privacy.php" class="homepagelinks"><span class="gray">Privacy Policy</span></a><br>
+				<a href="http://www.rdc.noaa.gov/%7Efoia/" class="homepagelinks"><span class="gray">Freedom of Information Act (FOIA)</span></a><br>
+				<a href="http://www.nws.noaa.gov/admin.php" class="homepagelinks"><span class="gray">About Us</span></a><br>
+				<a href="http://www.nws.noaa.gov/careers.php" class="homepagelinks"><span class="gray">Career Opportunities</span></a><br>
+			</td>
+		</tr>
+	</tbody>
+</table>
+   <!-- Use virtual include, because this should be in a common place within your DocumentRoot. -->
+    </td>
+	
+  </tr> 
+  
+</table>
+
+</body>
+
+</html>

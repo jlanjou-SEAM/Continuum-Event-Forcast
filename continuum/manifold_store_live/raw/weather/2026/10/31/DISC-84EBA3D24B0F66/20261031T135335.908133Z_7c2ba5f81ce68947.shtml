@@ -1,0 +1,1034 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html lang="en">
+<head>
+<title>NCEP Meteorological Assimilation Data Ingest System (MADIS)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">    
+<meta name="author" content="MADIS Support Team">
+<link href="css/header.css" rel="stylesheet" type="text/css" >
+<!--<script type="text/javascript" src="/js/ForecastSearch.js"></script>-->
+
+    <!-- site-wide style sheets -->
+    <link rel="stylesheet" type="text/css" href="css/ncepmadis.css" media="all">
+    
+<!--    <link rel="stylesheet" type="text/css" href="css/print.css" media="print">-->
+    
+    <!-- A style sheet for submenus of submenus -->
+<!--    <link rel="stylesheet" type="text/css" href="css/gsd-more-submenus.css" media="all">-->
+    
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/gsd/css/ie.css" media="all"><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/gsd/css/ie7.css" media="all"><![endif]-->
+
+<script type="text/javascript" src="css/ie.js"></script>
+    
+<script id="_fed_an_js_tag" type="text/javascript" src="/federated-analytics.js?agency=OAR&amp;sub-agency=ESRLGSD&amp;sp=find&amp;yt=true"></script>
+
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="TMPC9-DCHA2-45L6L-3A6SC-8WMVB",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"TMPC9-DCHA2-45L6L-3A6SC-8WMVB";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="qyqup4ax2fkkk2xf6lqa-f-b63710ef4-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1320759","ak.ai":parseInt("795019",10),"ak.ol":"0","ak.cr":1,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"2fb4683c","ak.r":46469,"ak.a2":n,"ak.m":"dscg","ak.n":"essl","ak.cport":9219,"ak.gh":"23.201.193.144","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1793454816","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==l8NZ7IVPafDC6Nh11KshjYj8tgnu9JedxPK9kCtJY1nUNiDd8GasYGN9HZUZdIGA+8a5aAWnTFrFv7gSzfLwK5AiiuSfL68AtGayIWROtGaB44kHtkTI99O4h+KKrSNlb8OY+hAhncOtasFFdLYMWCfBHI8ZeAx4etb4apHhiDp8KNXTZo4H3y+r7Ywzx5KgqSnpq2CqdXVGYuVD9z5u73VR8RTvv6N5B6MGvW+mvLARbzStAoC+E/cigtZMX5u2jmNiGJIKhE71X1v5ijfGxUwAZbcO3Hyo4vRUWOY0kQYxf3yExY1eLaxUfZXztQATQfjQbBC6E0RxeuwTfbOfKbsCUWOaRTL0YQkFgsvGXLtr4FBWJwOzUDqWpw/iIS7LmT/NF30okDt3qG9b9wA7MFDghTGGO1bDTJ5AYV0uNpU=","ak.pv":"4","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+<!--<body onload="startList()">-->
+
+<div id="container">
+<div class="header">
+
+  <div class="header-content">
+    <a href="https://www.noaa.gov" class="header-noaa-icon"><img src="images/header-noaa.png" alt="NOAA"></a>
+    <a href="https://www.weather.gov" class="header-nws-icon"><img src="images/header-nws.png" alt="NOAA"></a>
+    <a href="https://www.commerce.gov" class="header-doc"><img src="images/header_doc.png" alt="United States Department of Commerce"></a>
+    <div class="header-center-text"><a class="header-center-text" href="https://www.nco.ncep.noaa.gov">NCEP CENTRAL OPERATIONS</a></div>
+    <div class="header-noaa-text"><a class="header-noaa-text" href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a></div>
+  </div>
+</div>
+<div class="header-shadow"><div class="header-shadow-content"></div></div>
+
+     <!-- end major_header -->
+
+  <!-- major navigation -->
+<!-- Top Menu Navigation -->
+<div class="topnav">
+  <ul id="topnav">
+
+    <!-- Home Link -->
+    <li>
+      <div class="section-link">
+        <a href="#">home</a>
+      </div>
+    </li>
+
+    <!-- News Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/news">news</a>
+      </div>
+      <div class="drop">
+        <ul>
+          <li><a href="https://www.weather.gov/news">NWS News</a></li>
+          <li><a href="https://www.nws.noaa.gov/com/weatherreadynation/calendar.html">Events</a></li>
+          <li><a href="https://www.weather.gov/socialmedia">Social Media</a></li>
+          <li><a href="https://www.nws.noaa.gov/om/brochures.shtml">Pubs/Brochures/Booklets</a></li>
+          <li><a href="https://www.noaa.gov/NOAA-Communications">NWS Media Contacts</a></li>
+        </ul>
+      </div>
+    </li>
+
+    <!-- Search Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/search">search</a>
+      </div>
+      <div class="drop">
+        <div class="site-search">
+          <form method="get" action="https://search.usa.gov/search" style="margin-bottom: 0; margin-top: 0;">
+            <input type="hidden" name="v:project" value="firstgov">
+            <label for="query">Search For</label>
+            <input type="text" name="query" id="query" size="12" >
+            <input type="submit" value="Go" >
+            <p>
+              <input type="radio" name="affiliate" checked="checked" value="nws.noaa.gov" id="nws" >
+              <label for="nws" class="search-scope">NWS</label>
+              <input type="radio" name="affiliate" value="noaa.gov" id="noaa" >
+              <label for="noaa" class="search-scope">All NOAA</label>
+            </p>
+          </form>
+        </div>
+      </div>
+    </li>
+
+    <!-- Forecast Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/search">forecast</a>
+      </div>
+      <div class="drop">
+        <div id="forecast-lookup" class="site-search">
+          <form name="getForecast" id="getForecast" action="https://forecast.weather.gov/zipcity.php" method="get">
+            <label for="inputstring">Local forecast by <br>"City, St" or ZIP code</label>
+            <input id="inputstring" name="inputstring" type="text" size="12" value="Enter location ..." onclick="this.value=''" >
+            <input name="btnSearch" id="btnSearch" type="submit" value="Go" >
+            <div id="txtError">
+            <div id="errorNoResults" style="display:none;">Sorry, the location you searched for was not found. Please try another search.</div>
+            <div id="errorMultipleResults" style="display:none">Multiple locations were found. Please select one of the following:</div>
+            <div id="errorChoices" style="display:none"></div>
+              <input id="btnCloseError" type="button" value="Close" style="display:none" >
+            </div>
+            <div id="txtHelp"><a style="text-decoration: underline;" href="javascript:void(window.open('https://weather.gov/ForecastSearchHelp.html','locsearchhelp','status=0,toolbar=0,location=0,menubar=0,directories=0,resizable=1,scrollbars=1,height=500,width=530').focus());">Location Help</a></div>
+          </form>
+                        </div><!-- <div id="forecast-lookup"> -->
+          </div><!-- <div class="drop"> -->
+    </li>
+    <!-- About Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/about">about</a>
+      </div>
+      <div class="drop">
+          <ul>
+            <li><a href="https://www.weather.gov/about">About NWS</a></li>
+            <li><a href="https://www.weather.gov/organization">Organization</a></li>
+            <li><a href="https://sites.google.com/a/noaa.gov/nws-best-practices/">For NWS Employees</a></li>
+            <li><a href="https://www.weather.gov/international/">International</a></li>
+            <li><a href="https://www.weather.gov/organization/ncep">National Centers</a></li>
+            <li><a href="https://www.nws.noaa.gov/tg/">Products and Services</a></li>
+            <li><a href="https://www.weather.gov/contact">Contact Us</a></li>
+            <li><a href="https://w1.weather.gov/glossary/">Glossary</a></li>
+          </ul>
+        </div>
+    </li>
+
+  </ul><!-- End of top nav ul -->
+</div><!-- End of topnav div -->
+
+</div> <!-- end banner -->
+
+<div id="pbody">
+    <!-- minor navigation -->
+            <div style="width:160px" id="minor_nav">
+
+<!--<br>-->
+<ul style="word-wrap:break-word" id="vertnav">
+<br>
+   <li><a href="index.shtml">MADIS Home</a></li>
+</ul>
+<dl>
+ <dt>News</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <li><a href="madis_recent.shtml">What's Here - v4.0!</a></li>
+<!-- <li><a href="madis_comingsoon.shtml">What's Coming?</a></li>
+-->
+</ul>
+<dl>
+<dt>Data Information</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">  
+ <li><a href="madis_datasets.shtml">Overview</a></li>
+ <li>Descriptions&nbsp;&nbsp;>
+    <ul>
+       <li><a href="madis_sfc.shtml"><font color="FFFF66">Meteorological Surface</font></a></li>
+       <li class="indented_vertnav"><a href="madis_mesonet.shtml">Integrated Mesonet</a></li>
+       <li class="indented_vertnav"><a href="madis_cwop.shtml">Citizen Weather Observer Program (CWOP)</a></li>
+       <li class="indented_vertnav"><a href="madis_rwis_clarus.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+       <li class="indented_vertnav"><a href="national_mesonet.shtml">National Mesonet</a></li>
+       <li class="indented_vertnav"><a href="madis_metar.shtml">METAR</a></li>
+       <!--<li class="indented_vertnav"><a href="madis_OMO.shtml">1-minute ASOS</a></li>
+       --><li class="indented_vertnav"><a href="madis_maritime.shtml">Maritime</a></li>
+	<li class="indented_vertnav"><a href="madis_wxtelematics.shtml">Weather Telematics</a></li>
+       <li class="indented_vertnav"><a href="madis_nepp.shtml">New England Pilot Project (NEPP)</a></li>
+       <li class="indented_vertnav"><a href="madis_crn.shtml">Climate Reference Network (CRN)</a></li>
+       <li class="indented_vertnav"><a href="madis_ushcn.shtml">U.S. Climatology Net-Modernization (USHCN-M)</a></li>
+       <li><a href="madis_hydro.shtml"><font color="FFFF66">Hydrologic Surface</font></a></li>
+       <li><a href="madis_raob.shtml"><font color="FFFF66">Radiosonde</font></a></li>
+       <li><a href="madis_npn.shtml"><font color="FFFF66">NOAA Profiler Network</font></a></li>
+       <li><a href="madis_gpsmet.shtml"><font color="FFFF66">GPS-Met</font></a></li>
+       <li><a href="madis_acars.shtml"><font color="FFFF66">Aircraft Based </font></a></li>
+       <li><a href="madis_map.shtml"><font color="FFFF66">Multi-Agency Profiler (CAP)</font></a></li>
+       <li><a href="madis_rdmtr.shtml"><font color="FFFF66">Radiometer</font></a></li>
+       <li><a href="madis_satwnd.shtml"><font color="FFFF66">Satellite Wind</font></a></li>
+       <li><a href="madis_satsnd.shtml"><font color="FFFF66">Satellite Sounding</font></a></li>
+       <li><a href="madis_satrad.shtml"><font color="FFFF66">Satellite Radiance</font></a></li>
+       <li><a href="madis_snow.shtml"><font color="FFFF66">Snow</font></a></li>
+       <li><a href="madis_gapfillua.shtml"><font color="FFFF66">Gap-filling Upper Air</font></a></li>
+<!--       <li><a href="madis_wisdom.shtml"><font color="FFFF66">WISDOM Balloon Wind</font></a></li>-->
+       <li><a href="madis_RSAS.shtml"><font color="FFFF66">RSAS Sfc Analyses Grids</font></a></li>
+    </ul>
+ </li> 
+ <li>Variables&nbsp;&nbsp;>
+    <ul>
+       <li><font color="FFFF66">Meteorological Surface</font></li>
+       <li class="indented_vertnav"><a href="sfc_mesonet_variable_list.shtml">Mesonet/RWIS/National Mesonet</a></li>
+       <!--<li class="indented_vertnav"><a href="sfc_mesonet_variable_list.shtml">Citizen Weather Observer Program (CWOP)</a></li>
+       <li class="indented_vertnav"><a href="madis_rwis_variable_list.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+      --> <li class="indented_vertnav"><a href="sfc_urbanet_variable_list.shtml">National Mesonet Extended</a></li>
+       <li class="indented_vertnav"><a href="sfc_metar_variable_list.shtml">METAR (standard)</a></li>
+       <!--<li class="indented_vertnav"><a href="sfc_OMO_variable_list.shtml">1-minute ASOS</a></li>
+       --><li class="indented_vertnav"><a href="sfc_sao_variable_list.shtml">SAO</a></li>
+       <li class="indented_vertnav"><a href="sfc_maritime_variable_list.shtml">Maritime</a></li>
+	<li class="indented_vertnav"><a href="sfc_mobile_variable_list.shtml">Weather Telematics</a></li>
+       <li class="indented_vertnav"><a href="sfc_crn_variable_list.shtml">Climate Reference Network</a></li>
+       <li class="indented_vertnav"><a href="sfc_hcn_variable_list.shtml">Historical Climatology Network</a></li>
+       <li class="indented_vertnav"><a href="sfc_nepp_variable_list.shtml">New England Pilot Project</a></li>
+       <li><a href="hydro_variable_list.shtml"><font color="FFFF66">Hydrologic Surface</font></a></li>
+       <li><a href="raob_variable_list.shtml"><font color="FFFF66">Radiosonde</font></a></li>
+       <li><a href="npn_variable_list.shtml"><font color="FFFF66">NOAA Profiler Network</font></a></li>
+       <li><a href="gpsmet_variable_list.shtml"><font color="FFFF66">GPS-Met</font></a></li>
+       <li><a href="acars_variable_list.shtml"><font color="FFFF66">Aircraft Based</font></a></li>
+       <li><a href="acarsp_variable_list.shtml"><font color="FFFF66">Aircraft Based Profiles</font></a></li>
+       <li><a href="map_variable_list.shtml"><font color="FFFF66">Multi-Agency Profiler (CAP)</font></a></li>
+       <li><a href="rdmtr_variable_list.shtml"><font color="FFFF66">Radiometer</font></a></li>
+       <li><a href="satwnd_variable_list.shtml"><font color="FFFF66">Satellite Wind</font></a></li>
+       <li><a href="satsnd_variable_list.shtml"><font color="FFFF66">Satellite Sounding</font></a></li>
+       <li><a href="satrad_variable_list.shtml"><font color="FFFF66">Satellite Radiance</font></a></li>
+       <li><a href="snow_variable_list.shtml"><font color="FFFF66">Snow</font></a></li>
+       <li><a href="gapfillua_variable_list.shtml"><font color="FFFF66">Gap-filling Upper Air</font></a></li>
+<!--       <li><a href="wisdom_variable_list.shtml"><font color="FFFF66">WISDOM Balloon Wind</font></a></li>-->
+       <li><a href="rsas_variable_list.shtml"><font color="FFFF66">RSAS Sfc Analyses Grids</font></a></li>
+     </ul>
+ </li>
+ <li>Variables Metadata&nbsp;&nbsp;>
+    <ul>
+       <li><font color="FFFF66">Integrated Mesonet</font>
+       <li class="indented_vertnav"><a href="mesonet_precip.shtml">Precipitation</a></li>
+       <li class="indented_vertnav"><a href="mesonet_solar_radiation.shtml">Solar Radiation</a></li>
+       <li class="indented_vertnav"><a href="mesonet_soil_temperature.shtml">Soil Temperature</a></li>
+       <li class="indented_vertnav"><a href="mesonet_soil_moisture.shtml">Soil Moisture</a></li>
+    </li>
+       <li><font color="FFFF66">National Mesonet</font>
+       <li class="indented_vertnav"><a href="nmesonet_precip.shtml">Precipitation</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_solar_radiation.shtml">Solar Radiation</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_soil_temperature.shtml">Soil Temperature</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_soil_moisture.shtml">Soil Moisture</a></li>
+    </li>
+       <li><font color="FFFF66">OMO One Minute ASOS (HFMETAR)</font>
+       <li class="indented_vertnav"><a href="omo_precip.shtml">Precipitation</a></li>
+    </li>
+   </ul>
+<li>Quality Control&nbsp;&nbsp;>
+    <ul>
+   <li><a href="madis_qc.shtml">Overview</font></a></li>
+       <li><a href="madis_sfc_qc.shtml">Meteorological Surface</a></li>
+       <li><a href="madis_rwis_qc.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+       <li><a href="madis_hydro_qc.shtml">Hydrologic Surface</a></li>
+       <li><a href="madis_raob_qc.shtml">Radiosonde</a></li>
+       <li><a href="madis_npn_qc.shtml">NOAA Profiler Network</a></li>
+       <li><a href="madis_sfc_qc.shtml">Weather Telematics</a></li>
+       <li><a href="madis_acars_qc.shtml">Aircraft Based</a></li>
+       <li><a href="madis_acarsp_qc.shtml">Aircraft Based Profiles</a></li>
+       <li><a href="madis_map_qc.shtml">Multi-Agency Profiler (CAP)</a></li>
+       <li><a href="madis_rdmtr_qc.shtml">Radiometer</a></li>
+       <li><a href="madis_satwnd_qc.shtml">Satellite Wind</a></li>
+       <li><a href="madis_satsnd_qc.shtml">Satellite Sounding</a></li>
+       <li><a href="madis_snow_qc.shtml">Snow</a></li>
+       <li><a href="madis_gapfillua_qc.shtml">Gap-filling Upper Air</a></li>
+       <li><a href="madis_RSAS_qc.shtml">RSAS Surface Analysis</a>
+<!--	<li><a href="madis-data/qcms_messages.html">QC Summary Messages</a>
+    -->
+</ul>
+ </li>
+ <li>Restrictions&nbsp;&nbsp;>
+    <ul>
+       <li><a href="madis_restrictions.shtml">Overview</a></li>
+       <li><a href="mesonet_providers.shtml">Meteorological Surface</a></li>
+       <li><a href="hydro_providers.shtml">Hydrologic Surface</a></li>
+       <li><a href="acars_restrictions.shtml">Aircraft Based</a></li>
+    </ul>
+ </li>
+ <li><a href="MADISdataissues.shtml">Known Data Issues</a></li>
+</ul>
+<dl>
+<dt>User Access</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <!--<li><a href="user_resources.shtml">Overview</a></li>
+--> 
+<li><a href="data_application.shtml">Data Application Form</a></li>
+<li><!--<a href="https://madis-hweb.ncep.noaa.gov:8005/htdocs/index.shtml">--><a href="https://madis-data.ncep.noaa.gov/index.shtml">MADIS Distribution Services</a></li>
+<li><!--<a href="https://madis-hweb.ncep.noaa.gov:8005/htdocs/wmo_gdc.shtml">--><a href="https://madis-data.ncep.noaa.gov/wmo_gdc.shtml">GDC-ABO</a></li>
+<li><a href="https://madis-idm.ncep.noaa.gov/reset">Password Reset</a></li>
+</ul>
+<dl>
+<dt>Provider Information</dt>
+<ul style="word-wrap:break-word" id="vertnav">
+ <!--<li><a href="provider_resources.shtml">Overview</a></li>
+ <li><a href="network_info.shtml">Surface Provider List</a></li>
+--> 
+<li><a href="provider_resources.shtml">Overview</a></li>
+ <li><a href="mesonet_providers.shtml">Meteorological Surface</a></li>
+ <!--<li><a href="nmesonet_providers.shtml">National Mesonet/UrbaNet</a></li>-->
+ <li><a href="hydro_providers.shtml">Hydrological Surface</a></li>
+ <li><a href="map_providers.shtml">Multi-Agency Profiler (CAP)</a></li>
+ <!--<li><a href="rdmtr_providers.shtml">Radiometer</a></li>
+ -->
+<li><a href="snow_providers.shtml">Snow</a></li>
+<li><a href="madistosynoptic.shtml">Transitions to SYNOPTIC</a></li>
+ <!--<li>Quality Control&nbsp;&nbsp;>
+   <ul>
+ <li><a href="madis_smry_descrip.shtml">Summary</a></li>
+-->
+</ul>
+</dl>
+
+<dt>Support</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <li><a href="support_overview.shtml">Overview</a></li>
+ <li><a href="madis_monitoring.shtml">Data Outages</a></li>
+<!--
+ <li>FAQ&nbsp;&nbsp;>
+ <ul>
+     <li><a href="faq_accounts.shtml">Accounts</a></li>
+     <li><a href="faq_api.shtml">API</a></li>
+     <li><a href="faq_localization.shtml">AWIPS Localization</a></li>
+     <li><a href="faq_cwop.shtml">CWOP</a></li>
+     <li><a href="faq_datadisplay.shtml">Data Display</a></li>
+     <li><a href="faq_historicaldata.shtml">Historical Data</a></li>
+     <li><a href="faq_lastupdatetime.shtml">Last Update Time</a></li>
+     <li><a href="faq_netcdf.shtml">netCDF</a></li>
+     <li><a href="faq_providerdata.shtml">Provider Data</a></li>
+     <li><a href="faq_wfo.shtml">WFO</a></li>
+ </ul></li>
+-->
+ <li><a href="data_application.shtml#disclaimer">Disclaimer</a></li>
+ <li><a href="mailto:madis-support@noaa.gov">Contact Us</a></li>
+</ul>
+<dl>
+<dt>Related Links</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+<li><a href="https://gdc-abo.wmo.int/">WMO Global Data Center</a></li>
+<li><a href="https://madis-data.ncep.noaa.gov/index.shtml">MADIS Distribution Services</a></li>
+<li><a href="https://hads.ncep.noaa.gov/">HADS</a></li>
+<li><a href="https://amdar.ncep.noaa.gov/index.shtml">AMDAR</a></li>
+<li>&nbsp;</li>
+<li><a href="https://ruc.noaa.gov/amdar/">AMDAR Research</a></li>
+</li>
+<li>&nbsp;</li>
+</ul>
+</div>
+
+
+    <div id="content">
+    <a class="textvers" name="content_link">&nbsp;</a>
+
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="description" CONTENT="MADIS (Meteorological Assimilation Data Ingest System)">
+   <META NAME="keywords" CONTENT="METEOROLOGICAL DATA, meteorological data, WEATHER DATA, weather data, METEOROLOGICAL DATA ACCESS, meteorological data access, METEOROLOGICAL DATA ASSIMILATION, meteorological data assimilation">
+   <TITLE>MADIS Road Weather Information System (RWIS) Quality Control</TITLE>
+
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="TMPC9-DCHA2-45L6L-3A6SC-8WMVB",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"TMPC9-DCHA2-45L6L-3A6SC-8WMVB";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="qyqup4ax2fkkk2xf6lqa-f-b63710ef4-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1320759","ak.ai":parseInt("795019",10),"ak.ol":"0","ak.cr":1,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"2fb4683c","ak.r":46469,"ak.a2":n,"ak.m":"dscg","ak.n":"essl","ak.cport":9219,"ak.gh":"23.201.193.144","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1793454816","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==l8NZ7IVPafDC6Nh11KshjYj8tgnu9JedxPK9kCtJY1nUNiDd8GasYGN9HZUZdIGA+8a5aAWnTFrFv7gSzfLwK5AiiuSfL68AtGayIWROtGaB44kHtkTI99O4h+KKrSNlb8OY+hAhncOtasFFdLYMWCfBHI8ZeAx4etb4apHhiDp8KNXTZo4H3y+r7Ywzx5KgqSnpq2CqdXVGYuVD9z5u73VR8RTvv6N5B6MGvW+mvLARbzStAoC+E/cigtZMX5u2jmNiGJIKhE71X1v5ijfGxUwAZbcO3Hyo4vRUWOY0kQYxf3yExY1eLaxUfZXztQATQfjQbBC6E0RxeuwTfbOfKbsCUWOaRTL0YQkFgsvGXLtr4FBWJwOzUDqWpw/iIS7LmT/NF30okDt3qG9b9wA7MFDghTGGO1bDTJ5AYV0uNpU=","ak.pv":"4","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></HEAD>
+<BODY TEXT="#333333" BGCOLOR="#FFFFFF">
+<p><H1>MADIS Road Weather Information System (RWIS) & <i>Clarus</i> Quality Control Checks</H1>
+<p>
+
+<b><i>Clarus</i> Quality Checking Test Algortithms</b>
+
+<ul>
+<li><b>Sensor Range Test</b></li>
+	<ul>
+	The sensor range test detects sensor readings that fall outside the range of sensor hardware
+	specifications or theoretical limits (i.e., a maximum and minimum value). If a sensor reading does not
+	pass the sensor range test, then no other quality checking tests are performed on that sensor reading.
+
+	<br><br>Each time this quality check is invoked, it is given a single sensor reading. If the sensor reading
+	cannot be obtained, the test returns immediately with an error condition indicating that it failed to run.
+	
+	<br><br>The sensor provides the sensor range in the form of a maximum and minimum value. If the sensor
+	value is greater than or equal to the minimum, and less than or equal to the maximum, the sensor
+	reading passes the sensor range quality check. If the sensor reading value is less than the minimum
+	or greater than the maximum, the sensor reading does not pass the sensor range quality check.	
+	</ul>
+<li><b>Climate Range Test</b></li>
+<ul>
+The climate range test detects sensor readings that fall outside predetermined climate range values.
+The climate range data have been drawn from 30 years of National Centers for Environmental
+Prediction-Department of Energy (NCEP-DOE) Reanalysis 2 data. These reanalysis data are created
+by running a set of historical observational data through a common model, thus ensuring that the
+output data are consistent over time. The reanalysis also ensures that data are available in every time
+period at every grid point. For each weather parameter, the climate range values used in this test were
+determined by computing monthly minimum and maximum values over a 2.5 degree x 2.5 degree
+fixed latitude-longitude grid. In the latitude band, this equates to a grid spacing of 172.5 miles. In the
+longitude band, this varies from 172.5 miles at the equator, to 0 miles at the poles.
+
+<br><br>Each time this QCh test is invoked, it is given a single sensor reading. The appropriate climate
+maximum and minimum values used for the test are determined by the month of the sensor reading
+date and the latitude/longitude region in which the sensor reading location falls. If the sensor reading
+value is greater than or equal to the climate minimum, and less than or equal to the climate maximum,
+the sensor reading passes the climate range quality check. If the sensor reading value is less than the
+climate minimum or greater than the climate maximum, the sensor reading does not pass the sensor
+climate range quality check.
+</ul>
+<li><b>Time Step Test</b></li>
+<ul>
+The step test detects sensor readings whose values change by more than a predefined variablespecific
+or station-specific rate over a thirty minute (past) and five minute (future) configurable period.
+For example, an air temperature reading from 2:00 p.m. will be compared to the corresponding air
+temperature sensor readings from the same sensor that was recorded in the time range of 1:30 p.m.
+to 2:05 p.m.
+<br><br>Each time this test is invoked, it is given a single sensor reading. The system then obtains all of the
+sensor readings that have been received over the configured time period from the same sensor that
+are of the same weather parameter type. If either the current sensor reading or the prior sensor
+readings (a minimum of one is required) cannot be obtained, the test returns immediately with an error
+condition indicating that it was not able to run.
+<br><br>From the sensor, the system obtains configured positive and negative step threshold rates. If the
+difference between the current sensor value and the prior sensor value divided by the time difference
+in seconds ((current . prior) / time difference) falls between the negative step threshold and positive
+step threshold rates, then the current sensor reading passes the step quality check. If the computed
+rate falls outside the defined rates, then the current sensor reading does not pass the step quality
+check. This method assumes that the positive step threshold is specified as a positive value and the
+negative step threshold is specified as a negative value.
+</ul>
+<li><b>Like Instrument Test</b></li>
+<ul>The like instrument test detects sensor readings whose values differ from the average of all sensor
+values obtained from the same station with the same weather parameter type by more than a
+predefined variable-specific threshold. For example, if there were four surface temperatures at the
+same station, the sensor reading being evaluated would be compared to the average of all of the
+surface temperatures against the threshold (positive and negative). In reality, few sensors are
+repeated at a station outside of surface temperature, so this test is not often used.
+<br><br>Each time this test is invoked, it is given a single sensor reading. From the station information
+associated with the sensor reading, the number of sensors is obtained for the given sensor reading
+type. If that number is greater than one, it obtains the sensor reading(s) from the other like sensor(s)
+from the same station that are time-stamped within an hour before the original sensor reading. If
+additional sensor reading instances cannot be obtained, the test returns immediately with an error
+condition indicating that it was not able to run.
+<br><br>The like instrument threshold for the current sensor reading type is obtained from the configuration
+information. If the difference between the average of all sensor reading values plus and minus the
+threshold (sensor reading >= average sensor reading . threshold AND sensor reading <= average
+sensor reading + threshold) both evaluate to true, then the sensor reading passes the like instrument test. If either of the comparisons evaluate to false, then the original sensor reading does not pass the
+like instrument test. 
+</ul>
+<li><b>Persistence Test</b></li>
+<ul> The persistence test detects sensor reading whose values remain constant for a predefined variablespecific
+period of time. For example, if consecutive pressure sensor readings remain unchanged to
+the precision of the instrument for four hours, the current sensor reading does not pass the
+persistence test. 
+<br><br>Each time this test is invoked, it is given a single sensor reading, which then determines the
+persistence time period. Consecutive sensor readings from the same sensor and station over that
+period of time preceding the current observation are then obtained. If the current sensor reading or the
+prior sensor reading cannot be obtained, the test returns immediately with an error condition indicating
+that it was unable to run.
+<br><br>If one or more of the consecutive sensor values are different, the current sensor reading passes the
+persistence quality check. If all of the consecutive sensor values over the given time period are
+equivalent, the current sensor does not pass the persistence quality check.
+</ul>
+<li><b>Interquartile Range (IQR) Spatial Test</b></li>
+<ul>
+The IQR spatial test is a method for checking whether a sensor reading is consistent with its
+neighboring sensor readings. It detects sensor readings that differ by more than a predefined
+threshold from an expected value within a neighborhood of the target sensor reading. 
+<br><br>In general, across large regions, the atmosphere is quite homogeneous spatially. However, there are
+times and places such as in complex terrain or near frontal systems where close sensor readings are
+quite different but realistic. As such, the spatial test has some limitations.
+<br><br>
+A target sensor reading does not pass the IQR test when:
+<ul>|Ze - Zo| > max(M * 0.7413 * IQR, minToleranceBound)</ul>
+where
+<ul>Ze = Median of neighbors
+<br>    Zo = Target sensor reading
+<br> M = Multiplier value: The value is 3 for all fields, except Relative Humidity, which is 2.5
+<br> IQR = Interquartile range: The difference between the .25 and .75 percentiles of the
+neighbors. The coefficient 0.7413 makes the IQR an unbiased estimate of the
+true standard deviation.
+<br>minToleranceBound = A fixed value set for each field that bounds the minimum
+acceptable spread between the target sensor value and the estimate.</ul>
+In order to guarantee adequate spatial variation between neighboring sensors, various tolerance
+bounds (minToleranceBound) are used for different weather parameter fields. These bounds are
+adjustable, so that they can be tuned further as necessary.
+<br>
+The minToleranceBound values for each weather parameter field are as follows:
+<ul>
+essAirTemperature: 3.5 deg C
+<br>essDewpointTemp: 7 deg C
+<br>windSensorAvgSpeed: 4.5 m/sec
+<br>essAtmosphericPressure: 7.5 mbar
+<br>essRelativeHumidity: 15 %
+<br>essSurfaceTemperature: 10 deg C
+<br>essPavementTemperature: 10 deg C
+<br>essSubSurfaceTemperature: 3 deg C
+<br> essWetBulbTemp: 7 deg C
+</ul>
+The IQR test is only effective and thus only run if there are 5 or more Automated Surface Observing
+Systems (ASOS), Automated Weather Observing Systems (AWOS), and/or Environmental Sensor
+Station (ESS) neighbors that satisfy all of the following conditions:
+<ul>
+<li>Within a 69 mile radius of the target sensor reading</li>
+<li>Within +/- 350 meters of elevation</li>
+<li>Within 1 hour of the target sensor reading time</li>
+</ul>
+Otherwise, the test will not run.
+<br><br>
+Up to 20 of the nearest sensors to the target sensor reading satisfying the above criteria are chosen to
+makeup the background field.
+</ul>
+<li><b>Barnes Spatial Test</b></li>
+<ul>Like the IRQ test, the neighboring stations used for spatial comparison are determined by a
+formula based on configurable tolerance bounds. Unlike the IRQ test, neighboring sensor
+readings are weighted according to their distance from the original sensor, with the weight
+decreasing exponentially with the distance from the station. In the Clarus System, neighboring
+values (Zi
+) are based on ASOS, AWOS, and ESS in situ data. The ASOS program is a joint effort
+of the National Weather Service (NWS), the Federal Aviation Administration (FAA), and the
+Department of Defense (DOD). The ASOS systems serve as the nation's primary surface
+weather observing network. ASOS is designed to support weather forecast activities and aviation
+operations and, at the same time, support the needs of the meteorological, hydrological, and
+climatological research communities. The AWOS provides basic aviation weather observations
+directly to pilots approaching the airport. The majority of the ~170 systems were installed at
+various non-towered airports (OFCM, 2009).
+<br><br>The neighboring stations used for spatial comparison must fall within a distance set by a configuration
+parameter. Neighboring observations are weighted according to their distance from the original
+sensor, with the weight decreasing exponentially with the distance from the station.
+<br><br>Each time this test is invoked, it is given a single observation. Through the observation instance, it
+obtains a sensor and a station. If the sensor or station cannot be obtained, the test returns
+immediately with an error condition indicating that it was unable to run. Then a set of observations to
+use for the spatial analysis is determined. If there are fewer than two observations of the same type
+available or if the IQR Spatial Test was able to run, the test returns immediately with an error condition
+indicating that it was unable to run.
+<br><br>A target observation does not pass the Barnes Spatial Test when the target observation value (Z0) falls
+outside of the range defined by the number of configured standard deviations about the weighted
+mean of the neighboring observations (Ze).
+<br><br>An observation does not pass the Barnes Spatial Test when:
+<ul>|Ze - Zo| > SdMin * O</ul>
+where 
+<ul>Z0 = Target observation
+<br>Ze = Weighted mean of neighboring observations
+<br>Zi = The ith neighboring observation
+<br>SdMin = The configured allowable standard deviations
+<br>O = Estimated standard deviation
+</ul>
+and where the weighted mean is computed as follows:
+<ul>
+Ze = (E W(ri) * Zi) /(E W(ri))
+</ul>
+where
+<ul>W(ri) = exp( -|Zi - Zo|^2 / (2*(ri/O)^2))
+</ul>
+The Barnes spatial test only runs when the IQR test does not run and if there are 2 or more ASOS,
+AWOS and/or ESS neighbors that satisfy all of the following conditions:
+<ul>
+<li>Within the configured radius of the target observation, typically 69 miles</li>
+<li>Within 65 minutes of the target observation time, -60 minutes to +5 minutes to accommodate
+potential skewed time reporting</li>
+</ul>
+Otherwise, the test will not run.
+</ul>
+<li><b>Dewpoint Temperature Test</b></li>
+<ul>Most automated dewpoint temperatures are not sensed directly but derived from other weather
+parameters. Thus, the dewpoint temperature test detects air temperature and relative humidity sensor
+readings whose corresponding derived dewpoint temperatures do not pass a Barnes spatial analysis.
+This test is similar to the Barnes spatial quality check except that it performs the objective analysis on
+dewpoint temperature sensor readings derived from air temperature and relative humidity sensor
+readings instead of performing the test directly on the sensor readings themselves. 
+<br><br>Each time this test is invoked, it is given a single relative humidity sensor reading. Using sensor and
+station information, the corresponding most recent (within one hour) air temperature sensor reading is
+retrieved. If the sensor, station, or corresponding air temperature sensor reading cannot be obtained,
+the test returns immediately with an error condition indicating that it is unable to run. 
+<br><br>At this point, the dewpoint temperature test follows the same method as the Barnes spatial test to
+obtain the set of sensor readings to use in the spatial analysis, except that it obtains both air
+temperature and relative humidity for each station. If sensor readings for both air temperature and
+relative humidity cannot be obtained for a given station, that station is not used in the spatial analysis.
+If both air temperature and relative humidity sensor readings are not available for at least two stations,
+the quality check returns immediately with an error condition indicating that it was unable to run. 
+<br><br>Once the air temperature and relative humidity sensor readings are obtained, the dewpoint
+temperature (Td) is calculated for each location using the following formulas.
+<ul>Td = 240.97 * ln(es/6.1365)/(17.502 - ln(es/6/6.1365)</ul>
+Where:
+<ul>es = (RH/100) * 6.1365 * exp(17.502*T) / (240.97 + T)</ul>
+and:
+<ul>
+es = saturated water vapor pressure
+<br>T = air temperature in C
+<br>RH = relative humidity
+</ul>
+The resulting dewpoint temperature values are then subjected to the objective analysis outlined in the
+Barnes spatial quality check. If the dewpoint at the original location differs from the estimate by more
+than three standard deviations (. > 3), then the original relative humidity sensor reading does not pass
+the dewpoint temperature quality check. If the dewpoint at the original location differs from the
+estimate by three standard deviations or less (. 3), then the original relative humidity sensor
+reading passes the dewpoint temperature quality check.
+</ul>
+<li><b>Sea Level Pressure Test</b></li>
+<ul>The sea level pressure test is a method for checking whether an atmospheric pressure measurement
+is consistent with its neighboring sensor readings, when both the target pressure sensor reading and
+its neighbors have been reduced to sea level pressure. It detects reduced pressure sensor readings
+that differ by more than a predefined threshold from an expected value within a neighborhood of the
+target sensor reading. 
+<br><br>
+The algorithm is based on the Mesoscale Analysis Prediction System-Sea Level Pressure (MAPSSLP)
+reduction algorithm (Benjamin and Miller, 1990). The MAPS-SLP algorithm estimates the
+surface temperature versus using the sensed surface temperature for the pressure reduction
+calculation from the 700mb temperature (usually obtained via soundings), which is adjusted by the
+standard lapse rate to the station elevation. 
+<br><br>
+A formulation of the hydrostatic and hypsometric equation, which relates the change in pressure and
+the change in temperature, is the following:
+<ul>Psl = Psta * [Tsl / Tsta)^g/Ry
+</ul>
+where 
+<ul>Psl = the sea level pressure
+<br>Psta = the surface (station) pressure
+<br>Tsta (effective temperature) = the temperature assumed to be valid at the surface
+(station level)
+<br>Tsl = the temperature at MSL
+<br>y = the lapse rate of the temperature
+<br>g = the acceleration due to gravity
+<br>R = the universal gas constant (Benjamin and Miller, 1990). 
+</ul>
+Tsta and Tsl are computed by extrapolating downward using the constant lapse rate to the station
+elevation:
+<ul>
+Tsl = T700 + y(Z700- 0)
+<br>Tsta - T700 + y(Z700 - Zsta)
+</ul>
+where 
+<ul>
+T700 = the temperature at the 700 hPa level (Kelvin)
+<br>Z700 = the height of the 700 hPa pressure level in meters above MSL
+<br>Zsta = the height of the station above MSL in meters. 
+</ul>
+Data from 700mb observed temperatures from the nearest rawinsonde (balloon) soundings are used
+when available with a 69-mile radius of the pressure measurement. Reanalysis 30-year 700 mb
+temperature monthly mean values on a 2.5 x 2.5 degree grid are used as default values when
+sounding data are not available.
+<br><br>
+The following constant values are used in the code (U.S. Standard Atmosphere, 1976):
+<ul>
+g = 9.80665 m/s^2
+<br>R = 287.053072047065 J/(kg- K)
+<br>y = 6.5 degrees C/1000m
+</ul>
+</ul>
+<li><b>Precipitation Estimation Test</b></li>
+<ul>
+The precipitation estimation test utilizes NCEP Stage II and Stage IV data for comparison with ESS
+precipitation accumulation reports. The NCEP stage II and IV data are real-time, hourly, multi-sensor
+National Precipitation Analysis (NPA) data developed at the NCEP in cooperation with the Office of
+Hydrology (Lin and Mitchell, 2005). The Stage II/IV analyses merge radar data with hourly METAR
+gauge reports and are output onto a 4-km Hydrologic Rainfall Analysis Project (HRAP) grid. The
+HRAP grid is a National Weather Service (NWS) coordinate system that uses a polar stereographic
+projection true at 60°N / 105°W. Each hour.s analysis is run at 35 minutes past the hour and then run
+6 hours and 18 hours later. The first run incorporates precipitation reports from rain gauge sites and
+the later runs use HADS automated gauge reports transmitted via the GOES Data Collection Platform
+(DCP). The primary difference between Stage II and Stage IV analyses is that Stage IV Data is
+manually QC.d at the NWS Regional Forecast Centers (RFCs), so it is generally better than the Stage
+II data.
+<br><br>The precipitation estimation QCh algorithm compares a target ESS precipitation accumulation report
+to nearby Stage II or IV grid values. Because there is approximately a one-hour lag in the Stage II/IV
+availability, recent data measured within the previous hour from neighboring ASOS, AWOS and other
+ESS stations are also incorporated into the algorithm in order to assess whether the target reports
+should pass or fail the precipitation QCh test.
+<br><br>
+The algorithm is designed to check 3, 6, 12, and 24-hour precipitation accumulation values. Only
+precipitation accumulation reports greater than 1 mm are tested. In addition, only precipitation
+accumulation reports which have more than 25% of the accumulation period covered by Stage II or
+Stage IV data are evaluated. If less than 25% of the period is covered, a flag of .not enough data. is
+returned.
+<br><br>
+The algorithm is listed in Appendix C, but basically, it assess whether the sensor reading falls within an
+acceptable threshold of minimum and maximum expected precipitation. The thresholds vary on the
+sensor reading.
+</ul>
+</ul>
+<!--
+<P>The level 1 <i><b>validity checks</b></i> restrict each observation to falling within
+a TSP-specified set of tolerance limits, while the level 2 <i><b>temporal consistency
+checks</b></i> restrict the temporal rate of change of each observation to a set
+of (other) TSP-specified tolerance limits.  In both cases, observations
+not falling within the limits are flagged as failing the respective
+QC check.  The following table lists the tolerance limits:
+
+<PRE>
+
+  -----------------------------------------
+  Validity Checks
+  -----------------------------------------
+  Dewpoint temperature       -90 -   90   F
+  Relative humidity            0 -  100  %
+  Relative humidity 1hr chng -50 -   50  %
+  Altimeter                  568 - 1100  mb
+  Altimeter 1hr change       -10 -   10  mb
+  Pressure change              0 - 30.5  mb
+  Sea level pressure         846 - 1100  mb
+  Station pressure           568 - 1100  mb
+  Air temperature            -60 -  130   F
+  Air temperature 1hr change -35 -   35   F
+  Wind Direction               0 -  360  deg
+  Wind Speed                   0 -  250  kts
+  Visibility                   0 -  100 miles
+  Accumulated precip - *h      0 -   44  in
+  Precipitation rate           0 -   44  in
+  Soil moisture percent        0 -  100  %
+  Soil temperature           -40 -  150   F
+  Wind dir at gust             0 -  360  deg
+  Wind gust                    0 -  287  mph
+  24 hour min temperature    -60 -  130   F
+  24 hour max temperature    -60 -  130   F
+  Wind dir at hourly max       0 -  360  deg
+  Wind speed                   0 -  287  mph
+  Hourly maximum wind speed    0 -  287  mph
+  Snow cover                   0 -   25  ft
+  Snow fall - 6h               0 -   50  in
+  Snow fall - 24h              0 -  300  in
+  Sea surface temperature   28.4 -  104   F
+
+  ---------------------------------------------
+  Temporal Consistency Checks
+  ---------------------------------------------
+  Dewpoint temperature             35  F/hour
+  Sea level pressure               15  mb/hour
+  Air temperature                  35  F/hour
+  Wind speed                       20 kts/hour
+  Soil temperature                  5  F/hour
+  Sea surface temperature           9  F/hour
+
+</PRE>
+
+<P>
+The level 2 <i><b>internal consistency checks</b></i> enforce reasonable, meteorological
+relationships among observations measured at a single station.  For
+example, a dewpoint temperature observation must not exceed the
+temperature observation made at the same station.  If it does, both
+the dewpoint and temperature observation are flagged as failing their
+internal consistency check.  Pressure internal consistency checks
+include a comparison of pressure change observations at each station
+with the difference of the current station pressure and the station
+pressure three hours previous, and a comparison of the reported
+sea-level pressure with a sea-level pressure estimated from the
+station pressure and the 12 hour mean surface temperature.  In the
+former check, if the reported 3h pressure change observation does not
+match the calculated ob, then only the reported observation is flagged
+as bad.  In the latter check, however, if the reported sea-level
+pressure does not match the calculated ob, then both the sea-level and
+station pressure obs are flagged as failing.
+
+<p>The level 2 <i><b>statistical spatial consistency check</b></i>
+uses weekly QC statistics to mark observations as failed if they
+failed any QC check 75% of the time during the previous 7 days.  These
+observations will continue to be marked as failed by this check until
+such time as the failure rate falls below 25% in the weekly statistics.
+This check is only performed on observation types that go through the
+level 3 spatial consistency check.
+
+<P>The level 3 <i><b>spatial consistency (or "buddy") check</b></i> is performed using an
+Optimal Interpolation (OI) technique developed by Belousov et
+al. (1968).  At each observation location, the difference between the
+measured value and the value analyzed by OI is computed.  If the
+magnitude of the difference is small, the observation agrees with its
+neighbors and is considered correct.  If, however, the difference is
+large, either the observation being checked or one of the observations
+used in the analysis is bad.  To determine which is the case, a
+reanalysis to the observation location is performed by eliminating one
+neighboring observation at a time. If successively eliminating each
+neighbor does not produce an analysis that agrees with the target
+observation (the observation being checked), the observation is
+flagged as bad.  If eliminating one of the neighboring observations
+produces an analysis that agrees with the target observation, then the
+target observation is flagged as "good" and the neighbor is flagged
+as "suspect."  Suspect observations are not used in subsequent OI
+analyses.  The following figure illustrates the reanalysis procedure:
+<p>
+<center>
+<img src = "images/qc_descrip_f1.gif" height = 402 width = 450 border = 0>
+</center>
+<p>
+To improve the performance of the OI, <A HREF=
+"http://msas.noaa.gov/msas.html">RSAS</A> analysis fields from the
+previous hour are used as background grids.  The analyses provide an
+accurate 1-h persistence forecast and allow the incorporation of
+previous surface observations, thus improving temporal continuity near
+stations that report less frequently than hourly.  The differences
+between the observations and the background are calculated and then
+interpolated to each observation point before the OI analysis is
+performed.  In addition, uniform distribution of the neighboring
+observations used in the spatial consistency check is guaranteed
+(whenever possible) by a search algorithm which
+locates the nearest observation in each of eight
+directional sectors distributed around the target observation.
+
+<P>Temperature observations are converted to potential temperature before
+application of the spatial consistency check.  Potential temperature
+varies more smoothly over mountainous terrain when the boundary layer
+is relatively deep and well mixed, a marked advantage during daytime
+hours.  For example, potential temperature gradients associated with
+fronts tend to be well defined during the day even in mountainous
+terrain (Sanders and Doswell 1995).  Unfortunately, this advantage
+often disappears at night when cool air pools in valleys.  To improve
+the efficacy of the spatial consistency check in these circumstances,
+elevation differences are incorporated to help model the horizontal
+correlation between mountain stations.  (Miller and Benjamin 1992).
+
+The error threshold (to which the absolute value of the difference
+between analyzed and observed values is compared) is a function of the
+forecast error, the observational measurement error, and the expected
+analysis error (Belousov et al. 1968, pg. 128).
+
+<p><sup>*</sup>It should be noted that while the QC checks discussed
+here are generally applied to the form of the variable stored in the database,
+the QC results will also be applied to any forms of the variable that
+are requested by the user and are derived from the primary variable.
+For example, specific humidity will get the QC results from the
+checks applied to dewpoint temperature.
+
+<H2><FONT COLOR="#3333FF">Station Monitoring</FONT></H2>
+
+<p>For surface data only (at this time), the MADIS processing also
+keeps statistics on the frequency and magnitude
+of the observational errors encountered for NWS sea-level pressure,
+potential temperature, dewpoint, and surface wind. At the completion
+of each hourly analysis, the system provides the total number of
+observations for each variable, the number of observations that failed
+the QC check, the station names for the failed observations, and the
+error and threshold values for each of the failed observations. The
+error is defined as the difference between the QC analysis value and
+the observed value, as computed in the spatial consistency check
+described above.
+
+<p>Statistics are calculated for all stations.
+Stations from different networks are kept statistically separate.
+Specifically, the following stratifications are currently maintained:
+"ASOS," "SAO" (METAR manual), "AUTO" (METAR automated, but not
+ASOS), "BUOY," and "NPN" (NOAA Profiler Network).  Local mesonets
+are stratified by provider.  For example, "CDOT," for the
+Colorado Department of Transportation.
+
+<P>Current hourly, daily, weekly, and monthly <A
+HREF="madis_smry_descrip.shtml">QC messages</A> are <A
+HREF="https://madis-data.ncep.noaa.gov/qcms_messages.html">available</A>
+for the various surface observing networks.
+
+<H2><FONT COLOR="#3333FF">Subjective Intervention</FONT></H2>
+
+<P>Two text files, a "reject" and an "accept" list provide the
+capability to subjectively override the results of the automated QC
+checks.  The reject list is a list of stations and associated input
+observations that will be labeled as bad, regardless of the outcome of
+the QC checks; the accept list is the corresponding list of stations
+that will be labeled as good, regardless of the outcome of the QC
+checks.  In both cases, observations associated with the stations in
+the lists can be individually flagged.  For example, wind observationsat a particular station may be added to the reject list, but not the
+temperature observations.
+
+<P>Here are the current subjective intervention lists in use:
+<UL>
+<LI><A HREF="http://msas.noaa.gov/reject.txt">Reject List</A></LI>
+<LI><A HREF="http://msas.noaa.gov/accept.txt">Accept List</A></LI>
+</UL>
+<P>
+QC and station monitoring procedures are not affected by
+subjective intervention lists, with the sole exception that
+observations on the reject list will be labeled as "suspect" and not
+used to check the spatial consistency of neighboring observations.
+This will allow MADIS personnel to continue to monitor the performance of the
+stations contained in the lists.  For example, a station with
+wind observations that fail the QC checks a large percentage of the time
+may be added to the reject list.  However, once the observation failure rate at the
+station falls back to near zero (possibly due to an anemometer
+that has been repaired), the station will likely be deleted from the list.
+
+<H2><FONT COLOR="#3333FF">QC Data Structures</FONT></H2>
+
+<P>
+The MADIS QC information available for each variable includes the
+following QC structures:  a single-character "data descriptor", intended to define an overall opinion of the
+quality of each observation by combining the information from the
+various QC checks, and for users desiring detailed information,
+a "QC applied" bitmap indicating which QC checks
+were applied to each observation, and a "QC results" bitmap indicating the
+results of the various QC checks.
+
+<P>
+The following table provides a complete list of the data descriptors and
+the bits used in the bitmaps:
+
+<PRE>
+  ------------------------------
+  MADIS QC Information - Surface
+  ------------------------------
+
+  QC Data Descriptor Values
+  -------------------------
+
+  No QC available:
+
+   Z - Preliminary, no QC
+
+  Automated QC checks:
+
+   C - Coarse pass, passed level 1
+   S - Screened, passed levels 1 and 2
+   V - Verified, passed levels 1, 2, and 3
+   X - Rejected/erroneous, failed level 1
+   Q - Questioned, passed level 1, failed 2 or 3
+
+       where level 1 = validity
+             level 2 = internal consistency, temporal consistency,
+                       statistical spatial consistency checks
+             level 3 = spatial consistency check
+
+Subjective intervention:
+
+   G - Subjective good
+   B - Subjective bad
+
+  Interpolated/Corrected observations:
+
+   T - Virtual temperature could not be calculated, air temperature passing all QC
+       checks has been returned
+
+  Bitmask for QC Applied and QC Results
+  -------------------------------------
+
+   Bit       QC Check                              Decimal Value
+   ---       --------                              -------------
+    1        Master Check                                 1
+    2        Validity Check                               2
+    3        Reserved                                     4
+    4        Internal Consistency Check                   8
+    5        Temporal Consistency Check                  16
+    6        Statistical Spatial Consistency Check       32
+    7        Spatial Consistency Check                   64
+    8        Reserved                                   128
+    9        Reserved                                   256
+   10        Reserved                                   512
+
+</PRE>
+<p>The QC bitmask is used in the QC applied and QC result "words" returned
+along with the QC data descriptor.  By examining the individual bits,
+the user can determine which checks were actually applied, and the
+pass/fail status of each check that was applied.
+
+<P>In the QC applied word, a bit value of 1 means the corresponding check
+was applied, a bit value of 0 indicates the check wasn't applied.
+
+<P>In the QC results word, a bit value of 1 means the corresponding check
+was applied and failed, a bit value of 0 indicates the check passed
+(given that the check was applied).
+
+<P>The "Master Check" is used to summarize all of the checks in a single
+bit.  If any check at all was applied, this bit will be set in the
+QC applied word.  If the observation failed any QC check, it will be
+set in the QC results word.
+
+<P>When read as decimal numbers, the different bits that are set in the
+bitmask are summed together.  For example, a QC applied value of 67
+should be interpreted as 1 + 2 + 64, meaning the validity and spatial
+consistency checks were applied.
+-->
+<p>
+<HR>
+<p>
+<H2><FONT COLOR="#3333FF">References</FONT></H2>
+<p>Benjamin, S. G. and P. A. Miller, 1990: An alternative sea level pressure reduction and a statistical
+comparison of geostrophic wind estimates with observed surface winds. Mon. Wea. Rev.,
+118, 2099.2116.
+<p>Bluestein, H. B., 1992: Synoptic.Dynamic Meteorology in Midlatitudes. Vol. I: Principles of Kinematics
+and Dynamics. Oxford University Press, 431 pp.
+<p>Committee on Extension to the Standard Atmosphere: U.S. Standard Atmosphere, 1976. NOAA,
+USAF.
+<p>Lin, Y., K.E. Mitchell, 2005: The NCEP Stage II/IV precipitation analyses: development and
+applications. Preprints, 19th Conf. on Hydrology, San Diego, CA, Amer. Meteor. Soc., P1.2.
+<p>McGill, R., L. Tukey and W. Larsen, 1978: Variations of box plots. Amer. Stat., 32, 12-16.
+<p>NCAR, 2010: Validation Report of the Upgraded Clarus System. 87 pp.
+<p>Office of the Federal Coordinator for Meteorology, 2009: The Federal Plan for Meteorological Services
+and Supporting Research Fiscal Year 2009. U.S. Department of Commerce/National Oceanic and
+Atmospheric Administration. 255 pp.
+<p>Pauley, P. M., 1998: An Example of Uncertainty in Sea Level Pressure Reduction. Wea. and Forecasting, 13, 833-850.
+<p>
+<hr width="100%"><p align="right">Last updated 15 March 2017</p>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3463124-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</BODY>
+</HTML>
+      
+        <!-- force body content to include the floated "news" element -->
+	<div class="clear">
+        </div>
+    </div> <!-- end body content -->
+</div>   <!-- end pbody -->
+
+<!-- legal footer area -->
+        <div class="footer-legal">
+                                <div class="footer-legal-content">
+                        <div class="footer-legal-gov">
+                                <a href="https://www.usa.gov"><img src="images/usa_gov.png" alt="usa.gov" width="110" height="30" /></a>
+                        </div>
+
+                        <div class="footer-legal-column">
+                                <p>
+                                        <a href="https://www.commerce.gov">US Dept of Commerce</a><br />
+                                <a href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a><br />
+                                <a href="https://www.weather.gov" >National Weather Service</a><br />
+                                                5830 University Research Ct.<br />College Park, MD 20740<br />
+                                Web Master's Email: <a href='mailto:w-nws.webmaster@noaa.gov'>w-nws.webmaster@noaa.gov</a>                      </p>
+                        </div>
+
+                        <div class="footer-legal-column2">
+                                <a href="https://www.weather.gov/disclaimer">Disclaimer</a><br />
+                                <a href="https://www.cio.noaa.gov/services_programs/info_quality.html">Information Quality</a><br />
+                                <a href="https://www.weather.gov/help">Help</a><br />
+                                <a href="https://www.weather.gov/glossary">Glossary</a>
+                        </div>
+
+                        <div class="footer-legal-column3">
+                                <a href="https://www.weather.gov/privacy">Privacy Policy</a><br />
+                                <a href="https://www.noaa.gov/information-technology/foia">Freedom of Information Act (FOIA)</a><br />
+                                <a href="https://www.weather.gov/about">About Us</a><br />
+                                <a href="https://www.weather.gov/careers">Career Opportunities</a>
+                        </div>
+                </div>
+
+</div><!-- end of <div class="footer-legal">--> 
+
+</div><!-- End of content div -->
+</div><!-- End of center div -->
+
+</div> <!-- end container -->
+</body>
+</html>
+

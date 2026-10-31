@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  
+    
+  
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    
+    <link rel="shortcut icon" type="image/ico" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-iphone-114-smile.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-ipad-144-smile.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-iphone-114-smile.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-ipad-144-smile.png"/>  
+  
+    <title>NOAA Global Forecast System (GFS) - Registry of Open Data on AWS</title>
+  
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://assets.opendata.aws/css/bootstrap/3.4.1/bootstrap.min.css">
+  
+    <!-- Our local CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+  
+    <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Dataset",
+      "name" : "NOAA Global Forecast System (GFS)",
+      "description" : "NOTE - Upgrade NCEP Global Forecast System to v16.3.0 - Effective November 29, 2022 See notification \u003ca href=\"https://www.weather.gov/media/notification/pdf2/scn22-104_gfs.v16.3.0.pdf\"\u003eHERE\u003c/a\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\nThe Global Forecast System (GFS) is a weather forecast model produced\nby the National Centers for Environmental Prediction (NCEP). Dozens of\natmospheric and land-soil variables are available through this dataset,\nfrom temperatures, winds, and precipitation to soil moisture and\natmospheric ozone concentration. The entire globe is covered by the GFS\nat a base horizontal resolution of 18 miles (28 kilometers) between grid\npoints, which is used by the operational forecasters who predict weather\nout to 16 days in the future. Horizontal resolution drops to 44 miles\n(70 kilometers) between grid point for forecasts between one week and two\nweeks.\n\u003cbr/\u003e\n\u003cbr/\u003e\nThe NOAA Global Forecast Systems (GFS) Warm Start Initial Conditions are \nproduced by the National Centers for Environmental Prediction Center (NCEP) \nto run operational deterministic medium-range numerical weather predictions.\u003cbr\u003eThe GFS is built with the GFDL Finite-Volume Cubed-Sphere Dynamical Core (FV3) \nand the Grid-Point Statistical Interpolation (GSI) data assimilation system.\u003cbr\u003ePlease visit the links below in the Documentation section to find more details \nabout the model and the data assimilation systems.   The current operational \nGFS is run at 64 layers in the vertical extending from the surface to the upper\nstratosphere and on six cubic-sphere tiles at  the C768 or 13-km horizontal\nresolution.  A new version of the GFS that has 127 layers extending to the\nmesopause will be implemented for operation on February 3, 2021.   These initial\nconditions are made available four times per day for running forecasts at the\n00Z, 06Z, 12Z and 18Z cycles, respectively.   For each cycle, the dataset\ncontains the first guess of the atmosphere states found in the directory\n./gdas.yyyymmdd/hh-6/RESTART, which are  6-hour GDAS forecast from the last\ncycle,  and atmospheric analysis increments and surface analysis for the current\ncycle  found in the directory ./gfs.yyyymmdd/hh, which are produced by the data\nassimilation systems. ",
+      "license" : "NOAA data disseminated through NODD are open to the public and can be used as desired.\u003cbr/\u003e \u003cbr/\u003eNOAA makes data openly available to ensure maximum use of our data, and to spur and encourage exploration and innovation throughout the industry. NOAA requests attribution for the use or dissemination of unaltered NOAA data. However, it is not permissible to state or imply endorsement by or affiliation with NOAA. If you modify NOAA data, you may not state or imply that it is original, unaltered NOAA data.",
+      "sourceOrganization" : "\u003ca href=\"http://www.noaa.gov/\"\u003eNOAA\u003c/a\u003e"
+    }
+    </script>
+  
+  </head>
+  <body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://assets.opendata.aws/js/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://assets.opendata.aws/js/bootstrap/3.4.1/bootstrap.min.js"></script>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="roda-header">
+          <h2><a href="/" alt="Home">Registry of Open Data on AWS</a></h2>
+          <a href="http://aws.amazon.com/what-is-cloud-computing">
+            <img src="https://assets.opendata.aws/img/AWS-Logo_White-Color_300x180.png" alt="Powered by AWS Cloud Computing" id="aws_header_logo">
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="container" >
+
+    <h1>NOAA Global Forecast System (GFS)</h1>
+    <p>
+      <span class="label label-info tag link-tag">agriculture</span>
+
+      
+
+      <span class="label label-info tag link-tag">climate</span>
+
+      <span class="label label-info tag link-tag">disaster response</span>
+
+      <span class="label label-info tag link-tag">environmental</span>
+
+      <span class="label label-info tag link-tag">meteorological</span>
+
+      <span class="label label-info tag link-tag">weather</span>
+    </p>
+    <div class="row">
+      <div class="col-md-6">
+      <h3>Description</h3>
+      <p>NOTE - Upgrade NCEP Global Forecast System to v16.3.0 - Effective November 29, 2022 See notification <a href="https://www.weather.gov/media/notification/pdf2/scn22-104_gfs.v16.3.0.pdf">HERE</a>
+<br/>
+<br/>
+The Global Forecast System (GFS) is a weather forecast model produced
+by the National Centers for Environmental Prediction (NCEP). Dozens of
+atmospheric and land-soil variables are available through this dataset,
+from temperatures, winds, and precipitation to soil moisture and
+atmospheric ozone concentration. The entire globe is covered by the GFS
+at a base horizontal resolution of 18 miles (28 kilometers) between grid
+points, which is used by the operational forecasters who predict weather
+out to 16 days in the future. Horizontal resolution drops to 44 miles
+(70 kilometers) between grid point for forecasts between one week and two
+weeks.
+<br/>
+<br/>
+The NOAA Global Forecast Systems (GFS) Warm Start Initial Conditions are 
+produced by the National Centers for Environmental Prediction Center (NCEP) 
+to run operational deterministic medium-range numerical weather predictions.<br>The GFS is built with the GFDL Finite-Volume Cubed-Sphere Dynamical Core (FV3) 
+and the Grid-Point Statistical Interpolation (GSI) data assimilation system.<br>Please visit the links below in the Documentation section to find more details 
+about the model and the data assimilation systems.   The current operational 
+GFS is run at 64 layers in the vertical extending from the surface to the upper
+stratosphere and on six cubic-sphere tiles at  the C768 or 13-km horizontal
+resolution.  A new version of the GFS that has 127 layers extending to the
+mesopause will be implemented for operation on February 3, 2021.   These initial
+conditions are made available four times per day for running forecasts at the
+00Z, 06Z, 12Z and 18Z cycles, respectively.   For each cycle, the dataset
+contains the first guess of the atmosphere states found in the directory
+./gdas.yyyymmdd/hh-6/RESTART, which are  6-hour GDAS forecast from the last
+cycle,  and atmospheric analysis increments and surface analysis for the current
+cycle  found in the directory ./gfs.yyyymmdd/hh, which are produced by the data
+assimilation systems. </p>
+
+      <h4>Update Frequency</h4>
+      <p>4 times a day, every 6 hours starting at midnight UTC</p>
+
+      <h4>License</h4>
+      <p>NOAA data disseminated through NODD are open to the public and can be used as desired.<br/> <br/>NOAA makes data openly available to ensure maximum use of our data, and to spur and encourage exploration and innovation throughout the industry. NOAA requests attribution for the use or dissemination of unaltered NOAA data. However, it is not permissible to state or imply endorsement by or affiliation with NOAA. If you modify NOAA data, you may not state or imply that it is original, unaltered NOAA data.</p>
+
+      <h4>Documentation</h4>
+      <p><a href="https://www.emc.ncep.noaa.gov/emc/pages/numerical_forecast_systems/gfs.php">https://www.emc.ncep.noaa.gov/emc/pages/numerical_forecast_systems/gfs.php</a></p>
+
+      <h4>Managed By</h4>
+      <p><a href="http://www.noaa.gov/"><img src="/img/logos/noaa-logo.png" class="managed-by-logo" alt="NOAA"></a></p>
+      <p>See all datasets managed by <a href="https://registry.opendata.aws/collab/noaa">NOAA</a>.</p>
+
+      <h4>Contact</h4>
+      <p>For questions regarding data content or quality, visit <a href="https://www.emc.ncep.noaa.gov/emc/pages/numerical_forecast_systems/gfs.php">the NOAA GFS site</a>. For any questions regarding data delivery or any general questions regarding the NOAA Open Data Dissemination (NODD) Program, email the NODD Team at <a href="mailto:nodd@noaa.gov">&#110;&#111;&#x64;&#100;&#x40;&#x6e;&#111;&#97;&#x61;&#x2e;&#103;&#x6f;&#118;</a>. <br /> We also seek to identify case studies on how NOAA data is being used and will be featuring those stories in joint publications and in upcoming events. If you are interested in seeing your story highlighted, please share it with the NODD team by emailing <a href="mailto:nodd@noaa.gov">&#x6e;&#x6f;&#x64;&#100;&#64;&#110;&#x6f;&#x61;&#x61;&#x2e;&#103;&#111;&#x76;</a></p>
+
+      <h4>How to Cite</h4>
+      <p>NOAA Global Forecast System (GFS) was accessed on <code>DATE</code> from https://registry.opendata.aws/noaa-gfs-bdp-pds. </p>
+
+      <h4 name="usageexamples">Usage Examples</h4>
+        <h5 class="dataatwork-category">Tutorials</h5>
+        <ul class="dataatwork-list">
+          <li>
+            <a href="https://www.spatialworkflow.io/gfs-wind-download-python/" class="" target="_none">How to Download GFS Wind Data From AWS in Python</a> by <a href="https://www.spatialworkflow.io/" target="_none">Spatial Workflow</a></a>
+            <br>
+            <a href="https://studiolab.sagemaker.aws/import/github/https://www.spatialworkflow.io/notebooks/gfs-wind-download-python.ipynb" rel="nofollow" target="_blank"><img src="https://studiolab.sagemaker.aws/studiolab.svg" alt="Open In SageMaker Studio Lab" data-canonical-src="https://studiolab.sagemaker.aws/studiolab.svg" style="max-width: 100%;"></a><br>
+            
+          </li>          <li>
+            <a href="https://github.com/aws-samples/aws-opendata-samples/blob/main/notebooks/noaa-gfs/noaa_gfs_quickstart.ipynb" class="aws-link" target="_none">NOAA Global Forecast System (GFS) quickstart notebook on AWS</a> by Benoit de Chateauvieux</a>
+            <br>
+            
+            
+          </li>        </ul>
+        <h5 class="dataatwork-category">Publications</h5>
+        <ul class="dataatwork-list">
+          <li>
+            <a href="https://noaa-gfs-warmstart-pds.s3.amazonaws.com/GFS+Warm+Restart+Files.v1.pdf" class="" target="_none">GFS Warm Restart Files Additional Information</a> by Fanglin Yang</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://doi.org/10.1109/JSTARS.2024.3356858" class="" target="_none">Toward the Next Generation of Microwave Sounders: Benefits of a Low-Earth Orbit Hyperspectral Microwave Instrument in All- Weather Conditions using AI</a> by Eric S. Maddy</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://www.mdpi.com/2077-1312/12/2/220/pdf" class="" target="_none">Validation and Application of the Accu-Waves Operational Platform for Wave Forecasts at Ports</a> by Christos Makris et al.</a>
+            <br>
+            
+            
+          </li>        </ul>
+
+    </div>
+    <div class="col-md-5 col-md-offset-1">
+      <h3>Resources on AWS</h3>
+      <ul class="resource-list">
+        <li>
+          <dl class="resource-list">
+            <dt class="resource-description">Description</dt>
+            <dd class="resource-description">GFS data</dd>
+            <dt class="resource-type">Resource type</dt>
+            <dd class="resource-type s3-bucket">S3 Bucket</dd>
+            <dt class="resource-arn">Amazon Resource Name (ARN)</dt>
+            <dd><code>arn:aws:s3:::noaa-gfs-bdp-pds</code></dd>
+            <dt class="resource-region">AWS Region</dt>
+            <dd><code>us-east-1</code></dd>
+            <dt class="resource-region"><a href="https://aws.amazon.com/cli/">AWS CLI</a> Access (No AWS account required)</dt>
+            <dd><code>aws s3 ls --no-sign-request s3://noaa-gfs-bdp-pds/</code></dd>
+            <dt class="resource-explore">Explore</dt>
+            <dd><a href="https://noaa-gfs-bdp-pds.s3.amazonaws.com/index.html">Browse Bucket</a></dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="resource-list">
+            <dt class="resource-description">Description</dt>
+            <dd class="resource-description">New data notifications for GFS, only Lambda and SQS protocols allowed</dd>
+            <dt class="resource-type">Resource type</dt>
+            <dd class="resource-type sns-topic">SNS Topic</dd>
+            <dt class="resource-arn">Amazon Resource Name (ARN)</dt>
+            <dd><code>arn:aws:sns:us-east-1:123901341784:NewGFSObject</code></dd>
+            <dt class="resource-region">AWS Region</dt>
+            <dd><code>us-east-1</code></dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="resource-list">
+            <dt class="resource-description">Description</dt>
+            <dd class="resource-description">GFS Warm Start Initial Conditions</dd>
+            <dt class="resource-type">Resource type</dt>
+            <dd class="resource-type s3-bucket">S3 Bucket</dd>
+            <dt class="resource-arn">Amazon Resource Name (ARN)</dt>
+            <dd><code>arn:aws:s3:::noaa-gfs-warmstart-pds</code></dd>
+            <dt class="resource-region">AWS Region</dt>
+            <dd><code>us-east-1</code></dd>
+            <dt class="resource-region"><a href="https://aws.amazon.com/cli/">AWS CLI</a> Access (No AWS account required)</dt>
+            <dd><code>aws s3 ls --no-sign-request s3://noaa-gfs-warmstart-pds/</code></dd>
+            <dt class="resource-explore">Explore</dt>
+            <dd><a href="https://noaa-gfs-warmstart-pds.s3.amazonaws.com/index.html">Browse Bucket</a></dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="resource-list">
+            <dt class="resource-description">Description</dt>
+            <dd class="resource-description">New data notifications for GFS Warm Start IC, only Lambda and SQS protocols allowed</dd>
+            <dt class="resource-type">Resource type</dt>
+            <dd class="resource-type sns-topic">SNS Topic</dd>
+            <dt class="resource-arn">Amazon Resource Name (ARN)</dt>
+            <dd><code>arn:aws:sns:us-east-1:123901341784:NewGfsWarmStartObject</code></dd>
+            <dt class="resource-region">AWS Region</dt>
+            <dd><code>us-east-1</code></dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+    <hr/>
+    <p><a href="https://github.com/awslabs/open-data-registry/blob/main/datasets/noaa-gfs-bdp-pds.yaml">Edit this dataset entry on GitHub</a></p>
+    <p><a href="mailto:opendata@amazon.com">Tell us about your project</a></p>
+    <p><a href="/"><b>Home</b></a></p>
+  </div>
+  <script src="/js/tags.js"></script>

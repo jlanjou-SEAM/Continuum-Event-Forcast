@@ -1,0 +1,2173 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>HOMEPAGE CPTEC - 2025</title>
+
+    <!-- Fontes e ícones -->
+<link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<!-- Alpine JS -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<!-- Lucide ícones -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        lucide.createIcons();
+    });
+</script>            <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BVLXSCCQJG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BVLXSCCQJG');
+</script>    
+    <link rel="preload" as="style" href="https://www.cptec.inpe.br/build/assets/app-C4h-5RKx.css" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/app-BgaQFPJ1.js" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/main-C0eexBWA.js" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/geo-forecast-C8nEcPZl.js" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/default-forecast-BcJVcLM_.js" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/autocomplete-DGiaF_Mg.js" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/forecast-input-DZuSWC_U.js" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/weather-utils-DKRH2g48.js" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/constants-DTnPkAnb.js" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/placeholder-ClEY2zjF.js" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/temp-alerts-q5I7Fk3M.js" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/meteogram-RR25yYkA.js" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/ui-DVLisS0g.js" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/theme-BAYuG5La.js" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/timezone-B1NxYlqc.js" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/api-D0n94VxA.js" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/data-processor-BLiy2rv_.js" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/charts-config-DsUnGG1V.js" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/echarts-helpers-DPSX-Zfv.js" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/chart-renderer-be2yEJQM.js" /><link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/data-table-modal-CRWTBx8K.js" /><link rel="stylesheet" href="https://www.cptec.inpe.br/build/assets/app-C4h-5RKx.css" /><script type="module" src="https://www.cptec.inpe.br/build/assets/app-BgaQFPJ1.js"></script><script type="module" src="https://www.cptec.inpe.br/build/assets/main-C0eexBWA.js"></script>    
+    <!-- Dark mode script to prevent flash -->
+    <script>
+        (function() {
+            try {
+                const saved = localStorage.getItem('theme-preference');
+                const theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
+</head>
+
+<body class="min-h-screen flex flex-col bg-white dark:bg-gray-900 text-gray-900 transition-colors duration-200">
+    
+    <header id="header" data-tailwind-header data-compact="false"
+    class="group/tailwind-header sticky top-0 z-40 w-full bg-white text-gray-900 shadow-md transition-colors duration-200 dark:bg-gray-900 dark:text-white dark:shadow-none">
+    <div class="mx-auto w-full px-4 sm:px-10">
+        <div class="flex h-14 items-center justify-between gap-4 transition-[height] duration-200" data-header-top>
+            <div class="flex min-w-0 items-center gap-4">
+                <a href="https://www.gov.br/pt-br" class="shrink-0" aria-label="gov.br">
+                    <img class="h-7 w-auto transition-[height] duration-200 dark:hidden" src="https://www.cptec.inpe.br/img/govbr-logo.png" alt="logo - GOV.BR" data-header-logo>
+                    <img class="hidden h-7 w-auto transition-[height] duration-200 dark:block" src="https://www.cptec.inpe.br/img/govbr-branco-logo.png" alt="logo - GOV.BR" data-header-logo>
+                </a>
+                <span class="!hidden h-8 w-px shrink-0 bg-gray-200 transition-opacity duration-200 dark:bg-white/20 md:!block" aria-hidden="true" data-header-ministry></span>
+                <div class="!hidden truncate text-sm text-gray-700 transition-opacity duration-200 dark:text-gray-100 md:!block" data-header-ministry>Ministério da Ciência, Tecnologia e Inovação</div>
+            </div>
+
+            <div class="flex shrink-0 items-center gap-1 sm:gap-2">
+                <button x-data="darkModeToggle()" @click="toggle()" @theme-changed.window="onThemeChanged($event)"
+    :title="currentTheme === 'dark' ? 'Mudar para modo claro' : 'Mudar para modo escuro'"
+    class="flex size-10 items-center justify-center rounded-full border-0 bg-white text-gray-700 shadow-sm transition-colors hover:bg-gray-100 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+    aria-label="Alternar modo escuro">
+    <svg x-show="currentTheme === 'dark'" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+    </svg>
+    <svg x-show="currentTheme === 'light'" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+    </svg>
+</button>
+
+<script>
+    if (!window.darkModeToggle) {
+        window.darkModeToggle = () => ({
+            currentTheme: 'light',
+            init() {
+                const checkDarkMode = setInterval(() => {
+                    if (!window.DarkMode) return;
+                    clearInterval(checkDarkMode);
+                    this.currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+                }, 10);
+            },
+            toggle() {
+                if (!window.DarkMode) return;
+                window.DarkMode.toggle();
+                this.currentTheme = window.DarkMode.getCurrentTheme();
+            },
+            onThemeChanged(event) {
+                if (event.detail) this.currentTheme = event.detail.theme;
+            },
+        });
+    }
+</script>
+                <div class="relative" data-lazy-gtranslate>
+    <button class="flex size-10 items-center justify-center rounded-full border-0 bg-white text-gray-700 shadow-sm transition-colors hover:bg-gray-100 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+        type="button" aria-label="Abrir tradutor" aria-expanded="false" data-gtranslate-trigger>
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m5 8 6 6" />
+            <path d="m4 14 6-6 2-3" />
+            <path d="M2 5h12" />
+            <path d="M7 2h1" />
+            <path d="m22 22-5-10-5 10" />
+            <path d="M14 18h6" />
+        </svg>
+    </button>
+
+    <div class="absolute right-0 top-[calc(100%+0.5rem)] hidden w-44 overflow-hidden rounded-lg bg-white py-2 shadow-lg dark:bg-gray-800"
+        data-gtranslate-panel>
+        <div id="gtranslate-selector" class="flex items-center justify-center gap-1 px-2 pb-1 text-sm"></div>
+    </div>
+</div>
+
+<script>
+    (() => {
+        const root = document.querySelector('[data-lazy-gtranslate]');
+
+        if (!root || root.dataset.ready === 'true') return;
+
+        root.dataset.ready = 'true';
+
+        const trigger = root.querySelector('[data-gtranslate-trigger]');
+        const panel = root.querySelector('[data-gtranslate-panel]');
+        const wrapper = root.querySelector('#gtranslate-selector');
+        let requested = false;
+
+        const gtranslateLinkClasses = [
+            'inline-flex', 'rounded-full', 'px-3', 'py-2', 'font-semibold', 'leading-none',
+            '!text-gray-900', 'no-underline', 'transition-colors', 'hover:!bg-gray-100',
+            'dark:!text-white', 'dark:hover:!bg-gray-700',
+        ];
+
+        const decorateGTranslateLinks = () => {
+            wrapper?.querySelectorAll('.glink').forEach((link) => link.classList.add(...gtranslateLinkClasses));
+        };
+
+        if (wrapper) {
+            new MutationObserver(decorateGTranslateLinks).observe(wrapper, { childList: true, subtree: true });
+        }
+
+        const setOpen = (open) => {
+            trigger?.setAttribute('aria-expanded', String(open));
+            panel?.classList.toggle('hidden', !open);
+        };
+
+        const loadGTranslate = () => {
+            if (requested) return;
+
+            requested = true;
+            window.gtranslateSettings = {
+                default_language: 'pt',
+                native_language_names: true,
+                languages: ['pt', 'en', 'es'],
+                wrapper_selector: '#gtranslate-selector',
+            };
+
+            const script = document.createElement('script');
+            script.src = 'https://cdn.gtranslate.net/widgets/latest/lc.js';
+            script.defer = true;
+            script.addEventListener('load', decorateGTranslateLinks);
+            script.addEventListener('error', () => {
+                requested = false;
+                panel?.classList.add('hidden');
+            });
+            document.head.appendChild(script);
+        };
+
+        trigger?.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const open = panel?.classList.contains('hidden');
+            setOpen(open);
+            if (open) loadGTranslate();
+        });
+
+        panel?.addEventListener('click', (event) => event.stopPropagation());
+        document.addEventListener('click', () => setOpen(false));
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') setOpen(false);
+        });
+    })();
+</script>
+                <div class="relative" data-quick-menu>
+                    <button class="flex size-10 items-center justify-center rounded-full border-0 bg-white text-gray-700 shadow-sm transition-colors hover:bg-gray-100 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700" type="button" aria-label="Abrir Acesso Rápido" aria-expanded="false" data-quick-trigger>
+                        <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+                    </button>
+                    <div class="absolute right-0 top-[calc(100%+0.5rem)] hidden w-52 overflow-hidden rounded-lg bg-white py-2 text-sm shadow-lg dark:bg-gray-800" data-quick-list>
+                        <div class="px-5 py-3 font-semibold text-gray-900 dark:text-white">Acesso Rápido</div>
+                                                    <a class="block border-t border-gray-200 px-5 py-3 text-gray-700 no-underline transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-white/10 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/pt-br/orgaos-do-governo">Órgãos do Governo</a>
+                                                    <a class="block border-t border-gray-200 px-5 py-3 text-gray-700 no-underline transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-white/10 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/acessoainformacao/pt-br">Acesso à Informação</a>
+                                                    <a class="block border-t border-gray-200 px-5 py-3 text-gray-700 no-underline transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-white/10 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www4.planalto.gov.br/legislacao">Legislação</a>
+                                                    <a class="block border-t border-gray-200 px-5 py-3 text-gray-700 no-underline transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-white/10 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital">Acessibilidade</a>
+                                            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex min-h-20 items-start gap-4 pb-4 pt-2 transition-all duration-200" data-header-content>
+            <button class="mt-1 flex size-10 shrink-0 items-center justify-center rounded-full border-0 bg-transparent text-gray-700 transition-colors hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800" type="button" aria-label="Menu" aria-controls="main-navigation" aria-expanded="false" data-menu-open id="navigation">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="min-w-0 pt-1">
+                <a href="/" class="group no-underline">
+                    <div class="text-lg font-semibold leading-tight text-gray-800 transition-all duration-200 group-hover:text-blue-700 dark:text-gray-100 dark:group-hover:text-white sm:text-2xl" data-header-title>Centro de Previsão de Tempo e Estudos Climáticos</div>
+                </a>
+                <div class="mt-1 text-xs text-gray-700 dark:text-gray-100">CPTEC</div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="main-navigation" class="fixed inset-0 z-50 hidden" aria-hidden="true" data-menu>
+    <button class="absolute inset-0 border-0 bg-black/50" type="button" aria-label="Fechar o menu" data-menu-close></button>
+    <aside class="relative flex h-full w-80 max-w-[calc(100vw-1rem)] flex-col overflow-hidden bg-white text-gray-700 shadow-xl dark:bg-gray-900 dark:text-white" role="dialog" aria-modal="true" aria-label="Menu CPTEC">
+        <div class="flex h-16 shrink-0 items-center justify-between border-b border-gray-200 px-4 dark:border-white/10">
+            <a href="https://www.gov.br/pt-br" aria-label="gov.br">
+                <img class="h-8 w-auto dark:hidden" src="https://www.cptec.inpe.br/img/govbr-logo.png" alt="logo - GOV.BR">
+                <img class="hidden h-8 w-auto dark:block" src="https://www.cptec.inpe.br/img/govbr-branco-logo.png" alt="logo - GOV.BR">
+            </a>
+            <button class="flex size-10 items-center justify-center rounded-full border-0 bg-transparent text-gray-700 transition-colors hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800" type="button" aria-label="Fechar o menu" data-menu-close>
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <nav class="flex-1 overflow-y-auto pb-6" aria-label="Navegação CPTEC">
+                            <div class="border-b border-gray-200 dark:border-white/10" data-menu-folder>
+                    <button class="flex min-h-12 w-full items-center justify-between gap-3 border-0 bg-white px-4 py-3 text-left text-sm font-bold text-gray-700 transition-colors hover:bg-gray-100 dark:bg-gray-900 dark:text-white dark:hover:bg-gray-800" type="button" aria-expanded="false" data-folder-trigger>
+                        <span>Acesso à Informação</span>
+                        <i class="fas fa-chevron-down transition-transform duration-200" aria-hidden="true" data-folder-icon></i>
+                    </button>
+                    <ul class="hidden list-none bg-gray-100 py-1 pl-0 dark:bg-gray-800" data-folder-list>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/acessoainformacao/pt-br">Acesso à Informação</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/acesso-a-informacao/institucional">Institucional</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/acesso-a-informacao/acoes-e-programas">Ações e Programas</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/acesso-a-informacao/participacao-social">Participação Social</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/acesso-a-informacao/auditorias">Auditorias</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/acesso-a-informacao/convenios-e-transferencias">Convênios e Transferências</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/acesso-a-informacao/receitas-e-despesas">Receitas e Despesas</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/acesso-a-informacao/licitacoes-e-contratos">Licitações e Contratos</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/acesso-a-informacao/servidores">Servidores</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/acesso-a-informacao/informacoes-classificadas">Informações Classificadas</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/acesso-a-informacao/servico-de-informacao-ao-cidadao-sic">Serviço de Informação ao Cidadão - SIC</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/acesso-a-informacao/perguntas-frequentes">Perguntas Frequentes</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/acesso-a-informacao/dados-abertos">Dados Abertos</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/acesso-a-informacao/institucional/cooperacoes-nacionais-e-internacionais">Cooperações Nacionais e Internacionais</a></li>
+                                            </ul>
+                </div>
+                            <div class="border-b border-gray-200 dark:border-white/10" data-menu-folder>
+                    <button class="flex min-h-12 w-full items-center justify-between gap-3 border-0 bg-white px-4 py-3 text-left text-sm font-bold text-gray-700 transition-colors hover:bg-gray-100 dark:bg-gray-900 dark:text-white dark:hover:bg-gray-800" type="button" aria-expanded="false" data-folder-trigger>
+                        <span>Assuntos</span>
+                        <i class="fas fa-chevron-down transition-transform duration-200" aria-hidden="true" data-folder-icon></i>
+                    </button>
+                    <ul class="hidden list-none bg-gray-100 py-1 pl-0 dark:bg-gray-800" data-folder-list>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/assuntos">Assuntos</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/assuntos/ultimas-noticias">Últimas Notícias</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/assuntos/produtos">Produtos</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/assuntos/eventos">Eventos</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/assuntos/anuncio-de-oportunidades">Anúncio de Oportunidades</a></li>
+                                            </ul>
+                </div>
+                            <div class="border-b border-gray-200 dark:border-white/10" data-menu-folder>
+                    <button class="flex min-h-12 w-full items-center justify-between gap-3 border-0 bg-white px-4 py-3 text-left text-sm font-bold text-gray-700 transition-colors hover:bg-gray-100 dark:bg-gray-900 dark:text-white dark:hover:bg-gray-800" type="button" aria-expanded="false" data-folder-trigger>
+                        <span>Central de Conteúdo</span>
+                        <i class="fas fa-chevron-down transition-transform duration-200" aria-hidden="true" data-folder-icon></i>
+                    </button>
+                    <ul class="hidden list-none bg-gray-100 py-1 pl-0 dark:bg-gray-800" data-folder-list>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/central-de-conteudo">Central de Conteúdo</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/central-de-conteudo/cartilhas-educacionais">Cartilhas Educacionais</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/central-de-conteudo/publicacoes">Publicações</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/area-conhecimento/biblioteca">Biblioteca On-Line</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.youtube.com/inpemct">Vídeos</a></li>
+                                            </ul>
+                </div>
+                            <div class="border-b border-gray-200 dark:border-white/10" data-menu-folder>
+                    <button class="flex min-h-12 w-full items-center justify-between gap-3 border-0 bg-white px-4 py-3 text-left text-sm font-bold text-gray-700 transition-colors hover:bg-gray-100 dark:bg-gray-900 dark:text-white dark:hover:bg-gray-800" type="button" aria-expanded="false" data-folder-trigger>
+                        <span>Canais de Atendimento</span>
+                        <i class="fas fa-chevron-down transition-transform duration-200" aria-hidden="true" data-folder-icon></i>
+                    </button>
+                    <ul class="hidden list-none bg-gray-100 py-1 pl-0 dark:bg-gray-800" data-folder-list>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/canais_atendimento">Canais de Atendimento</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/canais_atendimento/ouvidoria">Ouvidoria</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/canais_atendimento/imprensa">Imprensa</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://www.gov.br/inpe/pt-br/acesso-a-informacao/institucional/visita/">Visitas ao INPE</a></li>
+                                            </ul>
+                </div>
+                            <div class="border-b border-gray-200 dark:border-white/10" data-menu-folder>
+                    <button class="flex min-h-12 w-full items-center justify-between gap-3 border-0 bg-white px-4 py-3 text-left text-sm font-bold text-gray-700 transition-colors hover:bg-gray-100 dark:bg-gray-900 dark:text-white dark:hover:bg-gray-800" type="button" aria-expanded="false" data-folder-trigger>
+                        <span>Previsão Numérica</span>
+                        <i class="fas fa-chevron-down transition-transform duration-200" aria-hidden="true" data-folder-icon></i>
+                    </button>
+                    <ul class="hidden list-none bg-gray-100 py-1 pl-0 dark:bg-gray-800" data-folder-list>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://previsaonumerica.cptec.inpe.br/">Previsão de Tempo</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://subsazonal.cptec.inpe.br/">Previsão Subsazonal</a></li>
+                                                    <li><a class="block px-8 py-3 text-sm font-medium text-gray-700 no-underline transition-colors hover:bg-white hover:text-gray-900 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" href="https://sazonal.cptec.inpe.br/">Previsão Sazonal</a></li>
+                                            </ul>
+                </div>
+            
+                            <a class="flex min-h-12 items-center justify-between gap-4 border-b border-gray-200 px-4 py-3 text-sm font-bold text-gray-700 no-underline transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-white/10 dark:text-white dark:hover:bg-gray-800" href="https://www.cptec.inpe.br/">
+                    <span>CPTEC</span><i class="fa-solid fa-house mr-1 text-base" aria-hidden="true"></i>
+                </a>
+                            <a class="flex min-h-12 items-center justify-between gap-4 border-b border-gray-200 px-4 py-3 text-sm font-bold text-gray-700 no-underline transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-white/10 dark:text-white dark:hover:bg-gray-800" href="https://nowcasting.cptec.inpe.br/">
+                    <span>Nowcasting</span><i class="fa-solid fa-map-location-dot mr-1 text-base" aria-hidden="true"></i>
+                </a>
+                            <a class="flex min-h-12 items-center justify-between gap-4 border-b border-gray-200 px-4 py-3 text-sm font-bold text-gray-700 no-underline transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-white/10 dark:text-white dark:hover:bg-gray-800" href="https://clima.cptec.inpe.br/">
+                    <span>Clima</span><i class="fa-solid fa-cloud-sun mr-1 text-base" aria-hidden="true"></i>
+                </a>
+                            <a class="flex min-h-12 items-center justify-between gap-4 border-b border-gray-200 px-4 py-3 text-sm font-bold text-gray-700 no-underline transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-white/10 dark:text-white dark:hover:bg-gray-800" href="https://satelite.cptec.inpe.br/home/index.jsp">
+                    <span>Satélite</span><i class="fa-solid fa-satellite mr-1 text-base" aria-hidden="true"></i>
+                </a>
+                            <a class="flex min-h-12 items-center justify-between gap-4 border-b border-gray-200 px-4 py-3 text-sm font-bold text-gray-700 no-underline transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-white/10 dark:text-white dark:hover:bg-gray-800" href="/geada">
+                    <span>Geada</span><i class="fa-solid fa-snowflake mr-1 text-base" aria-hidden="true"></i>
+                </a>
+                            <a class="flex min-h-12 items-center justify-between gap-4 border-b border-gray-200 px-4 py-3 text-sm font-bold text-gray-700 no-underline transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-white/10 dark:text-white dark:hover:bg-gray-800" href="http://ondas.cptec.inpe.br/">
+                    <span>Ondas</span><i class="fa-solid fa-water mr-1 text-base" aria-hidden="true"></i>
+                </a>
+                            <a class="flex min-h-12 items-center justify-between gap-4 border-b border-gray-200 px-4 py-3 text-sm font-bold text-gray-700 no-underline transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-white/10 dark:text-white dark:hover:bg-gray-800" href="https://bacias.cptec.inpe.br/">
+                    <span>Bacias</span><i class="fa-solid fa-satellite-dish mr-1 text-base" aria-hidden="true"></i>
+                </a>
+                            <a class="flex min-h-12 items-center justify-between gap-4 border-b border-gray-200 px-4 py-3 text-sm font-bold text-gray-700 no-underline transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-white/10 dark:text-white dark:hover:bg-gray-800" href="http://meioambiente.cptec.inpe.br/">
+                    <span>Qualidade do Ar</span><i class="fa-solid fa-wind mr-1 text-base" aria-hidden="true"></i>
+                </a>
+                            <a class="flex min-h-12 items-center justify-between gap-4 border-b border-gray-200 px-4 py-3 text-sm font-bold text-gray-700 no-underline transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-white/10 dark:text-white dark:hover:bg-gray-800" href="https://www.gov.br/inpe/pt-br/area-conhecimento/posgraduacao/">
+                    <span>Pós Graduação</span><i class="fa-solid fa-user-graduate mr-1 text-base" aria-hidden="true"></i>
+                </a>
+                            <a class="flex min-h-12 items-center justify-between gap-4 border-b border-gray-200 px-4 py-3 text-sm font-bold text-gray-700 no-underline transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-white/10 dark:text-white dark:hover:bg-gray-800" href="https://www.gov.br/inpe/pt-br/composicao">
+                    <span>Composição</span><i class="fa-solid fa-network-wired mr-1 text-base" aria-hidden="true"></i>
+                </a>
+                            <a class="flex min-h-12 items-center justify-between gap-4 border-b border-gray-200 px-4 py-3 text-sm font-bold text-gray-700 no-underline transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-white/10 dark:text-white dark:hover:bg-gray-800" href="https://www.gov.br/inpe/pt-br/servicos">
+                    <span>Serviços</span><i class="fa-solid fa-gears mr-1 text-base" aria-hidden="true"></i>
+                </a>
+            
+                            <button class="flex min-h-12 w-full items-center justify-between gap-4 border-0 border-b border-gray-200 bg-white px-4 py-3 text-left text-sm font-bold text-gray-700 transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-white/10 dark:bg-gray-900 dark:text-white dark:hover:bg-gray-800" type="button" data-tutorial-trigger aria-label="Abrir tutorial da pagina principal">
+                    <span>Tutorial</span><i class="fa-solid fa-circle-question mr-1 text-base" aria-hidden="true"></i>
+                </button>
+                    </nav>
+
+        <div class="shrink-0 border-t border-gray-200 bg-white px-4 py-4 dark:border-white/10 dark:bg-gray-900">
+            <div class="text-center text-sm font-semibold text-gray-700 dark:text-white">Redes Sociais</div>
+            <div class="mt-2 flex items-center justify-center gap-2">
+                                    <a class="flex size-10 items-center justify-center rounded-full text-blue-700 no-underline transition-colors hover:bg-blue-100 dark:text-white dark:hover:bg-gray-800" href="https://www.facebook.com/inpe.oficial" aria-label="Compartilhar por Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                                    <a class="flex size-10 items-center justify-center rounded-full text-blue-700 no-underline transition-colors hover:bg-blue-100 dark:text-white dark:hover:bg-gray-800" href="https://br.linkedin.com/company/inpe_2" aria-label="Compartilhar por Linkedin"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                                    <a class="flex size-10 items-center justify-center rounded-full text-blue-700 no-underline transition-colors hover:bg-blue-100 dark:text-white dark:hover:bg-gray-800" href="https://x.com/inpe_mcti?lang=pt" aria-label="Compartilhar por Twitter/X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                                    <a class="flex size-10 items-center justify-center rounded-full text-blue-700 no-underline transition-colors hover:bg-blue-100 dark:text-white dark:hover:bg-gray-800" href="https://www.youtube.com/inpemct" aria-label="Compartilhar por YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+                            </div>
+            <div class="mt-3 text-center text-xs text-gray-500 dark:text-gray-100">Desenvolvido por: <strong>CPTEC</strong></div>
+        </div>
+    </aside>
+</div>
+
+<script>
+    (() => {
+        const header = document.querySelector('[data-tailwind-header]');
+        const menu = document.querySelector('[data-menu]');
+        const menuOpenButton = document.querySelector('[data-menu-open]');
+        const menuCloseButtons = document.querySelectorAll('[data-menu-close]');
+        const quickMenu = document.querySelector('[data-quick-menu]');
+        const quickTrigger = document.querySelector('[data-quick-trigger]');
+        const quickList = document.querySelector('[data-quick-list]');
+        const headerTop = document.querySelector('[data-header-top]');
+        const headerContent = document.querySelector('[data-header-content]');
+        const headerTitle = document.querySelector('[data-header-title]');
+        const headerLogos = document.querySelectorAll('[data-header-logo]');
+        const headerMinistry = document.querySelectorAll('[data-header-ministry]');
+        let lastMenuTrigger = null;
+
+        const setQuickMenu = (open) => {
+            if (!quickTrigger || !quickList) return;
+            quickTrigger.setAttribute('aria-expanded', String(open));
+            quickList.classList.toggle('hidden', !open);
+        };
+
+        const setMenu = (open) => {
+            if (!menu || !menuOpenButton) return;
+            menu.classList.toggle('hidden', !open);
+            menu.setAttribute('aria-hidden', String(!open));
+            menuOpenButton.setAttribute('aria-expanded', String(open));
+            document.documentElement.classList.toggle('overflow-hidden', open);
+
+            if (open) {
+                lastMenuTrigger = document.activeElement;
+                setQuickMenu(false);
+                menu.querySelector('[data-menu-close]')?.focus();
+            } else {
+                lastMenuTrigger?.focus?.();
+            }
+        };
+
+        quickTrigger?.addEventListener('click', (event) => {
+            event.stopPropagation();
+            setQuickMenu(quickList?.classList.contains('hidden'));
+        });
+        quickList?.addEventListener('click', (event) => event.stopPropagation());
+        menuOpenButton?.addEventListener('click', () => setMenu(true));
+        menuCloseButtons.forEach((button) => button.addEventListener('click', () => setMenu(false)));
+
+        document.querySelectorAll('[data-folder-trigger]').forEach((button) => {
+            button.addEventListener('click', () => {
+                const folder = button.closest('[data-menu-folder]');
+                const list = folder?.querySelector('[data-folder-list]');
+                const icon = folder?.querySelector('[data-folder-icon]');
+                const open = list?.classList.contains('hidden');
+                button.setAttribute('aria-expanded', String(open));
+                list?.classList.toggle('hidden', !open);
+                icon?.classList.toggle('rotate-180', open);
+            });
+        });
+
+        document.querySelector('[data-tutorial-trigger]')?.addEventListener('click', () => setMenu(false));
+        document.addEventListener('click', (event) => {
+            if (quickMenu && !quickMenu.contains(event.target)) setQuickMenu(false);
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key !== 'Escape') return;
+            setQuickMenu(false);
+            if (menu && !menu.classList.contains('hidden')) setMenu(false);
+        });
+
+        const COMPACT_THRESHOLD = 80;
+        const EXPAND_THRESHOLD = 30;
+        const TRANSITION_COOLDOWN_MS = 200;
+        let isCompact = window.scrollY > EXPAND_THRESHOLD;
+        let rafId = null;
+        let transitionLocked = false;
+
+        const applyCompactState = (compact) => {
+            header?.setAttribute('data-compact', String(compact));
+            headerTop?.classList.toggle('h-14', !compact);
+            headerTop?.classList.toggle('h-12', compact);
+            headerContent?.classList.toggle('min-h-20', !compact);
+            headerContent?.classList.toggle('min-h-14', compact);
+            headerContent?.classList.toggle('pb-4', !compact);
+            headerContent?.classList.toggle('pb-2', compact);
+            headerContent?.classList.toggle('pt-2', !compact);
+            headerContent?.classList.toggle('pt-0', compact);
+            headerTitle?.classList.toggle('text-lg', !compact);
+            headerTitle?.classList.toggle('text-base', compact);
+            headerTitle?.classList.toggle('sm:text-2xl', !compact);
+            headerTitle?.classList.toggle('sm:text-base', compact);
+            headerLogos.forEach((logo) => {
+                logo.classList.toggle('h-7', !compact);
+                logo.classList.toggle('h-6', compact);
+            });
+            headerMinistry.forEach((element) => element.classList.toggle('hidden', compact));
+        };
+
+        const updateCompactState = () => {
+            if (transitionLocked) return;
+
+            const scrollY = window.scrollY;
+            let newCompact;
+
+            if (scrollY >= COMPACT_THRESHOLD) {
+                newCompact = true;
+            } else if (scrollY <= EXPAND_THRESHOLD) {
+                newCompact = false;
+            } else {
+                newCompact = isCompact;
+            }
+
+            if (newCompact !== isCompact) {
+                transitionLocked = true;
+                isCompact = newCompact;
+                applyCompactState(isCompact);
+                setTimeout(() => {
+                    transitionLocked = false;
+                }, TRANSITION_COOLDOWN_MS);
+            }
+        };
+
+        const onScroll = () => {
+            if (rafId) return;
+            rafId = requestAnimationFrame(() => {
+                rafId = null;
+                updateCompactState();
+            });
+        };
+
+        applyCompactState(isCompact);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', () => {
+            setQuickMenu(false);
+            updateCompactState();
+        });
+    })();
+</script>
+
+    
+    
+    <main class="flex w-full flex-1 flex-col items-center gap-5 bg-gray-100 px-2 py-4 transition-colors duration-200 dark:bg-gray-900 sm:px-10">
+                    <section class="w-full max-w-[1920px]" data-tutorial-target="alerts">
+                <div class="flex flex-col gap-2">
+    </div>
+
+<script>
+    function closeAlert(id) {
+        const alertElement = document.getElementById(id);
+        if (alertElement) {
+            alertElement.style.display = 'none';
+        }
+    }
+</script>
+                <div id="popup-modal"
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden px-4 md:px-0">
+        <div
+            class="bg-white p-4 rounded-md max-w-2xl w-full mx-4 relative dark:bg-gradient-to-br from-gray-600 to-gray-700 max-h-screen border-2 border-gray-500">
+            <div class="swiper-container relative">
+                <div class="swiper-wrapper">
+                                                                    <div class="swiper-slide relative">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-xl font-bold dark:text-white">
+                                    PAINEL EL NIÑO - Boletim Mensal N° 05 - Outubro de 2026
+                                </h3>
+
+                                <button type="button" onclick="closePopupModal()"
+                                    class="text-gray-500 hover:text-black text-xl transition duration-200">
+                                    <i class="fa-solid fa-xmark w-6 h-6"></i>
+                                </button>
+                            </div>
+
+                                                                                            <div class="relative mb-4 min-h-16">
+                                    <img src="https://www.cptec.inpe.br/storage/notices/iO7nyFFPfNkYz2zrpVk6wBlQ3NRLYSRWrOfnnQ4I.jpg" alt="PAINEL EL NIÑO - Boletim Mensal N° 05 - Outubro de 2026"
+                                        class="w-full max-h-64 object-contain rounded-md"
+                                        onclick="openImageFullscreen(this.src, this.alt)">
+                                    <button type="button"
+                                        class="absolute right-4 bottom-2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition size-10"
+                                        onclick="openImageFullscreen('https://www.cptec.inpe.br/storage/notices/iO7nyFFPfNkYz2zrpVk6wBlQ3NRLYSRWrOfnnQ4I.jpg', 'PAINEL EL NIÑO - Boletim Mensal N° 05 - Outubro de 2026')">
+                                        <i class="fa-solid fa-expand p-1"></i>
+                                    </button>
+                                </div>
+                            
+                            <p class="break-words max-h-48 overflow-y-auto dark:text-white">
+                                Este boletim apresenta informações sobre o monitoramento e as previsões relacionadas ao fenômeno El Niño para o período de 2026 e 2027, bem como os possíveis impactos associados. Mais informações no link abaixo
+                            </p>
+
+                            <div class="mt-4 items-center gap-2 border-t border-gray-200 pt-3 dark:border-gray-500 flex">
+                                                                    <div class="z-20 flex w-full flex-wrap justify-center gap-2 sm:w-auto sm:justify-start">
+                                                                                    <a class="text-white bg-blue-500 hover:bg-blue-700 transition duration-200 w-fit rounded transition duration-200 px-3 py-2" href="https://dataserver.cptec.inpe.br/dataserver_diptc/web/Painel-Elnino/2026-2027/Painel-El-Ni%c3%b1o-05-outubro-2026.pdf" target="_blank">
+    <i class="fa-solid fa-link"></i>
+</a>                                                                                                                                                            </div>
+                                                                <button type="button" data-dismiss-popups
+                                    class="ml-auto hidden shrink-0 rounded bg-blue-500 px-3 py-2 text-white transition duration-200 hover:bg-blue-700 sm:inline-flex">
+                                    Não exibir novamente
+                                </button>
+                            </div>
+                        </div>
+                                    </div>
+            </div>
+
+            <div class="mt-4 flex flex-col gap-2 sm:hidden">
+                                <button type="button" data-dismiss-popups
+                    class="self-center rounded bg-blue-500 px-3 py-2 text-white transition duration-200 hover:bg-blue-700 sm:hidden">
+                    Não exibir novamente
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-fullscreen-modal"
+        class="fixed inset-0 hidden flex items-center justify-center bg-black bg-opacity-95 z-50 p-4">
+        <button type="button" onclick="closeImageFullscreen()" class="absolute top-4 right-4 text-white text-3xl">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img id="popup-fullscreen-img" src="" alt=""
+            class="max-w-full max-h-full object-contain rounded-md shadow-xl" />
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script>
+        (() => {
+            const popupModal = document.getElementById('popup-modal');
+            const fullscreenModal = document.getElementById('popup-fullscreen-modal');
+            const fullscreenImage = document.getElementById('popup-fullscreen-img');
+            const storageKey = 'dismissedPopupIds';
+            const activePopupIds = JSON.parse('[21]').map(String);
+
+            const readDismissedPopupIds = () => {
+                try {
+                    const storedIds = JSON.parse(localStorage.getItem(storageKey));
+                    return Array.isArray(storedIds) ? storedIds.map(String) : [];
+                } catch (error) {
+                    return [];
+                }
+            };
+            const dismissedPopupIds = new Set(readDismissedPopupIds());
+            const firstNewPopupIndex = activePopupIds.findIndex((id) => !dismissedPopupIds.has(id));
+
+            
+            window.openImageFullscreen = (src, alt) => {
+                fullscreenImage.src = src;
+                fullscreenImage.alt = alt;
+                fullscreenModal.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            };
+
+            window.closeImageFullscreen = () => {
+                fullscreenModal.classList.add('hidden');
+                fullscreenImage.src = '';
+                fullscreenImage.alt = '';
+            };
+
+            window.closePopupModal = () => {
+                popupModal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            };
+
+            popupModal.addEventListener('click', (event) => {
+                if (!event.target.closest('[data-dismiss-popups]')) return;
+
+                const dismissedIds = new Set([...readDismissedPopupIds(), ...activePopupIds]);
+
+                try {
+                    localStorage.setItem(storageKey, JSON.stringify([...dismissedIds]));
+                } catch (error) {
+                    // Se o armazenamento estiver indisponível, fecha apenas nesta visita.
+                }
+
+                closePopupModal();
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key !== 'Escape') return;
+
+                if (!fullscreenModal.classList.contains('hidden')) {
+                    closeImageFullscreen();
+                } else {
+                    closePopupModal();
+                }
+            });
+
+            popupModal.addEventListener('click', (event) => {
+                if (event.target === popupModal) closePopupModal();
+            });
+
+            const showPopup = () => {
+                if (firstNewPopupIndex === -1) return;
+
+                popupModal.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            };
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', showPopup, { once: true });
+            } else {
+                showPopup();
+            }
+        })();
+    </script>
+                <div id="notification-toggle" class="fixed bottom-4 right-4 z-40">
+    <button onclick="toggleNotifications()"
+        class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full transition duration-200">
+        <i class="fa-solid fa-bell text-xl size-6 text-sm flex items-center justify-center"></i>
+    </button>
+</div>
+
+<div id="notification-panel"
+    class="fixed bottom-16 right-6 w-80 bg-white shadow-xl rounded-lg overflow-hidden hidden z-40">
+    <div class="p-3 bg-gradient-to-br from-gray-500 to-gray-900 border-b">
+        <h3 class="font-bold text-white">Notificações Recentes</h3>
+    </div>
+    <div class="max-h-96 overflow-y-auto">
+                    <div class="border-b last:border-b-0">
+                <div onclick="toggleAccordion(this)"
+                    class="flex justify-between items-center p-3 cursor-pointer hover:bg-gray-200 transition duration-200">
+                    <div class="flex-1">
+                        <div class="text-xs text-gray-500 mb-1">29/10/2026 19:57
+                        </div>
+                        <p class="font-medium">PAINEL EL NIÑO - Boletim Mensal N° 05 - Outubro de 2026</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-down text-sm text-gray-500 transition duration-200"
+                        id="chevron-21"></i>
+                </div>
+
+                <div id="content-21"
+                    class="px-3 py-2 hidden overflow-hidden transition-all duration-300 ease-in-out">
+                    <p class="text-sm mb-2">Este boletim apresenta informações sobre o monitoramento e as previsões relacionadas ao fenômeno El Niño para o período de 2026 e 2027, bem como os possíveis impactos associados. Mais informações no link abaixo</p>
+                    <div class="flex gap-3">
+                                                    <a href="https://www.cptec.inpe.br/storage/notices/iO7nyFFPfNkYz2zrpVk6wBlQ3NRLYSRWrOfnnQ4I.jpg" target="_blank"
+                                class="text-blue-500 hover:text-black transition duration-200">
+                                <i class="fa-solid fa-image"></i>
+                            </a>
+                                                                            <a href="https://dataserver.cptec.inpe.br/dataserver_diptc/web/Painel-Elnino/2026-2027/Painel-El-Ni%c3%b1o-05-outubro-2026.pdf" target="_blank"
+                                class="text-blue-500 hover:text-black transition duration-200">
+                                <i class="fa-solid fa-link"></i>
+                            </a>
+                                                                                            </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+<script>
+    function toggleNotifications() {
+        const panel = document.getElementById('notification-panel');
+        panel.classList.toggle('hidden');
+    }
+
+    function toggleAccordion(header) {
+        const contentId = header.nextElementSibling.id; // Pega o ID do conteúdo seguinte
+        const content = document.getElementById(contentId);
+        const chevron = header.querySelector('i'); // Ícone do chevron
+
+        content.classList.toggle('hidden');
+
+        // Rotaciona o chevron
+        if (content.classList.contains('hidden')) {
+            chevron.style.transform = 'rotate(0deg)';
+        } else {
+            chevron.style.transform = 'rotate(180deg)';
+        }
+    }
+
+    // Fecha ao clicar fora
+    document.addEventListener('click', function(e) {
+        const toggle = document.getElementById('notification-toggle');
+        const panel = document.getElementById('notification-panel');
+        if (!toggle.contains(e.target) && !panel.contains(e.target)) {
+            panel.classList.add('hidden');
+        }
+    });
+</script>
+                <button
+    x-data="{ show: false }"
+    x-init="
+        window.addEventListener('scroll', () => {
+            show = window.scrollY > 400;
+        });
+    "
+    x-show="show"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0 scale-75"
+    x-transition:enter-end="opacity-100 scale-100"
+    x-transition:leave="transition ease-in duration-200"
+    x-transition:leave-start="opacity-100 scale-100"
+    x-transition:leave-end="opacity-0 scale-75"
+    @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    class="fixed bottom-16 right-4 z-30 bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full shadow-lg"
+    title="Back to top"
+    aria-label="Scroll back to top"
+>
+    <i class="fa-solid fa-arrow-up text-xl size-6"></i>
+</button>            </section>
+        
+        <section class="flex flex-col lg:flex-row gap-5 w-full max-w-[1920px]">
+            <div class="w-full lg:w-3/5 flex flex-col gap-5">
+                <div data-tutorial-target="search">
+                    <div class="w-full" id="search-container">
+    <div class="w-full flex items-center relative shadow-lg" id="search-input-wrapper">
+        <input id="searchbox" type="text" class="w-full autocomplete-input m-0 rounded"
+            placeholder="Busque por uma cidade..." autocomplete="off" />
+
+        <button class="absolute right-[1px] rounded-full hover:bg-blue-100 p-2" id="btn-action" type="button"
+            aria-label="Pesquisar">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <style>
+        .animate-spin-custom {
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+<div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto hidden" translate="no" aria-hidden="true">
+    
+</div>
+        </button>
+
+        <ul class="absolute w-full mt-1 top-full border-x border-b border-gray-300 bg-white max-h-[110px] overflow-y-auto overscroll-contain touch-pan-y z-20 hidden"
+            id="autocomplete-results"></ul>
+
+        <div id="aviso-selecao"
+            class="absolute bottom-8 left-10 bg-orange-100 border border-orange-300 text-orange-800 text-xs text-center py-1 rounded-xl rounded-bl-none hidden z-10 px-2">
+            Selecione uma cidade listada abaixo...
+        </div>
+    </div>
+
+</div>
+                </div>
+
+                <div data-tutorial-target="numerical-prediction">
+                    <div class="w-full border 
+border-gray-300 dark:border-none rounded shadow-lg bg-white dark:bg-gradient-to-br from-gray-700 to-gray-800 py-4 px-3 h-full overflow-hidden flex flex-col gap-10 !px-0 !pb-0">
+    <section class="px-3">
+        <h6 class="font-bold text-lg md:text-xl !text-left md:text-center capitalize mb-6 dark:text-white">Previsão Numérica de Tempo</h6>        <div class="flex sm:flex-row flex-col sm:gap-0 gap-6 justify-around">
+            <div class="flex justify-center items-center text-center">
+                <i class="fa-solid fa-location-dot mr-2 text-xl text-red-500"></i>
+                <span class="span font-semibold text-lg dark:text-white" id="cidade_uf"></span>                <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+            </div>
+            <div class="text-center">
+                                <span class="span font-semibold text-lg dark:text-white">31/10/2026</span>            </div>
+            <div class="text-center" id="relogio">
+                                <div
+                    class="inline-block bg-gradient-to-br from-gray-500 to-gray-900 dark:from-gray-400 dark:to-gray-100 text-white dark:text-black px-3 py-1 rounded font-semibold text-lg">
+                    10:49
+                </div>
+            </div>
+        </div>
+
+        <div class="flex md:flex-row flex-col md:gap-0 gap-6 justify-around mt-6">
+            <div class="flex flex-col justify-between text-center">
+                <span class="span font-semibold text-lg dark:text-white !text-5xl" id="temperaturaPrev"></span>                <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                <span class="span font-semibold text-lg dark:text-white !text-base !font-normal">Temperatura prevista</span>            </div>
+            <div class="flex flex-col justify-around text-center">
+                <span class="span font-semibold text-lg dark:text-white !text-5xl" id="sensacaoTerm"></span>                <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                <span class="span font-semibold text-lg dark:text-white !text-base !font-normal">Sensação térmica</span>            </div>
+            <div class="flex flex-col justify-around text-center">
+                <div class="flex justify-center items-center">
+                    <span class="span font-semibold text-lg dark:text-white !text-5xl text-blue-400" id="probabilidadeChuva"></span>                    <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                    <i class="fa-solid fa-cloud-showers-heavy text-blue-400 text-4xl ms-2"></i>
+                </div>
+                <span class="span font-semibold text-lg dark:text-white !text-base !font-normal">Probabilidade de chuva</span>            </div>
+        </div>
+    </section>
+
+    <section class="px-3">
+        <div class="flex md:flex-row flex-col md:gap-0 gap-6">
+            <div class="w-full flex justify-around">
+                <div class="text-center">
+                    <span class="span font-semibold text-lg dark:text-white tmpMin !text-blue-400"></span>                    <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                    <br>
+                    <span class="span font-semibold text-lg dark:text-white !text-sm !font-normal">Temp. Mín.</span>                </div>
+                <div class="text-center">
+                    <span class="span font-semibold text-lg dark:text-white tmpMax !text-red-400"></span>                    <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                    <br>
+                    <span class="span font-semibold text-lg dark:text-white !text-sm !font-normal">Temp. Máx.</span>                </div>
+                <div class="text-center">
+                    <span class="span font-semibold text-lg dark:text-white vnt"></span>                    <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                    <br>
+                    <span class="span font-semibold text-lg dark:text-white !text-sm !font-normal">Vento Máx.</span>                </div>
+            </div>
+            <div class="w-full flex justify-around">
+                <div class="text-center">
+                    <span class="span font-semibold text-lg dark:text-white umi"></span>                    <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                    <br>
+                    <span class="span font-semibold text-lg dark:text-white !text-sm !font-normal">Umidade Mín.</span>                </div>
+                <div class="text-center">
+                    <span class="span font-semibold text-lg dark:text-white precAc"></span>                    <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                    <br>
+                    <span class="span font-semibold text-lg dark:text-white !text-sm !font-normal">Prec. Acum.</span>                </div>
+                <div class="text-center iuv">
+                    <span class="span font-semibold text-lg dark:text-white indUV"></span>                    <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                    <br>
+                    <span class="span font-semibold text-lg dark:text-white !text-sm !font-normal">Índice UV Máx.</span>                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-6">
+            <div id="texto-alerta"
+                class="inline-flex items-center gap-2 font-semibold bg-green-100 border border-green-300 rounded-md px-3 py-1 alerta-00">
+                <i class="fa-solid fa-chevron-right text-green-300" aria-hidden="true"></i>
+                <span>Nenhum dos critérios identificado</span>
+            </div>
+            <a href="https://dataserver.cptec.inpe.br/dataserver_diptc/web/pdfs/informativos/criterios-previsao-numerica.pdf"
+                target="_blank" class="ml-2">
+                <i class="fa-solid fa-circle-info text-blue-600 hover:text-blue-500 transition duration-200"
+                    aria-hidden="true"></i>
+            </a>
+        </div>
+    </section>
+
+    <div class="bg-gray-200 dark:bg-gray-500 py-4 px-3 mx-0 relative">
+    <div class="absolute inset-y-0 left-1 right-1 flex items-center justify-between z-10 hidden sm:flex my-4">
+        <button onclick="scrollToLeft()" class="p-2 h-full hover:bg-gray-600 dark:hover:bg-gray-900 hover:text-white transition duration-200 rounded-l">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button onclick="scrollToRight()" class="p-2 h-full hover:bg-gray-600 dark:hover:bg-gray-900 hover:text-white transition duration-200 rounded-r">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <section class="flex flex-nowrap gap-3 overflow-x-auto scroll-smooth sm:mx-4 sm:overflow-x-hidden xl:gap-5"
+        id="nextDaysScroll">
+                    <div class="flex flex-col rounded-t sm:rounded bg-white dark:bg-gray-800 py-2 gap-1 flex-shrink-0">
+                <div class="w-min flex items-center justify-around w-48 xl:w-64 min-w-48">
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="dia_semana_0"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="indiceUV_0"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Índice UV"
+                            class="indice-uv-cor fa-solid fa-sun fa-xl text-center text-orange-500 ms-2 mt-1"></i>
+                    </div>
+                </div>
+
+                <div class="w-min flex items-center justify-around w-48 xl:w-64 min-w-48">
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="temperaturaMinima_0"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Temperatura mínima do dia"
+                            class="temperatura-minima fa-solid fa-temperature-quarter fa-xl text-center text-blue-400 ms-2 mt-1"></i>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="temperaturaMaxima_0"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Temperatura máxima do dia"
+                            class="temperatura-maxima fa-solid fa-temperature-three-quarters fa-xl text-center text-red-400 ms-2 mt-1"></i>
+                    </div>
+                </div>
+
+                <div class="w-min flex items-center justify-around w-48 xl:w-64 min-w-48">
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="umidade_0"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Umidade"
+                            class="umidade fa-solid fa-droplet fa-xl text-center text-blue-600 ms-2 mt-1"></i>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="probabilidadeChuva_0"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Probabilidade de chuva"
+                            class="chuva fa-solid fa-cloud-showers-heavy fa-xl text-center text-blue-500 ms-2 mt-1"></i>
+                    </div>
+                </div>
+            </div>
+                    <div class="flex flex-col rounded-t sm:rounded bg-white dark:bg-gray-800 py-2 gap-1 flex-shrink-0">
+                <div class="w-min flex items-center justify-around w-48 xl:w-64 min-w-48">
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="dia_semana_1"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="indiceUV_1"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Índice UV"
+                            class="indice-uv-cor fa-solid fa-sun fa-xl text-center text-orange-500 ms-2 mt-1"></i>
+                    </div>
+                </div>
+
+                <div class="w-min flex items-center justify-around w-48 xl:w-64 min-w-48">
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="temperaturaMinima_1"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Temperatura mínima do dia"
+                            class="temperatura-minima fa-solid fa-temperature-quarter fa-xl text-center text-blue-400 ms-2 mt-1"></i>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="temperaturaMaxima_1"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Temperatura máxima do dia"
+                            class="temperatura-maxima fa-solid fa-temperature-three-quarters fa-xl text-center text-red-400 ms-2 mt-1"></i>
+                    </div>
+                </div>
+
+                <div class="w-min flex items-center justify-around w-48 xl:w-64 min-w-48">
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="umidade_1"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Umidade"
+                            class="umidade fa-solid fa-droplet fa-xl text-center text-blue-600 ms-2 mt-1"></i>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="probabilidadeChuva_1"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Probabilidade de chuva"
+                            class="chuva fa-solid fa-cloud-showers-heavy fa-xl text-center text-blue-500 ms-2 mt-1"></i>
+                    </div>
+                </div>
+            </div>
+                    <div class="flex flex-col rounded-t sm:rounded bg-white dark:bg-gray-800 py-2 gap-1 flex-shrink-0">
+                <div class="w-min flex items-center justify-around w-48 xl:w-64 min-w-48">
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="dia_semana_2"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="indiceUV_2"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Índice UV"
+                            class="indice-uv-cor fa-solid fa-sun fa-xl text-center text-orange-500 ms-2 mt-1"></i>
+                    </div>
+                </div>
+
+                <div class="w-min flex items-center justify-around w-48 xl:w-64 min-w-48">
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="temperaturaMinima_2"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Temperatura mínima do dia"
+                            class="temperatura-minima fa-solid fa-temperature-quarter fa-xl text-center text-blue-400 ms-2 mt-1"></i>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="temperaturaMaxima_2"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Temperatura máxima do dia"
+                            class="temperatura-maxima fa-solid fa-temperature-three-quarters fa-xl text-center text-red-400 ms-2 mt-1"></i>
+                    </div>
+                </div>
+
+                <div class="w-min flex items-center justify-around w-48 xl:w-64 min-w-48">
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="umidade_2"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Umidade"
+                            class="umidade fa-solid fa-droplet fa-xl text-center text-blue-600 ms-2 mt-1"></i>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="probabilidadeChuva_2"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Probabilidade de chuva"
+                            class="chuva fa-solid fa-cloud-showers-heavy fa-xl text-center text-blue-500 ms-2 mt-1"></i>
+                    </div>
+                </div>
+            </div>
+                    <div class="flex flex-col rounded-t sm:rounded bg-white dark:bg-gray-800 py-2 gap-1 flex-shrink-0">
+                <div class="w-min flex items-center justify-around w-48 xl:w-64 min-w-48">
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="dia_semana_3"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="indiceUV_3"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Índice UV"
+                            class="indice-uv-cor fa-solid fa-sun fa-xl text-center text-orange-500 ms-2 mt-1"></i>
+                    </div>
+                </div>
+
+                <div class="w-min flex items-center justify-around w-48 xl:w-64 min-w-48">
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="temperaturaMinima_3"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Temperatura mínima do dia"
+                            class="temperatura-minima fa-solid fa-temperature-quarter fa-xl text-center text-blue-400 ms-2 mt-1"></i>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="temperaturaMaxima_3"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Temperatura máxima do dia"
+                            class="temperatura-maxima fa-solid fa-temperature-three-quarters fa-xl text-center text-red-400 ms-2 mt-1"></i>
+                    </div>
+                </div>
+
+                <div class="w-min flex items-center justify-around w-48 xl:w-64 min-w-48">
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="umidade_3"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Umidade"
+                            class="umidade fa-solid fa-droplet fa-xl text-center text-blue-600 ms-2 mt-1"></i>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="probabilidadeChuva_3"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Probabilidade de chuva"
+                            class="chuva fa-solid fa-cloud-showers-heavy fa-xl text-center text-blue-500 ms-2 mt-1"></i>
+                    </div>
+                </div>
+            </div>
+                    <div class="flex flex-col rounded-t sm:rounded bg-white dark:bg-gray-800 py-2 gap-1 flex-shrink-0">
+                <div class="w-min flex items-center justify-around w-48 xl:w-64 min-w-48">
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="dia_semana_4"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="indiceUV_4"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Índice UV"
+                            class="indice-uv-cor fa-solid fa-sun fa-xl text-center text-orange-500 ms-2 mt-1"></i>
+                    </div>
+                </div>
+
+                <div class="w-min flex items-center justify-around w-48 xl:w-64 min-w-48">
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="temperaturaMinima_4"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Temperatura mínima do dia"
+                            class="temperatura-minima fa-solid fa-temperature-quarter fa-xl text-center text-blue-400 ms-2 mt-1"></i>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="temperaturaMaxima_4"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Temperatura máxima do dia"
+                            class="temperatura-maxima fa-solid fa-temperature-three-quarters fa-xl text-center text-red-400 ms-2 mt-1"></i>
+                    </div>
+                </div>
+
+                <div class="w-min flex items-center justify-around w-48 xl:w-64 min-w-48">
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="umidade_4"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Umidade"
+                            class="umidade fa-solid fa-droplet fa-xl text-center text-blue-600 ms-2 mt-1"></i>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="probabilidadeChuva_4"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Probabilidade de chuva"
+                            class="chuva fa-solid fa-cloud-showers-heavy fa-xl text-center text-blue-500 ms-2 mt-1"></i>
+                    </div>
+                </div>
+            </div>
+                    <div class="flex flex-col rounded-t sm:rounded bg-white dark:bg-gray-800 py-2 gap-1 flex-shrink-0">
+                <div class="w-min flex items-center justify-around w-48 xl:w-64 min-w-48">
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="dia_semana_5"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="indiceUV_5"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Índice UV"
+                            class="indice-uv-cor fa-solid fa-sun fa-xl text-center text-orange-500 ms-2 mt-1"></i>
+                    </div>
+                </div>
+
+                <div class="w-min flex items-center justify-around w-48 xl:w-64 min-w-48">
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="temperaturaMinima_5"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Temperatura mínima do dia"
+                            class="temperatura-minima fa-solid fa-temperature-quarter fa-xl text-center text-blue-400 ms-2 mt-1"></i>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="temperaturaMaxima_5"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Temperatura máxima do dia"
+                            class="temperatura-maxima fa-solid fa-temperature-three-quarters fa-xl text-center text-red-400 ms-2 mt-1"></i>
+                    </div>
+                </div>
+
+                <div class="w-min flex items-center justify-around w-48 xl:w-64 min-w-48">
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="umidade_5"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Umidade"
+                            class="umidade fa-solid fa-droplet fa-xl text-center text-blue-600 ms-2 mt-1"></i>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="span font-semibold text-lg dark:text-white" id="probabilidadeChuva_5"></span>                        <div class="spinner notranslate size-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin-custom mx-auto" translate="no" aria-hidden="true">
+    
+</div>
+                        <i title="Probabilidade de chuva"
+                            class="chuva fa-solid fa-cloud-showers-heavy fa-xl text-center text-blue-500 ms-2 mt-1"></i>
+                    </div>
+                </div>
+            </div>
+            </section>
+</div>
+
+<script>
+    (function() {
+        'use strict';
+
+        const scrollContainer = document.getElementById('nextDaysScroll');
+        const scrollAmount = 200;
+
+        window.scrollToLeft = () => {
+            scrollContainer.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        };
+
+        window.scrollToRight = () => {
+            scrollContainer.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        };
+    })();
+</script>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const relogioSpan = document.querySelector("#relogio div");
+
+        function atualizarRelogio() {
+            const agora = new Date();
+            const opcoes = {
+                timeZone: 'America/Sao_Paulo',
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: false
+            };
+            const horaLocal = agora.toLocaleTimeString('pt-BR', opcoes);
+            relogioSpan.textContent = horaLocal;
+        }
+
+        setInterval(atualizarRelogio, 1000);
+        atualizarRelogio();
+    });
+</script>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-2/5" data-tutorial-target="satellite">
+                <div class="w-full border 
+border-gray-300 dark:border-none rounded shadow-lg bg-white dark:bg-gradient-to-br from-gray-700 to-gray-800 py-4 px-3 h-full overflow-hidden relative !p-0">
+    <iframe
+        src="https://www.cptec.inpe.br/dsat/?product=ch13_cpt_DSA&product_opacity=1&zoom=3&x=3799.7823&y=3340.8000&animate=false&t=250.00&options=false&static=true"
+        class="w-full h-full rounded min-h-[500px]">
+    </iframe>
+
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20" id="button-container">
+        <a href="https://www.cptec.inpe.br/dsat/" target="_blank"
+           class="pointer-events-auto rounded-full px-20 py-10 text-center text-4xl font-bold text-white opacity-0 transition-opacity duration-300 hover:opacity-100"
+           id="dsat-button">
+            Acessar DSAT
+        </a>
+    </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById("dsat-button");
+    const buttonContainer = document.getElementById("button-container");
+
+    button.addEventListener("mouseenter", () => {
+        buttonContainer.classList.add("bg-black/60");
+        buttonContainer.classList.add("transition");
+        buttonContainer.classList.add("duration-300");
+    });
+
+    button.addEventListener("mouseleave", () => {
+        buttonContainer.classList.remove("bg-black/60");
+        buttonContainer.classList.remove("transition");
+        buttonContainer.classList.remove("duration-300");
+    });
+});
+</script>
+            </div>
+        </section>
+
+        <section class="flex flex-col gap-5 w-full max-w-[1920px]" data-tutorial-target="meteogram">
+            <div class="w-full border 
+border-gray-300 dark:border-none rounded shadow-lg bg-white dark:bg-gradient-to-br from-gray-700 to-gray-800 py-4 px-3 h-full overflow-hidden !px-0" id="meteogram">
+    <div id="loading-section" class="px-4">
+        <h6 class="font-bold text-lg md:text-xl !text-left md:text-center capitalize mb-6 dark:text-white">Construindo gráficos do Meteograma...</h6>        <style>
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+
+<div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+    <div class="w-full h-full bg-gradient-to-r from-blue-500 via-blue-600 to-blue-400 rounded-full animate-[shimmer_2s_ease-in-out_infinite]"></div>
+</div>    </div>
+
+    <div class="hidden px-4" id="build-error">
+        <h6 class="font-bold text-lg md:text-xl !text-left md:text-center capitalize mb-6 dark:text-white !my-0">Erro ao construir gráficos...</h6>        <ul class="text-sm text-red-600 space-y-1 mt-2">
+                    <li>Houve um erro ao carregar os dados do meteograma. Por favor, tente novamente mais tarde.</li>
+            </ul>
+    </div>
+
+    <div class="tab-content hidden px-3">
+        <div class="hidden">
+            <ul>
+                <li><a href="#" target="_blank" id="json_WRF_ams_07km">WRF/ams_07km</a></li>
+                <li><a href="#" target="_blank" id="json_BRAMS_ams_08km">BRAMS/ams_08km</a></li>
+                <li><a href="#" target="_blank" id="json_BAM">BAM</a></li>
+                <li><a href="#" target="_blank" id="json_Eta">Eta</a></li>
+                <li><a href="#" target="_blank" id="json_BRAMS_ams_20km">BRAMS/ams_08km</a></li>
+                <li><a href="#" target="_blank" id="json_Multimodel">Multimodel</a></li>
+                <li><a href="#" target="_blank" id="json_MultimodelClima">Multimodel Clima</a></li>
+            </ul>
+            <ul>
+                <li>Lat: <span id="WRF_ams_07km_lat"></span></li>
+                <li>Lon: <span id="WRF_ams_07km_lon"></span></li>
+                <li>Area: <span id="WRF_ams_07km_area"></span></li>
+            </ul>
+            <ul>
+                <li>Lat: <span id="BRAMS_ams_08km_lat"></span></li>
+                <li>Lon: <span id="BRAMS_ams_08km_lon"></span></li>
+                <li>Area: <span id="BRAMS_ams_08km_area"></span></li>
+            </ul>
+            <ul>
+                <li>Lat: <span id="BAM_lat"></span></li>
+                <li>Lon: <span id="BAM_lon"></span></li>
+                <li>Area: <span id="BAM_area"></span></li>
+            </ul>
+            <ul>
+                <li>Lat: <span id="Eta_lat"></span></li>
+                <li>Lon: <span id="Eta_lon"></span></li>
+                <li>Area: <span id="Eta_area"></span></li>
+            </ul>
+            <ul>
+                <li>Lat: <span id="BRAMS_ams_20km_lat"></span></li>
+                <li>Lon: <span id="BRAMS_ams_20km_lon"></span></li>
+                <li>Area: <span id="BRAMS_ams_20km_area"></span></li>
+            </ul>
+            <ul>
+                <li>Lat: <span id="Multimodel_lat"></span></li>
+                <li>Lon: <span id="Multimodel_lon"></span></li>
+                <li>Area: <span id="Multimodel_area"></span></li>
+            </ul>
+            <ul>
+                <li>Lat: <span id="MultimodelClima_lat"></span></li>
+                <li>Lon: <span id="MultimodelClima_lon"></span></li>
+                <li>Area: <span id="MultimodelClima_area"></span></li>
+            </ul>
+        </div>
+
+        <!-- Temperatura -->
+        <div class="tab-pane relative" id="temp-tab-pane">
+            <h3 class="pointer-events-none absolute left-0 top-0 z-10 px-[5px] pt-[5px] text-sm font-semibold text-[#333333] dark:text-white" style="font-family: sans-serif">
+                Temperatura, Sensação Térmica e Climatologia a 2m do Solo
+                <span class="whitespace-nowrap">(°C)
+                    <a href="https://www.cptec.inpe.br/pdfs/doc_grafico_temp_climatologia_pag.pdf" target="_blank"
+                        rel="noopener noreferrer" aria-label="Abrir PDF informativo sobre temperatura do meteograma"
+                        class="pointer-events-auto ml-1 inline-block text-blue-600 transition duration-200 hover:text-blue-500">
+                        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                    </a>
+                </span>
+            </h3>
+            <div id="chart1" class="highcharts-container w-full h-[420px]"></div>
+        </div>
+
+        <!-- Precipitação (mm/h) -->
+        <div class="tab-pane hidden" id="radar-tab-pane" role="tabpanel" tabindex="0">
+            <div id="chart2" class="highcharts-container w-full h-[420px]"></div>
+        </div>
+
+        <!-- Vento em 10m (m/s) -->
+        <div class="tab-pane hidden" id="vento-meteograma-tab-pane" role="tabpanel" tabindex="0">
+            <div id="chart3" class="highcharts-container w-full h-[420px]"></div>
+        </div>
+
+        <!-- Umidade a 2m do solo -->
+        <div class="tab-pane hidden" id="umidade-meteograma-tab-pane" role="tabpanel" tabindex="0">
+            <div id="chart4" class="highcharts-container w-full h-[420px]"></div>
+        </div>
+
+        <!-- Pressão reduzida ao nível do mar -->
+        <div class="tab-pane hidden" id="nuvem-meteograma-tab-pane" role="tabpanel" tabindex="0">
+            <div id="chart5" class="highcharts-container w-full h-[420px]"></div>
+        </div>
+
+        <!-- Cobertura de nuvens -->
+        <div class="tab-pane hidden" id="pressaomar-meteograma-tab-pane" role="tabpanel" tabindex="0">
+            <div id="chart6" class="highcharts-container w-full h-[420px]"></div>
+        </div>
+
+        <!-- Qualidade do ar: Monóxido de Carbono -->
+        <div class="tab-pane hidden" id="qualidadear-meteograma-tab-pane" role="tabpanel" tabindex="0">
+            <div id="chart7" class="highcharts-container w-full h-[420px]"></div>
+        </div>
+
+        <!-- Qualidade do ar: Material Micro-particulado -->
+        <div class="tab-pane hidden" id="qualidadear1-meteograma-tab-pane" role="tabpanel" tabindex="0">
+            <div id="chart8" class="highcharts-container w-full h-[420px]"></div>
+        </div>
+
+        
+    </div>
+
+    <nav class="meteogram-nav-scroll flex 2xl:justify-center gap-2 m-2 overflow-x-auto flex-nowrap whitespace-nowrap hidden"
+        id="nav-tab" role="tablist">
+        <button class="px-2.5 py-2 bg-gray-600 text-white rounded font-medium text-xs flex-shrink-0" data-tab-target="#temp-tab-pane" type="button" role="tab" aria-selected="true">
+    Temperatura (°C)
+</button>        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs flex-shrink-0" data-tab-target="#radar-tab-pane" type="button" role="tab" aria-selected="false">
+    Precipitação (mm/h)
+</button>        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs flex-shrink-0" data-tab-target="#vento-meteograma-tab-pane" type="button" role="tab" aria-selected="false">
+    Vento (m/s)
+</button>        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs flex-shrink-0" data-tab-target="#umidade-meteograma-tab-pane" type="button" role="tab" aria-selected="false">
+    Umidade (%)
+</button>        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs flex-shrink-0" data-tab-target="#nuvem-meteograma-tab-pane" type="button" role="tab" aria-selected="false">
+    Nuvens (%)
+</button>        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs flex-shrink-0" data-tab-target="#pressaomar-meteograma-tab-pane" type="button" role="tab" aria-selected="false">
+    Pressão (hPa)
+</button>        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs flex-shrink-0" data-tab-target="#qualidadear-meteograma-tab-pane" type="button" role="tab" aria-selected="false">
+    Monóxido de Carbono
+</button>        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs flex-shrink-0" data-tab-target="#qualidadear1-meteograma-tab-pane" type="button" role="tab" aria-selected="false">
+    Material Micro-particulado
+</button>        
+        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs !bg-blue-500 text-white hover:!bg-blue-600 transition-200" onclick="openModal()">
+    Meteogramas (imagem)
+</button>    </nav>
+</div>
+<!-- Modal para Meteograma em imagem -->
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 hidden flex items-center justify-center z-50"
+    role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="bg-white dark:bg-gradient-to-br from-gray-600 to-gray-700 rounded-md shadow-lg w-full max-w-2xl mx-2 sm:mx-auto max-h-[calc(100vh-1rem)] flex flex-col overflow-hidden border-2 border-gray-500">       
+         <div class="modal-body p-4 flex-1 overflow-hidden">
+            <img id="imagem-meteograma"
+                src="https://s1.cptec.inpe.br/grafico/Modelos/WRF/GHT/meteogramas/PPN/3060.png" alt="Meteograma"
+                class="block w-full max-h-[calc(100vh-8rem)] object-contain rounded-md">
+        </div>
+        <div class="modal-footer pr-2 pb-2 flex justify-end">
+            <button type="button" class="bg-gray-600 dark:bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-500 dark:hover:bg-gray-900 transition"
+                onclick="closeModal()">Fechar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para Tabela de Dados -->
+<div id="dataTableModal"
+    class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden flex items-center justify-center z-50 p-2 sm:p-0"
+    role="dialog" aria-labelledby="dataTableModalLabel" aria-hidden="true">
+    <div class="bg-white rounded-lg shadow-lg w-full max-w-6xl mx-auto max-h-[90vh] flex flex-col">
+        <div class="modal-header p-4 border-b flex justify-between items-center">
+            <h5 id="dataTableModalLabel" class="text-lg font-semibold">Tabela de Dados</h5>
+            <button type="button" class="text-gray-500 hover:text-gray-700" onclick="closeDataTableModal()">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+        </div>
+        <div class="modal-body p-4 overflow-auto flex-1">
+            <div id="dataTableContent"></div>
+        </div>
+        <div class="modal-footer p-4 border-t flex justify-end gap-2">
+            <button type="button" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-500 transition"
+                onclick="closeDataTableModal()">Fechar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function closeDataTableModal() {
+        const modal = document.getElementById('dataTableModal');
+        document.body.focus();
+        modal.classList.add('hidden');
+        modal.setAttribute('aria-hidden', 'true');
+    }
+
+    function openModal() {
+        const modal = document.getElementById('imageModal');
+        modal.classList.remove('hidden');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('overflow-hidden');
+        // Foca no modal ou em um elemento interno ao abrir
+        modal.querySelector('.modal-footer button').focus();
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('imageModal');
+        // Move o foco para o corpo ou outro elemento antes de esconder
+        document.body.focus();
+        modal.classList.add('hidden');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('overflow-hidden');
+    }
+
+    // Fechar ao clicar fora ou pressionar Esc
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('imageModal');
+        const dataTableModal = document.getElementById('dataTableModal');
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        dataTableModal.addEventListener('click', (e) => {
+            if (e.target === dataTableModal) {
+                closeDataTableModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+                closeDataTableModal();
+            }
+        });
+    });
+</script>
+        </section>
+
+        <section class="flex flex-col lg:flex-row gap-5 w-full max-w-[1920px]" data-tutorial-target="extended-forecast">
+            <div class="w-full lg:w-1/2">
+                <div class="w-full border 
+border-gray-300 dark:border-none rounded shadow-lg bg-white dark:bg-gradient-to-br from-gray-700 to-gray-800 py-4 px-3 h-full overflow-hidden" id="probabilistica">
+    <div class="flex">
+        <h6 class="font-bold text-lg md:text-xl !text-left md:text-center capitalize mb-6 dark:text-white">Previsão Probabilística</h6>        <a href="https://dataserver.cptec.inpe.br/dataserver_diptc/web/pdfs/informativos/criterios-previsao-probabilistica.pdf" target="_blank" class="ml-2 pt-1">
+            <i class="fa-solid fa-circle-info text-blue-600 hover:text-blue-500 transition duration-200"></i>
+        </a>
+    </div>
+
+    <nav class="flex justify-center gap-2" id="nav-tab-secondary" role="tablist">
+        <button class="px-2.5 py-2 bg-gray-600 text-white rounded font-medium text-xs" id="intensa-tab" data-tab-target="#intensa-tab-pane" type="button" role="tab" aria-selected="true">
+    Chuva Intensa
+</button>        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" id="severo-tab" data-tab-target="#severo-tab-pane" type="button" role="tab" aria-selected="false">
+    Tempo Severo
+</button>    </nav>
+
+    <div class="mt-2">
+        <section class="tab-pane-secondary" id="intensa-tab-pane" role="tabpanel" aria-labelledby="intensa-tab" tabindex="0">
+            <div class="flex flex-col justify-center pb-2">
+                <div class="pb-2">
+                    <div class="tab-pane-secondary flex justify-center bg-white" id="tab-24">
+                        <img src="https://s1.cptec.inpe.br/nowcasting/NC/PREV/mapa_prev_prob_24h_chuvaintensa.png" alt="Imagem de 24h Chuva intensa" class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-secondary flex justify-center bg-white hidden" id="tab-48">
+                        <img src="https://s1.cptec.inpe.br/nowcasting/NC/PREV/mapa_prev_prob_48h_chuvaintensa.png" alt="Imagem de 48h Chuva intensa" class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                </div>
+                <nav class="flex justify-center gap-2" id="nav-tab-intensa" role="tablist">
+                    <button class="px-2.5 py-2 bg-gray-600 text-white rounded font-medium text-xs" data-tab-target="#tab-24" type="button" role="tab" aria-selected="true">
+    24h
+</button>                    <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-48" type="button" role="tab" aria-selected="false">
+    48h
+</button>                </nav>
+            </div>
+        </section>
+
+        <section class="tab-pane-secondary hidden" id="severo-tab-pane" role="tabpanel" aria-labelledby="severo-tab" tabindex="0">
+            <div class="flex flex-col justify-center pb-2">
+                <div class="pb-2">
+                    <div class="tab-pane-secondary flex justify-center bg-white" id="tab-24s">
+                        <img src="https://s1.cptec.inpe.br/nowcasting/NC/PREV/mapa_prev_prob_24h_temposevero.png" alt="Imagem de 24h Tempo Severo" class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-secondary flex justify-center bg-white hidden" id="tab-48s">
+                        <img src="https://s1.cptec.inpe.br/nowcasting/NC/PREV/mapa_prev_prob_48h_temposevero.png" alt="Imagem de 48h Tempo Severo" class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                </div>
+                <nav class="flex justify-center gap-2" id="nav-tab-severo" role="tablist">
+                    <button class="px-2.5 py-2 bg-gray-600 text-white rounded font-medium text-xs" data-tab-target="#tab-24s" type="button" role="tab" aria-selected="true">
+    24h
+</button>                    <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-48s" type="button" role="tab" aria-selected="false">
+    48h
+</button>                </nav>
+            </div>
+        </section>
+
+        <div class="text-center text-blue-500 hover:text-blue-600 hover:underline transition duration-200">
+            <a href="https://nowcasting.cptec.inpe.br/" target="_blank"><small>Saiba mais sobre o nowcasting</small></a>
+        </div>
+    </div>
+</div>            </div>
+            <div class="w-full lg:w-1/2">
+                <div class="w-full border 
+border-gray-300 dark:border-none rounded shadow-lg bg-white dark:bg-gradient-to-br from-gray-700 to-gray-800 py-4 px-3 h-full overflow-hidden" id="extreme">
+    <div class="flex">
+        <h6 class="font-bold text-lg md:text-xl !text-left md:text-center capitalize mb-6 dark:text-white">Prev. Num. de Tempo e Extremos</h6>        <a href="https://dataserver.cptec.inpe.br/dataserver_diptc/web/pdfs/informativos/produtos-previsao-numerica-extremos.pdf" target="_blank" class="ml-2 pt-1">
+            <i class="fa-solid fa-circle-info text-blue-600 hover:text-blue-500 transition duration-200"></i>
+        </a>
+    </div>
+
+    <nav class="flex justify-center gap-2" id="nav-tab-extremos" role="tablist">
+        <button class="px-2.5 py-2 bg-gray-600 text-white rounded font-medium text-xs" id="precipitacao-tab" data-tab-target="#tab-precipitacao" type="button" role="tab" aria-selected="true">
+    Prob.
+            Chuva
+</button>        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" id="temp-min-tab" data-tab-target="#tab-temp-min" type="button" role="tab" aria-selected="false">
+    Temp. Min
+</button>        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" id="temp-max-tab" data-tab-target="#tab-temp-max" type="button" role="tab" aria-selected="false">
+    Temp. Max
+</button>        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" id="umidade-tab" data-tab-target="#tab-umidade" type="button" role="tab" aria-selected="false">
+    Umidade
+</button>    </nav>
+
+    <div class="mt-2">
+        <section class="tab-pane-extremos" id="tab-precipitacao" role="tabpanel"
+            aria-labelledby="precipitacao-tab" tabindex="0">
+            <div class="flex flex-col justify-center pb-2">
+                <div class="pb-2">
+                    <div class="tab-pane-extremos flex justify-center bg-white" id="tab-24prec">
+                        <img src="https://s1.cptec.inpe.br/grafico/Modelos/Multimodel/prob_diaria/figuras/prec/pro_bra_p05_024.png"
+                            alt="O produto de precipitação acumulada, está sendo gerado..." class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-extremos flex justify-center bg-white hidden" id="tab-48prec">
+                        <img src="https://s1.cptec.inpe.br/grafico/Modelos/Multimodel/prob_diaria/figuras/prec/pro_bra_p05_048.png"
+                            alt="O produto de precipitação acumulada, está sendo gerado..." class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-extremos flex justify-center bg-white hidden" id="tab-72prec">
+                        <img src="https://s1.cptec.inpe.br/grafico/Modelos/Multimodel/prob_diaria/figuras/prec/pro_bra_p05_072.png"
+                            alt="O produto de precipitação acumulada, está sendo gerado..." class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-extremos flex justify-center bg-white hidden" id="tab-extremosprec">
+                        <img src="https://s3.cptec.inpe.br/grafico/Modelos/Multimodel/prob_diaria/figuras/prec/pro_acum_bra_p50.png"
+                            alt="O mapa de probabilidade de precipitação acumulada, está sendo gerado..." class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                </div>
+
+                <nav class="flex justify-center gap-2" id="nav-tab-precipitacao" role="tablist">
+                    <button class="px-2.5 py-2 bg-gray-600 text-white rounded font-medium text-xs" data-tab-target="#tab-24prec" type="button" role="tab" aria-selected="true">
+    24h
+</button>                    <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-48prec" type="button" role="tab" aria-selected="false">
+    48h
+</button>                    <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-72prec" type="button" role="tab" aria-selected="false">
+    72h
+</button>                    <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-extremosprec" type="button" role="tab" aria-selected="false">
+    Extremos
+</button>                </nav>
+            </div>
+        </section>
+
+        <section class="tab-pane-extremos hidden" id="tab-temp-min" role="tabpanel" aria-labelledby="temp-min-tab"
+            tabindex="0">
+            <div class="flex flex-col justify-center pb-2">
+                <div class="pb-2">
+                    <div class="tab-pane-extremos flex justify-center bg-white" id="tab-24temp-min">
+                        <img src="https://s1.cptec.inpe.br/grafico/Modelos/Multimodel/prob_diaria/figuras/temperatura/tmin_bra_024.png"
+                            alt="O produto de temperatura minima, está sendo gerado..." class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-extremos flex justify-center bg-white hidden" id="tab-48temp-min">
+                        <img src="https://s1.cptec.inpe.br/grafico/Modelos/Multimodel/prob_diaria/figuras/temperatura/tmin_bra_048.png"
+                            alt="O produto de temperatura minima, está sendo gerado..." class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-extremos flex justify-center bg-white hidden" id="tab-72temp-min">
+                        <img src="https://s1.cptec.inpe.br/grafico/Modelos/Multimodel/prob_diaria/figuras/temperatura/tmin_bra_072.png"
+                            alt="O produto de temperatura minima, está sendo gerado..." class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-extremos flex justify-center bg-white hidden" id="tab-extremostemp-min">
+                        <img src="https://s1.cptec.inpe.br/grafico/Modelos/Multimodel/prob_diaria/figuras/onda_frio/prob_frio_excessivo_bra_024.png"
+                            alt="O produto de temperatura minima, está sendo gerado..." class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                </div>
+
+                <nav>
+                    <div class="flex justify-center gap-2" id="nav-tab-temp-min" role="tablist">
+                        <button class="px-2.5 py-2 bg-gray-600 text-white rounded font-medium text-xs" data-tab-target="#tab-24temp-min" type="button" role="tab" aria-selected="true">
+    24h
+</button>                        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-48temp-min" type="button" role="tab" aria-selected="false">
+    48h
+</button>                        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-72temp-min" type="button" role="tab" aria-selected="false">
+    72h
+</button>                        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-extremostemp-min" type="button" role="tab" aria-selected="false">
+    Extremos
+</button>                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <section class="tab-pane-extremos hidden" id="tab-temp-max" role="tabpanel" aria-labelledby="temp-max-tab"
+            tabindex="0">
+            <div class="flex flex-col justify-center pb-2">
+                <div class="pb-2">
+                    <div class="tab-pane-extremos flex justify-center bg-white" id="tab-24temp-max">
+                        <img src="https://s1.cptec.inpe.br/grafico/Modelos/Multimodel/prob_diaria/figuras/temperatura/tmax_bra_024.png"
+                            alt="O produto de temperatura máxima, está sendo gerado..." class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-extremos flex justify-center bg-white hidden" id="tab-48temp-max">
+                        <img src="https://s1.cptec.inpe.br/grafico/Modelos/Multimodel/prob_diaria/figuras/temperatura/tmax_bra_048.png"
+                            alt="O produto de temperatura máxima, está sendo gerado..." class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-extremos flex justify-center bg-white hidden" id="tab-72temp-max">
+                        <img src="https://s1.cptec.inpe.br/grafico/Modelos/Multimodel/prob_diaria/figuras/temperatura/tmax_bra_072.png"
+                            alt="O produto de temperatura máxima, está sendo gerado..." class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-extremos flex justify-center bg-white hidden" id="tab-extremostemp-max">
+                        <img src="https://s1.cptec.inpe.br/grafico/Modelos/Multimodel/prob_diaria/onda_calor/prob_onda_calor_bra.png"
+                            alt="O produto de temperatura máxima, está sendo gerado..." class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                </div>
+
+                <nav>
+                    <div class="flex justify-center gap-2" id="nav-tab-temp-max" role="tablist">
+                        <button class="px-2.5 py-2 bg-gray-600 text-white rounded font-medium text-xs" data-tab-target="#tab-24temp-max" type="button" role="tab" aria-selected="true">
+    24h
+</button>                        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-48temp-max" type="button" role="tab" aria-selected="false">
+    48h
+</button>                        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-72temp-max" type="button" role="tab" aria-selected="false">
+    72h
+</button>                        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-extremostemp-max" type="button" role="tab" aria-selected="false">
+    Extremos
+</button>                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <section class="tab-pane-extremos hidden" id="tab-umidade" role="tabpanel" aria-labelledby="umidade-tab"
+            tabindex="0">
+            <div class="flex flex-col justify-center pb-2">
+                <div class="pb-2">
+                    <div class="tab-pane-extremos flex justify-center bg-white" id="tab-24umidade">
+                        <img src="https://s1.cptec.inpe.br/grafico/Modelos/Multimodel/prob_diaria/figuras/ur/ur_min_bra_024.png"
+                            alt="O produto de umidade, está sendo gerado..." class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-extremos flex justify-center bg-white hidden" id="tab-48umidade">
+                        <img src="https://s1.cptec.inpe.br/grafico/Modelos/Multimodel/prob_diaria/figuras/ur/ur_min_bra_048.png"
+                            alt="O produto de umidade, está sendo gerado..." class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-extremos flex justify-center bg-white hidden" id="tab-72umidade">
+                        <img src="https://s1.cptec.inpe.br/grafico/Modelos/Multimodel/prob_diaria/figuras/ur/ur_min_bra_072.png"
+                            alt="O produto de umidade, está sendo gerado..." class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-extremos flex justify-center bg-white hidden" id="tab-extremosumidade">
+                        <img src="https://s1.cptec.inpe.br/grafico/Modelos/Multimodel/prob_diaria/figuras/ur/pro_urp_bra_p15_5d.png"
+                            alt="O produto de umidade, está sendo gerado..." class="w-full max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                </div>
+
+                <nav>
+                    <div class="flex justify-center gap-2" id="nav-tab-umidade" role="tablist">
+                        <button class="px-2.5 py-2 bg-gray-600 text-white rounded font-medium text-xs" data-tab-target="#tab-24umidade" type="button" role="tab" aria-selected="true">
+    24h
+</button>                        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-48umidade" type="button" role="tab" aria-selected="false">
+    48h
+</button>                        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-72umidade" type="button" role="tab" aria-selected="false">
+    72h
+</button>                        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-extremosumidade" type="button" role="tab" aria-selected="false">
+    Extremos
+</button>                    </div>
+                </nav>
+            </div>
+        </section>
+        <div class="text-center text-blue-500 hover:text-blue-600 hover:underline transition duration-200">
+            <a href="https://previsaonumerica.cptec.inpe.br/" target="_blank"><small>Saiba mais sobre a previsão
+                    numérica</small></a>
+        </div>
+    </div>
+</div>            </div>
+        </section>
+
+        <section class="flex flex-col lg:flex-row gap-5 w-full max-w-[1920px]" data-tutorial-target="long-range">
+            <div class="w-full lg:w-1/2">
+                <div class="w-full border 
+border-gray-300 dark:border-none rounded shadow-lg bg-white dark:bg-gradient-to-br from-gray-700 to-gray-800 py-4 px-3 h-full overflow-hidden" id="weeks">
+    <h6 class="font-bold text-lg md:text-xl !text-left md:text-center capitalize mb-6 dark:text-white">Próximas Semanas</h6>
+    <nav class="flex justify-center gap-2 mt-2" id="nav-tab-weeks" role="tablist">
+        <button class="px-2.5 py-2 bg-gray-600 text-white rounded font-medium text-xs" id="psem-tab" data-tab-target="#tab-precipitacao" type="button" role="tab" aria-selected="true">
+    Anomalia de Precipitação
+</button>        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" id="psem1-tab" data-tab-target="#tab-temperatura" type="button" role="tab" aria-selected="false">
+    Anomalia de Temperatura
+</button>    </nav>
+
+    <div class="mt-2">
+        <section class="tab-pane-weeks" id="tab-precipitacao" role="tabpanel" aria-labelledby="psem-tab" tabindex="0">
+            <div class="flex flex-col justify-center pb-2 flex-1 min-h-0">
+                <div class="pb-2 h-full">
+                    <div class="tab-pane-weeks flex justify-center bg-white" id="tab-sem1">
+                        <img src="https://s0.cptec.inpe.br/subsaz/web_cptec/bam12_subsazonal_prec_anomaly_week01.png" alt="Modelo de previsão para semana 1" class="w-full max-w-2xl max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-weeks flex justify-center bg-white hidden" id="tab-sem2">
+                        <img src="https://s0.cptec.inpe.br/subsaz/web_cptec/bam12_subsazonal_prec_anomaly_week02.png" alt="Modelo de previsão para semana 2" class="w-full max-w-2xl max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-weeks flex justify-center bg-white hidden" id="tab-sem3">
+                        <img src="https://s0.cptec.inpe.br/subsaz/web_cptec/bam12_subsazonal_prec_anomaly_week03.png" alt="Modelo de previsão para semana 3" class="w-full max-w-2xl max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-weeks flex justify-center bg-white hidden" id="tab-sem4">
+                        <img src="https://s0.cptec.inpe.br/subsaz/web_cptec/bam12_subsazonal_prec_anomaly_week04.png" alt="Modelo de previsão para semana 4" class="w-full max-w-2xl max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                </div>
+                <nav class="flex justify-center gap-2" id="nav-tab-precipitacao" role="tablist">
+                    <button class="px-2.5 py-2 bg-gray-600 text-white rounded font-medium text-xs" data-tab-target="#tab-sem1" type="button" role="tab" aria-selected="true">
+    1ª semana
+</button>                    <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-sem2" type="button" role="tab" aria-selected="false">
+    2ª semana
+</button>                    <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-sem3" type="button" role="tab" aria-selected="false">
+    3ª semana
+</button>                    <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-sem4" type="button" role="tab" aria-selected="false">
+    4ª semana
+</button>                </nav>
+            </div>
+        </section>
+
+        <section class="tab-pane-weeks hidden" id="tab-temperatura" role="tabpanel" aria-labelledby="psem1-tab" tabindex="0">
+            <div class="flex flex-col justify-center pb-2 flex-1 min-h-0">
+                <div class="pb-2 h-full">
+                    <div class="tab-pane-weeks flex justify-center bg-white" id="tab-sem5">
+                        <img src="https://s0.cptec.inpe.br/subsaz/web_cptec/bam12_subsazonal_t2mt_anomaly_week01.png" alt="Modelo de previsão para semana 1" class="w-full max-w-2xl max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-weeks flex justify-center bg-white hidden" id="tab-sem6">
+                        <img src="https://s0.cptec.inpe.br/subsaz/web_cptec/bam12_subsazonal_t2mt_anomaly_week02.png" alt="Modelo de previsão para semana 2" class="w-full max-w-2xl max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-weeks flex justify-center bg-white hidden" id="tab-sem7">
+                        <img src="https://s0.cptec.inpe.br/subsaz/web_cptec/bam12_subsazonal_t2mt_anomaly_week03.png" alt="Modelo de previsão para semana 3" class="w-full max-w-2xl max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-weeks flex justify-center bg-white hidden" id="tab-sem8">
+                        <img src="https://s0.cptec.inpe.br/subsaz/web_cptec/bam12_subsazonal_t2mt_anomaly_week04.png" alt="Modelo de previsão para semana 4" class="w-full max-w-2xl max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                </div>
+                <nav class="flex justify-center gap-2" id="nav-tab-temperatura" role="tablist">
+                    <button class="px-2.5 py-2 bg-gray-600 text-white rounded font-medium text-xs" data-tab-target="#tab-sem5" type="button" role="tab" aria-selected="true">
+    1ª semana
+</button>                    <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-sem6" type="button" role="tab" aria-selected="false">
+    2ª semana
+</button>                    <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-sem7" type="button" role="tab" aria-selected="false">
+    3ª semana
+</button>                    <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-sem8" type="button" role="tab" aria-selected="false">
+    4ª semana
+</button>                </nav>
+            </div>
+        </section>
+
+        <div class="text-center text-blue-500 hover:text-blue-600 hover:underline transition duration-200 mt-2">
+            <a href="https://subsazonal.cptec.inpe.br/" target="_blank"><small>Saiba mais sobre a previsão para as próximas semanas</small></a>
+        </div>
+    </div>
+</div>            </div>
+            <div class="w-full lg:w-1/2">
+                <div class="w-full border 
+border-gray-300 dark:border-none rounded shadow-lg bg-white dark:bg-gradient-to-br from-gray-700 to-gray-800 py-4 px-3 h-full overflow-hidden" id="months">
+    <h6 class="font-bold text-lg md:text-xl !text-left md:text-center capitalize mb-6 dark:text-white">Próximos Meses</h6>
+    <nav class="flex justify-center gap-2 mt-2" id="nav-tab-months" role="tablist">
+        <button class="px-2.5 py-2 bg-gray-600 text-white rounded font-medium text-xs" id="pmes-tab" data-tab-target="#tab-precipitacao-months" type="button" role="tab" aria-selected="true">
+    Anomalia de Precipitação
+</button>        <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" id="pmes1-tab" data-tab-target="#tab-temperatura-months" type="button" role="tab" aria-selected="false">
+    Anomalia de Temperatura
+</button>    </nav>
+
+    <div class="mt-2">
+        <section class="tab-pane-months" id="tab-precipitacao-months" role="tabpanel" aria-labelledby="pmes-tab" tabindex="0">
+            <div class="flex flex-col justify-center pb-2 flex-1 min-h-0">
+                <div class="pb-2 h-full">
+                    <div class="tab-pane-months flex justify-center bg-white" id="tab-pmesitem1">
+                        <img src="https://s0.cptec.inpe.br/clima/modelos/web_cptec/bam12_clima_prec_anomaly_seas01.png" alt="Modelo de previsão para o mês 1" class="w-full max-w-2xl max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-months flex justify-center bg-white hidden" id="tab-pmesitem2">
+                        <img src="https://s0.cptec.inpe.br/clima/modelos/web_cptec/bam12_clima_prec_anomaly_seas02.png" alt="Modelo de previsão para o mês 2" class="w-full max-w-2xl max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                </div>
+                <nav class="flex justify-center gap-2" id="nav-tab-precipitacao-months" role="tablist">
+                    <button class="px-2.5 py-2 bg-gray-600 text-white rounded font-medium text-xs" data-tab-target="#tab-pmesitem1" type="button" role="tab" aria-selected="true">
+    1º trimestre
+</button>                    <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-pmesitem2" type="button" role="tab" aria-selected="false">
+    2º trimestre
+</button>                </nav>
+            </div>
+        </section>
+
+        <section class="tab-pane-months hidden" id="tab-temperatura-months" role="tabpanel" aria-labelledby="pmes1-tab" tabindex="0">
+            <div class="flex flex-col justify-center pb-2 flex-1 min-h-0">
+                <div class="pb-2 h-full">
+                    <div class="tab-pane-months flex justify-center bg-white" id="tab-pmes1item1">
+                        <img src="https://s0.cptec.inpe.br/clima/modelos/web_cptec/bam12_clima_t2mt_anomaly_seas01.png" alt="Modelo de previsão para o mês 1" class="w-full max-w-2xl max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                    <div class="tab-pane-months flex justify-center bg-white hidden" id="tab-pmes1item2">
+                        <img src="https://s0.cptec.inpe.br/clima/modelos/web_cptec/bam12_clima_t2mt_anomaly_seas02.png" alt="Modelo de previsão para o mês 2" class="w-full max-w-2xl max-w-3xl lg:h-[580px] 2xl:h-[800px] p-2">
+                    </div>
+                </div>
+                <nav class="flex justify-center gap-2" id="nav-tab-temperatura-months" role="tablist">
+                    <button class="px-2.5 py-2 bg-gray-600 text-white rounded font-medium text-xs" data-tab-target="#tab-pmes1item1" type="button" role="tab" aria-selected="true">
+    1º trimestre
+</button>                    <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs" data-tab-target="#tab-pmes1item2" type="button" role="tab" aria-selected="false">
+    2º trimestre
+</button>                </nav>
+            </div>
+        </section>
+
+        <div class="text-center text-blue-500 hover:text-blue-600 hover:underline transition duration-200 mt-2">
+            <a href="https://sazonal.cptec.inpe.br/" target="_blank"><small>Saiba mais sobre a previsão para os próximos meses</small></a>
+        </div>
+    </div>
+</div>            </div>
+        </section>
+
+        <section class="flex flex-col lg:flex-row gap-5 w-full max-w-[1920px]">
+            <div class="w-full lg:w-1/2 sm:hidden" data-tutorial-target="applications">
+                <div class="w-full border 
+border-gray-300 dark:border-none rounded shadow-lg bg-white dark:bg-gradient-to-br from-gray-700 to-gray-800 py-4 px-3 h-full overflow-hidden" data-counter="true">
+    <h6 class="font-bold text-lg md:text-xl !text-left md:text-center capitalize mb-6 dark:text-white">Nossas Aplicações</h6>
+    <section class="flex flex-col gap-5">
+        <div class="flex gap-5">
+            <a href="https://clima.cptec.inpe.br/" target="_blank" class="w-1/2">
+                <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs px-4 py-2 w-full">
+    Clima
+</button>            </a>
+            <a href="https://previsaonumerica.cptec.inpe.br/" target="_blank" class="w-1/2">
+                <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs px-4 py-2 w-full">
+    Prev. Num. Tempo
+</button>            </a>
+        </div>
+
+        <div class="flex gap-5">
+            <a href="https://satelite.cptec.inpe.br/home/index.jsp" target="_blank" class="w-1/2">
+                <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs px-4 py-2 w-full">
+    Satélite
+</button>            </a>
+            <a href="https://previsaonumerica.cptec.inpe.br/wwatch/alt_onda/glo/" target="_blank" class="w-1/2">
+                <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs px-4 py-2 w-full">
+    Ondas
+</button>            </a>
+        </div>
+
+        <div class="flex gap-5">
+            <a href="https://nowcasting.cptec.inpe.br/" target="_blank" class="w-1/2">
+                <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs px-4 py-2 w-full">
+    Nowcasting
+</button>            </a>
+            <a href="https://www.cptec.inpe.br/geada" target="_blank" class="w-1/2">
+                <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs px-4 py-2 w-full">
+    Geada
+</button>            </a>
+        </div>
+
+        <div class="flex gap-5">
+            <a href="http://brams.cptec.inpe.br" target="_blank" class="w-1/2">
+                <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs px-4 py-2 w-full">
+    BRAMS
+</button>            </a>
+            <a href="http://eurobrisa.cptec.inpe.br" target="_blank" class="w-1/2">
+                <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs px-4 py-2 w-full">
+    Eurobrisa
+</button>            </a>
+        </div>
+
+        <div class="flex gap-5">
+            <a route="http://servicos.cptec.inpe.br/XML/" target="_blank" class="w-1/2">
+                <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs px-4 py-2 w-full">
+    Webservice
+</button>            </a>
+            <a href="https://www.cptec.inpe.br/cartas-e-boletins" class="w-1/2">
+                <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs px-4 py-2 w-full">
+    Dados Históricos
+</button>            </a>
+        </div>
+
+        <div class="flex gap-5">
+            <a href="https://projetoeducacao.cptec.inpe.br/" target="_blank" class="w-1/2">
+                <button class="px-2.5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition duration-200 text-xs px-4 py-2 w-full">
+    Projeto Educação
+</button>            </a>
+            
+        </div>
+    </section>
+</div>            </div>
+            <div class="w-full lg:w-1/2 hidden sm:block" data-tutorial-target="applications">
+                <div class="w-full border 
+border-gray-300 dark:border-none rounded shadow-lg bg-white dark:bg-gradient-to-br from-gray-700 to-gray-800 py-4 px-3 h-full overflow-hidden" data-counter="true">
+    <h6 class="font-bold text-lg md:text-xl !text-left md:text-center capitalize mb-6 dark:text-white">Nossas Aplicações</h6>
+    <section>
+        <div class="flex justify-around w-full mb-5">
+            <a class="group flex items-center overflow-hidden size-10 transition-all duration-300 ease-in-out rounded-full bg-gray-200 p-1 hover:w-[110px]" href="https://clima.cptec.inpe.br/" target="_blank" >
+    <span class="flex whitespace-nowrap text-blue-500 text-xl font-bold"><svg class="size-8 flex-shrink-0 text-blue-500 me-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="currentColor"
+                            d="M8.999 6a3.5 3.5 0 0 0-3.464 3H5.5a2.5 2.5 0 0 0 0 5h7a2.5 2.5 0 0 0 0-5h-.037A3.5 3.5 0 0 0 9 6m-.212-3.18a.5.5 0 1 0-.883-.47l-.426.803a.5.5 0 0 0 .883.47zm-3.772-.747a.5.5 0 1 0-.957.293l.267.87a.5.5 0 0 0 .956-.293zM3 7c0 .604.179 1.166.486 1.637c.367-.259.787-.450 1.240-.551a4.51 4.51 0 0 1 3.560-3.03A3 3 0 0 0 3 7M1.82 4.214a.5.5 0 1 0-.470.883l.803.426a.5.5 0 0 0 .470-.883zm.416 4.463a.5.5 0 0 0-.293-.956l-.870.266a.5.5 0 1 0 .293.956z" /></svg>                    Clima</span>
+</a>
+            <a class="group flex items-center overflow-hidden size-10 transition-all duration-300 ease-in-out rounded-full bg-gray-200 p-1 hover:w-[200px]" href="https://previsaonumerica.cptec.inpe.br/" target="_blank" >
+    <span class="flex whitespace-nowrap text-blue-500 text-xl font-bold hover:animate-marquee"><svg class="size-8 flex-shrink-0 text-blue-500 me-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 640 640"><path fill="currentColor"
+                            d="M214.6 105.4c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l41.4-41.4V512c0 17.7 14.3 32 32 32s32-14.3 32-32V205.3l41.4 41.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-96-96zm214.5 165.2c-9.6 14.8-5.4 34.6 9.4 44.3s34.6 5.4 44.3-9.4l42.1-64.9c12.4-19.2 19.1-41.6 19.1-64.5c0-44.2-35.8-80-80-80s-80 35.8-80 80c0 36.1 23.9 66.7 56.8 76.6l-11.7 18zM440 176c0-13.3 10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24s-24-10.7-24-24m42.7 182c-8.3-6-19.1-7.7-28.8-4.4l-48 16c-16.8 5.6-25.8 23.7-20.2 40.5s23.7 25.8 40.5 20.2l5.9-2v51.6h-16c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32h-16v-96c0-10.3-4.9-19.9-13.3-26z">
+                        </path></svg>                    Previsão Numérica de Tempo</span>
+</a>
+            <a class="group flex items-center overflow-hidden size-10 transition-all duration-300 ease-in-out rounded-full bg-gray-200 p-1 hover:w-[120px]" href="https://satelite.cptec.inpe.br/home/index.jsp" target="_blank" >
+    <span class="flex whitespace-nowrap text-blue-500 text-xl font-bold"><svg class="size-8 flex-shrink-0 text-blue-500 me-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor"
+                            d="m9.74 23.53l-3.78-3.77a.976.976 0 0 1-.95.75a1.003 1.003 0 0 1-1-1a.99.99 0 0 1 .75-.95l-3.51-3.51a6 6 0 0 1 8.49 8.48">
+                        </path>
+                        <path fill="currentColor"
+                            d="m22.46 12.45l-2.94-2.94l.86-.86a1.956 1.956 0 0 0 0-2.76L18.9 4.41a1.97 1.97 0 0 0-2.77 0l-.85.85l-2.95-2.94a1.67 1.67 0 0 0-2.36 0L6.2 6.09a1.67 1.67 0 0 0 0 2.36l2.95 2.95l-.15.14a1.95 1.95 0 0 0 0 2.77l.74.74l.74.74a1.955 1.955 0 0 0 2.76 0l.15-.15l2.94 2.94a1.68 1.68 0 0 0 2.37 0l3.76-3.76a1.666 1.666 0 0 0 0-2.37M7.38 7.27l3.77-3.77l2.94 2.95l-3.76 3.76ZM17.52 17.4l-2.95-2.94l3.77-3.77l2.94 2.94Z">
+                        </path></svg>                    Satélite</span>
+</a>
+            <a class="group flex items-center overflow-hidden size-10 transition-all duration-300 ease-in-out rounded-full bg-gray-200 p-1 hover:w-[110px]" href="https://previsaonumerica.cptec.inpe.br/wwatch/alt_onda/glo/" target="_blank" >
+    <span class="flex whitespace-nowrap text-blue-500 text-xl font-bold"><svg class="size-8 flex-shrink-0 text-blue-500 me-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2c2.5 0 2.5-2 5-2c1.3 0 1.9.5 2.5 1M2 12c.6.5 1.2 1 2.5 1c2.5 0 2.5-2 5-2c2.6 0 2.4 2 5 2c2.5 0 2.5-2 5-2c1.3 0 1.9.5 2.5 1M2 18c.6.5 1.2 1 2.5 1c2.5 0 2.5-2 5-2c2.6 0 2.4 2 5 2c2.5 0 2.5-2 5-2c1.3 0 1.9.5 2.5 1">
+                        </path></svg>                    Ondas</span>
+</a>
+            <a class="group flex items-center overflow-hidden size-10 transition-all duration-300 ease-in-out rounded-full bg-gray-200 p-1 hover:w-[160px]" href="https://nowcasting.cptec.inpe.br/" target="_blank" >
+    <span class="flex whitespace-nowrap text-blue-500 text-xl font-bold"><svg class="size-8 flex-shrink-0 text-blue-500 me-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 64 64"><path fill="currentColor"
+                            d="m57.4 17.8l-14.8-3.4c0-.3.1-.5.1-.8c0-5-4-9-8.9-9c-5 0-9 4-9 9c0 1 .3 2.3.9 3.8l-2.9.6l-13.1-3.7c-1.9-.5-3.9-.2-5.5 1s-2.5 3-2.5 5v28.6c0 2.8 1.9 5.3 4.6 6l15.8 4.5h.1c.2 0 .4.1.6.1h.5l18.2-3.8l13.2 3.1c.5.1.9.2 1.4.2c1.4 0 2.8-.5 3.9-1.4c1.5-1.2 2.4-3 2.4-4.9V23.9c-.1-2.9-2.1-5.4-5-6.1M33.7 9.1c2.5 0 4.4 2 4.4 4.5c0 1.1-1.4 4.4-4.5 9.2c-3.1-4.8-4.5-8-4.5-9.2c.1-2.5 2.1-4.5 4.6-4.5m-6.1 12.4c1.1 2 2.4 4 3.6 5.7c.5.8 1.5 1.3 2.4 1.3c1 0 1.9-.5 2.4-1.3c1-1.5 2.1-3.1 3.1-4.8v29l-14.1 3V22.1zM6.3 48.8V20.3c0-.6.3-1.1.7-1.4s1-.4 1.5-.3l12 3.4v32.2l-13-3.7c-.7-.2-1.2-.9-1.2-1.7m51.5 3.7c0 .7-.4 1.2-.7 1.4c-.2.2-.8.5-1.5.3l-12-2.8V19.2l12.8 3c.8.2 1.4.9 1.4 1.7z">
+                        </path>
+                        <path fill="currentColor"
+                            d="M34.1 15.5c.1 0 .3-.1.4-.1s.3-.1.4-.2l.3-.3c.4-.4.7-1 .7-1.6s-.2-1.2-.7-1.6l-.3-.3c-.1-.1-.3-.2-.4-.2c-.1-.1-.3-.1-.4-.1c-.7-.1-1.5.1-2 .6c-.4.4-.7 1-.7 1.6s.2 1.2.7 1.6c.4.4 1 .7 1.6.7c.1-.1.3-.1.4-.1">
+                        </path></svg>                    Nowcasting</span>
+</a>
+            <a class="group flex items-center overflow-hidden size-10 transition-all duration-300 ease-in-out rounded-full bg-gray-200 p-1 hover:w-[110px]" href="https://www.cptec.inpe.br/geada" target="_blank" >
+    <span class="flex whitespace-nowrap text-blue-500 text-xl font-bold"><svg class="size-8 flex-shrink-0 text-blue-500 me-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.000000 64.000000"><g transform="translate(0,64) scale(0.1,-0.1)" fill="currentColor">
+                            <path d="M290 604 l0 -35 -27 20 c-25 20 -27 20 -45 4 -18 -16 -17 -18 27 -63
+                                43 -43 45 -48 45 -103 l0 -57 -50 28 c-45 25 -50 31 -61 79 -15 66 -20 73 -47
+                                66 -20 -5 -22 -10 -16 -40 l7 -35 -33 17 c-30 15 -33 15 -46 -2 -18 -25 -18
+                                -26 19 -47 l32 -19 -30 -10 c-39 -13 -37 -11 -30 -40 l7 -25 61 19 60 18 49
+                                -27 c26 -15 48 -29 48 -32 0 -3 -22 -17 -49 -32 l-49 -27 -60 18 -60 19 -7
+                                -25 c-7 -29 -9 -27 30 -40 l30 -10 -32 -19 c-37 -22 -38 -22 -18 -48 13 -18
+                                16 -18 39 -2 35 23 39 21 32 -18 -6 -30 -4 -34 19 -38 26 -5 27 -4 50 92 4 17
+                                23 35 56 53 l49 28 0 -58 c0 -56 -2 -61 -45 -103 -42 -41 -44 -45 -29 -62 16
+                                -17 18 -17 45 3 l29 20 0 -35 c0 -33 2 -36 30 -36 28 0 30 3 30 36 l0 35 27
+                                -20 c25 -20 27 -20 45 -4 18 16 17 18 -27 63 -43 44 -45 48 -45 103 l0 58 49
+                                -28 c33 -18 52 -36 56 -53 23 -96 24 -97 50 -92 23 4 25 8 19 38 -7 39 -3 41
+                                32 18 23 -16 26 -16 39 2 20 26 19 26 -18 48 l-32 19 30 10 c39 13 37 11 30
+                                40 l-7 25 -60 -19 -60 -18 -49 27 c-27 15 -49 29 -49 32 0 3 22 17 48 32 l49
+                                27 60 -18 61 -19 7 25 c7 29 9 27 -30 40 l-30 10 32 19 c37 21 37 22 19 47
+                                -13 17 -16 17 -46 2 l-33 -17 7 35 c6 30 4 35 -16 40 -27 7 -32 0 -47 -66 -11
+                                -48 -16 -54 -61 -79 l-50 -28 0 57 c0 55 2 60 45 103 46 46 46 46 25 65 -20
+                                18 -21 18 -45 -5 l-25 -23 0 36 c0 34 -2 37 -30 37 -28 0 -30 -3 -30 -36z" />
+                        </g></svg>                    Geada</span>
+</a>        </div>
+
+        <div class="flex justify-around w-full">
+            <a class="group flex items-center overflow-hidden size-10 transition-all duration-300 ease-in-out rounded-full bg-gray-200 p-1 hover:w-[120px]" href="http://brams.cptec.inpe.br" target="_blank" >
+    <span class="flex whitespace-nowrap text-blue-500 text-xl font-bold"><svg class="size-8 flex-shrink-0 text-blue-500 me-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 1024 1024" transform="rotate(90)"><path fill="currentColor"
+                            d="M471.5 948.9c-138.5-10.7-265.5-88.8-337.2-207.6-68.5-113.5-79-252.7-28.1-373.8 36.1-86 99.6-159.5 180.3-208.6 52.5-31.9 114.1-53.8 176.1-62.8 26.6-3.9 36.6-4.5 69.4-4.5 34.2-0.1 46.5 0.8 73 4.9 16.8 2.7 40 7.2 40.8 8 0.3 0.3-4.4 0.5-10.4 0.5-29.3 0.1-66.5 7.8-99.1 20.5-26.9 10.5-57.9 28.7-81.3 47.5-13.6 11-35.6 32.8-45.6 45.5-35.2 44.1-55.4 90-64.1 145.5-2.5 16.5-2.5 63.4 0 80.5 8.1 54.1 28.6 101.5 62.7 144.5 10.7 13.6 34.5 37.2 48.5 48.2 40.4 31.5 88.6 53 137.2 61.2 85.7 14.4 169.4-6.3 236.6-58.6 37.5-29.1 67.7-67.7 87-110.9 14.5-32.5 21.7-63.1 23.9-101.6 0.7-11.7 1.3-21.1 1.4-21 0.1 0.1 1.2 5.8 2.3 12.7 3.2 18.9 5.1 44.1 5.1 67.5 0 22-2.8 65.4-4.2 63.2-0.5-0.8-0.8-0.6-0.8 0.7 0 4.9-7.6 35.3-12.5 49.9-24.4 73.7-68.2 136.5-130 186.8-20.1 16.4-44.1 31.7-69.5 44.3-58.2 28.9-117.1 42-181.5 40.3-54.5-1.5-96.7-11-149.5-33.7-18.4-7.9-51.1-27.1-70.5-41.6-20.4-15-46.6-39.3-62.9-58.3-67.7-78.8-99.2-175.9-90.1-278.1 4.1-46.2 15.7-88.3 36-130.7 46.8-97.6 135.1-173.7 242.5-209.1 46.7-15.4 85.4-22 131.4-22.3 22.1-0.2 15.8-1.6-11.4-2.5-54.4-1.9-116.9 8.9-168 29.1-98.5 39-180.5 114.3-225 206.8-19.6 40.6-31.4 80.2-36.5 121.7-18.7 153.9 54.6 302.8 189.3 384.6 24.4 14.8 61.9 31.7 88.2 39.7 42.7 13 91.7 19.9 130.5 18.2 45.3-1.9 82.6-8.7 122.5-22.3 90.7-30.9 169.4-96.1 220-182.2 21.1-35.9 38-82.3 46-126.5 1.5-8.3 1.9-9.4 1.4-4.5-1.9 23-11.6 62.6-23.6 97-30.5 86.9-92.7 166.2-172.3 219.5-31.5 21.1-60.4 35.7-95 48-37.1 13.2-75.7 21.4-114.4 24.5-15.1 1.1-53.4 1.1-68.6-0.1z" />
+                        <path fill="currentColor"
+                            d="M750.5 377.8c-21.1-3.9-38.1-13.1-53.5-28.8-18.1-18.5-27-40.4-27-66.7 0.1-20.2 4.5-35 15.5-51.9 31.5-48.4 97.6-59 143.2-23 27 21.4 40 54.6 34.9 89.3-1.8 12.3-3.7 18.7-8.6 28.3-13.4 26.6-37.9 45.6-66.8 52-9.5 2.1-28.6 2.5-37.7 0.8z" /></svg>                    BRAMS</span>
+</a>
+            <a class="group flex items-center overflow-hidden size-10 transition-all duration-300 ease-in-out rounded-full bg-gray-200 p-1 hover:w-[140px]" href="http://eurobrisa.cptec.inpe.br" target="_blank" >
+    <span class="flex whitespace-nowrap text-blue-500 text-xl font-bold"><svg class="size-8 flex-shrink-0 text-blue-500 me-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 512 512"><path fill="currentColor"
+                            d="M117.848 64.37c-4.216-.027-8.49.18-12.8.634c-55.17 5.8-95.806 49.862-90.71 98.35c.106 1.01.203 2.193.334 3.183c.927-1.65 1.642-3.144 2.717-4.79c25.247-38.602 83.043-59.15 129.063-45.745c46.02 13.403 62.854 55.91 37.608 94.516c-2.82 4.32-6.102 8.118-9.68 11.962c26.987-18.47 43.175-48.472 39.847-80.138c-4.7-44.703-46.632-77.64-96.38-77.97zm375.004 33.525c-42.71 89.996-101.97 173.25-167.03 230.687c-44.41 39.21-113.416 70.452-164.107 39.715c-30.767-18.66-42.313-70.813-15.77-116.22c-53.058 22.698-93.682 100.59-64.242 161.773c45.65 94.867 165.072 93.635 286.17 42.048c55.41-23.603 89.392-40.718 124.98-65.41v-33.066c-61.925 43.79-116.094 73.34-196.953 96.22c78.083-36.174 130.285-70.63 196.952-124.476V274.81c-67.75 72.44-145.933 116.294-223.89 154.854c80.25-47.795 155.855-110.53 223.89-186.113v-44.224c-42.886 57.34-97.62 102.83-150.82 149.85c54.818-60.357 107.696-122.268 150.82-191.983z">
+                        </path></svg>                    Eurobrisa</span>
+</a>            
+            <a class="group flex items-center overflow-hidden size-10 transition-all duration-300 ease-in-out rounded-full bg-gray-200 p-1 hover:w-[160px]" href="http://servicos.cptec.inpe.br/XML/" target="_blank" >
+    <span class="flex whitespace-nowrap text-blue-500 text-xl font-bold"><svg class="size-8 flex-shrink-0 text-blue-500 me-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32"><path fill="currentColor" d="M23 18h-2v-7h-7V9h8a1 1 0 0 1 1 1z"></path>
+                        <path fill="currentColor"
+                            d="M18 23h-8a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1m-7-2h6v-6h-6z">
+                        </path>
+                        <path fill="currentColor"
+                            d="M16 1a1 1 0 0 0-.504.136l-12 7A1 1 0 0 0 3 9v14a1 1 0 0 0 .496.864l12 7a1 1 0 0 0 1.008 0l11-6.417l-1.008-1.727L16 28.842L5 22.426V9.575l11-6.417l11 6.416V17h2V9a1 1 0 0 0-.496-.864l-12-7A1 1 0 0 0 16 1">
+                        </path></svg>                    Webservice</span>
+</a>
+            <a class="group flex items-center overflow-hidden size-10 transition-all duration-300 ease-in-out rounded-full bg-gray-200 p-1 hover:w-[210px]" href="https://www.cptec.inpe.br/cartas-e-boletins" target="_blank" >
+    <span class="flex whitespace-nowrap text-blue-500 text-xl font-bold"><svg class="size-8 flex-shrink-0 text-blue-500 me-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20"><g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                            <path
+                                d="M17 4H3a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .5.5h14a.5.5 0 0 0 .5-.5v-11A.5.5 0 0 0 17 4M3.5 15V5h13v10z">
+                            </path>
+                            <path
+                                d="m17.324 4.88l-7.045 6a.5.5 0 0 1-.65-.001l-6.956-6A.5.5 0 0 1 3 4h14a.5.5 0 0 1 .324.88M15.642 5H4.345l5.612 4.841z">
+                            </path>
+                        </g></svg>                    Dados Históricos</span>
+</a>
+            <a class="group flex items-center overflow-hidden size-10 transition-all duration-300 ease-in-out rounded-full bg-gray-200 p-1 hover:w-[130px]" href="https://projetoeducacao.cptec.inpe.br/" target="_blank" >
+    <span class="flex whitespace-nowrap text-blue-500 text-xl font-bold hover:animate-marquee"><svg class="size-8 flex-shrink-0 text-blue-500 me-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 512 512"><path fill="currentColor"
+                            d="m368 350.643l-112 63l-112-63v-66.562l-32-17.778v103.054l144 81l144-81V266.303l-32 17.778z">
+                        </path>
+                        <path fill="currentColor"
+                            d="M256 45.977L32 162.125v27.734L256 314.3l192-106.663V296h32V162.125Zm160 142.831l-32 17.777L256 277.7l-128-71.115l-32-17.777l-22.179-12.322L256 82.023l182.179 94.463Z">
+                        </path></svg>                    Projeto Educação</span>
+</a>
+            
+        </div>
+    </section>
+</div>            </div>
+            <div class="w-full lg:w-1/2" data-tutorial-target="warnings">
+                <div class="w-full border 
+border-gray-300 dark:border-none rounded shadow-lg bg-white dark:bg-gradient-to-br from-gray-700 to-gray-800 py-4 px-3 h-full overflow-hidden">
+    <h6 class="font-bold text-lg md:text-xl !text-left md:text-center capitalize mb-6 dark:text-white">Avisos Importantes</h6>    <p class="text-sm dark:text-white text-justify">Os produtos apresentados nesta página não podem ser usados para propósitos comerciais, copiados
+        integral ou parcialmente para a reprodução em meios de divulgação, sem a expressa autorização do
+        CPTEC/INPE. Os usuários deverão sempre mencionar a fonte das informações e dados como
+        "CPTEC/INPE". A geração e a divulgação de produtos operacionais obedecem critérios sistêmicos de
+        controle de qualidade, padronização e periodicidade de disponibilização. Em nenhum caso o
+        CPTEC/INPE pode ser responsabilizado por danos especiais, indiretos ou decorrentes, ou nenhum
+        dano vinculado ao que provenha do uso destes produtos.</p>
+</div>            </div>
+        </section>
+    </main>
+
+    <div id="home-tutorial" class="hidden" aria-hidden="true">
+    <div class="tutorial-overlay" data-tutorial-overlay></div>
+
+    <section class="tutorial-card" role="dialog" aria-modal="true" aria-labelledby="tutorial-title">
+        <div class="flex items-start justify-between gap-4">
+            <div>
+                <h2 id="tutorial-title" class="tutorial-title" data-tutorial-title></h2>
+            </div>
+
+            <button type="button" class="tutorial-icon-button" data-tutorial-close aria-label="Fechar tutorial">
+                <i class="fas fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <p class="tutorial-description" data-tutorial-description style="margin-top: 0.5rem;"></p>
+
+        <p class="tutorial-counter pb-2 pt-4" data-tutorial-counter></p>
+
+        <div class="tutorial-progress">
+            <div class="tutorial-progress-bar" data-tutorial-progress></div>
+        </div>
+
+        <div class="tutorial-actions">
+            <div class="flex gap-2">
+                <button type="button" class="tutorial-button tutorial-button-secondary" data-tutorial-previous>
+                    Anterior
+                </button>
+                <button type="button" class="tutorial-button tutorial-button-primary" data-tutorial-next>
+                    Proximo
+                </button>
+            </div>
+        </div>
+    </section>
+</div>
+    <div
+    data-cookie-banner
+    class="hidden fixed inset-x-0 bottom-0 z-50 px-4 pb-4 sm:px-6"
+    role="dialog"
+    aria-live="polite"
+    aria-label="Aviso de cookies"
+>
+    <div class="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl ring-1 ring-black/5 dark:border-slate-700 dark:bg-slate-800">
+        <div class="flex flex-col gap-4 p-4 sm:flex-row sm:items-end sm:justify-between sm:p-5">
+            <p class="text-sm leading-6 text-slate-700 dark:text-slate-200">
+                Os cookies utilizados no site do CPTEC são estritamente necessários. Os cookies armazenam informação da última cidade consultada e se lembram de algumas opções selecionadas no site. Isto é utilizado para melhorar a experiência do usuário.
+            </p>
+
+            <button
+                type="button"
+                data-cookie-accept
+                class="inline-flex shrink-0 items-center justify-center rounded-lg bg-blue-700 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
+            >
+                Entendi
+            </button>
+        </div>
+    </div>
+</div>
+
+    <footer id="footer" class="w-full border-t border-gray-800 bg-gray-900 !text-white">
+    <div class="mx-auto w-full px-4 py-6 text-center text-sm sm:px-10">
+        <p class="m-0 leading-6">
+            Todo o conteúdo deste site está publicado sob a licença:
+            <strong class="font-semibold"><a class="!text-white transition-colors hover:!text-blue-400" href="https://creativecommons.org/licenses/by-nd/3.0/deed.en" target="_blank" rel="noopener noreferrer">Creative Commons Atribuição-SemDerivações 3.0 Não Adaptada</a></strong>.
+        </p>
+        <p class="mt-2 leading-6">
+            <a class="!text-white transition-colors hover:!text-blue-400" href="/politica-de-privacidade">Política de Privacidade</a>
+            <span class="mx-2" aria-hidden="true">·</span>
+            <a class="!text-white transition-colors hover:!text-blue-400" href="/cookies">Política de Cookies</a>
+        </p>
+    </div>
+</footer>
+
+            <div class="h-14.5 hidden lg:block"></div>
+    
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>    
+    
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+
+    <!-- Script do Tab Manager -->
+    <link rel="modulepreload" as="script" href="https://www.cptec.inpe.br/build/assets/tab-manager-BFREpvLZ.js" /><script type="module" src="https://www.cptec.inpe.br/build/assets/tab-manager-BFREpvLZ.js"></script></body>
+
+</html>

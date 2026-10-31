@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Radar</title>
+  <link rel="alternate" type="application/rss+xml" title="News RSS" href="/feed/news">
+  <link rel="alternate" type="application/rss+xml" title="Global changelog RSS" href="/feed/changelog">
+  <link type="image/x-icon" rel="icon" href="/images/met_favicon.png">
+  <link type="image/x-icon" rel="shortcut icon" href="/images/met_favicon.ico">
+
+  <!-- bootstrap 5 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="/css/mdb.min.css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <link rel="alternate" type="application/rss+xml" title="Product changelog RSS" href="https://api.met.no/weatherapi/radar/2.0/_/changelog">
+  <link href='/swagger-ui/css/typography.css' media='screen' rel='stylesheet' type='text/css'/>
+<link href='/swagger-ui/css/screen.css' media='screen' rel='stylesheet' type='text/css'/>
+<link href='/swagger-ui/css/reset.css' media='print' rel='stylesheet' type='text/css'/>
+<link href='/swagger-ui/css/print.css' media='print' rel='stylesheet' type='text/css'/>
+
+<script src='/swagger-ui/lib/object-assign-pollyfill.js' type='text/javascript'></script>
+<script src='/swagger-ui/lib/jquery-1.8.0.min.js' type='text/javascript'></script>
+<script src='/swagger-ui/lib/jquery.slideto.min.js' type='text/javascript'></script>
+<script src='/swagger-ui/lib/jquery.wiggle.min.js' type='text/javascript'></script>
+<script src='/swagger-ui/lib/jquery.ba-bbq.min.js' type='text/javascript'></script>
+<script src='/swagger-ui/lib/handlebars-4.0.5.js' type='text/javascript'></script>
+<script src='/swagger-ui/lib/lodash.min.js' type='text/javascript'></script>
+<script src='/swagger-ui/lib/backbone-min.js' type='text/javascript'></script>
+<script src='/swagger-ui/swagger-ui.js' type='text/javascript'></script>
+<script src='/swagger-ui/lib/highlight.9.1.0.pack.js' type='text/javascript'></script>
+<script src='/swagger-ui/lib/highlight.9.1.0.pack_extended.js' type='text/javascript'></script>
+<script src='/swagger-ui/lib/jsoneditor.min.js' type='text/javascript'></script>
+<script src='/swagger-ui/lib/marked.js' type='text/javascript'></script>
+<script src='/swagger-ui/lib/swagger-oauth.js' type='text/javascript'></script>
+
+<style type="text/css">
+  .swagger-section ul#resources { padding-left: 0px; }
+  .swagger-section #api_info { display: none }
+  .swagger-section #message-bar { min-height: 0px; }
+  #swagger-form #input_baseUrl { width: 100px }
+</style>
+
+
+</head>
+<body>
+  <header>
+    <!-- Intro settings -->
+    <style>
+      #intro {
+        /* Margin to fix overlapping fixed navbar */
+        margin-top: 58px;
+      }
+      @media (max-width: 991px) {
+        #intro {
+          /* Margin to fix overlapping fixed navbar */
+          margin-top: 45px;
+        }
+      }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-met-pri fixed-top">
+      <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" target="_blank" href="https://met.no/">
+          <img src="/img/met_logo_icon_neg.png" height="24" alt="MET logo" loading="lazy"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://docs.api.met.no/doc/">Documentation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/weatherapi/">API Reference</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/doc/FAQ">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/doc/License">License</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/doc/TermsOfService">Terms of Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/doc/support">Contact us</a>
+            </li>
+          </ul>
+        </div>
+        <a class="icon" href="/weatherapi/healthz"><img src='/weatherapi/healthz?icon' height='15px' alt="Healthz status" ></a>
+        <a class="icon" href="/feed/changelog"><img src="/images/16px-Rss-feed.svg.png" alt="Changelog RSS" /></a>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Jumbotron -->
+    <div id="intro" class="p-4 text-center bg-met-light">
+      <h1 class="mb-1">Radar</h1>
+    </div>
+    <!-- Jumbotron -->
+
+    <!--alert-->
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+             <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+          </svg>
+          Are you getting 403 Forbidden errors? Read the <a href="/doc/FAQ">FAQ</a> and check your User-Agent header!
+
+        </div>
+
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main class="my-5">
+    <div class="container">
+      <!--Section: Content-->
+      
+<div class="row">
+  <div class="col-md">
+    <div class="card px-3 py-3 product">
+
+
+<!-- Tabs navs -->
+<ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a
+      class="nav-link active"
+      id="ex1-tab-1"
+      data-mdb-toggle="tab"
+      href="#ex1-tabs-1"
+      role="tab"
+      aria-controls="ex1-tabs-1"
+      aria-selected="true"
+    >Documentation</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a
+      class="nav-link"
+      id="ex1-tab-2"
+      data-mdb-toggle="tab"
+      href="#ex1-tabs-2"
+      role="tab"
+      aria-controls="ex1-tabs-2"
+      aria-selected="false"
+    >OpenAPI UI</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a
+      class="nav-link"
+      id="ex1-tab-3"
+      data-mdb-toggle="tab"
+      href="#ex1-tabs-3"
+      role="tab"
+      aria-controls="ex1-tabs-3"
+      aria-selected="false"
+    >Changelog</a>
+  </li>
+</ul>
+<!-- Tabs navs -->
+
+<!-- Tabs content -->
+<div class="tab-content" id="ex1-content">
+
+  <div class="tab-pane fade show active pod documentation" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
+
+    <script src='https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js'></script>
+    <link href='https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css' rel='stylesheet' />
+    <script src="https://unpkg.com/maplibre-grid@1.0.0/dist/maplibre-grid.js"></script>
+    <div class="btn-group layerselector">
+        <input type="radio" class="btn-check" name="layers" id="select_locations" onclick="showLayer('locations')" autocomplete="off" />
+<label class="btn btn-secondary" for="select_locations" data-mdb-ripple-init>LOCATIONS</label>
+    </div>
+    <div id='map' style='width: 100%; height: 500px; margin-bottom: 24px;'></div>
+    <style>
+        .maplibregl-popup { max-height: 400px !important; }
+        .maplibregl-popup-content { overflow: auto !important }
+        .maplibregl-popup td { vertical-align: top; padding-right: 12px; }
+        .maplibregl-popup td.popval { word-wrap: anywhere; }
+        .maplibregl-popup h3 { font-weight: bold; font-size: 14px; }
+        .layerselector { float: right; margin: 5px 5px -50px; z-index: 9999; }
+        .layerselector .btn-secondary { background-color: #496C80; }
+        .btn-check:checked + .btn-secondary{ background-color: #0090A8; }
+        .maplibregl-ctrl-bottom-left { padding: 2px 8px 2px 8px; background: rgba(255,255,255,0.7); }
+    </style>
+    <script>
+        var map = new maplibregl.Map({
+            container: 'map',
+            style: 'https://osmfliser.met.no/styles/basic-preview/style.json',
+center: [15, 65], // starting position [lng, lat]
+            zoom:3// starting zoom
+        });
+        // Add zoom and rotation controls to the map.
+        map.addControl(new maplibregl.NavigationControl({
+            //visualizePitch: true,
+            //visualizeRoll: true,
+            showZoom: true,
+            showCompass: true
+        }));
+        map.addControl(new MaplibreGrid.Grid({
+            gridWidth: 10,
+            gridHeight: 10,
+            units: 'degrees',
+            paint: { 'line-opacity': 0.2 }
+        }));
+        map.on('load', () => {
+
+            map.addSource('locations', {
+'type': 'geojson',
+                'data': 'https://api.met.no/weatherapi/radar/2.0/locations.json'
+});
+            map.addLayer({
+                'id': 'locations_areas',
+'type': 'fill',
+                'source': 'locations',
+'filter': ['==', "$type", "Polygon"],
+                'layout': { 'visibility': "none" },
+                'paint': {
+                    'fill-color': '#c93',
+                    'fill-opacity': 0.25,
+                    'fill-outline-color': '#933'
+                }
+            });
+            map.addLayer({
+                'id': 'locations_routes',
+'type': 'line',
+                'source': 'locations',
+'filter': ['==', "$type", "LineString"],
+                'layout': { 'visibility': "none" },
+                'paint': {
+                    'line-color': '#c63',
+                    'line-width': 2,
+                    'line-opacity': 0.5
+                }
+            });
+            map.addLayer({
+                'id': 'locations_locations',
+'type': 'circle',
+                'source': 'locations',
+'filter': ['==', "$type", "Point"],
+                'layout': { 'visibility': "none" },
+                'paint': {
+                    'circle-color': '#933',
+                    'circle-radius': 5,
+                    'circle-stroke-width': 1,
+                    'circle-stroke-color': '#fff'
+                }
+            });
+            map.on('click', 'locations_areas', popup);
+map.on('click', 'locations_routes', popup);
+map.on('click', 'locations_locations', popup);
+            showLayer('locations');
+/* show coords in lower left corner of map */
+            map.on('mousemove', (e) => {
+                document.getElementById('map')
+                .getElementsByClassName("maplibregl-control-container")[0]
+                .getElementsByClassName("maplibregl-ctrl-bottom-left")[0]
+                .innerHTML = `${e.lngLat.lng.toFixed(4)} ${e.lngLat.lat.toFixed(4)}`;
+            });
+        });
+        function showLayer(l) {
+            map.setLayoutProperty('locations_areas', 'visibility', 'none');
+map.setLayoutProperty('locations_routes', 'visibility', 'none');
+map.setLayoutProperty('locations_locations', 'visibility', 'none');
+            map.setLayoutProperty(l + '_areas', 'visibility', 'visible');
+            map.setLayoutProperty(l + '_routes', 'visibility', 'visible');
+            map.setLayoutProperty(l + '_locations', 'visibility', 'visible');
+            document.getElementById('select_' + l).checked = true;
+        }
+        function popup(e){
+            new maplibregl.Popup()
+            .setLngLat(e.lngLat)
+            .setHTML(popupText(e))
+            .setMaxWidth("480px")
+            .addTo(map);
+        };
+        function popupText(e) {
+            //alert(JSON.stringify(e.features, null, 4));
+
+            //var selected = 0;
+            var values = {
+                "lat": e.lngLat.lat,
+                "lon": e.lngLat.lng
+            };
+            var html = '';
+            //html += '<p>' + values.lat.toFixed(3) + ',' + values.lon.toFixed(3) + '</p>';
+
+            for (const feature of e.features) {
+                html += '<div class="feature"><h3>' + (feature.properties.name || feature.properties.title) + '</h3>';
+                //html += '<table id="feature' + selected++ + '" style_="display:none;">\n';
+                html += '<table>\n';
+                for (const [prop, val] of Object.entries(feature.properties)) {
+                    if (prop == 'resources') {
+                        var res = JSON.parse(val);
+                        html += '<tr><td>' + prop + ': </td><td class="popval">';
+                        res.forEach(
+                            function (r) {
+                                var link = r.uri;
+                                if (typeof r.params !== 'undefined') {
+                                    link += "?";
+                                    for (let p of r.params) {
+                                        link += p + "=" + values[p] + "&";
+                                    }
+                                }
+                                html += '<a href="' + link + '">' + r.description + '</a><br>';
+                            }
+                        )
+                        html += '</td></tr>\n';
+                    } else {
+                        html += '<tr><td>' + prop + ': </td><td class="popval">' + val + '</td></tr>';
+                    }
+                }
+                html += '</table></div>';
+            }
+            //document.getElementById('feature0').style.display = '';
+
+            //if (e.features.length > 1) {
+            //    html += '<p style="align:center"><a>prev</a> <a>next</a></p>';
+            //}
+            return html;
+        }
+        //document.getElementById("popupTop").scrollIntoView();
+    </script>
+
+
+<a name='___top' class='dummyTopAnchor' ></a>
+
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#USAGE'>USAGE</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Parameters'>Parameters</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#area_(mandatory)'>area (mandatory)</a>
+      <li class='indexItem indexItem3'><a href='#type_(mandatory)'>type (mandatory)</a>
+      <li class='indexItem indexItem3'><a href='#content'>content</a>
+      <li class='indexItem indexItem3'><a href='#time_(optional)'>time (optional)</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Example_requests%3A'>Example requests:</a>
+    <li class='indexItem indexItem2'><a href='#Available'>Available</a>
+    <li class='indexItem indexItem2'><a href='#Radaroptions'>Radaroptions</a>
+    <li class='indexItem indexItem2'><a href='#Status'>Status</a>
+    <li class='indexItem indexItem2'><a href='#Example_requests%3A'>Example requests:</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#Changelog'>Changelog</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Deprecation_of_1.5%2C_2020-05-06'>Deprecation of 1.5, 2020-05-06</a>
+    <li class='indexItem indexItem2'><a href='#2020-02-25_Version_2.0_operational'>2020-02-25 Version 2.0 operational</a>
+    <li class='indexItem indexItem2'><a href='#2019-12-18_New_version_2.0_beta'>2019-12-18 New version 2.0 beta</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Areas'>Areas</a>
+      <li class='indexItem indexItem3'><a href='#Types'>Types</a>
+      <li class='indexItem indexItem3'><a href='#Sizes'>Sizes</a>
+      <li class='indexItem indexItem3'><a href='#Color_palette'>Color palette</a>
+      <li class='indexItem indexItem3'><a href='#Projection'>Projection</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#2019-07-01%3A_New_radar_Hafjell%2C_hack_for_missing_animations'>2019-07-01: New radar Hafjell, hack for missing animations</a>
+    <li class='indexItem indexItem2'><a href='#2019-06-19%3A_update_of_v1.5'>2019-06-19: update of v1.5</a>
+    <li class='indexItem indexItem2'><a href='#2017-01-25%3A_update_of_v1.5'>2017-01-25: update of v1.5</a>
+    <li class='indexItem indexItem2'><a href='#2016-10-31%3A_update_of_v1.5'>2016-10-31: update of v1.5</a>
+    <li class='indexItem indexItem2'><a href='#2016-10-03%3A_update_of_v1.5'>2016-10-03: update of v1.5</a>
+    <li class='indexItem indexItem2'><a href='#2015-10-28%3A_new_version_1.5'>2015-10-28: new version 1.5</a>
+    <li class='indexItem indexItem2'><a href='#2015-09-09%3A_update_of_v1.4'>2015-09-09: update of v1.4</a>
+    <li class='indexItem indexItem2'><a href='#2015-03-17%3A_update_of_v1.4'>2015-03-17: update of v1.4</a>
+    <li class='indexItem indexItem2'><a href='#2013-11-12%3A_new_version_1.4'>2013-11-12: new version 1.4</a>
+    <li class='indexItem indexItem2'><a href='#2012-03-26%3A_new_version_1.3'>2012-03-26: new version 1.3</a>
+    <li class='indexItem indexItem2'><a href='#2010-08-31%3A_new_composite_image_of_norway.'>2010-08-31: new composite image of norway.</a>
+    <li class='indexItem indexItem2'><a href='#2009-10-27%3A_version_1.2'>2009-10-27: version 1.2</a>
+    <li class='indexItem indexItem2'><a href='#2008-09-23%3A_version_1.1'>2008-09-23: version 1.1</a>
+    <li class='indexItem indexItem2'><a href='#version_1.1_%3A_2007-09-06'>version 1.1 : 2007-09-06</a>
+  </ul>
+</ul>
+</div>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME</a></h2>
+
+<p><b>Radar</b> - Radar composite images for various areas in the Nordic</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION</a></h2>
+
+<p>This service returns static images or animations for several areas,
+either for a specific time or the latest available image.
+Only one animation per area is available.
+There is no usage restrictions on any of the radar images.</p>
+
+<p>Note that specific radarsites may sometimes become unavailable.
+This is usually due to technical problems at the radarsite,
+caused by lightning/difficult weather conditions.</p>
+
+<p>Historical radar data can be found on THREDDS,
+e.g.
+via OPeNDAP: <a href="https://thredds.met.no/thredds/remotesensingarchive.html" class="podlinkurl"
+>https://thredds.met.no/thredds/remotesensingarchive.html</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="USAGE"
+>USAGE</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Parameters"
+>Parameters</a></h3>
+
+<p>Please note that there are many combinations of parameter values for which we have no data,
+so refer to <a href='https://api.met.no/weatherapi/radar/2.0/radaroptions'><code>https://api.met.no/weatherapi/radar/2.0/radaroptions</code></a> and <a href='https://api.met.no/weatherapi/radar/2.0/available'><code>https://api.met.no/weatherapi/radar/2.0/available</code></a> for an updated list of possible combinations.</p>
+
+<h4><a class='u' href='#___top' title='click to go to top of document'
+name="area_(mandatory)"
+>area (mandatory)</a></h4>
+
+<p>Area covered by the image/animation (composite) or name of the radar location (single radar).</p>
+
+<p>Values: central_norway, eastern_norway, finnmark, nordic, nordland, northern_nordland, northwestern_norway, norway, southeastern_norway, southern_nordland, southern_norway, southwestern_norway, troms, western_norway, xband</p>
+
+<h4><a class='u' href='#___top' title='click to go to top of document'
+name="type_(mandatory)"
+>type (mandatory)</a></h4>
+
+<p>Type of radar information.</p>
+
+<p>Values: 5level_reflectivity, accumulated_01h, accumulated_02h, accumulated_03h, accumulated_04h, accumulated_05h, accumulated_06h, accumulated_07h, accumulated_08h, accumulated_09h, accumulated_10h, accumulated_11h, accumulated_12h, accumulated_13h, accumulated_14h, accumulated_15h, accumulated_16h, accumulated_17h, accumulated_18h, accumulated_19h, accumulated_20h, accumulated_21h, accumulated_22h, accumulated_23h, accumulated_24h, fir_preciptype, lx_reflectivity, preciptype, reflectivity</p>
+
+<p>Areas &#34;xband&#34;,
+&#34;norway&#34; and &#34;nordic&#34; only has the following types:</p>
+
+<dl>
+<dt><a name="5level_reflectivity"
+>5level_reflectivity</a></dt>
+
+<dd>
+<dt><a name="lx_reflectivity"
+>lx_reflectivity</a></dt>
+
+<dd>
+<dt><a name="reflectivity"
+>reflectivity</a></dt>
+</dl>
+
+<p><b>Note:</b> This may also be indicated as endpoint in the URL,
+e.g.</p>
+
+<ul>
+<li><a href='https://api.met.no/weatherapi/radar/2.0/lx_reflectivity.png?area=xband'><code>https://api.met.no/weatherapi/radar/2.0/lx_reflectivity.png?area=xband</code></a></li>
+</ul>
+
+<p>The color palette for &#34;5level_reflectivity&#34; has been changed somewhat from earlier versions,
+so that the levels from &#34;Lett nedb&#248;r&#34; up to &#34;Kraftig nedb&#248;r&#34; corresponds to approximately 0.03,
+0.1,
+1.0,
+2.5 and 5.0 mm/hour.</p>
+
+<h4><a class='u' href='#___top' title='click to go to top of document'
+name="content"
+>content</a></h4>
+
+<p>Values: animation, image</p>
+
+<dl>
+<dt><a name="image_(default)"
+><code>image</code> (default)</a></dt>
+
+<dd>
+<p>Static image for a given time (defaults to latest).
+This is in PNG format,</p>
+
+<dt><a name="animation"
+>animation</a></dt>
+
+<dd>
+<p>Composite of the images from the last 3 hours in GIF format.
+<code>time</code> parameter not supported for this type.</p>
+
+<p>Animations are only available for the following types: 5level_reflectivity,
+accumulated_06h,
+fir_preciptype,
+lx_reflectivity,
+preciptype,
+reflectivity</p>
+
+<p><b>Note:</b> This may also be indicated as format in the URL,
+e.g.</p>
+
+<ul>
+<li><a href='https://api.met.no/weatherapi/radar/2.0/lx_reflectivity.gif?area=xband'><code>https://api.met.no/weatherapi/radar/2.0/lx_reflectivity.gif?area=xband</code></a></li>
+</ul>
+</dd>
+</dl>
+
+<h4><a class='u' href='#___top' title='click to go to top of document'
+name="time_(optional)"
+>time (optional)</a></h4>
+
+<p>The time the radarimage was captured in ISO 8601 format.
+If omitted,
+the latest available image will be returned.
+This parameter can not be specified if value of parameter &#39;type&#39; is set to &#39;animation&#39;.</p>
+
+<p>Value format: yyyy-mm-ddThh:mm:ssZ.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Example_requests:"
+>Example requests:</a></h3>
+
+<ul>
+<li><a href='https://api.met.no/weatherapi/radar/2.0/?type=reflectivity&#38;area=central_norway&#38;content=animation'><code>https://api.met.no/weatherapi/radar/2.0/?type=reflectivity&#38;area=central_norway&#38;content=animation</code></a></li>
+
+<li><a href='https://api.met.no/weatherapi/radar/2.0/?type=accumulated_01h&#38;area=central_norway&#38;time=2026-10-31T12:00:00Z'><code>https://api.met.no/weatherapi/radar/2.0/?type=accumulated_01h&#38;area=central_norway&#38;time=2026-10-31T12:00:00Z</code></a></li>
+
+<li><a href='https://api.met.no/weatherapi/radar/2.0/?type=lx_reflectivity&#38;area=xband'><code>https://api.met.no/weatherapi/radar/2.0/?type=lx_reflectivity&#38;area=xband</code></a></li>
+</ul>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Available"
+>Available</a></h3>
+
+<p>A list of available data may be retrieved using the &#39;available&#39; action.
+The area,
+type and content parameters can be specified to reduce the size of the list,
+which is highly recommended as the full list consists of over 3000 URLs and is very slow to generate and download.</p>
+
+<dl>
+<dt><a name="[%_productroot_%]/available"
+><a href='https://api.met.no/weatherapi/radar/2.0/available'><code>https://api.met.no/weatherapi/radar/2.0/available</code></a></a></dt>
+
+<dd>
+<dt><a name="[%_productroot_%]/available.json?type=reflectivity&#38;area=central_norway"
+><a href='https://api.met.no/weatherapi/radar/2.0/available.json?type=reflectivity&#38;area=central_norway'><code>https://api.met.no/weatherapi/radar/2.0/available.json?type=reflectivity&#38;area=central_norway</code></a></a></dt>
+
+<dd>
+<dt><a name="[%_productroot_%]/available.xml?area=xband&#38;type=lx_reflectivity&#38;content=image"
+><a href='https://api.met.no/weatherapi/radar/2.0/available.xml?area=xband&#38;type=lx_reflectivity&#38;content=image'><code>https://api.met.no/weatherapi/radar/2.0/available.xml?area=xband&#38;type=lx_reflectivity&#38;content=image</code></a></a></dt>
+
+<dd>
+<dt><a name="[%_productroot_%]/available.json?content=animation"
+><a href='https://api.met.no/weatherapi/radar/2.0/available.json?content=animation'><code>https://api.met.no/weatherapi/radar/2.0/available.json?content=animation</code></a></a></dt>
+</dl>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Radaroptions"
+>Radaroptions</a></h3>
+
+<p>This returns a list in JSON with all legal parameter values for each type:</p>
+
+<p><a href='https://api.met.no/weatherapi/radar/2.0/radaroptions'><code>https://api.met.no/weatherapi/radar/2.0/radaroptions</code></a></p>
+
+<p><b>Note: This feature is experimental,
+the values may be changed without further notice.</b></p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Status"
+>Status</a></h3>
+
+<p>Check operational status of all radars,
+returns JSON with the following fields:</p>
+
+<p><b>Note: This feature is experimental,
+new fields may be added without further notice.</b></p>
+
+<dl>
+<dt><a name="Area"
+>Area</a></dt>
+
+<dd>
+<p>Radar code</p>
+
+<dt><a name="Sitename"
+>Sitename</a></dt>
+
+<dd>
+<p>Proper name of radar site</p>
+
+<dt><a name="Stability"
+>Stability</a></dt>
+
+<dd>
+<p>Uptime in percent during last 2 hours</p>
+
+<dt><a name="Last"
+>Last</a></dt>
+
+<dd>
+<p>Time of last communication</p>
+
+<dt><a name="Products"
+>Products</a></dt>
+
+<dd>
+<p>Array of API radar products which are using this radar</p>
+
+<dt><a name="FaultCode"
+>FaultCode</a></dt>
+
+<dd>
+<p>Optional code designating type of error:</p>
+
+<dl>
+<dt><a name="PS"
+>PS</a></dt>
+
+<dd>
+<p>Power Supply</p>
+
+<dt><a name="VP"
+>VP</a></dt>
+
+<dd>
+<p>Planned maintenance</p>
+
+<dt><a name="CO"
+>CO</a></dt>
+
+<dd>
+<p>Communications error</p>
+
+<dt><a name="TE"
+>TE</a></dt>
+
+<dd>
+<p>Technical error</p>
+</dd>
+</dl>
+
+<dt><a name="DueDate"
+>DueDate</a></dt>
+
+<dd>
+<p>Optional date when radar is expected back in operation</p>
+</dd>
+</dl>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Example_requests:"
+>Example requests:</a></h3>
+
+<ul>
+<li><a href='https://api.met.no/weatherapi/radar/2.0/status'><code>https://api.met.no/weatherapi/radar/2.0/status</code></a></li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Changelog"
+>Changelog</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Deprecation_of_1.5,_2020-05-06"
+>Deprecation of 1.5,
+2020-05-06</a></h3>
+
+<p>Termination of version 1.5 has been postponed to 2020-06-01.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="2020-02-25_Version_2.0_operational"
+>2020-02-25 Version 2.0 operational</a></h3>
+
+<p>Version 1.5 is now deprecated and will be removed on May 15th.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="2019-12-18_New_version_2.0_beta"
+>2019-12-18 New version 2.0 beta</a></h3>
+
+<p>Lots of changes from the previous versions.
+Types,
+sizes,
+projection and color palette has changed,
+and the &#34;size&#34; and &#34;radarsite&#34; parameters are no longer used or has been renamed.
+All usage restrictions have been lifted.</p>
+
+<h4><a class='u' href='#___top' title='click to go to top of document'
+name="Areas"
+>Areas</a></h4>
+
+<p>The &#34;radarsite&#34; parameter has now been renamed &#34;area&#34; since we no longer offer images from single radars.</p>
+
+<h4><a class='u' href='#___top' title='click to go to top of document'
+name="Types"
+>Types</a></h4>
+
+<p>The following types have been renamed:</p>
+
+<pre>    Old name                    New name
+    -------------------------   ---------------
+    rainrate_with_phase_tma     fir_preciptype
+    reflectivity_tma            (discontinued)
+    reflectivity                5level_reflectivity
+    reflectivity_hires          reflectivity
+    rainrate_with_phase         preciptype
+    lightning                   lx_reflectivity</pre>
+
+<h4><a class='u' href='#___top' title='click to go to top of document'
+name="Sizes"
+>Sizes</a></h4>
+
+<p>Only one size of each image, the <code>size</code> parameter has been removed.</p>
+
+<h4><a class='u' href='#___top' title='click to go to top of document'
+name="Color_palette"
+>Color palette</a></h4>
+
+<p>The color palette for &#34;5level_reflectivity&#34; has been changed somewhat from earlier versions, so that the levels from &#34;Lett nedb&#248;r&#34; up to &#34;Kraftig nedb&#248;r&#34; corresponds to approximately 0.03, 0.1, 1.0, 2.5 and 5.0 mm/hour.</p>
+
+<h4><a class='u' href='#___top' title='click to go to top of document'
+name="Projection"
+>Projection</a></h4>
+
+<p>Whereas the older radar images used a polar stereographic projection, which made the images skewed in the northern regions. 2.0 uses a Lambert Conformal Conic projection to make the northerly directions more vertical, and to minimize distortion.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="2019-07-01:_New_radar_Hafjell,_hack_for_missing_animations"
+>2019-07-01: New radar Hafjell, hack for missing animations</a></h3>
+
+<p>Hafjell has been added for types lightning, reflectivity_hires and rainrate_with_phase.</p>
+
+<p>Unfortunately, due to increased server load and shorter production cycles we have not been able to re-enable production of the animations for reflectivity_hires, rainrate_with_phase and most lightning radars. As a workaround, we will be substituting reflectivity_hires and rainrate_with_phase animations with the closest matching reflectivity animation. Similarly, all lightning radarsites will now return the &#34;norway&#34; animation. None of these will appear in the available lists, and are used solely to avoid breaking existing code.</p>
+
+<p>Static images will be delivered as normal, which will <i>not</i> match the animation in content and dimensions. This means you should not use the &#34;small&#34; images as thumbnails for the animations until further notice.</p>
+
+<p>We are working on replacements for the missing lightning animations, as well as a new, improved Radar product version which should be more user-friendly.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="2019-06-19:_update_of_v1.5"
+>2019-06-19: update of v1.5</a></h3>
+
+<p>Radars now produce images every 5 minutes (instead of every 7.5).</p>
+
+<p>Animations are currently only available for reflectivity, xband and lightning (as per the documentation). The undocumented reflectivity_hires animation is now discontinued.</p>
+
+<p>The little-used sizes &#34;large&#34; and &#34;medium&#34; have been discontinued, any requests for these will return &#34;normal&#34; instead. Also, animations are now only available in &#34;normal&#34;, use a static image for thumbnails instead of &#34;small&#34;.</p>
+
+<p>For a list of allowed options, see /radaroptions (experimental).</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="2017-01-25:_update_of_v1.5"
+>2017-01-25: update of v1.5</a></h3>
+
+<p>New xband radar &#34;mobileradar&#34;</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="2016-10-31:_update_of_v1.5"
+>2016-10-31: update of v1.5</a></h3>
+
+<p>New composite east_norway available (including images from new radar hafjell)</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="2016-10-03:_update_of_v1.5"
+>2016-10-03: update of v1.5</a></h3>
+
+<p>Radar helsfyr/x-band is not available any more</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="2015-10-28:_new_version_1.5"
+>2015-10-28: new version 1.5</a></h3>
+
+<p>New size medium which are fixed to 460px. For types lightning and reflectivity the images that were delivered as size normal are moved to size medium and new images are available as size normal (unscaled).</p>
+
+<p>Version 1.4 will expire on 2016-02-15</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="2015-09-09:_update_of_v1.4"
+>2015-09-09: update of v1.4</a></h3>
+
+<p>New radar type lightning available for norway, new site helsfyr available for type xband.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="2015-03-17:_update_of_v1.4"
+>2015-03-17: update of v1.4</a></h3>
+
+<p>New radar sites &#39;nordland&#39; and &#39;trlagnordland&#39; added (radar location: Somna).</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="2013-11-12:_new_version_1.4"
+>2013-11-12: new version 1.4</a></h3>
+
+<p>Parameter width has been replaced with size. Width and size of an image or animation may vary in width and height, even within the same size value.</p>
+
+<p>Several new radar types. See documentation above.</p>
+
+<p>Version 1.3 expires at 2014-03-25.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="2012-03-26:_new_version_1.3"
+>2012-03-26: new version 1.3</a></h3>
+
+<p>Parameter type has been changed. It will now signify type of radar information. Parameter content now has same function as parameter type in version 1.2.</p>
+
+<p>Version 1.2: expires at 2012-05-15.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="2010-08-31:_new_composite_image_of_norway."
+>2010-08-31: new composite image of norway.</a></h3>
+
+<p>New parameter to radarsite: norway.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="2009-10-27:_version_1.2"
+>2009-10-27: version 1.2</a></h3>
+
+<p>New parameteres to radarsite: central_norway and western_norway. Rissa is no longer a valid radarsite.</p>
+
+<p>Version 1.1 is available until 2010-02-16</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="2008-09-23:_version_1.1"
+>2008-09-23: version 1.1</a></h3>
+
+<p>New radarsite: troms_finnmark.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="version_1.1_:_2007-09-06"
+>version 1.1 : 2007-09-06</a></h3>
+
+<p>R&#248;st is no longer valid as radarsite. New radarsite is nordland_troms</p>
+
+  </div>
+
+  <div class="tab-pane fade swagger-section" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+
+
+<script type="text/javascript">
+  $(function () {
+    var url = window.location.search.match(/url=([^&]+)/);
+    if (url && url.length > 1) {
+      url = decodeURIComponent(url[1]);
+    } else {
+      url = "https://api.met.no/weatherapi/radar/2.0/swagger";
+    }
+    window.swaggerUi = new SwaggerUi({
+      url: url,
+      dom_id: "swagger-ui-container",
+      supportedSubmitMethods: ['get', 'post', 'put', 'delete', 'patch'],
+      onComplete: function(swaggerApi, swaggerUi){
+        if(typeof initOAuth == "function") {
+          /*
+          initOAuth({
+            clientId: "your-client-id",
+            realm: "your-realms",
+            appName: "your-app-name"
+          });
+          */
+        }
+
+        $('pre code').each(function(i, e) {
+          hljs.highlightBlock(e)
+        });
+
+        //addApiKeyAuthorization();
+      },
+      onFailure: function(data) {
+        log("Unable to Load SwaggerUI");
+      },
+      docExpansion: "list",
+      sorter : "alpha",
+      validatorUrl: null
+    });
+
+
+    window.swaggerUi.load();
+
+    function log() {
+      if ('console' in window) {
+        console.log.apply(console, arguments);
+      }
+    }
+  });
+</script>
+
+<div id="message-bar" class="swagger-ui-wrap">&nbsp;</div>
+<div id="swagger-ui-container" class="swagger-ui-wrap"></div>
+
+  </div><!--swagger ui-->
+
+  <div class="tab-pane fade pod documentation" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
+      <h2>Changelog</h2>
+      <script type="text/javascript">
+        $(window).load(function(){
+            $('#ex1-tabs-1 .indexgroup ul.indexList1 > li:last-of-type').remove();
+            var log_elm = $('#ex1-tabs-1 > h2:last-of-type');
+            log_elm.nextAll().each(function () {
+                $(this).appendTo("#ex1-tabs-3");
+            });
+            log_elm.remove();
+        });
+      </script>
+  </div>
+
+  <div class="tab-pane fade documentation" id="ex1-tabs-4" role="tabpanel" aria-labelledby="ex1-tab-4">
+
+  </div>
+
+</div>
+<!-- Tabs content -->
+
+
+    </div>
+  </div>
+</div>
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <footer class="text-lg-start met-footer">
+    <div id="copyright" class="text-center p-3">
+      © 2022 Copyright:
+      <a class="text-light" href="https://met.no/">MET Norway</a>
+    </div>
+  </footer>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="/js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript" src="/js/script.js"></script>
+</body>
+</html>

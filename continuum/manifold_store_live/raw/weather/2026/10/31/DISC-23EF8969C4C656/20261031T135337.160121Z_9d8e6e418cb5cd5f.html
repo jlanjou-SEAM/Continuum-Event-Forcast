@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<!--Sanitize URL string to prevent URL injection-->
+
+<html lang="en">
+
+<head>
+    <title>NWS IT Status Dashboard</title>
+    <meta http-equiv="refresh" content="300" >
+<link href="https://www.nco.ncep.noaa.gov/css/nco_style_home.css" rel="stylesheet" type="text/css" media="all">
+<style>
+<!-- move to separate css folder after testing -->
+#menu {
+        background: #CCDFF0;
+        height: 38px;
+        padding-left: 18px;
+        border-radius: 0px;
+}
+#menu ul, #menu li {
+        margin: 0 auto;
+        padding: 0;
+        list-style: none
+}
+#menu ul {
+        width: 100%;
+        text-align: left;
+}
+#menu li {
+        display: inline-block;
+        position: relative;
+}
+#menu a {
+        display: block;
+        line-height: 38px;
+        padding: 0 4px;
+        text-decoration: none;
+        color: #1B5D8F;
+        font-size: 15px;
+}
+#menu a.dropdown-arrow:after {
+        content: "\25BE";
+        margin-left: 5px;
+}
+#menu li a:hover {
+        color: #FAA716;
+        background: #1B5D8F;
+}
+#menu input {
+        display: none;
+        margin: 0;
+        padding: 0;
+        height: 38px;
+        width: 100%;
+        opacity: 0;
+        cursor: pointer
+}
+#menu label {
+        display: none;
+        line-height: 38px;
+        text-align: center;
+        position: absolute;
+        left: 35px
+}
+}
+#menu label:before {
+        font-size: 1.6em;
+        color: #1B5D8F;
+        content: "\2261";
+        margin-left: 20px;
+}
+#menu ul.sub-menus{
+        height: auto;
+        overflow: hidden;
+        width: 170px;
+        background: #EDEDED;
+        position: absolute;
+        z-index: 99;
+        display: none;
+}
+#menu ul.sub-menus li {
+        display: block;
+        text-align: left;
+        width: 100%;
+}
+#menu ul.sub-menus a {
+        color: #1B5D8F;
+        font-size: 10px;
+}
+#menu li:hover ul.sub-menus {
+        display: block
+}
+#menu ul.sub-menus a:hover{
+        background: #F2F2F2;
+        color: #444444;
+}
+@media screen and (max-width: 900px){
+        #menu {position:relative}
+        #menu ul {background:#EDEDED;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none;text-align:left;}
+        #menu ul.sub-menus {width:100%;position:static;}
+        #menu ul.sub-menus a {padding-left:30px;}
+        #menu li {display:block;float:none;width:auto;}
+        #menu input, #menu label {position:absolute;top:0;left:0;display:block}
+        #menu input {z-index:4}
+        #menu input:checked + label {color:#1B5D8F}
+        #menu input:checked + label:before {content:"\00d7"}
+        #menu input:checked ~ ul {display:block}
+}
+<!-- end of css-->
+</style>
+<!-- start javascript move to js directory when done testing -->
+<script>
+function updatemenu() {
+  if (document.getElementById('responsive-menu').checked == true) {
+    document.getElementById('menu').style.borderBottomRightRadius = '0';
+    document.getElementById('menu').style.borderBottomLeftRadius = '0';
+  }else{
+    document.getElementById('menu').style.borderRadius = '0px';
+  }
+}
+</script>
+
+<!-- Analytics - DAP-->
+      <script async type="text/javascript" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NOAA&pga4=G-3FGE2SCD1B"></script>
+
+
+</head>
+<body>
+<header style="background-color:#0077b3; font-family: Candara, Arial, Helvetica, sans-serif; font-size:120%; color:white; vertical-align:middle; margin: 0; padding: 0; border-width: 0;">
+<img src="https://www.nco.ncep.noaa.gov/images/nws_logo.png" style="vertical-align:middle; padding: 2px 2px 2px 2px; float: left" alt="NWS" width="40" height="40"><b><a href="https://www.nco.ncep.noaa.gov/" style="text-decoration:none;"><font color="white" valign="middle">&nbsp;Information Technology Status<br><small><span style="font-weight:normal">&nbsp;NWS Central Operations</span></small></font></a></b>
+</header>
+<!--
+<div style="font-family: Times, sans-serif; font-size: 1.2em; letter-spacing: 0px, word-spacing: 0px; line-height: 1.15em; padding-bottom: .5em; text-align: left; color:#0077b3;">
+<br><b>
+&nbsp;&nbsp;&nbsp;NWS Information Technology Status<br>
+</b>
+</div>
+-->
+
+
+
+<div>
+
+<!--PHP file that gathers CWD data -->
+
+<small>
+<div class="row-headline" style="border-bottom: 0px solid white"><div class="col-headline1">Latest News Headline: <a href="https://www.nco.ncep.noaa.gov/status/messages/" title="click for more info">iNWS Text Message - Restored</a><br></div></div>
+</small>
+
+</div>
+      <div style="font-family: Times, sans-serif; font-size: .9em; letter-spacing: 0px; word-spacing: 0px; line-height: 1.15em; padding-bottom: .5em; text-align: center;">
+<br><b>
+<span style='background-color: #DDF9FF'>&nbsp;Overview&nbsp;</span>&nbsp;|
+<a href='?view=idp' style='text-decoration:none'>&nbsp;IDP Apps&nbsp;</a>&nbsp;|
+<a href='?view=nwstg' style='text-decoration:none'>&nbsp;NWSTG Apps&nbsp;</a>&nbsp;|
+<a href='?view=cloud' style='text-decoration:none'>&nbsp;Cloud Apps&nbsp;</a>&nbsp;|
+<a href='?view=wcoss' style='text-decoration:none'>&nbsp;WCOSS Models&nbsp;</a>&nbsp;|
+<a href='?view=data' style='text-decoration:none'>&nbsp;Data&nbsp;</a>&nbsp;|
+<a href='?view=sites' style='text-decoration:none'>&nbsp;Infrastructure & Networks&nbsp;</a>&nbsp;|
+<a href='?view=upgrades' style='text-decoration:none'>&nbsp;Upgrades&nbsp;</a>&nbsp;|
+<a href='?view=non-op' style='text-decoration:none'>&nbsp;Other Apps&nbsp;</a></b><br><br><p align="center">
+<iframe width='1320px' height='1000px' align="center" seamless frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRQEGQCbdqNIF1y0Ngm8W_ZsdeK8ZyjcsG0WNGhykOk6iTRzrxd-FwcoD-Jleg43Alh4Cp4_arvuRd1/pubhtml?gid=548395335&single=true&widget=false&headers=false"></iframe></p>
+
+
+      </div>
+      </p>
+      <div style="text-align:center"; font-family: Times New Roman, Times, serif;">
+<i>NOAA Access Only: User must be logged into NOAA GSuite in browser and accept cookies above.</i><br><br>
+      </div>
+<footer style="text-align:center; font-size: .8em; font-family: Candara, Arial, Helvetica, sans-serif; line-height: 1.15em; padding-bottom: .5em;">
+<br><a href="https://www.nco.ncep.noaa.gov/">NWS Central Operations</a> | 5830 University Research Ct | Riverdale Park MD | <a href="https://sites.google.com/noaa.gov/nws-nco/nco-organizational-cha
+rt?authuser=0">Contact Us</a>
+</footer>
+</body>
+</html>
+

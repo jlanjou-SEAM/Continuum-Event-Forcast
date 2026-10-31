@@ -1,0 +1,3142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <base href="/app/products/portal/" />
+    <script>
+      window.BASE_PATH = document
+        .querySelector("base")
+        .getAttribute("href")
+        .replace(/\/$/, "");
+    </script>
+    <meta charset="UTF-8" />
+    <title>NSF NGF Seismology Data Products</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+    <!-- Local assets carry ?v=YYYYMMDD so browsers and CloudFront fetch a
+         changed file instead of a cached copy: bump it on the tag of each
+         file you change (seismo-event.js matches mt_event.html's tag). -->
+    <link rel="stylesheet" href="static/css/master_products.css?v=20261023" />
+    <link rel="icon" href="static/images/ES-32x32.png" type="image/png" />
+    <style>
+      /* "more…" toggle for the NSF NGF Seismology Data Products intro */
+      .dp-more-toggle {
+        border: 0;
+        background: none;
+        padding: 0;
+        margin-left: 0.15rem;
+        font: inherit;
+        color: #2b6cb0;
+        cursor: pointer;
+        text-decoration: underline;
+        white-space: nowrap;
+      }
+      .dp-more-toggle:hover {
+        color: #1a4a80;
+      }
+      .dp-intro-more[hidden] {
+        display: none;
+      }
+
+      /* Section heading: one line of in-page nav with the current
+         section shown (bold, unlinked) in its place among the others,
+         plus an optional "Updates" toggle in the lower-left corner.
+         Three-column grid (1fr | auto | 1fr) keeps the nav centred
+         whether or not a section has an Updates toggle, and stops the
+         toggle ever overlapping the nav. */
+      .product-section-heading {
+        scroll-margin-top: 1rem;
+      }
+      .product-section-heading-inner {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: end;
+        column-gap: 0.75rem;
+        width: 100%;
+      }
+      /* ---- Section menu (#sectionNav) ---- */
+      /* The menu sits in an ordinary (non-sticky) table header cell: Safari
+         squeezes the content of sticky table cells, which collapsed the
+         menu on iPhones. Following the page is done by a pinned copy
+         (.section-nav--fixed, below). */
+      .product-grid td.section-nav-cell {
+        padding: 0.35rem 0 0.2rem;
+        border: 0;
+        background: transparent;
+        font-weight: normal;
+        text-align: left;
+      }
+      /* Flexbox, not grid: Safari can size a grid's flexible columns to
+         nothing inside a table header cell, piling the items on top of
+         each other. Four equal items in one row. */
+      .section-nav {
+        display: flex;
+        /* Wraps (stacks) rather than overlapping if ever squeezed. */
+        flex-wrap: wrap;
+        width: 100%;
+        box-sizing: border-box;
+        gap: 0.5rem;
+        margin: 0;
+        padding: 0.45rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        transition: padding 0.15s ease, box-shadow 0.15s ease;
+      }
+      .section-nav-item {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+        min-width: 9rem;
+        padding: 0.45rem 0.7rem;
+        border-left: 3px solid #cbd5e0;
+        border-radius: 6px;
+        color: #2d3748;
+        text-decoration: none;
+        transition: background 0.15s ease, border-color 0.15s ease;
+      }
+      .section-nav-item:hover {
+        background: #f7fafc;
+        border-left-color: #90cdf4;
+      }
+      .section-nav-item:focus-visible {
+        outline: 2px solid #2b6cb0;
+        outline-offset: 1px;
+      }
+      .section-nav-item.is-current {
+        background: #ebf4fb;
+        border-left-color: #2b6cb0;
+      }
+      .section-nav-name {
+        font-weight: 700;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .section-nav-item.is-current .section-nav-name {
+        color: #2b6cb0;
+      }
+      .section-nav-count:not(:empty) {
+        margin-left: 0.35rem;
+        padding: 0 0.4rem;
+        border-radius: 999px;
+        background: #edf2f7;
+        color: #5a6577;
+        font-size: 0.75em;
+        font-weight: 600;
+        vertical-align: 0.1em;
+      }
+      .section-nav-desc {
+        font-size: 0.78rem;
+        line-height: 1.3;
+        color: #5a6577;
+      }
+      /* Pinned copy shown at the top of the window once the menu in the
+         table has scrolled away (initSectionNav positions it over the
+         table's width). */
+      .section-nav--fixed {
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        display: none;
+      }
+      .section-nav--fixed.is-visible {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+      }
+      .section-nav--fixed .section-nav-item {
+        min-width: 0;
+      }
+      /* Stuck to the top while scrolling: names only, slimmer. */
+      .section-nav.is-stuck {
+        padding: 0.25rem 0.45rem;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+      .section-nav.is-stuck .section-nav-desc {
+        display: none;
+      }
+      .section-nav.is-stuck .section-nav-item {
+        padding: 0.25rem 0.7rem;
+      }
+      /* Native #anchor jumps (links from elsewhere) clear the sticky menu. */
+      tr[id^="section-"] {
+        scroll-margin-top: 3.5rem;
+      }
+      @media (max-width: 900px) {
+        /* Two per row with descriptions... */
+        .section-nav {
+          flex-wrap: wrap;
+        }
+        .section-nav-item {
+          flex: 1 1 calc(50% - 0.5rem);
+        }
+        /* ...one swipeable row of names once stuck. */
+        .section-nav.is-stuck {
+          flex-wrap: nowrap;
+          overflow-x: auto;
+        }
+        .section-nav.is-stuck .section-nav-item {
+          flex: 0 0 auto;
+        }
+      }
+      @media (max-width: 640px) {
+        /* Phones: one swipeable row of names. */
+        .section-nav {
+          flex-wrap: nowrap;
+          overflow-x: auto;
+        }
+        .section-nav-item {
+          flex: 0 0 auto;
+        }
+        .section-nav-desc {
+          display: none;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .section-nav,
+        .section-nav-item {
+          transition: none;
+        }
+      }
+      /* Section title, centred in every section heading. */
+      .section-title {
+        grid-column: 2;
+        grid-row: 1;
+        margin: 0;
+        text-align: center;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: inherit;
+        white-space: nowrap;
+      }
+      /* Recent Seismicity heading: clock and freshness on the right. */
+      .product-section-heading-inner > .live-seismicity-clock {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: end;
+        align-self: center;
+        text-align: right;
+        font-weight: normal;
+      }
+      .section-updates-toggle {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: start;
+        align-self: end;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: none;
+        color: inherit;
+        font: inherit;
+        font-size: 0.78rem;
+        font-weight: 600;
+        opacity: 0.85;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .section-updates-toggle::before {
+        content: "\25B8\00A0"; /* ▸ */
+      }
+      .section-updates-toggle[aria-expanded="true"]::before {
+        content: "\25BE\00A0"; /* ▾ */
+      }
+      .section-updates-toggle:hover,
+      .section-updates-toggle:focus-visible {
+        opacity: 1;
+        text-decoration: underline;
+      }
+      @media (max-width: 640px) {
+        .product-section-heading-inner {
+          grid-template-columns: 1fr;
+          row-gap: 0.2rem;
+        }
+        .section-title {
+          grid-column: 1;
+          white-space: normal;
+        }
+        .product-section-heading-inner > .live-seismicity-clock {
+          grid-column: 1;
+          grid-row: 2;
+          justify-self: center;
+          text-align: center;
+        }
+        .section-updates-toggle {
+          grid-row: 2;
+        }
+      }
+
+      /* The Updates <details> keeps its own row under the heading (so
+         loadWhatsNew()/openWhatsNewFromHash() work unchanged), but its
+         <summary> is replaced by the heading's toggle button and the
+         whole row collapses to nothing while closed. */
+      .section-updates-row .panel--updates > summary.panel-header {
+        display: none;
+      }
+      .section-updates-row:has(.panel--updates:not([open])) {
+        display: none;
+      }
+
+      /* --- Thumbnail / body column fix (was overlapping the description) --- */
+      .panel-inner {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+      }
+      .panel-inner .col-thumb {
+        width: 120px;
+      }
+      .panel-inner td {
+        vertical-align: top;
+        padding: 0.35rem 0.5rem;
+      }
+      .panel-inner .thumb img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 100px;
+        object-fit: contain;
+      }
+      @media (max-width: 640px) {
+        .panel-inner .col-thumb {
+          width: 78px;
+        }
+      }
+      /* master_products.css pins logos at a fixed 120px
+         (.panel-inner td.thumb img), which is more specific than the
+         rule above and wider than the thumb column once the cell's
+         padding is taken out - and much wider than the 78px column on
+         phones - so the logos spilled over the description and links.
+         Same selector here (later in the cascade) lets them shrink to
+         fit their column instead. */
+      .panel-inner td.thumb {
+        padding: 0.35rem 0.5rem 0.35rem 0.35rem;
+      }
+      .panel-inner td.thumb img {
+        width: 100%;
+        max-width: 120px;
+        height: auto;
+        max-height: 100px;
+        object-fit: contain;
+      }
+
+      /* Product cards: keep wrapped titles left-aligned (master CSS
+         centers .panel-header, which made two-line titles like GMV and
+         SWRP sit centered while one-line titles sit left), and let the
+         badge drop under the title when there isn't room beside it. */
+      .product-grid .panel-header {
+        text-align: left;
+        flex-wrap: wrap;
+        row-gap: 0.3rem;
+      }
+      .product-grid .panel-header-link {
+        flex: 1 1 12rem;
+        min-width: 0;
+      }
+
+      /* The global zebra striping (tr:nth-child(even)) was painting a
+         grey band behind every other row of product cards. */
+      .product-grid > tbody > tr {
+        background: transparent;
+      }
+
+      /* Card body text: wrap at word boundaries, not mid-word, and keep
+         each link (with its GitHub pill) on one line so links like
+         "Product information" don't split across lines. */
+      .product-grid .panel-inner td {
+        overflow-wrap: break-word;
+        word-break: normal;
+      }
+      .product-grid .panel-link {
+        white-space: nowrap;
+      }
+
+      /* Narrow windows: two columns of cards leave too little room for
+         the text beside each logo, so stack the cards a bit earlier
+         than master_products.css's 800px breakpoint. */
+      @media (max-width: 1000px) {
+        .product-grid,
+        .product-grid thead,
+        .product-grid th,
+        .product-grid tbody,
+        .product-grid tr,
+        .product-grid td,
+        .product-grid td:first-child {
+          /* td:first-child is listed explicitly to beat master CSS's
+             26px first-column width (meant for a different table),
+             which only kicks in once these cells stop being a table
+             and would otherwise squeeze every left-hand card to a
+             sliver. */
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+        }
+        .product-grid td:empty {
+          display: none;
+        }
+        .product-grid > tbody > tr > td + td {
+          margin-top: 12px;
+        }
+        /* The rule above (and master CSS's own 800px version of it)
+           also matches the small logo|text table inside each card,
+           which collapsed the text into a narrow strip. Put that inner
+           table back to a normal table. */
+        .product-grid .panel-inner {
+          display: table;
+          width: 100%;
+        }
+        .product-grid .panel-inner tbody {
+          display: table-row-group;
+        }
+        .product-grid .panel-inner tr {
+          display: table-row;
+        }
+        .product-grid .panel-inner td {
+          display: table-cell;
+          width: auto;
+          margin: 0;
+        }
+      }
+
+      /* Map/chart legends ran off the right edge on phones as one
+         unbroken row; let their items wrap. */
+      .recent-events-legend,
+      .activity-sparkline-legend,
+      .activity-heatmap-legend {
+        flex-wrap: wrap;
+        row-gap: 0.2rem;
+        max-width: 100%;
+      }
+      @media (max-width: 640px) {
+        .recent-events-legend {
+          display: flex;
+          margin: 0.25rem 0 0;
+        }
+      }
+
+      /* Phones: put the logo above the text so the description gets the
+         card's full width. */
+      @media (max-width: 480px) {
+        .product-grid .panel-inner:not(.whats-new-item),
+        .product-grid .panel-inner:not(.whats-new-item) tbody,
+        .product-grid .panel-inner:not(.whats-new-item) tr,
+        .product-grid .panel-inner:not(.whats-new-item) td {
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+        }
+        .product-grid .panel-inner:not(.whats-new-item) colgroup {
+          display: none;
+        }
+        .product-grid .panel-inner td.thumb img {
+          width: auto;
+          max-width: 120px;
+          max-height: 80px;
+          margin: 0.25rem auto 0;
+        }
+        .product-grid .panel-inner:not(.whats-new-item) td.thumb {
+          padding-bottom: 0;
+        }
+        .product-grid .panel-inner:not(.whats-new-item) td.thumb a {
+          display: block;
+        }
+        .product-grid .panel-inner:not(.whats-new-item) td + td > p:first-child {
+          margin-top: 0.5rem;
+        }
+      }
+
+      /* --- Magnitude / cadence badge in the panel header --- */
+      .panel-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+      }
+      .panel-badge {
+        flex: 0 0 auto;
+        font-size: 0.7rem;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: 0.02em;
+        padding: 0.22rem 0.45rem;
+        border-radius: 999px;
+        background: #edf2f7;
+        color: #2d3748;
+        border: 1px solid #cbd5e0;
+        white-space: nowrap;
+      }
+
+      /* --- "What's New" featured product/feature spotlight (see
+         static/json/whats-new.json). Collapsible (<details>), closed by
+         default - see whatsNewSkeletonHtml(). --- */
+      .panel--featured {
+        border-left: 4px solid #dd8b1f;
+        background: #fffaf0;
+      }
+      .panel--featured > summary.panel-header {
+        display: list-item;
+        text-align: left;
+        cursor: pointer;
+      }
+      .panel--featured > summary.panel-header::marker {
+        color: #4a5568;
+      }
+      .panel--featured > summary.panel-header .panel-badge {
+        float: right;
+      }
+      .panel--featured .panel-header {
+        background: #fdf1dc;
+      }
+      /* "> Updates" variant: the same collapsible <details>/<summary>
+         mechanism (and the same native disclosure triangle via
+         ::marker) as the ordinary .panel--featured card above, but
+         reduced to a single, unobtrusive toggle line rather than a
+         bordered/tinted card - this sits directly under each section's
+         own heading row now (see renderProductsGrid()), so it shouldn't
+         compete visually with that heading or with the product cards
+         below it. */
+      .panel--updates {
+        border: none;
+        background: transparent;
+        margin: 0 0 0.4rem;
+      }
+      .panel--updates > summary.panel-header {
+        display: list-item;
+        list-style-position: inside;
+        justify-content: flex-start;
+        background: none;
+        padding: 0.1rem 0.3rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #2b6cb0;
+      }
+      .panel--updates > summary.panel-header:hover {
+        text-decoration: underline;
+      }
+      .panel--updates .panel-header-link {
+        color: inherit;
+        font: inherit;
+      }
+      .panel--updates .panel-content {
+        padding: 0.4rem 0.3rem 0.6rem;
+      }
+      .whats-new-loading {
+        margin: 0.5rem 0.6rem;
+        color: #718096;
+        font-size: 0.85rem;
+      }
+      .whats-new-thumb-col {
+        width: 42%;
+      }
+      .whats-new-thumb img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        border-radius: 3px;
+      }
+      .whats-new-title {
+        font-weight: 700;
+        margin: 0 0 0.15rem;
+      }
+      .whats-new-examples {
+        display: block;
+        margin-top: 0.3rem;
+      }
+      .whats-new-full {
+        margin: 0.5rem 0 0;
+        font-size: 0.85rem;
+        color: #4a5568;
+      }
+      /* Scrollable list of entries inside an open What's New panel (see
+         loadWhatsNew()/whatsNewItemHtml()) - newest first, each entry
+         its own thumb+body row rather than the panel only ever holding
+         one entry. Capped height + overflow so a growing history of
+         entries doesn't push the rest of the product grid down. */
+      /* The base .panel/.panel-content styling (from master_products.css)
+         centers text for the ordinary product cards' card-style layout;
+         that reads fine for a short caption under a logo, but makes the
+         longer What's New entries (title, summary, multi-sentence
+         details) hard to read. Override to left-align everything in an
+         open What's New panel. */
+      .panel--featured .panel-content {
+        text-align: left;
+      }
+      /* Belt-and-suspenders: also target the item/table cells directly,
+         in case master_products.css sets text-align on .panel-inner td
+         itself (which would otherwise out-specificity the ancestor rule
+         above). */
+      .whats-new-controls,
+      .whats-new-item,
+      .whats-new-item td {
+        text-align: left;
+      }
+      /* Entries WITH an image render as <table class="panel-inner"> and
+         so pick up master_products.css's table-cell centering, which is
+         more specific than the rule above (entries without an image are
+         a plain <div> and never matched it). Force left alignment on the
+         cell and everything inside it. */
+      .panel .panel-content table.whats-new-item td,
+      .panel .panel-content table.whats-new-item td * {
+        text-align: left !important;
+      }
+      .whats-new-list {
+        max-height: 420px;
+        overflow-y: auto;
+        padding-right: 0.3rem;
+      }
+      .whats-new-item + .whats-new-item {
+        margin-top: 0.75rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid #edf2f7;
+      }
+      /* Entries with no thumbnail (e.g. merged news-feed items) use this
+         directly as the panel-inner container instead of a <table>, so
+         it needs the same padding the table's <td> normally provides. */
+      .whats-new-item--noimg {
+        padding: 0.35rem 0.5rem;
+      }
+      /* item.summary/item.details may already contain their own <p>
+         tags (raw HTML from a merged news feed) - collapse the extra
+         top/bottom margins that would otherwise stack with this
+         container's own spacing. */
+      .whats-new-summary p,
+      .whats-new-full p {
+        margin: 0 0 0.5rem;
+      }
+      .whats-new-summary p:last-child,
+      .whats-new-full p:last-child {
+        margin-bottom: 0;
+      }
+      /* Year filter row, above the scrollable entry list. */
+      .whats-new-controls {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin: 0 0 0.5rem;
+        padding: 0 0.2rem;
+      }
+      .whats-new-year-label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        color: #718096;
+      }
+      .whats-new-year-select {
+        font: inherit;
+        font-size: 0.8rem;
+        color: #2d3748;
+        background: #fff;
+        border: 1px solid #cbd5e0;
+        border-radius: 4px;
+        padding: 0.15rem 0.4rem;
+        cursor: pointer;
+      }
+      .whats-new-year-select:hover {
+        border-color: #2b6cb0;
+      }
+      /* Per-entry date, inline next to that entry's own title - replaces
+         the single "Effective <date>" badge that used to sit on the
+         panel's collapsed <summary>, which only made sense when a panel
+         held exactly one entry. */
+      .whats-new-date {
+        display: inline-block;
+        margin-left: 0.4rem;
+        font-size: 0.7rem;
+        font-weight: 400;
+        color: #718096;
+        white-space: nowrap;
+        vertical-align: middle;
+      }
+      @media (max-width: 640px) {
+        .whats-new-thumb-col {
+          width: 78px;
+        }
+        .whats-new-list {
+          max-height: 60vh;
+        }
+      }
+
+      /* --- Recent Events strip --- */
+      .recent-events {
+        margin: 0.35rem 0 0.75rem;
+        text-align: left;
+      }
+      .recent-events-head {
+        display: list-item;
+        cursor: pointer;
+        margin-bottom: 0.35rem;
+        text-align: left;
+      }
+      .recent-events-head::marker {
+        color: #4a5568;
+      }
+      .recent-events-head h4 {
+        display: inline;
+        margin: 0;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #4a5568;
+      }
+      .recent-events-head a {
+        font-size: 0.78rem;
+      }
+      .recent-events-legend {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin-left: 0.6rem;
+        font-size: 0.72rem;
+        font-weight: 400;
+        text-transform: none;
+        letter-spacing: normal;
+        color: #718096;
+        vertical-align: middle;
+      }
+      .legend-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        white-space: nowrap;
+      }
+      .legend-dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        flex: 0 0 auto;
+      }
+      /* Product status is carried by the marker outline on the event map
+         (fill encodes depth): solid = products available, dashed = none
+         yet. */
+      .legend-dot--products,
+      .legend-dot--none {
+        width: 9px;
+        height: 9px;
+        box-sizing: border-box;
+        background: #e2e8f0;
+      }
+      .legend-dot--products {
+        border: 1.5px solid #2d3748;
+      }
+      .legend-dot--none {
+        border: 1.5px dashed #2d3748;
+      }
+      /* Density color scale for the epicenter heatmap legend; stops match
+         the L.heatLayer gradient in renderActivityHeatmap(). */
+      .heatmap-legend-scale {
+        display: inline-block;
+        width: 28px;
+        height: 6px;
+        border-radius: 2px;
+        background: linear-gradient(
+          to right,
+          #3182ce,
+          #63b3ed,
+          #ffd84d,
+          #dd6b20,
+          #c53030
+        );
+      }
+      /* Event map key: two small Leaflet controls tucked into the map's
+         quiet bottom corners (see addEventMapKey). */
+      .leaflet-control.event-map-key {
+        margin: 0 0 3px 3px;
+        pointer-events: none;
+        color: #4a5568;
+        font-size: 0.58rem;
+        line-height: 1.2;
+      }
+      .leaflet-right .leaflet-control.event-map-key {
+        margin: 0 3px 3px 0;
+      }
+      /* Size scale: outlines only, no background, so events under it stay
+         visible. */
+      .event-map-key--size svg {
+        display: block;
+      }
+      .event-map-key-ring {
+        fill: rgba(255, 255, 255, 0.25);
+        stroke: #4a5568;
+        stroke-width: 0.8;
+      }
+      .event-map-key--size svg text {
+        font-size: 7px;
+        fill: #2d3748;
+        paint-order: stroke;
+        stroke: rgba(255, 255, 255, 0.8);
+        stroke-width: 1.5px;
+      }
+      /* Depth: one compact line along the bottom edge. */
+      .event-map-key--depth {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 1px 5px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 3px;
+        white-space: nowrap;
+      }
+      .event-map-key--depth span {
+        display: inline-flex;
+        align-items: center;
+        gap: 2px;
+      }
+      .event-map-key--depth i {
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        border: 0.5px solid rgba(0, 0, 0, 0.35);
+      }
+      .event-map-key-title {
+        font-weight: 600;
+      }
+      .legend-dot--background {
+        width: 5px;
+        height: 5px;
+        background: #b0b8c4;
+      }
+      /* M7+ key: the same ringed purple diamond used on the event chips
+         and the daily chart (not a circle - map circles encode depth and
+         product status). */
+      .legend-dot--major {
+        width: 11px;
+        height: 11px;
+        border: 0;
+        border-radius: 0;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 0.8 L19.2 10 L10 19.2 L0.8 10 Z' fill='%23fff' stroke='%236b21a8' stroke-width='1.3'/%3E%3Cpath d='M10 4 L16 10 L10 16 L4 10 Z' fill='%236b21a8'/%3E%3C/svg%3E")
+          center / contain no-repeat;
+      }
+      /* Blue star swatch/glyph: same shape (and color) used for the map
+         marker showing where the currently-displayed Event Plots images
+         (station map + wavefield) are from - blue to match the blue star
+         the station-map image itself already uses for the event
+         location, rather than introducing a second color for the same
+         thing. A star instead of a dot so it doesn't read as just
+         another magnitude-colored circle. */
+      .legend-star {
+        display: inline-block;
+        line-height: 1;
+        font-size: 0.9rem;
+        color: #2b6cb0;
+      }
+      .recent-events-body {
+        text-align: left;
+        /* Shared height of every product tile and the seismicity map. */
+        --recent-events-row-h: 190px;
+        /* Same 280px as .activity-heatmap-wrap, so the seismicity map
+           matches the epicenter-density heatmap's width above it. */
+        --map-col-w: 280px;
+        /* Match .activity-summary-body's border + horizontal padding, so
+           the right edge lines up with the heatmap's right edge above. */
+        padding: 0 calc(0.6rem + 1px);
+      }
+      /* Stacked layout (the default, used whenever the side-by-side
+         layout below doesn't fit):
+           1. the event chips, full width, in two columns (newest first,
+              down the left column then the right);
+           2. the Data / Focal mechanisms attribution line;
+           3. one row: the product tiles, each with its caption directly
+              under it (.recent-events-slot), in a strip that scrolls
+              sideways when they don't all fit (.recent-events-strip),
+              then the seismicity map, fixed at the heatmap's width on
+              the right edge.
+         Tiles keep one fixed height (--recent-events-row-h); a narrow
+         window scrolls the strip instead of shrinking or wrapping them.
+         Optional tiles (GMV 3D, Aftershocks, Back-projection) only take
+         room when their product exists for the event shown: their slot
+         is hidden until the matching .has-* class is set on
+         .recent-events-columns. */
+      .recent-events-columns {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+      .recent-events-list {
+        min-width: 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* Half the visible chips per column, newest first down the left
+           column; --chip-rows is set by applyRecentEventsExpanded(). */
+        grid-template-rows: repeat(var(--chip-rows, 3), auto);
+        grid-auto-flow: column;
+        grid-auto-rows: min-content;
+        column-gap: 0.6rem;
+        row-gap: 0.25rem;
+      }
+      .recent-events-tiles {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        gap: 0.6rem;
+        margin-top: 0.2rem;
+      }
+      /* The scrolling part of the row. When the tiles fit, their gaps
+         widen evenly up to a cap (spreadStripTiles); when they don't, it
+         scrolls. */
+      .recent-events-strip-wrap {
+        position: relative;
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+      .recent-events-strip {
+        display: flex;
+        /* Spare room goes into the gaps (spreadStripTiles), up to a cap. */
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.6rem;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        /* Tiles appear over a second or two after a selection; don't let
+           the browser keep a later tile in view as earlier ones appear. */
+        overflow-anchor: none;
+        scroll-snap-type: x proximity;
+        scroll-behavior: smooth;
+        /* Room for the scrollbar under the captions. */
+        padding-bottom: 0.4rem;
+        scrollbar-width: thin;
+      }
+      .recent-events-strip:focus-visible {
+        outline: 2px solid #2b6cb0;
+        outline-offset: 2px;
+        border-radius: 4px;
+      }
+      .recent-events-strip > .recent-events-slot {
+        scroll-snap-align: start;
+      }
+      /* Fade the edge(s) where more tiles are hidden. */
+      .recent-events-strip-wrap.can-scroll-right .recent-events-strip {
+        -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent);
+        mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent);
+      }
+      .recent-events-strip-wrap.can-scroll-left .recent-events-strip {
+        -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 2.5rem), transparent);
+        mask-image: linear-gradient(to left, #000 calc(100% - 2.5rem), transparent);
+      }
+      .recent-events-strip-wrap.can-scroll-left.can-scroll-right .recent-events-strip {
+        -webkit-mask-image: linear-gradient(
+          to right,
+          transparent,
+          #000 2.5rem,
+          #000 calc(100% - 2.5rem),
+          transparent
+        );
+        mask-image: linear-gradient(
+          to right,
+          transparent,
+          #000 2.5rem,
+          #000 calc(100% - 2.5rem),
+          transparent
+        );
+      }
+      /* Previous / next buttons, shown only on a side with hidden tiles,
+         centered on the images (not the captions). */
+      /* Previous / next buttons: slim tabs in a gutter kept free at each
+         end of the strip while it scrolls (.is-scrollable), so they never
+         cover a tile's image. Each shows how many tiles that side hides
+         over its chevron; a side with nothing hidden keeps its gutter but
+         hides its tab, so the strip doesn't shift as you scroll. */
+      .recent-events-strip-wrap {
+        --strip-gutter: 1.7rem;
+      }
+      .recent-events-strip-wrap.is-scrollable {
+        padding: 0 var(--strip-gutter);
+      }
+      .recent-events-strip-btn {
+        position: absolute;
+        top: calc(var(--recent-events-row-h) / 2);
+        transform: translateY(-50%);
+        z-index: 2;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.15rem;
+        width: calc(var(--strip-gutter) - 0.25rem);
+        height: calc(var(--recent-events-row-h) * 0.55);
+        padding: 0;
+        border: 1px solid #cbd5e0;
+        border-radius: 999px;
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+        color: #2b6cb0;
+        font: inherit;
+        font-size: 0.75rem;
+        font-weight: 700;
+        line-height: 1;
+        cursor: pointer;
+      }
+      .recent-events-strip-btn .strip-btn-chevron {
+        font-size: 1.15rem;
+      }
+      .recent-events-strip-btn:hover {
+        background: #ebf8ff;
+      }
+      .recent-events-strip-btn:focus-visible {
+        outline: 2px solid #2b6cb0;
+        outline-offset: 2px;
+      }
+      .recent-events-strip-btn--prev {
+        left: 0;
+      }
+      .recent-events-strip-btn--next {
+        right: 0;
+      }
+      .recent-events-strip-wrap.can-scroll-left .recent-events-strip-btn--prev,
+      .recent-events-strip-wrap.can-scroll-right .recent-events-strip-btn--next {
+        display: flex;
+      }
+      .recent-events-slot {
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        min-width: 0;
+        max-width: 100%;
+      }
+      .recent-events-slot--map {
+        flex: 0 0 auto;
+      }
+      /* Visible keyboard focus on the tiles and event chips. Inset, since
+         the tiles and chips clip their overflow. */
+      .recent-events-stationmap a:focus-visible,
+      .recent-events-wavefield a:focus-visible,
+      .recent-events-albumtile a:focus-visible,
+      a.recent-events-gmv3d:focus-visible,
+      .event-chip-link:focus-visible,
+      .event-chip-3d:focus-visible {
+        outline: 2px solid #2b6cb0;
+        outline-offset: -2px;
+        border-radius: 4px;
+      }
+      .recent-events-stationmap-caption a:focus-visible,
+      .recent-events-wavefield-caption a:focus-visible,
+      .recent-events-gmv3d-caption a:focus-visible,
+      .recent-events-albumtile-caption a:focus-visible,
+      .map-popup-links a:focus-visible {
+        outline: 2px solid #2b6cb0;
+        outline-offset: 1px;
+        border-radius: 2px;
+      }
+      /* USGS event tile: magnitude over the USGS solution's facts. */
+      .recent-events-usgs {
+        box-sizing: border-box;
+        height: var(--recent-events-row-h);
+        border: 1px solid #cbd5e0;
+        border-radius: 6px;
+        overflow: hidden;
+        background: #fff;
+      }
+      .recent-events-usgs a,
+      .recent-events-usgs .usgs-tile-static {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+        height: 100%;
+        padding: 1.6rem 0.4rem 0.45rem;
+        box-sizing: border-box;
+        color: #2d3748;
+        text-decoration: none;
+        text-align: center;
+      }
+      .recent-events-usgs a:hover {
+        background: #f7fafc;
+      }
+      .recent-events-usgs a:focus-visible {
+        outline: 2px solid #2b6cb0;
+        outline-offset: -2px;
+        border-radius: 4px;
+      }
+      /* "USGS" source badge: same look as the "3D" badge, top-left. */
+      .recent-events-gmv3d-badge.usgs-tile-source,
+      .recent-events-gmv3d-badge.tile-source-badge {
+        left: 6px;
+        right: auto;
+        background: #f7fafc;
+        border-color: #cbd5e0;
+        color: #4a5568;
+        letter-spacing: 0.03em;
+      }
+      .usgs-tile-mag {
+        font-size: 1.6rem;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.01em;
+      }
+      .usgs-tile-mag--high {
+        color: #c53030;
+      }
+      /* Same tier colors as the daily chart's event markers. */
+      .usgs-tile-mag--us {
+        color: #0d9488;
+      }
+      .usgs-tile-mag--major {
+        color: #6b21a8;
+      }
+      .usgs-tile-magtype {
+        margin-left: 0.2em;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: #5a6577;
+      }
+      .usgs-tile-facts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.15rem;
+        font-size: 0.7rem;
+        line-height: 1.3;
+        font-variant-numeric: tabular-nums;
+        color: #4a5568;
+      }
+      .usgs-tile-when {
+        white-space: nowrap;
+      }
+      .usgs-tile-place {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-weight: 600;
+        color: #2d3748;
+      }
+      /* Moment Tensor tile: beachball over brief centroid facts. */
+      .recent-events-mt {
+        box-sizing: border-box;
+        height: var(--recent-events-row-h);
+        border: 1px solid #cbd5e0;
+        border-radius: 6px;
+        overflow: hidden;
+        background: #fff;
+      }
+      .recent-events-mt a {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+        height: 100%;
+        /* Top padding clears the GCMT / 3D badges. */
+        padding: 1.5rem 0.3rem 0.35rem;
+        box-sizing: border-box;
+        color: #2d3748;
+        text-decoration: none;
+      }
+      .recent-events-mt a:hover .recent-events-mt-ball {
+        transform: scale(1.05);
+      }
+      .recent-events-mt a:focus-visible {
+        outline: 2px solid #2b6cb0;
+        outline-offset: -2px;
+        border-radius: 4px;
+      }
+      .recent-events-mt-ball {
+        display: block;
+        width: calc(var(--recent-events-row-h) * 0.44);
+        height: calc(var(--recent-events-row-h) * 0.44);
+        object-fit: contain;
+        transition: transform 0.15s ease;
+      }
+      .recent-events-mt-facts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.7rem;
+        line-height: 1.3;
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+        color: #4a5568;
+      }
+      .recent-events-mt-facts strong {
+        color: #2d3748;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .recent-events-mt-ball {
+          transition: none;
+        }
+      }
+      /* "Movie view" link icon (album of animations). */
+      .caption-play-icon {
+        font-size: 0.8em;
+        vertical-align: 0.05em;
+      }
+      /* Aftershocks caption title: its tooltip has the catalog count. */
+      /* Chips past RECENT_EVENTS_LIMIT, until "Show all". */
+      .recent-events-list:not(.is-expanded) > .event-chip--extra {
+        display: none;
+      }
+      .recent-events-toggle {
+        appearance: none;
+        margin: 0 0.1rem;
+        padding: 0 0.4rem;
+        border: 1px solid #90cdf4;
+        border-radius: 999px;
+        background: #ebf8ff;
+        color: #2b6cb0;
+        font: inherit;
+        font-size: 0.95em;
+        cursor: pointer;
+      }
+      .recent-events-toggle:hover {
+        background: #bee3f8;
+      }
+      .recent-events-toggle:focus-visible {
+        outline: 2px solid #2b6cb0;
+        outline-offset: 2px;
+      }
+      .tile-caption-fact[title] {
+        cursor: help;
+      }
+      /* Optional tiles fade in when their product turns up. */
+      .recent-events-slot--swrp,
+      .recent-events-slot--mt,
+      .recent-events-slot--gmvalbum,
+      .recent-events-slot--gmv3d,
+      .recent-events-slot--aftershocks,
+      .recent-events-slot--bp {
+        animation: recent-events-tile-in 0.4s ease-out;
+      }
+      @keyframes recent-events-tile-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .recent-events-slot--swrp,
+        .recent-events-slot--mt,
+        .recent-events-slot--gmvalbum,
+        .recent-events-slot--gmv3d,
+        .recent-events-slot--aftershocks,
+        .recent-events-slot--bp {
+          animation: none;
+        }
+      }
+      .recent-events-columns:not(.has-usgs) .recent-events-slot--usgs,
+      .recent-events-columns:not(.has-stationmap) .recent-events-slot--stationmap,
+      .recent-events-columns:not(.has-wavefield) .recent-events-slot--wavefield,
+      .recent-events-columns:not(.has-swrp) .recent-events-slot--swrp,
+      .recent-events-columns:not(.has-mt) .recent-events-slot--mt,
+      .recent-events-columns:not(.has-gmvalbum) .recent-events-slot--gmvalbum,
+      .recent-events-columns:not(.has-gmv3d) .recent-events-slot--gmv3d,
+      .recent-events-columns:not(.has-aftershocks) .recent-events-slot--aftershocks,
+      .recent-events-columns:not(.has-bp) .recent-events-slot--bp {
+        display: none;
+      }
+      /* Width is set explicitly in px from JS, on each image tile and its
+         matching caption, once the image's real dimensions are known
+         (see renderEventPlotsImagePanel / showAlbumProductTile), so the
+         caption wraps within exactly its tile's width. */
+      .recent-events-stationmap,
+      .recent-events-wavefield,
+      .recent-events-albumtile {
+        box-sizing: border-box;
+        min-width: 100px;
+        max-width: 100%;
+        /* Fixed (not min-) height: the product images are much larger
+           than this natively. */
+        height: var(--recent-events-row-h);
+        border: 1px solid #cbd5e0;
+        border-radius: 6px;
+        overflow: hidden;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .recent-events-stationmap a,
+      .recent-events-wavefield a,
+      .recent-events-albumtile a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 0;
+      }
+      .recent-events-stationmap img,
+      .recent-events-wavefield img,
+      .recent-events-albumtile img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .recent-events-stationmap-empty {
+        margin: 0;
+        padding: 0.5rem;
+        font-size: 0.75rem;
+        color: #718096;
+        text-align: center;
+      }
+      .recent-events-map {
+        /* Must exceed 256px: that's the width of the "whole world" tile
+           at zoom 0 (minZoom on this map), the most zoomed-out level
+           Leaflet allows here. A narrower container can't compress the
+           full +-180deg longitude range any further. */
+        width: var(--map-col-w);
+        box-sizing: border-box;
+        height: var(--recent-events-row-h);
+        border: 1px solid #cbd5e0;
+        border-radius: 6px;
+        overflow: hidden;
+        background: #eef2f5;
+      }
+      /* Short, fixed captions for the two Leaflet maps, bundled here
+         under the seismicity map. Static text, not touched by JS. */
+      .recent-events-map-caption strong {
+        font-weight: 700;
+        color: #4a5568;
+      }
+      .recent-events-map-caption {
+        width: var(--map-col-w);
+        margin: 0;
+        max-width: 100%;
+        font-size: 0.7rem;
+        line-height: 1.3;
+        color: #718096;
+        text-align: left;
+      }
+      @media (max-width: 640px) {
+        .recent-events-body {
+          padding: 0;
+        }
+        /* Phones: one column of chips, then the scrolling tile strip at
+           full width, then the seismicity map below it at full width. */
+        .recent-events-list {
+          grid-template-columns: 1fr;
+          grid-template-rows: none;
+          grid-auto-flow: row;
+        }
+        .recent-events-tiles {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .recent-events-strip-wrap {
+          width: 100%;
+        }
+        .recent-events-map,
+        .recent-events-map-caption {
+          width: 100%;
+        }
+        .recent-events-map {
+          height: 160px;
+        }
+      }
+      /* Side-by-side layout: the event list (single column) on the left
+         with the attribution line under it, and the tile row on the
+         right. updateRecentEventsLayout() sets .is-side-by-side only
+         when every visible tile and the map fit beside a readable list
+         (RECENT_EVENTS_LIST_MIN_W) without scrolling; otherwise the
+         stacked layout above is used. */
+      .recent-events-columns.is-side-by-side {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-rows: auto 1fr;
+        column-gap: 0.6rem;
+        row-gap: 0.3rem;
+        align-items: start;
+      }
+      .recent-events-columns.is-side-by-side .recent-events-list {
+        grid-column: 1;
+        grid-row: 1;
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-auto-flow: row;
+      }
+      /* The event-list note is one line when stacked (full width), two
+         lines beside the tiles: the " · " joins them, the <br> splits. */
+      .recent-events-columns:not(.is-side-by-side) .data-attribution-br,
+      .recent-events-columns.is-side-by-side .data-attribution-sep {
+        display: none;
+      }
+      .recent-events-columns.is-side-by-side > .data-attribution {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      .recent-events-columns.is-side-by-side .recent-events-tiles {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        flex-wrap: nowrap;
+        margin-top: 0;
+      }
+      .event-chip {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0.4rem;
+        /* Tighter vertical padding (and list gap below) so six chips
+           fit in the 190px image row (--recent-events-row-h). */
+        padding: 0.2rem 0.6rem;
+        border: 1px solid #cbd5e0;
+        border-radius: 999px;
+        background: #fff;
+        color: #2d3748;
+        font-size: 0.74rem;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .event-chip:hover {
+        border-color: #2b6cb0;
+        background: #f7fafc;
+      }
+      .event-chip-link {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0.4rem;
+        text-decoration: none;
+        color: inherit;
+      }
+      .event-chip-link:hover {
+        text-decoration: underline;
+      }
+      .chip-arrows {
+        display: inline-flex;
+        align-items: center;
+        align-self: center;
+        flex: 0 0 auto;
+      }
+      .chip-arrow {
+        display: block;
+        width: 7px;
+        height: 10px;
+        flex: 0 0 auto;
+        color: #b83280;
+      }
+      .chip-arrow + .chip-arrow {
+        margin-left: -3px;
+      }
+      .event-chip-link:hover .chip-arrow {
+        color: #7c2d6b;
+      }
+      .event-chip .mag {
+        font-weight: 700;
+        color: #9b2c2c;
+      }
+      .event-chip .depth {
+        color: #5a6577;
+        font-size: 0.68rem;
+        white-space: nowrap;
+      }
+      .event-chip .depth--default {
+        font-style: italic;
+        text-decoration: underline dotted #a0aec0;
+        text-underline-offset: 2px;
+        cursor: help;
+      }
+      /* M7.0+ events get their own color so they stand out from the general
+         M6.0+ "significant event" red used elsewhere in this chip. Applies
+         to the magnitude text and to the chevrons on the products link, so the major/minor distinction reads consistently
+         across the whole chip, not just half of it. */
+      .event-chip--major .mag {
+        color: #6b21a8;
+      }
+      .event-chip--major .chip-arrow {
+        color: #6b21a8;
+      }
+      .event-chip--major .event-chip-link:hover .chip-arrow {
+        color: #4c1770;
+      }
+      /* Marks the chip for the event the red star on both maps points to
+         (see setEventPlotsStarEvent/markStarredEventInList) - same glyph
+         as .legend-star/.event-star-icon, added as a flex item via
+         ::before rather than a real element so no chip markup changes.
+         Every chip uses the same fixed-width slot, so the magnitudes line
+         up down the list.
+         Non-starred chips show the same tier diamond used on the daily chart
+         (US/AK teal, M6+ red, M7+ purple); the starred chip swaps it for
+         the blue star, just as the chart does. */
+      /* The marker is drawn in CSS rather than as a glyph, whose size
+         varies a lot between fonts. Same fixed slot width as the star so
+         magnitudes align. */
+      /* The marker at the start of each chip is a button: it makes that
+         event the "Event shown" (see pickEventShown). */
+      .event-chip-pick {
+        appearance: none;
+        flex: 0 0 auto;
+        align-self: center;
+        display: inline-flex;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: none;
+        color: inherit;
+        font: inherit;
+        line-height: 1;
+        cursor: pointer;
+      }
+      .event-chip-pick:focus-visible {
+        outline: 2px solid #2b6cb0;
+        outline-offset: 2px;
+        border-radius: 50%;
+      }
+      .event-chip-pick::before {
+        content: "";
+        flex: 0 0 auto;
+        align-self: center;
+        width: 0.8rem;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        text-align: center;
+        color: #c53030;
+        background: currentColor;
+        /* Diamond (same as the chart markers), so it isn't mistaken for
+           the round with/without-products and latest-checked map dots. */
+        clip-path: polygon(50% 12%, 88% 50%, 50% 88%, 12% 50%);
+      }
+      .event-chip--tier-us .event-chip-pick::before {
+        color: #0d9488;
+      }
+      /* M7+: larger diamond with a white gap and purple outer ring, same
+         as the chart marker, so it reads by shape as well as color. */
+      .event-chip--tier-major .event-chip-pick::before {
+        color: #6b21a8;
+        width: 0.95rem;
+        height: 0.95rem;
+        clip-path: none;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 0.8 L19.2 10 L10 19.2 L0.8 10 Z' fill='%23fff' stroke='%236b21a8' stroke-width='1.3'/%3E%3Cpath d='M10 4 L16 10 L10 16 L4 10 Z' fill='%236b21a8'/%3E%3C/svg%3E")
+          center / contain no-repeat;
+      }
+      .event-chip--starred .event-chip-pick::before {
+        content: "\2605";
+        background: none;
+        clip-path: none;
+        color: #2b6cb0;
+        font-size: 0.8rem;
+      }
+      /* Hover/focus preview: an outline star, "show this one". */
+      .event-chip:not(.event-chip--starred) .event-chip-pick:hover::before,
+      .event-chip:not(.event-chip--starred) .event-chip-pick:focus-visible::before {
+        content: "\2606";
+        background: none;
+        clip-path: none;
+        color: #2b6cb0;
+        width: 0.8rem;
+        height: 0.8rem;
+        font-size: 0.8rem;
+      }
+      .event-chip--starred .event-chip-pick {
+        cursor: default;
+      }
+      .event-chip .place {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .event-chip .when {
+        color: #5a6577;
+      }
+      .event-chip .days-ago {
+        color: #a0aec0;
+        font-size: 0.72rem;
+        white-space: nowrap;
+      }
+      .chip-sep {
+        color: #cbd5e0;
+        flex: 0 0 auto;
+      }
+      .event-chip-info {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+      .event-chip-products {
+        flex: 0 0 auto;
+      }
+      /* Small cube link to the 3D hypocenter viewer at the end of each
+         chip (same icon as the "3D Hypocenter View" button). */
+      .event-chip-3d {
+        display: inline-flex;
+        align-items: center;
+        align-self: center;
+        flex: 0 0 auto;
+        padding: 1px;
+        border-radius: 3px;
+      }
+      /* Key for the cube icon at the end of each event row. */
+      .chip-3d-legend {
+        white-space: nowrap;
+        color: #718096; /* same as the tile captions */
+      }
+      .chip-3d-legend .gmv3d-icon {
+        width: 1.1em;
+        height: 1.1em;
+        vertical-align: -0.2em;
+      }
+      .event-chip-3d .gmv3d-icon {
+        width: 14px;
+        height: 14px;
+      }
+      .event-chip-3d:hover,
+      .event-chip-3d:focus-visible {
+        background: #bee3f8;
+      }
+      /* Linked highlight (see setLinkedHighlight()). */
+      .event-chip.is-linked {
+        border-color: #2b6cb0;
+        box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.35);
+        background: #f7fafc;
+      }
+      /* Links inside event-map popups. */
+      .map-popup-links {
+        margin-top: 0.3rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.2rem 0.6rem;
+      }
+      .map-popup-links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.2rem;
+        color: #2b6cb0;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .map-popup-links a:hover {
+        text-decoration: underline;
+      }
+      .map-popup-links .gmv3d-icon {
+        width: 13px;
+        height: 13px;
+      }
+      /* Screen-reader-only text (chart summary + daily table). */
+      .sr-only {
+        position: absolute !important;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      .event-chip .prod-icons {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.28rem;
+        flex: 0 0 auto;
+      }
+      /* Fixed-size box per icon (rather than sizing the <img> directly) so
+         source images with different native proportions all occupy the
+         same visual footprint and stay vertically centered on the row. */
+      .event-chip .prod-icon-box {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 19px;
+        height: 19px;
+        flex: 0 0 auto;
+      }
+      .event-chip .prod-icon-box img {
+        display: block;
+        max-width: 18px;
+        max-height: 18px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+      }
+      .event-chip .prod-icon-overflow {
+        width: auto;
+        min-width: 16px;
+        padding: 0 3px;
+        border-radius: 999px;
+        background: #edf2f7;
+        color: #4a5568;
+        font-size: 0.65rem;
+        font-weight: 600;
+        cursor: help;
+      }
+      .recent-events-empty {
+        font-size: 0.8rem;
+        color: #718096;
+        margin: 0;
+      }
+      .data-attribution {
+        margin: 0;
+        padding: 0 0.2rem;
+        font-size: 0.7rem;
+        color: #5a6577;
+        text-align: left;
+      }
+      .data-attribution a {
+        color: inherit;
+        text-decoration: underline;
+      }
+      .data-attribution a:hover {
+        color: #2b6cb0;
+      }
+      /* Small footnote-style links ("[3]", "[4]") next to the short
+         "Data"/"Focal mechanisms (beachballs)" labels, pointing down to
+         the full citation in the page's Citations and References footer
+         (#ref-3/#ref-4) rather than repeating the full citation text and
+         link here. */
+      .citation-ref {
+        font-size: 0.85em;
+        text-decoration: none;
+        margin-left: 0.15em;
+      }
+      .citation-ref:hover {
+        text-decoration: underline;
+      }
+      /* Sit directly under their image tiles (same .recent-events-slot).
+         Each caption's width is set
+         explicitly in px from JS, matching its own image's width exactly
+         (see the note on .recent-events-stationmap/.recent-events-wavefield
+         above), so they just wrap within that fixed width like any
+         ordinary paragraph. */
+      .recent-events-stationmap-caption,
+      .recent-events-wavefield-caption,
+      .recent-events-albumtile-caption {
+        margin: 0;
+        max-width: 100%;
+        font-size: 0.7rem;
+        line-height: 1.3;
+        color: #718096;
+        text-align: left;
+        /* The caption text has a \n before "M{mag} {place}" (set via
+           textContent) so a long place name gets its own line instead of
+           wrapping mid-sentence; pre-line is what makes that \n render. */
+        white-space: pre-line;
+        /* Safety net against an unusually long single "word" (e.g. an
+           unhyphenated place name) overflowing the fixed-width box.
+           Harmless now that the container's width comes from JS rather
+           than any CSS auto-sizing algorithm - see the comment on
+           .recent-events-stationmap above for why that distinction
+           matters here. */
+        overflow-wrap: break-word;
+      }
+      /* Temporary GCMT beachball shown on the recent-events map while the
+         time-lapse cursor is on that event's day. */
+      .beachball-pulse-icon {
+        background: #fff;
+        border: 1.5px solid #222;
+        border-radius: 50%;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .beachball-pulse-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
+
+      /* --- "Latest event checked" liveness indicator --- */
+      .latest-checked-row {
+        display: flex;
+        align-items: baseline;
+        gap: 0.4rem;
+        flex-wrap: wrap;
+        font-size: 0.78rem;
+        color: #4a5568;
+        margin: 0 0 0.5rem;
+        padding: 0.3rem 0.6rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        background: #f7fafc;
+      }
+      .latest-checked-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        font-size: 0.68rem;
+        color: #c53030;
+        white-space: nowrap;
+      }
+      .latest-checked-dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #c53030;
+        flex: 0 0 auto;
+        animation: latest-checked-pulse 1.8s ease-in-out infinite;
+      }
+      @keyframes latest-checked-pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(197, 48, 48, 0.55);
+        }
+        70% {
+          box-shadow: 0 0 0 6px rgba(197, 48, 48, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(197, 48, 48, 0);
+        }
+      }
+      .latest-checked-text {
+        color: #4a5568;
+      }
+      .latest-checked-text .mag {
+        font-weight: 700;
+        color: #c53030;
+      }
+      .latest-checked-text a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .latest-checked-text a:hover {
+        text-decoration: underline;
+      }
+      .latest-checked-meta {
+        color: #718096;
+        font-size: 0.75rem;
+      }
+      .latest-checked-age {
+        color: #a0aec0;
+        font-size: 0.75rem;
+        white-space: nowrap;
+      }
+      .latest-checked-age.is-stale {
+        color: #b7791f;
+        font-weight: 600;
+      }
+      .latest-checked-sep {
+        color: #cbd5e0;
+      }
+
+      /* --- Product Pipeline: collapsed-by-default table of EarthScope
+         product records whose status is queued or started. Reads the
+         same NDJSON as the Recent Events strip (see renderProductPipeline()),
+         i.e. the same records the stats page's "EarthScope Product
+         Records" table lists, filtered to the in-progress ones. --- */
+      .pipeline-summary {
+        margin: 0 0 0.75rem;
+        text-align: left;
+      }
+      .pipeline-summary-head {
+        display: list-item;
+        cursor: pointer;
+        margin-bottom: 0.35rem;
+        text-align: left;
+      }
+      /* "Event shown" header right above the tile row: the starred event
+         every tile below belongs to (see renderPipelineEventShown). It
+         has the full USGS place string (distance/direction included) and
+         the full UTC origin time, which the chips and captions abbreviate. */
+      .pipeline-event-shown {
+        display: block;
+        margin: 0.35rem 0 0;
+        padding: 0.3rem 0.6rem;
+        border-left: 3px solid #2b6cb0;
+        border-radius: 0 4px 4px 0;
+        background: #ebf4fb;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        color: #2d3748;
+      }
+      .pipeline-event-shown[hidden] {
+        display: none;
+      }
+      /* "Latest" link back to the automatic choice, shown after the
+         user picked an event. */
+      .event-shown-reset {
+        appearance: none;
+        margin-left: 0.5rem;
+        padding: 0 0.45rem;
+        border: 1px solid #90cdf4;
+        border-radius: 999px;
+        background: #ebf8ff;
+        color: #2b6cb0;
+        font: inherit;
+        font-size: 0.8em;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .event-shown-copy {
+        appearance: none;
+        margin-left: 0.5rem;
+        padding: 0 0.45rem;
+        border: 1px solid #cbd5e0;
+        border-radius: 999px;
+        background: #fff;
+        color: #2b6cb0;
+        font: inherit;
+        font-size: 0.8em;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .event-shown-copy:hover {
+        background: #ebf8ff;
+      }
+      .event-shown-copy.is-done {
+        border-color: #9ae6b4;
+        background: #f0fff4;
+        color: #276749;
+      }
+      .event-shown-copy:focus-visible {
+        outline: 2px solid #2b6cb0;
+        outline-offset: 2px;
+      }
+      .event-shown-new {
+        display: inline-block;
+        margin-left: 0.6rem;
+        padding: 0 0.2rem 0 0.5rem;
+        border-radius: 999px;
+        background: #fff5f5;
+        border: 1px solid #feb2b2;
+        color: #9b2c2c;
+      }
+      .event-shown-reset:hover {
+        background: #bee3f8;
+      }
+      .event-shown-reset:focus-visible {
+        outline: 2px solid #2b6cb0;
+        outline-offset: 2px;
+      }
+      .pipeline-event-shown .legend-star {
+        margin-right: 0.2rem;
+      }
+      /* "3D Hypocenter View" link to hypocenter_3d_viewer.html for the
+         starred event, at the end of the "Event shown" line: same badge
+         colours and cube icon as the GMV / station 3D tiles, plus an
+         arrow showing it opens a new page (see renderPipelineEventShown). */
+      /* Same look as the tile captions' "3D ... view" lines: plain gray
+         text with the cube, underlined on hover. */
+      .pipeline-event-3d {
+        margin-left: 0.5rem;
+        white-space: nowrap;
+        color: #718096;
+        font-weight: 400;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        cursor: pointer;
+      }
+      .pipeline-event-3d:hover,
+      .pipeline-event-3d:focus-visible {
+        color: #2b6cb0;
+      }
+      .pipeline-event-3d .gmv3d-icon {
+        width: 1.1em;
+        height: 1.1em;
+        vertical-align: -0.2em;
+      }
+      .pipeline-event-3d:hover .gmv3d-icon,
+      .pipeline-event-3d:focus-visible .gmv3d-icon {
+        animation: gmv3d-wobble 0.6s ease-in-out;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .pipeline-event-3d:hover .gmv3d-icon,
+        .pipeline-event-3d:focus-visible .gmv3d-icon {
+          animation: none;
+        }
+      }
+      .pipeline-event-shown-label {
+        font-weight: 600;
+        color: #4a5568;
+      }
+      .pipeline-event-shown-when {
+        color: #5a6577;
+      }
+      /* GMV 3D viewer tile: a thumbnail of the starred event's GMV
+         (the same PNG gmv3dFileExists() loads to confirm the 3D data
+         exists), shown next to the Event Plots images so the viewer
+         reads as a product rather than a link. Hidden until
+         updateGmv3dLink() finds data for the starred event. Width is set
+         from JS, like the other image tiles. */
+      .recent-events-gmv3d,
+      .recent-events-gmv3d-caption {
+        display: none;
+      }
+      .has-gmv3d .recent-events-gmv3d {
+        display: block;
+      }
+      .has-gmv3d .recent-events-gmv3d-caption {
+        display: block;
+      }
+      .recent-events-gmv3d {
+        position: relative;
+        box-sizing: border-box;
+        min-width: 100px;
+        max-width: 100%;
+        height: var(--recent-events-row-h);
+        border: 1px solid #cbd5e0;
+        border-radius: 6px;
+        overflow: hidden;
+        background: #fff;
+        line-height: 0;
+        cursor: pointer;
+      }
+      .recent-events-gmv3d img.gmv3d-thumb {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .recent-events-gmv3d-badge {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        padding: 2px 6px;
+        border-radius: 4px;
+        background: #ebf8ff;
+        border: 1px solid #90cdf4;
+        color: #2b6cb0;
+        font-size: 0.7rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+      .recent-events-gmv3d-play {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 44px;
+        height: 44px;
+        margin: -22px 0 0 -22px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid #90cdf4;
+        box-shadow: 0 1px 4px rgba(26, 54, 93, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .recent-events-gmv3d-play .gmv3d-icon {
+        width: 24px;
+        height: 24px;
+      }
+      /* Station-map tile linked to the 3D station viewer: same badge
+         and cube overlay as the GMV tile (see updateStationMap3dLink). */
+      .recent-events-stationmap a.has-3d-stations {
+        position: relative;
+      }
+      .recent-events-gmv3d:hover .gmv3d-icon,
+      .recent-events-gmv3d:focus-visible .gmv3d-icon,
+      .recent-events-stationmap a.has-3d-stations:hover .gmv3d-icon,
+      .recent-events-stationmap a.has-3d-stations:focus-visible .gmv3d-icon {
+        animation: gmv3d-wobble 0.6s ease-in-out;
+      }
+      /* Record-section tile linked to the album viewer: same badge and
+         centred overlay as the 3D links, with a stacked-images icon (see
+         updateWavefieldAlbumLink). */
+      .recent-events-wavefield a.has-album,
+      .recent-events-stationmap a.has-album,
+      .recent-events-albumtile a.has-album {
+        position: relative;
+      }
+      .recent-events-wavefield a.has-album .album-icon,
+      .recent-events-stationmap a.has-album .album-icon,
+      .recent-events-albumtile a.has-album .album-icon {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.25s ease-in-out;
+      }
+      .recent-events-wavefield a.has-album:hover .album-icon,
+      .recent-events-wavefield a.has-album:focus-visible .album-icon,
+      .recent-events-stationmap a.has-album:hover .album-icon,
+      .recent-events-stationmap a.has-album:focus-visible .album-icon,
+      .recent-events-albumtile a.has-album:hover .album-icon,
+      .recent-events-albumtile a.has-album:focus-visible .album-icon {
+        transform: translateX(2px) rotate(-4deg);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .recent-events-wavefield a.has-album .album-icon,
+        .recent-events-stationmap a.has-album .album-icon,
+        .recent-events-albumtile a.has-album .album-icon {
+          transition: none;
+        }
+      }
+      .recent-events-gmv3d-caption {
+        margin: 0;
+        max-width: 100%;
+        font-size: 0.7rem;
+        line-height: 1.3;
+        color: #718096;
+        text-align: left;
+        overflow-wrap: break-word;
+      }
+      .recent-events-gmv3d-caption a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .recent-events-gmv3d-caption a:hover {
+        text-decoration: underline;
+      }
+      /* Keep each caption link on its own single line. */
+      .recent-events-gmv3d-caption .gmv3d-caption-line {
+        white-space: nowrap;
+      }
+      .recent-events-gmv3d-caption .gmv3d-caption-sep {
+        color: #a0aec0;
+      }
+      .caption-3d-line {
+        white-space: nowrap;
+      }
+      /* "Album view · Station view": the dot is not underlined, and the
+         line may break there if the tile is too narrow for both links. */
+      .caption-3d-line .caption-3d-sep {
+        color: #a0aec0;
+        white-space: normal;
+      }
+      /* Briefly set while measuring the one-line width of the links
+         (fitTileToCaptionLine). */
+      .caption-3d-line--measure .caption-3d-sep {
+        white-space: nowrap;
+      }
+      /* "… view" links under the tiles (Station view, Album view, GMV
+         view · Station view) are underlined so they read as links; each
+         link is underlined separately, the separator dot is not. */
+      .caption-3d-line a,
+      .recent-events-gmv3d-caption .gmv3d-caption-line--views a {
+        color: inherit;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+      .caption-3d-line a:hover,
+      .recent-events-gmv3d-caption .gmv3d-caption-line--views a:hover {
+        color: #2b6cb0;
+      }
+      .caption-3d-line svg,
+      .caption-3d-line .gmv3d-icon {
+        width: 1.1em;
+        height: 1.1em;
+        vertical-align: -0.2em;
+      }
+      .recent-events-gmv3d-caption .gmv3d-icon {
+        width: 1.1em;
+        height: 1.1em;
+        vertical-align: -0.2em;
+      }
+      @keyframes gmv3d-wobble {
+        0%, 100% { transform: rotate(0deg); }
+        30% { transform: rotate(-12deg); }
+        60% { transform: rotate(8deg); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .recent-events-gmv3d:hover .gmv3d-icon,
+        .recent-events-gmv3d:focus-visible .gmv3d-icon {
+          animation: none;
+        }
+      }
+      .pipeline-summary-head::marker {
+        color: #4a5568;
+      }
+      .pipeline-summary-head h4 {
+        display: inline;
+        margin: 0;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #4a5568;
+      }
+      .pipeline-table-wrap {
+        max-height: 320px;
+        overflow: auto;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        background: #fff;
+      }
+      table.pipeline-table {
+        width: 100%;
+        min-width: 860px; /* narrow screens scroll sideways in the wrap */
+        table-layout: fixed;
+        border-collapse: collapse;
+        font-size: 0.78rem;
+        color: #2d3748;
+      }
+      .pipeline-table th,
+      .pipeline-table td {
+        padding: 0.35rem 0.5rem;
+        border-bottom: 1px solid #edf2f7;
+        text-align: left;
+        vertical-align: top;
+      }
+      .pipeline-table th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background: #f0f3f7;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+      .pipeline-table tbody tr:hover {
+        background: #f8fbff;
+      }
+      /* Explicit column widths (via <colgroup>) so page-wide table rules
+         can't force equal-width columns. */
+      .pipeline-table col.pipeline-col-product { width: 26%; }
+      .pipeline-table col.pipeline-col-status  { width: 8%; }
+      .pipeline-table col.pipeline-col-mag     { width: 5%; }
+      .pipeline-table col.pipeline-col-region  { width: 22%; }
+      .pipeline-table col.pipeline-col-time    { width: 14%; }
+      .pipeline-table col.pipeline-col-elapsed { width: 11%; }
+      .pipeline-table th,
+      .pipeline-table td {
+        word-break: normal;
+        overflow-wrap: break-word;
+      }
+      .pipeline-table td.pipeline-nowrap {
+        white-space: nowrap;
+      }
+      .pipeline-table td.pipeline-empty {
+        color: #718096;
+        font-style: italic;
+        text-align: center;
+        padding: 0.8rem;
+      }
+      .pipeline-status {
+        display: inline-block;
+        padding: 0.1rem 0.45rem;
+        border-radius: 999px;
+        background: #e8edf3;
+        color: #4a5568;
+        font-size: 0.72rem;
+        white-space: nowrap;
+      }
+      .pipeline-status--started {
+        background: #fff3d6;
+        color: #8a5a00;
+      }
+
+      /* --- Activity summary: 24h/7d counters + 30-day axis chart + heatmap --- */
+      .activity-summary {
+        margin: 0 0 0.75rem;
+        text-align: left;
+      }
+      .activity-summary-head {
+        display: list-item;
+        cursor: pointer;
+        margin-bottom: 0.35rem;
+        text-align: left;
+      }
+      /* "Latest event checked" sits on the overview's summary row, after
+         the (shortened) heading so the disclosure marker still reads as
+         belonging to the overview. Drop the standalone box styling and
+         run it inline with a divider, like the "Event shown:" line on the
+         Products in Production row. */
+      .activity-summary-head .latest-checked-row {
+        display: inline-flex;
+        vertical-align: baseline;
+        margin: 0 0 0 0.6rem;
+        padding: 0 0 0 0.6rem;
+        border: 0;
+        border-left: 1px solid #cbd5e0;
+        border-radius: 0;
+        background: none;
+        cursor: default;
+      }
+      .activity-summary-head::marker {
+        color: #4a5568;
+      }
+      .activity-summary-head h4 {
+        display: inline;
+        margin: 0;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #4a5568;
+      }
+      .activity-summary-body {
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+        font-size: 0.78rem;
+        color: #4a5568;
+        padding: 0.35rem 0.6rem 0.5rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        background: #f7fafc;
+      }
+      .activity-counters {
+        display: flex;
+        align-items: baseline;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+      .activity-counter-group {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0.4rem;
+        flex-wrap: wrap;
+        white-space: nowrap;
+      }
+      .activity-counter-item {
+        white-space: nowrap;
+      }
+      .activity-counter-item strong {
+        color: #2b6cb0;
+        font-size: 0.95rem;
+        font-weight: 700;
+      }
+      .activity-counter-item--us strong {
+        color: #0d9488;
+      }
+      .activity-counter-item--high strong {
+        color: #c53030;
+      }
+      .activity-counter-item--major strong {
+        color: #6b21a8;
+      }
+      /* Zero counts in neutral gray, whatever their tier color. */
+      .activity-counter-item strong.is-zero {
+        color: #a0aec0;
+      }
+      /* M7+ and US/AK counts in the 24h / 7-day groups: shown only when
+         nonzero (see setCounter()). */
+      .activity-counter-opt {
+        display: contents;
+      }
+      .activity-counter-opt[hidden] {
+        display: none;
+      }
+      .activity-counter-sep {
+        color: #cbd5e0;
+      }
+      .activity-counter-sep--group {
+        margin: 0 0.1rem;
+      }
+      .activity-counter-label {
+        color: #718096;
+        font-weight: 600;
+      }
+      .activity-chart-row {
+        display: flex;
+        align-items: stretch;
+        gap: 0.6rem;
+      }
+      .activity-sparkline {
+        flex: 1 1 auto;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+      .activity-sparkline-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+      /* Legend items toggled with the hidden attribute (typical range,
+         7-day avg vs cumulative) - needed because .spark-legend-item sets
+         display, which would otherwise override [hidden]. */
+      .spark-legend-item[hidden] {
+        display: none;
+      }
+      .activity-sparkline-title {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      /* Count | Moment segmented switch next to the chart title. */
+      .spark-mode-toggle {
+        display: inline-flex;
+        border: 1px solid #cbd5e0;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .spark-mode-toggle button {
+        font: inherit;
+        font-size: 0.6rem;
+        line-height: 1.3;
+        padding: 0 0.4rem;
+        border: 0;
+        background: #fff;
+        color: #4a5568;
+        cursor: pointer;
+      }
+      .spark-mode-toggle button + button {
+        border-left: 1px solid #cbd5e0;
+      }
+      .spark-mode-toggle button[aria-pressed="true"] {
+        background: #2b6cb0;
+        color: #fff;
+      }
+      .spark-mode-toggle button:focus-visible {
+        outline: 2px solid #4299e1;
+        outline-offset: -2px;
+      }
+      /* (i) next to the Count | Moment switch: hover on desktop, tap on
+         touch devices (initTouchTooltips), focus via keyboard. */
+      .spark-mode-info {
+        font-size: 0.75rem;
+        line-height: 1;
+        color: #718096;
+        cursor: help;
+      }
+      .spark-mode-info:hover,
+      .spark-mode-info:focus-visible {
+        color: #2b6cb0;
+        outline: none;
+      }
+      /* One-line caveat under the chart in Moment view. */
+      .spark-moment-note {
+        margin: 0.15rem 0 0;
+        font-size: 0.62rem;
+        line-height: 1.35;
+        color: #718096;
+      }
+      .spark-moment-note[hidden] {
+        display: none;
+      }
+      .spark-moment-note strong {
+        color: #4a5568;
+        font-weight: 600;
+      }
+      .spark-moment-note sub,
+      .spark-moment-note sup {
+        font-size: 0.75em;
+        line-height: 0;
+      }
+      .spark-legend-cum path,
+      .spark-cum-line {
+        fill: none;
+        stroke: #4a5568;
+        stroke-width: 1.2;
+        stroke-linejoin: miter;
+      }
+      .spark-cum-line {
+        stroke-width: 0.8;
+        stroke-opacity: 0.85;
+      }
+      /* "100%" at the right end of the cumulative line. */
+      .spark-cum-label {
+        font-size: 3.6px;
+        fill: #4a5568;
+        paint-order: stroke;
+        stroke: #f7fafc;
+        stroke-width: 0.8px;
+        stroke-linejoin: round;
+        pointer-events: none;
+      }
+      .spark-cum-hit {
+        fill: none;
+        stroke: transparent;
+        stroke-width: 4;
+      }
+      .activity-sparkline-label {
+        font-size: 0.6rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        color: #718096;
+        white-space: nowrap;
+      }
+      .activity-sparkline-legend {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.6rem;
+        color: #718096;
+      }
+      .spark-legend-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        white-space: nowrap;
+      }
+      .spark-legend-dot {
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-radius: 2px;
+      }
+      .spark-legend-dot--mid {
+        background: #90cdf4;
+      }
+      /* Event-marker tiers are diamonds on the chart, so their legend
+         swatches are too (the M3.5 bar swatch stays square). */
+      .spark-legend-dot--us,
+      .spark-legend-dot--high,
+      .spark-legend-dot--major {
+        width: 6px;
+        height: 6px;
+        border-radius: 1px;
+        transform: rotate(45deg);
+        margin: 0 1px;
+      }
+      .spark-legend-dot--us {
+        background: #0d9488;
+      }
+      .spark-legend-dot--high {
+        background: #c53030;
+      }
+      /* M7+ swatch: larger, with the same white gap + purple ring as the
+         chart marker. */
+      .spark-legend-dot--major {
+        width: 7px;
+        height: 7px;
+        margin: 0 2px;
+        background: #6b21a8;
+        box-shadow:
+          0 0 0 1px #fff,
+          0 0 0 1.7px #6b21a8;
+      }
+      /* 7-day moving average: thin dark line over the bars, with a
+         matching short-line legend swatch. */
+      /* Solid then dashed, like the line itself (solid average, dashed
+         carry-forward across the preliminary bars). */
+      .spark-legend-line--avg {
+        display: inline-block;
+        width: 16px;
+        height: 1.5px;
+        background: linear-gradient(
+            to right,
+            #4a5568 0 8px,
+            transparent 8px 10px,
+            rgba(74, 85, 104, 0.6) 10px 12px,
+            transparent 12px 14px,
+            rgba(74, 85, 104, 0.6) 14px 16px
+          );
+      }
+      .spark-avg-line {
+        fill: none;
+        stroke: #4a5568;
+        stroke-width: 1;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        stroke-opacity: 0.85;
+        pointer-events: none;
+      }
+      /* Latest complete 7-day average carried flat across today's
+         (partial) bar as a reference - dashed and lighter so it reads as a
+         carry-forward, not a measured value. Hoverable for its tooltip. */
+      .spark-avg-ref {
+        fill: none;
+        stroke: #4a5568;
+        stroke-width: 1;
+        stroke-dasharray: 2 1.5;
+        stroke-linecap: butt;
+        stroke-opacity: 0.55;
+      }
+      .spark-avg-ref-hit {
+        stroke: transparent;
+        stroke-width: 4;
+      }
+      /* Same blue-star swatch as .legend-star (see that rule for why
+         blue, and why a star rather than another colored dot), sized to
+         match this legend's smaller dots. */
+      .spark-legend-star {
+        display: inline-block;
+        line-height: 1;
+        font-size: 0.8rem;
+        color: #2b6cb0;
+      }
+      .activity-sparkline-chart {
+        width: 100%;
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+      }
+      .activity-sparkline-chart svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .spark-bar {
+        fill: #90cdf4;
+      }
+      /* Preliminary days (today + yesterday, see PROVISIONAL_DAYS): hatched
+         and lighter, because their counts usually still climb as late or
+         reviewed events are added. The fill is an SVG <pattern> defined in
+         renderSparkline(). */
+      .spark-bar--prelim {
+        fill: url(#sparkPrelimHatch);
+        stroke: #90cdf4;
+        stroke-width: 0.4;
+      }
+      /* Typical daily range (middle 50% of complete days in the retained
+         history), drawn behind the bars. */
+      .spark-baseline-band {
+        fill: #a0aec0;
+        fill-opacity: 0.22;
+      }
+      .spark-baseline-median {
+        stroke: #a0aec0;
+        stroke-width: 0.5;
+        stroke-dasharray: 1 1;
+        pointer-events: none;
+      }
+      /* Band swatch with the dotted median line through it. */
+      .spark-legend-band {
+        display: inline-block;
+        width: 12px;
+        height: 7px;
+        border-radius: 1px;
+        background:
+          repeating-linear-gradient(
+              to right,
+              #a0aec0 0 1px,
+              transparent 1px 2px
+            )
+            center / 100% 1px no-repeat,
+          rgba(160, 174, 192, 0.32);
+      }
+      .spark-legend-prelim {
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-radius: 1px;
+        border: 0.5px solid #90cdf4;
+        background: repeating-linear-gradient(
+          45deg,
+          #d9eefc 0 1.5px,
+          #90cdf4 1.5px 2.5px
+        );
+      }
+      /* US/AK M5.8-6.9 (reduced Event Plots / GMV trigger region), stacked
+         below the M6+/M7+ dots. Teal so it can't be mistaken for the M6+
+         red. */
+      .spark-dot-us {
+        fill: #0d9488;
+        stroke: #fff;
+        stroke-width: 0.4;
+      }
+      .spark-dot-pick {
+        cursor: pointer;
+      }
+      .spark-dot-high {
+        fill: #c53030;
+        stroke: #fff;
+        stroke-width: 0.4;
+      }
+      .spark-dot-major {
+        fill: #6b21a8;
+        stroke: #fff;
+        stroke-width: 0.7;
+      }
+      /* Outer ring of the M7+ marker (white gap = the diamond's stroke). */
+      .spark-dot-major-ring {
+        fill: #fff;
+        stroke: #6b21a8;
+        stroke-width: 0.5;
+      }
+      /* Linked highlight: chart markers for the day of a hovered list row,
+         map circle or marker (see setLinkedHighlight()). */
+      .spark-dot-us.is-linked,
+      .spark-dot-high.is-linked,
+      .spark-dot-major.is-linked,
+      .spark-dot-major-ring.is-linked {
+        stroke: #2b6cb0;
+        stroke-width: 0.9;
+      }
+      .spark-star-marker.is-linked {
+        stroke: #2b6cb0;
+        stroke-width: 0.3;
+      }
+      /* Replaces one M6+/M7+ dot on the starred event's own day (see
+         starDotIdx in renderSparkline) - blue, matching
+         .legend-star/.event-star-icon elsewhere, sized to read clearly
+         at this chart's small scale. */
+      .spark-star-marker {
+        fill: #2b6cb0;
+        font-size: 4.5px;
+        paint-order: stroke;
+        stroke: #fff;
+        stroke-width: 0.6px;
+      }
+      .spark-y-tick {
+        stroke: #a0aec0;
+        stroke-width: 0.6;
+      }
+      /* Monday (UTC) and Today ticks under the x-axis baseline. */
+      .spark-week-tick {
+        stroke: #a0aec0;
+        stroke-width: 0.6;
+      }
+      .spark-zero-line {
+        stroke: #cbd5e0;
+        stroke-width: 1;
+      }
+      .spark-axis-title {
+        font-size: 4.3px;
+        fill: #718096;
+        font-family: inherit;
+        letter-spacing: 0.02em;
+      }
+      .spark-axis-label-y {
+        font-size: 5.5px;
+        fill: #a0aec0;
+        font-family: inherit;
+      }
+      .spark-axis-label-x {
+        font-size: 5.5px;
+        fill: #a0aec0;
+        font-family: inherit;
+        text-anchor: middle;
+      }
+
+      /* Heatmap column, sized to roughly match the recent-events-map width
+         so the two panels line up visually. Min-height is tuned to match
+         the chart's rendered height at typical panel widths. */
+      /* Same 256px-minimum reasoning as .recent-events-map above (this
+         map shares the same minZoom: 0 and syncs its view from that
+         one) - a narrower container clips the full longitude range
+         regardless of JS-side zoom/bounds tuning. */
+      .activity-heatmap-wrap {
+        flex: 0 0 280px; /* keep in sync with --map-col-w */
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        position: relative;
+      }
+      .activity-heatmap-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+      .activity-heatmap-legend {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.6rem;
+        color: #718096;
+      }
+      /* Short line (not a dot, unlike the sparkline legend) since this
+         represents the plate-boundary overlay's line style, not a point. */
+      .heatmap-legend-swatch {
+        display: inline-block;
+        width: 12px;
+        height: 0;
+        border-top: 1.5px solid #2b83ba;
+        opacity: 0.7;
+      }
+      /* World-shaped box: the framed world (WORLD_VIEW_BOUNDS, 78°N to
+         58°S) is about 1.8 : 1 at full width, so a box this shape shows
+         all of it. It used to stretch to the chart's height, ending up
+         ~3 : 1, which cropped the north and especially the south. */
+      .activity-heatmap {
+        flex: 0 0 auto;
+        width: 100%;
+        aspect-ratio: 7 / 4;
+        border: 1px solid #cbd5e0;
+        border-radius: 6px;
+        overflow: hidden;
+        background: #eef2f5;
+      }
+      /* Overlay controls for the epicenter-density time-lapse. Positioned
+         relative to the wrap (not the map div itself) so they sit in the
+         map's bottom corners without needing to be nested inside Leaflet's
+         own DOM. */
+      .activity-heatmap-datelabel {
+        position: absolute;
+        left: 6px;
+        bottom: 6px;
+        background: rgba(255, 255, 255, 0.88);
+        color: #4a5568;
+        font-size: 0.65rem;
+        font-weight: 600;
+        padding: 1px 6px;
+        border-radius: 4px;
+        pointer-events: none;
+        z-index: 500;
+        white-space: nowrap;
+      }
+      .activity-heatmap-playtoggle {
+        position: absolute;
+        right: 6px;
+        bottom: 6px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid #cbd5e0;
+        background: rgba(255, 255, 255, 0.92);
+        color: #4a5568;
+        font-size: 0.5rem;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 500;
+        padding: 0;
+      }
+      .activity-heatmap-playtoggle:hover {
+        background: #fff;
+        border-color: #2b6cb0;
+        color: #2b6cb0;
+      }
+      @media (max-width: 640px) {
+        .activity-chart-row {
+          flex-direction: column;
+        }
+        .activity-heatmap-wrap {
+          flex: 0 0 auto;
+          width: 100%;
+        }
+        /* Phones: same 7 : 4 shape at full width. */
+      }
+
+      .legend-dot--latest {
+        background: #c53030;
+        border: 1px solid #9b2c2c;
+      }
+
+      /* Map marker for the "latest checked" event (Leaflet divIcon) */
+      .latest-marker-icon {
+        position: relative;
+      }
+      .latest-marker-dot {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #c53030;
+        border: 1px solid #9b2c2c;
+      }
+      .latest-marker-pulse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: rgba(197, 48, 48, 0.55);
+        animation: latest-marker-pulse 1.8s ease-out infinite;
+      }
+      @keyframes latest-marker-pulse {
+        0% {
+          transform: scale(0.4);
+          opacity: 0.9;
+        }
+        100% {
+          transform: scale(1.9);
+          opacity: 0;
+        }
+      }
+
+      /* Map marker (Leaflet divIcon) for the location of the event whose
+         Event Plots images (station map + wavefield) are currently
+         displayed - see setEventPlotsStarEvent(). Blue to match the blue
+         star the station-map image itself already uses for the event
+         location. A white halo keeps the glyph legible over both the
+         ocean-blue and land-tan basemap colors without needing a
+         background shape. */
+      .event-star-icon {
+        color: #2b6cb0;
+        font-size: 20px;
+        line-height: 1;
+        text-align: center;
+        text-shadow:
+          0 0 2px #fff,
+          0 0 2px #fff,
+          0 0 3px #fff;
+        pointer-events: none;
+      }
+
+      /* --- Retired products disclosure --- */
+      .retired-details {
+        margin: 0.25rem 0 0.5rem;
+      }
+      .retired-details > summary {
+        cursor: pointer;
+        font-size: 0.85rem;
+        color: #4a5568;
+        padding: 0.3rem 0;
+      }
+      .retired-details .panel {
+        opacity: 0.75;
+      }
+      .retired-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.5rem;
+        align-items: start;
+      }
+      .retired-cell {
+        min-width: 0;
+      }
+      .retired-cell.span-2 {
+        grid-column: 1 / -1;
+      }
+      @media (max-width: 640px) {
+        .retired-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      /* --- Live Seismicity: Global seismicity, Recent events and Products
+         in production framed as one section with its own title bar
+         (styled like the product cards' grey header bars), above the
+         Event-Based Products heading that introduces the cards. --- */
+      /* Stop iOS Safari's text autosizing from enlarging some blocks of
+         the panel (e.g. the credits line under the event list) on phones. */
+      .live-seismicity {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+      }
+      .live-seismicity {
+        margin: 0.25rem 0 1.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background: #fbfcfe;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+        text-align: left;
+      }
+      .live-seismicity-clock {
+        font-size: 0.85rem;
+        color: #4a5568;
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+      }
+      /* "· updated 3 min ago" after the clock; amber when the feed looks
+         stale or the last refresh failed (see updateFeedFreshness()). */
+      /* Let the freshness note wrap under the clock on narrow screens
+         instead of overflowing; each part stays on one line. */
+      .live-seismicity-clock {
+        white-space: normal;
+      }
+      #latestCheckedCurrentTime,
+      .feed-freshness {
+        white-space: nowrap;
+      }
+      .feed-freshness {
+        display: inline-block;
+        margin-left: 0.4rem;
+        color: #5a6577;
+        font-size: 0.78rem;
+      }
+      .feed-freshness.is-stale {
+        color: #b7791f;
+        font-weight: 600;
+      }
+      /* Tap-to-show tooltip for touch devices (no hover), filled from the
+         same title text desktop users see on hover. */
+      .touch-tip {
+        position: fixed;
+        z-index: 10000;
+        max-width: min(280px, calc(100vw - 16px));
+        padding: 0.4rem 0.55rem;
+        background: #2d3748;
+        color: #fff;
+        font-size: 0.78rem;
+        line-height: 1.35;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        pointer-events: none;
+      }
+      .touch-tip[hidden] {
+        display: none;
+      }
+      .live-seismicity-body {
+        padding: 0.6rem 0.75rem 0.4rem;
+      }
+      .live-seismicity .pipeline-summary {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-wrap">
+      <!-- Branding & Quicklinks -->
+      <div
+        data-include="static/partials/header.html"
+        data-title="NSF NGF Seismology Data Products"
+        data-subtitle="Data Products Portal"
+        data-right-logo-src="static/images/ES_logo.jpg"
+        data-right-logo-href="./"
+      ></div>
+
+      <!-- Collapsible description -->
+      <section class="dp-intro">
+        <h3>
+          NSF NGF Seismology Data Products<sup
+            ><a href="#ref-1" class="citation-ref">[1]</a><a
+              href="#ref-2"
+              class="citation-ref"
+              >[2]</a
+            ></sup
+          >
+        </h3>
+        <p>
+          Data products derived from raw data are produced by both the broader
+          <strong>scientific community</strong> and
+          <strong>EarthScope Data Services (DS)</strong>. These
+          <strong>value-added products</strong> are created through additional
+          processing, analysis, and interpretation of raw observations from
+          <strong
+            >seismic, magnetotelluric, and other geophysical
+            instrumentation</strong
+          >
+          supported under the NSF NGF, often to address specific scientific
+          questions or to support particular applications. They complement more
+          basic <strong>raw-data offerings</strong>&mdash;such as
+          <strong>event-segmented waveforms</strong>&mdash;which are distributed
+          through the DS&rsquo;s
+          <strong>traditional data access mechanisms</strong>.
+        </p>
+
+        <p id="dpIntroMore" class="dp-intro-more" hidden>
+          To help users navigate this <strong>diverse set of resources</strong>,
+          EarthScope DS organizes its data products into three primary groupings
+          based on how they are generated, maintained, and used:
+          <strong>Event-Based Products</strong>,
+          <strong>Active Products</strong>, and
+          <strong>Static (Non-Updating) Products</strong>.
+          <strong>Event-Based Products</strong> are produced in response to
+          individual seismic events. <strong>Active Products</strong> are
+          continuously maintained or updated as new data become available.
+          <strong>Static (Non-Updating) Products</strong> represent completed
+          analyses or long-term reference datasets that do not change over time.
+          These groupings are intended to make it easier for users to
+          <strong>discover relevant products</strong> and understand how each
+          fits within the broader <strong>EarthScope DS data ecosystem</strong>.
+        </p>
+        <div>
+          <button
+            type="button"
+            class="desc-toggle"
+            id="dpMoreToggle"
+            aria-expanded="false"
+            aria-controls="dpIntroMore"
+          >
+            more&hellip;
+          </button>
+        </div>
+      </section>
+
+      <table class="product-grid">
+        <thead>
+          <tr>
+            <th colspan="2" class="product-grid-title">NSF NGF Seismology Data Products</th>
+          </tr>
+        </thead>
+        <!-- Section menu: introduces the four sections and jumps to them.
+             A body cell (<td>), not a header cell: Safari squeezed it as a
+             <th>. Its own <tbody>, so renderProductsGrid() (which clears
+             #productGridBody) leaves it alone. A pinned copy follows the
+             page once it scrolls away - see initSectionNav(). -->
+        <tbody class="section-nav-body">
+          <tr>
+            <td colspan="2" class="section-nav-cell">
+              <nav class="section-nav" id="sectionNav" aria-label="Page sections">
+                <a class="section-nav-item" href="#section-recent" data-section-target="section-recent">
+                  <span class="section-nav-name">Recent Seismicity</span>
+                  <span class="section-nav-desc">Latest significant earthquakes and their products</span>
+                </a>
+                <a class="section-nav-item" href="#section-event" data-section-target="section-event">
+                  <span class="section-nav-name">Event-Based Products<span class="section-nav-count" data-section-count="event"></span></span>
+                  <span class="section-nav-desc">Produced for individual earthquakes</span>
+                </a>
+                <a class="section-nav-item" href="#section-active" data-section-target="section-active">
+                  <span class="section-nav-name">Active Products<span class="section-nav-count" data-section-count="active"></span></span>
+                  <span class="section-nav-desc">Maintained and updated as new data arrive</span>
+                </a>
+                <a class="section-nav-item" href="#section-other" data-section-target="section-other">
+                  <span class="section-nav-name">Static Products<span class="section-nav-count" data-section-count="other"></span></span>
+                  <span class="section-nav-desc">Completed analyses and reference datasets</span>
+                </a>
+              </nav>
+            </td>
+          </tr>
+        </tbody>
+        <tbody id="productGridBody">
+          <!-- Rows will be injected by JavaScript -->
+        </tbody>
+      </table>
+
+      <!-- Footer -->
+      <footer class="site-footer small-text">
+        <h3>Citations and References</h3>
+        <ol>
+          <li id="ref-1">
+            Trabant, C., Hutko, A. R., Bahavar, M., Karstens, R., Ahern, T.,
+            &amp; Aster, R. (2012). Data Products at the IRIS DMC: Stepping
+            Stones for Research and Other Applications.
+            <em>Seismological Research Letters</em>, 83(5), 846–854.
+            <a href="https://doi.org/10.1785/0220120032"
+              >https://doi.org/10.1785/0220120032</a
+            >
+          </li>
+          <li id="ref-2">
+            EarthScope DS (2011), NSF NGF Seismology Data Products: EventPlots,
+            Maps, record sections &amp; other plots for M6.0+ events.
+            <a href="https://doi.org/10.17611/dp/ep.1"
+              >https://doi.org/10.17611/dp/ep.1</a
+            >
+          </li>
+          <li id="ref-3">
+            Data:
+            <a
+              href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson"
+              target="_blank"
+              rel="noopener"
+              >USGS Earthquake Hazards Program</a
+            >
+            — M2.5+ earthquakes, past 30 days.
+          </li>
+          <li id="ref-4">
+            Focal mechanisms (beachballs):
+            <a href="https://www.globalcmt.org/" target="_blank" rel="noopener"
+              >Global Centroid-Moment-Tensor (CMT) Project</a
+            >.
+          </li>
+        </ol>
+      </footer>
+    </div>
+    <script src="static/js/landing-page.js?v=20261101"></script>
+
+    <!-- data-include -->
+    <!-- Shared per-event helpers (buildFocalMechanismUrl, urlExists, etc.)
+         reused here to build GCMT beachball URLs the same way the
+         individual *_event.html pages do (see gmv_event.html for the
+         reference load order this mirrors). runtime-config.js must load
+         first: seismo-event.js reads window.RUNTIME_CONFIG.s3Prefixes at
+         its top level to resolve the S3 bucket for buildFocalMechanismUrl.
+         Both deferred (rather than gmv_event.html's blocking tags) since
+         our usage only happens inside the DOMContentLoaded handler below,
+         and deferred scripts are guaranteed to finish, in this relative
+         order, before that event fires. -->
+    <!-- This page only uses seismo-event.js's shared helpers, so skip its
+         event-page bootstrap (which would time out waiting for an S3 path
+         and log an error). -->
+    <script>
+      window.SEISMO_EVENT_LIBRARY_ONLY = true;
+    </script>
+    <script src="static/js/runtime-config.js?v=20261023" defer></script>
+    <script src="static/js/seismo-event.js?v=20261022b" defer></script>
+    <script src="static/js/common/includes.js?v=20261023" defer></script>
+
+    <!-- Show/hide the second NSF NGF Seismology Data Products paragraph -->
+    <script>
+      (function () {
+        var btn = document.getElementById("dpMoreToggle");
+        var more = document.getElementById("dpIntroMore");
+        if (!btn || !more) return;
+        btn.addEventListener("click", function () {
+          var willOpen = more.hasAttribute("hidden");
+          if (willOpen) {
+            more.removeAttribute("hidden");
+            btn.setAttribute("aria-expanded", "true");
+            btn.textContent = "less";
+          } else {
+            more.setAttribute("hidden", "");
+            btn.setAttribute("aria-expanded", "false");
+            btn.textContent = "more\u2026";
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,827 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html lang="en">
+<head>
+<title>NCEP Meteorological Assimilation Data Ingest System (MADIS)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">    
+<meta name="author" content="MADIS Support Team">
+<link href="css/header.css" rel="stylesheet" type="text/css" >
+<!--<script type="text/javascript" src="/js/ForecastSearch.js"></script>-->
+
+    <!-- site-wide style sheets -->
+    <link rel="stylesheet" type="text/css" href="css/ncepmadis.css" media="all">
+    
+<!--    <link rel="stylesheet" type="text/css" href="css/print.css" media="print">-->
+    
+    <!-- A style sheet for submenus of submenus -->
+<!--    <link rel="stylesheet" type="text/css" href="css/gsd-more-submenus.css" media="all">-->
+    
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/gsd/css/ie.css" media="all"><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/gsd/css/ie7.css" media="all"><![endif]-->
+
+<script type="text/javascript" src="css/ie.js"></script>
+    
+<script id="_fed_an_js_tag" type="text/javascript" src="/federated-analytics.js?agency=OAR&amp;sub-agency=ESRLGSD&amp;sp=find&amp;yt=true"></script>
+
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="TMPC9-DCHA2-45L6L-3A6SC-8WMVB",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"TMPC9-DCHA2-45L6L-3A6SC-8WMVB";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="qyqup4ax2fklo2xf6ibq-f-12127d6ea-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1320759","ak.ai":parseInt("795019",10),"ak.ol":"0","ak.cr":1,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"136b72da","ak.r":46469,"ak.a2":n,"ak.m":"dscg","ak.n":"essl","ak.cport":9234,"ak.gh":"23.201.193.133","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1793454595","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==cr6E4RqGENn3jFf7mVkhplp9/7W1BCKKymWGkTU35SBho7gVREov1XH2PGZGlN1bGlrkSOA6WUYj1n/uUgeZQ8/UdPP1PVg6i/RWFR6FEmlPKcoV3Gg9hi40d+78ubuIaO7tR1Qk4XeV7tx28LEkeQdml5dDyVPXcWS+/A/lGW7Rrm6uSHvXMxb0ROxtMwjlDXZQaAkWYrish3xDr13yVnEYzPULgDCgIP+1a8sVGpDl2KpBm6fxci6vnSGXv1wtDT8KxkS2fJL0AM1APHNTA+PQcwkcrk1AqM2mj+4KfQEe0jm7yWk4pM9AqMITuGvaInmlnut+sPEI+CEekCGRelY8eNqKe5jsIzwphPeEyNZfDMnEFqwUN5tk6U4i4gfnknGELqAr/SH3Sz+jsH9lL45RnkOzl7SD41UVS19JCkA=","ak.pv":"4","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+<!--<body onload="startList()">-->
+
+<div id="container">
+<div class="header">
+
+  <div class="header-content">
+    <a href="https://www.noaa.gov" class="header-noaa-icon"><img src="images/header-noaa.png" alt="NOAA"></a>
+    <a href="https://www.weather.gov" class="header-nws-icon"><img src="images/header-nws.png" alt="NOAA"></a>
+    <a href="https://www.commerce.gov" class="header-doc"><img src="images/header_doc.png" alt="United States Department of Commerce"></a>
+    <div class="header-center-text"><a class="header-center-text" href="https://www.nco.ncep.noaa.gov">NCEP CENTRAL OPERATIONS</a></div>
+    <div class="header-noaa-text"><a class="header-noaa-text" href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a></div>
+  </div>
+</div>
+<div class="header-shadow"><div class="header-shadow-content"></div></div>
+
+     <!-- end major_header -->
+
+  <!-- major navigation -->
+<!-- Top Menu Navigation -->
+<div class="topnav">
+  <ul id="topnav">
+
+    <!-- Home Link -->
+    <li>
+      <div class="section-link">
+        <a href="#">home</a>
+      </div>
+    </li>
+
+    <!-- News Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/news">news</a>
+      </div>
+      <div class="drop">
+        <ul>
+          <li><a href="https://www.weather.gov/news">NWS News</a></li>
+          <li><a href="https://www.nws.noaa.gov/com/weatherreadynation/calendar.html">Events</a></li>
+          <li><a href="https://www.weather.gov/socialmedia">Social Media</a></li>
+          <li><a href="https://www.nws.noaa.gov/om/brochures.shtml">Pubs/Brochures/Booklets</a></li>
+          <li><a href="https://www.noaa.gov/NOAA-Communications">NWS Media Contacts</a></li>
+        </ul>
+      </div>
+    </li>
+
+    <!-- Search Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/search">search</a>
+      </div>
+      <div class="drop">
+        <div class="site-search">
+          <form method="get" action="https://search.usa.gov/search" style="margin-bottom: 0; margin-top: 0;">
+            <input type="hidden" name="v:project" value="firstgov">
+            <label for="query">Search For</label>
+            <input type="text" name="query" id="query" size="12" >
+            <input type="submit" value="Go" >
+            <p>
+              <input type="radio" name="affiliate" checked="checked" value="nws.noaa.gov" id="nws" >
+              <label for="nws" class="search-scope">NWS</label>
+              <input type="radio" name="affiliate" value="noaa.gov" id="noaa" >
+              <label for="noaa" class="search-scope">All NOAA</label>
+            </p>
+          </form>
+        </div>
+      </div>
+    </li>
+
+    <!-- Forecast Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/search">forecast</a>
+      </div>
+      <div class="drop">
+        <div id="forecast-lookup" class="site-search">
+          <form name="getForecast" id="getForecast" action="https://forecast.weather.gov/zipcity.php" method="get">
+            <label for="inputstring">Local forecast by <br>"City, St" or ZIP code</label>
+            <input id="inputstring" name="inputstring" type="text" size="12" value="Enter location ..." onclick="this.value=''" >
+            <input name="btnSearch" id="btnSearch" type="submit" value="Go" >
+            <div id="txtError">
+            <div id="errorNoResults" style="display:none;">Sorry, the location you searched for was not found. Please try another search.</div>
+            <div id="errorMultipleResults" style="display:none">Multiple locations were found. Please select one of the following:</div>
+            <div id="errorChoices" style="display:none"></div>
+              <input id="btnCloseError" type="button" value="Close" style="display:none" >
+            </div>
+            <div id="txtHelp"><a style="text-decoration: underline;" href="javascript:void(window.open('https://weather.gov/ForecastSearchHelp.html','locsearchhelp','status=0,toolbar=0,location=0,menubar=0,directories=0,resizable=1,scrollbars=1,height=500,width=530').focus());">Location Help</a></div>
+          </form>
+                        </div><!-- <div id="forecast-lookup"> -->
+          </div><!-- <div class="drop"> -->
+    </li>
+    <!-- About Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/about">about</a>
+      </div>
+      <div class="drop">
+          <ul>
+            <li><a href="https://www.weather.gov/about">About NWS</a></li>
+            <li><a href="https://www.weather.gov/organization">Organization</a></li>
+            <li><a href="https://sites.google.com/a/noaa.gov/nws-best-practices/">For NWS Employees</a></li>
+            <li><a href="https://www.weather.gov/international/">International</a></li>
+            <li><a href="https://www.weather.gov/organization/ncep">National Centers</a></li>
+            <li><a href="https://www.nws.noaa.gov/tg/">Products and Services</a></li>
+            <li><a href="https://www.weather.gov/contact">Contact Us</a></li>
+            <li><a href="https://w1.weather.gov/glossary/">Glossary</a></li>
+          </ul>
+        </div>
+    </li>
+
+  </ul><!-- End of top nav ul -->
+</div><!-- End of topnav div -->
+
+</div> <!-- end banner -->
+
+<div id="pbody">
+    <!-- minor navigation -->
+            <div style="width:160px" id="minor_nav">
+
+<!--<br>-->
+<ul style="word-wrap:break-word" id="vertnav">
+<br>
+   <li><a href="index.shtml">MADIS Home</a></li>
+</ul>
+<dl>
+ <dt>News</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <li><a href="madis_recent.shtml">What's Here - v4.0!</a></li>
+<!-- <li><a href="madis_comingsoon.shtml">What's Coming?</a></li>
+-->
+</ul>
+<dl>
+<dt>Data Information</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">  
+ <li><a href="madis_datasets.shtml">Overview</a></li>
+ <li>Descriptions&nbsp;&nbsp;>
+    <ul>
+       <li><a href="madis_sfc.shtml"><font color="FFFF66">Meteorological Surface</font></a></li>
+       <li class="indented_vertnav"><a href="madis_mesonet.shtml">Integrated Mesonet</a></li>
+       <li class="indented_vertnav"><a href="madis_cwop.shtml">Citizen Weather Observer Program (CWOP)</a></li>
+       <li class="indented_vertnav"><a href="madis_rwis_clarus.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+       <li class="indented_vertnav"><a href="national_mesonet.shtml">National Mesonet</a></li>
+       <li class="indented_vertnav"><a href="madis_metar.shtml">METAR</a></li>
+       <!--<li class="indented_vertnav"><a href="madis_OMO.shtml">1-minute ASOS</a></li>
+       --><li class="indented_vertnav"><a href="madis_maritime.shtml">Maritime</a></li>
+	<li class="indented_vertnav"><a href="madis_wxtelematics.shtml">Weather Telematics</a></li>
+       <li class="indented_vertnav"><a href="madis_nepp.shtml">New England Pilot Project (NEPP)</a></li>
+       <li class="indented_vertnav"><a href="madis_crn.shtml">Climate Reference Network (CRN)</a></li>
+       <li class="indented_vertnav"><a href="madis_ushcn.shtml">U.S. Climatology Net-Modernization (USHCN-M)</a></li>
+       <li><a href="madis_hydro.shtml"><font color="FFFF66">Hydrologic Surface</font></a></li>
+       <li><a href="madis_raob.shtml"><font color="FFFF66">Radiosonde</font></a></li>
+       <li><a href="madis_npn.shtml"><font color="FFFF66">NOAA Profiler Network</font></a></li>
+       <li><a href="madis_gpsmet.shtml"><font color="FFFF66">GPS-Met</font></a></li>
+       <li><a href="madis_acars.shtml"><font color="FFFF66">Aircraft Based </font></a></li>
+       <li><a href="madis_map.shtml"><font color="FFFF66">Multi-Agency Profiler (CAP)</font></a></li>
+       <li><a href="madis_rdmtr.shtml"><font color="FFFF66">Radiometer</font></a></li>
+       <li><a href="madis_satwnd.shtml"><font color="FFFF66">Satellite Wind</font></a></li>
+       <li><a href="madis_satsnd.shtml"><font color="FFFF66">Satellite Sounding</font></a></li>
+       <li><a href="madis_satrad.shtml"><font color="FFFF66">Satellite Radiance</font></a></li>
+       <li><a href="madis_snow.shtml"><font color="FFFF66">Snow</font></a></li>
+       <li><a href="madis_gapfillua.shtml"><font color="FFFF66">Gap-filling Upper Air</font></a></li>
+<!--       <li><a href="madis_wisdom.shtml"><font color="FFFF66">WISDOM Balloon Wind</font></a></li>-->
+       <li><a href="madis_RSAS.shtml"><font color="FFFF66">RSAS Sfc Analyses Grids</font></a></li>
+    </ul>
+ </li> 
+ <li>Variables&nbsp;&nbsp;>
+    <ul>
+       <li><font color="FFFF66">Meteorological Surface</font></li>
+       <li class="indented_vertnav"><a href="sfc_mesonet_variable_list.shtml">Mesonet/RWIS/National Mesonet</a></li>
+       <!--<li class="indented_vertnav"><a href="sfc_mesonet_variable_list.shtml">Citizen Weather Observer Program (CWOP)</a></li>
+       <li class="indented_vertnav"><a href="madis_rwis_variable_list.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+      --> <li class="indented_vertnav"><a href="sfc_urbanet_variable_list.shtml">National Mesonet Extended</a></li>
+       <li class="indented_vertnav"><a href="sfc_metar_variable_list.shtml">METAR (standard)</a></li>
+       <!--<li class="indented_vertnav"><a href="sfc_OMO_variable_list.shtml">1-minute ASOS</a></li>
+       --><li class="indented_vertnav"><a href="sfc_sao_variable_list.shtml">SAO</a></li>
+       <li class="indented_vertnav"><a href="sfc_maritime_variable_list.shtml">Maritime</a></li>
+	<li class="indented_vertnav"><a href="sfc_mobile_variable_list.shtml">Weather Telematics</a></li>
+       <li class="indented_vertnav"><a href="sfc_crn_variable_list.shtml">Climate Reference Network</a></li>
+       <li class="indented_vertnav"><a href="sfc_hcn_variable_list.shtml">Historical Climatology Network</a></li>
+       <li class="indented_vertnav"><a href="sfc_nepp_variable_list.shtml">New England Pilot Project</a></li>
+       <li><a href="hydro_variable_list.shtml"><font color="FFFF66">Hydrologic Surface</font></a></li>
+       <li><a href="raob_variable_list.shtml"><font color="FFFF66">Radiosonde</font></a></li>
+       <li><a href="npn_variable_list.shtml"><font color="FFFF66">NOAA Profiler Network</font></a></li>
+       <li><a href="gpsmet_variable_list.shtml"><font color="FFFF66">GPS-Met</font></a></li>
+       <li><a href="acars_variable_list.shtml"><font color="FFFF66">Aircraft Based</font></a></li>
+       <li><a href="acarsp_variable_list.shtml"><font color="FFFF66">Aircraft Based Profiles</font></a></li>
+       <li><a href="map_variable_list.shtml"><font color="FFFF66">Multi-Agency Profiler (CAP)</font></a></li>
+       <li><a href="rdmtr_variable_list.shtml"><font color="FFFF66">Radiometer</font></a></li>
+       <li><a href="satwnd_variable_list.shtml"><font color="FFFF66">Satellite Wind</font></a></li>
+       <li><a href="satsnd_variable_list.shtml"><font color="FFFF66">Satellite Sounding</font></a></li>
+       <li><a href="satrad_variable_list.shtml"><font color="FFFF66">Satellite Radiance</font></a></li>
+       <li><a href="snow_variable_list.shtml"><font color="FFFF66">Snow</font></a></li>
+       <li><a href="gapfillua_variable_list.shtml"><font color="FFFF66">Gap-filling Upper Air</font></a></li>
+<!--       <li><a href="wisdom_variable_list.shtml"><font color="FFFF66">WISDOM Balloon Wind</font></a></li>-->
+       <li><a href="rsas_variable_list.shtml"><font color="FFFF66">RSAS Sfc Analyses Grids</font></a></li>
+     </ul>
+ </li>
+ <li>Variables Metadata&nbsp;&nbsp;>
+    <ul>
+       <li><font color="FFFF66">Integrated Mesonet</font>
+       <li class="indented_vertnav"><a href="mesonet_precip.shtml">Precipitation</a></li>
+       <li class="indented_vertnav"><a href="mesonet_solar_radiation.shtml">Solar Radiation</a></li>
+       <li class="indented_vertnav"><a href="mesonet_soil_temperature.shtml">Soil Temperature</a></li>
+       <li class="indented_vertnav"><a href="mesonet_soil_moisture.shtml">Soil Moisture</a></li>
+    </li>
+       <li><font color="FFFF66">National Mesonet</font>
+       <li class="indented_vertnav"><a href="nmesonet_precip.shtml">Precipitation</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_solar_radiation.shtml">Solar Radiation</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_soil_temperature.shtml">Soil Temperature</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_soil_moisture.shtml">Soil Moisture</a></li>
+    </li>
+       <li><font color="FFFF66">OMO One Minute ASOS (HFMETAR)</font>
+       <li class="indented_vertnav"><a href="omo_precip.shtml">Precipitation</a></li>
+    </li>
+   </ul>
+<li>Quality Control&nbsp;&nbsp;>
+    <ul>
+   <li><a href="madis_qc.shtml">Overview</font></a></li>
+       <li><a href="madis_sfc_qc.shtml">Meteorological Surface</a></li>
+       <li><a href="madis_rwis_qc.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+       <li><a href="madis_hydro_qc.shtml">Hydrologic Surface</a></li>
+       <li><a href="madis_raob_qc.shtml">Radiosonde</a></li>
+       <li><a href="madis_npn_qc.shtml">NOAA Profiler Network</a></li>
+       <li><a href="madis_sfc_qc.shtml">Weather Telematics</a></li>
+       <li><a href="madis_acars_qc.shtml">Aircraft Based</a></li>
+       <li><a href="madis_acarsp_qc.shtml">Aircraft Based Profiles</a></li>
+       <li><a href="madis_map_qc.shtml">Multi-Agency Profiler (CAP)</a></li>
+       <li><a href="madis_rdmtr_qc.shtml">Radiometer</a></li>
+       <li><a href="madis_satwnd_qc.shtml">Satellite Wind</a></li>
+       <li><a href="madis_satsnd_qc.shtml">Satellite Sounding</a></li>
+       <li><a href="madis_snow_qc.shtml">Snow</a></li>
+       <li><a href="madis_gapfillua_qc.shtml">Gap-filling Upper Air</a></li>
+       <li><a href="madis_RSAS_qc.shtml">RSAS Surface Analysis</a>
+<!--	<li><a href="madis-data/qcms_messages.html">QC Summary Messages</a>
+    -->
+</ul>
+ </li>
+ <li>Restrictions&nbsp;&nbsp;>
+    <ul>
+       <li><a href="madis_restrictions.shtml">Overview</a></li>
+       <li><a href="mesonet_providers.shtml">Meteorological Surface</a></li>
+       <li><a href="hydro_providers.shtml">Hydrologic Surface</a></li>
+       <li><a href="acars_restrictions.shtml">Aircraft Based</a></li>
+    </ul>
+ </li>
+ <li><a href="MADISdataissues.shtml">Known Data Issues</a></li>
+</ul>
+<dl>
+<dt>User Access</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <!--<li><a href="user_resources.shtml">Overview</a></li>
+--> 
+<li><a href="data_application.shtml">Data Application Form</a></li>
+<li><!--<a href="https://madis-hweb.ncep.noaa.gov:8005/htdocs/index.shtml">--><a href="https://madis-data.ncep.noaa.gov/index.shtml">MADIS Distribution Services</a></li>
+<li><!--<a href="https://madis-hweb.ncep.noaa.gov:8005/htdocs/wmo_gdc.shtml">--><a href="https://madis-data.ncep.noaa.gov/wmo_gdc.shtml">GDC-ABO</a></li>
+<li><a href="https://madis-idm.ncep.noaa.gov/reset">Password Reset</a></li>
+</ul>
+<dl>
+<dt>Provider Information</dt>
+<ul style="word-wrap:break-word" id="vertnav">
+ <!--<li><a href="provider_resources.shtml">Overview</a></li>
+ <li><a href="network_info.shtml">Surface Provider List</a></li>
+--> 
+<li><a href="provider_resources.shtml">Overview</a></li>
+ <li><a href="mesonet_providers.shtml">Meteorological Surface</a></li>
+ <!--<li><a href="nmesonet_providers.shtml">National Mesonet/UrbaNet</a></li>-->
+ <li><a href="hydro_providers.shtml">Hydrological Surface</a></li>
+ <li><a href="map_providers.shtml">Multi-Agency Profiler (CAP)</a></li>
+ <!--<li><a href="rdmtr_providers.shtml">Radiometer</a></li>
+ -->
+<li><a href="snow_providers.shtml">Snow</a></li>
+<li><a href="madistosynoptic.shtml">Transitions to SYNOPTIC</a></li>
+ <!--<li>Quality Control&nbsp;&nbsp;>
+   <ul>
+ <li><a href="madis_smry_descrip.shtml">Summary</a></li>
+-->
+</ul>
+</dl>
+
+<dt>Support</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <li><a href="support_overview.shtml">Overview</a></li>
+ <li><a href="madis_monitoring.shtml">Data Outages</a></li>
+<!--
+ <li>FAQ&nbsp;&nbsp;>
+ <ul>
+     <li><a href="faq_accounts.shtml">Accounts</a></li>
+     <li><a href="faq_api.shtml">API</a></li>
+     <li><a href="faq_localization.shtml">AWIPS Localization</a></li>
+     <li><a href="faq_cwop.shtml">CWOP</a></li>
+     <li><a href="faq_datadisplay.shtml">Data Display</a></li>
+     <li><a href="faq_historicaldata.shtml">Historical Data</a></li>
+     <li><a href="faq_lastupdatetime.shtml">Last Update Time</a></li>
+     <li><a href="faq_netcdf.shtml">netCDF</a></li>
+     <li><a href="faq_providerdata.shtml">Provider Data</a></li>
+     <li><a href="faq_wfo.shtml">WFO</a></li>
+ </ul></li>
+-->
+ <li><a href="data_application.shtml#disclaimer">Disclaimer</a></li>
+ <li><a href="mailto:madis-support@noaa.gov">Contact Us</a></li>
+</ul>
+<dl>
+<dt>Related Links</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+<li><a href="https://gdc-abo.wmo.int/">WMO Global Data Center</a></li>
+<li><a href="https://madis-data.ncep.noaa.gov/index.shtml">MADIS Distribution Services</a></li>
+<li><a href="https://hads.ncep.noaa.gov/">HADS</a></li>
+<li><a href="https://amdar.ncep.noaa.gov/index.shtml">AMDAR</a></li>
+<li>&nbsp;</li>
+<li><a href="https://ruc.noaa.gov/amdar/">AMDAR Research</a></li>
+</li>
+<li>&nbsp;</li>
+</ul>
+</div>
+
+
+    <div id="content">
+    <a class="textvers" name="content_link">&nbsp;</a>
+
+
+<HTML>
+<HEAD>
+<TITLE>MADIS Multi-Agency Profiler (CAP) Variables</TITLE>
+   <META NAME="description" CONTENT="MADIS (Meteorological Assimilation Data Ingest System)">
+   <META NAME="keywords" CONTENT="METEOROLOGICAL DATA, meteorological data, WEATHER DATA, weather data, METEOROLOGICAL DATA ACCESS, meteorological data access, METEOROLOGICAL DATA ASSIMILATION, meteorological data assimilation">
+<META NAME="generator" CONTENT="txt2html v1.28">
+
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="TMPC9-DCHA2-45L6L-3A6SC-8WMVB",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"TMPC9-DCHA2-45L6L-3A6SC-8WMVB";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="qyqup4ax2fklo2xf6ibq-f-12127d6ea-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1320759","ak.ai":parseInt("795019",10),"ak.ol":"0","ak.cr":1,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"136b72da","ak.r":46469,"ak.a2":n,"ak.m":"dscg","ak.n":"essl","ak.cport":9234,"ak.gh":"23.201.193.133","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1793454595","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==cr6E4RqGENn3jFf7mVkhplp9/7W1BCKKymWGkTU35SBho7gVREov1XH2PGZGlN1bGlrkSOA6WUYj1n/uUgeZQ8/UdPP1PVg6i/RWFR6FEmlPKcoV3Gg9hi40d+78ubuIaO7tR1Qk4XeV7tx28LEkeQdml5dDyVPXcWS+/A/lGW7Rrm6uSHvXMxb0ROxtMwjlDXZQaAkWYrish3xDr13yVnEYzPULgDCgIP+1a8sVGpDl2KpBm6fxci6vnSGXv1wtDT8KxkS2fJL0AM1APHNTA+PQcwkcrk1AqM2mj+4KfQEe0jm7yWk4pM9AqMITuGvaInmlnut+sPEI+CEekCGRelY8eNqKe5jsIzwphPeEyNZfDMnEFqwUN5tk6U4i4gfnknGELqAr/SH3Sz+jsH9lL45RnkOzl7SD41UVS19JCkA=","ak.pv":"4","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></HEAD>
+<BODY TEXT="#333333" BGCOLOR="#FFFFFF">
+<p><H1>MADIS Multi-Agency Profiler (CAP) Variables</H1>
+<p>
+<br>
+<PRE>
+---------------------------------------------------------------------------------------------------
+Code       Name                                Units      Max     Notes      Max Number   Database
+                                                       QC Level*              of Levels  FSL  AWIPS
+---------------------------------------------------------------------------------------------------
+
+
+Integrated Profile                                                  <a href="upperair_notes.shtml#map01">1</a>           202  
+------------------
+
+DD        wind direction                       deg          2       <a href="upperair_notes.shtml#map03">3</a>                     X     X
+FF        wind speed                           m/s          2       <a href="upperair_notes.shtml#map03">3</a>                     X     X
+U         u wind component                     m/s          2       <a href="upperair_notes.shtml#map03">3</a>                     X     X
+V         v wind component                     m/s          2       <a href="upperair_notes.shtml#map03">3</a>                     X     X
+W         w wind component                     m/s          0       <a href="upperair_notes.shtml#map04">4</a>                     X     X
+TV        virtual temperature                  K            2                             X     X
+TVW       TV corrected for vertical wind       K            0                             X
+HT        geometric height                     m            0                             X     X
+P         pressure                             Pa           0       <a href="upperair_notes.shtml#map05">5</a>                     X     X
+CNOB1     consensus number       (Beam 1)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB1     signal-to-noise ratio  (Beam 1)      dB           0                             X
+RDVB1     radial velocity        (Beam 1)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+CNOB2     consensus number       (Beam 2)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB2     signal-to-noise ratio  (Beam 2)      dB           0                             X
+RDVB2     radial velocity        (Beam 2)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+CNOB3     consensus number       (Beam 3)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB3     signal-to-noise ratio  (Beam 3)      dB           0                             X
+RDVB3     radial velocity        (Beam 3)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+CNOB4     consensus number       (Beam 4)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB4     signal-to-noise ratio  (Beam 4)      dB           0                             X
+RDVB4     radial velocity        (Beam 4)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+CNOB5     consensus number       (Beam 5)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB5     signal-to-noise ratio  (Beam 5)      dB           0                             X
+RDVB5     radial velocity        (Beam 5)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+RW        RASS w wind component                m/s          0                             X
+RCNO      RASS consensus number                             0       <a href="upperair_notes.shtml#map06">6</a>                     X
+RSNR      RASS signal-to-noise ratio           dB           0                             X
+LEVTYPE   level type                           code         0       <a href="upperair_notes.shtml#map08">8</a>                     X 
+UGUST     u wind component gust                m/s          0                             X     X
+VGUST     v wind component gust                m/s          0                             X     X
+USDEV     u wind component std dev             m/s          0                             X     X
+VSDEV     v wind component std dev             m/s          0                             X     X
+WSDEV     w wind component std dev             m/s          0                             X     X
+
+
+Wind Mode 1 Parameters                                              <a href="upperair_notes.shtml#map01">1</a>,<a href="upperair_notes.shtml#map02">2</a>
+----------------------
+
+CRECW1    no. of consensus records used                     0       <a href="upperair_notes.shtml#map06">6</a>                     X
+CPASSW1   minimum number of records needed                  0       <a href="upperair_notes.shtml#map06">6</a>                     X
+          to pass consensus test
+CWINW1    consensus window                     m/s          0       <a href="upperair_notes.shtml#map06">6</a>                     X
+NYQVW1    Nyquist velocity                     m/s
+NCIW1     number of coherent integrations                   0                             X
+NSPECW1   number of averaged spectra                        0                             X
+PWW1      pulse width                          ns           0                             X
+PRPW1     pulse repetition period              ns           0                             X
+GSW1      gate spacing                         ns           0                             X
+DG1W1     delay to first gate                  ns           0                             X
+NLEVW1    number of levels                                  0                             X
+APW1      averaging period in minutes                       0                             X
+
+Wind Mode 1 Levels                                                  <a href="upperair_notes.shtml#map01">1</a>            50      
+------------------
+
+DDW1      wind direction                       deg          2       <a href="upperair_notes.shtml#map03">3</a>                     X
+FFW1      wind speed                           m/s          2       <a href="upperair_notes.shtml#map03">3</a>                     X
+UW1       u wind component                     m/s          2       <a href="upperair_notes.shtml#map03">3</a>                     X
+VW1       v wind component                     m/s          2       <a href="upperair_notes.shtml#map03">3</a>                     X
+WW1       w wind component                     m/s          0       <a href="upperair_notes.shtml#map04">4</a>                     X
+HTW1      geometric height                     m            0                             X
+PW1       pressure                             Pa           0       <a href="upperair_notes.shtml#map05">5</a>                     X
+CNOB1W1   consensus number       (Beam 1)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB1W1   signal-to-noise ratio  (Beam 1)      dB           0                             X
+RDVB1W1   radial velocity        (Beam 1)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+CNOB2W1   consensus number       (Beam 2)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB2W1   signal-to-noise ratio  (Beam 2)      dB           0                             X
+RDVB2W1   radial velocity        (Beam 2)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+CNOB3W1   consensus number       (Beam 3)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB3W1   signal-to-noise ratio  (Beam 3)      dB           0                             X
+RDVB3W1   radial velocity        (Beam 3)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+CNOB4W1   consensus number       (Beam 4)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB4W1   signal-to-noise ratio  (Beam 4)      dB           0                             X
+RDVB4W1   radial velocity        (Beam 4)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+CNOB5W1   consensus number       (Beam 5)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB5W1   signal-to-noise ratio  (Beam 5)      dB           0                             X
+RDVB5W1   radial velocity        (Beam 5)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+
+
+Wind Mode 2 Parameters                                              <a href="upperair_notes.shtml#map01">1</a>,<a href="upperair_notes.shtml#map02">2</a>
+----------------------
+
+CRECW2    no. of consensus records used                     0       <a href="upperair_notes.shtml#map06">6</a>                     X
+CPASSW2   minimum number of records needed                  0       <a href="upperair_notes.shtml#map06">6</a>                     X
+          to pass consensus test
+CWINW2    consensus window                     m/s          0       <a href="upperair_notes.shtml#map06">6</a>                     X
+NYQVW2    Nyquist velocity                     m/s
+NCIW2     number of coherent integrations                   0                             X
+NSPECW2   number of averaged spectra                        0                             X
+PWW2      pulse width                          ns           0                             X
+PRPW2     pulse repetition period              ns           0                             X
+GSW2      gate spacing                         ns           0                             X
+GSW2      gate spacing                         ns           0                             X
+DG1W2     delay to first gate                  ns           0                             X
+NLEVW2    number of levels                                  0                             X
+APW2      averaging period in minutes                       0                             X
+
+
+Wind Mode 2 Levels                                                  <a href="upperair_notes.shtml#map01">1</a>            50      
+------------------
+
+DDW2      wind direction                       deg          2       <a href="upperair_notes.shtml#map03">3</a>                     X
+FFW2      wind speed                           m/s          2       <a href="upperair_notes.shtml#map03">3</a>                     X
+UW2       u wind component                     m/s          2       <a href="upperair_notes.shtml#map03">3</a>                     X
+VW2       v wind component                     m/s          2       <a href="upperair_notes.shtml#map03">3</a>                     X
+WW2       w wind component                     m/s          0       <a href="upperair_notes.shtml#map04">4</a>                     X
+HTW2      geometric height                     m            0                             X
+PW2       pressure                             Pa           0       <a href="upperair_notes.shtml#map05">5</a>                     X
+CNOB1W2   consensus number       (Beam 1)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB1W2   signal-to-noise ratio  (Beam 1)      dB           0                             X
+RDVB1W2   radial velocity        (Beam 1)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+CNOB2W2   consensus number       (Beam 2)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB2W2   signal-to-noise ratio  (Beam 2)      dB           0                             X
+RDVB2W2   radial velocity        (Beam 2)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+CNOB3W2   consensus number       (Beam 3)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB3W2   signal-to-noise ratio  (Beam 3)      dB           0                             X
+RDVB3W2   radial velocity        (Beam 3)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+CNOB4W2   consensus number       (Beam 4)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB4W2   signal-to-noise ratio  (Beam 4)      dB           0                             X
+RDVB4W2   radial velocity        (Beam 4)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+CNOB5W2   consensus number       (Beam 5)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB5W2   signal-to-noise ratio  (Beam 5)      dB           0                             X
+RDVB5W2   radial velocity        (Beam 5)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+
+
+Wind Mode 3 Parameters                                              <a href="upperair_notes.shtml#map01">1</a>,<a href="upperair_notes.shtml#map02">2</a>
+----------------------
+
+CRECW3    no. of consensus records used                     0       <a href="upperair_notes.shtml#map06">6</a>                     X
+CPASSW3   minimum number of records needed                  0       <a href="upperair_notes.shtml#map06">6</a>                     X
+          to pass consensus test
+CWINW3    consensus window                     m/s          0       <a href="upperair_notes.shtml#map06">6</a>                     X
+NYQVW3    Nyquist velocity                     m/s
+NCIW3     number of coherent integrations                   0                             X
+NSPECW3   number of averaged spectra                        0                             X
+PWW3      pulse width                          ns           0                             X
+PRPW3     pulse repetition period              ns           0                             X
+GSW3      gate spacing                         ns           0                             X
+GSW3      gate spacing                         ns           0                             X
+DG1W3     delay to first gate                  ns           0                             X
+NLEVW3    number of levels                                  0                             X
+APW3      averaging period in minutes                       0                             X
+
+
+Wind Mode 3 Levels                                                  <a href="upperair_notes.shtml#map01">1</a>            50      
+------------------
+
+DDW3      wind direction                       deg          2       <a href="upperair_notes.shtml#map03">3</a>                     X
+FFW3      wind speed                           m/s          2       <a href="upperair_notes.shtml#map03">3</a>                     X
+UW3       u wind component                     m/s          2       <a href="upperair_notes.shtml#map03">3</a>                     X
+VW3       v wind component                     m/s          2       <a href="upperair_notes.shtml#map03">3</a>                     X
+WW3       w wind component                     m/s          0       <a href="upperair_notes.shtml#map04">4</a>                     X
+HTW3      geometric height                     m            0                             X
+PW3       pressure                             Pa           0       <a href="upperair_notes.shtml#map05">5</a>                     X
+CNOB1W3   consensus number       (Beam 1)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB1W3   signal-to-noise ratio  (Beam 1)      dB           0                             X
+RDVB1W3   radial velocity        (Beam 1)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+CNOB2W3   consensus number       (Beam 2)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB2W3   signal-to-noise ratio  (Beam 2)      dB           0                             X
+RDVB2W3   radial velocity        (Beam 2)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+CNOB3W3   consensus number       (Beam 3)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB3W3   signal-to-noise ratio  (Beam 3)      dB           0                             X
+RDVB3W3   radial velocity        (Beam 3)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+CNOB4W3   consensus number       (Beam 4)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB4W3   signal-to-noise ratio  (Beam 4)      dB           0                             X
+RDVB4W3   radial velocity        (Beam 4)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+CNOB5W3   consensus number       (Beam 5)                   0       <a href="upperair_notes.shtml#map06">6</a>                     X
+SNRB5W3   signal-to-noise ratio  (Beam 5)      dB           0                             X
+RDVB5W3   radial velocity        (Beam 5)      m/s          0       <a href="upperair_notes.shtml#map07">7</a>                     X
+
+
+Wind Products                                                       <a href="upperair_notes.shtml#map01">1</a>             1      
+-------------
+
+PBLHT     Planetary boundary layer             m            0                             X     
+SNOWLEV   snow level                           m            0                             X
+
+
+RASS Mode 1 Parameters
+----------------------
+
+CRECR1    no. of RASS consensus records used                0       <a href="upperair_notes.shtml#map06">6</a>                     X
+CPASSR1   minimum number of RASS records                    0       <a href="upperair_notes.shtml#map06">6</a>                     X
+          needed to pass consensus test
+CWINR1    RASS consensus window                K            0       <a href="upperair_notes.shtml#map06">6</a>                     X
+NCIR1     RASS number of coherent integrations              0                             X
+NSPECR1   RASS number of averaged spectra                   0                             X
+PWR1      RASS pulse width                     ns           0                             X
+PRPR1     RASS pulse repetition period         ns           0                             X
+GSR1      gate spacing                         ns           0                             X
+DG1R1     delay to first gate                  ns           0                             X
+NLEVR1    number of levels                                  0                             X
+APR1      averaging period in minutes                       0                             X
+NYQVR1    Nyquist velocity                     m/s
+
+
+RASS Mode 1 Levels                                                  <a href="upperair_notes.shtml#map01">1</a>            30  
+------------------
+
+TVR1      virtual temperature                  K            2                             X     X
+TVWR1     TV corrected for vertical wind       K            0                             X
+HTR1      geometric height                     m            0                             X     X
+PR1       pressure                             Pa           0       <a href="upperair_notes.shtml#map05">5</a>                     X     X
+RWR1      RASS w wind component                m/s          0                             X
+RCNOR1    RASS consensus number                             0       <a href="upperair_notes.shtml#map06">6</a>                     X
+RSNRR1    RASS signal-to-noise ratio           dB           0                             X
+
+
+Station Information                                                
+-------------------
+
+NWMODES   number of wind modes used                         0       <a href="upperair_notes.shtml#map01">1</a>                     X
+NRMODES   number of RASS modes used                         0       <a href="upperair_notes.shtml#map01">1</a>                     X
+NBEAMS    number of antenna beams used                      0       <a href="upperair_notes.shtml#map09">9</a>                     X
+AVGMIN    averaging period in minutes          min          0      <a href="upperair_notes.shtml#map10">10</a>                     X
+STATYPE   station type                                      0       <a href="upperair_notes.shtml#map01">1</a>                     X
+MIXLYR    sodar mixing layer elevation         m            0                             X     X
+ABA1      antenna beam azimuth   (Beam 1)      deg          0       <a href="upperair_notes.shtml#map09">9</a>                     X
+ABE1      antenna beam elevation (Beam 1)      deg          0       <a href="upperair_notes.shtml#map09">9</a>                     X
+ABA2      antenna beam azimuth   (Beam 2)      deg          0       <a href="upperair_notes.shtml#map09">9</a>                     X
+ABE2      antenna beam elevation (Beam 2)      deg          0       <a href="upperair_notes.shtml#map09">9</a>                     X
+ABA3      antenna beam azimuth   (Beam 3)      deg          0       <a href="upperair_notes.shtml#map09">9</a>                     X
+ABE3      antenna beam elevation (Beam 3)      deg          0       <a href="upperair_notes.shtml#map09">9</a>                     X
+ABA4      antenna beam azimuth   (Beam 4)      deg          0       <a href="upperair_notes.shtml#map09">9</a>                     X
+ABE4      antenna beam elevation (Beam 4)      deg          0       <a href="upperair_notes.shtml#map09">9</a>                     X
+ABA5      antenna beam azimuth   (Beam 5)      deg          0       <a href="upperair_notes.shtml#map09">9</a>                     X
+ABE5      antenna beam elevation (Beam 5)      deg          0       <a href="upperair_notes.shtml#map09">9</a>                     X
+VCFLAG1   vertical correction flag (Mode 1)                 0      <a href="upperair_notes.shtml#map11">11</a>                     X
+VCFLAG2   vertical correction flag (Mode 2)                 0      <a href="upperair_notes.shtml#map11">11</a>                     X
+VCFLAG3   vertical correction flag (Mode 3)                 0      <a href="upperair_notes.shtml#map11">11</a>                     X
+
+
+MADIS Multi-Agency Profiler (MAP) Variables - Character
+---------------------------------------------------------------------------------------------------
+Code       Name                                Character          Notes
+                                               Size
+---------------------------------------------------------------------------------------------------
+BEAM1     antenna beam name (Beam 1)           8                    <a href="upperair_notes.shtml#map09">9</a>                     X
+BEAM2     antenna beam name (Beam 2)           8                    <a href="upperair_notes.shtml#map09">9</a>                     X
+BEAM3     antenna beam name (Beam 3)           8                    <a href="upperair_notes.shtml#map09">9</a>                     X
+BEAM4     antenna beam name (Beam 4)           8                    <a href="upperair_notes.shtml#map09">9</a>                     X
+BEAM5     antenna beam name (Beam 5)           8                    <a href="upperair_notes.shtml#map09">9</a>                     X
+CSTMR1    consensus start time (RASS)          9                   <a href="upperair_notes.shtml#map12">12</a>                     X
+CSTMW1    consensus start time (Mode 1)        9                   <a href="upperair_notes.shtml#map12">12</a>                     X
+CSTMW2    consensus start time (Mode 2)        9                   <a href="upperair_notes.shtml#map12">12</a>                     X
+CSTMW3    consensus start time (Mode 3)        9                   <a href="upperair_notes.shtml#map12">12</a>                     X
+
+
+</PRE>
+  <SUP>*</SUP>The QC information is only available with the FSL database.
+<br><br>
+<!--<H2><A NAME="section-2.">Notes</A></H2>
+
+<OL>
+  <LI>The "Multi-Agency Profiler" dataset includes meteorological "profiles" from
+    several different kinds of observing systems, primarily including wind and 
+    virtual temperature data from boundary layer profiling radars, and wind data 
+    from SODARs.  Each station can have up to three modes of operation for winds,
+    and one mode for Radio Acoustic Sounding System (RASS) temperatures.  The
+    number of levels at which data are obtained, the spacing between the levels,
+    etc., are all a function of the "mode parameters" specified for each station,
+    and available to the user via the variable codes listed above.
+
+    The user can choose to retrieve each mode separately, or can request an 
+    integrated profile where the MADIS API will return all modes (wind and RASS)
+    sorted in ascending order by height.
+
+    The level type variable can be obtained by users wishing to know which modes 
+    were actually used in the integrated profile.
+
+    The station type variable is used to specify the type of observing system
+    that's in use, with these code values:
+
+       Value      Meaning
+       -----      -------
+         1        Boundary layer profiler
+         2        UHF tropospheric profiler
+         3        VHF tropospheric profiler
+         4        SODAR       
+         5        Unspecified
+
+    The mode parameters, consensus numbers, etc., are only used for the profiler
+    station types.  The U/V gust and standard deviation variables, and the 
+    mixing layer elevation, only apply to SODAR stations.
+<P>
+    The user can choose to retrieve each mode separately, or can request an 
+    integrated profile where the MADIS API will return all modes (wind and RASS)
+    sorted in ascending order by height.
+<P>
+    The level type variable can be obtained by users wishing to know which modes 
+    were actually used in the integrated profile.
+<P>
+    The station type variable is used to specify the type of observing system
+    that's in use, with these code values:
+<PRE>
+       Value      Meaning
+       -----      -------
+         1        Boundary layer profiler
+         2        UHF tropospheric profiler
+         3        VHF tropospheric profiler
+         4        SODAR       
+         5        Unspecified
+</PRE>
+<P>
+    The mode parameters, consensus numbers, etc., are only used for the profiler
+    station types.  The U/V gust and standard deviation variables, and the 
+    mixing layer elevation, only apply to SODAR stations.
+
+<P><LI>All of the wind mode parameters are specified individually for each antenna
+    beam direction.  As there can be up to five antenna beams, an array of 5
+    elements will be returned for each station.
+   
+<P><LI>Depending on the station type, either u/v wind components or wind speed and
+    direction may be stored in the database.  The user can select either form
+    of the wind data and it will be calculated and returned from whichever form
+    is stored in the database.  The results of QC checks applied to any form 
+    of the winds will be used, and if one of the map projections has been 
+    selected via the MSETDOM call, the winds will be rotated to match the 
+    projection.
+
+<P><LI>The w wind component is actually the radial velocity measured with the 
+    vertically-pointing antenna beam (with the sign negated).  Because the level 
+    of error in the observed velocities is of the same magnitude as that expected
+    for this observation, the user should take care when interpreting this 
+    variable.
+
+<P><LI>The true vertical coordinate is height.  If the user selects pressure as the 
+    vertical coordinate, the heights are converted to pressure using the U.S. 
+    Standard Atmosphere calculation.
+
+<P><LI>The basic averaging technique employed for profiling radars is the
+    "consensus average" applied to the radial velocities for each antenna beam,
+    in the case of winds, or to the temperatures for RASS.  This method 
+    examines the number of records taken to locate the largest subset of 
+    data values that are within a given window of each other.  The number of 
+    values in the subset is called the "consensus number".  The consensus test 
+    is passed when the consensus number is at least the minimum number specified
+    for the given station/beam/mode, otherwise the test has been failed and no
+    average value is created.
+      
+<P><LI>The radial velocity uses the convention that positive values are towards the 
+    radar receiver (e.g., the ground), and negative values are away from the 
+    receiver.
+
+<P><LI>Level type codes:
+<br><br>
+<PRE>
+       Value      Meaning
+       -----      -------
+         1        Wind mode 1
+         2        Wind mode 2
+         3        Wind mode 3
+         4        RASS mode 1
+</PRE>
+<P><LI>The profilers can have up to 5 antenna beam directions.  Typically,
+    for a 5-beam system, 2 beams will be in the N/S plane, 2 in the E/W
+    plane, and one beam will point in the vertical direction.  The names
+    of the beams generally indicate the plane (e.g., "NS 1" and "NS 2"),
+    while the azimuth and elevation variables define the exact pointing
+    direction.
+
+<P><LI>Profiler data are averaged over some time interval, specified in the
+    averaging period variable.  By convention, the observation time is the
+    end of the averaging period.  For example, a 30-minute average with
+    observation time 12:00 covers data averaged over 11:30 - 12:00.
+
+<P><LI>Vertical correction flag codes:
+<br><br><PRE>
+       Value      Meaning
+       -----      -------
+         1        Wind vertical correction:  off
+         2        Wind vertical correction:  on
+         3        Wind vertical correction:  unknown
+</PRE>
+<P>The profiler vertical correction, if selected, means that the radial 
+    velocities for the oblique beams are corrected for vertical motion
+    using the radial velocity from the vertical beam.  
+    
+<P><LI>All times reported in the MADIS API are in Universal Coordinated Time, with the 
+    format of "YYJJJHHMM", where:
+<P>
+<PRE>
+    YY  = 2-digit year (good from 1980 - 2179)
+    JJJ = Julian date of the year (1-366)
+    HH  = Hour (0-23)
+    MM  = Minute (0-59)
+</PRE>
+<P>
+    If the time is missing, the 9-character field will be set to all blanks, 
+    e.g., "         ".
+<P>
+    Users of the MADIS API mapdump program will get the time output in their chosen
+    format, either YYJJJHHMM or YYYYMMDD_HHMM.
+</OL>-->
+<HR><p align="right">Last updated 16 March 2017</p>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3463124-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</BODY>
+</HTML>
+      
+        <!-- force body content to include the floated "news" element -->
+	<div class="clear">
+        </div>
+    </div> <!-- end body content -->
+</div>   <!-- end pbody -->
+
+<!-- legal footer area -->
+        <div class="footer-legal">
+                                <div class="footer-legal-content">
+                        <div class="footer-legal-gov">
+                                <a href="https://www.usa.gov"><img src="images/usa_gov.png" alt="usa.gov" width="110" height="30" /></a>
+                        </div>
+
+                        <div class="footer-legal-column">
+                                <p>
+                                        <a href="https://www.commerce.gov">US Dept of Commerce</a><br />
+                                <a href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a><br />
+                                <a href="https://www.weather.gov" >National Weather Service</a><br />
+                                                5830 University Research Ct.<br />College Park, MD 20740<br />
+                                Web Master's Email: <a href='mailto:w-nws.webmaster@noaa.gov'>w-nws.webmaster@noaa.gov</a>                      </p>
+                        </div>
+
+                        <div class="footer-legal-column2">
+                                <a href="https://www.weather.gov/disclaimer">Disclaimer</a><br />
+                                <a href="https://www.cio.noaa.gov/services_programs/info_quality.html">Information Quality</a><br />
+                                <a href="https://www.weather.gov/help">Help</a><br />
+                                <a href="https://www.weather.gov/glossary">Glossary</a>
+                        </div>
+
+                        <div class="footer-legal-column3">
+                                <a href="https://www.weather.gov/privacy">Privacy Policy</a><br />
+                                <a href="https://www.noaa.gov/information-technology/foia">Freedom of Information Act (FOIA)</a><br />
+                                <a href="https://www.weather.gov/about">About Us</a><br />
+                                <a href="https://www.weather.gov/careers">Career Opportunities</a>
+                        </div>
+                </div>
+
+</div><!-- end of <div class="footer-legal">--> 
+
+</div><!-- End of content div -->
+</div><!-- End of center div -->
+
+</div> <!-- end container -->
+</body>
+</html>
+

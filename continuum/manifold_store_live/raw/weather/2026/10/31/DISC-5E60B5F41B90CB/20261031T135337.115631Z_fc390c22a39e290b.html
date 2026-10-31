@@ -1,0 +1,640 @@
+<!doctype html>
+<!--
+6/16/2026 Update: Added Heat Risk Graphics
+3/07/2026 Update: Updated javascript code to include count of SWPC S2+ alerts
+6/11/2025 Update: Updated "Tropical Cyclones" images to account for new graphic that combines Central and Eastern Pacific basins. 
+4/30/2025 Update:
+  CWD Webpage Version 3.0
+  Date Started - 9/30/2024
+  Date Implemented - 4/30/2025
+  Planned Changes:
+  -Alerts section will auto-update every minute
+  -ECE events will only display as a list of hazards when in CWD 
+  -Pending ECE/CWD events will no longer display under current status
+  -CWD 3 Day Outlook will be presented as a timeline
+-->
+
+
+<html lang="en">
+<head>
+	<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+<!-- TemplateBeginEditable name="doctitle" -->
+	<title>NWS Critical Weather Day Status</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+	<meta name="DC.title" content="NWS CWD Status">
+	<meta name="DC.description" content="NWS CWD Status">
+	<meta name="DC.keywords" content="Critical Weather Day, Enhanced Caution, tornado, hurricane, ice, excessive rainfall, flash flooding, snow, wildfires, weather emergency, systems, hazardous weather, NWS Central Operations, NCEP Central Operations, Central Operations, National Centers for Environmental Prediction, National Weather Service, CWD, Critical Weather Status, earthquakes, volcanoes, tsunami">
+        <meta name="DC.date.created" content="2026-05-26">
+        <meta name="DC.date.reviewed" content="2026-05-26">
+<!-- TemplateEndEditable -->
+        <meta name="DC.creator" content="NWS Central Operations">
+        <meta name="DC.language" scheme="DCTERMS.RFC1766" content="EN-US">
+        <meta name="DC.publisher" content="NWS Central Operations">
+        <meta name="DC.contributor" content="NWS Central Operations">
+        <meta name="DC.rights" content="https://www.weather.gov/disclaimer.php">
+        <meta name="rating" content="General">
+        <meta name="robots" content="index,follow">
+        <link href="/css/nco_main_structural.css" rel="stylesheet" type="text/css" medial="all">
+        <link href="/css/nco_main_style.css" rel="stylesheet" type="text/css" media="all">
+<!-- InstanceBeginEditable name="OtherScripts" -->
+	<base href="https://www.nco.ncep.noaa.gov/status/">
+        
+        <script type="text/javascript" language="javascript" src="javascript/get_cwd_info.js?version=3.0"></script>
+        <script type="text/javascript" language="javascript" src="javascript/get_count_alerts.js?version=3.1"></script>
+	
+<!--
+        <script type="text/javascript" language="javascript" src="javascript/get_cwd_info_test.js"></script>
+	<script type="text/javascript" language="javascript" src="javascript/get_count_alerts_test.js"></script>
+-->
+	<meta http-equiv="refresh" content="900">
+	
+         <link href="https://www.nco.ncep.noaa.gov/status/css/status_style_cwd.css?version=3.0" rel="stylesheet" type="text/css" media="all">
+	
+<!--
+	<link href="https://www.nco.ncep.noaa.gov/status/css/status_style_cwd_test.css" rel="stylesheet" type="text/css" media="all">
+-->
+<!-- TemplateEndEditable -->
+
+<!-- Analytics - DAP-->
+	<script async type="text/javascript" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NOAA&pga4=G-3FGE2SCD1B"></script>
+
+
+</head>
+
+<body>
+	<!--top header-->
+
+<div class="header">
+	<div class="header-content">
+		<a href="https://www.noaa.gov" title="Explore other NOAA products" class="header-noaa-icon">
+		  <img src="/images/header-noaa.png" alt="NOAA" /></a>
+		<a href="https://www.weather.gov" title="Access to the latest watches and warnings" class="header-nws-icon">
+		  <img src="/images/header-nws.png" alt="NWS" /></a>
+		<a href="https://www.commerce.gov" title="Learn about the Department of Commerce" class="header-doc">
+		  <img src="/images/header_doc.png" alt="DOC" /></a>
+		<a href="#contents">
+		  <img height="1" src="/images/skipgraphic.gif" alt="Skip Naviagation Links" width="1"></a>
+	
+		<div class="header-center-text">
+    	    <a class="header-center-text" href="https://www.nco.ncep.noaa.gov">NWS Central Operations</a>
+        </div>
+	  <div class="header-noaa-text">
+	        <a class="header-noaa-text" href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a>
+	  </div>
+	</div>
+</div>
+<div class="header-shadow">
+	<div class="header-shadow-content">	</div>
+</div>
+<!--End top header-->
+	<div class="center">
+
+		<div class="content"> 
+                        <div>
+			<div class="center">
+  <div class="content">
+    <div class="topnav">
+      <ul id="topnav">
+        <li>
+          <div class="left-section-link">
+              <a href="https://www.nco.ncep.noaa.gov" title="Back to NCO's home page">Home</a> </div>
+        </li>
+        <li>
+          <div class="center-section-link">
+              <a href="https://mag.ncep.noaa.gov" title="NWS Model Graphics">MODELS &#x25BC;</a></div>
+          <div class="drop">
+            <ul>
+              <li><a href="https://mag.ncep.noaa.gov">Model Analyses & Guidance</a></li>
+              <li><a href="/pmb/nwprod/prodstat_new/">Current Model Status</a></li>
+              <li><a href="/status/data/realtime/">Real-Time Data Monitor</a></li>
+              <li><a href="/pmb/nwprod/gdas/">GDAS Data Counts</a></li>
+              <li><a href="/status/nwps/">NWPS WFO Status</a></li>
+              <li><a href="/pmb/products/">Products Inventory</a> </li>
+              <li><a href="/pmb/changes/">Model Changes</a></li>
+              <li><a href="/pmb/codes/nwprod">Model Source Code</a></li>
+              <!--<li><a href=#>WCOSS/Supercomputers (Coming Soon)</a></li> -->
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link">
+              <a href="/omb/apps/" title="More about Applications and Services at NCEP">Applications/Services &#x25BC;</a> </div>
+          <div class="drop">
+            <ul>
+              <li><a href="https://www.weather.gov">Weather.gov</a></li>
+              <li><a href="https://www.weather.gov/emwin/">EMWIN</a></li>
+              <li><a href="https://nomads.ncep.noaa.gov/pub/">FTPPRD</a></li>
+              <li><a href="https://inws.ncep.noaa.gov">iNWS</a></li>
+              <li><a href="https://iris.ncep.noaa.gov">IRIS (NOAA access)</a></li>
+              <li><a href="https://madis-data.ncep.noaa.gov/">MADIS</a></li>
+              <li><a href="https://mag.ncep.noaa.gov/">MAG</a></li>
+              <li><a href="https://mrms.ncep.noaa.gov/data/">MRMS</a></li>
+              <li><a href="https://nomads.ncep.noaa.gov">NOMADS</a></li>
+              <li><a href="https://nwschat.nws.noaa.gov/registration/login">NWSChat</a></li>
+              <li><a href="https://radar.weather.gov">Ridge II Radar</a></li>
+              <li><a href="http://tgftp.ncep.noaa.gov">TGFTP</a></li>
+              <li><a href="/pmb/primarysite/">IDP Primary Site</a></li>
+              <li><a href="/idsb/IDP_standards/">IDP Implementation Standards</a></li>
+              <li><a href="/omb/apps/">More...</a></li>
+            
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link"> 
+            <!--<a href="https://www.weather.gov/tg/tginfo">The Gateway</a> --> 
+            <a href="/status/" title="More about Operational Status">Operational Status &#x25BC;</a> </div>
+          <div class="drop">
+            <ul>
+              <li><a href="/status/cwd/">Critical Weather Day</a></li>
+	      <li><a href="/status/messages/">SDM Administrative Messages</a></li>
+	      <li><a href="/status/dashboard/">Dashboard (NOAA access)</a></li>
+              <li><a href="/status/data/realtime/">Real-Time Data Monitor</a></li>
+	      <li><a href="/omb/dataqc/">Upper Air & Surface Data QC</a></li>
+	      <li><a href="/status/data/thanks/">Raob &#34;Thanks&#34; Reports</a></li>
+              <li><a href="/status/wsr/">Winter Storm Reconnaissance</a></li>
+              <li><a href="/status/recon/">Aircraft Dropsondes</a></li>
+	      <li><a href="/status/satellite/">Satellite Sectors</a></li>
+	      <li><a href="https://www.weather.gov/nl2/NEXRADView">Radar Level II</a></li>
+	      <li><a href="https://radar3pub.ncep.noaa.gov">Radar Level III</a></li>
+              <li><a href="/pmb/nwprod/prodstat_new/">NWS Model Status</a></li>
+              <li><a href="/status/nwps/">NWPS WFO Status</a></li>
+	      <li><a href="/omb/soe/">Schedule of Events (NOAA access)</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link">
+              <a href="https://www.nco.ncep.noaa.gov" title="More about NCO">About NCO &#x25BC;</a> </div>
+          <div class="drop">
+            <ul>
+              <li><a href="/director/">Office of the Director</a></li>
+	      <li><a href="/pmb/">Implementation and Data Services (IDSD)</a></li>
+              <li><a href="/hpc/">High Performance Computing (HPCD)</a></li>
+	      <li><a href="/nsb/">Network and Security (NSD)</a></li>
+              <li><a href="/omb/">Operational Monitoring (OMD)</a></li>
+              <li><a href="/director/orgchart.php">Organizational Chart</a></li>
+              <li><a href="/sitemap/">Web Site Map</a></li>
+	      <!--<li><a href="#">FAQ/History/MissonAndVision (coming soon)</a></li>-->
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link"> <a href="https://www.weather.gov/ncep/" title="More about NCEP Centers">Centers &#x25BC;</a> </div>
+          <div class="drop">
+            <ul>
+              <li><a href="https://www.aviationweather.gov">Aviation (AWC)</a></li>
+	      <li><a href="https://www.cpc.ncep.noaa.gov/">Climate (CPC)</a></li>
+              <li><a href="https://www.nhc.noaa.gov">Hurricane (NHC/CPHC)</a></li>
+              <li><a href="https://www.spc.noaa.gov">Storm (SPC)</a></li>
+              <li><a href="https://www.swpc.noaa.gov">Space (SWPC)</a></li>
+              <li><a href="https://tsunami.gov">Tsunami (NTWC/PTWC)</a></li>
+	      <li><a href="https://water.noaa.gov/">Water (NWC)</a></li>
+              <li><a href="https://www.wpc.ncep.noaa.gov">Weather (WPC)</a></li>
+	      <li><a href="https://ocean.weather.gov">Ocean (OPC)</a></li>
+	      <li><a href="https://usicecenter.gov">Ice (USNIC)</a></li>
+              <li><a href="https://www.nco.ncep.noaa.gov">Technology (NCO)</a></li>
+              <li><a href="https://www.emc.ncep.noaa.gov/">Modeling (EMC)</a></li>
+	      <li><a href="https://www.ndbc.noaa.gov">Buoy Data (NDBC)</a></li>
+              <li><a href="https://www.roc.noaa.gov/">Radar Ops (ROC)</a></li>
+	    </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link"> 
+            <!-- link to noaa/nws website search --> 
+            <a href="https://www.weather.gov/search">Search</a> </div>
+          <div class="dropsearch">
+            <div class="site-search">
+              <form method="get" action="https://search.usa.gov/search" style="margin-bottom: 0; margin-top: 0;">
+                <input type="hidden" name="v:project" value="firstgov"/>
+                <label for="query">Search For</label>
+                <input type="text" name="query" id="query" size="12"/>
+                <input type="submit" value="Go"/>
+                <p>
+                  <input type="radio" name="affiliate" checked="checked" value="nws.noaa.gov" id="nws"/>
+                  <label for="nws" class="search-scope">NWS</label>
+                  <input type="radio" name="affiliate" value="noaa.gov" id="noaa"/>
+                  <label for="noaa" class="search-scope">All NOAA</label>
+                </p>
+              </form>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<br>
+<!--
+<div class="shutdown">
+  </div>
+-->
+		</div>
+                 
+                <!-- Top News -->     
+		<div class="center-content"> 
+			<!-- TOP NEW AREA-->
+<!--     <div class="five-sixth-last">
+      <div id="topnews">
+        <div class="icon"><img src="https://www.weather.gov/css/images/news-important.jpg" /></div>
+        <div class="body">
+<h1 style="font-size: 11pt;">Severe Thunderstorms and Locally Heavy Rain Possible</h1>
+            <p>
+                Severe thunderstorms with large hail and damaging winds will be possible from Oklahoma and northeast Texas to Kentucky, West Virginia and parts of Virginia and North Carolina. More isolated strong/severe storms will also be possible across parts of the northern Rockies.  Heavy rain and local flooding are possible in the lower Mississippi Valley and central Appalachians. 
+                <a href="http://www.wpc.ncep.noaa.gov/discussions/hpcdiscussions.php?disc=pmdspd" target="_blank" rel="noopener noreferrer">Read More &gt;</a>
+            </p>        </div>
+      </div>
+    </div>
+-->
+			<div class="full-width-border">
+				<div class="partial-width-borderbottom">
+					<div class="div-full">
+						<div class="div-full breadcrumb">
+							<div class='location-breadcrumb'>
+
+<!-- TemplateBeginEditable name="breadcrumb" -->
+		<div class="parent-cwdimage">
+		  <img src="https://www.nco.ncep.noaa.gov/status/css/images/cwd-banner-fade-oceanblue.png" alt="CWDimage" class="CWDimage"></img>
+                  <div class="CWDimgtext">Critical Weather Day Status</div>
+		</div>
+
+     <!--PHP script to gather CWD/ECE status info from .txt file-->
+          <div class=col-opt-normal>Current Status: NORMAL</div>
+     <!--Display times page was loaded-->
+     <div class="loadtime">
+     Page loaded: 13:53 UTC &nbsp; | &nbsp; 3:53 am Hawaii &nbsp; | &nbsp; 5:53 am Alaska &nbsp; |  &nbsp; 6:53 am Pacific &nbsp; | &nbsp; 7:53 am Mountain &nbsp; | &nbsp; 8:53 am Central &nbsp; | &nbsp; 9:53 am Eastern      </div>
+<!-- TemplateEndEditable -->
+
+							</div>
+						</div>
+					</div>
+					<div class="div-full">
+					</div>
+					<div class="div-full cms-content" id="home_page_content">
+						<div class="content_centered">
+
+<!-- TemplateBeginEditable name="content" -->
+<!-- *******************CONTENT AREA ***************************-->
+     <div class="row-opt-j">
+       <div class="col-opt-u">    
+         <div class='text-opt-cwd-header'><br><br><br>No Critical Weather Day or Enhanced Caution is currently in effect.<br><br><br></div><div class='text-opt-cwd-subheaderc'> <br> <span style='font-style: normal;'><a href="https://www.weather.gov/media/directives/010_pdfs/pd01022003curr.pdf">CWD Directive</a>&nbsp; |&nbsp; <a href="https://sites.google.com/noaa.gov/nws-nco/playbooks">IT Playbooks (NOAA access)</a></span><br></div>      </div>
+      
+      <!-- Display of WWA maps -->
+      <div class="col-opt-v">
+         <div class="parent-wwamap">
+	   <a href="https://www.weather.gov" title="WWA Map" target="_blank" rel="noopener noreferrer"><img class="parent-wwamap-responsive" src="https://forecast.weather.gov/wwamap/png/US.png" alt="WWA Map" height="160"></a>
+           <!-- code to add AK/HA and US territories to WWA MAP-->
+           <a href="https://www.weather.gov/arh/" title="Alaska WWA Map" target="_blank" rel="noopener noreferrer"><img class="child-wwamap-ak" src="https://forecast.weather.gov/wwamap/png/ak.png" alt="WWA Map AK" width="60" height="46"></a>
+	   <a href="https://www.weather.gov/hfo" title="Hawaii WWA Map" target="_blank" rel="noopener noreferrer"><img class="child-wwamap-hi" src="https://forecast.weather.gov/wwamap/png/hi.png" alt="WWA Map HI" width="60" height="46"></a>
+           <a href="https://www.weather.gov/ppg" title="Pago Pago WWA Map" target="_blank" rel="noopener noreferrer"><img class="child-wwamap-ppg" src="https://forecast.weather.gov/wwamap/png/ppg.png" alt="WWA Map Pago Pago" width="42" height="22"></a>
+           <a href="https://www.weather.gov/gum/" title="Guam WWA Map" target="_blank" rel="noopener noreferrer"><img class="child-wwamap-gum" src="https://forecast.weather.gov/wwamap/png/gum.png" alt="WWA Map Guam" width="42" height="22"></a>
+           <a href="https://www.weather.gov/SJU" title="Puerto Rico WWA Map" target="_blank" rel="noopener noreferrer"><img class="child-wwamap-sju" src="https://forecast.weather.gov/wwamap/png/sju.png" alt="WWA Map Puerto Rico" width="36" height="28"></a>
+	 </div>
+
+     <!-- Display of Active Alerts-->
+     <div class="row-opt-alerts">
+       <div class="col-opt-alerts-icn">
+	 <span style="font-weight:bold">Alerts:</span>
+	 <span id="DisplayAlerts" style="font-size:80%; font-style:bold">Loading Alerts...</span>
+	 <span id="DisplayTime" style="display: none; font-weight:normal; font-style:italic">Alerts as of XX:XXZ</span>
+       </div>
+     </div> 
+
+     </div> 
+     </div>
+    
+     <!--***CWD Outlook***-->
+     <div class="hd-opt-d">Outlook
+     <div class="hd-opt-e">Updated 0901Z Sat Oct 31 2026</div>
+     </div>
+
+     <div class="row-opt-e-d">
+     <!--Day 0-->
+       <div class="col-opt-l-d-0-Normal">      <div class="row-opt-timeline">
+      <div class="col-opt-timeline-n" title="31/0900Z - normal"></div><div class="col-opt-timeline-n" title="31/1000Z - Normal"></div><div class="col-opt-timeline-n" title="31/1100Z - Normal"></div>      </div>
+      </div>
+
+      <!-- Day 1-->
+      <div class="col-opt-l-d-1-Normal">      <div class="row-opt-timeline">
+      <div class="col-opt-timeline-n" title="31/1200Z - Normal">12</div><div class="col-opt-timeline-n-ct" title="31/1300Z - Normal"></div><div class="col-opt-timeline-n" title="31/1400Z - Normal"></div><div class="col-opt-timeline-n" title="31/1500Z - Normal"></div><div class="col-opt-timeline-n" title="31/1600Z - Normal"></div><div class="col-opt-timeline-n" title="31/1700Z - Normal"></div><div class="col-opt-timeline-n" title="31/1800Z - Normal">18</div><div class="col-opt-timeline-n" title="31/1900Z - Normal"></div><div class="col-opt-timeline-n" title="31/2000Z - Normal"></div><div class="col-opt-timeline-n" title="31/2100Z - Normal"></div><div class="col-opt-timeline-n" title="31/2200Z - Normal"></div><div class="col-opt-timeline-n" title="31/2300Z - Normal"></div><div class="col-opt-timeline-n" title="01/0000Z - Normal">00</div><div class="col-opt-timeline-n" title="01/0100Z - Normal"></div><div class="col-opt-timeline-n" title="01/0200Z - Normal"></div><div class="col-opt-timeline-n" title="01/0300Z - Normal"></div><div class="col-opt-timeline-n" title="01/0400Z - Normal"></div><div class="col-opt-timeline-n" title="01/0500Z - Normal"></div><div class="col-opt-timeline-n" title="01/0600Z - Normal">06</div><div class="col-opt-timeline-n" title="01/0700Z - Normal"></div><div class="col-opt-timeline-n" title="01/0800Z - Normal"></div><div class="col-opt-timeline-n" title="01/0900Z - Normal"></div><div class="col-opt-timeline-n" title="01/1000Z - Normal"></div><div class="col-opt-timeline-n" title="01/1100Z - Normal"></div>      </div>
+      <div class="timeline-title"><span style="color:black;">Sat Oct 31:</span> Normal</div><div class="timeline-icon"></div>		
+      </div>
+
+      <!-- Day 2-->
+      <div class="col-opt-l-d-1-Normal">      <div class="row-opt-timeline">
+      <div class="col-opt-timeline-n" title="01/1200Z - Normal">12</div><div class="col-opt-timeline-n" title="01/1300Z - Normal"></div><div class="col-opt-timeline-n" title="01/1400Z - Normal"></div><div class="col-opt-timeline-n" title="01/1500Z - Normal"></div><div class="col-opt-timeline-n" title="01/1600Z - Normal"></div><div class="col-opt-timeline-n" title="01/1700Z - Normal"></div><div class="col-opt-timeline-n" title="01/1800Z - Normal">18</div><div class="col-opt-timeline-n" title="01/1900Z - Normal"></div><div class="col-opt-timeline-n" title="01/2000Z - Normal"></div><div class="col-opt-timeline-n" title="01/2100Z - Normal"></div><div class="col-opt-timeline-n" title="01/2200Z - Normal"></div><div class="col-opt-timeline-n" title="01/2300Z - Normal"></div><div class="col-opt-timeline-n" title="02/0000Z - Normal">00</div><div class="col-opt-timeline-n" title="02/0100Z - Normal"></div><div class="col-opt-timeline-n" title="02/0200Z - Normal"></div><div class="col-opt-timeline-n" title="02/0300Z - Normal"></div><div class="col-opt-timeline-n" title="02/0400Z - Normal"></div><div class="col-opt-timeline-n" title="02/0500Z - Normal"></div><div class="col-opt-timeline-n" title="02/0600Z - Normal">06</div><div class="col-opt-timeline-n" title="02/0700Z - Normal"></div><div class="col-opt-timeline-n" title="02/0800Z - Normal"></div><div class="col-opt-timeline-n" title="02/0900Z - Normal"></div><div class="col-opt-timeline-n" title="02/1000Z - Normal"></div><div class="col-opt-timeline-n" title="02/1100Z - Normal"></div>      </div>
+      <div class="timeline-title"><span style="color:black;">Sun Nov 01:</span> Normal</div><div class="timeline-icon"></div>      </div>
+
+      <!-- Day 3-->
+      <div class="col-opt-l-d-1-Normal">      <div class="row-opt-timeline">
+      <div class="col-opt-timeline-n" title="02/1200Z - Normal">12</div><div class="col-opt-timeline-n" title="02/1300Z - Normal"></div><div class="col-opt-timeline-n" title="02/1400Z - Normal"></div><div class="col-opt-timeline-n" title="02/1500Z - Normal"></div><div class="col-opt-timeline-n" title="02/1600Z - Normal"></div><div class="col-opt-timeline-n" title="02/1700Z - Normal"></div><div class="col-opt-timeline-n" title="02/1800Z - Normal">18</div><div class="col-opt-timeline-n" title="02/1900Z - Normal"></div><div class="col-opt-timeline-n" title="02/2000Z - Normal"></div><div class="col-opt-timeline-n" title="02/2100Z - Normal"></div><div class="col-opt-timeline-n" title="02/2200Z - Normal"></div><div class="col-opt-timeline-n" title="02/2300Z - Normal"></div><div class="col-opt-timeline-n" title="03/0000Z - Normal">00</div><div class="col-opt-timeline-n" title="03/0100Z - Normal"></div><div class="col-opt-timeline-n" title="03/0200Z - Normal"></div><div class="col-opt-timeline-n" title="03/0300Z - Normal"></div><div class="col-opt-timeline-n" title="03/0400Z - Normal"></div><div class="col-opt-timeline-n" title="03/0500Z - Normal"></div><div class="col-opt-timeline-n" title="03/0600Z - Normal">06</div><div class="col-opt-timeline-n" title="03/0700Z - Normal"></div><div class="col-opt-timeline-n" title="03/0800Z - Normal"></div><div class="col-opt-timeline-n" title="03/0900Z - Normal"></div><div class="col-opt-timeline-n" title="03/1000Z - Normal"></div><div class="col-opt-timeline-n" title="03/1100Z - Normal"></div>      </div>
+      <div class="timeline-title"><span style="color:black;">Mon Nov 02:</span> Normal</div><div class="timeline-icon"></div>     </div>
+     </div>
+
+     <br><br>
+     
+     <div class="row-opt-e-di">
+       
+The need for Critical Weather Day for excessive rainfall across portions of Arizona and the Four Corners region is being monitored.  Otherwise, Critical Weather Day is not expected in the next 3 days.
+     </div>
+
+  
+     <!-- Start of Hazards Section-->
+     <div class="hd-opt-d">Hazards</div>
+  
+     <!--Severe Weather-->
+     <div class="row-opt-b">
+       <img class="icon" src="/status/css/images/icon-lightning.png" alt="wx icon" width="34" height=34"> Severe Thunderstorms
+     </div>        
+     <div class="row-opt-a">
+       <div class="col-opt-e"><a href="https://www.spc.noaa.gov/products/outlook/day1otlk.html" title="SPC Day 1 Convective Outlook" target="_blank" rel="noopener noreferrer"><img src="https://www.spc.noaa.gov/products/outlook/day1otlk.png" alt="SPC thunderstorm outlook" width="324"></a></div>
+       <div class="col-opt-e"><a href="https://www.spc.noaa.gov/products/outlook/day2otlk.html" title="SPC Day 2 Convective Outlook" target="_blank" rel="noopener noreferrer"><img src="https://www.spc.noaa.gov/products/outlook/day2otlk.png" alt="SPC thunderstorm outlook" width="324"></a></div>
+       <div class="col-opt-e"><a href="https://www.spc.noaa.gov/products/outlook/day3otlk.html" title="SPC Day 3 Convective Outlook" target="_blank" rel="noopener noreferrer"><img src="https://www.spc.noaa.gov/products/outlook/day3otlk.png" alt="SPC thunderstorm outlook" width="324"></a></div>
+     </div>
+
+     <!--Fire Weather-->
+     <div class="row-opt-b">
+       <img class="icon" src="/status/css/images/icon-wildfire.png" alt="wx icon" width="34" height=34"> Wildfire
+     </div>
+     <div class="row-opt-a">
+       <div class="col-opt-e"><a href="https://www.spc.noaa.gov/products/fire_wx/fwdy1.html" title="SPC Day 1 Fire Weather Outlook" target="_blank" rel="noopener noreferrer"><img src="https://www.spc.noaa.gov/products/fire_wx/day1otlk_fire.png" alt="SPC fire weather outlook" width="324"></a></div>
+       <div class="col-opt-e"><a href="https://www.spc.noaa.gov/products/fire_wx/fwdy2.html" title="SPC Day 2 Fire Weather Outlook" target="_blank" rel="noopener noreferrer"><img src="https://www.spc.noaa.gov/products/fire_wx/day2otlk_fire.png" alt="SPC fire weather outlook" width="324"></a></div>
+       <div class="col-opt-e"><a href="https://www.spc.noaa.gov/products/exper/fire_wx/" title="SPC Day 3-8 Fire Weather Outlook" target="_blank" rel="noopener noreferrer"><img src="https://www.spc.noaa.gov/products/exper/fire_wx/imgs/day38otlk_fire.gif" alt="SPC fire weather outlook" width="324"></a></div>
+       
+     </div>
+
+     <!--Excessive Rainfall-->
+     <div class="row-opt-b">
+       <img class="icon" src="/status/css/images/icon-rainstorm.png" alt="wx icon" width="34" height=34"> Excessive Rainfall
+     </div>
+     <div class="row-opt-a">
+       <div class="col-opt-e"><a href="https://www.wpc.ncep.noaa.gov/qpf/ero.php?opt=curr&day=1" title="WPC Day 1 Excessive Rainfall Outlook" target="_blank" rel="noopener noreferrer"><img src="https://www.wpc.ncep.noaa.gov/qpf/94ewbg.gif" alt="WPC ERO" width="324"></a></div>
+       <div class="col-opt-e"><a href="https://www.wpc.ncep.noaa.gov/qpf/ero.php?opt=curr&day=2" title="WPC Day 2 Excessive Rainfall Outlook" target="_blank" rel="noopener noreferrer"><img src="https://www.wpc.ncep.noaa.gov/qpf/98ewbg.gif" alt="WPC ERO" width="324"></a></div>
+       <div class="col-opt-e"><a href="https://www.wpc.ncep.noaa.gov/qpf/ero.php?opt=curr&day=3" title="WPC Day 3 Excessive Rainfall Outlook" target="_blank" rel="noopener noreferrer"><img src="https://www.wpc.ncep.noaa.gov/qpf/99ewbg.gif" alt="WPC ERO" width="324"></a></div>
+     </div>
+
+     <!--Winter Weather-->
+     <div class="row-opt-b">
+       <img class="icon" src="/status/css/images/icon-winter.png" alt="wx icon" width="34" height=34"> Winter Weather
+     </div>   
+     <div class="row-opt-a">
+       <div class="col-opt-e"><a href="https://www.wpc.ncep.noaa.gov/wwd/wssi/wssi.php" title="Day 1 Winter Storm Severity Index" target="_blank" rel="noopener noreferrer"><img src="https://www.wpc.ncep.noaa.gov/wwd/wssi/images/WSSI_Overall_Day1_CONUS_Day1.png" alt="WPC WSSI" width="324"></a></div>
+       <div class="col-opt-e"><a href="https://www.wpc.ncep.noaa.gov/wwd/wssi/wssi.php" title="Day 2 Winter Storm Severity Index" target="_blank" rel="noopener noreferrer"><img src="https://www.wpc.ncep.noaa.gov/wwd/wssi/images/WSSI_Overall_Day2_CONUS_Day2.png" alt="WPC WSSI" width="324"></a></div>
+       <div class="col-opt-e"><a href="https://www.wpc.ncep.noaa.gov/wwd/wssi/wssi.php" title="Day 3 Winter Storm Severity Index" target="_blank" rel="noopener noreferrer"><img src="https://www.wpc.ncep.noaa.gov/wwd/wssi/images/WSSI_Overall_Day3_CONUS_Day3.png" alt="WPC WSSI" width="324"></a></div>
+     </div>
+
+     <!--HeatRisk-->
+     
+     <div class="row-opt-b">
+       <img class="icon" src="/status/css/images/icon-heat.png" alt="wx icon" width="34" height=34"> Heat
+     </div>
+     <div class="row-opt-a">
+       <div class="col-opt-e"><a href="https://www.wpc.ncep.noaa.gov/heatrisk/" title="Day 1 HeatRisk Forecast" target="_blank" rel="noopener noreferrer"><img src="https://www.wpc.ncep.noaa.gov/heatrisk/graphics/HeatRisk_Day1_CONUS.png" alt"WPC HeatRisk" width="324"></a></div>
+       <div class="col-opt-e"><a href="https://www.wpc.ncep.noaa.gov/heatrisk/" title="Day 2 HeatRisk Forecast" target="_blank" rel="noopener noreferrer"><img src="https://www.wpc.ncep.noaa.gov/heatrisk/graphics/HeatRisk_Day2_CONUS.png" alt"WPC HeatRisk" width="324"></a></div>
+       <div class="col-opt-e"><a href="https://www.wpc.ncep.noaa.gov/heatrisk/" title="Day 3 HeatRisk Forecast" target="_blank" rel="noopener noreferrer"><img src="https://www.wpc.ncep.noaa.gov/heatrisk/graphics/HeatRisk_Day3_CONUS.png" alt"WPC HeatRisk" width="324"></a></div>
+     </div>
+     
+
+
+     <!--Space Weather-->
+     <div class="row-opt-b">
+       <img class="icon" src="/status/css/images/icon-space.png" alt="wx icon" width="34" height=34"> Space Weather
+     </div>     
+     <div id="SWPCn" class="row-opt-a">       
+       <div class="col-opt-e">There was an error retrieving space weather conditions. Please visit <a href="https://www.swpc.noaa.gov" target="_blank" rel="noopener noreferrer">SWPC</a> for the lastest on space weather.</div>       
+     </div>
+     <div id="SWPCy" class="hide">
+       <div onclick="location.href='https://www.swpc.noaa.gov/';" title="SWPC Day 1 Forecast" class="col-opt-m">
+         <div id="swpc-fd-1" role="button">Day 1</div>
+         <div class="row-opt-a">
+           <div class="col-opt-n" role="button">
+             <div class="row-opt-g">
+               <div class="col-opt-p">R1-R2</div>
+               <div id="swpc-r1-1" class="col-opt-q"></div>    
+             </div>
+             <div class="row-opt-g">
+               <div class="col-opt-p">R3-R5</div>
+               <div id="swpc-r3-1"class="col-opt-r"></div>
+             </div>            
+           </div>
+           <div class="col-opt-n" role="button">
+             <div class="row-opt-g">
+               <div class="col-opt-p">S1 or<br>greater</div>   
+               <div id="swpc-s1-1"class="col-opt-s">--</div>   
+             </div>
+           </div>
+           <div id="swpc-g-1" class="col-opt-n"  role="button">
+             <div id="swpc-gtc-1" class="div-opt-a">G</div>
+             <div id="swpc-gt-1" class="div-opt-b">none</div>
+           </div> 
+         </div>
+       </div>
+       <div onclick="location.href='https://www.swpc.noaa.gov/';" title="SWPC Day 2 Forecast" class="col-opt-m">
+         <div id="swpc-fd-2">Day 2</div>
+         <div class="row-opt-a">
+           <div class="col-opt-n">
+             <div class="row-opt-g">
+               <div class="col-opt-p">R1-R2</div>
+               <div id="swpc-r1-2" class="col-opt-q">--</div>
+             </div>
+             <div class="row-opt-g">
+               <div class="col-opt-p">R3-R5</div>
+               <div id="swpc-r3-2"class="col-opt-r">--</div>
+             </div>
+           </div>
+           <div class="col-opt-n">
+             <div class="row-opt-g">
+               <div class="col-opt-p">S1 or<br>greater</div>
+               <div id="swpc-s1-2"class="col-opt-s">--</div>
+             </div>
+           </div>
+           <div id="swpc-g-2" class="col-opt-n">
+             <div id="swpc-gtc-2" class="div-opt-a">G</div>
+             <div id="swpc-gt-2" class="div-opt-b">none</div>
+           </div>
+         </div>
+       </div>
+       <div onclick="location.href='https://www.swpc.noaa.gov/';" title="SWPC Day 3 Forecast" class="col-opt-m">
+         <div id="swpc-fd-3">Day 3</div>
+         <div class="row-opt-a">
+           <div class="col-opt-n">
+             <div class="row-opt-g">
+               <div class="col-opt-p">R1-R2</div>
+               <div id="swpc-r1-3" class="col-opt-q">--</div>
+             </div>
+             <div class="row-opt-g">
+               <div class="col-opt-p">R3-R5</div>
+               <div id="swpc-r3-3"class="col-opt-r">--</div>
+             </div>
+           </div>
+           <div class="col-opt-n">
+             <div class="row-opt-g">
+               <div class="col-opt-p">S1 or<br>greater</div>
+               <div id="swpc-s1-3"class="col-opt-s">--</div>
+             </div>
+           </div>
+           <div id="swpc-g-3" class="col-opt-n">
+             <div id="swpc-gtc-3" class="div-opt-a">G</div>
+             <div id="swpc-gt-3" class="div-opt-b">none</div>
+           </div>
+         </div>
+       </div>  
+     </div>
+
+     <!--Tropical-->
+     <div class="row-opt-b">
+       <img class="icon" src="/status/css/images/icon-tropical.png" alt="wx icon" width="34" height=34"> Tropical Cyclones
+     </div>
+     <div class="row-opt-a">
+       <div class="col-opt-e"><a href="https://www.metoc.navy.mil/jtwc/jtwc.html" title="JTWC Outlook" target="_blank" rel="noopener noreferrer"><img src="https://www.metoc.navy.mil/jtwc/products/abpwsair.jpg" alt="JTWC Product" width="295"></a></div>
+<!--
+       <div class="col-opt-e"><a href="https://www.nhc.noaa.gov/gtwo.php?basin=cpac&fdays=7" title="Central Pacific 7-Day Tropical Outlook" target="_blank" rel="noopener noreferrer"><img src="https://www.nhc.noaa.gov/xgtwo/two_cpac_7d0.png" alt="NHC Product" width="242"></a></div>
+-->
+       <div class="col-opt-e"><a href="https://www.nhc.noaa.gov/?epac" title="East North Pacific 7-Day Tropical Outlook" target="_blank" rel="noopener noreferrer"><img src="https://www.nhc.noaa.gov/xgtwo/two_pac_7d0.png" alt="NHC Product" width="375"></a></div>
+       <div class="col-opt-e"><a href="https://www.nhc.noaa.gov/?atl" title="Atlantic 7 Day Tropical Weather Outlook" target="_blank" rel="noopener noreferrer"><img src="https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png" alt="NHC Product" width="295"></a></div>
+     </div>
+ 
+     <div class="row-opt-j">
+       <!--Flooding-->
+       <div class="col-opt-o">
+         <div class="row-opt-i">
+          <img class="icon" src="/status/css/images/icon-flood.png" alt="wx icon" width="34" height=34"><span id="flood">Flooding</span>
+         </div>
+         <div class="row-opt-a">
+           <div class="col-opt-t"><a href="https://water.noaa.gov/operations/fho" title="NWC Flood Hazard Outlook" target="_blank" rel="noopener noreferrer"><img src="https://www.weather.gov/images/owp/FHO/National/National_FHO.png" alt="NWS FHO" width="450"></a></div>
+         </div>
+       </div>
+
+       <div id="midpage"></div>
+
+       <div class="col-opt-o">
+         <!--Tsunami-->
+         <div class="row-opt-i">
+           <img class="icon" src="/status/css/images/icon-tsunami.png" alt="wx icon" width="34" height=34"><span id="tst">Tsunamis</span>
+         </div>
+         <div class="row-opt-k">
+	   <div id="ts">Error retrieving tsunami alerts. Please visit <a href="https://tsunami.gov" target="_blank" rel="noopener noreferrer">Tsunami.gov</a> for the latest tsunami threats</div>
+         </div>
+         <!--Earthquake-->
+         <div class="row-opt-i">
+           <img class="icon" src="/status/css/images/icon-earthquake.png" alt="wx icon" width="34" height=34"><span id="eqk">Earthquakes</span>
+         </div>
+         <div class="row-opt-k">
+	   <div id="eq">Error retrieving earthquake data. Please visit <a href="https://earthquake.usgs.gov/earthquakes/map/" target="_blank" rel="noopener noreferrer">USGS</a> for the latest earthquake threats</div>          
+         </div>
+         <!--Volcanoe-->
+         <div class="row-opt-i">
+           <img class="icon" src="/status/css/images/icon-volcano.png" alt="wx icon" width="34" height=34"><span id="vol">Volcanoes</span>
+         </div>
+         <div class="row-opt-k">
+           <div id="vl">Error retrieving volcano data. Please visit <a href="https://www.usgs.gov/volcano" target="_blank" rel="noopener noreferrer">USGS</a> for the latest volcano threats</div>        
+         </div>
+       </div>
+     </div> 
+      
+<!-- *******END of CONTENT AREA *********************************-->
+<!-- TemplateEndEditable -->
+
+<!-- TemplateBeginEditable name="Filemtime" -->
+<!-- *********************************************************
+Please change the filemtime to your file name so the date page date last updated is correct 
+********************************************************************************** -->
+							<div id="grayTime">
+															</div>
+<!-- TemplateEndEditable -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="full-width-first">
+			<div class="full-width-first communication-links">
+				<div class="one-half-last nopad">
+					<span class="txt-rt myforecast-current">
+						<!--<div class="myforecast-current"> <a href="/rss_page.php?site_name=cfo" target="_blank" rel = "noopener noreferrer" style="text-decoration:none;font-size:11px;"> <img src="/css/images/rss.png" width="16" height="16" alt="CFO RSS Feed" />&nbsp;&nbsp;CFO RSS Feed </a> </div>
+-->
+					</span>
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+	<!-- end of <div class="center"> -->
+
+	<!-- sitemap area -->
+	<!-- legal footer area -->
+        <div class="center">
+          <div class="content">
+	<div class="footer-legal">
+  <div class="footer-legal">
+    <div class="footer-legal-content">
+      <div class="one-sixth-first" id="footer_legal_gov"> <a href="http://www.usa.gov"> <img src="https://www.weather.gov/bundles/templating/images/footer/usa_gov.png" alt="usa.gov" width="110" height="30" /></a> </div>
+      <div class="one-half-first" id="footer_legal_info">
+        <p> <a href="https://www.commerce.gov">US Dept of Commerce</a><br/>
+          <a href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a><br/>
+          <a href="https://www.weather.gov">National Weather Service</a><br/>
+          5830 University Research Court<br>
+          Riverdale Park, MD 20737<br>
+          <br/>
+          <br/>
+          <a href="https://www.nco.ncep.noaa.gov/mail_webmaster/">NWS Web Services POCs</a> </p>
+      </div>
+      <!-- end of <div class="one-half-first" id="footer_legal_info"> -->
+      <div class="one-third-last" id="footer_required_links">
+        <div class="div-half"> <a href="https://www.weather.gov/disclaimer">Disclaimer</a><br/>
+          <a href="http://www.cio.noaa.gov/services_programs/info_quality.html">Information Quality</a><br/>
+          <a href="https://www.weather.gov/help">Help</a><br/>
+          <a href="https://www.weather.gov/glossary">Glossary</a> </div>
+        <div class="div-half"> <a href="https://www.weather.gov/privacy">Privacy Policy</a><br/>
+          <a href="https://www.noaa.gov/foia-freedom-of-information-act">Freedom of Information Act (FOIA)</a><br/>
+          <a href="https://www.weather.gov/about">About Us</a><br/>
+          <a href="https://www.weather.gov/careers">Career Opportunities</a> </div>
+      </div>
+      <!-- end of <div class="one-third-last" id="footer_required_links"> --> 
+    </div>
+    <!-- end of <div class="footer-legal-content"> --> 
+  </div>
+  <!-- end of <div class="footer-legal"> --> 
+</div>
+          </div>
+        </div>
+	<!-- end of <div class="footer-legal"> -->
+	<script>
+        //script to gather active alerts
+             //Links to gather SPWC, Earthquakes, Tsunami, and Volcano data
+             var urla = 'https://services.swpc.noaa.gov/products/noaa-scales.json';
+             var urlb = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_day.geojson';
+             var urlc = 'https://api.weather.gov/alerts/active';
+             var urld = 'https://volcanoes.usgs.gov/rss/vhpcaprss.xml';
+	     var urle = 'https://services.swpc.noaa.gov/products/alerts.json';
+
+	     var tcount = 1;
+	     gatheralerts ();
+
+	     function gatheralerts () {
+		getTime();     
+                getdata();
+                getdatab();
+                getdatac();
+                getdatad();
+                getAlertsSWPC();
+                getAlertsApi();
+                
+             }
+
+	     setInterval(gatheralerts, 60000); 
+//	     function getTime () {
+//		     var dt= new Date();
+//		     document.getElementById("myDiv").textContent = dt.getSeconds();
+              // $("#myDiv").text(dt.getSeconds());
+		     
+//             }
+         //  });
+         </script>
+
+</body>
+</html>

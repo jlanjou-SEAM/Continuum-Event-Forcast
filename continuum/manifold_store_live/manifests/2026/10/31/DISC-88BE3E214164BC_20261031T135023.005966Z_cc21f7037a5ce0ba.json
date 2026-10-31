@@ -1,0 +1,24 @@
+{
+  "candidate_id": "DISC-88BE3E214164BC",
+  "provider": "NOAA/CO-OPS",
+  "dataset": "datagetter",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "marine",
+    "hydrology",
+    "coastal"
+  ],
+  "retrieved_utc": "2026-10-31T13:50:23.005966Z",
+  "request_url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=today&amp;station=EPT0003&amp;product=currents_predictions&amp;time_zone=gmt&amp;interval=10&amp;units=english&amp;application=DataAPI_Sample&amp;format=xml&amp;bin=14",
+  "final_url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=today&amp;station=EPT0003&amp;product=currents_predictions&amp;time_zone=gmt&amp;interval=10&amp;units=english&amp;application=DataAPI_Sample&amp;format=xml&amp;bin=14",
+  "status_code": 200,
+  "content_type": "text/xml;charset=UTF-8",
+  "byte_length": 16417,
+  "sha256": "cc21f7037a5ce0ba9ed514f1c2b930c9567530946c6aaf4dfaf1d346ee002654",
+  "etag": null,
+  "last_modified": null,
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/marine/2026/10/31/DISC-88BE3E214164BC/20261031T135023.005966Z_cc21f7037a5ce0ba.xml",
+  "parent_id": "NOAA-COOPS",
+  "discovery_depth": 1
+}

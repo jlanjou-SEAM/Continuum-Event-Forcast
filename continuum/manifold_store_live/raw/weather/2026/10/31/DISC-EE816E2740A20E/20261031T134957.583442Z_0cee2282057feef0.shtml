@@ -1,0 +1,880 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html lang="en">
+<head>
+<title>NCEP Meteorological Assimilation Data Ingest System (MADIS)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">    
+<meta name="author" content="MADIS Support Team">
+<link href="css/header.css" rel="stylesheet" type="text/css" >
+<!--<script type="text/javascript" src="/js/ForecastSearch.js"></script>-->
+
+    <!-- site-wide style sheets -->
+    <link rel="stylesheet" type="text/css" href="css/ncepmadis.css" media="all">
+    
+<!--    <link rel="stylesheet" type="text/css" href="css/print.css" media="print">-->
+    
+    <!-- A style sheet for submenus of submenus -->
+<!--    <link rel="stylesheet" type="text/css" href="css/gsd-more-submenus.css" media="all">-->
+    
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/gsd/css/ie.css" media="all"><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/gsd/css/ie7.css" media="all"><![endif]-->
+
+<script type="text/javascript" src="css/ie.js"></script>
+    
+<script id="_fed_an_js_tag" type="text/javascript" src="/federated-analytics.js?agency=OAR&amp;sub-agency=ESRLGSD&amp;sp=find&amp;yt=true"></script>
+
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="TMPC9-DCHA2-45L6L-3A6SC-8WMVB",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"TMPC9-DCHA2-45L6L-3A6SC-8WMVB";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="qyqup4ax2fklo2xf6ida-f-91504c870-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1320759","ak.ai":parseInt("795019",10),"ak.ol":"0","ak.cr":1,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"35847ed9","ak.r":46469,"ak.a2":n,"ak.m":"dscg","ak.n":"essl","ak.cport":9277,"ak.gh":"23.201.193.151","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1793454598","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==o8HOTPXteWz7AlW9Pr1Z/dbkRZZVekIVsPJLbXMjwFVJuU8kgKZ5IloxfXJwK9RW0HxcPVHQqVXUylrFaXphupVu/ddM4XriOKRg1tn6n5TE6SpNrNeWkVlCYoEaKbTTsX47r/bwK2BSwjj7CtdZ7sLswpNblz+qKKtZFst9rhfa9xpFmdWZ/axL5pyZQ7B0N9qjS3cjC3mJEoyZ+pvZ4CT0Qfk/MivHZj3qbvC7Rg8WsHpdez8AbsE0CKwoDDpVGQO759gjUeOXHWBZVbWgf7CZ3sSSWAYyT30dlLT7U9v8imkwd/F7gvq8R0ZRhr31GDL1/6TQyntFfjus3U0jvD8hyzwV0kr//VhHDU8SLeuJlOb290dPgf6dbPaJdnziKsLht0jh9Kph0JeMBonadd8igWJOES4t9RV3IizlN6k=","ak.pv":"4","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+<!--<body onload="startList()">-->
+
+<div id="container">
+<div class="header">
+
+  <div class="header-content">
+    <a href="https://www.noaa.gov" class="header-noaa-icon"><img src="images/header-noaa.png" alt="NOAA"></a>
+    <a href="https://www.weather.gov" class="header-nws-icon"><img src="images/header-nws.png" alt="NOAA"></a>
+    <a href="https://www.commerce.gov" class="header-doc"><img src="images/header_doc.png" alt="United States Department of Commerce"></a>
+    <div class="header-center-text"><a class="header-center-text" href="https://www.nco.ncep.noaa.gov">NCEP CENTRAL OPERATIONS</a></div>
+    <div class="header-noaa-text"><a class="header-noaa-text" href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a></div>
+  </div>
+</div>
+<div class="header-shadow"><div class="header-shadow-content"></div></div>
+
+     <!-- end major_header -->
+
+  <!-- major navigation -->
+<!-- Top Menu Navigation -->
+<div class="topnav">
+  <ul id="topnav">
+
+    <!-- Home Link -->
+    <li>
+      <div class="section-link">
+        <a href="#">home</a>
+      </div>
+    </li>
+
+    <!-- News Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/news">news</a>
+      </div>
+      <div class="drop">
+        <ul>
+          <li><a href="https://www.weather.gov/news">NWS News</a></li>
+          <li><a href="https://www.nws.noaa.gov/com/weatherreadynation/calendar.html">Events</a></li>
+          <li><a href="https://www.weather.gov/socialmedia">Social Media</a></li>
+          <li><a href="https://www.nws.noaa.gov/om/brochures.shtml">Pubs/Brochures/Booklets</a></li>
+          <li><a href="https://www.noaa.gov/NOAA-Communications">NWS Media Contacts</a></li>
+        </ul>
+      </div>
+    </li>
+
+    <!-- Search Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/search">search</a>
+      </div>
+      <div class="drop">
+        <div class="site-search">
+          <form method="get" action="https://search.usa.gov/search" style="margin-bottom: 0; margin-top: 0;">
+            <input type="hidden" name="v:project" value="firstgov">
+            <label for="query">Search For</label>
+            <input type="text" name="query" id="query" size="12" >
+            <input type="submit" value="Go" >
+            <p>
+              <input type="radio" name="affiliate" checked="checked" value="nws.noaa.gov" id="nws" >
+              <label for="nws" class="search-scope">NWS</label>
+              <input type="radio" name="affiliate" value="noaa.gov" id="noaa" >
+              <label for="noaa" class="search-scope">All NOAA</label>
+            </p>
+          </form>
+        </div>
+      </div>
+    </li>
+
+    <!-- Forecast Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/search">forecast</a>
+      </div>
+      <div class="drop">
+        <div id="forecast-lookup" class="site-search">
+          <form name="getForecast" id="getForecast" action="https://forecast.weather.gov/zipcity.php" method="get">
+            <label for="inputstring">Local forecast by <br>"City, St" or ZIP code</label>
+            <input id="inputstring" name="inputstring" type="text" size="12" value="Enter location ..." onclick="this.value=''" >
+            <input name="btnSearch" id="btnSearch" type="submit" value="Go" >
+            <div id="txtError">
+            <div id="errorNoResults" style="display:none;">Sorry, the location you searched for was not found. Please try another search.</div>
+            <div id="errorMultipleResults" style="display:none">Multiple locations were found. Please select one of the following:</div>
+            <div id="errorChoices" style="display:none"></div>
+              <input id="btnCloseError" type="button" value="Close" style="display:none" >
+            </div>
+            <div id="txtHelp"><a style="text-decoration: underline;" href="javascript:void(window.open('https://weather.gov/ForecastSearchHelp.html','locsearchhelp','status=0,toolbar=0,location=0,menubar=0,directories=0,resizable=1,scrollbars=1,height=500,width=530').focus());">Location Help</a></div>
+          </form>
+                        </div><!-- <div id="forecast-lookup"> -->
+          </div><!-- <div class="drop"> -->
+    </li>
+    <!-- About Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/about">about</a>
+      </div>
+      <div class="drop">
+          <ul>
+            <li><a href="https://www.weather.gov/about">About NWS</a></li>
+            <li><a href="https://www.weather.gov/organization">Organization</a></li>
+            <li><a href="https://sites.google.com/a/noaa.gov/nws-best-practices/">For NWS Employees</a></li>
+            <li><a href="https://www.weather.gov/international/">International</a></li>
+            <li><a href="https://www.weather.gov/organization/ncep">National Centers</a></li>
+            <li><a href="https://www.nws.noaa.gov/tg/">Products and Services</a></li>
+            <li><a href="https://www.weather.gov/contact">Contact Us</a></li>
+            <li><a href="https://w1.weather.gov/glossary/">Glossary</a></li>
+          </ul>
+        </div>
+    </li>
+
+  </ul><!-- End of top nav ul -->
+</div><!-- End of topnav div -->
+
+</div> <!-- end banner -->
+
+<div id="pbody">
+    <!-- minor navigation -->
+            <div style="width:160px" id="minor_nav">
+
+<!--<br>-->
+<ul style="word-wrap:break-word" id="vertnav">
+<br>
+   <li><a href="index.shtml">MADIS Home</a></li>
+</ul>
+<dl>
+ <dt>News</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <li><a href="madis_recent.shtml">What's Here - v4.0!</a></li>
+<!-- <li><a href="madis_comingsoon.shtml">What's Coming?</a></li>
+-->
+</ul>
+<dl>
+<dt>Data Information</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">  
+ <li><a href="madis_datasets.shtml">Overview</a></li>
+ <li>Descriptions&nbsp;&nbsp;>
+    <ul>
+       <li><a href="madis_sfc.shtml"><font color="FFFF66">Meteorological Surface</font></a></li>
+       <li class="indented_vertnav"><a href="madis_mesonet.shtml">Integrated Mesonet</a></li>
+       <li class="indented_vertnav"><a href="madis_cwop.shtml">Citizen Weather Observer Program (CWOP)</a></li>
+       <li class="indented_vertnav"><a href="madis_rwis_clarus.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+       <li class="indented_vertnav"><a href="national_mesonet.shtml">National Mesonet</a></li>
+       <li class="indented_vertnav"><a href="madis_metar.shtml">METAR</a></li>
+       <!--<li class="indented_vertnav"><a href="madis_OMO.shtml">1-minute ASOS</a></li>
+       --><li class="indented_vertnav"><a href="madis_maritime.shtml">Maritime</a></li>
+	<li class="indented_vertnav"><a href="madis_wxtelematics.shtml">Weather Telematics</a></li>
+       <li class="indented_vertnav"><a href="madis_nepp.shtml">New England Pilot Project (NEPP)</a></li>
+       <li class="indented_vertnav"><a href="madis_crn.shtml">Climate Reference Network (CRN)</a></li>
+       <li class="indented_vertnav"><a href="madis_ushcn.shtml">U.S. Climatology Net-Modernization (USHCN-M)</a></li>
+       <li><a href="madis_hydro.shtml"><font color="FFFF66">Hydrologic Surface</font></a></li>
+       <li><a href="madis_raob.shtml"><font color="FFFF66">Radiosonde</font></a></li>
+       <li><a href="madis_npn.shtml"><font color="FFFF66">NOAA Profiler Network</font></a></li>
+       <li><a href="madis_gpsmet.shtml"><font color="FFFF66">GPS-Met</font></a></li>
+       <li><a href="madis_acars.shtml"><font color="FFFF66">Aircraft Based </font></a></li>
+       <li><a href="madis_map.shtml"><font color="FFFF66">Multi-Agency Profiler (CAP)</font></a></li>
+       <li><a href="madis_rdmtr.shtml"><font color="FFFF66">Radiometer</font></a></li>
+       <li><a href="madis_satwnd.shtml"><font color="FFFF66">Satellite Wind</font></a></li>
+       <li><a href="madis_satsnd.shtml"><font color="FFFF66">Satellite Sounding</font></a></li>
+       <li><a href="madis_satrad.shtml"><font color="FFFF66">Satellite Radiance</font></a></li>
+       <li><a href="madis_snow.shtml"><font color="FFFF66">Snow</font></a></li>
+       <li><a href="madis_gapfillua.shtml"><font color="FFFF66">Gap-filling Upper Air</font></a></li>
+<!--       <li><a href="madis_wisdom.shtml"><font color="FFFF66">WISDOM Balloon Wind</font></a></li>-->
+       <li><a href="madis_RSAS.shtml"><font color="FFFF66">RSAS Sfc Analyses Grids</font></a></li>
+    </ul>
+ </li> 
+ <li>Variables&nbsp;&nbsp;>
+    <ul>
+       <li><font color="FFFF66">Meteorological Surface</font></li>
+       <li class="indented_vertnav"><a href="sfc_mesonet_variable_list.shtml">Mesonet/RWIS/National Mesonet</a></li>
+       <!--<li class="indented_vertnav"><a href="sfc_mesonet_variable_list.shtml">Citizen Weather Observer Program (CWOP)</a></li>
+       <li class="indented_vertnav"><a href="madis_rwis_variable_list.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+      --> <li class="indented_vertnav"><a href="sfc_urbanet_variable_list.shtml">National Mesonet Extended</a></li>
+       <li class="indented_vertnav"><a href="sfc_metar_variable_list.shtml">METAR (standard)</a></li>
+       <!--<li class="indented_vertnav"><a href="sfc_OMO_variable_list.shtml">1-minute ASOS</a></li>
+       --><li class="indented_vertnav"><a href="sfc_sao_variable_list.shtml">SAO</a></li>
+       <li class="indented_vertnav"><a href="sfc_maritime_variable_list.shtml">Maritime</a></li>
+	<li class="indented_vertnav"><a href="sfc_mobile_variable_list.shtml">Weather Telematics</a></li>
+       <li class="indented_vertnav"><a href="sfc_crn_variable_list.shtml">Climate Reference Network</a></li>
+       <li class="indented_vertnav"><a href="sfc_hcn_variable_list.shtml">Historical Climatology Network</a></li>
+       <li class="indented_vertnav"><a href="sfc_nepp_variable_list.shtml">New England Pilot Project</a></li>
+       <li><a href="hydro_variable_list.shtml"><font color="FFFF66">Hydrologic Surface</font></a></li>
+       <li><a href="raob_variable_list.shtml"><font color="FFFF66">Radiosonde</font></a></li>
+       <li><a href="npn_variable_list.shtml"><font color="FFFF66">NOAA Profiler Network</font></a></li>
+       <li><a href="gpsmet_variable_list.shtml"><font color="FFFF66">GPS-Met</font></a></li>
+       <li><a href="acars_variable_list.shtml"><font color="FFFF66">Aircraft Based</font></a></li>
+       <li><a href="acarsp_variable_list.shtml"><font color="FFFF66">Aircraft Based Profiles</font></a></li>
+       <li><a href="map_variable_list.shtml"><font color="FFFF66">Multi-Agency Profiler (CAP)</font></a></li>
+       <li><a href="rdmtr_variable_list.shtml"><font color="FFFF66">Radiometer</font></a></li>
+       <li><a href="satwnd_variable_list.shtml"><font color="FFFF66">Satellite Wind</font></a></li>
+       <li><a href="satsnd_variable_list.shtml"><font color="FFFF66">Satellite Sounding</font></a></li>
+       <li><a href="satrad_variable_list.shtml"><font color="FFFF66">Satellite Radiance</font></a></li>
+       <li><a href="snow_variable_list.shtml"><font color="FFFF66">Snow</font></a></li>
+       <li><a href="gapfillua_variable_list.shtml"><font color="FFFF66">Gap-filling Upper Air</font></a></li>
+<!--       <li><a href="wisdom_variable_list.shtml"><font color="FFFF66">WISDOM Balloon Wind</font></a></li>-->
+       <li><a href="rsas_variable_list.shtml"><font color="FFFF66">RSAS Sfc Analyses Grids</font></a></li>
+     </ul>
+ </li>
+ <li>Variables Metadata&nbsp;&nbsp;>
+    <ul>
+       <li><font color="FFFF66">Integrated Mesonet</font>
+       <li class="indented_vertnav"><a href="mesonet_precip.shtml">Precipitation</a></li>
+       <li class="indented_vertnav"><a href="mesonet_solar_radiation.shtml">Solar Radiation</a></li>
+       <li class="indented_vertnav"><a href="mesonet_soil_temperature.shtml">Soil Temperature</a></li>
+       <li class="indented_vertnav"><a href="mesonet_soil_moisture.shtml">Soil Moisture</a></li>
+    </li>
+       <li><font color="FFFF66">National Mesonet</font>
+       <li class="indented_vertnav"><a href="nmesonet_precip.shtml">Precipitation</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_solar_radiation.shtml">Solar Radiation</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_soil_temperature.shtml">Soil Temperature</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_soil_moisture.shtml">Soil Moisture</a></li>
+    </li>
+       <li><font color="FFFF66">OMO One Minute ASOS (HFMETAR)</font>
+       <li class="indented_vertnav"><a href="omo_precip.shtml">Precipitation</a></li>
+    </li>
+   </ul>
+<li>Quality Control&nbsp;&nbsp;>
+    <ul>
+   <li><a href="madis_qc.shtml">Overview</font></a></li>
+       <li><a href="madis_sfc_qc.shtml">Meteorological Surface</a></li>
+       <li><a href="madis_rwis_qc.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+       <li><a href="madis_hydro_qc.shtml">Hydrologic Surface</a></li>
+       <li><a href="madis_raob_qc.shtml">Radiosonde</a></li>
+       <li><a href="madis_npn_qc.shtml">NOAA Profiler Network</a></li>
+       <li><a href="madis_sfc_qc.shtml">Weather Telematics</a></li>
+       <li><a href="madis_acars_qc.shtml">Aircraft Based</a></li>
+       <li><a href="madis_acarsp_qc.shtml">Aircraft Based Profiles</a></li>
+       <li><a href="madis_map_qc.shtml">Multi-Agency Profiler (CAP)</a></li>
+       <li><a href="madis_rdmtr_qc.shtml">Radiometer</a></li>
+       <li><a href="madis_satwnd_qc.shtml">Satellite Wind</a></li>
+       <li><a href="madis_satsnd_qc.shtml">Satellite Sounding</a></li>
+       <li><a href="madis_snow_qc.shtml">Snow</a></li>
+       <li><a href="madis_gapfillua_qc.shtml">Gap-filling Upper Air</a></li>
+       <li><a href="madis_RSAS_qc.shtml">RSAS Surface Analysis</a>
+<!--	<li><a href="madis-data/qcms_messages.html">QC Summary Messages</a>
+    -->
+</ul>
+ </li>
+ <li>Restrictions&nbsp;&nbsp;>
+    <ul>
+       <li><a href="madis_restrictions.shtml">Overview</a></li>
+       <li><a href="mesonet_providers.shtml">Meteorological Surface</a></li>
+       <li><a href="hydro_providers.shtml">Hydrologic Surface</a></li>
+       <li><a href="acars_restrictions.shtml">Aircraft Based</a></li>
+    </ul>
+ </li>
+ <li><a href="MADISdataissues.shtml">Known Data Issues</a></li>
+</ul>
+<dl>
+<dt>User Access</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <!--<li><a href="user_resources.shtml">Overview</a></li>
+--> 
+<li><a href="data_application.shtml">Data Application Form</a></li>
+<li><!--<a href="https://madis-hweb.ncep.noaa.gov:8005/htdocs/index.shtml">--><a href="https://madis-data.ncep.noaa.gov/index.shtml">MADIS Distribution Services</a></li>
+<li><!--<a href="https://madis-hweb.ncep.noaa.gov:8005/htdocs/wmo_gdc.shtml">--><a href="https://madis-data.ncep.noaa.gov/wmo_gdc.shtml">GDC-ABO</a></li>
+<li><a href="https://madis-idm.ncep.noaa.gov/reset">Password Reset</a></li>
+</ul>
+<dl>
+<dt>Provider Information</dt>
+<ul style="word-wrap:break-word" id="vertnav">
+ <!--<li><a href="provider_resources.shtml">Overview</a></li>
+ <li><a href="network_info.shtml">Surface Provider List</a></li>
+--> 
+<li><a href="provider_resources.shtml">Overview</a></li>
+ <li><a href="mesonet_providers.shtml">Meteorological Surface</a></li>
+ <!--<li><a href="nmesonet_providers.shtml">National Mesonet/UrbaNet</a></li>-->
+ <li><a href="hydro_providers.shtml">Hydrological Surface</a></li>
+ <li><a href="map_providers.shtml">Multi-Agency Profiler (CAP)</a></li>
+ <!--<li><a href="rdmtr_providers.shtml">Radiometer</a></li>
+ -->
+<li><a href="snow_providers.shtml">Snow</a></li>
+<li><a href="madistosynoptic.shtml">Transitions to SYNOPTIC</a></li>
+ <!--<li>Quality Control&nbsp;&nbsp;>
+   <ul>
+ <li><a href="madis_smry_descrip.shtml">Summary</a></li>
+-->
+</ul>
+</dl>
+
+<dt>Support</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <li><a href="support_overview.shtml">Overview</a></li>
+ <li><a href="madis_monitoring.shtml">Data Outages</a></li>
+<!--
+ <li>FAQ&nbsp;&nbsp;>
+ <ul>
+     <li><a href="faq_accounts.shtml">Accounts</a></li>
+     <li><a href="faq_api.shtml">API</a></li>
+     <li><a href="faq_localization.shtml">AWIPS Localization</a></li>
+     <li><a href="faq_cwop.shtml">CWOP</a></li>
+     <li><a href="faq_datadisplay.shtml">Data Display</a></li>
+     <li><a href="faq_historicaldata.shtml">Historical Data</a></li>
+     <li><a href="faq_lastupdatetime.shtml">Last Update Time</a></li>
+     <li><a href="faq_netcdf.shtml">netCDF</a></li>
+     <li><a href="faq_providerdata.shtml">Provider Data</a></li>
+     <li><a href="faq_wfo.shtml">WFO</a></li>
+ </ul></li>
+-->
+ <li><a href="data_application.shtml#disclaimer">Disclaimer</a></li>
+ <li><a href="mailto:madis-support@noaa.gov">Contact Us</a></li>
+</ul>
+<dl>
+<dt>Related Links</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+<li><a href="https://gdc-abo.wmo.int/">WMO Global Data Center</a></li>
+<li><a href="https://madis-data.ncep.noaa.gov/index.shtml">MADIS Distribution Services</a></li>
+<li><a href="https://hads.ncep.noaa.gov/">HADS</a></li>
+<li><a href="https://amdar.ncep.noaa.gov/index.shtml">AMDAR</a></li>
+<li>&nbsp;</li>
+<li><a href="https://ruc.noaa.gov/amdar/">AMDAR Research</a></li>
+</li>
+<li>&nbsp;</li>
+</ul>
+</div>
+
+
+    <div id="content">
+    <a class="textvers" name="content_link">&nbsp;</a>
+
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="description" CONTENT="MADIS (Meteorological Assimilation Data Ingest System)">
+   <META NAME="keywords" CONTENT="METEOROLOGICAL DATA, meteorological data, WEATHER DATA, weather data, METEOROLOGICAL DATA ACCESS, meteorological data access, METEOROLOGICAL DATA ASSIMILATION, meteorological data assimilation">
+   <TITLE>MADIS Radiosonde Quality Control</TITLE>
+
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="TMPC9-DCHA2-45L6L-3A6SC-8WMVB",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"TMPC9-DCHA2-45L6L-3A6SC-8WMVB";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="qyqup4ax2fklo2xf6ida-f-91504c870-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1320759","ak.ai":parseInt("795019",10),"ak.ol":"0","ak.cr":1,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"35847ed9","ak.r":46469,"ak.a2":n,"ak.m":"dscg","ak.n":"essl","ak.cport":9277,"ak.gh":"23.201.193.151","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1793454598","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==o8HOTPXteWz7AlW9Pr1Z/dbkRZZVekIVsPJLbXMjwFVJuU8kgKZ5IloxfXJwK9RW0HxcPVHQqVXUylrFaXphupVu/ddM4XriOKRg1tn6n5TE6SpNrNeWkVlCYoEaKbTTsX47r/bwK2BSwjj7CtdZ7sLswpNblz+qKKtZFst9rhfa9xpFmdWZ/axL5pyZQ7B0N9qjS3cjC3mJEoyZ+pvZ4CT0Qfk/MivHZj3qbvC7Rg8WsHpdez8AbsE0CKwoDDpVGQO759gjUeOXHWBZVbWgf7CZ3sSSWAYyT30dlLT7U9v8imkwd/F7gvq8R0ZRhr31GDL1/6TQyntFfjus3U0jvD8hyzwV0kr//VhHDU8SLeuJlOb290dPgf6dbPaJdnziKsLht0jh9Kph0JeMBonadd8igWJOES4t9RV3IizlN6k=","ak.pv":"4","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></HEAD>
+<BODY TEXT="#333333" BGCOLOR="#FFFFFF">
+<p><H1>MADIS Radiosonde Quality Control</H1>
+<br>
+This page provides a detailed description of the quality control
+(QC) processing and data structures for the radiosonde
+dataset.
+
+<br><br>For a general overview of MADIS quality control, click <A
+HREF="madis_qc.shtml">here</A>.
+<br><br>
+<H2><FONT COLOR="#3333FF">Automated Quality Control</FONT></H2>
+<br>
+<b><a href="madis_raob_qc_notes.shtml">Radiosonde Quality Control Checks</a></b>
+
+<br><br>
+<PRE>
+  MADIS Radiosonde Variables with QC
+  ----------------------------------------------------------------------------------------------------
+  Code       Name                  Max    Level | Level 1: |                  Level 2:                
+                                Possible        |          |                                          
+                                QC Level        | Validity | Super-Adiabatic  Hydrostatic  Wind-Shear 
+                                                |          |   Lapse Rate                             
+  ----------------------------------------------------------------------------------------------------
+
+  Integrated Sounding            Sig    Mandatory
+  -------------------            ---    ---------
+  
+  DD        wind direction        1         2        X
+  FF        wind speed            1         2        X
+  U         u wind component      1         2        X
+  V         v wind component      1         2        X
+  T         air temperature       2         2        X             X            X + correction
+  TV        virtual temperature   2         2        X             X            X + correction
+  TD        dewpoint temperature  1         1        X
+  RH        relative humidity     1         1        X
+  Q         specific humidity     1         1        X
+  DPD       dewpoint depression   1         1        X
+  AH        absolute humidity     1         1        X
+  WVMR      water vapor mix ratio 1         1        X
+  P         pressure              1         1        X
+  HT        geopotential height   1         2        X                          X + correction
+ 
+  Mandatory Levels
+  ----------------
+
+  DDMAN     wind direction        2                  X                                            X
+  FFMAN     wind speed            2                  X                                            X
+  UMAN      u wind component      2                  X                                            X
+  VMAN      v wind component      2                  X                                            X
+  TMAN      air temperature       2                  X             X            X + correction
+  TVMAN     virtual temperature   2                  X             X            X + correction
+  TDMAN     dewpoint temperature  1                  X
+  RHMAN     relative humidity     1                  X
+  QMAN      specific humidity     1                  X
+  DPDMAN    dewpoint depression   1                  X
+  AHMAN     absolute humidity     1                  X
+  WVMRMAN   water vapor mix ratio 1                  X
+  PMAN      pressure              1                  X
+  HTMAN     geopotential height   2                  X                          X + correction
+
+  Significant Levels
+  ------------------
+
+  TSIG      air temperature       2                  X             X
+  TVSIG     virtual temperature   2                  X             X
+  TDSIG     dewpoint temperature  1                  X
+  RHSIG     relative humidity     1                  X
+  QSIG      specific humidity     1                  X
+  DPDSIG    dewpoint depression   1                  X
+  AHSIG     absolute humidity     1                  X
+  WVMRSIG   water vapor mix ratio 1                  X
+  PSIG      pressure              1                  X
+  HTSIG     geopotential height   1                  X
+ 
+  Wind Levels
+  -----------
+
+  DDWIND    wind direction        1                  X
+  FFWIND    wind speed            1                  X
+  UWIND     u wind component      1                  X
+  VWIND     v wind component      1                  X
+  PWIND     pressure              1                  X
+  HTWIND    geopotential height   1                  X
+
+  Maximum Wind Levels
+  -------------------
+
+  DDMXWND   wind direction        1                  X
+  FFMXWND   wind speed            1                  X
+  UMXWND    u wind component      1                  X
+  VMXWND    v wind component      1                  X
+  PMXWND    pressure              1                  X
+  HTMXWND   geopotential height   1                  X
+
+  Tropopause Levels
+  -----------------
+
+  DDTROP    wind direction        1                  X
+  FFTROP    wind speed            1                  X
+  UTROP     u wind component      1                  X
+  VTROP     v wind component      1                  X
+  TTROP     air temperature       2                  X             X
+  TVTROP    virtual temperature   2                  X             X
+  TDTROP    dewpoint temperature  1                  X
+  RHTROP    relative humidity     1                  X
+  QTROP     specific humidity     1                  X
+  DPDTROP   dewpoint depression   1                  X
+  AHTROP    absolute humidity     1                  X
+  WVMRTROP  water vapor mix ratio 1                  X
+  PTROP     pressure              1                  X
+  HTTROP    geopotential height   1                  X
+
+</PRE>
+<!--
+<P>The level 1 <i><b>validity checks</b></i> restrict each observation to falling within
+a TSP-specified set of tolerance limits.  Observations
+not falling within the limits are flagged as failing the QC check.  The following table lists the tolerance limits:
+
+<PRE>
+
+  ---------------------------------------------------
+  Validity Checks
+
+            Geopotential     
+            Height(m)         Temp.(C)     Max Wind
+  Level(mb) Low    High        Low  High   Speed(Kts)
+  ---------------------------------------------------
+  1000      -588    601        -65    60       70
+   850       634   1853        -50    45       90
+   700      2101   3473        -50    30      120
+   500      4505   6121        -57     5      200
+   400      5870   7791        -66   -10      250
+   300      7726   9952        -72   -20      300
+   250      8835  11274        -76   -25      300
+   200     10260  12699        -78   -30      300
+   150     12094  14533        -85   -30      200
+   100     14000  17500        -95   -30      200
+    70     16496  19596        -95   -25      200
+    50     18402  21602        -95   -15      200
+    30     21003  25503        -95    -5      200
+    20     23501  28001        -95     5      200
+    10     27003  33003        -95    15      200       
+   <10      N/A   45000        -95    15      200       
+
+</PRE>
+<P>The level 2 hydrostatic, super-adiabatic lapse rate, and wind shear checks
+ensure hydrostatic consistency between vertical layers, and also reasonable 
+vertical consistency for the temperature and wind data.
+
+<P>The <i><b>hydrostatic check</b></i> is based on techniques
+developed by Schwartz and Govett (1992).  In the MADIS implementation,
+the check is applied to the surface and mandatory level heights and
+temperatures, which may also be corrected by the check.  Moving a layer at
+a time up from the surface, the height at the top level of the layer
+is estimated from reported pressure and temperature, then compared
+against the reported height.  The height residual is then tested
+against a threshold that allows a margin of error based on the depth of
+the layer, which can span one missing mandatory level.
+If the residual is greater than the
+threshold, the next layer up is examined and that information is used
+in an attempt to correct either the height or the temperature of the
+level between the two layers.  If a correction cannot be made, the
+estimate is recalculated using any available significant level
+temperatures in the suspect layer in the hope that this will better
+represent the layer's temperature and reduce the residual to below the
+threshold.  The check continues until the top of the sounding is
+reached, or until a gap of more than one mandatory level occurs, or
+until a large residual is found and the criteria for correction are
+not met.  In that event, both the height and temperature at the
+suspect level are failed by the QC, and the check is not applied to
+data higher up in the sounding.  
+
+The following table lists the absolute value of the allowable residuals 
+for each layer:
+
+<PRE>
+
+  ---------------------------------------------------
+  Hydrostatic Check Allowable Residuals (Absolute)
+
+  Layer (mb)              Value (m)
+  ---------------------------------------------------
+  1099 - 1000              20
+  1000 -  925              20
+   925 -  850              21
+   850 -  700              20
+   700 -  500              25
+   500 -  400              20
+   400 -  300              20
+   300 -  250              20
+   250 -  200              25
+   200 -  150              30
+   150 -  100              36
+   100 -   70              40
+    70 -   50              45
+    50 -   30              50
+    30 -   20              55
+    20 -   10              60
+    10 -    7              65
+     7 -    5              70
+     5 -    3              75
+     3 -    2              80
+     2 -    1              85
+
+</PRE>
+The level 2 <i><b>super-adiabatic lapse rate check</b></i>, based on Atkins (1985), fails
+for the temperature layer between levels n and n+1 if the following
+detection criteria is met:
+
+<blockquote>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;C > [&nbsp;(&nbsp;(P<SUB>n</SUB>&nbsp;/&nbsp;P<SUB>n+1</SUB>&nbsp;)&nbsp;<SUP>k</SUP>&nbsp;&nbsp;*&nbsp;&nbsp;T<SUB>n+1</SUB>)&nbsp;&nbsp;-&nbsp;&nbsp;T<SUB>n</SUB>&nbsp;]
+
+<P>where,
+
+<p><table width=100%>
+
+<tr valign=top><td>&nbsp;&nbsp;&nbsp;P<SUB>n</SUB></td>
+<td>: pressure at level n (mb)</td></tr>
+<tr valign=top><td>&nbsp;&nbsp;&nbsp;P<SUB>n+1</SUB></td>
+<td>: pressure at level n+1 (mb)</td></tr>
+<tr valign=top><td>&nbsp;&nbsp;&nbsp;T<SUB>n</SUB></td>
+<td>: temperature at level n (K)</td></tr>
+<tr valign=top><td>&nbsp;&nbsp;&nbsp;T<SUB>n+1</SUB></td>
+<td>: temperature at level n+1 (K)</td></tr>
+<tr valign=top><td>&nbsp;&nbsp;&nbsp;k</td>
+<td>: kappa = 2/7</td></tr>
+<tr valign=top><td>&nbsp;&nbsp;&nbsp;C</td>
+<td>: tolerance<br>&nbsp;&nbsp;= 2 K if P<SUB>n</SUB> &nbsp;<&nbsp; 800 mb<br>
+&nbsp;&nbsp;= 2 K if P<SUB>n</SUB> <U>></U> 800 mb</td></tr>
+</table>
+Note:&nbsp;&nbsp;&nbsp;&nbsp;level n is <U>below</U> level n+1, and thus P<SUB>n</SUB>&nbsp;/&nbsp;P<SUB>n+1</SUB> is always > 1&nbsp;)
+</blockquote>
+
+<P>The level 2 <i><b>wind shear check</b></i> (DiMego et al., 1985) is applied to mandatory level winds.  For each mandatory level, the nearest wind that meets the following criteria
+is used for the check:
+
+<ul>
+<p><li>If the nearest wind level ("winds-by-height" in DiMego) is within 3000 m of the
+mandatory level being checked, then that wind is used in the shear check.</li>
+
+<p><li>If no
+such level is available, an attempt is made to locate the nearest maximum wind level
+("winds-by-pressure" in DiMego) that is between the midpoints of the mandatory levels below ("m0") and above ("m2") the level being checked ("m1").  Here's a diagram to make
+this clear:
+
+<blockquote>
+<P><sup><U>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</U></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+Next mandatory level up&nbsp;&nbsp;(m2)
+<BR>
+<BR>
+<P><sup><U>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</U></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+Midpoint between P<sub>m1</sub> and P<sub>m2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<sup><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></sup>
+<br>
+<br><sup><U>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</U></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+<b>Mandatory level being checked (m1)</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<<sup><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></sup>&nbsp;&nbsp;&nbsp;&nbsp;Search area
+<br>
+<br><sup><U>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</U></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+Midpoint between P<sub>m0</sub> and P<sub>m1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<sup><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></sup>
+<BR>
+<BR><sup><U>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</U></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+Next mandatory level down&nbsp;&nbsp;(m0)
+
+</blockquote>
+<P>Also note that this wind will only be selected for use in the check if the
+mandatory level being checked is between 500 and 150 mb.</li>
+
+<p><li>If no suitable wind level or maximum wind level can be located, then the
+m0 mandatory level wind will be used if it already passed the validity and
+wind shear checks, or if not, then the m2 level wind will be used if its
+validity check was passed.  If neither the m0 or m2 wind can be used, the
+check will not be performed for m1.
+</ul>
+Once the wind to be used has been found (at level "s"), the wind shear check
+is applied, and if the following criteria are met, the check passes:
+
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp;(&nbsp;FF<sub>mean</sub>&nbsp;&nbsp;&lt&nbsp;&nbsp;30&nbsp;&nbsp;kt&nbsp;&nbsp;&nbsp;and &nbsp;
+FF<sub>diff</sub>&nbsp;&nbsp;&lt &nbsp;&nbsp;FF<sub>thr</sub>&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;or
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;(&nbsp;FF<sub>mean</sub>&nbsp;&nbsp;&lt&nbsp;&nbsp;39&nbsp;&nbsp;kt&nbsp;&nbsp;&nbsp;and &nbsp;
+FF<sub>diff</sub>&nbsp;&nbsp;&lt &nbsp;&nbsp;FF<sub>thr</sub>&nbsp;&nbsp;&nbsp;and &nbsp;&nbsp;DD<sub>diff</sub>&nbsp;&nbsp;&lt&nbsp;&nbsp;70&nbsp;&nbsp;deg  &nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;or
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;(&nbsp;FF<sub>mean</sub>&nbsp;&nbsp;&lt&nbsp;&nbsp;51&nbsp;&nbsp;kt&nbsp;&nbsp;&nbsp;and &nbsp;
+FF<sub>diff</sub>&nbsp;&nbsp;&lt &nbsp;&nbsp;FF<sub>thr</sub>&nbsp;&nbsp;&nbsp;and &nbsp;&nbsp;DD<sub>diff</sub>&nbsp;&nbsp;&lt&nbsp;&nbsp;55&nbsp;&nbsp;deg  &nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;or
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;(
+|&nbsp;FF<sub>m1</sub>&nbsp;-&nbsp;FF<sub>s</sub>&nbsp;|&nbsp;&nbsp;&lt &nbsp;&nbsp;FF<sub>thr</sub>&nbsp;&nbsp;&nbsp;and &nbsp;&nbsp;DD<sub>diff</sub>&nbsp;&nbsp;&lt&nbsp;&nbsp;40&nbsp;&nbsp;deg  &nbsp;)
+
+<P>where,
+
+<p><table width=100%>
+
+<tr valign=top><td>&nbsp;&nbsp;&nbsp;m1</td>
+<td>: mandatory level being checked</td></tr>
+
+<tr valign=top><td>&nbsp;&nbsp;&nbsp;s</td>
+<td>: level used to check m1</td></tr>
+
+<tr valign=top><td>&nbsp;&nbsp;&nbsp;FF<SUB>mean</SUB></td>
+<td>: mean wind speed (kt) between levels m1 and s</td></tr>
+
+<tr valign=top><td>&nbsp;&nbsp;&nbsp;FF<SUB>diff</SUB></td>
+<td>: absolute speed difference between the two levels</td></tr>
+
+<tr valign=top><td>&nbsp;&nbsp;&nbsp;FF<SUB>thr</SUB></td>
+<td>: acceptable speed shear threshold (kt) between levels m1 and s<br>
+&nbsp;&nbsp;= 50 kt if s is a wind level<br>
+&nbsp;&nbsp;= 80 kt if s is a maximum wind or mandatory level</td></tr>
+
+<tr valign=top><td>&nbsp;&nbsp;&nbsp;DD<SUB>diff</SUB></td>
+<td>: absolute directional difference between the two levels</td></tr>
+</table>
+If s is a mandatory level, there is an additional restriction that the magnitude
+of the vector difference between the two levels be less than 80 (kt).
+
+</blockquote>
+
+<p><sup>*</sup>It should be noted that while the QC checks discussed
+here are generally applied to the form of the variable stored in the database,
+the QC results will also be applied to any forms of the variable that
+are requested by the user and are derived from the primary variable.
+For example, specific humidity will get the QC results from the
+checks applied to dewpoint temperature.
+
+<H2><FONT COLOR="#3333FF">Subjective Intervention</FONT></H2> 
+
+<P>Two text files, a "reject" and an "accept" list provide the
+capability to subjectively override the results of the automated QC
+checks.  The reject list is a list of stations and associated input
+observations that will be labeled as bad, regardless of the outcome of
+the QC checks; the accept list is the corresponding list of stations
+that will be labeled as good, regardless of the outcome of the QC
+checks.  In both cases, observations associated with the stations in
+the lists can be individually flagged.  For example, wind observations
+at a particular station may be added to the reject list, but not the
+temperature observations.
+
+<P>Here are the current subjective intervention lists in use:
+<UL>
+<LI><A HREF="raob_reject.txt">Reject List</A></LI>
+<LI><A HREF="raob_accept.txt">Accept List</A></LI>
+</UL>
+
+<H2><FONT COLOR="#3333FF">QC Data Structures</FONT></H2> 
+
+<P>
+The MADIS QC information available for each variable includes the
+following QC structures:  a single-character "data descriptor", intended to define an overall opinion of the
+quality of each observation by combining the information from the
+various QC checks, and for users desiring detailed information, 
+a "QC applied" bitmap indicating which QC checks 
+were applied to each observation, and a "QC results" bitmap indicating the 
+results of the various QC checks.
+
+<P>
+The following table provides a complete list of the data descriptors and
+the bits used in the bitmaps:
+
+<PRE>
+  ---------------------------------
+  MADIS QC Information - Radiosonde
+  ---------------------------------
+
+  QC Data Descriptor Values
+  -------------------------
+
+  No QC available:
+
+   Z - Preliminary, no QC
+
+  Automated QC checks:
+
+   C - Coarse pass, passed level 1
+   S - Screened, passed levels 1 and 2
+   V - Verified, passed levels 1, 2, and 3
+   X - Rejected/erroneous, failed level 1
+   Q - Questioned, passed level 1, failed 2 or 3
+
+       where level 1 = validity
+             level 2 = hydrostatic, super adiabatic lapse rate, and wind shear
+                       checks
+             level 3 = N/A
+
+  Subjective intervention:
+
+   G - Subjective good
+   B - Subjective bad
+
+  Interpolated/Corrected observations:
+
+   I - Interpolated
+   W - Raw data was "wrong", has been corrected using estimates from automated QC checks
+   T - Virtual temperature could not be calculated, air temperature passing all QC 
+       checks has been returned
+
+  Bitmask for QC Applied and QC Results
+  -------------------------------------
+
+   Bit       QC Check                      Decimal Value
+   ---       --------                      -------------
+    1        Master Check                        1
+    2        Validity Check                      2
+    3        Reserved                            4
+    4        Reserved                            8
+    5        Reserved                           16
+    6        Hydrostatic Check                  32
+    7        Reserved                           64
+    8        Super Adiabatic Lapse Rate Check  128
+    9        Wind Shear Check                  256
+   10        Reserved                          512
+
+</PRE>
+<p>The QC bitmask is used in the QC applied and QC result "words" returned
+along with the QC data descriptor.  By examining the individual bits,
+the user can determine which checks were actually applied, and the
+pass/fail status of each check that was applied.
+
+<P>In the QC applied word, a bit value of 1 means the corresponding check
+was applied, a bit value of 0 indicates the check wasn't applied.
+
+<P>In the QC results word, a bit value of 1 means the corresponding check
+was applied and failed, a bit value of 0 indicates the check passed
+(given that the check was applied).
+
+<P>The "Master Check" is used to summarize all of the checks in a single
+bit.  If any check at all was applied, this bit will be set in the
+QC applied word.  If the observation failed any QC check, it will be
+set in the QC results word.
+
+<P>When read as decimal numbers, the different bits that are set in the
+bitmask are summed together.  For example, a QC applied value of 131
+should be interpreted as 1 + 2 + 128, meaning the validity and
+super-adiabatic lapse rate checks were applied.
+<p>
+<HR>
+<p>
+<H2><FONT COLOR="#3333FF">References</FONT></H2> 
+
+<p>Atkins, M.J., 1985: Quality Control, Selection and Data Processing of
+Observations in the Meteorological Office Operational Forecast System. 
+<i>Workshop on the Use and Quality Control of Meteorological Observations</i>,
+Reading, U.K., European Centre for Medium Range Weather Forecasts, 255-290.
+
+<p>DiMego, G.J, P.A. Phoebus, and J.E. McDonnel, 1985: Data Processing and
+Quality Control for Optimum Interpolation Analysis at the National Meteorological
+Center. <i>NMC Office Note 306</i>, NOAA, U.S. Dept. of Commerce, 38 pp.
+
+<p>Schwartz, B. and M. Govett, 1992: A Hydrostatically Consistent North American
+Radiosonde Data Base at the Forecast Systems Laboratory. <i>NOAA Technical Report ERL FSL-4</i>, 81 pp.
+
+<p>
+Technique Specification Package 88-21-R2 For AWIPS-90 RFP Appendix G Requirements Numbers: Quality Control Incoming Data, 1994. <i>AWIPS Document Number TSP-032-1992R2</i>, NOAA, National Weather Service, Office of Systems Development.
+-->
+<p>
+<hr width="100%"><p align="right">Last updated 16 March 2017</p>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3463124-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</BODY>
+</HTML>
+
+
+
+      
+        <!-- force body content to include the floated "news" element -->
+	<div class="clear">
+        </div>
+    </div> <!-- end body content -->
+</div>   <!-- end pbody -->
+
+<!-- legal footer area -->
+        <div class="footer-legal">
+                                <div class="footer-legal-content">
+                        <div class="footer-legal-gov">
+                                <a href="https://www.usa.gov"><img src="images/usa_gov.png" alt="usa.gov" width="110" height="30" /></a>
+                        </div>
+
+                        <div class="footer-legal-column">
+                                <p>
+                                        <a href="https://www.commerce.gov">US Dept of Commerce</a><br />
+                                <a href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a><br />
+                                <a href="https://www.weather.gov" >National Weather Service</a><br />
+                                                5830 University Research Ct.<br />College Park, MD 20740<br />
+                                Web Master's Email: <a href='mailto:w-nws.webmaster@noaa.gov'>w-nws.webmaster@noaa.gov</a>                      </p>
+                        </div>
+
+                        <div class="footer-legal-column2">
+                                <a href="https://www.weather.gov/disclaimer">Disclaimer</a><br />
+                                <a href="https://www.cio.noaa.gov/services_programs/info_quality.html">Information Quality</a><br />
+                                <a href="https://www.weather.gov/help">Help</a><br />
+                                <a href="https://www.weather.gov/glossary">Glossary</a>
+                        </div>
+
+                        <div class="footer-legal-column3">
+                                <a href="https://www.weather.gov/privacy">Privacy Policy</a><br />
+                                <a href="https://www.noaa.gov/information-technology/foia">Freedom of Information Act (FOIA)</a><br />
+                                <a href="https://www.weather.gov/about">About Us</a><br />
+                                <a href="https://www.weather.gov/careers">Career Opportunities</a>
+                        </div>
+                </div>
+
+</div><!-- end of <div class="footer-legal">--> 
+
+</div><!-- End of content div -->
+</div><!-- End of center div -->
+
+</div> <!-- end container -->
+</body>
+</html>
+

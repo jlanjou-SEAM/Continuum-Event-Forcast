@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NOMADS at ncep.noaa.gov</title><link rel="stylesheet" href="/bundles/noaatemplating/css/weather.css?2.3.27">
+<link rel="stylesheet" href="/bundles/noaatemplating/css/com/header.css?2.3.27">
+<link rel="stylesheet" href="/bundles/noaatemplating/css/com/navbar.css?2.3.27">
+<link rel="stylesheet" href="/bundles/noaatemplating/css/com/footer.css?2.3.27">
+<link rel="stylesheet" href="/css/nomads.css?2.3.27">
+<script src="/bundles/noaatemplating/cdn/js/jquery.3.7.1.min.js?2.3.27"></script>
+<script src="/js/nomads.js"></script>
+<script>NS_CSM_td=1234280736;NS_CSM_pd=275116668;NS_CSM_u="/clm10";NS_CSM_col="AAAAAAXMo/yA16UFe23JSb+KqLESH0EricSiej9SxGA6BC3nxxFnOZfG8+8bR2VkJ1nqlNk=";</script><script type="text/javascript">function sendTimingInfoInit(){setTimeout(sendTimingInfo,0)}function sendTimingInfo(){var wp=window.performance;if(wp){var c1,c2,t;c1=wp.timing;if(c1){var cm={};cm.ns=c1.navigationStart;if((t=c1.unloadEventStart)>0)cm.us=t;if((t=c1.unloadEventEnd)>0)cm.ue=t;if((t=c1.redirectStart)>0)cm.rs=t;if((t=c1.redirectEnd)>0)cm.re=t;cm.fs=c1.fetchStart;cm.dls=c1.domainLookupStart;cm.dle=c1.domainLookupEnd;cm.cs=c1.connectStart;cm.ce=c1.connectEnd;if((t=c1.secureConnectionStart)>0)cm.scs=t;cm.rqs=c1.requestStart;cm.rss=c1.responseStart;cm.rse=c1.responseEnd;cm.dl=c1.domLoading;cm.di=c1.domInteractive;cm.dcls=c1.domContentLoadedEventStart;cm.dcle=c1.domContentLoadedEventEnd;cm.dc=c1.domComplete;if((t=c1.loadEventStart)>0)cm.ls=t;if((t=c1.loadEventEnd)>0)cm.le=t;cm.tid=NS_CSM_td;cm.pid=NS_CSM_pd;cm.ac=NS_CSM_col;var xhttp=new XMLHttpRequest();if(xhttp){var JSON=JSON||{};JSON.stringify=JSON.stringify||function(ob){var t=typeof(ob);if(t!="object"||ob===null){if(t=="string")ob='"'+ob+'"';return String(ob);}else{var n,v,json=[],arr=(ob&&ob.constructor==Array);for(n in ob){v=ob[n];t=typeof(v);if(t=="string")v='"'+v+'"';else if(t=="object"&&v!==null)v=JSON.stringify(v);json.push((arr?"":'"'+n+'":')+String(v));}return(arr?"[":"{")+String(json)+(arr?"]":"}");}};xhttp.open("POST",NS_CSM_u,true);xhttp.send(JSON.stringify(cm));}}}}if(window.addEventListener)window.addEventListener("load",sendTimingInfoInit,false);else if(window.attachEvent)window.attachEvent("onload",sendTimingInfoInit);else window.onload=sendTimingInfoInit;</script></head>
+<body><main id="main"><header id="header" class="row">
+   <a href="http://www.noaa.gov" id="header-noaa">
+       <img src="/bundles/noaatemplating/images/header_noaa.png" 
+            alt="National Oceanic and Atmospheric Administration">
+   </a>
+   <a href="https://www.weather.gov" id="header-nws">
+       <img src="/bundles/noaatemplating/images/header_nws.png" 
+            alt="National Weather Service">
+   </a>
+   <a href="http://www.commerce.gov" id="header-doc">
+       <img src="/bundles/noaatemplating/images/header_doc.png" 
+            alt="United States Department of Commerce">
+   </a>
+   <div style="clear:both"></div>
+</header>
+
+<div class="header-shadow">
+  <div class="header-shadow-content"></div>
+</div>
+<nav id="topnav" class="nav navbar-top">
+   <div id="m-menu" class="m-navbar">
+      <button type="button" class="navbar-toggle">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+      </button>
+   </div>
+   <div id="menu" class="navbar">
+
+      <ul class="nav-menu">
+         <!--
+         Doesn't work with the class.
+         <li><a class="nav-menu-link" href="/">Home</a></li>
+         -->
+         <li><a class="" href="/">HOME</a></li>
+
+         <li class="dropdown">
+            <a class="nav-menu-link" href="https://www.weather.gov/forecastmaps">Forecast<span class="chevron"></span></a>
+               <ul class="dropdown-menu" role="menu">
+                  <li><a class="dropdown-link" href="https://www.weather.gov">Local</a></li>
+                  <li><a class="dropdown-link" href="https://digital.weather.gov">Graphical</a></li>
+                  <li><a class="dropdown-link" href="https://www.aviationweather.gov/">Aviation</a></li>
+                  <li><a class="dropdown-link" href="https://www.weather.gov/marine">Marine</a></li>
+                  <li><a class="dropdown-link" href="https://water.weather.gov/ahps/">Rivers and Lakes</a></li>
+                  <li><a class="dropdown-link" href="https://www.nhc.noaa.gov/">Hurricanes</a></li>
+                  <li><a class="dropdown-link" href="https://www.spc.noaa.gov/">Severe Weather</a></li>
+                  <li><a class="dropdown-link" href="https://www.weather.gov/fire">Fire Weather</a></li>
+                  <li><a class="dropdown-link" href="https://www.swpc.noaa.gov/">Space Weather</a></li>
+                  <li><a class="dropdown-link" href="https://gml.noaa.gov/grad/solcalc/sunrise.html">Sun/Moon</a></li>
+                  <li><a class="dropdown-link" href="https://www.cpc.ncep.noaa.gov/">Long Range Forecasts</a></li>
+                  <li><a class="dropdown-link" href="https://www.cpc.ncep.noaa.gov">Climate Prediction</a></li>
+               </ul>
+         </li>
+
+         <li class="dropdown">
+            <a class="nav-menu-link" href="https://www.nws.noaa.gov/climate">Past&nbsp;Weather<span class="chevron"></span></a>
+            <ul class="dropdown-menu" role="menu">
+               <li><a href="https://w2.weather.gov/climate">Past Weather</a></li>
+               <li><a href="https://w2.weather.gov/climate">Heating/Cooling Days</a></li>
+               <li><a href="https://w2.weather.gov/climate">Monthly Temperatures</a></li>
+               <li><a href="https://w2.weather.gov/climate">Records</a></li>
+               <li><a href="https://www.usno.navy.mil">Astronomical Data</a></li>
+            </ul>
+         </li>
+
+         <li class="dropdown">
+            <a class="nav-menu-link" href="https://www.weather.gov/safety">Safety<span class="chevron"></span></a>
+            <ul class="dropdown-menu" role="menu">
+               <li><a href="https://www.weather.gov/safety/flood">Floods</a></li>
+               <li><a href="https://www.nws.noaa.gov/om/Tsunami/index.html">Tsunami</a></li>
+               <li><a href="https://www.weather.gov/safety/beachhazards">Beach Hazards</a></li>
+               <li><a href="https://www.nws.noaa.gov/om/fire/">Wildfire</a></li>
+               <li><a href="https://www.weather.gov/safety/cold">Cold</a></li>
+               <li><a href="https://www.weather.gov/safety/tornado/">Tornadoes</a></li>
+               <li><a href="https://www.weather.gov/safety/fog/">Fog</a>
+               <li><a href="https://www.weather.gov/safety/airquality/">Air Quality</a></li>
+               <li><a href="https://www.weather.gov/safety/heat">Heat</a></li>
+               <li><a href="https://www.weather.gov/safety/hurricane">Hurricanes</a></li>
+               <li><a href="https://www.weather.gov/safety/lightning">Lightning</a></li>
+               <li><a href="https://www.weather.gov/safety/safeboating/">Safe Boating</a></li>
+               <li><a href="https://www.weather.gov/safety/ripcurrent">Rip Currents</a></li>
+               <li><a href="https://www.weather.gov/safety/thunderstorm/">Thunderstorms</a></li>
+               <li><a href="https://www.weather.gov/safety/space">Space Weather</a></li>
+               <li><a href="https://www.weather.gov/safety/heat-uv">Sun (Ultraviolet Radiation)</a></li>
+               <li><a href="https://www.weather.gov/safetycampaign">Safety Campaigns</a></li>
+               <li><a href="https://www.weather.gov/safety/wind">Wind</a></li>
+               <li><a href="https://www.weather.gov/safety/drought/">Drought</a></li>
+               <li><a href="https://www.weather.gov/safety/winter">Winter Weather</a></li>
+            </ul>
+         </li>
+
+         <li class="dropdown">
+            <a class="nav-menu-link" href="https://www.weather.gov/informationcenter">Information<span class="chevron"></span></a>
+            <ul class="dropdown-menu" role="menu">
+               <li><a href="https://www.weather.gov/wrn/wea">Wireless Emergency Alerts</a></li>
+               <li><a href="https://www.weather.gov/owlie/publication_brochures">Brochures</a></li>
+               <li><a href="https://www.weather.gov/wrn/">Weather-Ready Nation</a></li>
+               <li><a href="https://www.nws.noaa.gov/om/coop/">Cooperative Observers</a></li>
+               <li><a href="https://www.weather.gov/briefing/">Daily Briefing</a></li>
+               <li><a href="https://www.nws.noaa.gov/om/hazstats.shtml">Damage/Fatality/Injury Statistics</a></li>
+               <li><a href="https://mag.ncep.noaa.gov/">Forecast Models</a></li>
+               <li><a href="https://www.weather.gov/gis">GIS Data Portal</a></li>
+               <li><a href="https://www.nws.noaa.gov/nwr/">NOAA Weather Radio</a></li>
+               <li><a href="https://www.weather.gov/publications">Publications</a></li>
+               <li><a href="https://www.weather.gov/skywarn/">SKYWARN Storm Spotters</a></li>
+               <li><a href="https://www.weather.gov/stormready/">StormReady</a></li>
+               <li><a href="https://www.weather.gov/TsunamiReady">TsunamiReady</a></li>
+               <li><a href="https://www.weather.gov/notification">Service Change Notices</a></li>
+            </ul>
+         </li>
+
+         <li class="dropdown">
+            <a class="nav-menu-link" href="https://www.weather.gov/owlie">Education<span class="chevron"></span></a>
+            <ul class="dropdown-menu" role="menu">
+               <li><a href="https://www.weather.gov/wrn/force">Be A Force of Nature</a></li>
+               <li><a href="https://www.weather.gov/education">NWS Education Home</a></li>
+            </ul>
+         </li>
+
+         <li class="dropdown">
+            <a class="nav-menu-link" href="https://www.weather.gov/contact-media/">News<span class="chevron"></span></a>
+            <ul class="dropdown-menu" role="menu">
+               <li><a class="dropdown-link" href="https://www.weather.gov/news">NWS News</a></li>
+               <li><a href="https://www.weather.gov/wrn/calendar">Events</a></li>
+               <li><a href="https://www.weather.gov/socialmedia">Social Media</a></li>
+               <li><a href="https://www.weather.gov/owlie/publication_brochures">Pubs/Brochures/Booklets </a></li>
+               <li><a href="https://www.noaa.gov/NOAA-Communications">NWS Media Contacts</a></li>
+            </ul>
+         </li>
+
+         <li class="dropdown">
+            <a class="nav-menu-link site-search" href="https://www.weather.gov/search">Search<span class="chevron"></span></a>
+            <ul class="dropdown-menu" role="menu" id="menu-search">
+               <li>
+                  <div id="site-search" class="">
+                     <form method="get" action="//search.usa.gov/search">
+                        <input type="hidden" name="v:project" value="firstgov">
+                        <label for="query">Search For</label>
+                        <input type="text" name="query" id="query" size="12">
+                        <input type="submit" id="search-submit" value="Go">
+                        <p>
+                           <input type="radio" name="affiliate" checked="checked" value="nws.noaa.gov" id="nws">
+                           <label for="nws" id="search-nws-label" class="search-scope">NWS</label>
+                           <input type="radio" name="affiliate" value="noaa.gov" id="noaa">
+                           <label for="noaa" id="search-noaa-label" class="search-scope">All NOAA</label>
+                        </p>
+                     </form>
+                  </div>
+               </li>
+            </ul>
+         </li>
+
+         <li class="dropdown">
+            <a class="nav-menu-link" href="https://www.weather.gov/about">About<span class="chevron"></span></a>
+            <ul class="dropdown-menu" role="menu" id="menu-about">
+               <li><a href="https://www.weather.gov/about">About NWS</a></li>
+               <li><a href="https://www.weather.gov/organization">Organization</a></li>
+               <li><a href="https://www.weather.gov/media/wrn/NWS_Weather-Ready-Nation_Strategic_Plan_2019-2022.pdf">Strategic Plan</a></li>
+               <li><a href="https://www.weather.gov/careers/#diversity">Commitment to Diversity</a></li>
+               <li><a href="https://sites.google.com/noaa.gov/nws-insider/home">For NWS Employees</a></li>
+               <li><a href="https://www.weather.gov/international/">International</a></li>
+               <li><a href="https://www.weather.gov/organization">National Centers</a></li>
+               <li><a href="https://www.weather.gov/careers">Careers</a></li>
+               <li><a href="https://www.weather.gov/contact">Contact Us</a></li>
+               <li><a href="https://w1.weather.gov/glossary">Glossary</a></li>
+            </ul>
+         </li>
+
+      </ul>
+
+   </div> <!-- navbar -->
+</nav>
+<div class="nomads_header_bar largefont">NOAA Operational Model Archive and Distribution System</div><div class="help_line">
+<div class="links_line">
+<ul>
+
+<li>
+   <a href="http://www.ncep.noaa.gov/" title="National Centers for Environmental Prediction">NCEP</a> &gt;
+   <a href="http://www.nco.ncep.noaa.gov/" title="NCEP Central Operations">NCO</a> &gt;&nbsp;
+   <a href="/" title="NOMADS Home">NOMADS</a>
+</li><li>
+   &nbsp;&nbsp;|&nbsp;&nbsp;
+</li><li>
+  <a href="/info.php?page=overview" title="NOMADS Overview">NOMADS Overview</a>
+</li><li>
+   &nbsp;&nbsp;|&nbsp;&nbsp;
+</li><li>
+  <a href="/info.php?page=help">Information</a>
+</li><li>
+   &nbsp;&nbsp;|&nbsp;&nbsp;
+</li><li>
+  <a href="/info.php?page=documents">Documents</a>
+</li><li>
+   &nbsp;&nbsp;|&nbsp;&nbsp;
+</li><li>
+  <a href="/info.php?page=whatsnew">What's New?</a>
+</li><li>
+   &nbsp;&nbsp;|&nbsp;&nbsp;
+</li><li>
+  <a href="/status.php">NOMADS Status</a>
+</li>
+
+</ul>
+</div>
+</div>
+<div id="nomads_body"><div id="home_body"><h1>NOMADS Data at NCEP</h1>
+
+<div class="center text-container">
+<p class="medium">Click on the link in the Data Set field for description and availability information.</p>
+<p class="medium">Click on the column headings for description of each data access method. </p>
+</div>
+  
+<div id="dataset_table">
+<table class="main_table center">
+<tr class="header_row" >
+   <td style="width:300px">Data Set</td>
+   <td style="width:71px">freq</td>
+   <td style="width:78px"><a href="info.php?page=gribfilter">grib filter</a> </td>
+   <td style="width:75px"><a href="info.php?page=fastdownload">https</a></td>
+</tr><tr>
+   <td colspan="5" class="header_row"> Global Models</td> 
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('aigfs')" title="AIGFS Information">AIGFS</span></td>
+   <td>6 hours</td>
+   <td>-</td>
+   <td> <a href="/pub/data/nccf/com/aigfs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('aigefs')" title="AIGEFS Information">AIGEFS</span></td>
+   <td>6 hours</td>
+   <td>-</td>
+   <td> <a href="/pub/data/nccf/com/aigefs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('fnl')" title="GDAS Information">GDAS</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=fnl">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/gfs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('GDAS_0.25')" title="GDAS 0.25 grid Information">GDAS 0.25</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=gdas_0p25">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/gfs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('GFS_0p25_1hr')" title="GFS Information">GFS 0.25 Degree</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=gfs_0p25">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/gfs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('GFS_0p25_1hr')" title="GFS Information">GFS 0.25 Degree Hourly</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=gfs_0p25_1hr">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/gfs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('GFS_0p25_second')" title="GFS Information">GFS 0.25 Degree (Secondary Parms)</span></td>
+   <td> 6 hours</td>
+   <td><a href="gribfilter.php?ds=gfs_0p25b">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/gfs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('GFS_0p5')" title="GFS Information">GFS 0.50 Degree</span></td>
+   <td> 6 hours</td>
+   <td><a href="gribfilter.php?ds=gfs_0p50">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/gfs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('GFS_1p0')" title="GFS Information">GFS 1.00 Degree</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=gfs_1p00">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/gfs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('GFS_sflux')" title="GFS Information">GFS sflux</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=gfs_sflux">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/gfs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('GFS_MOS')"
+             title="GFS Model Output Statistics information">GFS MOS</span></td>
+   <td> 6 hours </td>
+   <td> - </td>
+   <td> <a href="/pub/data/nccf/com/gfs_mos/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('gefs_atmos_0p50a')" 
+             title="GFS Ensemble Information">GFS Ensemble 0.5 Degree</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=gefs_atmos_0p50a">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/gens/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('gefs_atmos_0p50b')" 
+             title="GFS Ensemble Information">GFS Ensemble 0.5 Degree (Secondary Params)</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=gefs_atmos_0p50b">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/gens/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('gefs_atmos_0p25s')" 
+             title="GFS Ensemble Information">GFS Ensemble 0.25 Degree</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=gefs_atmos_0p25s">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/gens/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('gefs_chem')" 
+             title="GFS Ensemble Information">GFS Ensemble Chem 0.5 Degree</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=gefs_chem_0p50">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/gens/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('gefs_chem')" 
+             title="GFS Ensemble Information">GFS Ensemble Chem 0.25 Degree</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=gefs_chem_0p25">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/gens/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('GFS_Ensemble_bias_corrected_0p5')" 
+             title="GFS Ensemble Information">GFS Ensemble 0.5 Degree Bias-Corrected</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=gensbc">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/naefs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('GFS_Ensemble_ndgd_bias_corrected')" 
+             title="GFS Ensemble Information">GFS Ensemble NDGD resolution Bias-Corrected</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=gensbc_ndgd">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/naefs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('gtgn')" title="Graphical Turbulence Guidance Nowcast">GTGN</span></td>
+   <td>15 minutes</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/gtgn/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('hgefs')" title="HGEFS Information">HGEFS</span></td>
+   <td>6 hours</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/hgefs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('NAEFS_bias_corrected')" 
+             title="NAEFS High Resolution Bias-Corrected Information">NAEFS high resolution Bias-Corrected</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=naefsbc">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/naefs/prod">https</a></td>
+</tr><tr> 
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('NAEFS_bias_corrected')" 
+             title="NAEFS High Resolution Bias-Corrected Information">NAEFS NDGD resolution Bias-Corrected</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=naefsbc_ndgd">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/naefs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('ObsProc')" title="ObsProc Information">ObsProc (Observations Processing)</span></td>
+   <td> variable</td>
+   <td> - </td>
+   <td><a href="/pub/data/nccf/com/obsproc/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('UVI')" 
+             title="UVI (Ultraviolet Index) information">UVI (Ultraviolet Index)</span></td>
+   <td>daily</td>
+   <td> - </td>
+   <td><a href="/pub/data/nccf/com/uvi/prod">https</a></td>
+</tr><tr>
+   <td colspan="5" class="header_row">Regional Models</td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('ObsProc')" title="ObsProc Information">ObsProc (Observations Processing)</span></td>
+   <td> variable</td>   
+   <td> - </td>
+   <td><a href="/pub/data/nccf/com/obsproc/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('AQM')" 
+             title="AQM Information">AQM Daily Maximum</span></td>
+   <td>06Z, 12Z</td>
+   <td><a href="gribfilter.php?ds=aqm_daily">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/aqm/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('AQM')" 
+             title="AQM Information">AQM Hourly Surface Ozone</span></td>
+   <td>06Z, 12Z</td>
+   <td><a href="gribfilter.php?ds=aqm_ozone_1hr">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/aqm/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('dafs')" title="DAFS Information">DAFS</span></td>
+   <td>hourly</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/dafs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('HIRES')" 
+             title="HIRESW Information">HIRESW Alaska</span></td>
+   <td>06Z, 18Z</td>
+   <td><a href="gribfilter.php?ds=hiresak">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/hiresw/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('HIRES')" 
+             title="HIRESW Information">HIRESW CONUS</span></td>
+   <td>00Z, 12Z</td>
+   <td><a href="gribfilter.php?ds=hiresconus">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/hiresw/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('HIRES')" 
+             title="HIRESW Information">HIRESW Guam</span></td>
+   <td>00Z, 12Z</td>
+   <td><a href="gribfilter.php?ds=hiresguam">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/hiresw/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('HIRES')" 
+             title="HIRESW Information">HIRESW Hawaii</span></td>
+   <td>00Z, 12Z</td>
+   <td><a href="gribfilter.php?ds=hireshi">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/hiresw/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('HIRES')" 
+             title="HIRESW Information">HIRESW Puerto Rico</span></td>
+   <td>06Z, 18Z</td>
+   <td><a href="gribfilter.php?ds=hirespr">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/hiresw/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('HREF')" 
+             title="HREF Information">HREF Alaska</span></td>
+   <td>06Z, 18Z</td>
+   <td><a href="gribfilter.php?ds=hrefak">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/href/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('HREF')" 
+             title="HREF Information">HREF CONUS</span></td>
+   <td>00Z, 12Z</td>
+   <td><a href="gribfilter.php?ds=hrefconus">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/href/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('HREF')" 
+             title="HREF Information">HREF Hawaii</span></td>
+   <td>00Z, 12Z</td>
+   <td><a href="gribfilter.php?ds=hrefhi">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/href/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('HREF')" 
+             title="HREF Information">HREF Puerto Rico</span></td>
+   <td>06Z, 18Z</td>
+   <td><a href="gribfilter.php?ds=hrefpr">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/href/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('HRRR_sub_hr')" 
+             title="HRRR Information">HRRR</span></td>
+   <td>hourly</td>
+   <td><a href="gribfilter.php?ds=hrrr_2d">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/hrrr/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('HRRR')" 
+             title="HRRR Information">HRRR Sub Hourly</span></td>
+   <td>hourly</td>
+   <td><a href="gribfilter.php?ds=hrrr_sub">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/hrrr/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('HRRR')" 
+             title="HRRR Information">HRRR AK</span></td>
+   <td>hourly</td>
+   <td><a href="gribfilter.php?ds=hrrrak_2d">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/hrrr/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('HRRR')" 
+             title="HRRR Information">HRRR AK Sub Hourly</span></td>
+   <td>hourly</td>
+   <td><a href="gribfilter.php?ds=hrrrak_sub">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/hrrr/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('HWRF')" 
+             title="HWRF Information">HWRF</span></td>
+   <td>6 hours</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/hwrf/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('HMON')" 
+             title="HMON Information">HMON</span></td>
+   <td>6 hours</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/hmon/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('HAFS')" 
+             title="HAFS Information">HAFS</span></td>
+   <td>6 hours</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/hafs/prod">https</a></td>
+</tr><tr>
+   <td><a href="https://www.arl.noaa.gov/hysplit/hysplit" target="_blank" rel="noopener noreferrer" title="HYSPLIT Information">HYSPLIT</a></td>
+   <td>6 hours</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/hysplit/prod">https</a></td>
+</tr><tr>
+   <td><a href="https://vlab.noaa.gov/web/mdl/lamp"
+          target="_blank" rel="noopener noreferrer">LAMP</a></td>
+   <td>hourly</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/lmp/prod/">https</a></td>
+</tr><tr>
+   <td><a href="https://vlab.noaa.gov/web/mdl/gridded-lamp"
+          target="_blank" rel="noopener noreferrer">GLMP (Gridded Lamp)</a></td>
+   <td>hourly</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/glmp/prod/">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('WRF_NMM')" 
+             title="WRF_NMM Information">NAM Alaska Pressure Level Vars (11.25km)</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=nam_ak">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/nam/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('WRF_NMM')" 
+             title="WRF_NMM Information">NAM Alaska Surface Vars (11.25km)</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=nam_ak_surf">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/nam/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('WRF_NMM')" 
+             title="WRF_NMM Information">NAM CONUS (12km)</span></td>
+   <td>6 hours </td>
+   <td><a href="gribfilter.php?ds=nam">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/nam/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('NEMS_NMM')" 
+             title="NEMS_NMM Information">NAM North America (32km)</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=nam_na">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/nam/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('NEMS_NMM')" 
+             title="NEMS_NMM Information">NAM Caribbean/Central America</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=nam_crb">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/nam/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('NEMS_NMM')" 
+             title="NEMS_NMM Information">NAM Pacific</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=nam_pac">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/nam/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('NEMS_NMM')" 
+             title="NEMS_NMM Information">NAM NEST Alaska</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=nam_alaskanest">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/nam/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('NEMS_NMM')" 
+             title="NEMS_NMM Information">NAM NEST CONUS</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=nam_conusnest">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/nam/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('NEMS_NMM')" 
+             title="NEMS_NMM Information">NAM NEST HAWAII</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=nam_hawaiinest">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/nam/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('NEMS_NMM')" 
+             title="NEMS_NMM Information">NAM NEST Puerto Rico</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=nam_priconest">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/nam/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('NAM_MOS')"
+             title="NAM Model Output Statistics information">NAM MOS</span></td>
+   <td> 12 hours </td>
+   <td> - </td>
+   <td><a href="/pub/data/nccf/com/nam_mos/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('BLEND')" 
+             title="NBM Information">National Blend of Models</span></td>
+   <td>hourly</td>
+   <td><a href="gribfilter.php?ds=blend">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/blend/prod">https</a></td>
+</tr><tr>
+   <td><a href="https://ldas.gsfc.nasa.gov/nldas/" target="_blank" rel="noopener noreferrer">North American Land Data Assimilation System</a></td>
+   <td>daily</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/nldas/prod">https</a></td>
+</tr><tr> 
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('RTMA')" 
+             title="RTMA Information">RTMA ALASKA</span></td>
+   <td>hourly</td>
+   <td><a href="gribfilter.php?ds=akrtma">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/rtma/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('RTMA')" 
+             title="RTMA Information">RTMA2.5 CONUS</span></td>
+   <td>hourly</td>
+   <td><a href="gribfilter.php?ds=rtma2p5">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/rtma/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('RTMARU')" 
+             title="RTMARU Information">RTMA CONUS Rapid Updates</span></td>
+   <td>15 min</td>
+   <td><a href="gribfilter.php?ds=rtma_ru">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/rtma/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('RTMA')" 
+             title="RTMA Information">RTMA Guam</span></td>
+   <td>hourly</td>
+   <td><a href="gribfilter.php?ds=gurtma">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/rtma/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('RTMA')" 
+             title="RTMA Information">RTMA Hawaii</span></td>
+   <td>hourly</td>
+   <td><a href="gribfilter.php?ds=hirtma">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/rtma/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('RTMA')" 
+             title="RTMA Information">RTMA Puerto Rico</span></td>
+   <td>hourly</td>
+   <td><a href="gribfilter.php?ds=prrtma">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/rtma/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('RAP')" 
+             title="RAP Information">RAP</span></td>
+   <td>hourly</td>
+   <td><a href="gribfilter.php?ds=rap">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/rap/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('RAP')" 
+             title="RAP Information">RAP 32km North America</span></td>
+   <td>hourly</td>
+   <td><a href="gribfilter.php?ds=rap32">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/rap/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('RAP')" 
+             title="RAP Information">RAP Alaska</span></td>
+   <td>hourly</td>
+   <td><a href="gribfilter.php?ds=rap242">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/rap/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('RAP')" 
+             title="RAP Information">RAP Eastern North Pacific</span></td>
+   <td>hourly</td>
+   <td><a href="gribfilter.php?ds=rap243">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/rap/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('SPCPOST')" 
+             title="SPC-POST Information">SPC-POST</span></td>
+   <td>hourly</td>
+   <td><a href="gribfilter.php?ds=spc_post">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/spc_post/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('SREF')" 
+             title="SREF Information">SREF CONUS (40km)</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=sref">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/sref/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('SREF')" 
+             title="SREF Information">SREF CONUS (40km) Bias-Corrected</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=srefbc">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/sref/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('SREF')" 
+             title="SREF Information">SREF North America (32km)</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=sref_na">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/sref/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('SREF')" 
+             title="SREF Information">SREF North America (16km)</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=sref_132">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/sref/prod">https</a></td>
+</tr><tr>
+   <td><a href="https://www.wcrp-climate.org/WGNE/BlueBook/2015/individual-articles/01_Pondeca_Manuel_etal_RTMA.pdf" target="_blank" rel="noopener noreferrer">URMA</a></td>
+   <td>hourly</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/urma/prod">https</a></td>
+</tr><tr>
+   <td colspan="5" class="header_row">Climate Models</td>
+</tr><tr> 
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('ObsProc')" title="ObsProc Information">ObsProc (Observations Processing)</span></td>
+   <td> variable</td>
+   <td> - </td>
+   <td><a href="/pub/data/nccf/com/obsproc/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('CFS')" 
+             title="CFS Information">Climate Forecast System Flux Products</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=cfs_flx">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/cfs/prod">https</a></td>
+</tr><tr> 
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('CFS')" 
+             title="CFS Information">Climate Forecast System 3D Pressure Products</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=cfs_pgb">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/cfs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('core')" 
+             title="CORe Information">CORe</span></td>
+   <td>6 hours</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/core/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('CCPA')"
+             title="Climatology Calibrated Precipitation Analysis">Climatology Calibrated Precipitation Analysis</span></td>
+   <td>6 hours</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/ccpa/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('cip')" 
+             title="Current Icing Product">Current Icing Product</span></td>
+   <td>hourly</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/cip/prod">https</a></td>
+</tr><tr>
+   <td colspan="5" class="header_row">Ocean/Lake/River Models</td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('NWM')" 
+             title="NWM Information">National Water Model</span></td>
+   <td>6 hours</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/nwm/prod">https</a></td>
+</tr><tr>
+<td><span class="ds_info" onClick="retrieve_ds_descr_file('RTOFS_global_model_forecast')" 
+             title="RTOFS Global Model Forecast  Information">RTOFS Atlantic</span></td>
+   <td>daily</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/rtofs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('RTOFS_global_model_forecast')" 
+             title="RTOFS Global Model Forecast  Information">RTOFS Global</span></td>
+   <td>daily</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/rtofs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('SEA_ICE')" 
+             title="Sea Ice Information">Sea Ice Analysis</span></td>
+   <td>daily</td>
+   <td><a href="gribfilter.php?ds=seaice">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/seaice_analysis/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('SEA_ICE')"
+             title="Sea Ice Information">Sea Ice Drift</span></td>
+   <td>daily</td>
+   <td> - </td>
+   <td><a href="/pub/data/nccf/com/seaice_drift/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('GLWave_model_forecast')" 
+             title="Great Lakes Wave Unstructured Model Information">Great Lakes Wave Unstructured (GLWU)</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=glwu">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/glwu/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('GFSWAVE')" 
+             title="GFS Wave Information">GFS Wave</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=gfswave">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/gfs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('gefs_wave')" 
+             title="Wave Model Forecast Information">GFS Ensemble Wave</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=gefs_wave_0p25">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/gens/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('psurge')"
+             title="P-Surge Information">P-Surge</span></td>
+   <td>6 hours</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/psurge/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('STOFS_Global')"
+        	title="STOFS Information">STOFS 2D Global</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=stofs_2d_glo">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/stofs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('STOFS_Atlantic')"
+        	title="STOFS Information">STOFS 3D Atlantic</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=stofs_3d_atl">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/stofs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('STOFS_Pacific')"
+        	title="STOFS Information">STOFS 3D Pacific</span></td>
+   <td>6 hours</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/stofs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('ETSS')"
+             title="ETSS Information">ETSS (Extra-Tropical Storm Surge)</span></td>
+   <td>6 hours</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/petss/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('PETSS')"
+             title="P-ETSS Information">P-ETSS (Probabilistic ETSS)</span></td>
+   <td>6 hours</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/petss/prod">https</a></td>
+</tr><tr>
+   <td><a href="https://tidesandcurrents.noaa.gov/models.html" target="_blank" rel="noopener noreferrer">National Operational Coastal Modeling Program</a></td>
+   <td>6 hours</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/nosofs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('NWPS')" 
+             title="NWPS Information">NWPS Alaska Region</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=arnwps">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/nwps/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('NWPS')" 
+             title="NWPS Information">NWPS Eastern Region</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=ernwps">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/nwps/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('NWPS')" 
+             title="NWPS Information">NWPS Pacific Region</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=prnwps">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/nwps/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('NWPS')" 
+             title="NWPS Information">NWPS Southern Region</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=srnwps">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/nwps/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('NWPS')" 
+             title="NWPS Information">NWPS Western Region</span></td>
+   <td>6 hours</td>
+   <td><a href="gribfilter.php?ds=wrnwps">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/nwps/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('NSST')"
+             title="Near Sea Surface Temperatures information">NSST (Near Sea Surface Temperatures)</span></td>
+   <td>daily</td>
+   <td> - </td>
+   <td><a href="/pub/data/nccf/com/nsst/prod">https</a></td>
+</tr><tr>
+   <td colspan="5" class="header_row">Space Weather Models</td>
+</tr><tr>
+   <td><a href="https://www.swpc.noaa.gov/products/wsa-enlil-solar-wind-prediction" target="_blank" rel="noopener noreferrer">WSA-Enlil</a></td>
+   <td>12 hours</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/wsa_enlil/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('SWMF')"
+             title="SWMF-Geospace information">SWMF-Geospace</span></td>
+   <td>cont</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/swmf/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('WFS')"
+             title="WAM-IPE Forecast System information">WFS (WAM-IPE Forecast System)</span></td>
+   <td>daily</td>
+   <td> - </td>
+   <td><a href="/pub/data/nccf/com/wfs/prod">https</a></td>
+</tr><tr>
+   <td colspan="5" class="header_row">External Models</td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('CMCENS')"
+             title="Canadian Meteorological Center (CMC) ensemble information">CMC Ensemble</span></td>
+   <td>12 hours</td>
+   <td><a href="gribfilter.php?ds=cmcens">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/naefs/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('FENS')" 
+             title="FENS Information">FNMOC Ensemble and Bias Corrected</span></td>
+   <td>12 hours</td>
+   <td><a href="gribfilter.php?ds=fens">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/naefs/prod">https</a></td>
+</tr><tr>
+   <td><a href="https://www.nrlmry.navy.mil/metoc/nogaps/navgem.html" target="_blank" rel="noopener noreferrer">NAVGEM</a></td>
+   <td>daily</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/fnmoc/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('NCOM')" 
+             title="NCOM Information">NCOM</span></td>
+   <td>daily</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/ncom/prod">https</a></td>
+</tr><tr>
+   <td><a href="https://www.hycom.org/hycom/overview" target="_blank" rel="noopener noreferrer">HYCOM</a></td>
+   <td>daily</td>
+   <td>-</td>
+   <td><a href="/pub/data/nccf/com/navo/prod">https</a></td>
+</tr><tr>
+   <td><span class="ds_info" onClick="retrieve_ds_descr_file('557WW')" 
+             title="557WW Information">557ww Ensemble</span></td>
+   <td>12 hours</td>
+   <td><a href="gribfilter.php?ds=557ww">grib filter</a></td>
+   <td><a href="/pub/data/nccf/com/557ww/prod">https</a></td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<h1>Parallel Data at NCEP</h1>
+<div class="center text-container">
+  <p class="medium">
+    Parallel data associated with upcoming NCEP model upgrades. Data is hosted through https downloads, and on occasion the NOMADS interface services 
+  </p>
+</div>
+<table class="main_table center">
+  <tr class="header_row" >
+    <td style="width:300px">Data Set</td>
+    <td style="width:71px">freq</td>
+    <td style="width:78px"><a href="info.php?page=gribfilter">grib filter</a> </td>
+    <td style="width:75px"><a href="info.php?page=fastdownload">https</a></td>
+  </tr><tr>
+    <td colspan="5" class="header_row">Parallel Models</td>
+  </tr>
+  <tr>
+    <td nowrap align="center"><span class="ds_info" onClick="retrieve_ds_descr_file('RRFS')" title="RRFS Information">RRFS</span></td>
+    <td nowrap align="center">6 hours</td>
+    <td nowrap align="center">-</td>
+    <td nowrap align="center"> <a href="/pub/data/nccf/com/rrfs/para">https</a></td>
+  </tr>
+  <tr>
+    <td nowrap align="center"><span class="ds_info" onClick="retrieve_ds_descr_file('REFS')" title="REFS Information">REFS</span></td>
+    <td nowrap align="center">6 hours</td>
+    <td nowrap align="center">-</td>
+    <td nowrap align="center"> <a href="/pub/data/nccf/com/refs/para">https</a></td>
+  </tr>
+  <tr>
+    <td nowrap align="center"><a href="https://www.arl.noaa.gov/hysplit/hysplit" target="_blank" rel="noopener noreferrer" title="HYSPLIT Information">HYSPLIT</a></td>
+    <td nowrap align="center">6 hours</td>
+    <td nowrap align="center">-</td>
+    <td nowrap align="center"><a href="/pub/data/nccf/com/hysplit/para">https</a></td>
+  </tr>
+  <tr>
+    <td nowrap align="center"><span class="ds_info" onClick="retrieve_ds_descr_file('SPCPOST')" title="SPC-POST Information">SPC-POST</span></td>
+    <td nowrap align="center">hourly</td>
+    <td nowrap align="center">-</td>
+    <td nowrap align="center"><a href="/pub/data/nccf/com/spc_post/para">https</a></td>
+  </tr>
+  <tr>
+    <td nowrap align="center"><font color="red">NWPS</td>
+    <td nowrap align="center">6 hours</td>
+    <td nowrap align="center">-</td>
+    <td nowrap align="center"><a href="/pub/data/nccf/com/nwps/para">https</a></td>
+  </tr>
+</table>
+<br>
+</div><div id="ds_descr_id" class="modal" style="display:none;"><div class="modal-content" onClick="closeModalBox('ds_descr_id');"><span class="close" title="Click anywhere in this box to close it">&times;</span><br><span id="ds_descr_txt"> </span></div></div></div><div id="version_line"> NCEP NOMADS Version 2.3.27, October 2026 </div><footer id="footer">
+   <!-- footer.twig -->
+   <div class="footer-legal">
+
+      <div id="footerLogo" class="grid col-20">
+         <a href="http://www.usa.gov"><img src="/bundles/noaatemplating/images/usa_gov.png" alt="usa.gov" width="110" height="30"></a>
+      </div>
+
+      <div class="grid col-25">
+         <ul class="list-unstyled">
+            <li><a href="http://www.commerce.gov">US Dept of Commerce</a></li>
+            <li><a href="http://www.noaa.gov">National Oceanic and Atmospheric Administration</a></li>
+            <li><a href="https://www.weather.gov">National Weather Service</a></li>
+            <li><a href="http://www.ncep.noaa.gov/">National Centers for Environmental Prediction</a></li>
+            <li><span class="smallTxt" style="color:blue">5830 University Research Court</span></li>
+            <li><span class="smallTxt" style="color:blue">College Park, MD  20740</span></li>
+            <li><a href="http://www.nco.ncep.noaa.gov/mail_webmaster/">NCEP Internet Services Team</a></li>
+         </ul>
+      </div>
+
+      <div class="grid col-25">
+         <ul class="list-unstyled">
+            <li><a href="https://www.weather.gov/disclaimer">Disclaimer</a></li>
+            <li><a href="http://www.cio.noaa.gov/services_programs/info_quality.html">Information Quality</a></li>
+            <li><a href="https://www.weather.gov/help">Help</a></li>
+            <li><a href="https://www.weather.gov/glossary">Glossary</a></li>
+            <li><a href="https://www.weather.gov/contact">Comments? Questions? Please Contact Us</a></li>
+         </ul>
+      </div>
+
+      <div class="grid col-25">
+         <ul class="list-unstyled">
+            <li><a href="https://www.weather.gov/privacy">Privacy Policy</a></li>
+            <li><a href="https://www.noaa.gov/information-technology/foia">Freedom of Information Act (FOIA)</a></li>
+            <li><a href="https://www.weather.gov/about">About Us</a></li>
+            <li><a href="https://www.weather.gov/careers">Career Opportunities</a></li>
+         </ul>
+      </div>
+
+   </div>
+   <!-- end footer.twig -->
+</footer>
+<script src="/bundles/noaatemplating/js/general-dom.js?2.3.27"></script>
+<script src="/bundles/noaatemplating/cdn/js/modernizr.2.8.3.min.js?2.3.27"></script>
+<script src="/bundles/noaatemplating/js/nav.js?2.3.27"></script>
+<script src="/bundles/noaatemplating/cdn/js/jquery.autocomplete.1.2.22.min.js?2.3.27"></script>
+<script src="/bundles/noaatemplating/cdn/js/store+json.1.3.20.min.js?2.3.27"></script>
+<script src="/bundles/noaatemplating/js/forecast.search.js?2.3.27"></script>
+
+</main></body>
+</html>
+

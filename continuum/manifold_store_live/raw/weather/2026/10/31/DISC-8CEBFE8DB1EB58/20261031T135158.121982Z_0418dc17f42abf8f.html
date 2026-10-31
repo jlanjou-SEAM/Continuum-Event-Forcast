@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>火山登山者向けの情報提供ページ</title>
+  <meta name="Author" content="気象庁 Japan Meteorological Agency" />
+  <meta name="keywords" content="気象庁 Japan Meteorological Agency" />
+  <meta name="description" content="気象庁が提供するページです" />
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src-elem 'self' www.jma.go.jp www.data.jma.go.jp; img-src 'self' www.jma.go.jp www.data.jma.go.jp www.google.com; script-src-elem 'self' www.google.com www.gstatic.com" />
+  <link rel="stylesheet" media="all" href="/eqev/data/assets/default_eqvol.css">
+  <link rel="stylesheet" media="all" href="./style.css">
+  <script src="/eqev/data/assets/default_header_footer.js"></script>
+  <script type="module" src="./index.js"></script>
+</head>
+
+<body>
+  <noscript>
+    <div>すべての機能をご利用いただくにはJavascriptを有効にしてください。</div>
+  </noscript>
+  <header id="header_area">
+    <div id="nheader">
+      <div id="logo">
+        <a href="//www.jma.go.jp/jma/index.html">
+          <img src="//www.jma.go.jp/jma/com/images/logo.gif" alt="気象庁" />
+        </a>
+      </div>
+      <nav>
+        <ul id="gnavi">
+          <li id="gnavi1"><a href="//www.jma.go.jp/jma/">ホーム</a></li>
+          <li id="gnavi2"><a href="//www.jma.go.jp/jma/menu/menuflash.html" class="on">防災情報</a></li>
+          <li id="gnavi3"><a href="//www.jma.go.jp/jma/menu/menureport.html">各種データ・資料</a></li>
+          <li id="gnavi4"><a href="//www.jma.go.jp/jma/menu/areas.html">地域の情報</a></li>
+          <li id="gnavi5"><a href="//www.jma.go.jp/jma/menu/menuknowledge.html">知識・解説</a></li>
+          <li id="gnavi6"><a href="//www.jma.go.jp/jma/menu/menuappli.html">各種申請・ご案内</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div id="contents_area2">
+    <div id="ncontents2">
+      <nav>
+        <ul class="breadcrumb2">
+          <li><a href="//www.jma.go.jp/">ホーム</a>&nbsp;&gt;&nbsp;</li>
+          <li>火山登山者向けの情報提供ページ</li>
+        </ul>
+      </nav>
+      <main>
+        <!-- contents -->
+      
+<h1>火山登山者向けの情報提供ページ（全国）</h1>
+<div class="contents">
+  <p>個々の火山毎に、気象庁が発表している火山情報等をご覧いただけます。</p>
+  <p>噴火警報や火山の状況に関する解説情報を発表していない火山は以下のリストから選択してください。</p>
+<div>
+  <label for="volcanoSelect">火山</label>：<select id="volcanoSelect"><optgroup label="北海道地方">
+  <option value="101">知床硫黄山</option><option value="102">羅臼岳</option><option value="119">天頂山</option><option value="103">摩周</option><option value="104">アトサヌプリ</option><option value="120">雄阿寒岳</option><option value="105">雌阿寒岳</option><option value="106">丸山</option><option value="107">大雪山</option><option value="108">十勝岳</option><option value="116">利尻山</option><option value="109">樽前山</option><option value="110">恵庭岳</option><option value="111">倶多楽</option><option value="112">有珠山</option><option value="117">羊蹄山</option><option value="118">ニセコ</option><option value="113">北海道駒ヶ岳</option><option value="114">恵山</option><option value="115">渡島大島</option><option value="151">茂世路岳</option><option value="152">散布山</option><option value="153">指臼岳</option><option value="154">小田萌山</option><option value="155">択捉焼山</option><option value="156">択捉阿登佐岳</option><option value="157">ベルタルベ山</option><option value="161">ルルイ岳</option><option value="158">爺爺岳</option><option value="159">羅臼山</option><option value="160">泊山</option>
+</optgroup>
+<optgroup label="東北地方">
+  <option value="201">恐山</option><option value="202">岩木山</option><option value="203">八甲田山</option><option value="204">十和田</option><option value="205">秋田焼山</option><option value="206">八幡平</option><option value="207">岩手山</option><option value="208">秋田駒ヶ岳</option><option value="209">鳥海山</option><option value="210">栗駒山</option><option value="211">鳴子</option><option value="217">肘折</option><option value="212">蔵王山</option><option value="213">吾妻山</option><option value="214">安達太良山</option><option value="215">磐梯山</option><option value="218">沼沢</option><option value="216">燧ヶ岳</option>
+</optgroup>
+<optgroup label="関東・中部地方">
+  <option value="301">那須岳</option><option value="333">高原山</option><option value="342">男体山</option><option value="302">日光白根山</option><option value="303">赤城山</option><option value="304">榛名山</option><option value="305">草津白根山</option><option value="350">草津白根山（白根山（湯釜付近））</option><option value="351">草津白根山（本白根山）</option><option value="306">浅間山</option><option value="334">横岳</option><option value="307">新潟焼山</option><option value="308">妙高山</option><option value="309">弥陀ヶ原</option><option value="310">焼岳</option><option value="335">アカンダナ山</option><option value="311">乗鞍岳</option><option value="312">御嶽山</option><option value="313">白山</option><option value="314">富士山</option><option value="315">箱根山</option><option value="316">伊豆東部火山群</option>
+</optgroup>
+<optgroup label="伊豆・小笠原諸島">
+  <option value="317">伊豆大島</option><option value="336">利島</option><option value="318">新島</option><option value="319">神津島</option><option value="320">三宅島</option><option value="337">御蔵島</option><option value="321">八丈島</option><option value="322">青ヶ島</option><option value="323">ベヨネース列岩</option><option value="324">須美寿島</option><option value="325">伊豆鳥島</option><option value="338">孀婦岩</option><option value="326">西之島</option><option value="339">海形海山</option><option value="327">海徳海山</option><option value="328">噴火浅根</option><option value="329">硫黄島</option><option value="330">北福徳堆</option><option value="331">福徳岡ノ場</option><option value="340">南日吉海山</option><option value="341">日光海山</option>
+</optgroup>
+<optgroup label="中国地方">
+  <option value="401">三瓶山</option><option value="512">阿武火山群</option>
+</optgroup>
+<optgroup label="九州地方">
+  <option value="513">鶴見岳・伽藍岳</option><option value="514">由布岳</option><option value="502">九重山</option><option value="503">阿蘇山</option><option value="504">雲仙岳</option><option value="515">福江火山群</option><option value="505">霧島山</option><option value="552">霧島山（えびの高原（硫黄山）周辺）</option><option value="553">霧島山（大幡池）</option><option value="551">霧島山（新燃岳）</option><option value="550">霧島山（御鉢）</option><option value="516">米丸・住吉池</option><option value="517">若尊</option><option value="506">桜島</option><option value="518">池田・山川</option><option value="507">開聞岳</option><option value="508">薩摩硫黄島</option><option value="509">口永良部島</option><option value="519">口之島</option><option value="510">中之島</option><option value="511">諏訪之瀬島</option>
+</optgroup>
+<optgroup label="沖縄地方">
+  <option value="601">硫黄鳥島</option><option value="602">西表島北北東海底火山</option>
+</optgroup>
+</select>
+  <button type="button" id="volcanoNavigateButton">移動</button>
+</div>
+
+<h2>新着情報</h2>
+<p id="recentInfoParagraph" class="contents">最近１週間以内に情報を発表した火山</p>
+<ul id="recentInfoList" class="pagelink mtx"><li data-datetime="2026-10-30T16:00:00+09:00" data-volcano="113"><a href="113.html">北海道駒ヶ岳</a>：火山の状況に関する解説情報（2026年10月30日16時00分発表）</li><li data-datetime="2026-10-30T16:00:00+09:00" data-volcano="105"><a href="105.html">雌阿寒岳</a>：火山の状況に関する解説情報（2026年10月30日16時00分発表）</li><li data-datetime="2026-10-30T16:00:00+09:00" data-volcano="511"><a href="511.html">諏訪之瀬島</a>：火山の状況に関する解説情報（2026年10月30日16時00分発表）</li><li data-datetime="2026-10-30T16:00:00+09:00" data-volcano="306"><a href="306.html">浅間山</a>：火山の状況に関する解説情報（2026年10月30日16時00分発表）</li><li data-datetime="2026-10-30T16:00:00+09:00" data-volcano="503"><a href="503.html">阿蘇山</a>：火山の状況に関する解説情報（2026年10月30日16時00分発表）</li><li data-datetime="2026-10-30T16:00:00+09:00" data-volcano="508"><a href="508.html">薩摩硫黄島</a>：火山の状況に関する解説情報（2026年10月30日16時00分発表）</li><li data-datetime="2026-10-29T17:00:00+09:00" data-volcano="309"><a href="309.html">弥陀ヶ原</a>：火山の状況に関する解説情報（2026年10月29日17時00分発表）</li><li data-datetime="2026-10-30T16:00:00+09:00" data-volcano="506"><a href="506.html">桜島</a>：火山の状況に関する解説情報（2026年10月30日16時00分発表）</li><li data-datetime="2026-10-30T16:00:00+09:00" data-volcano="108"><a href="108.html">十勝岳</a>：火山の状況に関する解説情報（2026年10月30日16時00分発表）</li><li data-datetime="2026-10-30T16:00:00+09:00" data-volcano="551"><a href="551.html">霧島山（新燃岳）</a>：火山の状況に関する解説情報（2026年10月30日16時00分発表）</li></ul>
+
+
+<h2>噴火警報発表中の火山と１週間以内に情報を発表した火山（全国：表形式）</h2>
+<table class="data_s table-margin-left" id="vollist">
+  <tr>
+    <th class="text-center">火山名</th>
+    <th class="text-center">噴火警報・予報</th>
+    <th class="text-center">キーワード</th>
+  </tr>
+  <tr>
+  <td><a href="506.html">桜島</a></td><td>噴火警報（火口周辺）</td><td>噴火警戒レベル３（入山規制）</td>
+</tr>
+<tr>
+  <td><a href="105.html">雌阿寒岳</a></td><td>噴火警報（火口周辺）</td><td>噴火警戒レベル２（火口周辺規制）</td>
+</tr>
+<tr>
+  <td><a href="108.html">十勝岳</a></td><td>噴火警報（火口周辺）</td><td>噴火警戒レベル２（火口周辺規制）</td>
+</tr>
+<tr>
+  <td><a href="113.html">北海道駒ヶ岳</a></td><td>噴火警報（火口周辺）</td><td>噴火警戒レベル２（火口周辺規制）</td>
+</tr>
+<tr>
+  <td><a href="503.html">阿蘇山</a></td><td>噴火警報（火口周辺）</td><td>噴火警戒レベル２（火口周辺規制）</td>
+</tr>
+<tr>
+  <td><a href="551.html">霧島山（新燃岳）</a></td><td>噴火警報（火口周辺）</td><td>噴火警戒レベル２（火口周辺規制）</td>
+</tr>
+<tr>
+  <td><a href="508.html">薩摩硫黄島</a></td><td>噴火警報（火口周辺）</td><td>噴火警戒レベル２（火口周辺規制）</td>
+</tr>
+<tr>
+  <td><a href="511.html">諏訪之瀬島</a></td><td>噴火警報（火口周辺）</td><td>噴火警戒レベル２（火口周辺規制）</td>
+</tr>
+<tr>
+  <td><a href="326.html">西之島</a></td><td>噴火警報（火口周辺）</td><td>火口周辺危険</td>
+</tr>
+<tr>
+  <td><a href="329.html">硫黄島</a></td><td>噴火警報（火口周辺）</td><td>火口周辺危険</td>
+</tr>
+<tr>
+  <td><a href="324.html">須美寿島</a></td><td>噴火警報（周辺海域）</td><td>周辺海域警戒</td>
+</tr>
+<tr>
+  <td><a href="331.html">福徳岡ノ場</a></td><td>噴火警報（周辺海域）</td><td>周辺海域警戒</td>
+</tr>
+<tr>
+  <td><a href="306.html">浅間山</a></td><td>噴火予報</td><td>噴火警戒レベル１（活火山であることに留意）</td>
+</tr>
+<tr>
+  <td><a href="309.html">弥陀ヶ原</a></td><td>噴火予報</td><td>噴火警戒レベル１（活火山であることに留意）</td>
+</tr>
+
+</table>
+<ul class="pagelink mtx my-2">
+  <li><a href="https://www.jma.go.jp/bosai/map.html#5/34.5/137/&contents=volcano">噴火警報発表状況（地図）</a></li>
+</ul>
+
+<h2>定期的に発表する情報</h2>
+<h3>火山活動解説資料（定期）</h3>
+<p class="table-margin-left">
+  <a href="/vois/data/report/monthly_v-act_doc/monthly_vact.php">2026年9月分を公表</a>（2026年10月8日）
+</p>
+<table class="data_s table-margin-left" id="teikiInfoTable">
+  <tr>
+    <th class="text-center">地方</th><th class="text-center">火山</th>
+  </tr>
+  <tr>
+  <td>北海道地方</td>
+  <td class="teiki-table-volcano-col">
+    <a href="/vois/data/report/monthly_v-act_doc/sapporo/26m09/104_26m09.pdf">アトサヌプリ</a>、<a href="/vois/data/report/monthly_v-act_doc/sapporo/26m09/105_26m09.pdf">雌阿寒岳</a>、<a href="/vois/data/report/monthly_v-act_doc/sapporo/26m09/107_26m09.pdf">大雪山</a>、<a href="/vois/data/report/monthly_v-act_doc/sapporo/26m09/108_26m09.pdf">十勝岳</a>、<a href="/vois/data/report/monthly_v-act_doc/sapporo/26m09/109_26m09.pdf">樽前山</a>、<a href="/vois/data/report/monthly_v-act_doc/sapporo/26m09/110_26m09.pdf">恵庭岳</a>、<a href="/vois/data/report/monthly_v-act_doc/sapporo/26m09/111_26m09.pdf">倶多楽</a>、<a href="/vois/data/report/monthly_v-act_doc/sapporo/26m09/112_26m09.pdf">有珠山</a>、<a href="/vois/data/report/monthly_v-act_doc/sapporo/26m09/117_26m09.pdf">羊蹄山</a>、<a href="/vois/data/report/monthly_v-act_doc/sapporo/26m09/118_26m09.pdf">ニセコ</a>、<a href="/vois/data/report/monthly_v-act_doc/sapporo/26m09/113_26m09.pdf">北海道駒ヶ岳</a>、<a href="/vois/data/report/monthly_v-act_doc/sapporo/26m09/114_26m09.pdf">恵山</a>
+  </td>
+</tr>
+<tr>
+  <td>東北地方</td>
+  <td class="teiki-table-volcano-col">
+    <a href="/vois/data/report/monthly_v-act_doc/sendai/26m09/202_26m09.pdf">岩木山</a>、<a href="/vois/data/report/monthly_v-act_doc/sendai/26m09/203_26m09.pdf">八甲田山</a>、<a href="/vois/data/report/monthly_v-act_doc/sendai/26m09/204_26m09.pdf">十和田</a>、<a href="/vois/data/report/monthly_v-act_doc/sendai/26m09/205_26m09.pdf">秋田焼山</a>、<a href="/vois/data/report/monthly_v-act_doc/sendai/26m09/207_26m09.pdf">岩手山</a>、<a href="/vois/data/report/monthly_v-act_doc/sendai/26m09/208_26m09.pdf">秋田駒ヶ岳</a>、<a href="/vois/data/report/monthly_v-act_doc/sendai/26m09/209_26m09.pdf">鳥海山</a>、<a href="/vois/data/report/monthly_v-act_doc/sendai/26m09/210_26m09.pdf">栗駒山</a>、<a href="/vois/data/report/monthly_v-act_doc/sendai/26m09/212_26m09.pdf">蔵王山</a>、<a href="/vois/data/report/monthly_v-act_doc/sendai/26m09/213_26m09.pdf">吾妻山</a>、<a href="/vois/data/report/monthly_v-act_doc/sendai/26m09/214_26m09.pdf">安達太良山</a>、<a href="/vois/data/report/monthly_v-act_doc/sendai/26m09/215_26m09.pdf">磐梯山</a>
+  </td>
+</tr>
+<tr>
+  <td>関東・中部地方</td>
+  <td class="teiki-table-volcano-col">
+    <a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/301_26m09.pdf">那須岳</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/302_26m09.pdf">日光白根山</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/305_26m09.pdf">草津白根山</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/306_26m09.pdf">浅間山</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/307_26m09.pdf">新潟焼山</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/309_26m09.pdf">弥陀ヶ原</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/310_26m09.pdf">焼岳</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/311_26m09.pdf">乗鞍岳</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/312_26m09.pdf">御嶽山</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/313_26m09.pdf">白山</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/314_26m09.pdf">富士山</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/315_26m09.pdf">箱根山</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/316_26m09.pdf">伊豆東部火山群</a>
+  </td>
+</tr>
+<tr>
+  <td>伊豆・小笠原諸島</td>
+  <td class="teiki-table-volcano-col">
+    <a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/317_26m09.pdf">伊豆大島</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/318_26m09.pdf">新島</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/319_26m09.pdf">神津島</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/320_26m09.pdf">三宅島</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/321_26m09.pdf">八丈島</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/322_26m09.pdf">青ヶ島</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/323_26m09.pdf">ベヨネース列岩</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/324_26m09.pdf">須美寿島</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/325_26m09.pdf">伊豆鳥島</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/326_26m09.pdf">西之島</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/329_26m09.pdf">硫黄島</a>、<a href="/vois/data/report/monthly_v-act_doc/tokyo/26m09/331_26m09.pdf">福徳岡ノ場</a>
+  </td>
+</tr>
+<tr>
+  <td>九州地方</td>
+  <td class="teiki-table-volcano-col">
+    <a href="/vois/data/report/monthly_v-act_doc/fukuoka/26m09/513_26m09.pdf">鶴見岳・伽藍岳</a>、<a href="/vois/data/report/monthly_v-act_doc/fukuoka/26m09/502_26m09.pdf">九重山</a>、<a href="/vois/data/report/monthly_v-act_doc/fukuoka/26m09/503_26m09.pdf">阿蘇山</a>、<a href="/vois/data/report/monthly_v-act_doc/fukuoka/26m09/504_26m09.pdf">雲仙岳</a>、<a href="/vois/data/report/monthly_v-act_doc/fukuoka/26m09/505_26m09.pdf">霧島山</a>、<a href="/vois/data/report/monthly_v-act_doc/fukuoka/26m09/506_26m09.pdf">桜島</a>、<a href="/vois/data/report/monthly_v-act_doc/fukuoka/26m09/508_26m09.pdf">薩摩硫黄島</a>、<a href="/vois/data/report/monthly_v-act_doc/fukuoka/26m09/509_26m09.pdf">口永良部島</a>、<a href="/vois/data/report/monthly_v-act_doc/fukuoka/26m09/510_26m09.pdf">中之島</a>、<a href="/vois/data/report/monthly_v-act_doc/fukuoka/26m09/511_26m09.pdf">諏訪之瀬島</a>
+  </td>
+</tr>
+
+</table>
+
+
+</main>
+
+      <p class="totop"><a href="#nheader">このページのトップへ</a></p>
+    </div>
+  </div>
+  <footer id="footer_area">
+    <div id="nfooter">
+      <a href="//www.jma.go.jp/jma/kishou/info/coment.html">気象庁ホームページについて</a>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<title>Home Page - Hydrometeorological Automated Data System - National Weather Service</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Access hydrometeorological data via the NESDIS-GOES Data Collection System">
+	<meta name="author" content="US Department of Commerce, NOAA, National Weather Service, Office of Observations, MADIS-HADS">
+	<meta name="keywords" content="HADS, hydrologic data, hydrology, hydrometeorologic data, stream gage, river stage, rainfall, precipitation, RAWS, GOES DCS">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<link rel="stylesheet" href="/css/header.css">
+	<link rel="stylesheet" href="/css/ncepmadis.css" media="all">
+	<link rel="stylesheet" href="/css/main.css">
+    
+        <script src="/federated-analytics.js?agency=OAR&amp;sub-agency=ESRLGSD&amp;sp=find&amp;yt=true"></script>
+        <script src="/css/urlref.js"></script>
+
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="9ZX5Q-UBEY3-ZKELN-S7AQE-4Q986",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"9ZX5Q-UBEY3-ZKELN-S7AQE-4Q986";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="qyqup4ax2fklo2xf6ieq-f-4380293d6-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1171174","ak.ai":parseInt("700564",10),"ak.ol":"0","ak.cr":1,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"35848a74","ak.r":46469,"ak.a2":n,"ak.m":"dscg","ak.n":"essl","ak.cport":9310,"ak.gh":"23.201.193.151","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1793454601","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==/byH1+v6ISK8kuK+aL2zvok/bSelucCjyc3/uhaxV9ynQMRqGL4gkDySZa9zl7OvSbxPoi5nUzRWS4BZYhUjjxLTDEqkCHGi/+bmpkwbxoVDystHJZbjJGdMjdNS24jZ+PPmXxH7wUm8loIyfnCPiiNZtb+wVY2z0g53rkyeAjpFXiUrUl6BLVgbPzhKMhcgi8+Jdf2ahaOuzapkPrQrxU3HZRqZ+CEBvPtJPNX367pTjHTvtyVUPwxQ86AF9xEUODljwgw3vQDDlPaYDK5VMLMsihB/KGKwbOCz5zOb/1woqLEAqSVC/y45Ymlbso1HEUH4bC81F7DvuZmx8ejpZueW3G2HD06LGekSH0SteRLHDWiYOz2p0ea+PBFPp8fUbwMu/s+3m7zGY2UIEDbCZjzBNmKAr1eb1pheTHhDBgA=","ak.pv":"3","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+<!--<body onload="startList()">-->
+
+<div id="container">
+<div class="header">
+
+  <div class="header-content">
+    <a href="https://www.noaa.gov" class="header-noaa-icon"><img src="/images/header-noaa.png" alt="NOAA"></a>
+    <a href="https://www.weather.gov" class="header-nws-icon"><img src="/images/header-nws.png" alt="NOAA"></a>
+    <a href="https://www.commerce.gov" class="header-doc"><img src="/images/header_doc.png" alt="United States Department of Commerce"></a>
+    <div class="header-center-text"><a class="header-center-text" href="https://www.nco.ncep.noaa.gov">NCEP CENTRAL OPERATIONS</a></div>
+    <div class="header-noaa-text"><a class="header-noaa-text" href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a></div>
+  </div>
+</div>
+<div class="header-shadow"><div class="header-shadow-content"></div></div>
+
+     <!-- end major_header -->
+
+  <!-- major navigation -->
+<!-- Top Menu Navigation -->
+<div class="topnav">
+  <ul id="topnav">
+
+    <!-- Home Link -->
+    <li>
+      <div class="section-link">
+          <a href=javascript:window.open(staticURL(''),"_self");>home</a>
+<!--        <a href="#">home</a>-->
+      </div>
+    </li>
+
+    <!-- News Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/news">news</a>
+      </div>
+      <div class="drop">
+        <ul>
+          <li><a href="https://www.weather.gov/news">NWS News</a></li>
+          <li><a href="https://www.nws.noaa.gov/com/weatherreadynation/calendar.html">Events</a></li>
+          <li><a href="https://www.weather.gov/socialmedia">Social Media</a></li>
+          <li><a href="https://www.nws.noaa.gov/om/brochures.shtml">Pubs/Brochures/Booklets</a></li>
+	  <li><a href="https://www.noaa.gov/NOAA-Communications">NWS Media Contacts</a></li>
+        </ul>
+      </div>
+    </li>
+
+    <!-- Search Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/search">search</a>
+      </div>
+      <div class="drop">
+        <div class="site-search">
+          <form method="get" action="https://search.usa.gov/search" style="margin-bottom: 0; margin-top: 0;">
+            <input type="hidden" name="v:project" value="firstgov">
+            <label for="query">Search For</label>
+            <input type="text" name="query" id="query" size="12" >
+            <input type="submit" value="Go" >
+            <p>
+              <input type="radio" name="affiliate" checked="checked" value="nws.noaa.gov" id="nws" >
+              <label for="nws" class="search-scope">NWS</label>
+              <input type="radio" name="affiliate" value="noaa.gov" id="noaa" >
+              <label for="noaa" class="search-scope">All NOAA</label>
+            </p>
+          </form>
+        </div>
+      </div>
+    </li>
+
+    <!-- Forecast Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/search">forecast</a>
+      </div>
+      <div class="drop">
+        <div id="forecast-lookup" class="site-search">
+          <form name="getForecast" id="getForecast" action="https://forecast.weather.gov/zipcity.php" method="get">
+            <label for="inputstring">Local forecast by <br>"City, St" or ZIP code</label>
+            <input id="inputstring" name="inputstring" type="text" size="12" value="Enter location ..." onclick="this.value=''" >
+            <input name="btnSearch" id="btnSearch" type="submit" value="Go" >
+            <div id="txtError">
+            <div id="errorNoResults" style="display:none;">Sorry, the location you searched for was not found. Please try another search.</div>
+            <div id="errorMultipleResults" style="display:none">Multiple locations were found. Please select one of the following:</div>
+            <div id="errorChoices" style="display:none"></div>
+              <input id="btnCloseError" type="button" value="Close" style="display:none" >
+            </div>
+            <div id="txtHelp"><a style="text-decoration: underline;" href="javascript:void(window.open('https://weather.gov/ForecastSearchHelp.html','locsearchhelp','status=0,toolbar=0,location=0,menubar=0,directories=0,resizable=1,scrollbars=1,height=500,width=530').focus());">Location Help</a></div>
+          </form>
+                        </div><!-- <div id="forecast-lookup"> -->
+          </div><!-- <div class="drop"> -->
+    </li>
+    <!-- About Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/about">about</a>
+      </div>
+      <div class="drop">
+          <ul>
+            <li><a href="https://www.weather.gov/about">About NWS</a></li>
+            <li><a href="https://www.weather.gov/organization">Organization</a></li>
+            <li><a href="https://www.nws.noaa.gov/sp/">Strategic Plan</a></li>
+            <li><a href="https://sites.google.com/a/noaa.gov/nws-best-practices/">For NWS Employees</a></li>
+	    <li><a href="https://www.weather.gov/international/">International</a></li>
+	    <li><a href="https://www.weather.gov/organization/ncep">National Centers</a></li>
+            <li><a href="https://www.nws.noaa.gov/tg/">Products and Services</a></li>
+            <li><a href="https://www.weather.gov/contact">Contact Us</a></li>
+            <li><a href="https://w1.weather.gov/glossary/">Glossary</a></li>
+          </ul>
+        </div>
+    </li>
+
+  </ul><!-- End of top nav ul -->
+</div><!-- End of topnav div -->
+
+</div> <!-- end banner -->
+
+<div id="pbody">
+    <!-- minor navigation -->
+    <div id="minor_nav">
+    <br>
+    <ul id="vertnav">
+        <li><a href="#" onclick="window.open(staticURL(''), '_self');">HADS Home</a></li>
+    </ul>
+    
+    <dl>
+        <dt>Real-Time Pages</dt>
+            <ul id="vertnav">
+                <li><a href="#" onclick="window.open(staticURL('dcps_proc/status.shtml'), '_self');">Processor&nbsp;Status</a></li>
+                <li><a href="#" onclick="window.open(staticURL('dcp_parity_errors/dcp_parity_errors.shtml'), '_self');">Parity Errors</a></li>
+                <li><a href="#" onclick="window.open(staticURL('hadsinfo/'), '_self');">Network&nbsp;Changes</a></li>
+                <li><a href="/interactiveDisplays/displays.shtml" target="disp">InterActive Displays</a></li>
+                <li><a href="#" onclick="window.open(staticURL('newdcp.shtml'), '_self');">Active New DCPs</a></li>
+                <li><a href="#" onclick="window.open(staticURL('nowant.shtml'), '_self');">Active Previously<br>&nbsp;&nbsp;&nbsp;Discarded DCPs</a></li>
+            </ul>
+    </dl>
+    <br>
+
+    <dl>
+        <dt>Map Displays</dt>
+            <ul id="vertnav">
+                <li><a href="#" onclick="window.open(staticURL('NewDCPs_map.shtml'), '_self');">'New DCP'<br>&nbsp;&nbsp;&nbsp;Locations</a></li>
+                <li><a href="#" onclick="window.open(dynamicURL('maps/'), '_self');">Existing DCP<br>&nbsp;&nbsp;&nbsp;&nbsp;Locations</a></li>
+                <li><a href="#" onclick="window.open(dynamicURL('cgi-bin/hads/hads_map.pl?where=US&pe_code=Stage&dataint=15&xmit_intv=60'), '_self');">Hourly Transmitting<br>&nbsp;&nbsp;&nbsp;&nbsp;Sites-Reporting<br>&nbsp;&nbsp;&nbsp;&nbsp;Stage & Precip</a></li>
+            </ul>
+    </dl>
+    <br>
+    
+    <dl>
+        <dt>Meta-Data Collectives</dt>
+            <ul id="vertnav">
+                <li><a href="#" onclick="window.open(staticURL('hsas/hsas.shtml'), '_self');">DCPs by HSAs</a></li>
+                <li><a href="#" onclick="window.open(staticURL('states/states.shtml'), '_self');">DCPs by States</a></li>
+                <li><a href="#" onclick="window.open(staticURL('USGS/'), '_self');">Cross Reference -<br>&nbsp;&nbsp;&nbsp;&nbsp;USGS / HADS<br>&nbsp;&nbsp;&nbsp;&nbsp;Station Identifiers</a></li>
+                <li><a href="#" onclick="window.open(dynamicURL('cgi-bin/hads/listGageCorrectionsWeb.pl'), '_self');">Water Level Sites<br>&nbsp;&nbsp;&nbsp;&nbsp;with DrawDown<br>&nbsp;&nbsp;&nbsp;&nbsp;Corrections</a></li>
+                <li><a href="#" onclick="window.open(staticURL('compressed_defs/'), '_self');">ASCII Files</a></li>
+                <li><a href="#" onclick="window.open(staticURL('csv/csvbyHSA.shtml'), '_self');">DCPs by HSAs (CSV)</a></li>
+                <li><a href="#" onclick="window.open(staticURL('csv/csvbystate.shtml'), '_self');">DCPs by States (CSV)</a></li>
+                <li><a href="#" onclick="window.open(dynamicURL('parms/parms.shtml'), '_self');">Sensor Lists</a></li>
+                <li><a href="#" onclick="window.open(dynamicURL('cgi-bin/hads/rapid_deploy.pl'), '_self');">Rapid Deploy Locations</a></li>
+            </ul>
+    </dl>
+    <br>
+    
+    <dl>
+        <dt>Performance Measures</dt>
+            <ul id="vertnav">
+                <li><a href="#" onclick="window.open(dynamicURL('charts/Timeliness.shtml'), '_self');">Product&nbsp;Timeliness</a></li>
+                <li><a href="#" onclick="window.open(dynamicURL('charts/Reliability.shtml'), '_self');">System&nbsp;Reliability</a></li>
+                <li><a href="#" onclick="window.open(dynamicURL('charts/NetworkAnalysis.shtml'), '_self');">Network&nbsp;Analysis</a></li>
+            </ul>
+    </dl>
+    <br>
+    
+    <dl>
+        <dt>Documentation</dt>
+            <ul id="vertnav">
+                <li><a href="#" onclick="window.open(staticURL('WhatIsHADS.shtml'), '_self');">What is HADS?</a></li>
+                <li><a href="#" onclick="window.open(staticURL('dcp_operators.shtml'), '_self');">DCP Operator IDs</a></li>
+                <li><a href="#" onclick="window.open(staticURL('Complete_DCS_DataPath.shtml'), '_self');">GOES&nbsp;DCS&nbsp;Data&nbsp;Path</a></li>
+                <li><a href="#" onclick="window.open(staticURL('HADSdatapath.shtml'), '_self');">HADS&nbsp;Data&nbsp;Path</a></li>
+            </ul>
+    </dl>
+    <br>
+    
+    <dl>
+        <dt>AFWS</dt>
+            <ul id="vertnav">
+                <li><a href="#" onclick="window.open(dynamicURL('cgi-bin/hads/afwsDisplayData.pl'), '_self');">Most Recent Data</a></li>
+                <li><a href="#" onclick="window.open(staticURL('AFWSDataFlow.shtml'), '_self');">AFWS Data Flow</a></li>
+            </ul>
+    </dl>
+    <br>
+    
+    <dl>
+        <dt>Links</dt>
+            <ul id="vertnav">
+                <li><a href="#" onclick="window.open(staticURL('dcp_cooperators.shtml'), '_self');">DCP&nbsp;Cooperators</a></li>
+                <li><a href="https://madis.ncep.noaa.gov/index.shtml">MADIS Home</a></li>
+                <li><a href="https://water.noaa.gov">National&nbsp;Water<br>&nbsp;&nbsp;&nbsp;&nbsp;Prediction&nbsp;Service&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;(NWPS)</a></li>
+                <li><a href="mailto:hadsteam@noaa.gov">Contact HADS Team</a></li>
+            </ul>
+    </dl>
+</div>
+
+    <div id="content">
+    <a class="textvers" name="content_link">&nbsp;</a>
+
+<script src="https://www.weather.gov/source/nws/govshutdown.js" defer></script>
+<body style="margin: 0; background: url('/images/bg2.gif');">
+    <table cellspacing="0" cellpadding="0" border="0" width="100%" style="background: url('/images/topbanner.jpg') no-repeat;">
+        <tr>
+            <!-- You may add your header content here -->
+        </tr>
+    </table>
+
+    <table cellspacing="0" cellpadding="0" border="0" width="620">
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td align="center" valign="top">
+                <img src="/images/HADS6.gif" alt="HADS logo" width="499" height="169" style="border: 0;">
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td align="left" valign="top">
+                <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif, Verdana;">
+                    The Hydrometeorological Automated Data System (HADS) is a real-time data acquisition and data distribution system operated by the National Weather Service Office of Observations.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="top">
+                <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif, Verdana;">
+                    HADS web pages are structured to provide necessary system information and site meta-data to National Weather Service Offices.
+                    <br><br>
+                    <b>Data values presented on HADS web pages are <span style="color: red;"><u>PROVISIONAL</u></span> and <span style="color: red;">HAVE NOT</span> been reviewed nor evaluated through quality control tests.</b>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td align="left">
+                <h2 style="font-family: Arial, Helvetica, sans-serif, Verdana; color: red;">Site Search</h2>
+            </td>
+        </tr>
+    </table>
+
+    <table cellspacing="0" cellpadding="1" border="1" width="620">
+        <tr>
+            <td align="center">
+                <b><span style="font-size: 14px; font-family: Arial; color: #000066;">Enter NESDIS ID</span></b>
+                <form method="post" action="/cgi-bin/hads/hadsQuery.pl" target="display" onsubmit="return parameters(this, 8);">
+                    <input type="hidden" name="column" value="1">
+                    <input type="text" name="columnID" size="8" maxlength="8">
+                    <input type="submit" value="Go">
+                </form>
+            </td>
+            <td align="center">
+                <b><span style="font-size: 14px; font-family: Arial; color: #000066;">Enter NWSLI ID</span></b>
+                <form method="post" action="/cgi-bin/hads/hadsQuery.pl" target="display" onsubmit="return parameters(this, 5);">
+                    <input type="hidden" name="column" value="2">
+                    <input type="text" name="columnID" size="5" maxlength="5">
+                    <input type="submit" value="Go">
+                </form>
+            </td>
+        </tr>
+    </table>
+
+    <table cellspacing="0" cellpadding="1" border="0" width="620">
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif, Verdana;">
+                    More than 18,000 data points on the image below represent the locations at which river and weather data are observed and subsequently processed by HADS.
+                    <br><br>
+                    <span style="color: red; font-weight: bold;">
+		    <center><font style="color: red; font-weight: bold">Click map image for additional displays</font></center>
+                    </span>
+                    <br>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="hads/goog_earth/" target="_blank">
+                    <img src="/images/all_dcp_locations.jpg" alt="HADS DCP area coverage" style="border: 0; height: 585px; width: 700px;">
+		    <br>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span style="color: red; font-weight: bold;">
+                    <center>Click map image for additional displays</center>
+                </span>
+                <br>
+            </td>
+        </tr>
+    </table>
+    <br>
+
+    <script>
+        (function(i,s,o,g,r,a,m){
+            i['GoogleAnalyticsObject']=r;
+            i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)
+            },i[r].l=1*new Date();
+            a=s.createElement(o), m=s.getElementsByTagName(o)[0];
+            a.async=1;
+            a.src=g;
+            m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-43953030-3', 'noaa.gov');
+        ga('send', 'pageview');
+    </script>
+
+          
+        <!-- force body content to include the floated "news" element -->
+	<div class="clear">
+        </div>
+    </div> <!-- end body content -->
+</div>   <!-- end pbody -->
+
+<!-- legal footer area -->
+        <div class="footer-legal">
+                                <div class="footer-legal-content">
+                        <div class="footer-legal-gov">
+                                <a href="https://www.usa.gov"><img src="/images/usa_gov.png" alt="usa.gov" width="110" height="30" /></a>
+                        </div>
+
+                        <div class="footer-legal-column">
+                                <p>
+                                        <a href="https://www.commerce.gov">US Dept of Commerce</a><br />
+                                <a href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a><br />
+                                <a href="https://www.weather.gov" >National Weather Service</a><br />
+                                                5830 University Research Ct.<br />College Park, MD 20740<br />
+                                Web Master's Email: <a href='mailto:w-nws.webmaster@noaa.gov'>w-nws.webmaster@noaa.gov</a>                      </p>
+                        </div>
+
+                        <div class="footer-legal-column2">
+                                <a href="https://www.weather.gov/disclaimer">Disclaimer</a><br />
+				<a href="https://www.cio.noaa.gov/services_programs/info_quality.html">Information Quality</a><br />
+                                <a href="https://www.weather.gov/help">Help</a><br />
+                                <a href="https://www.weather.gov/glossary">Glossary</a>
+                        </div>
+
+                        <div class="footer-legal-column3">
+                                <a href="https://www.weather.gov/privacy">Privacy Policy</a><br />
+                                <a href="https://www.noaa.gov/information-technology/foia">Freedom of Information Act (FOIA)</a><br />
+                                <a href="https://www.weather.gov/about">About Us</a><br />
+                                <a href="https://www.weather.gov/careers">Career Opportunities</a>
+                        </div>
+                </div>
+
+</div><!-- end of <div class="footer-legal">--> 
+
+</div><!-- End of content div -->
+</div><!-- End of center div -->
+
+</div> <!-- end container -->
+</body>
+</html>
+

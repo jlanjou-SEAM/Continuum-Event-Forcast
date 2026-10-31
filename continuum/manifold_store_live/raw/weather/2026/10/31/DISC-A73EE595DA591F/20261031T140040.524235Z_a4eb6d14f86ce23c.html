@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>    
+    
+        <title>Weather DataHub | Observations Overview</title>
+    
+    
+    
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5D5BWPNW');</script>
+        <!-- End Google Tag Manager -->
+    
+    
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="/images/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="/images/favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="/images/favicons/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="/images/favicons/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="/images/favicons/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="/images/favicons/mstile-310x310.png" />
+    <meta name="_csrf" content="jEISzL4ZcB1yXSsMzoTqdNNNyTmD2Hzt_WvzE1WJ4t7w263w7iMm_dwvQS9fbxM796neReMv5AHh7UvAyFLLIDPr0bzA75-W"/>
+    <meta name="_csrf_header" content="X-CSRF-TOKEN"/>
+    
+	<link rel="stylesheet" href="/css/main-94cdea824334520dd449c91424d39551.css">
+
+        
+</head>
+<body>
+    <a href="#main" class="skip">Skip to main content</a>
+    <div id="copied-to-clipboard">
+        <div class="content">
+            <div class="icon"></div>
+            <div class="message">Copied to clipboard</div>
+        </div>
+    </div>
+    <div class="ie-fixMinHeight">
+        
+        <div class="lightbox lightbox--parameter-info">
+        <div class="lightbox-content">
+            <div class="lightbox-content__inner">
+                <div class="flexbox-scroll">
+                    <div class="top">
+                        <a href="#" class="close-lightbox lightbox-close-icon"><span class="visually-hidden">Close lightbox</span><span
+                            class="accordion__icon" aria-hidden="true"></span></a>
+                        <h3 class="heading-xs title">Lightbox title</h3>
+                    </div>
+                    <div class="middle">
+                        <p class="detailed-message"></p>
+                        <dl class="summary-list">
+                            <div class="summary-list__row visually-hidden">
+                                <dt class="summary-list__key">
+                                    GRIB2 Code
+                                </dt>
+                                <dd class="summary-list__value grib2-code">
+                                    GRIB2 Code value
+                                </dd>
+                            </div>
+                            <div class="summary-list__row">
+                                <dt class="summary-list__key">
+                                    Unit
+                                </dt>
+                                <dd class="summary-list__value unit">
+                                    Unit value
+                                </dd>
+                            </div>
+                        </dl>   
+                        
+                        <div class="parameter-value-table-row">
+                            <div class="table-title">Time steps</div>
+                            <div class="parameter-value-table-content">
+                                <div class="parameter-value-table">
+                                    <div class="tr">
+                                        <div class="th blank"></div>
+                                        <div class="th">Hourly</div>
+                                        <div class="th">3 Hourly</div>
+                                        <div class="th">6 Hourly</div>
+                                        <div class="th">Daily</div>
+                                    </div>
+                                    <div class="time-steps"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <dl class="summary-list">
+                            <div class="summary-list__row">
+                                <dt class="summary-list__key">
+                                    Time interpretation
+                                </dt>
+                                <dd class="summary-list__value time-interpretation">
+                                    Time interpretation value
+                                </dd>
+                            </div>
+                            <div class="summary-list__row bits-per-value-row">
+                                <dt class="summary-list__key">
+                                    Bits per value <a class="svg-icon notes-opener"><span aria-hidden="true" class="inline-icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-filled" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        </span>
+                                    <div class="notes-content">
+                                        <p class="note">The bitsPerValue determines the relative size of the data download required for each
+                                            parameter. The bitsPerValue ranges from 1 to 20 bits for our current parameters.</p>
+                                        <p class="note">Note the data download size is not a direct multiplier of the bitsPerValue as there are
+                                            standard overheads within the generated GRIB files which are common for all parameters.
+                                            However, the bitsPerValue is a good guide to the relative cost of each parameter.</p>
+                                        <p class="note">The bits per value may differ across level types.</p>
+                                    </div></a>
+                                </dt>
+                                <dd class="summary-list__value">
+                                    <div class="bits-per-value">BitsPerValue value</div>
+                                </dd>
+                            </div>
+                            
+                            <div class="bits-per-value-table-row">
+                                <div class="table-title"> 
+                                    Bits per value <a class="svg-icon notes-opener"><span aria-hidden="true" class="inline-icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-filled" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        </span>
+                                    <div class="notes-content">
+                                        <p class="note">The bitsPerValue determines the relative size of the data download required for each
+                                            parameter. The bitsPerValue ranges from 1 to 20 bits for our current parameters.</p>
+                                        <p class="note">Note the data download size is not a direct multiplier of the bitsPerValue as there are
+                                            standard overheads within the generated GRIB files which are common for all parameters.
+                                            However, the bitsPerValue is a good guide to the relative cost of each parameter.</p>
+                                        <p class="note">The bits per value may differ across level types.</p>
+                                    </div></a></div>
+                                <div class="parameter-value-table-content">
+                                    <div class="parameter-value-table">
+                                        <div class="tr">
+                                            <div class="th blank"></div>
+                                            <div class="th bits-key-col">Level Type</div>
+                                            <div class="th">Bits per value</div>
+                                        </div>
+                                        <div class="bits-per-value"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="summary-list__row">
+                                <dt class="summary-list__key">
+                                    Level Type <a href="/level-types" target="_blank" class="level-type-info svg-icon"><span class="visually-hidden">More information on level types</span><span aria-hidden="true" class="inline-icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-filled" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        </span></a>
+                                </dt>
+                                <dd class="summary-list__value level-type">
+                                    Level type value
+                                </dd>
+                            </div>
+                            <div class="summary-list__row">
+                                <dt class="summary-list__key">
+                                    Parameter ID
+                                </dt>
+                                <dd class="summary-list__value parameter-id">
+                                    Parameter ID value
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="bottom margin-top-8">
+                        <div class="lightbox-navigation">
+                            <button class="control prev no-focus" disabled='disabled'>
+                                <span class="button__content">
+                                     <span class="visually-hidden">Previous</span>
+                                </span>
+                            </button>
+                            <button class="control next no-focus">
+                                <span class="button__content">
+                                     <span class="visually-hidden">Next</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="lightbox lightbox--application-name">
+    <div class="lightbox-content">
+        <div class="lightbox-content__inner">
+            <a href="#" class="close-lightbox lightbox-close-icon">
+                <span class="visually-hidden">Close lightbox</span>
+                <span class="accordion__icon" aria-hidden="true"></span>
+            </a>
+            <h2 class="heading-s">Application name</h2>
+            <div class="message">
+                <p>Your application name is used as a link to our gateway through which your API requests are processed. On subscription we automatically create an application for you with a default name. The application name has no bearing on how things are processed.</p>
+            </div>
+            <a href="#" class="button button--primary close-lightbox no-focus">
+                <span class="button__content" tabindex="-1">Close</span>
+            </a>
+        </div>
+    </div>
+</div>
+        <div class="lightbox lightbox--notification">
+        <div class="lightbox-content">
+            <div class="lightbox-content__inner">
+                <a href="#" class="close-lightbox lightbox-close-icon"><span class="visually-hidden">Close lightbox</span><span
+                    class="accordion__icon" aria-hidden="true"></span></a>
+                <h3 class="heading-xs title">Notification title</h3>
+                <div class="message">Message</div>
+                <div class="terms-and-conditions">
+                    <p>By ordering products from the Met Office Weather DataHub and clicking “confirm”, you are agreeing to be bound by the <a href="" target="_blank">Met Office Weather DataHub Terms and Conditions</a> which apply to the order.</p>
+                    
+
+                    <div class="checkboxes__item">
+                        <input class="checkboxes__input terms-and-conditions-checkbox" id="terms-and-conditions-checkbox"
+                               name="terms-and-conditions-checkbox" type="checkbox">
+                        <label class="label checkboxes__label" for="terms-and-conditions-checkbox">
+                            Please tick the box to confirm that you have read and agree with the terms and conditions.
+                        </label>
+                    </div>
+
+                    
+
+                    <p>If you have any questions, email <a href="mailto:dpt@metoffice.gov.uk">dpt@metoffice.gov.uk</a></p>
+                </div>
+
+                <div class="button-bar">
+                    <a href="#" class="button button--ghost notification-reject close-lightbox">
+                        Cancel
+                    </a>
+                    <button class="button button--primary notification-accept no-focus">
+                        <span class="button__content" tabindex="-1">Confirm</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="lightbox lightbox--monthly-data-usage">
+        <div class="lightbox-content">
+            <div class="lightbox-content__inner">
+                <a href="#" class="close-lightbox lightbox-close-icon">
+                    <span class="visually-hidden">Close lightbox</span>
+                    <span class="accordion__icon" aria-hidden="true"></span>
+                </a>
+                <h2 class="heading-s">About monthly data usage</h2>
+                <div class="message">
+                    <h3>API call plans</h3>
+                    <p>API call plans are managed using daily request limits. These limits reset each day at 00:00 (UTC).</p>
+                </div>
+                <a href="#" class="button button--primary close-lightbox no-focus">
+                    <span class="button__content" tabindex="-1">Close</span>
+                </a>
+            </div>
+        </div>
+    </div>
+        <div class="lightbox lightbox--atmospheric-monthly-data-usage">
+    <div class="lightbox-content">
+        <div class="lightbox-content__inner">
+            <a href="#" class="close-lightbox lightbox-close-icon">
+                <span class="visually-hidden">Close lightbox</span>
+                <span class="accordion__icon" aria-hidden="true"></span>
+            </a>
+            <h2 class="heading-s">About monthly data usage</h2>
+            <div class="message">
+                <h3>Data plans</h3>
+                <p>All Atmospheric data plans are managed using gigabytes (GB). We use a base‑1024 conversion across all plans, meaning 1,024 GB is equivalent to 1 TB.</p>
+            </div>
+            <a href="#" class="button button--primary close-lightbox no-focus">
+                <span class="button__content" tabindex="-1">Close</span>
+            </a>
+        </div>
+    </div>
+</div>
+        <div class="lightbox lightbox--estimated-monthly-data-usage">
+        <div class="lightbox-content">
+            <div class="lightbox-content__inner">
+                <a href="#" class="close-lightbox lightbox-close-icon">
+                    <span class="visually-hidden">Close lightbox</span>
+                    <span class="accordion__icon" aria-hidden="true"></span>
+                </a>
+                <h2 class="heading-s">About monthly data usage</h2>
+                <div class="message">
+                    <h3>Estimate monthly usage</h3>
+                    <p>Estimated order size if all selected data for all runs is taken based on an expected file size per parameter. Note this is a guide only and actual sizes for each parameter will vary.</p>
+                    <p>Whilst every effort has been made to make the estimated file download sizes accurate customers should check the projected figures which are based on actual downloads as well as the estimated file sizes.</p>
+    
+                    <h3>Usage this month</h3>
+                    <p>This figure is the actual data transferred for this calendar month so far.</p>
+    
+                    <h3>Projected Monthly Usage</h3>
+                    <p>The projected monthly usage is calculated by:<p>
+                    <ul>
+                        <li>retrieving the amount of data downloaded in the last 30 days</li>
+                        <li>divide by the number of active days (>0 bytes downloaded) to get a daily average</li>
+                        <li>multiply by the number of days in the current month for maximum monthly usage</li>
+                    </ul>
+                </div>
+                <a href="#" class="button button--primary close-lightbox no-focus">
+                    <span class="button__content" tabindex="-1">Close</span>
+                </a>
+            </div>
+        </div>
+    </div>
+        <div class="lightbox lightbox--order-name-explained">
+        <div class="lightbox-content">
+            <div class="lightbox-content__inner">
+                <a href="#" class="close-lightbox lightbox-close-icon">
+                    <span class="visually-hidden">Close lightbox</span>
+                    <span class="accordion__icon" aria-hidden="true"></span>
+                </a>
+                <h2 class="heading-s">Order Naming</h2>
+                <div class="message">
+                    <p>Note when used in the API the order name/ id is transformed by substituting spaces with hyphens and all letters are lowercase e.g. 'GLOBAL10k 12amRun' becomes 'global10k-12amrun'</p>
+                    <p>For the avoidance of doubt the transformed order id to use in the API reproduced below in the Delivery section</p>
+                </div>
+                <a href="#" class="button button--primary close-lightbox no-focus">
+                    <span class="button__content" tabindex="-1">Close</span>
+                </a>
+            </div>
+        </div>
+    </div>
+        <div class="lightbox lightbox--wdh-payment">
+    <div class="lightbox-content">
+        <div class="lightbox-content__inner">
+            <a href="#" class="close-lightbox lightbox-close-icon">
+                <span class="visually-hidden">Close lightbox</span>
+                <span class="accordion__icon" aria-hidden="true"></span>
+            </a>
+            <h2 class="heading-s">You're about to be taken to a new tab</h2>
+            <div class="message">
+                <p>The button below will take you to the Billing page on Weather Data Hub, which will open in a new tab.</p>
+                <p>Please update your details there and then return to this tab to proceed with your subscription.</p>
+                <p>If you have been logged out, you can find the Billing page by clicking on your email address in the top-right corner and then going to 'My Organisation', after logging back in.</p>
+            </div>
+            <a href="#" class="button button--ghost close-lightbox no-focus">
+                <span class="button__content" tabindex="-1">Close</span>
+            </a>
+            <a href="#" class="button button--primary no-focus open-billing-button">
+                <span class="button__content" tabindex="-1">Open Billing Page</span>
+            </a>
+        </div>
+    </div>
+</div>
+        <div class="lightbox lightbox--payment-failure">
+    <div class="lightbox-content">
+        <div class="lightbox-content__inner">
+            <a href="#" class="close-lightbox lightbox-close-icon">
+                <span class="visually-hidden">Close lightbox</span>
+                <span class="accordion__icon" aria-hidden="true"></span>
+            </a>
+            <h2 class="heading-s">Payment Failed</h2>
+            <div class="message">
+                <p>
+                    Please check your payment details are correct and resubscribe or contact <a href="mailto:dpt@metoffice.gov.uk">dpt@metoffice.gov.uk</a> for more information.</p>
+            </div>
+            <a href="#" class="button button--primary close-lightbox no-focus">
+                <span class="button__content" tabindex="-1">Close</span>
+            </a>
+        </div>
+    </div>
+</div>
+        <div class="lightbox lightbox--local-tax-id">
+    <div class="lightbox-content">
+        <div class="lightbox-content__inner">
+            <a href="#" class="close-lightbox lightbox-close-icon">
+                <span class="visually-hidden">Close lightbox</span>
+                <span class="accordion__icon" aria-hidden="true"></span>
+            </a>
+            <h2 class="heading-s">Taxpayer Identification Number (TIN)</h2>
+            <div class="message">
+                <p>The taxpayer identification number (TIN) is the unique identifier assigned to the Account Holder by
+                    the tax administration in the Account Holder’s jurisdiction of tax residence. It is a unique
+                    combination of letters and/or numbers used to identify an individual or entity for the purposes of
+                    administering the tax laws of that jurisdiction.</p>
+                <p>For more information, please see
+                    <a href="https://www.gov.uk/hmrc-internal-manuals/international-exchange-of-information/ieim402040" target="_blank">https://www.gov.uk/hmrc-internal-manuals/international-exchange-of-information/ieim402040</a></p>
+            </div>
+            <a href="#" class="button button--primary close-lightbox no-focus">
+                <span class="button__content" tabindex="-1">Close</span>
+            </a>
+        </div>
+    </div>
+</div>
+        
+    
+        
+        <div id="page">
+            
+            <div class="wdh-header">
+    <div class="header-top">
+        <a id="logo-container" href="https://datahub.metoffice.gov.uk/">
+            <img class="mo-logo" src="/images/logo-no-background.svg" alt="Met Office CDA Configurator">
+        </a>
+        <div class="menu-container">
+            <button class="header-dropdown-toggle collapse" aria-expanded="false" aria-controls="wdh-main-navigation">MENU</button>
+            <div class="controls text-segment">
+    
+    
+        <input type="hidden" id="loggedInStatus" value="false">
+        <a class="standalone-button" aria-label="Login/Register" href="/profile/subscriptions">Login/Register</a>
+    
+</div>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <nav id="wdh-main-navigation" class="top-navigation">
+            <ul class="menu">
+                <li><a href="https://datahub.metoffice.gov.uk/">Home</a></li>
+                <li><a href="/pricing/atmospheric">Pricing & Plans</a></li>
+                <li><a href="/docs" class="focus">Documentation</a></li>
+                <li><a href="/docs/glossary">Glossary</a></li>
+                <li><a href="/support/faqs">Support</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    
+
+</div>
+
+            
+            <script defer src="/js/main-fdb1e5d1d32f0d2c4495b11e051474d4.js" type="text/javascript"></script>
+
+            
+            <main id="main">
+    <div class="navigation-sidebar collapse" role="navigation" aria-label="sidebar">
+    <div class="sticky">
+    <button class="sidebar-toggle-button" aria-expanded="false" aria-controls="navigation-sidebar-content">
+        <span>
+            <svg width="100%" height="100%" viewBox="0 0 256 253" xmlns="http://www.w3.org/2000/svg"><path d="M142.869,146.512l0.003,0.002l-12.62,12.62l-0.002,-0.003l-0.002,0.003l-12.62,-12.62l0.003,-0.002l-40.527,-40.526l12.619,-12.62l40.527,40.527l40.527,-40.527l12.619,12.62l-40.527,40.526Z" fill="#FFF"/></svg>
+        </span>
+    </button>
+    <ul class="dropdown-container" id="navigation-sidebar-content">
+        <li class="dropdown">
+            <button class="dropdown-header accordion__section-header accordion__section-button">
+                <span>Documentation</span>
+                <span class="dropdown-arrow"><span>
+            <svg width="100%" height="100%" viewBox="0 0 256 253" xmlns="http://www.w3.org/2000/svg"><path d="M142.869,146.512l0.003,0.002l-12.62,12.62l-0.002,-0.003l-0.002,0.003l-12.62,-12.62l0.003,-0.002l-40.527,-40.526l12.619,-12.62l40.527,40.527l40.527,-40.527l12.619,12.62l-40.527,40.526Z" fill="#FFF" width="80%" height="80%"/></svg>
+        </span></span>
+            </button>
+            <ul class="dropdown-list accordion__section-content indented">
+                <li><a href="/docs/getting-started">Getting Started</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <button class="dropdown-header accordion__section-header accordion__section-button" aria-expanded="false">
+                <span>Atmospheric</span>
+                <span class="dropdown-arrow"><span>
+            <svg width="100%" height="100%" viewBox="0 0 256 253" xmlns="http://www.w3.org/2000/svg"><path d="M142.869,146.512l0.003,0.002l-12.62,12.62l-0.002,-0.003l-0.002,0.003l-12.62,-12.62l0.003,-0.002l-40.527,-40.526l12.619,-12.62l40.527,40.527l40.527,-40.527l12.619,12.62l-40.527,40.526Z" fill="#FFF" width="80%" height="80%"/></svg>
+        </span></span>
+            </button>
+            <ul class="dropdown-list accordion__section-content indented">
+                <li><a href="/docs/f/category/atmospheric/overview">Overview</a></li>
+                <li><a href="/docs/f/category/atmospheric/how-to-build-your-order">How to build your order</a></li>
+                <li>
+                    <button class="dropdown-header accordion__section-header accordion__section-button" aria-expanded="false">
+                        <span>Atmospheric models</span>
+                        <span class="dropdown-arrow"><span>
+            <svg width="100%" height="100%" viewBox="0 0 256 253" xmlns="http://www.w3.org/2000/svg"><path d="M142.869,146.512l0.003,0.002l-12.62,12.62l-0.002,-0.003l-0.002,0.003l-12.62,-12.62l0.003,-0.002l-40.527,-40.526l12.619,-12.62l40.527,40.527l40.527,-40.527l12.619,12.62l-40.527,40.526Z" fill="#FFF" width="80%" height="80%"/></svg>
+        </span></span>
+                    </button>
+                    <ul class="dropdown-list accordion__section-content indented">
+                        <li><a href="/docs/f/category/atmospheric/sample-data">Sample data</a></li>
+                        <li><a href="/docs/f/category/atmospheric/type/atmospheric/sample-download-code">Sample download code</a></li>
+                        <li><a href="/docs/f/category/atmospheric/type/atmospheric/api-documentation">API documentation</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <button class="dropdown-header accordion__section-header accordion__section-button" aria-expanded="false">
+                <span>Site-specific</span>
+                <span class="dropdown-arrow"><span>
+            <svg width="100%" height="100%" viewBox="0 0 256 253" xmlns="http://www.w3.org/2000/svg"><path d="M142.869,146.512l0.003,0.002l-12.62,12.62l-0.002,-0.003l-0.002,0.003l-12.62,-12.62l0.003,-0.002l-40.527,-40.526l12.619,-12.62l40.527,40.527l40.527,-40.527l12.619,12.62l-40.527,40.526Z" fill="#FFF" width="80%" height="80%"/></svg>
+        </span></span>
+            </button>
+            <ul class="dropdown-list accordion__section-content indented">
+                <li><a href="/docs/f/category/site-specific/overview">Overview</a></li>
+                <li>
+                    <button class="dropdown-header accordion__section-header accordion__section-button" aria-expanded="false"}>
+                        <span>Site-Specific Blended Probabilistic Forecast</span>
+                        <span class="dropdown-arrow"><span>
+            <svg width="100%" height="100%" viewBox="0 0 256 253" xmlns="http://www.w3.org/2000/svg"><path d="M142.869,146.512l0.003,0.002l-12.62,12.62l-0.002,-0.003l-0.002,0.003l-12.62,-12.62l0.003,-0.002l-40.527,-40.526l12.619,-12.62l40.527,40.527l40.527,-40.527l12.619,12.62l-40.527,40.526Z" fill="#FFF" width="80%" height="80%"/></svg>
+        </span></span>
+                    </button>
+                    <ul class="dropdown-list accordion__section-content indented">
+                        <li><a href="/docs/f/category/site-specific/type/probabilistic-forecast-feature/api-user-guide">API User Guide</a></li>
+                        <li><a href="/docs/f/category/site-specific/type/probabilistic-forecast-feature/sample-data">Sample data</a></li>
+                        <li><a href="/docs/f/category/site-specific/type/probabilistic-forecast-feature/sample-download-code">Sample download code</a></li>
+                        <li><a href="/docs/f/category/site-specific/type/probabilistic-forecast-feature/api-documentation">API documentation</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <button class="dropdown-header accordion__section-header accordion__section-button" aria-expanded="false">
+                        <span>Global spot data</span>
+                        <span class="dropdown-arrow"><span>
+            <svg width="100%" height="100%" viewBox="0 0 256 253" xmlns="http://www.w3.org/2000/svg"><path d="M142.869,146.512l0.003,0.002l-12.62,12.62l-0.002,-0.003l-0.002,0.003l-12.62,-12.62l0.003,-0.002l-40.527,-40.526l12.619,-12.62l40.527,40.527l40.527,-40.527l12.619,12.62l-40.527,40.526Z" fill="#FFF" width="80%" height="80%"/></svg>
+        </span></span>
+                    </button>
+                    <ul class="dropdown-list accordion__section-content indented">
+                        <li><a href="/docs/f/category/site-specific/type/site-specific/sample-data">Sample data</a></li>
+                        <li><a href="/docs/f/category/site-specific/type/site-specific/sample-download-code">Sample download code</a></li>
+                        <li><a href="/docs/f/category/site-specific/type/site-specific/api-documentation">API documentation</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <button class="dropdown-header accordion__section-header accordion__section-button" aria-expanded="false">
+                <span>Warnings</span>
+                <span class="dropdown-arrow"><span>
+            <svg width="100%" height="100%" viewBox="0 0 256 253" xmlns="http://www.w3.org/2000/svg"><path d="M142.869,146.512l0.003,0.002l-12.62,12.62l-0.002,-0.003l-0.002,0.003l-12.62,-12.62l0.003,-0.002l-40.527,-40.526l12.619,-12.62l40.527,40.527l40.527,-40.527l12.619,12.62l-40.527,40.526Z" fill="#FFF" width="80%" height="80%"/></svg>
+        </span></span>
+            </button>
+            <ul class="dropdown-list accordion__section-content indented">
+                <li><a href="/docs/g/category/warnings/overview">Overview</a></li>
+                <li>
+                    <button class="dropdown-header accordion__section-header accordion__section-button" aria-expanded="false">
+                        <span>National Severe Weather Warnings Service (NSWWS)</span>
+                        <span class="dropdown-arrow"><span>
+            <svg width="100%" height="100%" viewBox="0 0 256 253" xmlns="http://www.w3.org/2000/svg"><path d="M142.869,146.512l0.003,0.002l-12.62,12.62l-0.002,-0.003l-0.002,0.003l-12.62,-12.62l0.003,-0.002l-40.527,-40.526l12.619,-12.62l40.527,40.527l40.527,-40.527l12.619,12.62l-40.527,40.526Z" fill="#FFF" width="80%" height="80%"/></svg>
+        </span></span>
+                    </button>
+                    <ul class="dropdown-list accordion__section-content indented">
+                        <li><a href="/docs/g/category/warnings/type/nswws/sample-data">Sample data</a></li>
+                        <li><a href="/docs/g/category/warnings/type/nswws/api-documentation">API documentation</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown accordion__section--expanded">
+            <button class="dropdown-header accordion__section-header accordion__section-button" aria-expanded="true">
+                <span>Observations</span>
+                <span class="dropdown-arrow"><span>
+            <svg width="100%" height="100%" viewBox="0 0 256 253" xmlns="http://www.w3.org/2000/svg"><path d="M142.869,146.512l0.003,0.002l-12.62,12.62l-0.002,-0.003l-0.002,0.003l-12.62,-12.62l0.003,-0.002l-40.527,-40.526l12.619,-12.62l40.527,40.527l40.527,-40.527l12.619,12.62l-40.527,40.526Z" fill="#FFF" width="80%" height="80%"/></svg>
+        </span></span>
+            </button>
+            <ul class="dropdown-list accordion__section-content indented">
+                <li><a href="/docs/o/category/observations/overview">Overview</a></li>
+                <li class="accordion__section--expanded">
+                    <button class="dropdown-header accordion__section-header accordion__section-button" aria-expanded="true">
+                        <span>Land Observations</span>
+                        <span class="dropdown-arrow"><span>
+            <svg width="100%" height="100%" viewBox="0 0 256 253" xmlns="http://www.w3.org/2000/svg"><path d="M142.869,146.512l0.003,0.002l-12.62,12.62l-0.002,-0.003l-0.002,0.003l-12.62,-12.62l0.003,-0.002l-40.527,-40.526l12.619,-12.62l40.527,40.527l40.527,-40.527l12.619,12.62l-40.527,40.526Z" fill="#FFF" width="80%" height="80%"/></svg>
+        </span></span>
+                    </button>
+                    <ul class="dropdown-list accordion__section-content indented">
+                        <li><a href="/docs/o/category/observations/type/land-observations/sample-data">Sample data</a></li>
+                        <li><a href="/docs/o/category/observations/type/land-observations/api-documentation">API documentation</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <button class="dropdown-header accordion__section-header accordion__section-button" aria-expanded="false">
+                <span>Map images</span>
+                <span class="dropdown-arrow"><span>
+            <svg width="100%" height="100%" viewBox="0 0 256 253" xmlns="http://www.w3.org/2000/svg"><path d="M142.869,146.512l0.003,0.002l-12.62,12.62l-0.002,-0.003l-0.002,0.003l-12.62,-12.62l0.003,-0.002l-40.527,-40.526l12.619,-12.62l40.527,40.527l40.527,-40.527l12.619,12.62l-40.527,40.526Z" fill="#FFF" width="80%" height="80%"/></svg>
+        </span></span>
+            </button>
+            <ul class="dropdown-list accordion__section-content indented">
+                <li><a href="/docs/f/category/map-images/overview">Overview</a></li>
+                <li><a href="/docs/f/category/map-images/how-to-build-your-order">How to build your order</a></li>
+       
+                <li>
+                    <button class="dropdown-header accordion__section-header accordion__section-button" aria-expanded="false">
+                        <span>Map images data</span>
+                        <span class="dropdown-arrow"><span>
+            <svg width="100%" height="100%" viewBox="0 0 256 253" xmlns="http://www.w3.org/2000/svg"><path d="M142.869,146.512l0.003,0.002l-12.62,12.62l-0.002,-0.003l-0.002,0.003l-12.62,-12.62l0.003,-0.002l-40.527,-40.526l12.619,-12.62l40.527,40.527l40.527,-40.527l12.619,12.62l-40.527,40.526Z" fill="#FFF" width="80%" height="80%"/></svg>
+        </span></span>
+                    </button>
+                    <ul class="dropdown-list accordion__section-content indented">
+                        <li><a href="/docs/f/category/map-images/sample-data">Sample data</a></li>
+                        <li><a href="/docs/f/category/map-images/type/map-images/sample-download-code">Sample download code</a></li>
+                        <li><a href="/docs/f/category/map-images/type/map-images/api-documentation">API documentation</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    </div>
+</div>
+    <div class="container main-content-column column-with-sidebar">
+        <div class="text-segment margin-bottom-4 h3-as-h4">
+            <h1 class="segment-header margin-bottom-4">Overview</h1>
+            <h2>Observations</h2>
+            <p>The Met Office's weather observations are key to understanding current atmospheric conditions and form the basis for accurate weather forecasting. 
+                They provide the ground truth from which many important products and services are formed, 
+                including vital validation of forecasts that enable continuous quality improvement to services delivered.</p>
+            <h2 class="margin-bottom-2">Specification</h2>
+                <ul class="model-list accordion accordion--single">
+                    <li class="accordion__section">
+                        <div class="accordion__section-header dropdown-header">
+                            <span>Land Observations</span>
+                            <div class="dropdown-label-container">
+                                <span class="dropdown-label"></span><span class="dropdown-arrow"><span>
+            <svg width="100%" height="100%" viewBox="0 0 256 253" xmlns="http://www.w3.org/2000/svg"><path d="M142.869,146.512l0.003,0.002l-12.62,12.62l-0.002,-0.003l-0.002,0.003l-12.62,-12.62l0.003,-0.002l-40.527,-40.526l12.619,-12.62l40.527,40.527l40.527,-40.527l12.619,12.62l-40.527,40.526Z" fill="#FFF" width="80%" height="80%"/></svg>
+        </span></span>
+                            </div>
+                        </div>
+                        <div class="accordion__section-content">
+                            <p>Our Land Observations API provides access to recent observational data. 
+                                The API is ideal for applications that need accurate, 
+                                hourly data on key weather parameters observed at the land surface.</p>
+                            <p>Data from ground-based instruments is available from 150 locations, 
+                                separated on average 50km from each other to provide the greatest representative coverage of the UK. 
+                                Each of these stations have a scheduled maintenance visit every six months in which every instrument is checked for performance. 
+                                In addition, sites are inspected every two years to ensure exposure classifications are kept to the internationally aligned standards 
+                                – this will include identifying any changes to sites from trees or buildings for example.</p>
+                            <p>All sensors are located within an enclosure and variables are measured according to World Meteorological Organisation (WMO) standards. 
+                                A full list of available parameters can be found in the Glossary. 
+                                Measurements are fully automated, with data logged at each station and transmitted centrally for processing. 
+                                For synoptic purposes in the UK and internationally, standard observing times are hourly, 
+                                each station reports 24 observations daily at 0000, 0100, 0200, through to 2300 UTC.</p>
+
+                            <h3 class="margin-top-1">Domain</h3>
+                            <p>150 UK Station Locations </p>
+                            <h3 class="margin-top-1">Parameters</h3>
+                            <p>Our Land Observations API currently provides 9 parameters on an hourly basis. These can be found in our <a href="/docs/glossary?models=mo-land-observations">Glossary</a>.</p>
+                            <h3 class="margin-top-1">Timesteps</h3>
+                            <p>0000, 0100, 0200, ... 2200 and 2300 UTC for the past 48 hours.</p>
+                            <h3 class="margin-top-1">Update frequency</h3>
+                            <p>Hourly</p>
+                            <h3 class="margin-top-1">Delivery</h3>
+                            <p>API</p>
+                            <h3>Format</h3>
+                            <p>JSON</p>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="text-segment">
+    <h2 class="segment-header">Need support?</h2>
+    <p class="margin-bottom-4">
+        If you have any questions, please consult our frequently asked questions (FAQs) on our support page or contact us directly at <a href="mailto:enquiries@metoffice.gov.uk">enquiries@metoffice.gov.uk</a>.
+    </p>
+    <a class="standalone-button" href="/support/faqs">Get support</a>
+</div>
+        </div>
+    </div>
+</main>
+
+            
+            <footer class="wdh-footer" role="contentinfo" aria-label="footer">
+        
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D5BWPNW"
+                          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+        <div class="footer-top">
+            <img class="mo-logo" src="/images/logo-no-background.svg" alt="Met Office CDA Configurator">
+            <ul class="menu">
+                <li><a href="https://www.metoffice.gov.uk/about-us/legal" target="_blank">Terms and conditions</a></li>
+                <li><a href="https://www.metoffice.gov.uk/about-us/legal/privacy" target="_blank">Privacy policy</a></li>
+                <li><a title="Weather DataHub Accessibility statement" href="/accessibility-statement"
+                        target="_blank">Accessibility Statement</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <ul class="icons">
+                <li><a data-value="twitter" class="icon" href="https://x.com/metoffice" aria-label="Follow us on X" title="Follow us on X"></a></li>
+                <li><a data-value="youtube" class="icon" href="https://www.youtube.com/user/TheMetOffice" aria-label="Follow us on YouTube" title="Follow us on Youtube"></a></li>
+                <li><a data-value="facebook" class="icon" href="https://www.facebook.com/metoffice" aria-label="Follow us on Facebook" title="Follow us on Facebook"></a></li>
+                <li><a data-value="tiktok" class="icon" href="https://www.tiktok.com/@metoffice" aria-label="Follow us on TikTok" title="Follow us on TikTok"></a></li>
+                <li><a data-value="instagram" class="icon" href="https://www.instagram.com/metoffice/" aria-label="Follow us on Instagram" title="Follow us on Instagram"></a></li>
+                <li><a data-value="linkedin" class="icon"href="https://www.linkedin.com/company/met-office/" aria-label="Follow us on LinkedIn" title="Follow us on LinkedIn"></a></li>
+            </ul>
+        </div>
+    </footer>
+            
+        </div>
+    </div>
+</body>
+</html>

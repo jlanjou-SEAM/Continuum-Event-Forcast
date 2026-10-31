@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    
+    <title>
+	Weather API Documentation: Endpoints, Parameters &amp; Examples - WeatherAPI.com
+</title>
+     <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta id="ctl00_MetaDescTag" name="description" content="WeatherAPI.com documentation: realtime, forecast, history, future, marine, alerts, air quality, astronomy, time zone, IP lookup, solar and agriculture endpoints with parameters and JSON/XML examples." />	    
+    <meta id="ctl00_MetaKeywordTag" name="keywords" content="weather api, developer api, weather api, data feed, xml weather, csv, global weather, travel forecast, postcode forecast, zipcode forecast, latitude and longitude weather forecast, world weather" />            
+    <link rel="canonical" href="https://www.weatherapi.com/docs/" />
+    <meta property="og:type" content="website" /><meta property="og:site_name" content="WeatherAPI.com" /><meta property="og:title" content="Weather API Documentation: Endpoints, Parameters &amp; Examples - WeatherAPI.com" /><meta property="og:description" content="WeatherAPI.com documentation: realtime, forecast, history, future, marine, alerts, air quality, astronomy, time zone, IP lookup, solar and agriculture endpoints with parameters and JSON/XML examples." /><meta property="og:url" content="https://www.weatherapi.com/docs/" /><meta property="og:image" content="https://cdn.weatherapi.com/v4/images/weatherapi_logo.png" /><meta name="twitter:card" content="summary" /><meta name="twitter:title" content="Weather API Documentation: Endpoints, Parameters &amp; Examples - WeatherAPI.com" /><meta name="twitter:description" content="WeatherAPI.com documentation: realtime, forecast, history, future, marine, alerts, air quality, astronomy, time zone, IP lookup, solar and agriculture endpoints with parameters and JSON/XML examples." />
+   <link rel="shortcut icon" href="//cdn.weatherapi.com/favicon.ico" />
+    <link rel="icon" type="image/vnd.microsoft.icon" href="//cdn.weatherapi.com/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="//cdn.weatherapi.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="//cdn.weatherapi.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="//cdn.weatherapi.com/favicon-16x16.png">
+    
+    <link rel="stylesheet" href="/static/css/x/docs-93af76e3a3.css" />
+    
+     
+     
+    
+    <script>(function(){var m={"intro-getting-started":"/docs/getting-started/","intro-authentication":"/docs/authentication/","key-tit":"/docs/authentication/#key-tit","key-text":"/docs/authentication/#key-text","intro-request":"/docs/request/","intro-request-param":"/docs/request-parameters/","intro-request-lang":"/docs/multilingual/","intro-location":"/docs/location-object/","intro-alerts":"/docs/weather-alerts/","intro-aqi":"/docs/air-quality/","intro-pollen":"/docs/pollen/","intro-weather-maps":"/docs/weather-maps/","intro-bulk":"/docs/bulk-request/","intro-error-codes":"/docs/error-codes/","apis-realtime":"/docs/realtime-api/","apis-forecast":"/docs/forecast-api/","apis-history":"/docs/history-api/","apis-alerts":"/docs/alerts-api/","apis-marine":"/docs/marine-api/","apis-future":"/docs/future-api/","apis-solar":"/docs/solar-api/","apis-agriculture":"/docs/agriculture-api/","apis-search":"/docs/search-api/","apis-ip-lookup":"/docs/ip-lookup-api/","apis-astronomy":"/docs/astronomy-api/","apis-timezone":"/docs/time-zone-api/","apis-sports":"/docs/sports-api/","apis-example":"/docs/examples/","apis-integration":"/docs/integrations/","weather-icons":"/docs/weather-icons/","credit":"/docs/attribution/"};var h=(location.hash||'').replace(/^#/,'');if(h&&m[h]){location.replace(m[h]);}})();</script>
+
+    
+</head>
+<body>
+    <form method="post" action="/docs/" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="CfDJ8MgM-RLO_8VPs9CcAtb8gC-oSNM8dc_3F_w1aaIPx9K164pr7ZduOAMp_GXzlZyfCwm1Rj8OfpTBkjB39cYI50I5fGJGEl_OyRFmG6wXrU6e_s43X8A8BQo04sn-QXk1oBVKDXYewYkJKcECBtvcm-OlFGxwBo_zDeSy_zHvrIITtdyZZeoNb-28iLaQ87Ioq5QLz6ihyzerK7XCtzKrY1VKxg4YpS4fjHPsVt1hCoeSLx_WxMXhXIiGO_X2JY2cWzIhd-9kXtSMfr1P4ssxp_8JbfGR9jwaki5iv-6rGJqa5GV1mxTZkNwkmBtAjUNMvwDT1dKckldLxawr9-pMIVZKws2TRsjo-FSfqp_94Qmv2MmLT9L5r_H813bjSq-jNovNgq_cHzYCLzJhOkxmSw6dkWYyzSV-oz_VDxvi12nkSQBC9qKW2DLgiKOrNxV3CElwzXRvwp9DJxeH7x6HdI1dh80-eqCishFryEPvSh6PRisr8c72QOqhlD6uWToyb3R_2uPavqlRTjceSreVK0J-DiMLWr6J2B33kgUyZLTcN3MmKagVE3htqkir3pyerJxXmQfJUgTu7PZh9CD9dt1UcwjmEmF451aLip07U6BbC3HvefV6C3OpJbHXzaNSm3bKHPSTUdvvV5Vfec5gmkDr1FU_qhMDfXwaHty8wKbNCMe1C8nbJFMolTSO7Pg3vg2YD7so7orw9TOpFphMbCjIlJ_IqO-_qFoKrZrjB6DFFYNZh00ZsDyscNhMU7McVarbLLKq5Nc59GRi7vfhbGTWtIsS7jsKCCC3hufY1U8pAgXBLcSsyIyqAHzMchg73d9-n_sK6NVXCAcflBQjmUYBoauYZB4RjziKbYYMuNo4ziahkAv6F8wdA_mPWSoZX2qMVm27SDiRuXN7E2fVdGhnLt9MQeIXpWkiPvTjnpkjDFDnQkb9m_4nA8-gU_CV_F1w1-3UU5jLL7zFbSlhYKBOZ46JIQhJtoRnXCESOuuCpJf9zxiCvhsvSGsr-yN9g_qEG424wLIb6L7o-0IoXzc" />
+</div>
+
+         <header class="header fixed-top">	
+             
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible mr-2 d-xl-none" type="button">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	                </button>
+	                <div class="site-logo"><a class="navbar-brand" href="/"><img class="logo-icon mr-2" src="//cdn.weatherapi.com/v4/images/weatherapi_logo.png" alt="logo"></a></div>    
+                </div><!--//docs-logo-wrapper-->
+                <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+	               
+	
+					
+                    
+						<ul class="list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+							<li class="list-inline-item">
+							    <a class="nav-link" href="/api">Features</a>
+							</li>
+							<li class="list-inline-item">
+							   <a class="nav-link" href="/pricing">Pricing</a>
+							</li>
+                            <li class="list-inline-item">
+							   <a class="nav-link" href="/api-explorer">API Explorer</a>
+							</li>                          
+							<li class="list-inline-item">
+							    <a class="nav-link" href="/contact">Contact</a>
+							</li>                             
+						</ul>
+					
+		            <a href="/my/" class="btn btn-primary d-none d-lg-flex">My Account</a>
+	            </div>
+				
+
+            </div><!--//container-->
+        </div><!--//branding-->
+                  
+    </header><!--//header-->
+ 
+       
+                
+
+    <div class="docs-wrapper">
+        <div id="docs-sidebar" class="docs-sidebar">
+            <nav id="docs-nav" class="docs-nav navbar" aria-label="Documentation"><ul class="section-items list-unstyled nav flex-column pb-3"><li class="nav-item section-title"><a class="nav-link active" aria-current="page" href="/docs/"><span class="theme-icon-holder mr-2"><i class="fas fa-home"></i></span>Overview</a></li><li class="nav-item section-title mt-3"><span class="nav-link"><span class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>Introduction</span></li><li class="nav-item"><a class="nav-link" href="/docs/getting-started/">Getting Started</a></li><li class="nav-item"><a class="nav-link" href="/docs/authentication/">Authentication</a></li><li class="nav-item"><a class="nav-link" href="/docs/request/">Request URL</a></li><li class="nav-item"><a class="nav-link" href="/docs/request-parameters/">Request Parameters</a></li><li class="nav-item"><a class="nav-link" href="/docs/multilingual/">Multilingual</a></li><li class="nav-item"><a class="nav-link" href="/docs/location-object/">Location Object</a></li><li class="nav-item"><a class="nav-link" href="/docs/weather-alerts/">Weather Alerts</a></li><li class="nav-item"><a class="nav-link" href="/docs/air-quality/">Air Quality</a></li><li class="nav-item"><a class="nav-link" href="/docs/pollen/">Pollen</a> <span class="badge badge-pill badge-danger">New</span></li><li class="nav-item"><a class="nav-link" href="/docs/weather-maps/">Weather Maps</a> <span class="badge badge-pill badge-danger">New</span></li><li class="nav-item"><a class="nav-link" href="/docs/bulk-request/">Bulk Request</a></li><li class="nav-item"><a class="nav-link" href="/docs/error-codes/">API Error Codes</a></li><li class="nav-item section-title mt-3"><span class="nav-link"><span class="theme-icon-holder mr-2"><i class="fas fa-box"></i></span>APIs</span></li><li class="nav-item"><a class="nav-link" href="/docs/realtime-api/">Realtime API</a></li><li class="nav-item"><a class="nav-link" href="/docs/forecast-api/">Forecast API</a></li><li class="nav-item"><a class="nav-link" href="/docs/history-api/">History API</a></li><li class="nav-item"><a class="nav-link" href="/docs/alerts-api/">Alerts API</a></li><li class="nav-item"><a class="nav-link" href="/docs/marine-api/">Marine API</a></li><li class="nav-item"><a class="nav-link" href="/docs/future-api/">Future API</a></li><li class="nav-item"><a class="nav-link" href="/docs/solar-api/">Solar Energy API</a> <span class="badge badge-pill badge-danger">New</span></li><li class="nav-item"><a class="nav-link" href="/docs/agriculture-api/">Agriculture API</a> <span class="badge badge-pill badge-danger">New</span></li><li class="nav-item"><a class="nav-link" href="/docs/search-api/">Search/Autocomplete API</a></li><li class="nav-item"><a class="nav-link" href="/docs/ip-lookup-api/">IP Lookup API</a></li><li class="nav-item"><a class="nav-link" href="/docs/astronomy-api/">Astronomy API</a></li><li class="nav-item"><a class="nav-link" href="/docs/time-zone-api/">Time Zone API</a></li><li class="nav-item"><a class="nav-link" href="/docs/sports-api/">Sports API</a></li><li class="nav-item"><a class="nav-link" href="/docs/examples/">Examples</a></li><li class="nav-item"><a class="nav-link" href="/docs/integrations/">Integrations</a></li><li class="nav-item section-title mt-3"><span class="nav-link"><span class="theme-icon-holder mr-2"><i class="fas fa-book-reader"></i></span>Resources</span></li><li class="nav-item"><a class="nav-link" href="/docs/weather-icons/">Weather Icons and Codes</a></li><li class="nav-item"><a class="nav-link" href="/docs/attribution/">Credit / Link Back</a></li></ul></nav>
+        </div>
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="introduction">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Weather API Documentation</h1>
+                        <section class="docs-intro">
+                            <p class="mob-vers6">WeatherAPI.com provides access to free weather and geo data via a JSON/XML restful API. It allows developers to create desktop, web and mobile applications using this data very easy.</p>
+                            <p class="tit-list">We provide following data through our API:</p>
+                            <ul class="doc-list">
+                                <li>Real-time weather</li>
+                                <li>14 day weather forecast</li>
+                                <li>Historical weather</li>
+                                <li>Marine Weather and Tide Data</li>
+                                <li>Future Weather (Upto 365 days ahead)</li>
+                                <li>Daily and hourly intervals</li>
+                                <li>Pollen forecast (Pro+ plan and above) <span class="badge badge-pill badge-danger">New</span></li>
+                                <li>15 min interval<span class="badge badge-pill badge-danger">New</span> (Enterprise only)</li>                                 
+                                <li>Astronomy</li>
+                                <li>Time zone</li>
+                                <li>Sports</li>
+                                <li>Weather Maps <span class="badge badge-pill badge-danger">New</span></li>
+                                <li>Location data</li>
+                                <li>Search or Autocomplete API</li>
+                                <li>Weather Alerts</li>
+                                <li>Air Quality Data</li>
+                                <li>Bulk Request</li>
+                                <li>Solar Irradiance</li>
+                                <li>Solar PV Energy Forecast (Business plan and above) <span class="badge badge-pill badge-danger">New</span></li>
+                                <li>Agriculture: growing degree days, crop water use, spray windows, disease and frost risk (Business plan and above) <span class="badge badge-pill badge-danger">New</span></li>
+                                <li>Evapotranspiration (Enterprise)</li>
+                                <li>Wind at 100m (Enterprise) <span class="badge badge-pill badge-danger">New</span></li>
+                                <li>Pollen History (Enterprise) <span class="badge badge-pill badge-danger">New</span></li>
+                            </ul>
+                        </section>
+                    </header>
+                    <section class="docs-section">
+                        <h2 class="section-heading">Quick start</h2>
+                        <ol>
+                            <li><a href="/signup">Sign up free</a> and copy your API key from <a href="/my/">your account</a>.</li>
+                            <li>Call any endpoint with your key, for example current weather for London:<br /><code>https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&amp;q=London</code></li>
+                            <li>Explore every endpoint and parameter in the guides below, or try requests in the <a href="/api-explorer">API Explorer</a>.</li>
+                        </ol>
+                    </section>
+                    <section class="docs-section"><h2 class="section-heading">Introduction</h2><div class="row"><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/getting-started/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Getting Started</h3><p class="small text-muted mb-0">Sign up for a free WeatherAPI.com key and make your first weather API call in minutes: base URL, key, request formats and a working example.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/authentication/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Authentication</h3><p class="small text-muted mb-0">How to authenticate WeatherAPI.com requests: pass your API key with the key parameter on every call, and keep it safe.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/request/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Request URL</h3><p class="small text-muted mb-0">WeatherAPI.com base URL, HTTP and HTTPS access, JSON and XML formats and the full list of API methods: current, forecast, history, marine, future and more.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/request-parameters/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Request Parameters</h3><p class="small text-muted mb-0">Every WeatherAPI.com request parameter explained: q (city, lat/lon, postcode, IP), days, dt, hour, aqi, alerts, tp, pollen and more, with examples.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/multilingual/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Multilingual</h3><p class="small text-muted mb-0">Get weather condition text in 40 languages with the WeatherAPI.com lang parameter. Full list of supported language codes, from Arabic to Zulu.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/location-object/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Location Object</h3><p class="small text-muted mb-0">Fields returned in the WeatherAPI.com location object: name, region, country, lat, lon, tz_id, localtime and localtime_epoch.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/weather-alerts/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Weather Alerts</h3><p class="small text-muted mb-0">Government weather alerts and warnings for the USA, UK, Europe and worldwide through WeatherAPI.com: alert fields, coverage and how to request them.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/air-quality/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Air Quality</h3><p class="small text-muted mb-0">Realtime and forecast air quality from WeatherAPI.com: CO, O3, NO2, SO2, PM2.5, PM10, US EPA index and UK DEFRA index fields explained.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/pollen/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Pollen <span class="badge badge-pill badge-danger">New</span></h3><p class="small text-muted mb-0">Pollen data via WeatherAPI.com: hazel, alder, birch, oak, grass, mugwort and ragweed in grains/m&#179; for the US, Canada, UK and Europe. Fields and usage.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/weather-maps/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Weather Maps <span class="badge badge-pill badge-danger">New</span></h3><p class="small text-muted mb-0">Free weather map tiles from WeatherAPI.com (no API key needed): temperature, precipitation, pressure and wind overlays, hourly for 3 days, with demos.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/bulk-request/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Bulk Request</h3><p class="small text-muted mb-0">Get weather for up to 50 locations in one WeatherAPI.com call with a bulk POST request (Pro+, Business and Enterprise). JSON body format and examples.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/error-codes/"><div class="card-body"><h3 class="h6 mb-1 text-primary">API Error Codes</h3><p class="small text-muted mb-0">Every WeatherAPI.com error code with its HTTP status: missing or invalid API key, monthly quota exceeded, location not found, plan access and bulk errors.</p></div></a></div></div></section><section class="docs-section"><h2 class="section-heading">APIs</h2><div class="row"><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/realtime-api/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Realtime API</h3><p class="small text-muted mb-0">Current weather API (current.json): temperature, feels like, wind, humidity, pressure, UV and optional air quality for any location, as JSON or XML.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/forecast-api/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Forecast API</h3><p class="small text-muted mb-0">Forecast API (forecast.json): up to 14 days of daily and hourly weather, astronomy, alerts and air quality. Parameters, response fields and examples.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/history-api/"><div class="card-body"><h3 class="h6 mb-1 text-primary">History API</h3><p class="small text-muted mb-0">History API (history.json): hourly and daily historical weather for any date since 1 January 2010. Parameters, response fields and examples.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/alerts-api/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Alerts API</h3><p class="small text-muted mb-0">Alerts API (alerts.json): government-issued weather warnings for the requested location, with headline, severity, areas, effective and expiry times.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/marine-api/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Marine API</h3><p class="small text-muted mb-0">Marine API (marine.json): wave height, swell, water temperature and tide data for coastal and offshore locations, up to 7 days ahead.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/future-api/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Future API</h3><p class="small text-muted mb-0">Future API (future.json): 3-hourly weather for a date between 14 and 300 days in the future, for event and travel planning. Parameters and examples.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/solar-api/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Solar Energy API <span class="badge badge-pill badge-danger">New</span></h3><p class="small text-muted mb-0">Solar PV energy forecast API: hourly and daily power and energy for your system for up to 14 days, from GHI, DNI and DHI irradiance. Business plan and above.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/agriculture-api/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Agriculture API <span class="badge badge-pill badge-danger">New</span></h3><p class="small text-muted mb-0">Agriculture API: growing degree days, ET0 and crop water use, spray windows, frost, disease and blight risk for up to 14 days. Business plan and above.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/search-api/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Search/Autocomplete API</h3><p class="small text-muted mb-0">Search/Autocomplete API (search.json): find matching cities and towns as the user types, with id, name, region, country, latitude and longitude.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/ip-lookup-api/"><div class="card-body"><h3 class="h6 mb-1 text-primary">IP Lookup API</h3><p class="small text-muted mb-0">IP Lookup API (ip.json): city, region, country, continent, coordinates and time zone for an IPv4 or IPv6 address. Fields and example response.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/astronomy-api/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Astronomy API</h3><p class="small text-muted mb-0">Astronomy API (astronomy.json): sunrise, sunset, moonrise, moonset, moon phase and illumination for any location and date.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/time-zone-api/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Time Zone API</h3><p class="small text-muted mb-0">Time Zone API (timezone.json): time zone id and current local time for a city, coordinates, postcode or IP address.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/sports-api/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Sports API</h3><p class="small text-muted mb-0">Sports API (sports.json): upcoming football, cricket and golf events with stadium, country, tournament and start time, for weather-aware apps.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/examples/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Examples</h3><p class="small text-muted mb-0">Sample WeatherAPI.com requests and responses to copy and adapt, from current weather to forecasts, in JSON and XML.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/integrations/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Integrations</h3><p class="small text-muted mb-0">WeatherAPI.com SDKs on GitHub (Python, PHP, Ruby, JavaScript, Java, Go and more), the Note API Connector for Notion, and the API Explorer.</p></div></a></div></div></section><section class="docs-section"><h2 class="section-heading">Resources</h2><div class="row"><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/weather-icons/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Weather Icons and Codes</h3><p class="small text-muted mb-0">Full list of WeatherAPI.com weather condition codes with day and night text and icons. Download the list as JSON, XML or CSV.</p></div></a></div><div class="col-12 col-md-6 mb-3"><a class="card h-100 shadow-sm text-reset" style="text-decoration:none" href="/docs/attribution/"><div class="card-body"><h3 class="h6 mb-1 text-primary">Credit / Link Back</h3><p class="small text-muted mb-0">How to credit WeatherAPI.com when you use our data on a website or app: text and logo link-back code you can copy.</p></div></a></div></div></section>
+                    <aside class="docs-cta card mt-4"><div class="card-body"><h2 class="h5 mb-2">Try it with your own API key</h2><p class="mb-3">Sign up free (no credit card) and make your first call in under a minute, or test any endpoint in the API Explorer.</p><a class="btn btn-primary mr-2 mb-2" href="/signup">Get a free API key</a><a class="btn btn-outline-primary mr-2 mb-2" href="/api-explorer">Open API Explorer</a><a class="btn btn-link mb-2" href="/pricing">Compare plans</a></div></aside>
+                </article>
+            </div>
+        </div>
+    </div>
+
+           
+    
+
+    
+
+<section class="cta-section text-center py-5 theme-bg-dark position-relative">
+	    <div class="theme-bg-shapes-right"></div>
+	    <div class="theme-bg-shapes-left"></div>
+	    <div class="container">
+		    <h3 class="mb-2 text-white mb-3">Quick and Easy Signup for Weather API</h3>
+		    <div class="section-intro text-white mb-3 single-col-max mx-auto">WeatherAPI.com makes it super easy to integrate our realtime, daily, hourly and 15 min interval weather forecast data, historical weather, marine weather, bulk request, air quality data, pollen, evapotranspiration, autocomplete, time zone, astronomy and sports data into your new or existing project.</div>
+		    <div class="pt-3 text-center">
+			    <a class="btn btn-light" href="/signup" title="Weather API">Get Started<i class="fas fa-arrow-alt-circle-right ml-2"></i></a>
+		    </div>
+	    </div>
+    </section><!--//cta-section-->
+
+<footer class="footer">
+	    <div class="container py-5 mb-3">
+		    <div class="row">
+			  
+			    <div class="footer-col col-12 col-lg-3">
+				    <h4 class="col-heading">Developers</h4>
+				    <ul class="list-unstyled">
+					    <li><a href="/pricing">Pricing</a></li>
+					    <li><a href="/api" title="Free Weather API">APIs</a></li>					    
+					    <li><a href="/docs/" title="Free Weather API Docs">Docs</a></li>	
+						<li><a href="/api-changelog.html" title="Weather API Changelog">Changelog</a></li>					    
+                        <li><a href="https://github.com/weatherapicom/" title="Weather API Code Library" target="_blank" rel="noopener noreferrer nofollow">Github</a></li>
+						<li><a href="https://app.swaggerhub.com/apis-docs/WeatherAPI.com/WeatherAPI/1.0.2" title="WeatherAPI.com Swagger" target="_blank" rel="noopener noreferrer nofollow">Swagger</a></li>
+                        <li><a href="/weather/">Weather</a></li>					    
+                        <li><a href="https://miing.com/" title="Air Quality and Pollen Tracker" target="_blank" rel="noopener noreferrer nofollow">Miing.com</a></li>													
+						<li><a href="https://www.weatherai.io/" target="_blank" title="Weather AI Decision API" rel="noopener noreferrer nofollow">WeatherAI.io</a></li>
+						<li><a href="https://www.worldweatheronline.com/hwd/" target="_blank" title="Historical Weather Archive (since 2008)" rel="noopener noreferrer nofollow">Weather History</a></li>
+				    </ul>
+			    </div><!--//footer-col-->			    
+			    <div class="footer-col col-12 col-lg-3">
+				    <h4 class="col-heading">&nbsp;</h4>
+				    <ul class="list-unstyled">
+					    <li><a href="/about">About Us</a></li>
+					    <li><a href="/contact">Contact Us</a></li>
+					    <li><a href="/privacy">Privacy</a></li>
+					    <li><a href="/terms">Terms of Services</a></li>
+						<li><a href="https://blog.weatherapi.com/" title="WeatherAPI.com Blog">Blog</a></li>
+						<li>
+						<a href="https://www.npmjs.com/package/weatherapi-mcp" rel="noopener noreferrer nofollow" target="_blank">
+						  <img src="https://img.shields.io/npm/v/weatherapi-mcp" alt="npm version"/>
+						</a>
+							</li>
+						<li>
+						<a href="https://www.weatherapi.com/llms.txt" target="_blank">
+						  <img src="https://img.shields.io/badge/llms.txt-available-green" alt="llms.txt"/>
+						</a>
+							</li>
+						<li>
+						<a href="https://glama.ai/mcp/servers/weatherapicom/weatherapi-mcp" rel="noopener noreferrer nofollow" target="_blank">
+						  <img src="https://img.shields.io/badge/MCP-compatible-blue" alt="MCP compatible"/>
+						</a>
+							</li>
+						<li>
+							<div class="postman-run-button"
+data-postman-action="collection/fork"
+data-postman-visibility="public"
+data-postman-var-1="52489157-6a9b0d96-49ec-4c39-adbf-7b8b8a09fb90"
+data-postman-collection-url="entityId=52489157-6a9b0d96-49ec-4c39-adbf-7b8b8a09fb90&entityType=collection&workspaceId=cc0865a0-4360-454d-a1dc-c08060c9c738"
+data-postman-param="env%5BWeatherAPI%20-%20Production%5D=W3sia2V5IjoiYXBpS2V5IiwidmFsdWUiOiJ7e2FwaV9rZXl9fSIsImVuYWJsZWQiOnRydWUsInR5cGUiOiJzZWNyZXQifSx7ImtleSI6ImJhc2VVcmwiLCJ2YWx1ZSI6Imh0dHBzOi8vYXBpLndlYXRoZXJhcGkuY29tL3YxIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImRlZmF1bHQifSx7ImtleSI6ImxvY2F0aW9uIiwidmFsdWUiOiJ7e2xvY2F0aW9ufX0iLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiZGVmYXVsdCJ9XQ=="></div>
+<script type="text/javascript">
+  (function (p,o,s,t,m,a,n) {
+    !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+    !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+      (n = o.createElement("script")),
+      (n.id = s+t), (n.async = 1), (n.src = m), n
+    ));
+  }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
+</script>
+						</li>
+				    </ul>
+		            
+			    </div><!--//footer-col-->
+		    </div><!--//row-->
+	    </div><!--//container-->
+	    <div class="container">
+            <div class="col-12 small">
+                        Popular Holiday Destinations: <a href="/weather/q/gran-canaria-canarias-spain-2777802" title="Gran Canaria Weather">Gran Canaria</a> 
+                                | <a href="/weather/q/tenerife-canarias-spain-2777803" title="Tenerife weather">Tenerife</a> 
+                                | <a href="/weather/q/majorca-islas-baleares-spain-2777794" title="Majorca weather">Majorca</a> 
+                                | <a href="/weather/q/lanzarote-canarias-spain-2777797" title="Lanzarote weather">Lanzarote</a> 
+                                | <a href="/weather/q/fuerteventura-canarias-spain-2821184" title="Fuerteventura weather">Fuerteventura</a> 
+                                | <a href="/weather/q/crete-crete-greece-2864288" title="Crete weather">Crete</a> 
+                                | <a href="/weather/q/new-york-new-york-united-states-of-america-2618724" title="New York weather">New York</a> 
+                                | <a href="/weather/q/rome-lazio-italy-1284918" title="Rome weather">Rome</a> 
+                                | <a href="/weather/q/dubai-dubai-united-arab-emirates-384" title="Dubai weather">Dubai</a> 
+                                | <a href="/weather/q/london-city-of-london-greater-london-united-kingdom-2801268" title="London weather">London</a> 
+                                | <a href="/weather/q/sydney-new-south-wales-australia-136022" title="Sydney weather">Sydney</a> 
+                                | <a href="/weather/q/moscow-moscow-city-russia-2145091" title="Moscow weather">Moscow</a>
+</div>
+		    <hr>
+            
+	    </div>
+	   
+	    <div class="footer-bottom text-center pb-5">
+	        <small class="copyright">Copyright &copy; <a href="https://www.weatherapi.com" title="Weather API">Weather API</a></small>
+	        <ul class="social-list list-unstyled pt-4 mb-0">
+			    <li class="list-inline-item"><a href="https://github.com/weatherapicom/" target="_blank" rel="noopener noreferrer nofollow"><i class="fab fa-github fa-fw"></i></a></li> 
+	            <li class="list-inline-item"><a href="https://twitter.com/weatherapidev/" target="_blank" rel="noopener noreferrer nofollow"><i class="fab fa-twitter fa-fw"></i></a></li>
+	            
+	            <li class="list-inline-item"><a href="https://www.linkedin.com/company/weatherapi-com" target="_blank" rel="noopener noreferrer nofollow"><i class="fab fa-linkedin fa-fw"></i></a></li>
+	            <li class="list-inline-item"><a href="https://www.facebook.com/weatherapidev" target="_blank" rel="noopener noreferrer nofollow"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+	            <li class="list-inline-item"><a href="https://www.instagram.com/weatherapi/" target="_blank" rel="noopener noreferrer nofollow"><i class="fab fa-instagram fa-fw"></i></a></li>
+	        </ul><!--//social-list-->
+	    </div>
+    </footer>        
+        
+   
+
+    
+<script type="text/javascript">
+//<![CDATA[
+(function () {
+    if (window.__waFormUx) return; window.__waFormUx = true;
+    function esc(s) { return window.CSS && CSS.escape ? CSS.escape(s) : s.replace(/[^\w-]/g, '\\$&'); }
+    function linkLabels() {
+        var list = document.querySelectorAll('label[for]');
+        for (var i = 0; i < list.length; i++) {
+            var l = list[i], f = l.getAttribute('for');
+            if (!f || document.getElementById(f)) continue;
+            var m = document.querySelector('input[id$="_' + esc(f) + '"],select[id$="_' + esc(f) + '"],textarea[id$="_' + esc(f) + '"]');
+            if (m) l.htmlFor = m.id;
+        }
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', linkLabels); else linkLabels();
+
+    // Show / Hide link under every password box
+    function addToggles() {
+        var list = document.querySelectorAll('input[type="password"]');
+        for (var i = 0; i < list.length; i++) {
+            var inp = list[i]; if (inp.__waToggle || !inp.id) continue; inp.__waToggle = true;
+            var b = document.createElement('button');
+            b.type = 'button'; b.className = 'btn btn-link btn-sm p-0 wa-pw-toggle'; b.textContent = 'Show password';
+            b.setAttribute('aria-controls', inp.id); b.setAttribute('aria-pressed', 'false');
+            b.addEventListener('click', (function (inp, b) { return function () {
+                var show = inp.type === 'password'; inp.type = show ? 'text' : 'password';
+                b.textContent = show ? 'Hide password' : 'Show password'; b.setAttribute('aria-pressed', show ? 'true' : 'false'); inp.focus();
+            }; })(inp, b));
+            inp.parentNode.insertBefore(b, inp.nextSibling);
+        }
+    }
+    // before posting, put the passwords back to type=password so the browser treats them as passwords
+    document.addEventListener('submit', function (e) {
+        if (e.defaultPrevented) return;
+        var l = document.querySelectorAll('.wa-pw-toggle'); for (var i = 0; i < l.length; i++) {
+            var inp = document.getElementById(l[i].getAttribute('aria-controls')); if (inp) inp.type = 'password';
+            l[i].textContent = 'Show password'; l[i].setAttribute('aria-pressed', 'false');
+        }
+    }, true);
+
+    // email boxes: format check when leaving the field, and a fix for common domain typos (gmial.com -> gmail.com)
+    var DOMAINS = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'icloud.com', 'live.com', 'aol.com', 'msn.com',
+                   'protonmail.com', 'proton.me', 'gmx.com', 'gmx.de', 'yandex.com', 'mail.ru', 'qq.com', '163.com',
+                   'hotmail.co.uk', 'yahoo.co.uk', 'btinternet.com', 'googlemail.com', 'me.com', 'web.de', 'comcast.net'];
+    var EMAIL = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)*\.[A-Za-z]{2,}$/;
+    function dist(a, b) {   // edit distance, small strings only
+        var m = a.length, n = b.length, d = [], i, j; for (i = 0; i <= m; i++) { d[i] = [i]; } for (j = 1; j <= n; j++) d[0][j] = j;
+        for (i = 1; i <= m; i++) for (j = 1; j <= n; j++)
+            d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1),
+                               i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1] ? d[i - 2][j - 2] + 1 : 99);
+        return d[m][n];
+    }
+    function suggest(v) {
+        var at = v.lastIndexOf('@'); if (at < 1) return null;
+        var dom = v.slice(at + 1).toLowerCase(), best = null, bd = 3;
+        if (DOMAINS.indexOf(dom) >= 0) return null;
+        for (var i = 0; i < DOMAINS.length; i++) { var x = dist(dom, DOMAINS[i]); if (x < bd) { bd = x; best = DOMAINS[i]; } }
+        return best && bd <= (dom.length > 6 ? 2 : 1) ? v.slice(0, at + 1) + best : null;
+    }
+    function note(inp, cls) {
+        var n = inp.parentNode.querySelector('.' + cls + '[data-for="' + inp.id + '"]');
+        if (!n) { n = document.createElement('small'); n.className = 'form-text ' + cls; n.setAttribute('data-for', inp.id); n.setAttribute('aria-live', 'polite'); inp.parentNode.insertBefore(n, inp.nextSibling); }
+        return n;
+    }
+    function checkEmail(inp) {
+        var v = (inp.value || '').trim(), bad = v !== '' && !EMAIL.test(v), msg = note(inp, 'wa-email-msg'), hint = note(inp, 'wa-email-hint');
+        inp.__emailBad = bad;
+        msg.className = 'form-text wa-email-msg text-danger'; msg.textContent = bad ? 'Please enter a valid email address.' : '';
+        var s = bad ? null : suggest(v);
+        hint.textContent = '';
+        if (s) {
+            hint.appendChild(document.createTextNode('Did you mean '));
+            var a = document.createElement('a'); a.href = '#'; a.textContent = s;
+            a.addEventListener('click', function (e) { e.preventDefault(); inp.value = s; checkEmail(inp); inp.dispatchEvent(new Event('input', { bubbles: true })); inp.focus(); });
+            hint.appendChild(a); hint.appendChild(document.createTextNode('?'));
+        }
+        if (window.__waMark) window.__waMark(inp.id); else inp.classList.toggle('is-invalid', bad);
+        return !bad;
+    }
+    function emailBoxes() { return document.querySelectorAll('input[data-wa-email]'); }
+    document.addEventListener('focusout', function (e) { var el = e.target; if (el.hasAttribute && el.hasAttribute('data-wa-email') && el.value) checkEmail(el); });
+    document.addEventListener('input', function (e) { var el = e.target; if (el.__emailBad) checkEmail(el); });
+    document.addEventListener('submit', function (e) {   // a malformed address is not posted
+        var b = e.submitter; if (b && b.formNoValidate) return;
+        var l = emailBoxes(), first = null;
+        for (var i = 0; i < l.length; i++) if (l[i].form === e.target && !checkEmail(l[i]) && !first) first = l[i];
+        if (first) { e.preventDefault(); first.focus(); }
+    }, true);
+
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', addToggles); else addToggles();
+
+    var busySince = 0, busyButton = null;
+    function reset() { busySince = 0; if (busyButton) { busyButton.classList.remove('wa-busy'); busyButton.removeAttribute('aria-busy'); busyButton = null; } }
+    document.addEventListener('submit', function (e) {
+        if (e.defaultPrevented) return;                       // validation failed: nothing is posted
+        var form = e.target;
+        if (form.getAttribute('target')) return;              // posts into another window
+        if (busySince && Date.now() - busySince < 15000) { e.preventDefault(); return; }
+        busySince = Date.now();
+        var b = e.submitter;
+        if (b) { busyButton = b; b.classList.add('wa-busy'); b.setAttribute('aria-busy', 'true'); }
+        setTimeout(reset, 15000);
+    }, false);
+    window.addEventListener('pageshow', reset);
+    var st = document.createElement('style');
+    st.textContent = '.wa-busy{opacity:.65;cursor:progress}.wa-pw-toggle{display:block;margin-left:auto;font-size:.8rem}.wa-email-msg:empty,.wa-email-hint:empty{display:none}';
+    document.head.appendChild(st);
+})();
+//]]>
+</script>
+</form>
+    
+    <script src="/static/js/app-v4.js" async></script>
+    <script>
+       // setTimeout(function () {
+
+
+            var e = document.createElement("script"); e.type = "text/javascript", e.setAttribute("async", "async"), e.src = "/static/v5/assets/js/docs-v6.js", document.getElementsByTagName("body")[0].appendChild(e)
+        //}, 2e3);
+    </script>
+
+  
+</body>
+</html>

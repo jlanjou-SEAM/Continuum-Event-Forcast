@@ -1,0 +1,973 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <dcat:Catalog xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/catalog.xml">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">MET Weather API</dct:title>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/</dct:identifier>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Services available via the MET Norway Weather API</dct:description>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:contactPoint xmlns:dcat="http://www.w3.org/ns/dcat#">
+      <vcard:Organization xmlns:vcard="http://www.w3.org/2006/vcard/ns#">
+        <vcard:hasEmail xmlns:vcard="http://www.w3.org/2006/vcard/ns#" rdf:resource="mailto:weatherapi-adm@met.no"/>
+        <vcard:fn xmlns:vcard="http://www.w3.org/2006/vcard/ns#">WeatherAPI developers</vcard:fn>
+      </vcard:Organization>
+    </dcat:contactPoint>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/airqualityforecast/0.1/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/aviationforecast/2.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://frost.met.no/index.html"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/geosatellite/1.4/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/gribfiles/1.1/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/icemap/1.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/isobaricgrib/1.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/locationforecast/2.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/metalerts/2.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/metgc/1.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/metgm/1.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/ncagalewarnings/1.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/nlaroutes/1.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/nowcast/2.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/oceanforecast/2.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/offshoremaps/1.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/polarsatellite/1.1/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/radar/2.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/routeforecast/2.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/sigcharts/2.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/sigmets/2.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/soundprofile/1.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/spotwind/1.1/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/subjectiveforecast/1.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/subseasonal/1.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/sunrise/3.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://thredds.met.no/thredds/catalog.html"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/tafmetar/1.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/textforecast/3.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/tidalwater/1.1/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/turbulence/2.0/"/>
+    <dcat:service xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/volcanicashforecast/0.1/"/>
+  </dcat:Catalog>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/airqualityforecast/0.1/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Airqualityforecast</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Forecast of air-quality for locations in Norway**
+
+This API implements a forecast of air-quality for a location in Norway,
+i.e. the forecast of several parameters relevant for air-quality. Besides
+a general air-quality index, the main parameters for air-quality like
+PM10, PM2.5 and O3 are given under the "/aqi-description" endpoint.
+
+A location in Norway is defined by the statistical units area-class which
+are a municipality (kommune), a part of a municipality (delomr&#xE5;de) and
+grunnkrets, the smallest area unit for statistics in Norway. Air-quality
+and concentrations in the finest resolution are available as maps under
+&lt;https://uemep-wms.met.no&gt;.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/airqualityforecast/0.1/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/airqualityforecast/0.1/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/airqualityforecast/0.1/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/airqualityforecast/0.1/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/JSON"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">weather</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/aviationforecast/2.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Aviationforecast</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Textual aviation weather forecasts**
+
+This product delivers text forecasts in TAC format for aerodromes and IGA
+(International General Aviation) flight areas below FL 100.
+
+Aerodrome warnings are issued irregularly only when conditions require it.
+
+Aviation forecasts are only available in English.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/aviationforecast/2.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/aviationforecast/2.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/aviationforecast/2.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/aviationforecast/2.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/TXT"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">aviation</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://frost.met.no/index.html">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Frost</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**REST API for meteorogical observation data**
+
+The Frost API provides free access to MET Norway's archive of
+historical weather and climate data. This data includes quality
+controlled daily, monthly, and yearly measurements of temperature,
+precipitation, and wind data. Other information, like metadata about
+weather stations, is also available through the API.
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://frost.met.no/howto.html"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://frost.met.no/howto.html"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://frost.met.no/index.html</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://frost.met.no/swagger.json"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/JSON"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">weather</dcat:keyword>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">observations</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/geosatellite/1.4/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Geosatellite</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Images from geostationary satellites**
+
+This service delivers images captured by geostationary satellites, in the
+visible and infrared spectra. New images are produced at least every hour,
+in some cases every 10 minutes.
+
+Images are provided for a specified area and specified time. If no time is
+given, the latest available image will be returned.
+
+Restrictions
+The data are considered free and unrestricted, according to section 4 of
+the EUMETSAT Data Policy
+&lt;https://www.eumetsat.int/website/home/AboutUs/WhoWeAre/LegalFramework/Dat
+aPolicy/index.html?lang=EN&gt; which states that:
+
+4 "ESSENTIAL" METEOSAT DATA AND PRODUCTS
+
+EUMETSAT shall make its Hourly Meteosat Data, all Derived Products and
+Advance Image Products available to all users world-wide on a free and
+unrestricted basis, regardless of when and how these are made
+available to the user, as "Essential" Data and Products in accordance
+with WMO Resolution 40 (Cg-XII).
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/geosatellite/1.4/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/geosatellite/1.4/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/geosatellite/1.4/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/geosatellite/1.4/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/PNG"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">images</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/gribfiles/1.1/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Gribfiles</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Serve GRIB files on the coast from Oslo and Western Norway**
+
+This product make some of our GRIB files available for access and
+download. The content is made to support yachts and yachting. Note that
+these files are meant for downloading and used with external software. The
+data are delivered with content type application/octet-stream.
+
+The area covered is from 57&#xB0;54'00"N, 4&#xB0;26'59"E to 63&#xB0;00'00"N, 7&#xB0;00'00"E,
+in 0.05&#xB0; increments. FIXME
+
+The files are updated every 3 hours, or maybe every 6 hours, possibly even
+every 12 hours (which is actually every 24 hours, but the files are
+produced twice). To see when a file was last produced, check the "updated"
+field in "available.json".
+
+If you need other parameters or areas, please look at THREDDS
+&lt;https://thredds.met.no&gt; (NetCDF only, no GRIB).
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/gribfiles/1.1/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/gribfiles/1.1/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/gribfiles/1.1/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/gribfiles/1.1/swagger"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">marine</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/icemap/1.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Icemap</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">** Maps howing current ice conditions in the arctic regions**
+
+This service delivers ice maps in JPEG format. They are made by the
+Norwegian Meteorological Institute&#x2019;s IceService in Troms&#xF8;, and are mainly
+based on satellite information.
+
+The plots show different ice-categories (Fast Ice, very close drift ice,
+close drift ice, open drift ice, very open drift ice, and open water). The
+plot gives also information about the sea-surface temperature in the area.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/icemap/1.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/icemap/1.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/icemap/1.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/icemap/1.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/JPEG"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">marine</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/isobaricgrib/1.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">IsobaricGRIB</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**GRIB files for air traffic**
+
+These files are used by Avinor ATM systems but possibly also of interest
+to others. They contain temperature and wind forecasts for a set of
+isobaric layers (i.e. altitudes having the same pressure). There are two
+different formats, GRIB1 and GRIB2.
+
+The files are (normally) produced every 6 hours. You can check the time
+when generated using the Last-Modified header or the `updated` key in
+`available`.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/isobaricgrib/1.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/isobaricgrib/1.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/isobaricgrib/1.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/isobaricgrib/1.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/BIN"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">aviation</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/locationforecast/2.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Locationforecast</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Weather forecasts for any location on earth**
+
+This service delivers weather forecasts for any given coordinate for the
+next nine days, in JSON and (deprecated) XML formats. There are several
+variants with different parameters, with most data for the Nordic region.
+
+For up-to-date precipitation forecasts, see our Nowcast service which is
+updated every five minures. The service is not suitable for forecasts
+above ground level. For aviation purposes, please see our IsobaricGRIB
+service.
+
+For more information see the Locationforecast data model
+&lt;https://docs.api.met.no/doc/locationforecast/datamodel.html&gt;.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/locationforecast/2.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/locationforecast/2.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/locationforecast/2.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/locationforecast/2.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/JSON"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/XML"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">weather</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/metalerts/2.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">MetAlerts</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Weather alerts from the Norwegian Meteorological Institute**
+
+This service provides meteorological warnings for land, coastal and sea
+regions for the next days. Each alert message (identified by its CAP id)
+is only issued once, and is valid until the "expires" time or updated by
+another alert message.
+
+The alert messages are delivered in CAP format
+&lt;http://docs.oasis-open.org/emergency/cap/v1.2/CAP-v1.2-os.html&gt;, as well
+as a listing of current warnings in an RSS 2.0 feed. Both are in XML
+format, but there is an experimental GeoJSON version in beta.
+
+For flood warnings, see api.nve.no &lt;https://api.nve.no/doc/flomvarsling/&gt;,
+also in CAP format.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/metalerts/2.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/metalerts/2.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/metalerts/2.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/metalerts/2.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/XML"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/RSS"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/JSON"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">weather</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/metgc/1.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Metgc</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Deliver meteorological forecast data in METGM/C format for defined areas**
+
+Delivers meteorogical data in METGM format for artillery fire control
+systems according to NATO standard STANAG 6022:
+
+&lt;https://en.wikipedia.org/wiki/STANAG_6022&gt;
+
+This can also be delivered in compressed METGC format by using metgc
+instead of metgm in the URL path.
+
+Note that files can be up to 35 MB in size, so downloads can take several
+seconds.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/metgc/1.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/metgc/1.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/metgc/1.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/metgc/1.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/BIN"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/SHP"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">defense</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/metgm/1.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Metgm</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Deliver meteorological forecast data in METGM/C format for defined areas**
+
+Delivers meteorogical data in METGM format for artillery fire control
+systems according to NATO standard STANAG 6022:
+
+&lt;https://en.wikipedia.org/wiki/STANAG_6022&gt;
+
+This can also be delivered in compressed METGC format by using metgc
+instead of metgm in the URL path.
+
+Note that files can be up to 35 MB in size, so downloads can take several
+seconds.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/metgm/1.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/metgm/1.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/metgm/1.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/metgm/1.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/BIN"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/SHP"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">defense</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/ncagalewarnings/1.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">NCAgalewarnings</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**gale warnings for the Norwegian Coastal Administration (Kystverket)**
+
+This service delivers gale warnings for the areas defined in
+Sj&#xF8;trafikkforskriften kap. 4
+&lt;https://lovdata.no/dokument/SF/forskrift/2021-02-10-523/kap4#kap4&gt;, which
+must be avoided by ships over 150 m in length carrying passengers during
+wind conditions over 17.2 m/s.
+
+The following areas are included:
+
+*   Stadt, stretch between Sildegapet and Runde lighthouse
+
+*   Hustadvika, stretch between Buadjupet and Grip lighthouse
+
+*   Folda, stretch between Buholmr&#xE5;sa fyr and R&#xF8;rvik
+
+*   Fugl&#xF8;ykalven, stretch between Hekkingen and Fugl&#xF8;ykalven
+
+*   S&#xF8;r&#xF8;ya, stretch between Hasvik and Tarhalsen
+
+*   Honningsv&#xE5;g, stretch between Fruholmen and Helneset
+
+The alerts are delivered in CAP format, see MetAlerts for details. All
+alerts have the event code "thresholdGale" and geographicDomain "marine".
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/ncagalewarnings/1.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/ncagalewarnings/1.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/ncagalewarnings/1.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/ncagalewarnings/1.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/XML"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/RSS"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/JSON"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">marine</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/nlaroutes/1.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">NLAroutes</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Vertical cross sections for air ambulance flight routes**
+
+This returns various plots for flights used by Norsk Luftambulanse in PNG
+format. This currently includes vertical cross sections between two flight
+endpoints, as well as time graphs showing weather condition at different
+altitudes for the next 60 hours.
+
+The plots are generated from the MEPS forecast model and are updated every
+6th hour.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/nlaroutes/1.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/nlaroutes/1.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/nlaroutes/1.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/nlaroutes/1.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/PNG"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/JSON"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">aviation</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/nowcast/2.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Nowcast</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Immediate weather forecast for specified locations in the Nordic area**
+
+This service delivers two-hour weather forecasts in GeoJSON or XML for
+locations in Norway, Sweden, Finland and Denmark. Forecasts are updated
+every 5 minutes. It is our best estimate of the current weather
+conditions, and is especially useful for predicting immediate
+precipitation.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/nowcast/2.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/nowcast/2.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/nowcast/2.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/nowcast/2.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/JSON"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/ZIP"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/XML"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">weather</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/oceanforecast/2.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Oceanforecast</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Ocean forecasts for points at sea in Northwestern Europe**
+
+Delivers wave and sea forecast in standard MET Forecast GeoJSON format
+&lt;https://docs.api.met.no/doc/ForecastJSON&gt;. There is also an XML variant,
+but this is considered legacy and exists only for backwards compatibility.
+
+The forecast is based on multiple wave and sea models. For more
+information on models and parameters, see the Oceanforecast data model
+documentation &lt;https://docs.api.met.no/doc/oceanforecast/datamodel&gt;.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/oceanforecast/2.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/oceanforecast/2.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/oceanforecast/2.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/oceanforecast/2.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/JSON"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/XML"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/ZIP"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">weather</dcat:keyword>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">marine</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/offshoremaps/1.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Offshoremaps</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Lightning and wave maps for offshore helicopter pilots**
+
+This service delivers various lightning and wave height maps in PNG format
+for several areas in Norway, aimed at helicopter traffic in the North Sea.
+These are primarily intended for use at IPPC.no &lt;https://www.ippc.no/&gt;.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/offshoremaps/1.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/offshoremaps/1.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/offshoremaps/1.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/offshoremaps/1.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/PNG"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">aviation</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/polarsatellite/1.1/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Polarsatellite</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Images from satellites in polar orbit**
+
+This service delivers weather images on various wavelengths from
+satellites in polar orbit, covering several areas of the globe.
+
+Currently there is only one satellite (NOAA), but others are planned in
+the future.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/polarsatellite/1.1/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/polarsatellite/1.1/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/polarsatellite/1.1/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/polarsatellite/1.1/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/PNG"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">images</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/radar/2.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Radar</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Radar composite images for various areas in the Nordic**
+
+This service returns static images or animations for several areas, either
+for a specific time or the latest available image. Only one animation per
+area is available. There is no usage restrictions on any of the radar
+images.
+
+Note that specific radarsites may sometimes become unavailable. This is
+usually due to technical problems at the radarsite, caused by
+lightning/difficult weather conditions.
+
+Historical radar data can be found on THREDDS, e.g. via OPeNDAP:
+&lt;https://thredds.met.no/thredds/remotesensingarchive.html&gt;.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/radar/2.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/radar/2.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/radar/2.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/radar/2.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/GIF"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/PNG"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/JSON"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/TXT"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">images</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/routeforecast/2.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Routeforecast</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Vertical cross sections for flight routes offshore and over land**
+
+This service returns vertical cross section plots for flight routes
+offshore and over land, given by ICAO ids. Routes over land have the
+prefix "iga". The plot ENHF-ENBJ is generated from the Arome Arctic model,
+all other plots are generated from the MEPS model.
+
+Plots are updated every 6th hour, approximately at 04 UTC, 10 UTC, 16 UTC
+and 22 UTC, and are available hourly up to +18 hours.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/routeforecast/2.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/routeforecast/2.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/routeforecast/2.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/routeforecast/2.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/PNG"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">aviation</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/sigcharts/2.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Sigcharts</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">** Significant Weather Charts for aviation**
+
+This service delivers Significant Weather Charts in PNG format, covering
+the Nordic area, Svalbard and the Norwegian Sea.
+
+Charts are issued every six hours, valid for the hours 00, 06, 12 and 18
+UTC. Charts for Norway are not produced during the weekend. At least 4
+charts are available for each area.
+
+For more information, see &lt;https://en.wikipedia.org/wiki/SIGWX&gt;.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/sigcharts/2.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/sigcharts/2.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/sigcharts/2.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/sigcharts/2.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/PNG"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">aviation</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/sigmets/2.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Sigmets</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Aviation weather SIGMETs and AIRMETs for Norway**
+
+This service delivers all issued AIRMETs, SIGMETs and Windshear warnings
+for Norway. AIRMET (Airmen's Meteorological Information) is a concise
+description of weather phenomena that may affect aircraft safety. SIGMET
+(Significant Meteorological Information) is used for more severe weather
+conditions than AIRMET. Both are only issued when such conditions should
+arise.
+
+Both warnings are delivered in text-based TAC format (similar to
+Tafmetar). If no warnings are issued, a blank document is returned.
+
+For more information, see the official definitions of AIRMET and SIGMET as
+documented by ICAO
+&lt;https://www.icao.int/sites/default/files/EURNAT/Documents/EUR%20and%20Nat
+%20Docs/EUR%20Documents/EUR%20Documents/014%20-%20EUR%20SIGMET%20and%20AIR
+MET%20Guide/EUR-Doc-14-EN-5th-Ed-2023-rev-Dec23-clean.pdf&gt;.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/sigmets/2.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/sigmets/2.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/sigmets/2.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/sigmets/2.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/TXT"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">aviation</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/soundprofile/1.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Soundprofile</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Vertical profiles in the ocean off the Norwegian coast**
+
+This service delivers temperature/salinity/sound profile plots for 48
+marine locations along the Norwegian coast.
+
+Plots are updated from the ocean model *Norshelf* once a day,
+approximately at 04 UTC, in 6h steps up to +96h (00UTC +96h). When new
+plots are available, the files from the previous day are deleted.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/soundprofile/1.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/soundprofile/1.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/soundprofile/1.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/soundprofile/1.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/PNG"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/JSON"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">marine</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/spotwind/1.1/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Spotwind</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Spotwind forecasts for airport landing systems**
+
+This service delivers spotwind data in XML format for various Avinor
+airports in Norway. The data is meant for input to Avinor's AMAN aviation
+landing manager.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/spotwind/1.1/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/spotwind/1.1/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/spotwind/1.1/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/spotwind/1.1/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/XML"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/JSON"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">aviation</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/subjectiveforecast/1.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Subjectiveforecast</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Forecasts and analyses charts from the meteorologist**
+
+The meteorologists makes analysis and forecasts every day.
+
+Analysis is created at 00, 03, 06, 12 and 18 UTC.
+
+Forecasts (prognose_map) are made before noon each day for 12 UTC for
+tomorrow and 12 UTC for the day after tomorrow.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/subjectiveforecast/1.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/subjectiveforecast/1.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/subjectiveforecast/1.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/subjectiveforecast/1.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/PNG"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">weather</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/subseasonal/1.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Subseasonal</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Long term weather forecast for specified locations in the Nordic area**
+
+This service delivers daily weather forecasts for the next 21 days in
+GeoJSON format, for locations in Norway, Sweden, Finland and Denmark.
+Forecasts are updated every hour. Parameters include temperature,
+precipitation and probability of frost.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/subseasonal/1.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/subseasonal/1.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/subseasonal/1.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/subseasonal/1.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/ZIP"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/JSON"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">weather</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/sunrise/3.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Sunrise</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Calculate sun or moon events, as seen from a specific location on Earth**
+
+Returns a GeoJSON document indicating time and direction to when the sun
+(or moon) is on its highest point on a given date (defaults to today) as
+seen from a specified point on Earth, as well as the preceding
+sun/moonrise and following sun/moonset (which may not be on the same
+date). The lowest point in the cycle is also returned. Note that any or
+all of these may be "null".
+
+The source code is available on GitHub
+&lt;https://github.com/metno/celestial&gt; or as container images. If you have a
+server it's much more efficient to run it locally than to query
+api.met.no.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/sunrise/3.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/sunrise/3.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/sunrise/3.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/sunrise/3.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/JSON"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">other</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://thredds.met.no/thredds/catalog.html">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">THREDDS</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Dataset archive including model runs and observation timeseries**
+
+General information
+-------------------
+
+The THREDDS Data Server (TDS) is a web server that provides metadata
+and data access for scientific datasets, using OPeNDAP, OGC WMS and
+WCS, HTTP, and other remote data access protocols.
+
+thredds.met.no is an archive service operated by MET Norway for
+publishing historical and current research data. All datasets can be
+downloaded in NetCDF format or extracted using the OPeNDAP protocol.
+Some datasets can also be visualized using the WMS protocol.
+
+Examples of the datasets available include:
+
+* Weather forecasts
+
+* Climate Modelling
+
+* Air Pollution forecasts
+
+* Radioactivite fallout simulations
+
+* Volcanic Ash drift models
+
+* Observations
+
+* Nordic Gridded Climate Dataset
+
+* OSI SAF
+
+* seNorge
+
+* Remotesensing archive
+
+* Lightning events
+
+* Ocean and Ice observations and forecasts
+
+* Satellite images
+
+
+MET Norway Numerical Weather Prediction products
+------------------------------------------------
+
+These are the models operated by MET Norway for our forecasting
+services (locationforecast, nowcast and so on). Note that the
+long-term and global forecasts are produced by ECMWF and not available
+for download due to licensing terms.
+
+The NWP datasets can be found in the Weather forecasts folder on
+thredds.met.no.
+
+Documentation for the various models can be found on the Numerical
+Weather Prediction wiki.
+
+For a general overview of the different simulation models used in our
+forecasts, please see the respective data model documentation page:
+
+* Locationforecast
+
+* Nowcast
+
+* Oceanforecast
+
+More information:
+
+* The MetCoOp Ensemble Prediction System (MEPS) - PDF
+
+* Changes from MEPS to CMEPS, Feb 2020
+
+* The AROME-Arctic weather model
+
+* Old forecasts - PDF
+
+* MET AROME MetCoOp
+
+* MET AROME Norway
+
+* MET AROME-Arctic_Svalbard
+
+
+Accessing data from THREDDS
+---------------------------
+
+A short summary on how to access datasets with a selection of tools
+can be found at https://docs.api.met.no/doc/thredds.
+
+For more information, see the section "Data Access" on the Numerical
+Weather Prediction wiki
+
+
+Support and questions
+---------------------
+
+thredds.met.no is a separate service from api.met.no. Please do not
+use the weatherapi-adm email for questions regarding THREDDS or what
+kind of data are available, instead send all enquieries to
+thredds@met.no.
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/product/THREDDS"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/product/THREDDS"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://thredds.met.no/thredds/catalog.html</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://thredds.met.no/thredds/catalog.html"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/NETCDF"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">weather</dcat:keyword>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">marine</dcat:keyword>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">observations</dcat:keyword>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">images</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/tafmetar/1.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Tafmetar</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Receive Taf/Metar from airports**
+
+Fetch TAFs and/or METARs for airports around the world, based on ICAO ids.
+Forecasts are for 9 or 24 hour periods, in XML and (heavily encoded) text
+formats.
+
+METARs are issued every 30 mins, TAF every 3 hours. Historical data for
+Norway are available since the late '90s.
+
+Note: The TAF and METAR formats have been deprecated, to be replaced with
+an XML format called IWXXM &lt;https://en.wikipedia.org/wiki/IWXXM&gt;. When
+ready, the Tafmetar service will be replaced by SWIM
+&lt;https://swim.met.no/&gt;, which uses OGC API EDR for queries. This will only
+deliver data for Norwegian airports, for other airports there will be a
+European distribution hub which you must access.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/tafmetar/1.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/tafmetar/1.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/tafmetar/1.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/tafmetar/1.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/XML"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/TXT"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">aviation</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/textforecast/3.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Textforecast</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Textual weather forecast for Norwegian land and sea areas**
+
+This module returns text forecasts in GeoJSON for land, coast and sea
+areas in and around Norway.
+
+Sea forecasts are in both English and Norwegian language (either bokm&#xE5;l or
+nynorsk), as well as special WMO terminology. This is indicated in the
+forecast name. Land forecasts are currently only issued in Norwegian.
+
+If you are looking for aerodrome forecasts, please look at the
+Aviationforecast product.
+
+Severe weather outlook (new)
+This product provides the meteorologist&#x2019;s expert assessment of potential
+hazardous weather in Northern and Southern Norway for the coming five
+days. It is particularly intended to support emergency preparedness and
+response. The product is issued daily, except on Saturdays, Sundays, and
+public holidays.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/textforecast/3.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/textforecast/3.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/textforecast/3.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/textforecast/3.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/JSON"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">weather</dcat:keyword>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">marine</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/tidalwater/1.1/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Tidalwater</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Tidal water information**
+
+Water level forecast for a selected set of harbors in Norway. Weather
+condition adjustments are generally available for the immediate three
+days, in 10 min resolution. The files are updated 1-2 times per hour.
+
+Data is delivered as a fixed-column plaintext file. Values are given as
+meters above mean sea level (middelvannstand), and all times are in UTC.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/tidalwater/1.1/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/tidalwater/1.1/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/tidalwater/1.1/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/tidalwater/1.1/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/TXT"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">marine</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/turbulence/2.0/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Turbulence</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Turbulence prognosis charts**
+
+This product returns a turbulence forecast as a PNG image. Two types are
+available, maps and cross sections.
+
+Forecasts are generated every three hours, for 0-18 hours ahead. This
+means that unlike version 1.1, you now must download each file several
+times to get current data.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/turbulence/2.0/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/turbulence/2.0/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/turbulence/2.0/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/turbulence/2.0/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/PNG"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">aviation</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <dcat:DataService xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:about="https://api.met.no/weatherapi/volcanicashforecast/0.1/">
+    <dct:title xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">Volcanicashforecast</dct:title>
+    <dct:description xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">**Norwegian national volcanic ash products including forecast**
+
+This service offers links to the Norwegian national ash products for
+aviation in case of volcanic ash in the atmosphere near to Norway. The
+products include volcanic ash forecast images, satellite images and a
+report with further information. Results of this service can be seen on
+https://ippc.no or https://volcanicashtest.met.no during an volcanic
+eruption in Northern Europe.
+
+NOTE
+This is a specialized product for IPPC and is not very understandable or
+usable for others. As such we do not offer any support for this version of
+the product. We hope soon to be able to make a new version which is more
+suited for general use.
+
+</dct:description>
+    <dcat:endpointURL xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/volcanicashforecast/0.1/documentation"/>
+    <foaf:page xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="https://api.met.no/weatherapi/volcanicashforecast/0.1/documentation"/>
+    <dct:identifier xmlns:dct="http://purl.org/dc/terms/">https://api.met.no/weatherapi/volcanicashforecast/0.1/</dct:identifier>
+    <dct:publisher xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://data.norge.no/organizations/971274042"/>
+    <dcat:endpointDescription xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="https://api.met.no/weatherapi/volcanicashforecast/0.1/swagger"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/JSON"/>
+    <dct:format xmlns:dct="http://purl.org/dc/terms/" rdf:resource="https://publications.europa.eu/resource/authority/file-type/PNG"/>
+    <dcat:keyword xmlns:dcat="http://www.w3.org/ns/dcat#" xml:lang="en">aviation</dcat:keyword>
+    <dcat:theme xmlns:dcat="http://www.w3.org/ns/dcat#" rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:license xmlns:dct="http://purl.org/dc/terms/" rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </dcat:DataService>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://publications.europa.eu/resource/authority/data-theme/ENVI">
+    <skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Environment</skos:prefLabel>
+    <skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#" xml:lang="nb">Milj&#xF8;</skos:prefLabel>
+    <skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#" xml:lang="nn">Milj&#xF8;</skos:prefLabel>
+  </skos:Concept>
+</rdf:RDF>

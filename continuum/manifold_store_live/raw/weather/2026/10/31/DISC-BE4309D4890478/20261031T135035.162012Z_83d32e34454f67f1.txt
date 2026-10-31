@@ -1,0 +1,213 @@
+# WeatherAPI.com
+
+> Real-time, forecast, historical, marine, future, solar PV energy, agriculture, astronomy, air quality, pollen, sports, IP lookup, and timezone data via a JSON/XML REST API. Trusted by 1M+ users worldwide. Average response time ~200ms.
+
+## Authentication
+
+All requests require an API key as a query parameter named `key`.
+
+- Sign up free at https://www.weatherapi.com/signup
+- Find your key at https://www.weatherapi.com/my/
+- Pass it on every request: `?key=YOUR_API_KEY`
+- No Authorization header needed. Query string only.
+
+## Base URL
+
+https://api.weatherapi.com/v1
+
+## Endpoints
+
+### Current Weather
+GET /current.json?key=YOUR_API_KEY&q=London&aqi=yes
+- Returns real-time weather: temperature, wind, humidity, pressure, UV, visibility, condition
+- Optional: aqi=yes (air quality), pollen=yes (Pro+ plan)
+- Example: https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=London
+
+### Forecast Weather
+GET /forecast.json?key=YOUR_API_KEY&q=London&days=3&alerts=yes&aqi=yes
+- Returns up to 14-day forecast with hourly breakdown and astronomy data
+- Required: days (1-14)
+- Optional: alerts=yes, aqi=yes, pollen=yes, hour=0-23, tp=15 (Enterprise)
+- Example: https://api.weatherapi.com/v1/forecast.json?key=YOUR_API_KEY&q=New+York&days=7
+
+### Historical Weather
+GET /history.json?key=YOUR_API_KEY&q=Paris&dt=2024-06-15
+- Returns historical weather from 1 January 2010 onwards
+- Required: dt (yyyy-MM-dd)
+- Optional: end_dt for date range (Pro+ plan, max 30-day range)
+- Example: https://api.weatherapi.com/v1/history.json?key=YOUR_API_KEY&q=Paris&dt=2024-01-01
+
+### Future Weather (14–300 days ahead)
+GET /future.json?key=YOUR_API_KEY&q=London&dt=2026-06-01
+- Returns 3-hourly weather for a date 14 to 300 days in the future
+- Available on Pro+ plan and above
+- Example: https://api.weatherapi.com/v1/future.json?key=YOUR_API_KEY&q=London&dt=2026-06-01
+
+### Marine Weather
+GET /marine.json?key=YOUR_API_KEY&q=51.5,-1.8&days=3&tides=yes
+- Returns marine/sailing weather: wave height, swell, water temperature
+- Tide data available on Pro+ plan
+- Example: https://api.weatherapi.com/v1/marine.json?key=YOUR_API_KEY&q=51.5,-1.8&days=1
+
+### Weather Alerts
+GET /alerts.json?key=YOUR_API_KEY&q=London
+- Returns government weather alerts (USA, UK, Europe, rest of world)
+- Example: https://api.weatherapi.com/v1/alerts.json?key=YOUR_API_KEY&q=London
+
+### Search / Autocomplete
+GET /search.json?key=YOUR_API_KEY&q=edinb
+- Returns array of matching cities/towns with coordinates and slugs
+- Example: https://api.weatherapi.com/v1/search.json?key=YOUR_API_KEY&q=lond
+
+### IP Lookup
+GET /ip.json?key=YOUR_API_KEY&q=8.8.8.8
+- Returns geolocation for an IP address: city, region, country, lat/lon, timezone
+- Pass q=auto:ip to geolocate the caller automatically
+- Example: https://api.weatherapi.com/v1/ip.json?key=YOUR_API_KEY&q=auto:ip
+
+### Astronomy
+GET /astronomy.json?key=YOUR_API_KEY&q=Tokyo&dt=2026-03-20
+- Returns sunrise, sunset, moonrise, moonset, moon phase, moon illumination
+- Required: dt (yyyy-MM-dd)
+- Example: https://api.weatherapi.com/v1/astronomy.json?key=YOUR_API_KEY&q=London&dt=2026-03-21
+
+### Timezone
+GET /timezone.json?key=YOUR_API_KEY&q=Sydney
+- Returns IANA timezone ID and local time for any location
+- Example: https://api.weatherapi.com/v1/timezone.json?key=YOUR_API_KEY&q=Sydney
+
+### Sports Events
+GET /sports.json?key=YOUR_API_KEY&q=London
+- Returns upcoming football, cricket, and golf events
+- Example: https://api.weatherapi.com/v1/sports.json?key=YOUR_API_KEY&q=London
+
+### Solar PV Energy Forecast
+GET /solar.json?key=YOUR_API_KEY&q=51.52,-0.11&days=3&capacity_kw=4&tilt=35&azimuth=180
+- Returns hourly and daily AC/DC power and energy (kW, kWh) for a solar PV system, up to 14 days (hourly to day 5, 3-hourly after)
+- Required: capacity_kw (array size in kWp)
+- Optional: days, tilt (0-90, default latitude), azimuth (0-360, 180 = south; default 180 north / 0 south of equator), tracking (fixed|single_axis|dual_axis), module_type (standard|premium|thin_film), losses (% default 14), inverter_kw (default capacity_kw/1.2), inverter_eff (% default 96), albedo (0-1, default 0.2)
+- Also returns irradiance (GHI, DNI, DHI, plane-of-array), sun position and cell temperature per period
+- Available on Business plan and above (other plans get 403/2009)
+- Docs: https://www.weatherapi.com/docs/solar-api/
+
+### Agriculture
+GET /agriculture.json?key=YOUR_API_KEY&q=52.2,0.12&days=7&crop=wheat&season_start=2026-03-01
+- Returns daily growing degree days (and running total), rain, ET0, crop water use (ETc), water balance, chill/frost/heat stress hours, leaf wetness hours, disease risk, potato blight Smith Periods and spray hours, plus hourly Delta-T and spray rating (good/marginal/poor with reason)
+- Optional: days (1-14), crop (wheat, barley, maize/corn, soybean, potato, rice, cotton, tomato, sunflower, grape, none), gdd_base, gdd_upper, kc, heat_threshold, season_start (season-to-date totals, last 366 days)
+- Available on Business plan and above (other plans get 403/2009); daily soil block on Enterprise
+- Docs: https://www.weatherapi.com/docs/agriculture-api/
+
+## Location Query Parameter (q)
+
+The `q` parameter accepts:
+- City name: `q=London`
+- Latitude/longitude: `q=51.5,-0.1`
+- US zip code: `q=10001`
+- UK postcode: `q=SW1`
+- Canada postal code: `q=G2J`
+- METAR code: `q=metar:EGLL`
+- IATA airport code: `q=iata:LHR`
+- IP address: `q=100.0.0.1`
+- Auto IP detection: `q=auto:ip`
+- Location ID from search: `q=id:2801268`
+
+## Bulk Requests
+
+POST /current.json?key=YOUR_API_KEY&q=bulk
+- Send up to 50 locations in a single request (Pro+ plan and above)
+- Each location counts as 1 API call
+- Content-Type: application/json
+- Body: {"locations": [{"q": "London", "custom_id": "loc-1"}, {"q": "Paris", "custom_id": "loc-2"}]}
+
+## Response Format
+
+All responses are JSON (use .json suffix) or XML (use .xml suffix).
+Every response includes a `location` object with name, region, country, lat, lon, tz_id, localtime.
+
+## Error Codes
+
+| HTTP | Code | Meaning |
+|------|------|---------|
+| 401 | 1002 | API key not provided |
+| 400 | 1003 | Parameter q not provided |
+| 400 | 1005 | Invalid request URL |
+| 400 | 1006 | No location found for q |
+| 400 | 1010 | Solar: capacity_kw missing or invalid |
+| 400 | 1011 | Solar: invalid parameter (tilt, azimuth, tracking, module_type, losses, inverter_kw, inverter_eff, albedo) |
+| 400 | 1012 | Agriculture: crop not recognised |
+| 400 | 1013 | Agriculture: invalid parameter (gdd_base, gdd_upper, kc, heat_threshold, season_start) |
+| 401 | 2006 | API key invalid |
+| 403 | 2007 | Monthly quota exceeded |
+| 403 | 2008 | API key disabled |
+| 403 | 2009 | Feature not available on your plan |
+
+## Pricing Plans
+
+| Plan | Price | Calls/month | Forecast | History |
+|------|-------|-------------|----------|---------|
+| Free | $0 | 100,000 | 3 days | 1 day |
+| Starter | $7/mo | 3,000,000 | 7 days | 7 days |
+| Pro+ | $25/mo | 5,000,000 | 300 days | 365 days |
+| Business | $65/mo | 10,000,000 | 300 days | 365 days |
+| High Volume | from $95/mo | 20,000,000 to 500,000,000 | as Business | as Business |
+| Enterprise | Custom | Custom | 365 days | From 2010 |
+
+Free plan requires no credit card. Upgrade at any time — API key stays the same.
+
+High Volume plans (everything in Business, more calls; 10% off yearly), chosen from the dashboard at https://www.weatherapi.com/my/upgrade.aspx:
+20M $95/mo, 30M $115, 40M $145, 50M $175, 70M $200, 100M $275, 150M $400, 200M $525, 250M $650, 300M $775, 350M $900, 400M $1,025, 450M $1,150, 500M $1,275. Details: https://www.weatherapi.com/pricing#high-volume
+
+## Accounts, teams and security
+
+- Up to 5 API keys per account (one per app or environment); all share the plan and monthly allowance
+- Team access: invite colleagues by email with their own login and a role: Admin, Developer, Billing or Viewer
+- Team size: Free 1, Starter 3, Pro+ 10, Business 25 (including the owner)
+- Two-step login (authenticator app, recovery codes) and passkeys are free on every plan
+- Manage at https://www.weatherapi.com/my/team.aspx and https://www.weatherapi.com/my/security.aspx
+- Changelog: https://www.weatherapi.com/api-changelog.html
+
+## OpenAPI Spec
+
+https://www.weatherapi.com/openapi.json
+
+## Documentation
+
+https://www.weatherapi.com/docs/ (overview)
+
+- Getting Started (Introduction): https://www.weatherapi.com/docs/getting-started/
+- Authentication (Introduction): https://www.weatherapi.com/docs/authentication/
+- Request URL (Introduction): https://www.weatherapi.com/docs/request/
+- Request Parameters (Introduction): https://www.weatherapi.com/docs/request-parameters/
+- Multilingual (Introduction): https://www.weatherapi.com/docs/multilingual/
+- Location Object (Introduction): https://www.weatherapi.com/docs/location-object/
+- Weather Alerts (Introduction): https://www.weatherapi.com/docs/weather-alerts/
+- Air Quality (Introduction): https://www.weatherapi.com/docs/air-quality/
+- Pollen (Introduction): https://www.weatherapi.com/docs/pollen/
+- Weather Maps (Introduction): https://www.weatherapi.com/docs/weather-maps/
+- Bulk Request (Introduction): https://www.weatherapi.com/docs/bulk-request/
+- API Error Codes (Introduction): https://www.weatherapi.com/docs/error-codes/
+- Realtime API (APIs): https://www.weatherapi.com/docs/realtime-api/
+- Forecast API (APIs): https://www.weatherapi.com/docs/forecast-api/
+- History API (APIs): https://www.weatherapi.com/docs/history-api/
+- Alerts API (APIs): https://www.weatherapi.com/docs/alerts-api/
+- Marine API (APIs): https://www.weatherapi.com/docs/marine-api/
+- Future API (APIs): https://www.weatherapi.com/docs/future-api/
+- Solar Energy API (APIs): https://www.weatherapi.com/docs/solar-api/
+- Agriculture API (APIs): https://www.weatherapi.com/docs/agriculture-api/
+- Search/Autocomplete API (APIs): https://www.weatherapi.com/docs/search-api/
+- IP Lookup API (APIs): https://www.weatherapi.com/docs/ip-lookup-api/
+- Astronomy API (APIs): https://www.weatherapi.com/docs/astronomy-api/
+- Time Zone API (APIs): https://www.weatherapi.com/docs/time-zone-api/
+- Sports API (APIs): https://www.weatherapi.com/docs/sports-api/
+- Examples (APIs): https://www.weatherapi.com/docs/examples/
+- Integrations (APIs): https://www.weatherapi.com/docs/integrations/
+- Weather Icons and Codes (Resources): https://www.weatherapi.com/docs/weather-icons/
+- Credit / Link Back (Resources): https://www.weatherapi.com/docs/attribution/
+
+## API Explorer (interactive testing)
+
+https://www.weatherapi.com/api-explorer
+
+## SDKs
+
+https://github.com/weatherapicom/ (Python, PHP, Ruby, JavaScript, Java, Go, and more)

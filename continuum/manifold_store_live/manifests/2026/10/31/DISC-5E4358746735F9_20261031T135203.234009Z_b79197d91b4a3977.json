@@ -1,0 +1,23 @@
+{
+  "candidate_id": "DISC-5E4358746735F9",
+  "provider": "NOAA/NWS",
+  "dataset": "stations",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "weather",
+    "surface"
+  ],
+  "retrieved_utc": "2026-10-31T13:52:03.234009Z",
+  "request_url": "https://api.weather.gov/stations?limit=500&cursor=eyJzIjoxMDAwfQ%3D%3D",
+  "final_url": "https://api.weather.gov/stations?limit=500&cursor=eyJzIjoxMDAwfQ%3D%3D",
+  "status_code": 200,
+  "content_type": "application/geo+json",
+  "byte_length": 544337,
+  "sha256": "b79197d91b4a397731ca3c6657781e22eb39254fded14beafd189a168a8a1f33",
+  "etag": null,
+  "last_modified": null,
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/weather/2026/10/31/DISC-5E4358746735F9/20261031T135203.234009Z_b79197d91b4a3977.json",
+  "parent_id": "DISC-ED81EFD333BCFB",
+  "discovery_depth": 2
+}

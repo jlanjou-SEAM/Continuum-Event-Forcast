@@ -1,0 +1,25 @@
+{
+  "candidate_id": "DISC-094E7A28B4B394",
+  "provider": "NOAA/NCEP MADIS",
+  "dataset": "getCapImage.jsp",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "weather",
+    "surface",
+    "hydrology",
+    "aviation"
+  ],
+  "retrieved_utc": "2026-10-31T13:53:43.358776Z",
+  "request_url": "https://madis-data.ncep.noaa.gov/cap/jsp_include/getCapImage.jsp?mapname=conus&id=1",
+  "final_url": "https://madis-data.ncep.noaa.gov/cap/jsp_include/getCapImage.jsp?mapname=conus&id=1",
+  "status_code": 200,
+  "content_type": "text/html;charset=gb2312",
+  "byte_length": 65860,
+  "sha256": "a0da63d0aa9dc2f517fc304bf64eecea822ebbe0f8e01b2829b949ad02ca4d67",
+  "etag": null,
+  "last_modified": null,
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/weather/2026/10/31/DISC-094E7A28B4B394/20261031T135343.358776Z_a0da63d0aa9dc2f5.jsp",
+  "parent_id": "DISC-EA5F21974F2B42",
+  "discovery_depth": 2
+}

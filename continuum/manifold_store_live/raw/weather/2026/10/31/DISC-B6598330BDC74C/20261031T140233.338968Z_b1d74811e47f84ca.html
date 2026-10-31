@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title></title>
+  <link rel="alternate" type="application/rss+xml" title="News RSS" href="/feed/news">
+  <link rel="alternate" type="application/rss+xml" title="Global changelog RSS" href="/feed/changelog">
+  <link type="image/x-icon" rel="icon" href="/images/met_favicon.png">
+  <link type="image/x-icon" rel="shortcut icon" href="/images/met_favicon.ico">
+
+  <!-- bootstrap 5 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="/css/mdb.min.css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="/css/style.css" />
+
+
+</head>
+<body>
+  <header>
+    <!-- Intro settings -->
+    <style>
+      #intro {
+        /* Margin to fix overlapping fixed navbar */
+        margin-top: 58px;
+      }
+      @media (max-width: 991px) {
+        #intro {
+          /* Margin to fix overlapping fixed navbar */
+          margin-top: 45px;
+        }
+      }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-met-pri fixed-top">
+      <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" target="_blank" href="https://met.no/">
+          <img src="/img/met_logo_icon_neg.png" height="24" alt="MET logo" loading="lazy"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://docs.api.met.no/doc/">Documentation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/weatherapi/">API Reference</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/doc/FAQ">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/doc/License">License</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/doc/TermsOfService">Terms of Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/doc/support">Contact us</a>
+            </li>
+          </ul>
+        </div>
+        <a class="icon" href="/weatherapi/healthz"><img src='/weatherapi/healthz?icon' height='15px' alt="Healthz status" ></a>
+        <a class="icon" href="/feed/changelog"><img src="/images/16px-Rss-feed.svg.png" alt="Changelog RSS" /></a>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Jumbotron -->
+    <div id="intro" class="p-4 text-center bg-met-light">
+      <h1 class="mb-1"></h1>
+    </div>
+    <!-- Jumbotron -->
+
+    <!--alert-->
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+             <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+          </svg>
+          Are you getting 403 Forbidden errors? Read the <a href="/doc/FAQ">FAQ</a> and check your User-Agent header!
+
+        </div>
+
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main class="my-5">
+    <div class="container">
+      <!--Section: Content-->
+      
+<style type="text/css">
+    li.nobullet { list-style-type:none; margin-left: -12px }
+</style>
+
+
+<div class="row">
+  <div class="col-md">
+    <div class="card px-3 py-3 documentation">
+
+
+    <div class="state alert alert-warning" role="alert"">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+      </svg>
+      This is a draft, expect sudden changes and come back later
+    </div>
+
+
+      <h1>THREDDS dataset archive landing page</h1>
+
+
+      <h2 id="generalinformation">General information</h2>
+
+<p>The <a href="https://www.unidata.ucar.edu/software/tds/current/">THREDDS Data Server</a>
+(TDS) is a web server that provides metadata and data access for scientific
+datasets, using <a href="OPeNDAP">OPeNDAP</a>, OGC WMS and WCS, HTTP, and other remote data access
+protocols.</p>
+
+<p><a href="https://thredds.met.no/thredds/catalog.html">thredds.met.no</a> is an archive
+service operated by MET Norway for publishing historical and current research
+data. All datasets can be downloaded in <a href="NetCDF">NetCDF</a> format or extracted using the
+<a href="OPeNDAP">OPeNDAP</a> protocol. Some datasets can also be visualized using the WMS protocol.</p>
+
+<p>Examples of the datasets available include:</p>
+
+<ul>
+<li>Weather forecasts</li>
+<li>Climate Modelling</li>
+<li>Air Pollution forecasts</li>
+<li>Radioactivite fallout simulations</li>
+<li>Volcanic Ash drift models</li>
+<li>Observations
+<ul>
+<li>Nordic Gridded Climate Dataset</li>
+<li>OSI SAF</li>
+<li>seNorge</li>
+<li>Remotesensing archive</li>
+<li>Lightning events</li>
+</ul></li>
+<li>Ocean and Ice observations and forecasts</li>
+<li>Satellite images</li>
+</ul>
+
+<h2 id="metnorwaynumericalweatherpredictionproducts">MET Norway Numerical Weather Prediction products</h2>
+
+<p>These are the models operated by MET Norway for our forecasting services
+(locationforecast, nowcast and so on). Note that the long-term and global
+forecasts are produced by ECMWF and not available for download due to licensing
+terms.</p>
+
+<p>The NWP datasets can be found in the <a href="https://thredds.met.no/thredds/metno.html">Weather forecasts</a>
+folder on thredds.met.no.</p>
+
+<p>Documentation for the various models can be found on the <a href="https://github.com/metno/NWPdocs/wiki">Numerical Weather
+Prediction wiki</a>.</p>
+
+<p>For a general overview of the different simulation models used in our forecasts,
+please see the respective data model documentation page:</p>
+
+<ul>
+<li><a href="https://docs.api.met.no/doc/locationforecast/datamodel">Locationforecast</a></li>
+<li><a href="https://docs.api.met.no/doc/nowcast/datamodel">Nowcast</a></li>
+<li><a href="https://docs.api.met.no/doc/oceanforecast/datamodel">Oceanforecast</a></li>
+</ul>
+
+<p>More information:</p>
+
+<ul>
+<li><a href="https://drive.google.com/file/d/0B-SaEtrDE91WWEJoNkJiUm5TNzg/view">The <a href="MetCoOp">MetCoOp</a> Ensemble Prediction System (MEPS)</a> - PDF</li>
+<li><a href="https://thredds.met.no/thredds/metno.html">Changes from MEPS to CMEPS, Feb 2020</a></li>
+<li><a href="https://www.met.no/en/projects/The-weather-model-AROME-Arctic/data_access">The AROME-Arctic weather model</a></li>
+<li><a href="https://drive.google.com/file/d/0B-SaEtrDE91WWDkzY3dpZlU1V00/view">Old forecasts</a> - PDF
+<ul>
+<li>MET AROME <a href="MetCoOp">MetCoOp</a></li>
+<li>MET AROME Norway</li>
+<li>MET AROME-Arctic_Svalbard</li>
+</ul></li>
+</ul>
+
+<h2 id="accessingdatafromthredds">Accessing data from THREDDS</h2>
+
+<p>A short summary on how to access datasets with a selection of tools can be found at <a href="https://docs.api.met.no/doc/thredds">https://docs.api.met.no/doc/thredds</a>.</p>
+
+<p>For more information, see the section "Data Access" on the <a href="https://github.com/metno/NWPdocs/wiki/Data-access">Numerical Weather
+Prediction wiki</a></p>
+
+<h2 id="supportandquestions">Support and questions</h2>
+
+<p>thredds.met.no is a separate service from api.met.no. Please do not use the
+weatherapi-adm email for questions regarding THREDDS or what kind of data
+are available, instead send all enquieries to <a href="&#x6D;&#97;&#x69;&#108;&#x74;o:&#x74;&#x68;&#x72;&#101;&#x64;d&#x73;&#64;&#109;&#101;&#x74;&#46;&#x6E;&#x6F;">&#x74;&#x68;&#x72;&#101;&#x64;d&#x73;&#64;&#109;&#101;&#x74;&#46;&#x6E;&#x6F;</a>.</p>
+
+      <address>2021-03-23, Geir Aalberg</address>
+
+    <div class="state alert alert-warning" role="alert"">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+      </svg>
+      This is a draft, expect sudden changes and come back later
+    </div>
+
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <footer class="text-lg-start met-footer">
+    <div id="copyright" class="text-center p-3">
+      © 2022 Copyright:
+      <a class="text-light" href="https://met.no/">MET Norway</a>
+    </div>
+  </footer>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="/js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript" src="/js/script.js"></script>
+</body>
+</html>

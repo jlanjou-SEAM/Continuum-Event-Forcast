@@ -1,0 +1,1255 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html lang="en">
+<head>
+<title>NCEP Meteorological Assimilation Data Ingest System (MADIS)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">    
+<meta name="author" content="MADIS Support Team">
+<link href="css/header.css" rel="stylesheet" type="text/css" >
+<!--<script type="text/javascript" src="/js/ForecastSearch.js"></script>-->
+
+    <!-- site-wide style sheets -->
+    <link rel="stylesheet" type="text/css" href="css/ncepmadis.css" media="all">
+    
+<!--    <link rel="stylesheet" type="text/css" href="css/print.css" media="print">-->
+    
+    <!-- A style sheet for submenus of submenus -->
+<!--    <link rel="stylesheet" type="text/css" href="css/gsd-more-submenus.css" media="all">-->
+    
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/gsd/css/ie.css" media="all"><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/gsd/css/ie7.css" media="all"><![endif]-->
+
+<script type="text/javascript" src="css/ie.js"></script>
+    
+<script id="_fed_an_js_tag" type="text/javascript" src="/federated-analytics.js?agency=OAR&amp;sub-agency=ESRLGSD&amp;sp=find&amp;yt=true"></script>
+
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="TMPC9-DCHA2-45L6L-3A6SC-8WMVB",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"TMPC9-DCHA2-45L6L-3A6SC-8WMVB";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="qyqup4ax2fklo2xf6iea-f-8eeabd498-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1320759","ak.ai":parseInt("795019",10),"ak.ol":"0","ak.cr":1,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"136b8b36","ak.r":46469,"ak.a2":n,"ak.m":"dscg","ak.n":"essl","ak.cport":9290,"ak.gh":"23.201.193.133","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1793454600","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==wc6tpHdrNz1w8HhVEVRfsAZGl7itd4HDgvSNVrl6kuZU7vpm8B8hlFbru8P1u7wCIqsTKWyUclBo8F90+IpVLc8G+hafrZco4xWBo+WPSO6BE7e4Fsw8QH695cBe6k3g9hITs6BTLIbJyXgDKq2dYEPfeliRiq76ao4Oy1TniDYcUU+p7xkGd05KI7N1mGv2a0V/mj85Sl70nYz+2Dz+YHpW6w/5x6Acbpq33otxrDyrEQjC9gEDdGOY4ZStaD0zbzKcHQ+StAxGZ39AHOnnBvoWBjvehw0qnuJ4l5STNtzbZWLGaz1/84i6/sGL8sdJnAiKWrxNpEbSvrjXgX7HVZFXDS53rPA4dAaAx7lPXIExicCCQx2vybMnMtVHCD7SMn2X/wtuMZRghFy5Mht6zXeDeIbT+HoOr6d1w2bjpiU=","ak.pv":"4","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+<!--<body onload="startList()">-->
+
+<div id="container">
+<div class="header">
+
+  <div class="header-content">
+    <a href="https://www.noaa.gov" class="header-noaa-icon"><img src="images/header-noaa.png" alt="NOAA"></a>
+    <a href="https://www.weather.gov" class="header-nws-icon"><img src="images/header-nws.png" alt="NOAA"></a>
+    <a href="https://www.commerce.gov" class="header-doc"><img src="images/header_doc.png" alt="United States Department of Commerce"></a>
+    <div class="header-center-text"><a class="header-center-text" href="https://www.nco.ncep.noaa.gov">NCEP CENTRAL OPERATIONS</a></div>
+    <div class="header-noaa-text"><a class="header-noaa-text" href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a></div>
+  </div>
+</div>
+<div class="header-shadow"><div class="header-shadow-content"></div></div>
+
+     <!-- end major_header -->
+
+  <!-- major navigation -->
+<!-- Top Menu Navigation -->
+<div class="topnav">
+  <ul id="topnav">
+
+    <!-- Home Link -->
+    <li>
+      <div class="section-link">
+        <a href="#">home</a>
+      </div>
+    </li>
+
+    <!-- News Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/news">news</a>
+      </div>
+      <div class="drop">
+        <ul>
+          <li><a href="https://www.weather.gov/news">NWS News</a></li>
+          <li><a href="https://www.nws.noaa.gov/com/weatherreadynation/calendar.html">Events</a></li>
+          <li><a href="https://www.weather.gov/socialmedia">Social Media</a></li>
+          <li><a href="https://www.nws.noaa.gov/om/brochures.shtml">Pubs/Brochures/Booklets</a></li>
+          <li><a href="https://www.noaa.gov/NOAA-Communications">NWS Media Contacts</a></li>
+        </ul>
+      </div>
+    </li>
+
+    <!-- Search Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/search">search</a>
+      </div>
+      <div class="drop">
+        <div class="site-search">
+          <form method="get" action="https://search.usa.gov/search" style="margin-bottom: 0; margin-top: 0;">
+            <input type="hidden" name="v:project" value="firstgov">
+            <label for="query">Search For</label>
+            <input type="text" name="query" id="query" size="12" >
+            <input type="submit" value="Go" >
+            <p>
+              <input type="radio" name="affiliate" checked="checked" value="nws.noaa.gov" id="nws" >
+              <label for="nws" class="search-scope">NWS</label>
+              <input type="radio" name="affiliate" value="noaa.gov" id="noaa" >
+              <label for="noaa" class="search-scope">All NOAA</label>
+            </p>
+          </form>
+        </div>
+      </div>
+    </li>
+
+    <!-- Forecast Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/search">forecast</a>
+      </div>
+      <div class="drop">
+        <div id="forecast-lookup" class="site-search">
+          <form name="getForecast" id="getForecast" action="https://forecast.weather.gov/zipcity.php" method="get">
+            <label for="inputstring">Local forecast by <br>"City, St" or ZIP code</label>
+            <input id="inputstring" name="inputstring" type="text" size="12" value="Enter location ..." onclick="this.value=''" >
+            <input name="btnSearch" id="btnSearch" type="submit" value="Go" >
+            <div id="txtError">
+            <div id="errorNoResults" style="display:none;">Sorry, the location you searched for was not found. Please try another search.</div>
+            <div id="errorMultipleResults" style="display:none">Multiple locations were found. Please select one of the following:</div>
+            <div id="errorChoices" style="display:none"></div>
+              <input id="btnCloseError" type="button" value="Close" style="display:none" >
+            </div>
+            <div id="txtHelp"><a style="text-decoration: underline;" href="javascript:void(window.open('https://weather.gov/ForecastSearchHelp.html','locsearchhelp','status=0,toolbar=0,location=0,menubar=0,directories=0,resizable=1,scrollbars=1,height=500,width=530').focus());">Location Help</a></div>
+          </form>
+                        </div><!-- <div id="forecast-lookup"> -->
+          </div><!-- <div class="drop"> -->
+    </li>
+    <!-- About Link -->
+    <li>
+      <div class="section-link">
+        <a href="https://www.weather.gov/about">about</a>
+      </div>
+      <div class="drop">
+          <ul>
+            <li><a href="https://www.weather.gov/about">About NWS</a></li>
+            <li><a href="https://www.weather.gov/organization">Organization</a></li>
+            <li><a href="https://sites.google.com/a/noaa.gov/nws-best-practices/">For NWS Employees</a></li>
+            <li><a href="https://www.weather.gov/international/">International</a></li>
+            <li><a href="https://www.weather.gov/organization/ncep">National Centers</a></li>
+            <li><a href="https://www.nws.noaa.gov/tg/">Products and Services</a></li>
+            <li><a href="https://www.weather.gov/contact">Contact Us</a></li>
+            <li><a href="https://w1.weather.gov/glossary/">Glossary</a></li>
+          </ul>
+        </div>
+    </li>
+
+  </ul><!-- End of top nav ul -->
+</div><!-- End of topnav div -->
+
+</div> <!-- end banner -->
+
+<div id="pbody">
+    <!-- minor navigation -->
+            <div style="width:160px" id="minor_nav">
+
+<!--<br>-->
+<ul style="word-wrap:break-word" id="vertnav">
+<br>
+   <li><a href="index.shtml">MADIS Home</a></li>
+</ul>
+<dl>
+ <dt>News</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <li><a href="madis_recent.shtml">What's Here - v4.0!</a></li>
+<!-- <li><a href="madis_comingsoon.shtml">What's Coming?</a></li>
+-->
+</ul>
+<dl>
+<dt>Data Information</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">  
+ <li><a href="madis_datasets.shtml">Overview</a></li>
+ <li>Descriptions&nbsp;&nbsp;>
+    <ul>
+       <li><a href="madis_sfc.shtml"><font color="FFFF66">Meteorological Surface</font></a></li>
+       <li class="indented_vertnav"><a href="madis_mesonet.shtml">Integrated Mesonet</a></li>
+       <li class="indented_vertnav"><a href="madis_cwop.shtml">Citizen Weather Observer Program (CWOP)</a></li>
+       <li class="indented_vertnav"><a href="madis_rwis_clarus.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+       <li class="indented_vertnav"><a href="national_mesonet.shtml">National Mesonet</a></li>
+       <li class="indented_vertnav"><a href="madis_metar.shtml">METAR</a></li>
+       <!--<li class="indented_vertnav"><a href="madis_OMO.shtml">1-minute ASOS</a></li>
+       --><li class="indented_vertnav"><a href="madis_maritime.shtml">Maritime</a></li>
+	<li class="indented_vertnav"><a href="madis_wxtelematics.shtml">Weather Telematics</a></li>
+       <li class="indented_vertnav"><a href="madis_nepp.shtml">New England Pilot Project (NEPP)</a></li>
+       <li class="indented_vertnav"><a href="madis_crn.shtml">Climate Reference Network (CRN)</a></li>
+       <li class="indented_vertnav"><a href="madis_ushcn.shtml">U.S. Climatology Net-Modernization (USHCN-M)</a></li>
+       <li><a href="madis_hydro.shtml"><font color="FFFF66">Hydrologic Surface</font></a></li>
+       <li><a href="madis_raob.shtml"><font color="FFFF66">Radiosonde</font></a></li>
+       <li><a href="madis_npn.shtml"><font color="FFFF66">NOAA Profiler Network</font></a></li>
+       <li><a href="madis_gpsmet.shtml"><font color="FFFF66">GPS-Met</font></a></li>
+       <li><a href="madis_acars.shtml"><font color="FFFF66">Aircraft Based </font></a></li>
+       <li><a href="madis_map.shtml"><font color="FFFF66">Multi-Agency Profiler (CAP)</font></a></li>
+       <li><a href="madis_rdmtr.shtml"><font color="FFFF66">Radiometer</font></a></li>
+       <li><a href="madis_satwnd.shtml"><font color="FFFF66">Satellite Wind</font></a></li>
+       <li><a href="madis_satsnd.shtml"><font color="FFFF66">Satellite Sounding</font></a></li>
+       <li><a href="madis_satrad.shtml"><font color="FFFF66">Satellite Radiance</font></a></li>
+       <li><a href="madis_snow.shtml"><font color="FFFF66">Snow</font></a></li>
+       <li><a href="madis_gapfillua.shtml"><font color="FFFF66">Gap-filling Upper Air</font></a></li>
+<!--       <li><a href="madis_wisdom.shtml"><font color="FFFF66">WISDOM Balloon Wind</font></a></li>-->
+       <li><a href="madis_RSAS.shtml"><font color="FFFF66">RSAS Sfc Analyses Grids</font></a></li>
+    </ul>
+ </li> 
+ <li>Variables&nbsp;&nbsp;>
+    <ul>
+       <li><font color="FFFF66">Meteorological Surface</font></li>
+       <li class="indented_vertnav"><a href="sfc_mesonet_variable_list.shtml">Mesonet/RWIS/National Mesonet</a></li>
+       <!--<li class="indented_vertnav"><a href="sfc_mesonet_variable_list.shtml">Citizen Weather Observer Program (CWOP)</a></li>
+       <li class="indented_vertnav"><a href="madis_rwis_variable_list.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+      --> <li class="indented_vertnav"><a href="sfc_urbanet_variable_list.shtml">National Mesonet Extended</a></li>
+       <li class="indented_vertnav"><a href="sfc_metar_variable_list.shtml">METAR (standard)</a></li>
+       <!--<li class="indented_vertnav"><a href="sfc_OMO_variable_list.shtml">1-minute ASOS</a></li>
+       --><li class="indented_vertnav"><a href="sfc_sao_variable_list.shtml">SAO</a></li>
+       <li class="indented_vertnav"><a href="sfc_maritime_variable_list.shtml">Maritime</a></li>
+	<li class="indented_vertnav"><a href="sfc_mobile_variable_list.shtml">Weather Telematics</a></li>
+       <li class="indented_vertnav"><a href="sfc_crn_variable_list.shtml">Climate Reference Network</a></li>
+       <li class="indented_vertnav"><a href="sfc_hcn_variable_list.shtml">Historical Climatology Network</a></li>
+       <li class="indented_vertnav"><a href="sfc_nepp_variable_list.shtml">New England Pilot Project</a></li>
+       <li><a href="hydro_variable_list.shtml"><font color="FFFF66">Hydrologic Surface</font></a></li>
+       <li><a href="raob_variable_list.shtml"><font color="FFFF66">Radiosonde</font></a></li>
+       <li><a href="npn_variable_list.shtml"><font color="FFFF66">NOAA Profiler Network</font></a></li>
+       <li><a href="gpsmet_variable_list.shtml"><font color="FFFF66">GPS-Met</font></a></li>
+       <li><a href="acars_variable_list.shtml"><font color="FFFF66">Aircraft Based</font></a></li>
+       <li><a href="acarsp_variable_list.shtml"><font color="FFFF66">Aircraft Based Profiles</font></a></li>
+       <li><a href="map_variable_list.shtml"><font color="FFFF66">Multi-Agency Profiler (CAP)</font></a></li>
+       <li><a href="rdmtr_variable_list.shtml"><font color="FFFF66">Radiometer</font></a></li>
+       <li><a href="satwnd_variable_list.shtml"><font color="FFFF66">Satellite Wind</font></a></li>
+       <li><a href="satsnd_variable_list.shtml"><font color="FFFF66">Satellite Sounding</font></a></li>
+       <li><a href="satrad_variable_list.shtml"><font color="FFFF66">Satellite Radiance</font></a></li>
+       <li><a href="snow_variable_list.shtml"><font color="FFFF66">Snow</font></a></li>
+       <li><a href="gapfillua_variable_list.shtml"><font color="FFFF66">Gap-filling Upper Air</font></a></li>
+<!--       <li><a href="wisdom_variable_list.shtml"><font color="FFFF66">WISDOM Balloon Wind</font></a></li>-->
+       <li><a href="rsas_variable_list.shtml"><font color="FFFF66">RSAS Sfc Analyses Grids</font></a></li>
+     </ul>
+ </li>
+ <li>Variables Metadata&nbsp;&nbsp;>
+    <ul>
+       <li><font color="FFFF66">Integrated Mesonet</font>
+       <li class="indented_vertnav"><a href="mesonet_precip.shtml">Precipitation</a></li>
+       <li class="indented_vertnav"><a href="mesonet_solar_radiation.shtml">Solar Radiation</a></li>
+       <li class="indented_vertnav"><a href="mesonet_soil_temperature.shtml">Soil Temperature</a></li>
+       <li class="indented_vertnav"><a href="mesonet_soil_moisture.shtml">Soil Moisture</a></li>
+    </li>
+       <li><font color="FFFF66">National Mesonet</font>
+       <li class="indented_vertnav"><a href="nmesonet_precip.shtml">Precipitation</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_solar_radiation.shtml">Solar Radiation</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_soil_temperature.shtml">Soil Temperature</a></li>
+       <li class="indented_vertnav"><a href="nmesonet_soil_moisture.shtml">Soil Moisture</a></li>
+    </li>
+       <li><font color="FFFF66">OMO One Minute ASOS (HFMETAR)</font>
+       <li class="indented_vertnav"><a href="omo_precip.shtml">Precipitation</a></li>
+    </li>
+   </ul>
+<li>Quality Control&nbsp;&nbsp;>
+    <ul>
+   <li><a href="madis_qc.shtml">Overview</font></a></li>
+       <li><a href="madis_sfc_qc.shtml">Meteorological Surface</a></li>
+       <li><a href="madis_rwis_qc.shtml">Road Weather Information System (RWIS) & <i>Clarus</i></a></li>
+       <li><a href="madis_hydro_qc.shtml">Hydrologic Surface</a></li>
+       <li><a href="madis_raob_qc.shtml">Radiosonde</a></li>
+       <li><a href="madis_npn_qc.shtml">NOAA Profiler Network</a></li>
+       <li><a href="madis_sfc_qc.shtml">Weather Telematics</a></li>
+       <li><a href="madis_acars_qc.shtml">Aircraft Based</a></li>
+       <li><a href="madis_acarsp_qc.shtml">Aircraft Based Profiles</a></li>
+       <li><a href="madis_map_qc.shtml">Multi-Agency Profiler (CAP)</a></li>
+       <li><a href="madis_rdmtr_qc.shtml">Radiometer</a></li>
+       <li><a href="madis_satwnd_qc.shtml">Satellite Wind</a></li>
+       <li><a href="madis_satsnd_qc.shtml">Satellite Sounding</a></li>
+       <li><a href="madis_snow_qc.shtml">Snow</a></li>
+       <li><a href="madis_gapfillua_qc.shtml">Gap-filling Upper Air</a></li>
+       <li><a href="madis_RSAS_qc.shtml">RSAS Surface Analysis</a>
+<!--	<li><a href="madis-data/qcms_messages.html">QC Summary Messages</a>
+    -->
+</ul>
+ </li>
+ <li>Restrictions&nbsp;&nbsp;>
+    <ul>
+       <li><a href="madis_restrictions.shtml">Overview</a></li>
+       <li><a href="mesonet_providers.shtml">Meteorological Surface</a></li>
+       <li><a href="hydro_providers.shtml">Hydrologic Surface</a></li>
+       <li><a href="acars_restrictions.shtml">Aircraft Based</a></li>
+    </ul>
+ </li>
+ <li><a href="MADISdataissues.shtml">Known Data Issues</a></li>
+</ul>
+<dl>
+<dt>User Access</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <!--<li><a href="user_resources.shtml">Overview</a></li>
+--> 
+<li><a href="data_application.shtml">Data Application Form</a></li>
+<li><!--<a href="https://madis-hweb.ncep.noaa.gov:8005/htdocs/index.shtml">--><a href="https://madis-data.ncep.noaa.gov/index.shtml">MADIS Distribution Services</a></li>
+<li><!--<a href="https://madis-hweb.ncep.noaa.gov:8005/htdocs/wmo_gdc.shtml">--><a href="https://madis-data.ncep.noaa.gov/wmo_gdc.shtml">GDC-ABO</a></li>
+<li><a href="https://madis-idm.ncep.noaa.gov/reset">Password Reset</a></li>
+</ul>
+<dl>
+<dt>Provider Information</dt>
+<ul style="word-wrap:break-word" id="vertnav">
+ <!--<li><a href="provider_resources.shtml">Overview</a></li>
+ <li><a href="network_info.shtml">Surface Provider List</a></li>
+--> 
+<li><a href="provider_resources.shtml">Overview</a></li>
+ <li><a href="mesonet_providers.shtml">Meteorological Surface</a></li>
+ <!--<li><a href="nmesonet_providers.shtml">National Mesonet/UrbaNet</a></li>-->
+ <li><a href="hydro_providers.shtml">Hydrological Surface</a></li>
+ <li><a href="map_providers.shtml">Multi-Agency Profiler (CAP)</a></li>
+ <!--<li><a href="rdmtr_providers.shtml">Radiometer</a></li>
+ -->
+<li><a href="snow_providers.shtml">Snow</a></li>
+<li><a href="madistosynoptic.shtml">Transitions to SYNOPTIC</a></li>
+ <!--<li>Quality Control&nbsp;&nbsp;>
+   <ul>
+ <li><a href="madis_smry_descrip.shtml">Summary</a></li>
+-->
+</ul>
+</dl>
+
+<dt>Support</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+ <li><a href="support_overview.shtml">Overview</a></li>
+ <li><a href="madis_monitoring.shtml">Data Outages</a></li>
+<!--
+ <li>FAQ&nbsp;&nbsp;>
+ <ul>
+     <li><a href="faq_accounts.shtml">Accounts</a></li>
+     <li><a href="faq_api.shtml">API</a></li>
+     <li><a href="faq_localization.shtml">AWIPS Localization</a></li>
+     <li><a href="faq_cwop.shtml">CWOP</a></li>
+     <li><a href="faq_datadisplay.shtml">Data Display</a></li>
+     <li><a href="faq_historicaldata.shtml">Historical Data</a></li>
+     <li><a href="faq_lastupdatetime.shtml">Last Update Time</a></li>
+     <li><a href="faq_netcdf.shtml">netCDF</a></li>
+     <li><a href="faq_providerdata.shtml">Provider Data</a></li>
+     <li><a href="faq_wfo.shtml">WFO</a></li>
+ </ul></li>
+-->
+ <li><a href="data_application.shtml#disclaimer">Disclaimer</a></li>
+ <li><a href="mailto:madis-support@noaa.gov">Contact Us</a></li>
+</ul>
+<dl>
+<dt>Related Links</dt>
+</dl>
+<ul style="word-wrap:break-word" id="vertnav">
+<li><a href="https://gdc-abo.wmo.int/">WMO Global Data Center</a></li>
+<li><a href="https://madis-data.ncep.noaa.gov/index.shtml">MADIS Distribution Services</a></li>
+<li><a href="https://hads.ncep.noaa.gov/">HADS</a></li>
+<li><a href="https://amdar.ncep.noaa.gov/index.shtml">AMDAR</a></li>
+<li>&nbsp;</li>
+<li><a href="https://ruc.noaa.gov/amdar/">AMDAR Research</a></li>
+</li>
+<li>&nbsp;</li>
+</ul>
+</div>
+
+
+    <div id="content">
+    <a class="textvers" name="content_link">&nbsp;</a>
+
+
+<HTML>
+<HEAD>
+<TITLE>MADIS Surface Variables</TITLE>
+   <META NAME="description" CONTENT="MADIS (Meteorological Assimilation Data Ingest System)">
+   <META NAME="keywords" CONTENT="METEOROLOGICAL DATA, meteorological data, WEATHER DATA, weather data, METEOROLOGICAL DATA ACCESS, meteorological data access, METEOROLOGICAL DATA ASSIMILATION, meteorological data assimilation">
+<META NAME="generator" CONTENT="txt2html v1.28">
+
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="TMPC9-DCHA2-45L6L-3A6SC-8WMVB",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"TMPC9-DCHA2-45L6L-3A6SC-8WMVB";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="qyqup4ax2fklo2xf6iea-f-8eeabd498-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1320759","ak.ai":parseInt("795019",10),"ak.ol":"0","ak.cr":1,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"136b8b36","ak.r":46469,"ak.a2":n,"ak.m":"dscg","ak.n":"essl","ak.cport":9290,"ak.gh":"23.201.193.133","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1793454600","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==wc6tpHdrNz1w8HhVEVRfsAZGl7itd4HDgvSNVrl6kuZU7vpm8B8hlFbru8P1u7wCIqsTKWyUclBo8F90+IpVLc8G+hafrZco4xWBo+WPSO6BE7e4Fsw8QH695cBe6k3g9hITs6BTLIbJyXgDKq2dYEPfeliRiq76ao4Oy1TniDYcUU+p7xkGd05KI7N1mGv2a0V/mj85Sl70nYz+2Dz+YHpW6w/5x6Acbpq33otxrDyrEQjC9gEDdGOY4ZStaD0zbzKcHQ+StAxGZ39AHOnnBvoWBjvehw0qnuJ4l5STNtzbZWLGaz1/84i6/sGL8sdJnAiKWrxNpEbSvrjXgX7HVZFXDS53rPA4dAaAx7lPXIExicCCQx2vybMnMtVHCD7SMn2X/wtuMZRghFy5Mht6zXeDeIbT+HoOr6d1w2bjpiU=","ak.pv":"4","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></HEAD>
+<BODY TEXT="#333333" BGCOLOR="#FFFFFF">
+<p><H1>MADIS Surface Variables - NEPP</H1>
+<p>
+<br><H2>Numeric</H2>
+<PRE>
+-------------------------------------------------------------------------------------
+Code       Name                                Units      Max    Notes     Database
+                                                       QC Level          FSL    AWIPS*
+-------------------------------------------------------------------------------------
+ELEV      elevation                            m            0             X
+LAT       latitude                             deg N        0             X
+LON       longitude                            deg E        0             X
+PLATTYP   data platform type                   code         0    <a href="sfc_notes.shtml#note06">6</a>        X
+COMSTAT   commissioned status
+STAQUAL   station quality indicator
+T         air temperature                      K            3    <a href="sfc_notes.shtml#note04">4</a>        X
+PCPTOTL   total precipitation                  m            0    <a href="sfc_notes.shtml#note06">6</a>,<a href="sfc_notes.shtml#note30">30</a>     X
+PCP5M     accumulated precip - 5m              m            1    <a href="sfc_notes.shtml#note06">6</a>        X
+VIBWD1    vibrating wire depth  - 1            mm           0             X
+VIBWD2    vibrating wire depth  - 2            mm           0             X
+VIBWD3    vibrating wire depth  - 3            mm           0             X
+FF        wind speed                           m/s          3             X
+DD        wind direction                       deg          3    <a href="sfc_notes.shtml#note05">5</a>        X
+U         u wind component                     m/s          3    <a href="sfc_notes.shtml#note05">5</a>        X
+V         v wind component                     m/s          3    <a href="sfc_notes.shtml#note05">5</a>        X
+DDGUST    wind dir at gust                     deg          1    <a href="sfc_notes.shtml#note06">6</a>        X
+FFGUST    wind gust                            m/s          1    <a href="sfc_notes.shtml#note06">6</a>        X
+SNOW6H    snow fall - 6h                       m            1             X
+SNOW24H   snow fall - 24h                      m            1             X
+SD24      snow depth -- 24h
+SD6       snow depth -- 6h
+RIVSTG    river stage                          m            0             X
+RMKBM     remarks bit mask
+INMAXT    inlet max temperature                K                          X
+LOGBATV   data logger battery volt             volt                       X
+BATVLT2   secondary battery voltage            volt         0             X
+XVOLT     xmit pwr supply volt for full load   volt                       X
+DOORMIN   num minutes logger door open - hr    minute                     X
+HEATIND   rim heating on/off indicator         code         0    <a href="sfc_notes.shtml#note32">32</a>       X
+PCP24H    accumulated precip - 24h             m            1    <a href="sfc_notes.shtml#note06">6</a>        X
+PCPRATE   precipitation rate                   kg/(m**2)/s  1    <a href="sfc_notes.shtml#note07">7</a>        X
+XPWRFWD   transmitter power forward                                       X
+XPWRREF   transmitter power reflected                                     X
+XERRIND   transmit error indicator             code                       X
+
+
+
+</PRE>
+<P>
+<H2>Character</H2>
+<PRE>
+-------------------------------------------------------------------------------------
+Code       Name                                Character         Notes     Database
+                                               Size                      FSL    AWIPS*
+-------------------------------------------------------------------------------------
+STALOC    station location                     51                <a href="sfc_notes.shtml#note21">21</a>       X
+
+
+</PRE>
+  <SUP>*</SUP>The NEPP dataset is only available with the FSL database.
+<br><br>
+
+<!--<H2><A NAME="section-1." href="sfc_notes.shtml" target="bb">Notes (for all surface datasets)</A></H2>
+
+<OL>
+  <LI>Dewpoint temperature and/or relative humidity are the moisture variables 
+    stored in the database.  The user can select either of these variables, or 
+    select dewpoint depression, specific humidity, absolute humidity, or water 
+    vapor mixing ratio which will then be calculated by the MADIS API.  If 
+    available, the stage 3 QC results from the dewpoint variable will be used 
+    for any of the calculated variables.  If this isn't available, the QC 
+    results from the stored RH variable will be used.  Also note that pressure 
+    is needed for the absolute humidity conversion; for the COOP dataset this is 
+    done by using the U.S. Standard Atmosphere calculation to calculate pressure 
+    from station elevation.
+
+  <P><LI>As altimeter and station pressure can be calculated from each
+    other, for datasets without altimeter (MARITIME) the altimeter
+    will be calculated by the MADIS API, and for datasets without
+    station pressure (METAR, SAO, 1-minute ASOS) that variable
+    will be calculated as well.  With the MESONET dataset, if the
+    stored variable isn't the one requested by the user for each
+    particular station, the calculated value will be returned.  In all
+    cases, the stage 3 QC from the altimeter variable (if available)
+    will be applied.
+
+  <P><LI>The 3 hour pressure change value consists of the numeric pressure change 
+    value, with a sign applied per the value in the character of 3h pressure 
+    change variable.  The latter variable is coded:</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        pressure same or higher than 3 hours ago
+         1        increasing then steady
+         2        increasing
+         3        decreasing or steady, then increasing
+         4        steady
+         5        pressure same or lower than 3 hours ago
+         6        decreasing
+         7        steady or increasing, then decreasing
+</PRE>
+
+<P><LI>Air temperature is the temperature variable stored in the database.  The user
+    can optionally select virtual temperature, which will then be calculated by 
+    the MADIS API.  The QC results from air temperature will apply in either 
+    case.  Also note that if virtual temperature cannot be calculated (missing 
+    or bad dewpoint or pressure), and the air temperature passed all QC checks, 
+    the air temperature will be returned instead, and a QC data descriptor value
+    of "T" will be assigned.  As with the absolute humidity conversion mentioned
+    above, the virtual temperature conversion done for the COOP dataset uses
+    pressure calculated from the station elevation.
+
+<P><LI>Wind speed and direction are reported and stored in the database.  The user 
+    can optionally select u & v wind components and those will be calculated and 
+    returned.  The QC results from speed and direction will be used In either 
+    case, and if one of the map projections has been selected via the MSETDOM call, 
+    the winds will be rotated to match the projection.
+
+    The documentation in the COOP cdl was changed to remove the height of the 
+    anemometer.  All anemometers are at 10 meters heights except for (GYX, TANM3, 
+    and STYN6) which are at 3 meters.
+
+<P><LI>Data platform type (MARITIME):</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        stationary (moored buoy or CMAN)
+         1        moving (drifting buoy or ship)
+</PRE>
+
+<P>Data platform type (1-minute ASOS):</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+         1        Federal ASOS
+         2        Federal AWOS
+         3        Federal AOS
+         4        Non-fed ASOS
+         5        Non-fed AWOS
+         6        Non-fed AOS
+</PRE>
+
+<P>Data platform type (COOP):</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+       < 100      Phase II site (regional hub)
+        100       Phase II site (GOES/HADS)
+        200       Phase I site (direct connect)
+        300       Phase I site (GOES/HADS)
+</PRE>
+
+
+<P>The modernized NWS Cooperative Observer sites can provide different 
+    variables, and on different schedules, dependent both on the type of site
+    (Phase I or II) and on the processing done as part of reformatting
+    the data sent over the various communications systems in use.  Here are
+    the primary differences:
+
+<UL><LI>Phase I sites only report a single temperature observation per hour, 
+      valid at minute 0.
+
+<LI>Phase II GOES/HADS sites only report once per hour, but the reports
+      contain 5-minute observations from the last hour.
+</UL>
+<PRE>
+    9/26/06: The Phase II GOES/HADS sites are being phased out, as part of
+    an upgrade where the COOP network has been gradually rolling in a new
+    software load over the last several months (and it's not done yet).
+    The new load is indicated in MADIS as data platform types 2-99 (currently
+    only 2 is in use).  This upgrade has changed what variables are available from 
+    the Phase II stations.
+    
+    Variables that are no longer available for COOP PLATTYP 2 stations:
+
+         TD1H      hourly average dewpoint temperature  
+         RH        relative humidity                    
+         RH1H      hourly average relative humidity     
+         Q         specific humidity                    
+         Q1H       hourly average specific humidity     
+         DPD       dewpoint depression                  
+         DPD1H     hourly average dewpoint depression   
+         AH        absolute humidity                    
+         AH1H      hourly average absolute humidity     
+         WVMR      water vapor mixing ratio             
+         TV        virtual temperature
+         T1H       hourly average temperature           
+         TV1H      hourly average virtual temperature   
+         DD1H      hourly average wind direction        
+         DD24H     daily average wind direction         
+         FF1H      hourly average wind speed            
+         FF24H     daily average wind speed             
+         U1H       hourly average u wind component      
+         U24H      daily average u wind component       
+         V1H       hourly average v wind component      
+         V24H      daily average v wind component       
+         PCPTOTL   total precipitation                  
+         PCP1H     accumulated precip - 1h              
+         PCP24H    accumulated precip - 24h             
+         PCPUDAY   accum. precip - user-defined day     
+         UDSTART   user-defined day start HHMM          
+         PCPRATE   precipitation rate                   
+         T24MIN    24 hour minimum temperature          
+         T24MAX    24 hour maximum temperature          
+         SOILM2    soil moisture percent - 2 inch       
+         SOILM4    soil moisture percent - 4 inch       
+         SOILM8    soil moisture percent - 8 inch       
+         SOILM20   soil moisture percent - 20 inch      
+         SOILM40   soil moisture percent - 40 inch      
+         SOILT2    soil temperature - 2 inch            
+         SOILT4    soil temperature - 4 inch            
+         SOILT8    soil temperature - 8 inch            
+         SOILT20   soil temperature - 20 inch           
+         SOILT40   soil temperature - 40 inch           
+         DDMAX1H   wind dir at hourly max wind speed    
+         FFMAX1H   hourly maximum wind speed            
+         GSRD5M    global solar radiation - 5min        
+         STNSPC1   station specific #1                  
+         STNSPC2   station specific #2                  
+         T24MINT   time of 24 hour minimum temperature  
+         T24MAXT   time of 24 hour maximum temperature  
+
+    Variables that have been added for COOP PLATTYP 2 stations:
+
+         DDGUST    wind dir at gust  (5m)
+         FFGUST    wind gust         (5m)
+         PCP5M     accumulated precip - 5m              
+</PRE>
+
+<P><LI>The user can select either accumulated precip - 1h or precipitation rate.  
+    Whichever variable is actually stored in the MADIS database will be converted
+    to the form desired by the caller.
+
+<P><LI>Precipitation intensity (MESONET):</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        intensity info not available
+         1        none
+         2        light
+         3        moderate
+         4        heavy
+         5        slight
+         6        other
+</PRE>
+<p>    Stations measuring precipitation type and intensity may take observations
+    with one or two sensors.  Therefore, an array of 2 elements will be
+    returned for each record, and the caller should dimension the array to
+    (2,200000).
+
+<P><LI>Precipitation type (MESONET):</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        no precipitation
+         1        precipitation present but unclassified
+         2        rain
+         3        snow
+         4        mixed rain and snow
+         5        light
+         6        light freezing
+         7        freezing rain
+         8        sleet
+         9        hail
+        10        other
+        11        unidentified
+        12        unknown
+        13        frozen
+        14        ice pellets
+        15        recent
+        29        RPU-to-maxSensor communications failure
+        30        sensor failure
+</PRE>
+<p>    Stations measuring precipitation type and intensity may take observations
+    with one or two sensors.  Therefore, an array of 2 elements will be
+    returned for each record, and the caller should dimension the array to
+    (2,200000).
+
+<P><LI>The sky cover variables (METAR, SAO, MESONET, 1-minute ASOS) 
+    can have up to 6 different layers (array elements) for each record.  
+    The "sky cover layer base" variable is a number, so it should be 
+    dimensioned to (6,200000) by the caller.  The character "sky cover" 
+    variable gives information about each layer reported in the sky cover 
+    layer base variable, and has 8 characters for each of the 6 layers, so
+    it should be dimensioned character*8 skycover(6,200000).  Note that
+    the 1-minute ASOS dataset can only go up to 3 layers, but
+    to allow for mixing its data with the other surface providers 6 
+    layers (the last 3 always missing) will be returned.
+
+<P>
+    For more information on these variables, see section 9.4.2 of Federal
+    Meteorological Handbook 1 (FMH-1).  A PDF version of FMH-1 is available
+    at <A HREF="http://www.ofcm.gov/fmh-1/fmh1.htm">
+    http://www.ofcm.gov/fmh-1/fmh1.htm</A>.
+
+<P>
+    Sky cover values:</p>
+
+<PRE>
+       Value      Meaning               Summation amount of layer
+       -----      -------               -------------------------
+       VV         Vertical Visibility   8/8
+       SKC or CLR Clear                 0
+       FEW        Few                   1/8 - 2/8
+       SCT        Scattered             3/8 - 4/8
+       BKN        Broken                5/8 - 7/8
+       OVC        Overcast              8/8
+
+       1.  CLR is used at automated stations when no layers at or below 12,000 ft
+           are reported; SKC is used at manual stations when no layers are 
+           reported.
+
+       2.  Any layer amount less than 1/8 is reported as FEW.
+</PRE>
+
+<P><LI>Height of the lowest cloud layer (MARITIME):</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        0 to 100 ft
+         1        200 to 300 ft
+         2        400 to 600 ft
+         3        700 to 900 ft
+         4        1000 to 1900 ft
+         5        2000 to 3200 ft
+         6        3300 to 4900 ft
+         7        5000 to 6500 ft
+         8        7000 to 8000 ft
+         9        8500 or higher or no clouds
+        -1        unknown or cloud base below surface of station
+</PRE>
+
+<P><LI>Low level cloud type (MARITIME):</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        no Cu, Cb, Sc, or St
+         1        Cu w/ little vertical extent
+         2        Cu w/ moderate or great vertical extent
+         3        Cb w/out fibrous or striated upper part
+         4        Sc formed by spreading Cu
+         5        Sc not formed by spreading Cu
+         6        St or ragged St
+         7        ragged St or ragged Cu
+         8        Cu and Sc w/ bases at different levels
+         9        Cb w/ fibrous or striated upper part
+        -1        low clouds not visible (obscured)
+</PRE>
+
+<P><LI>Middle level cloud type (MARITIME):</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        no Ac, As, or Ns
+         1        semi-transparent As
+         2        opaque As, or Ns
+         3        semi-transparent Ac predominant
+         4        Ac continually changing in appearance
+         5        Ac invading the sky
+         6        Ac formed by spreading of Cu or Cb
+         7        double layered Ac or thick Ac; or Ac & As
+         8        turreted Ac or Ac in tufts
+         9        Ac of a chaotic sky
+        -1        middle clouds not visible (obscured)
+
+</PRE>
+
+<P><LI>High level cloud type (MARITIME):</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        no Ci, Cs, or Cc
+         1        Ci in filaments or hooks
+         2        dense Ci & turreted Ci & Ci in tufts
+         3        dense Ci orig from Cb, present
+         4        Ci invading the sky
+         5        Cs not exceeding 45 degrees altitude
+         6        Cs exceeding 45 degrees altitude
+         7        Cs covering the whole sky
+         8        Cs not invading the sky
+         9        Cc alone, or Cc more than (Ci & Cs)
+        -1        high clouds not visible (obscured)
+</PRE>
+
+<P><LI>Tide indicator (MARITIME):</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        Data not available
+         1        Low tide, observed tide below predicted level
+         2        Low tide, observed tide same as predicted level
+         3        Low tide, observed tide above predicted level
+         4        Neither low nor high tide, observed tide below predicted level
+         5        Neither low nor high tide, observed tide same as predicted level
+         6        Neither low nor high tide, observed tide above predicted level
+         7        High tide, observed tide below predicted level
+         8        High tide, observed tide same as predicted level
+         9        High tide, observed tide above predicted level
+</PRE>
+
+<P><LI>The dewpoint & temperature from tenths of a deg C variables (METAR) are 
+    decoded from the remarks section of the raw reports, for designated stations 
+    only, and have values rounded to the nearest 0.1 degree C.  The primary 
+    temperature and dewpoint variables are reported from all stations, and in 
+    the raw reports, are rounded to the nearest whole degree C.
+
+<P><LI>Road state (MESONET):</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        No report
+         1        Dry
+         2        Moist
+         3        Moist and chemically treated
+         4        Wet
+         5        Wet and chemically treated
+         6        Ice
+         7        Frost
+         8        Snow
+         9        Snow/Ice watch
+        10        Snow/Ice warning
+        11        Wet above freezing
+        12        Wet below freezing
+        13        Absorption
+        14        Absorption at dewpoint
+        15        Dew
+        16        Black ice warning
+        17        Other
+        18        Slush
+</PRE>
+
+<P><LI>Automated station type (METAR, SAO):</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+        AO1       automated station without precipitation discriminator (METAR)
+        AO2       automated station with precipitation discriminator (METAR)
+        AUTO2     automated station (SAO)
+        AUTO4     automated station (SAO)
+        AUTO7     automated station (SAO)
+        AUTO8     automated station (SAO)
+        blank     manual station
+</PRE>
+
+<P><LI>Report type (METAR, SAO):</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+       METAR      scheduled report (METAR)
+       SPECI      report triggered by SPECI criteria (METAR) (see FMH-1)
+       SA         scheduled report (SAO)
+</PRE>
+
+<P><LI>The coded values for the present weather variable (METAR, MARITIME) are too 
+    extensive to list in this document.  See FMH-1, particularly section 12.6.8.
+    A PDF version of FMH-1 is available at 
+    <A HREF="http://www.ofcm.gov/fmh-1/fmh1.htm">
+    http://www.ofcm.gov/fmh-1/fmh1.htm</A>.
+
+<P>The coded values for the COOP present weather variable are listed below:</p>
+
+<PRE>    
+       Value      Meaning
+       -----      -------
+        -         No report
+        FG        Fog
+        IE        Ice
+        GL        Glaze
+        TS        Thunder
+        GR        Hail
+        DW        Damaging Winds
+        RA        Rainy
+        SN        Snowy
+</PRE>
+
+<P><LI>The station location (METAR, MESONET, COOP) generally contains a geographic 
+    description of the station's location, typically including the city, state, 
+    and sometimes the country.
+
+<P>
+    With the MESONET dataset, in addition, characters (40:50) are used to denote
+    the "subprovider", if any.  Some (but not all) mesonets contain data from a 
+    number of smaller networks.  In these cases, the "subprovider" for each
+    station is the name of the smaller network.  If this field is all blank, then
+    there isn't a subprovider associated with the station.  This information can
+    also be obtained directly by reading the SUBPVDR variable, which only contains
+    the subprovider designation.
+
+<P>
+    Note that the station location variable isn't available in the AWIPS database 
+    for METAR.
+
+<P><LI>The PCPUDAY (COOP) variable provides the accumulated precipitation for a 
+    24 hour period that can be defined by each individual station.  The UDSTART
+    variable can be used to determine the start hour & minute of the "user-defined
+    day".  E.g., a UDSTART value of 1330 would mean the 24 hour accumulation
+    period starts at 13:30 local time, a value of 200 would represent 02:00.
+
+<P><LI>The 1-minute ASOS Runway Visual Range (RVRID) is specified
+    in degrees.  The location of the RVR runway relative to other
+    parallel runways (RVRLOC) is specified as follows:</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+       0          no runway parallel to RVR runway
+       1          left
+       2          center
+       3          right
+</PRE>
+
+<P>The RVR distance type (RVRTYPE) variable has the following values:</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+       0          between highest and lowest reportable values
+       1	  lowest reportable value
+       2	  highest reportable value
+</PRE>
+
+<P><LI>The 1-minute ASOS alert data bitmasks (ALERT1, ALERT2) provide
+     an optional means to alert users to an operational value.  This feature
+     is optional, and may not be implemented on all stations.  The tables
+     below indicate the meaning of bits that may be set in the two words
+     (LSB=1, MSB=16).</p>
+
+<PRE>
+     ALERT1:
+
+       Bit          Meaning
+       ---          -------
+       1            Sky Condition, In
+       2            Ceiling, Up
+       3            Ceiling, Down
+       4            Visibility, Increase
+       5            Visibility, Decrease
+       6            Wind Direction/Preferred Runway Change
+       7            Wind Speed, Increase
+       8            Reserved
+       9            Hail, Begin
+       10           Hail, End
+       11           Ice Pellets, Begin
+       12           Ice Pellets, End
+       13           Freezing Rain, Begin
+       14           Freezing Rain, End
+       15           Freezing Drizzle, Begin
+       16           Freezing Drizzle, End
+
+     ALERT2:
+
+       Bit          Meaning
+       ---          -------
+       1            Thunderstorm, Begin
+       2            Thunderstorm, End
+       3            Thunderstorm, Increase
+       4            Tornado Observed
+       5            Funnel Cloud Observed
+       6            Water Spout Observed
+       7            Reserved
+       8            Local Threshold Exceeded
+       9            Snow, Begin
+       10           Snow, End
+       11           Rain, Begin
+       12           Rain, End
+       13           Non-specific Precip, Begin
+       14           Non-specific Precip, End
+       15           Fog, Begin
+       16           Fog, End
+</PRE>
+
+<P><LI>The COOP stations have the option to add up to two variables that are specific
+    to the individual station.  
+
+<P><LI>Commissioned status (COOP):</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+       0          commissioned             
+       1          not yet commissioned
+</PRE>
+
+<P><LI>Station quality indicator (COOP):</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+       [TBD]
+</PRE>
+
+<P><LI>All times reported in the MADIS API are in Universal Coordinated Time, with the 
+    format of "YYJJJHHMM", where:
+
+    <P>YY  = 2-digit year (good from 1980 - 2179)
+    <BR>JJJ = Julian date of the year (1-366)
+    <BR>HH  = Hour (0-23)
+    <BR>MM  = Minute (0-59)
+
+    <P>If the max/min temperature time is missing, the 9-character field will be set to 
+    all blanks, e.g., "         ".
+
+    Users of the MADIS API sfcdump program will get the time output in their chosen
+    format, either YYJJJHHMM or YYYYMMDD_HHMM.
+
+<P><LI>Some (but not all) mesonets, and the COOP dataset, contain data from a 
+    number of smaller networks.  In these cases, the "subprovider" for each
+    station is the name of the smaller network.  If this variable is all blank, then
+    there isn't a subprovider associated with the station.  
+
+<P><LI>The total precipitation variable (COOP, MESONET, 1-minute ASOS)
+    is an accumulation over a period of unknown duration.
+    Stations that report this value will also report the PCP1H and
+    PCP24H observations, except for 1-minute ASOS, which will
+    report PCP1H but not PCP24H.  The High Frequency total
+    precipitation values are only available for AWOS stations.  The
+    PCPTOTL value is made available for those interested in
+    calculating the accumulation over a period of other than 1 or 24
+    hours.
+
+<P><LI>The COOP door open/closed indicator is used to show when the instrument
+    enclosure has been opened for maintenance.</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        closed
+         1        open
+</PRE>
+
+<P><LI>The COOP rim heating on/off indicator is used to indicate when rim heating
+    is on for the precipitation gauge.</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+         0        off
+         1        on
+</PRE>
+
+<P><LI>The stage 3 results from the 5m variables are also assigned to the
+    15m variables for UrbaNet.
+
+<P><LI>The 1-minute ASOS dataset contains the following "remarks" variables:
+
+<P>Automated remarks status (ARMKST) is a bitmask with set bits indicating 
+    the detection of conditions triggering automated remarks (LSB=1, MSB=16):</p>
+
+<PRE>
+       Bit          Meaning
+       ---          -------
+        1           variable visibility
+        2           variable wind direction
+        3	    variable ceiling
+        4	    reserved
+        5	    visibility at second location
+        6	    ceiling height at second location
+
+    Automated remarks (AUTORMK) encoding
+    ------------------------------------
+
+    Variable Visibility  
+
+    The automated remark pertaining to variable visibility is
+    expressed as: VSBY aaa(a)Vbbb(b), where aaa(a) and bbb(b) are 3-
+    or 4-character, variable-length fields with leading "0" characters
+    as necessary to ensure a 3 character minimum, and these represent
+    range limits provided in hundredths of statute miles.  For
+    example: VSBY 075V250 indicates a variation in visibility between
+    0.75 and 2.5 miles.
+
+    (ASOS/AOS Only) A multiple sensor visibility remark is inserted in
+    this field in the exact format by which it is prepared for
+    insertion as a multiple sensor visibility REMARK in METAR format.
+    See FMH-1 for details of the formatting.
+
+    Variable Wind
+
+    The automated remark for variable wind direction is encoded as
+    follows when the current average wind speed exceeds 6 knots: 
+    WND ccVdd, where cc and dd are 2-character, fixed-length fields 
+    with a leading "0" character as necessary, and indicates range
+    limits provided in tens of degrees. For example: WND 06V13 denotes
+    a variation in the true direction between 60 and 130 degrees.  
+
+    The automated remark for variable wind direction is encoded as
+    follows when the current average wind speed is equal to or less
+    than 6 knots and five-second wind samples have varied over a range
+    of 60 degrees or more over the past two minutes: VRBkkKT, where kk
+    is a 2-character, fixed-length field with a leading "0" character,
+    and "VRB" and "KT" shall be literals. For example: VRB03KT
+
+    Variable Ceiling (ASOS/AOS Only)
+
+    The automated remark for variable ceiling condition may indicate
+    one (for an airport configured with a single cloud sensor) or one
+    of two (for an airport configured with multiple cloud sensors)
+    cloud conditions.  The format for the single cloud sensor
+    configuration is: CIG eeeVfff, and the format for the multiple
+    cloud sensor configuration is: 
+
+    CIG eee gggggggg
+    CIG eeeVfff
+    CHINO gggggggg
+
+    Upper case letters and blanks within individual remarks are
+    fixed. Lower case eee,fff are 3-character, fixed-length fields
+    with leading "0" character(s) as necessary, and respectively
+    represent minimum and maximum ceiling heights, in hundreds of
+    feet, above ground level (AGL).
+
+    gggggggg is a 1- to 8-character, variable-length field
+    representing one of the eight cardinal directions: "N", "NE", "E",
+    "SE", "S", "SW", "W", "NW" and/or additional descriptors such as
+    runway designators, etc.
+
+    For example: CIG 008V020 indicates that a variable ceiling base
+    height was detected between 800 and 2000 feet.
+
+    Visibility At Second Location (ASOS/AOS Only) 
+
+    The automated remark pertaining to visibility at a second
+    location, generated only when this value is less than that
+    registered at the primary location, is encoded as: 
+    VIS aaaaa gggggggg, where aaaaa is a variable length field of up 
+    to 5 characters representing the visibility in fractional format, 
+    with a single space character separating the integer and fractional
+    parts, and gggggggg is a 1- to 8-character, variable-length field
+    representing one of the eight cardinal directions: "N", "NE", "E",
+    "SE", "S", "SW", "W", "NW" and/or additional descriptors such as
+    runway designators, etc. For example: VIS 1 3/4 RWY22 indicates a
+    visibility of one and three quarters statute miles registered at
+    the Runway 22 location.
+
+    Ceiling Height At Second Location (ASOS/AOS Only) 
+
+    The automated remark pertaining to ceiling height at a second
+    location, generated only when this value is less than that
+    registered at the primary location, is encoded as: 
+    CIG hhh gggggggg, where hhh is a fixed length field of 3 characters
+    representing the measured ceiling height in hundreds of feet, and
+    gggggggg is a 1- to 8-character, variable-length field
+    representing one of the eight cardinal directions: "N", "NE", "E",
+    "SE", "S", "SW", "W", "NW" and/or additional descriptors such as
+    runway designators, etc. For example: CIG 003 RWY22 indicates a
+    ceiling height of three hundred feet registered at the Runway 22
+    location.
+
+    Operator remarks (OPERRMK) are free-formatted text.
+</PRE>
+
+<P><LI>The 1-minute ASOS sensor status variables (DDSS, FFSS, FRZRSS,
+    PCPASS, PCPTSS, PSS, RVRSS, SCLBSS, TDSS, TSS, VISSS) indicate the
+    operational status of each sensor, as shown in the following table:</p>
+
+<PRE>
+       Value      Meaning
+       -----      -------
+        0         Sensor operating/data available
+        1         Reserved
+        2         Sensor not installed
+        3         Sensor out of service
+        4         Reserved
+        5         Sensors output in conflict
+        6         Invalidated: Auto range check
+        7         Invalidated: Auto rate of change
+        8         Invalidated: Auto insufficent count
+        9         Invalidated: By operator
+        10        Data source offsite: Link failure
+        11        Reserved
+        12        Dewpoint sensor invalidated *
+        13        Reserved
+        14        Reserved
+        15        Reserved
+        16        Operator manual data entry
+
+        * Value 12 is only used for the dewpoint sensor (TDSS).
+</PRE>
+
+<P><LI>The 1-minute ASOS operating status (OPSTAT) is a bitmask indicating
+    the status of the station as a whole, the meaning of the possible set bits
+    (LSB=1, MSB=16) is shown below.</p>
+
+<PRE>
+       Bit          Meaning
+       ---          -------
+        1           Operator on duty
+        2           Test Mode
+        3           Manual Mode
+        4           Part or all data are suspect
+</PRE>
+
+<P><LI>The 1-minute ASOS dataset parameter activation status (PARACT) 
+    pertains to obstructions to visibility and precipitation types.  This is
+    a bitmask, with set bits indicating that the associated parameters are
+    active, i.e., being monitored (e.g. rain or snow), or determined by
+    algorithm (e.g., haze, smoke).  (LSB=1, MSB=16)</p>
+
+<PRE>
+       Bit          Meaning
+       ---          -------
+        1           Mist monitoring active
+        2           Fog monitoring active
+        3           Ground fog monitoring active
+        4           Ice fog monitoring active
+        5           Haze monitoring active
+        6           Smoke monitoring active
+        7           Dust, volcanic ash monitoring active
+        8           Blowing snow, sand monitoring active
+        9           Rain monitoring active
+        10          Snow grains monitoring active
+        11          Freezing rain monitoring active
+        12          Small hail and/or ice pellets monitoring active
+        13          Ice pellets monitoring active
+        14          Snow monitoring active
+        15          Ice crystals monitoring active
+        16          Hail monitoring active
+</PRE>
+
+</OL>-->
+
+<hr width="100%"><p align="right">Last updated 15 March 2017</p>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3463124-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</BODY>
+</HTML>
+
+      
+        <!-- force body content to include the floated "news" element -->
+	<div class="clear">
+        </div>
+    </div> <!-- end body content -->
+</div>   <!-- end pbody -->
+
+<!-- legal footer area -->
+        <div class="footer-legal">
+                                <div class="footer-legal-content">
+                        <div class="footer-legal-gov">
+                                <a href="https://www.usa.gov"><img src="images/usa_gov.png" alt="usa.gov" width="110" height="30" /></a>
+                        </div>
+
+                        <div class="footer-legal-column">
+                                <p>
+                                        <a href="https://www.commerce.gov">US Dept of Commerce</a><br />
+                                <a href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a><br />
+                                <a href="https://www.weather.gov" >National Weather Service</a><br />
+                                                5830 University Research Ct.<br />College Park, MD 20740<br />
+                                Web Master's Email: <a href='mailto:w-nws.webmaster@noaa.gov'>w-nws.webmaster@noaa.gov</a>                      </p>
+                        </div>
+
+                        <div class="footer-legal-column2">
+                                <a href="https://www.weather.gov/disclaimer">Disclaimer</a><br />
+                                <a href="https://www.cio.noaa.gov/services_programs/info_quality.html">Information Quality</a><br />
+                                <a href="https://www.weather.gov/help">Help</a><br />
+                                <a href="https://www.weather.gov/glossary">Glossary</a>
+                        </div>
+
+                        <div class="footer-legal-column3">
+                                <a href="https://www.weather.gov/privacy">Privacy Policy</a><br />
+                                <a href="https://www.noaa.gov/information-technology/foia">Freedom of Information Act (FOIA)</a><br />
+                                <a href="https://www.weather.gov/about">About Us</a><br />
+                                <a href="https://www.weather.gov/careers">Career Opportunities</a>
+                        </div>
+                </div>
+
+</div><!-- end of <div class="footer-legal">--> 
+
+</div><!-- End of content div -->
+</div><!-- End of center div -->
+
+</div> <!-- end container -->
+</body>
+</html>
+

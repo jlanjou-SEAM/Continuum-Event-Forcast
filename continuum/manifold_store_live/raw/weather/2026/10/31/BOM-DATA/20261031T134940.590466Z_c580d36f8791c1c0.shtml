@@ -1,0 +1,887 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>Weather Data Services</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+    <meta http-equiv="window-target" content="_top" />
+    <link rel="stylesheet" type="text/css" href="/standard/common.css" />
+    <script type="text/javascript" src="/watl/scripts/menu.js"></script>
+
+                                <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="6WJWU-82JGA-WH5QR-FV53R-5JQ89",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"6WJWU-82JGA-WH5QR-FV53R-5JQ89",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="qyqup4ax33gz22xf6h2q-f-fab248e31-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"41","ak.cp":"491154","ak.ai":parseInt("320835",10),"ak.ol":"0","ak.cr":9,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"2a92c2b6","ak.r":47451,"ak.a2":e,"ak.m":"a","ak.n":"essl","ak.cport":9217,"ak.gh":"23.202.113.11","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1793454581","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==cHSLTYy/HUSg1lkIe7nqPjH6tZg0DslFxx4txzq2D9o85NmX+K8aGD3aDWt/JXw/o60P/Tr/iwj9oSNvI8AfxWI5pQ2CKMZgO/P5ynoJGTFMa4VT6fCBQZGXo3Emk6sOW6sBKpkGi5R0uA8oh2njLctLjQDZTXxXtKqpnv/nuVOnd9cNHv18KLw8VV6RZACTJfAQyW7bgsKwO+5bDLP3yIcR/hytKfs4RVXCvQ2u32XfSGhJsLleJuDbjuI2zFiYBM65PxU6DEL67JA7Gkuz3tFZI+vVsos8hiynJuBi5bqILPALJ42GcuniYsTdJAlwXjmidPoXkTGbnr6dkKd9P5V/EP+XDXN7Uvdo3yGNKL28+W+INIKzd47tnxBQyoWwdF9rUlr6/zqWaBd54BSFR1G4SWR6M7hxSfkxWn0l3kY=","ak.pv":"87","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script><script >bazadebezolkohpepadr="467669668"</script><script type="text/javascript" src="https://www.bom.gov.au/akam/13/1be012fc"  defer></script></head>
+
+<body>
+    <!-- start page bounds -->
+    <div id="page">
+        <div class="no-print">
+            <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5VPX722');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VPX722"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<ul id="jumplinks">
+	<li><a href="#content">Skip to main content</a></li>
+</ul>
+
+<!-- Start: PageHeight -->
+<div id="pageheight">
+  <div id="pagewrap">
+  <!-- Start: Header -->
+  <div id="header">
+	<div class="l_content">
+		<div id="header-logo">
+				<img class="bannerprint" width="1" height="1" alt="Print Background" src="/images/ui/bannerprint.gif" />
+				<a id="logo" href="https://www.bom.gov.au"><img src="/images/ui/bom_logo_clr.gif" title="Australian Government - Bureau of Meteorology" alt="Australian Government - Bureau of Meteorology" /></a>
+			</div>
+			<div id="header-main">
+				<div class="l_top">
+					<div id="header-search">
+						<form action="https://www.bom.gov.au/search" method="get" class="searchform" enctype="application/x-www-form-urlencoded">
+							<label for="query">Search</label><input type="text" id="query" name="query" size="30" placeholder="Enter search terms" value="" required/>
+							<!-- <input type="hidden" name="collection" value="bom" /> -->
+							<input type="submit" value="Search" title="Search" class="search" />
+						</form>
+					</div>
+					<ul>
+						<li><a href="https://www.bom.gov.au">Home</a></li>
+						<li><a href="https://www.bom.gov.au/about-the-bureau">About</a></li>
+                                                <li><a href="https://www.bom.gov.au/news-and-media">Media</a></li>
+						<li class="last"><a href="https://www.bom.gov.au/contact">Contacts</a></li>
+					</ul>
+				</div>
+			<div class="l_bottom">
+				<ul class="sf-menu">
+					<li id="sf-menu-nsw">
+						<abbr title="New South Wales"><a href="/nsw/?ref=hdr" title="New South Wales">NSW</a></abbr>
+						<ul>
+							<li class="decoration"><img src="/images/weather/nsw-thumb.png" alt="" /></li>
+							<li class="heading"><a href="/nsw/index.shtml?ref=hdr" title="New South Wales Weather and Warnings">NSW Weather &amp; Warnings</a></li>
+							<li><a href="/nsw/warnings/index.shtml?ref=hdr" title="New South Wales Warnings Summary">Warnings Summary</a></li>
+							<li><a href="/nsw/forecasts/index.shtml?ref=hdr" title="New South Wales Forecasts">Forecasts</a></li>
+							<li><a href="/nsw/forecasts/sydney.shtml?ref=hdr" title="Sydney Forecast">Sydney Forecast</a></li>
+							<li><a href="/nsw/forecasts/map.shtml?ref=hdr" title="New South Wales Forecast Area Map">NSW Forecast Area Map</a></li>
+							<li><a href="/nsw/observations/index.shtml?ref=hdr" title="New South Wales Weather Observations">Observations</a></li>
+							<li><a href="/nsw/observations/sydney.shtml?ref=hdr" title="Latest Weather Observations for the Sydney Area">Sydney Observations</a></li>
+							<li><a href="/nsw/observations/nswall.shtml?ref=hdr" title="Latest Weather Observations for New South Wales">All NSW Observations</a></li>
+							<li class="last"><a href="/nsw/flood/index.shtml?ref=hdr" title="New South Wales Rainfall and River Conditions">Rainfall &amp; River Conditions</a></li>
+						</ul>
+						<div class="sf-menu-pointer"></div>
+					</li>
+					<li id="sf-menu-vic">
+						<abbr title="Victoria"><a href="/vic/?ref=hdr" title="Victoria">VIC</a></abbr>
+						<ul>
+							<li class="decoration"><img src="/images/weather/vic-thumb.png" alt="" /></li>
+							<li class="heading"><a href="/vic/index.shtml?ref=hdr" title="Victorian Weather and Warnings">VIC Weather &amp; Warnings</a></li>
+							<li><a href="/vic/warnings/index.shtml?ref=hdr" title="Victorian Warnings Summary">Warnings Summary</a></li>
+							<li><a href="/vic/forecasts/index.shtml?ref=hdr" title="Victorian Forecasts">Forecasts</a></li>
+							<li><a href="/vic/forecasts/melbourne.shtml?ref=hdr" title="Melbourne Forecast">Melbourne Forecast</a></li>
+							<li><a href="/vic/forecasts/map.shtml?ref=hdr" title="Victorian Forecast Areas Map">Vic. Forecast Areas Map</a></li>
+							<li><a href="/vic/observations/index.shtml?ref=hdr" title="Victorian Observations">Observations</a></li>
+							<li><a href="/vic/observations/melbourne.shtml?ref=hdr" title="Latest Weather Observations for the Melbourne Area">Melbourne Observations</a></li>
+							<li><a href="/vic/observations/vicall.shtml?ref=hdr" title="Latest Weather Observations for Victoria">All Victorian Observations</a></li>
+							<li class="last"><a href="/vic/flood/index.shtml?ref=hdr" title="Victoria Rainfall and River Conditions">Rainfall &amp; River Conditions</a></li>
+						</ul>
+						<div class="sf-menu-pointer"></div>
+					</li>
+					<li id="sf-menu-qld">
+						<abbr title="Queensland"><a href="/qld/?ref=hdr" title="Queensland">QLD</a></abbr>
+						<ul>
+							<li class="decoration"><img src="/images/weather/qld-thumb.png" alt="" /></li>
+							<li class="heading"><a href="/qld/index.shtml?ref=hdr" title="Queensland Weather and Warnings">QLD Weather &amp; Warnings</a></li>
+							<li><a href="/qld/warnings/index.shtml?ref=hdr" title="Queensland Warnings Summary">Warnings Summary</a></li>
+							<li><a href="/qld/forecasts/index.shtml?ref=hdr" title="Queensland Forecasts">Forecasts</a></li>
+							<li><a href="/qld/forecasts/brisbane.shtml?ref=hdr" title="Brisbane Forecast">Brisbane Forecast</a></li>
+							<li><a href="/qld/forecasts/map.shtml?ref=hdr" title="Queensland Forecast Areas Map">Qld. Forecast Areas Map</a></li>
+							<li><a href="/qld/observations/index.shtml?ref=hdr" title="Queensland Observations">Observations</a></li>
+							<li><a href="/qld/observations/brisbane.shtml?ref=hdr" title="Latest Weather Observations for the Brisbane Area">Brisbane Observations</a></li>
+							<li><a href="/qld/observations/qldall.shtml?ref=hdr" title="Latest Weather Observations for Queensland">All Queensland Observations</a></li>
+							<li class="last"><a href="/qld/flood/index.shtml?ref=hdr" title="Queensland Rainfall and River Conditions">Rainfall &amp; River Conditions</a></li>
+						</ul>
+						<div class="sf-menu-pointer"></div>
+					</li>
+					<li id="sf-menu-wa">
+						<abbr title="Western Australia"><a href="/wa/?ref=hdr" title="Western Australia">WA</a></abbr>
+						<ul>
+							<li class="decoration"><img src="/images/weather/wa-thumb.png" alt="" /></li>
+							<li class="heading"><a href="/wa/index.shtml?ref=hdr" title="Western Australia Weather and Warnings">WA Weather &amp; Warnings</a></li>
+							<li><a href="/wa/warnings/index.shtml?ref=hdr" title="Western Australia Warnings Summary">Warnings Summary</a></li>
+							<li><a href="/wa/forecasts/index.shtml?ref=hdr" title="Western Australia Forecasts">Forecasts</a></li>
+							<li><a href="/wa/forecasts/perth.shtml?ref=hdr" title="Perth Forecast">Perth Forecast</a></li>
+							<li><a href="/wa/forecasts/map.shtml?ref=hdr" title="Western Australian Forecast Areas Map">WA Forecast Areas Map</a></li>
+							<li><a href="/wa/observations/index.shtml?ref=hdr" title="Western Australia Observations">Observations</a></li>
+							<li><a href="/wa/observations/perth.shtml?ref=hdr" title="Latest Weather Observations for the Perth Area">Perth Observations</a></li>
+							<li><a href="/wa/observations/waall.shtml?ref=hdr" title="Latest Weather Observations for Western Australia">All WA Observations</a></li>
+							<li class="last"><a href="/wa/flood/index.shtml?ref=hdr" title="Western Australia Rainfall and River Conditions">Rainfall &amp; River Conditions</a></li>
+						</ul>
+						<div class="sf-menu-pointer"></div>
+					</li>
+					<li id="sf-menu-sa">
+						<abbr title="South Australia"><a href="/sa/?ref=hdr" title="South Australia">SA</a></abbr>
+						<ul>
+							<li class="decoration"><img src="/images/weather/sa-thumb.png" alt="" /></li>
+							<li class="heading"><a href="/sa/index.shtml?ref=hdr" title="South Australian Weather and Warnings">SA Weather &amp; Warnings</a></li>
+							<li><a href="/sa/warnings/index.shtml?ref=hdr" title="Warnings for South Australia">Warnings Summary</a></li>
+							<li><a href="/sa/forecasts/index.shtml?ref=hdr" title="South Australian Forecasts">Forecasts</a></li>
+							<li><a href="/sa/forecasts/adelaide.shtml?ref=hdr" title="Adelaide Forecast">Adelaide Forecast</a></li>
+							<li><a href="/sa/forecasts/map.shtml?ref=hdr" title="South Australia Forecast Area Map">SA Forecast Area Map</a></li>
+							<li><a href="/sa/observations/index.shtml?ref=hdr" title="South Australian Observations">Observations</a></li>
+							<li><a href="/sa/observations/adelaide.shtml?ref=hdr" title="Latest Weather Observations for the Adelaide Area">Adelaide Observations</a></li>
+							<li><a href="/sa/observations/saall.shtml?ref=hdr" title="Latest Weather Observations for South Australia">All SA Observations</a></li>
+							<li class="last"><a href="/sa/flood/index.shtml?ref=hdr" title="South Australia Rainfall and River Conditions">Rainfall &amp; River Conditions</a></li>
+						</ul>
+						<div class="sf-menu-pointer"></div>
+					</li>
+					<li id="sf-menu-tas">
+						<abbr title="Tasmania"><a href="/tas/?ref=hdr" title="Tasmania">TAS</a></abbr>
+						<ul>
+							<li class="decoration"><img src="/images/weather/tas-thumb.png" alt="" /></li>
+							<li class="heading"><a href="/tas/index.shtml?ref=hdr" title="Tasmanian Weather and Warnings">TAS Weather &amp; Warnings</a></li>
+							<li><a href="/tas/warnings/index.shtml?ref=hdr" title="Tasmanian Warnings Summary">Warnings Summary</a></li>
+							<li><a href="/tas/forecasts/index.shtml?ref=hdr" title="Tasmanian Forecasts">Forecasts</a></li>
+							<li><a href="/tas/forecasts/hobart.shtml?ref=hdr" title="Hobart Forecast">Hobart Forecast</a></li>
+							<li><a href="/tas/forecasts/map.shtml?ref=hdr" title="Tasmanian Forecast Areas Map">Tas. Forecast Areas Map</a></li>
+							<li><a href="/tas/observations/index.shtml?ref=hdr" title="Tasmanian Observations">Observations</a></li>
+							<li><a href="/tas/observations/hobart.shtml?ref=hdr" title="Latest Weather Observations for the Hobart Area">Hobart Observations</a></li>
+							<li><a href="/tas/observations/tasall.shtml?ref=hdr" title="Latest Weather Observations for Tasmania">All Tasmanian Observations</a></li>
+							<li class="last"><a href="/tas/flood/index.shtml?ref=hdr" title="Tasmania Rainfall and River Conditions">Rainfall &amp; River Conditions</a></li>
+						</ul>
+						<div class="sf-menu-pointer"></div>
+					</li>
+					<li id="sf-menu-act">
+						<abbr title="Australian Capital Territory"><a href="/act/?ref=hdr" title="Australian Capital Territory">ACT</a></abbr>
+						<ul>
+							<li class="decoration"><img src="/images/weather/act-thumb.png" alt="" /></li>
+							<li class="heading"><a href="/act/index.shtml?ref=hdr" title="Australian Capital Territory Weather and Warnings">ACT Weather &amp; Warnings</a></li>
+							<li><a href="/act/warnings/index.shtml?ref=hdr" title="Australian Capital Territory Warnings Summary">Warnings Summary</a></li>
+							<li><a href="/act/forecasts/index.shtml?ref=hdr" title="Australian Capital Territory Forecasts">Forecasts</a></li>
+							<li><a href="/act/forecasts/canberra.shtml?ref=hdr" title="Canberra Forecast">Canberra Forecast</a></li>
+							<li><a href="/act/forecasts/act.shtml?ref=hdr" title="Australian Capital Territory Forecast">ACT Forecast</a></li>
+							<li><a href="/act/observations/index.shtml?ref=hdr" title="Australian Capital Territory Observations">Observations</a></li>
+							<li class="last"><a href="/act/observations/canberra.shtml?ref=hdr" title="Latest Weather Observations for the Canberra Area">Canberra Observations</a></li>
+						</ul>
+						<div class="sf-menu-pointer"></div>
+					</li>
+					<li id="sf-menu-nt">
+						<abbr title="Northern Territory"><a href="/nt/?ref=hdr" title="Northern Territory">NT</a></abbr>
+						<ul>
+							<li class="decoration"><img src="/images/weather/nt-thumb.png" alt="" /></li>
+							<li class="heading"><a href="/nt/index.shtml?ref=hdr" title="Northern Territory Weather and Warnings">NT Weather &amp; Warnings</a></li>
+							<li><a href="/nt/warnings/index.shtml?ref=hdr" title="Northern Territory Warnings Summary">Warning Summary</a></li>
+							<li><a href="/nt/forecasts/index.shtml?ref=hdr" title="Northern Territory Forecasts">Forecasts</a></li>
+							<li><a href="/nt/forecasts/darwin.shtml?ref=hdr" title="Darwin Forecast">Darwin Forecast</a></li>
+							<li><a href="/nt/forecasts/map.shtml?ref=hdr" title="Northern Territory Forecast Area Map">NT Forecast Areas Map</a></li>
+							<li><a href="/nt/observations/index.shtml?ref=hdr" title="Northern Territory Weather Observations">Observations</a></li>
+							<li><a href="/nt/observations/darwin.shtml?ref=hdr" title="Latest Weather Observations for Darwin Area">Darwin Observations</a></li>
+							<li><a href="/nt/observations/ntall.shtml?ref=hdr" title="All NT Weather Observations">All NT Observations</a></li>
+							<li class="last"><a href="/nt/flood/index.shtml?ref=hdr" title="Northern Territory Rainfall and River Conditions">Rainfall &amp; River Conditions</a></li>
+						</ul>
+						<div class="sf-menu-pointer"></div>
+					</li>
+					<li id="sf-menu-aus" class="separator">
+						<a href="/australia/?ref=hdr" title="National Weather and Warnings">Australia</a>
+						<ul>
+							<li class="decoration"><img src="/images/weather/aus-thumb.png" alt="" /></li>
+							<li class="heading"><a href="/australia/index.shtml?ref=hdr" title="National Weather and Warnings">National Weather &amp; Warnings</a></li>
+							<li><a href="/australia/warnings/index.shtml?ref=hdr" title="National Warnings Summary">Warnings Summary</a></li>
+							<li><a href="/australia/majorcities.shtml?ref=hdr" title="Major Cities Forecast plus Outlook">Major Cities</a></li>
+							<li><a href="/australia/radar/index.shtml?ref=hdr" title="Radar Images">Radar Images</a></li>
+							<li><a href="/australia/charts/index.shtml?ref=hdr" title="Weather Maps">Weather Maps</a></li>
+							<li><a href="/australia/satellite/index.shtml?ref=hdr" title="Recent Satellite Images">Satellite Images</a></li>
+							<li class="last"><a href="/australia/flood/index.shtml?ref=hdr" title="Australia Rainfall and River Conditions">Rainfall &amp; River Conditions</a></li>
+						</ul>
+						<div class="sf-menu-pointer"></div>
+					</li>
+					<!-- li class="no-menu"><a href="/global/?ref=hdr" title="Global Weather and Warnings">Global</a></li -->
+					<li class="last no-menu"><a href="/ant/?ref=hdr" title="Antarctic and Southern Ocean Weather">Antarctica</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="l_shadow"></div>
+  </div>
+  <!-- End: Header -->
+  <!--#include virtual="/includes/site_announcement.html" -->
+ 
+  <!-- Start: Columns -->
+  <div id="columns">
+
+        </div>
+        <div id="print-head">
+            <img src="/watl/standard/bom-logo-print.png" alt="Australian Government, Bureau of Meteorology" width="234" height="73" />
+        </div>
+        <!-- start breadcrumbs -->
+        <div id="breadcrumbs">
+            <a href="/" title="Bureau home page">Bureau Home</a> &gt; <a href="/weather-services/index.shtml">Weather Services</a> &gt; Data Services for weather information
+        </div>
+        <!-- /breadcrumbs -->
+
+
+        <noscript>
+                <p class="jsalert">These pages require JavaScript. Please turn it on in your browser.</p>
+            </noscript>
+
+        <div id="content-block">
+            <a name="top" id="top"></a>
+
+            <h1 style="clear: both;">Weather Data Services</h1>
+
+            
+            <div class="middle-col align-justify">
+
+                <!-- start optional introductory box or contents box -->
+                <div class="page-menu">
+                    <p>Contents</p>
+                    <ul>
+                        <li><a href="#automated">Files for automated data services</a></li>
+                        <li><a href="#product">Full product listing</a></li>
+                        <li><a href="#forecasts">Forecasts</a></li>
+                        <li><a href="#district">District forecasts</a></li>
+                        <li><a href="#coastal">Coastal waters forecasts</a></li>
+                        <li><a href="#warnings">Warnings</a></li>
+                        <li><a href="#xml">XML and AMOC format information</a></li>
+                        <li><a href="#obs-state">Observations - State/Territory summaries</a></li>
+                        <li><a href="#obs-ind">Observations - individual stations</a></li>
+                        <li><a href="#radar">Radar</a></li>
+                        <li><a href="#satellite">Satellite</a></li>
+                        <li><a href="#uv">UV</a></li>
+                        <li><a href="#tech">Technical support</a></li>
+
+                    </ul>
+                </div>
+                <!-- start row 2 -->
+                <hr class="clearfix" />
+
+                <h2>
+                    <a name="automated" id="automated"></a>Files for automated data services</h2>
+                <p>The Bureau of Meteorology makes a number of real-time forecast, warning and observation products and analysis charts available via the web and Anonymous FTP.</p>
+                <p>These products are free to access and are not for commercial use.  Please see the <a href="/catalogue/Bureau_of_Meteorology_Anonymous_FTP_Service_user_guide.pdf">Anonymous FTP Service user guide</a> for more information on using the service.</p>
+                <p>When users access these products anonymously, the Bureau cannot track the usage of any particular product thus it is not possible to directly contact customers affected by service changes. Customers requiring support, service continuity and access to more secure Cloud (S)FTP services should make
+                    use of the Bureau's <a href="http://reg.bom.gov.au/reguser/reguser.shtml">Registered User Services</a>.</p>
+                <p>Unless otherwise stated, products available via this service are subject to the default terms of use in the Bureau's <a href="https://www.bom.gov.au/copyright">Copyright Notice</a>.</p>
+
+                <p>Please note:</p>
+                <ul>
+                    <li>The Bureau does not guarantee the availability of information on the FTP site.</li>
+                    <li>Use of data should be in accordance with the <a href="https://www.bom.gov.au/copyright">copyright notice</a> and <a href="https://www.bom.gov.au/disclaimer">disclaimer</a>.</li>
+                </ul>
+                <h2>
+                    <a name="product" id="product"></a>Full product listing</h2>
+                <p>View the <a href="/catalogue/anon-ftp.shtml">full list of all products available via anonymous FTP</a>.</p>
+                <h2>
+                    <a name="forecasts" id="forecasts"></a>Forecasts</h2>
+                        <p>The following products are routinely produced for each state and territory:</p>
+                        <ul>
+                            <li>State or Territory Forecast</li>
+                            <li>Pr&eacute;cis Forecast</li>
+                            <li>City Forecast</li>
+                            <li>Town Forecast</li>
+                            <li>District Forecast (N/A for Northern Territory)</li>
+                            <li>Coastal Waters and Local Waters Forecasts</li>
+                        </ul>
+                        <p>Some other products are specific to their respective state or territory, and may be produced seasonally, such as some fire weather products.</p> 
+                        <p>Please see the <a href="/catalogue/Bureau_of_Meteorology_text_forecasts_user_guide.pdf">text forecasts</a> user guide for more information.</p>
+
+                <!-- <table border="1" cellspacing="0" cellpadding="0" summary="" width="100%">
+                    <tr>
+                        <th width="70%" valign="middle">&nbsp;</th>
+                        <th width="10%" align="center" valign="middle">
+                            <p>Precis</p>
+                        </th>
+                        <th width="10%" align="center" valign="middle">
+                            <p>Town</p>
+                        </th>
+                        <th width="10%" align="center" valign="middle">
+                            <p>City</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td width="70%" valign="middle">
+                            <p>New South Wales / Australian Capital Territory</p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDN11060.xml">XML</a></p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDN11100.xml">XML</a></p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDN11050.xml">XML</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="70%" valign="middle">
+                            <p>Northern Territory</p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDD10207.xml">XML</a></p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDD10208.xml">XML</a></p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDD10198.xml">XML</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="70%" valign="middle">
+                            <p>Queensland</p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDQ11295.xml">XML</a></p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDQ11296.xml">XML</a></p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDQ10605.xml">XML</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="70%" valign="middle">
+                            <p>South Australia</p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDS10044.xml">XML</a></p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDS11039.xml">XML</a></p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDS10037.xml">XML</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="70%" valign="middle">
+                            <p>Tasmania</p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDT16710.xml">XML</a></p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDT13515.xml">XML</a></p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDT13630.xml">XML</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="70%" valign="middle">
+                            <p>Victoria</p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDV10753.xml">XML</a></p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDV10752.xml">XML</a></p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDV10751.xml">XML</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="70%" valign="middle">
+                            <p>Western Australia</p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDW14199.xml">XML</a></p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDW14100.xml">XML</a></p>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDW12400.xml">XML</a></p>
+                        </td>
+                    </tr>
+                </table>
+                <h2>
+                    <a name="district" id="district"></a>District forecasts </h2>
+                <p>XML forecasts are also available for broader land districts.</p>
+                <table border="1" cellspacing="0" cellpadding="0" summary="" width="100%">
+                    <tr>
+                        <th width="70%" align="left" valign="middle">
+                            <p>&nbsp;</p>
+                        </th>
+                        <th width="30%" align="center" valign="middle">
+                            <p>Land districts</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td width="70%" align="left" valign="middle">
+                            <p>New South Wales / Australian Capital Territory</p>
+                        </td>
+                        <td width="30%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDN11020.xml">XML</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="70%" align="left" valign="middle">
+                            <p>Northern Territory</p>
+                        </td>
+                        <td width="30%" align="center" valign="middle">
+                            <p>N/A</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="70%" align="left" valign="middle">
+                            <p>Queensland</p>
+                        </td>
+                        <td width="30%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDQ10606.xml">XML</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="70%" align="left" valign="middle">
+                            <p>South Australia</p>
+                        </td>
+                        <td width="30%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDS11055.xml">XML</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="70%" align="left" valign="middle">
+                            <p>Tasmania</p>
+                        </td>
+                        <td width="30%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDT16000.xml">XML</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="70%" align="left" valign="middle">
+                            <p>Victoria</p>
+                        </td>
+                        <td width="30%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDV10750.xml">XML</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="70%" align="left" valign="middle">
+                            <p>Western Australia</p>
+                        </td>
+                        <td width="30%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDW13010.xml">XML</a></p>
+                        </td>
+                    </tr>
+                </table>
+                <h2>
+                    <a name="coastal" id="coastal"></a>Coastal waters forecasts </h2>
+                <p>Forecasts for coastal waters zones are also available in XML format.</p>
+                <table border="1" cellspacing="0" cellpadding="0" width="100%" summary="">
+                    <tr>
+                        <th width="70%" align="left" valign="middle">&nbsp;</th>
+                        <th width="30%" align="center" valign="middle">
+                            <p>Coastal waters</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td width="70%" align="left" valign="middle">
+                            <p>New South Wales/Australian Capital Territory</p>
+                        </td>
+                        <td width="30%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDN11001.xml">XML</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="70%" align="left" valign="middle">
+                            <p>Northern Territory</p>
+                        </td>
+                        <td width="30%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDD11030.xml">XML</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="70%" align="left" valign="middle">
+                            <p>Queensland</p>
+                        </td>
+                        <td width="30%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDQ11290.xml">XML</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="70%" align="left" valign="middle">
+                            <p>South Australia</p>
+                        </td>
+                        <td width="30%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDS11072.xml">XML</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="70%" align="left" valign="middle">
+                            <p>Tasmania</p>
+                        </td>
+                        <td width="30%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDT12329.xml">XML</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="70%" align="left" valign="middle">
+                            <p>Victoria</p>
+                        </td>
+                        <td width="30%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDV10200.xml">XML</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="70%" align="left" valign="middle">
+                            <p>Western Australia</p>
+                        </td>
+                        <td width="30%" align="center" valign="middle">
+                            <p><a href="ftp://ftp.bom.gov.au/anon/gen/fwo/IDW11160.xml">XML</a></p>
+                        </td>
+                    </tr>
+                </table> -->
+                <h2>
+                    <a name="warnings" id="warnings"></a>Warnings</h2>
+
+                    <p>The Bureau of Meteorology makes warnings available via the web and the <a href="https://www.bom.gov.au/bom-weather-app">BOM Weather app</a>.</p>
+                    <p>The Bureau offers <a href="/rss/rss-guide.shtml">RSS feeds</a> for state-based warnings.</p>
+                    <p>The <a href="https://www.bom.gov.au/weather-and-climate/warnings-and-alerts">National Warnings Summary page</a> provides a list of current warnings and automatically refreshes whenever a warning is issued.</p>
+                    <p>There are links on this page to the warning content, with the product code included in the link.</p>
+                    <p>Warnings available via Anonymous FTP are listed in the <a href="/catalogue/anon-ftp.shtml">Anonymous FTP product listing</a>.</p>
+                    <p>Please see the <a href="/catalogue/Bureau_of_Meteorology_warning_products_user_guide.pdf">warning products user guide</a> for more information.</p>
+                <h2>
+                    <a name="xml" id="xml"></a>XML and AMOC format information</h2>
+                    <p>Information on decoding the Bureau's XML forecast, warning and observation products can be found via:</p>
+                <ul>
+                    <li><a href="/schema/v1.7/product.xsd">XML schema</a></li>
+                    <li><a href="/schema/v1.7/amoc.xsd">AMOC schema</a></li>
+                    <li><a href="/catalogue/Bureau_of_Meteorology_spatial_data_user_guide.pdf">XML element information (see Appendix A)</a></li>
+                </ul>
+                <h2>
+                    <a name="obs-state" id="obs-state"></a>Observations - State/Territory summaries </h2>
+                <p>In addition to the below html summaries, State-based summaries are also available in xml format.</p>
+                <p>Please see the <a href="/catalogue/Observations-XML.pdf">State-based Observations 10-minute updates user guide</a> for more information.</p>
+                <h2>
+                    <a name="obs-ind" id="obs-ind"></a>Observations - individual stations
+                </h2>
+                <p>The Bureau provides its observational data in a number of formats for use as a data feed.</p>
+                <p>72-hour station based observational products are available in xml, axf and json formats.</p>
+                <p>Please see the <a href="/catalogue/72_hr_historical_obs.pdf">State-based half hourly observations (72-hour history) user guide</a> for more information.</p>
+                <br />
+                <table border="1" cellspacing="0" cellpadding="0" summary="" width="100%">
+                    <tr>
+                        <th width="40%" align="left" valign="middle">
+                            <p>&nbsp;</p>
+                        </th>
+                        <th width="20%" align="center" valign="middle">
+                            <p>Coastal Waters</p>
+                        </th>
+                        <th width="20%" align="center" valign="middle">
+                            <p>All Observations</p>
+                        </th>
+                        <th width="20%" align="center" valign="middle">
+                            <p>Capital City Area</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td width="40%" align="left" valign="middle">
+                            <p>Australian Capital Territory</p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p>N/A</p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p>N/A</p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://reg.bom.gov.au/act/observations/canberra.shtml">Canberra area</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="40%" align="left" valign="middle">
+                            <p>New South Wales</p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://www.bom.gov.au/nsw/observations/coastal.shtml">New South Wales</a></p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://www.bom.gov.au/nsw/observations/nswall.shtml">New South Wales</a></p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://reg.bom.gov.au/nsw/observations/sydney.shtml">Sydney area</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="40%" align="left" valign="middle">
+                            <p>Northern Territory</p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://www.bom.gov.au/nt/observations/coastal.shtml">Northern Territory</a></p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://www.bom.gov.au/nt/observations/ntall.shtml">Northern Territory</a></p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://reg.bom.gov.au/nt/observations/darwin.shtml">Darwin area</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="40%" align="left" valign="middle">
+                            <p>Queensland </p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://www.bom.gov.au/qld/observations/coastal.shtml">Queensland</a></p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://www.bom.gov.au/qld/observations/qldall.shtml">Queensland</a></p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://reg.bom.gov.au/qld/observations/brisbane.shtml">Brisbane area</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="40%" align="left" valign="middle">
+                            <p>South Australia </p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://www.bom.gov.au/sa/observations/coastal.shtml">South Australia</a></p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://www.bom.gov.au/sa/observations/saall.shtml">South Australia</a></p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://reg.bom.gov.au/sa/observations/adelaide.shtml">Adelaide area</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="40%" align="left" valign="middle">
+                            <p>Tasmania </p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://www.bom.gov.au/tas/observations/coastal.shtml">Tasmania</a></p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://www.bom.gov.au/tas/observations/tasall.shtml">Tasmania</a></p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://reg.bom.gov.au/tas/observations/hobart.shtml">Hobart area</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="40%" align="left" valign="middle">
+                            <p>Victoria</p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://www.bom.gov.au/vic/observations/coastal.shtml">Victoria</a></p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://www.bom.gov.au/vic/observations/vicall.shtml">Victoria</a></p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://reg.bom.gov.au/vic/observations/melbourne.shtml">Melbourne area</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="40%" align="left" valign="middle">
+                            <p>Western Australia</p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://www.bom.gov.au/wa/observations/coastal.shtml">Western Australia</a></p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://www.bom.gov.au/wa/observations/waall.shtml">Western Australia</a></p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://reg.bom.gov.au/wa/observations/perth.shtml">Perth area</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="40%" align="left" valign="middle">
+                            <p>Antarctic area</p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p>N/A</p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p><a href="https://www.bom.gov.au/ant/observations/antall.shtml">Antarctica</a></p>
+                        </td>
+                        <td width="20%" align="center" valign="middle">
+                            <p>N/A</p>
+                        </td>
+                    </tr>
+                </table>
+               
+                <h2>
+                    <a name="radar" id="radar"></a>Radar</h2>
+                    <p>Radar images for individual radars are issued every five-minutes.</p>  
+                    <p>Static radar transparencies and overlays are available in a separate directory.</p>
+                    <p>Please see the <a href="/catalogue/Bureau_of_Meteorology_radar_images_user_guide.pdf">radar images user guide</a> for more information.</p>
+                <h2>
+                    <a name="satellite" id="satellite"></a>Satellite</h2>
+                <p>Satellite images from the Himawari-9 satellite are issued every ten minutes  in JPG and GeoTIFF formats. File names include timestamps for these images.</p>
+                 <p>Please see the <a href="/catalogue/Bureau_of_Meteorology_satellite_images_JPG_format_user_guide.pdf">satellite images (JPG format)</a> and <a href="/catalogue/satellite_geotiff.pdf">satellite images (GeoTIFF format)</a> user guides for more information.</p>
+                
+                <h2>
+                    <a name="uv" id="uv"></a>UV</h2>
+                <p><a href="https://reg.bom.gov.au/uv/data.shtml">UV Index and sun protection times</a> are provided in text and graphical products.</p>
+                <h2>
+                    <a name="tech" id="tech"></a>Technical support </h2>
+                <p>If you have any further queries please send an email to: <a href="mailto:webreg@bom.gov.au">webreg@bom.gov.au</a>.</p>
+                <hr />
+                <br />
+                <p class="top"> <a href="#top">top</a></p>
+                
+                <p>Last updated:
+                    23 February 2026
+                </p>
+                <div class="clearfix"></div>
+
+            </div>
+            <!-- /middle-block -->
+
+
+        </div>
+        <!-- /content-block -->
+        <div id="left-block">
+<div id="section-nav"><a href="#content-block" class="access-info">Skip section menu</a>
+	  <a href="/weather-services/index.shtml"><img src="/weather-services/images/clouds91.jpg" alt="" width="185" height="130" border="0" title="Photographer: Tony Davis" class="nav-image" /></a><!--storm2.jpg-->
+	  <p class="section-heading"><a href="/weather-services/index.shtml">Weather Services</a></p>
+		<ul id="topmenu">
+		  <li><a href="/weather-services/public-access.shtml">Public Access Services</a>
+		  	<ul>
+
+				<li><a href="/australia/">Forecasts &amp; Warnings</a></li>
+		  	    <li><a href="/marine/">Marine</a></li>
+		  	    <li><a href="/watl/">Agriculture</a></li>
+		  	    <li><a href="/catalogue/data-feeds.shtml">Data Feeds</a></li>
+				<li><a href="/rss/">RSS</a></li>
+				<li><a href="/inside/forecast-accuracy.shtml">Bureau Forecast Accuracy</a></li>			
+		  	</ul>
+		  </li>
+		  <li><span style="color:#036;"><strong>Warning Services</strong></span>
+		    <ul>
+
+		        <li><a href="/weather-services/severe-weather-knowledge-centre/WarningsInformation_SW_STSW.shtml">Severe thunderstorms</a></li>
+		        <li><a href="/cyclone/">Tropical cyclones</a></li>
+		        <li><a href="/tsunami/index.shtml">Tsunami</a></li>
+		        <li><a href="/weather-services/bushfire/index.shtml">Bushfires</a></li>
+
+		    </ul>
+	      </li>
+		  <li><a href="http://reg.bom.gov.au/reguser/reguser.shtml">Registered Access Services</a>
+		    <ul>
+              <li><a href="http://reg.bom.gov.au/reguser/reguser.shtml">Registered access</a></li>
+              <li><a href="/defence/">Defence</a></li>
+              <!-- end latest weather links -->
+		    </ul>
+		  </li>
+          <li><a href="/weather-services/activities-projects.shtml">Activities &amp; Projects</a>
+            <ul>
+            <li><a href="/uv/">Ultra Violet index</a></li>
+	        <li><a href="/weather/radar/">Radar</a></li>
+            <li><a href="http://www.bom.gov.au/australia/meteye/">MetEye &amp; Graphical Views</a></li>
+            <li><a href="/nmoc/">Numerical weather prediction</a></li>
+            <li><a href="/storm_spotters/index.shtml">Storm spotters</a></li>
+
+
+            <li><a href="/announcements/sevwx/">Severe weather reports</a></li>
+            <li><a href="/other/voice.shtml">Telephone weather services</a></li>
+            <li><a href="/marine/radio-sat/marine-radio-sat.shtml">Marine radio</a></li>
+		    <li><a href="/info/thermal_stress/index.shtml">Thermal Comfort</a></li>
+            </ul>
+            </li>
+
+		<!--
+		  <li><a href="/NexGenFWS/">Forecast upgrade project</a>
+		    <ul>
+
+			  <li><a href="/NexGenFWS/nt/new_7day_forecasts.shtml">Changes to City and Towns</a></li>
+			   <li><a href="/NexGenFWS/nt/coastal-water.shtml">Changes to Coastal Waters</a></li>
+		    </ul>
+		  </li>
+		 -->
+<!-- /oceanography menu -->
+
+        </ul>
+
+<p class="top bb"><a href="#page">Top</a></p>
+
+</div>
+</div>
+
+        <hr class="clearfix" />
+        
+<div class="clr"><!-- clear columns --></div>
+</div>
+<!-- End: Columns -->
+</div>
+<!-- End: pagewrap -->
+<!-- Start: Footer -->
+<div id="footer">
+    <div id="footer-columns">
+        <ul id="fc-one">
+            <li class="icon-link border-bottom uppercase"><a href="/australia/warnings/?ref=ftr" id="icon-link-warnings"><span>Warnings</span></a></li>
+            <li class="row-link-first uppercase"><a href="/water/?ref=ftr">Water</a></li>
+            <li class="row-link uppercase"><a href="/climate/?ref=ftr">Climate</a></li>
+            <li class="row-link uppercase"><a href="/environment/?ref=ftr">Environment</a></li>
+            <li class="border-top"><a href="/cyclone/?ref=ftr">Tropical Cyclones</a></li>
+            <li><a href="/tsunami/?ref=ftr">Tsunami Warning Centre</a></li>
+            <li><a href="/watl/?ref=ftr">Agriculture - Water and the Land</a></li>
+            <li><a href="/marine/?ref=ftr">Marine &amp; Ocean</a></li>
+            <li><a href="/uv/?ref=ftr">UV &amp; Sun Protection</a></li>
+            <li><a href="/australia/flood/?ref=ftr">Rainfall &amp; River Conditions</a></li>
+        </ul>
+        <ul id="fc-two">
+            <li class="imagebox-links">
+                <h3 class="hidden">Graphical Views</h3>
+                <ul>
+                    <li class="first"><a href="/australia/radar/?ref=ftr" id="imagebox-link-radar">Radar</a></li>
+                    <li><a href="/australia/satellite/?ref=ftr" id="imagebox-link-sat">Sat</a></li>
+                    <li><a href="/australia/charts/?ref=ftr" id="imagebox-link-maps">Maps</a></li>
+                </ul>
+            </li>
+            <li><a href="/jsp/watl/rainfall/pme.jsp?ref=ftr">Rainfall Forecasts</a></li>
+            <li><a href="/climate/ahead/?ref=ftr">Seasonal Outlooks</a></li>
+            <li><a href="/climate/change/?ref=ftr">Climate Variability &amp; Change</a></li>
+            <li><a href="/climate/data/?ref=ftr">Climate Data Online</a></li>
+            <li><a href="/water/ssf/?ref=ftr">Seasonal Streamflow Forecasts</a></li>
+            <li><a href="/water/dashboards/#/water-storages/summary/state">Water Storage</a></li>
+        </ul>
+        <ul id="fc-three">
+            <li class="icon-link border-bottom"><a href="/australia/meteye?ref=ftr" id="icon-link-fe"><span>MetEye&trade;</span></a></li>
+            <li><a href="/weather-services/?ref=ftr">National Weather Services</a></li>
+            <li><a href="/aviation/?ref=ftr">Aviation Weather Services</a></li>
+            <li><a href="/defence/?ref=ftr">Defence Services</a></li>
+            <li><a href="//www.sws.bom.gov.au/?ref=ftr">Space Weather Services</a></li>
+            <li><a href="/reguser/?ref=ftr">Registered User Services</a></li>
+            <li><a href="/business-solutions/industry-solutions.shtml?ref=ftr">Industry Solutions</a></li>
+            <li><a href="/sep/?ref=ftr">Supplier Entry Point</a></li>
+        </ul>
+        <ul id="fc-four">
+            <li style="line-height: 15px;" class="icon-link row-link-1st row-double"><a href="https://www.facebook.com/bureauofmeteorology" id="icon-link-fb"><span>Facebook</span></a></li>
+            <li style="line-height: 15px;" class="icon-link row-link-2nd"><a id="icon-link-tw" href="https://media.bom.gov.au/social-media/"><span>Twitter</span></a></li>
+            <li style="line-height: 15px;" class="icon-link row-link-1st"><a href="https://www.youtube.com/user/BureauOfMeteorology" id="icon-link-yt"><span>Youtube</span></a></li>
+            <li style="line-height: 15px;" class="icon-link row-link-2nd"><a href="https://media.bom.gov.au/social?ref=ftr" id="icon-link-bl"><span>Blog</span></a></li>
+            <li style="line-height: 15px; margin-bottom: 9px; padding-bottom: 12px;" class="icon-link row-link-1st border-bottom"><a style="background-image: url('/images/ui/in-icon-sprite.gif');" href="https://www.instagram.com/bureauofmeteorology/" id="icon-link-in"><span>Instagram</span></a></li>
+            <li style="line-height: 15px; margin-bottom: 9px; padding-bottom: 12px;" class="icon-link row-link-2nd border-bottom"><a href="/rss/?ref=ftr" id="icon-link-rss"><span>RSS</span></a></li>
+            <li style="line-height: 15px;" class="row-link-first"><a href="/careers/?ref=ftr">Careers</a></li>
+            <li style="line-height: 15px;" class="row-link"><a href="/site-map/?ref=ftr">Sitemap</a></li>
+            <li style="line-height: 15px;" class="row-link"><a href="/other/feedback/?ref=ftr">Feedback</a></li>
+            <li style="line-height: 15px;" class="border-top"><a href="/foi/?ref=ftr">Freedom of Information</a></li>
+            <li style="line-height: 15px;"><a href="/iwk/?ref=ftr">Indigenous Weather Knowledge</a></li>
+            <li style="line-height: 15px;"><a href="/lam/glossary/?ref=ftr">Glossary</a></li>
+            <li style="line-height: 15px;"><a href="/climate/data-services/education.shtml ">Students and Teachers</a></li>
+        </ul>
+        <p id="timestamp">This page was created at <strong><!--#config timefmt="%H:%M" --><!--#echo var="DATE_LOCAL" --> on <!--#config timefmt="%A %e %B %Y (%Z)" --><!--#echo var="DATE_LOCAL" --></strong></p>
+        <p id="copyright">&#169; <a href="/other/copyright.shtml?ref=ftr">Copyright</a> Commonwealth of Australia <!--#config timefmt="%Y" --><!--#echo var="DATE_LOCAL" -->, Bureau of Meteorology (ABN 92 637 533 532) | <a href="/other/disclaimer.shtml?ref=ftr">Disclaimer</a> | <a href="/other/privacy.shtml?ref=ftr">Privacy</a> | <a href="/other/accessibility.shtml?ref=ftr">Accessibility</a></p>
+    </div>
+</div>
+<!-- End: Footer -->
+</div>
+<!-- End: PageHeight -->
+
+<script src="/includes/analytics.js" type="text/javascript"></script>
+
+    </div>
+    <!-- /page -->
+<noscript><img src="https://www.bom.gov.au/akam/13/pixel_1be012fc?a=dD1iNDczNDkzYzQxZjEzNjk1ZGQ1YjFhYzhkYjY0NjdkNWUyNWNkZTk2JmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+
+</html>

@@ -1,0 +1,23 @@
+{
+  "candidate_id": "DISC-2ACD9A951B154D",
+  "provider": "US EPA",
+  "dataset": "byBox",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "environmental",
+    "air_quality"
+  ],
+  "retrieved_utc": "2026-10-31T13:50:24.811129Z",
+  "request_url": "https://aqs.epa.gov/data/api/annualData/byBox?email=test@aqs.api&key=test&param=44201&bdate=20150501&edate=20150502&minlat=33.3&maxlat=33.6&minlon=-87.0&maxlon=-86.7",
+  "final_url": "https://aqs.epa.gov/data/api/annualData/byBox?email=test@aqs.api&key=test&param=44201&bdate=20150501&edate=20150502&minlat=33.3&maxlat=33.6&minlon=-87.0&maxlon=-86.7",
+  "status_code": 200,
+  "content_type": "application/json; charset=utf-8",
+  "byte_length": 41909,
+  "sha256": "98c0bb51798f70d2c4f61db92c0dd1beb3dff109b11be4066d7a8dc54c833d9d",
+  "etag": null,
+  "last_modified": null,
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/environmental/2026/10/31/DISC-2ACD9A951B154D/20261031T135024.811129Z_98c0bb51798f70d2.json",
+  "parent_id": "EPA-AQS",
+  "discovery_depth": 1
+}

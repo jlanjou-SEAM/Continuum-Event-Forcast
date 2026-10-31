@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+	
+
+<html lang="en">
+<head>
+<title>Search | Climate Data Online (CDO) | National Climatic Data Center (NCDC)</title>
+<meta name="description" content="Climate Data Online (CDO) main general search page for locating data within the National Climatic Data Center's (NCDC) archive of weather and climate data.">
+<meta name="application-name" content="Climate Data Online (CDO)">
+<meta name="msapplication-tooltip" content="Climate Data Online (CDO)" />
+
+<!--[if IE]>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="National Centers for Environmental Information (NCEI)">
+
+<link rel="shortcut icon" href="/shared/v1/images/favicon.ico">
+<link rel="apple-touch-icon" sizes="144x144" href="/shared/v1/images/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/shared/v1/images/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/shared/v1/images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="57x57" href="/shared/v1/images/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" href="/shared/v1/images/apple-touch-icon.png">
+
+<meta name="msapplication-task" content="name=NCEI;action-uri=https://www.ncei.noaa.gov/;icon-uri=https://www.ncei.noaa.gov/favicon.ico">
+<meta name="msapplication-TileColor" content="#007EC6">
+<meta name="msapplication-TileImage" content="/shared/v1/images/apple-touch-icon-144.png">
+<meta name="verify-v1" content="DjxBYfR0oM2KSNJl6i2BbxfTcXOGUnbglkT0QQj5KtI=">
+
+<!-- The following is a speed hack for IE browsers -->
+<!--[if IE]><![endif]-->
+<link type="text/css" rel="stylesheet" media="all" href="/shared/v1/css/reset.css">
+<link type="text/css" rel="stylesheet" media="all" href="/shared/v1/css/shared.css">
+<link type="text/css" rel="stylesheet" media="all" href="/shared/v1/css/layouts.css">
+<link type="text/css" rel="stylesheet" media="all" href="/shared/v1/css/messages.css">
+
+<link type="text/css" rel="stylesheet" media="screen and (max-width: 659px)" href="/shared/v1/css/layout_320.css"> 
+<link type="text/css" rel="stylesheet" media="screen and (min-width: 660px) and (max-width: 1023px)" href="/shared/v1/css/layout_640.css"> 
+<link type="text/css" rel="stylesheet" media="screen and (min-width: 1024px)" href="/shared/v1/css/layout_1024.css">
+
+<!--[if LTE IE 8]>
+	<link rel="stylesheet" type="text/css" media="all" href="/shared/v1/css/layout_1024.css">
+<![endif]-->
+
+<link type="text/css" rel="stylesheet" media="all" href="/shared/v1/css/smoothness/jquery-ui-1.10.2.custom.min.css">
+
+
+
+	
+		
+		<link rel="stylesheet" type="text/css" media="all" href="/cdo-web/resources-3.7/css/min/application.min.css">
+		<link rel="stylesheet" type="text/css" media="all" href="/cdo-web/resources-3.7/css/min/jquery-ui-1.10.2.custom.min.css">
+		<link rel="stylesheet" type="text/css" media="all" href="/cdo-web/resources-3.7/css/min/jquery-ui-override.min.css">
+		
+		<link rel="stylesheet" type="text/css" media="print" href="/cdo-web/resources-3.7/css/min/print.min.css">
+	
+	
+
+
+
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/shared/v1/css/ie.css">
+<![endif]-->
+
+<noscript>
+	<link rel="stylesheet" type="text/css" media="all" href="//fonts.googleapis.com/css?family=Open+Sans:400,700|Bitter:700,400">
+</noscript>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+<script>WebFont.load({ google: { families: ['Open+Sans', 'Bitter'] } });</script>
+
+
+
+
+	
+		
+
+		
+		<link rel="stylesheet" type="text/css" media="screen and (max-width: 659px)" href="/cdo-web/resources-3.7/css/min/search_320.min.css" />
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 660px) and (max-width: 1023px)" href="/cdo-web/resources-3.7/css/min/search_640.min.css" />
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 1024px)" href="/cdo-web/resources-3.7/css/min/search_1024.min.css" />
+
+		<!--[if LTE IE 8]>
+			<link rel="stylesheet" type="text/css" media="all" href="/cdo-web/resources-3.7/css/min/search_1024.min.css" />
+		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" media="all" href="/cdo-web/resources-3.7/css/min/noaa-daterangepicker.min.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="/cdo-web/resources-3.7/css/min/tiptip.min.css" />
+
+	
+	
+
+
+
+</head>
+
+<body class="search">
+	<div id="main">
+
+		
+		<header>
+	<div id="header" class="clearfix" role="banner">
+		<div class="inset clearfix">
+			<a class="noaalink" href="http://www.noaa.gov/"></a>
+			<div class="title"><a href="http://www.ncei.noaa.gov/" title="National Centers for Environmental Information">National Centers for Environmental Information<span>&nbsp;</span></a></div>
+			<a href="http://www.commerce.gov/" id="headDOC" title="Click to visit the U.S. Department of Commerce Website"></a>
+		</div>
+	</div>
+
+	
+	<div class="element-invisible">
+		<a class="element-invisible element-focusable" href="#main-content">Skip to main content</a><br>
+		<a class="element-invisible element-focusable" href="#site-search">Skip to site search</a>
+	</div>
+
+	<nav id="nav" class="clearfix" role="navigation">
+		<div class="inset">
+			<ul class="mainNav" role="menubar">
+				<li><a role="menuitem" href="https://www.ncei.noaa.gov/" title="Home">Home</a></li>
+				<li><a role="menuitem" href="https://www.ncei.noaa.gov/monitoring" title="Climate Information">Climate Information</a></li>
+				<li><a role="menuitem" href="https://www.ncei.noaa.gov/access" title="Data Access">Data Access</a></li>
+				<li><a role="menuitem" href="https://www.ncei.noaa.gov/contact" title="Contact Us">Contact</a></li>
+				<li><a role="menuitem" href="https://www.ncei.noaa.gov/about" title="About">About</a></li>
+			</ul>
+			<div class="navSearchForm" role="search">
+				<form name="sitesearchform" method="get" action="https://search.usa.gov/search">
+					<a id="site-search"></a>
+					<fieldset>
+						<legend>Search for articles, products, and data at the National Centers for Environmental Information</legend>
+						<input type="hidden" name="affiliate" value="NCDC">
+						<label for="sitesearch">Search Field:</label>
+						<input type="text" name="query" class="searchtext inputbox" id="sitesearch" value="Search" maxlength="50" tabindex="1">
+						<label for="sitesearchbutton">Search button:</label>
+						<input type="submit" class="submitbutton" id="sitesearchbutton" value="Search" tabindex="2">
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</nav>
+
+</header>
+
+		
+
+		
+		<div id="breadcrumbs">
+			<div class="inset">
+				<a href="//www.ncei.noaa.gov/" title="National Centers for Environmental Information" role="link">Home</a>&nbsp;&gt;&nbsp;<a href="/cdo-web/" title="Climate Data Online" role="link">Climate Data Online</a>&nbsp;&gt;&nbsp;Search
+				<ul class="extraLinks" role="menu">
+	<li role="menuitem"><a href="/cdo-web/datasets"><span class="linkBox cdoBrandDataSet"></span>Datasets</a></li>
+	<li role="menuitem"><a href="/cdo-web/search"><span class="linkBox cdoBrandSearch"></span>Search Tool</a></li>
+	<li role="menuitem"><a href="https://gis.ncdc.noaa.gov/maps/ncei/"><span class="linkBox cdoBrandMap"></span>Mapping Tool</a></li>
+	<li role="menuitem"><a href="/cdo-web/datatools"><span class="linkBox cdoBrandDataTool"></span>Data Tools</a></li>
+	<li role="menuitem"><a href="/cdo-web/faq"><span class="linkBox cdoBrandHelp"></span>Help</a></li>
+</ul>
+			</div>
+		</div>
+		
+
+		
+		<div id="content" class="clearfix">
+			<div class="inset">
+		
+
+				
+								<a id="maincontent"></a>
+
+				
+
+				<noscript>
+					<div id="scriptCookiesError" class="messageBlock msgError msgCookie">
+						<div>
+							<p>
+								Javascript has either been disabled or is not supported in your browser<br>
+								<em>Some of this site's functionality requires Javascript to be enabled.</em>
+							</p>
+						</div>
+					</div>
+				</noscript>
+
+				<h1><span class="cdoBrandBlock cdoBrandSearch"></span>Climate Data Online Search</h1>
+
+				
+
+				<div class="col-2-left-600 clearfix">
+
+					
+					<div id="messageContainer" class="messageBlock msgAlert" style="display:none" data-bind="visible:error">
+						<p data-bind="html: errorMessage"></p>
+						
+					</div>
+
+					<p>Start searching here to find past weather and climate data. Search within a date range and select specific type of search. All fields are required.</p>
+					<div class="cdoSearchBlock">
+						<form id="cdoForm" data-bind="submit: submitSearch" action="/cdo-web/search;jsessionid=A28172740D62462A178ADA5BA675EEF6?datasetid=GSOY" method="post">
+
+							<fieldset>
+								<legend class="tipTip tipOutputType">Select Weather Observation Type/Dataset</legend>
+								<div class="cdoFormStep clearfix">
+									
+									<select id="selectedDataset" class="formSelect dataSetSelect inputbox"
+										data-bind="value: selectedDataset, options: availableDatasets, optionsText: 'name', optionsCaption: 'Select a Dataset&hellip;',
+										optionsAfterRender: function(option, item) { ko.applyBindingsToNode(option, { css: { disabled: !item }, disable: !item }, item); }"
+										tabindex="1" title="Select an observation type or dataset to search">
+									</select>
+								</div>
+							</fieldset>
+
+							<fieldset>
+								<legend class="tipTip tipDateRange">Select Date Range</legend>
+								<div class="cdoFormStep clearfix">
+									
+									<div id="dateRangeContainer"></div>
+								</div>
+							</fieldset>
+
+							<fieldset>
+								<legend class="tipTip tipSearchFor">Search For</legend>
+								<div class="cdoFormStep clearfix">
+									
+									<select id="selectedResultType" class="formSelect dataSetSelect inputbox" title="Select the type of search, whether station, ZIP code, city, county, state, country, Climate Division, Climate Region, or Hydrologic Unit"
+										data-bind="value: selectedResultType, options: availableResultTypes, optionsText: 'name', css:{'formDisabled': formDisabled()}, disable: formDisabled()">
+									</select>
+								</div>
+							</fieldset>
+
+							<fieldset>
+								<legend class="tipTip tipSearchBy">Enter a Search Term</legend>
+								<div class="cdoFormStep clearfix">
+									
+									<input type="text" id="selectedSearchString" class="searchBox inputbox" placeholder="Enter a location name or identifier here" maxlength="80" title="Enter a location name, abbreviation, ZIP code or station ID to narrow your search"
+										data-bind="value: selectedSearchString, css: { 'border-red': error, 'formDisabled': formDisabled() }, disable: formDisabled()"/>
+								</div>
+							</fieldset>
+
+							
+							<input id="outputType.dataSet.id" name="outputType.dataSet.id" data-bind="value:selectedDataset() ? selectedDataset().id : &#39;&#39;" type="hidden" value="GSOY"/>
+							<input id="selectedStartDate" name="searchStartDate" data-bind="value:selectedStartDate() ? selectedStartDate() : &#39;&#39;" type="hidden" value=""/>
+							<input id="selectedEndDate" name="searchEndDate" data-bind="value:selectedEndDate() ? selectedEndDate() : &#39;&#39;" type="hidden" value=""/>
+							<input id="resultType" name="resultType" data-bind="value:selectedResultType() ? selectedResultType().id : &#39;&#39;" type="hidden" value=""/>
+							<input id="searchString" name="searchString" data-bind="value:selectedSearchString() ? selectedSearchString() : &#39;&#39;" type="hidden" value=""/>
+
+							<input type="submit" id="searchSubmit" class="button searchButton" form="cdoForm" value="Search" data-bind="css:{formDisabled: formDisabled() || amSubmitting()}, disable: formDisabled() || amSubmitting()" />
+
+						</form>
+					</div>
+				</div>
+
+				<aside class="helpBox searchHelp">
+					<h2 class="cdoBrandSearch">Search Guide</h2>
+					<div class="pad">
+						<h3>Select Type/Dataset</h3>
+						<p>Records of observations including details such as precipitation, wind, snowfall, and radar data. <a href="/cdo-web/datasets">Read more about the datasets and view data samples</a>.</p>
+						<h3>Select Date Range</h3>
+						<p>Defaults to the latest available year for the selected dataset or product but can be set to any date range within the available period of record.</p>
+						<h3>Search For</h3>
+						<p>Stations: Enter name, WBAN, GHCND, FAA, ICAO, NWSLI or COOP identifiers.</p>
+						<p>Locations: Enter name of city, county, state, country or other geographic location. <a href="//tools.usps.com/go/ZipLookupAction!input.action" rel="external">ZIP</a> codes and <a href="//www.nist.gov/itl/fips.cfm" rel="external">FIPS</a> identifiers are also valid.</p>
+					</div>
+				</aside>
+
+				
+				<div id="cartWidget"></div>
+
+				
+				<div id="confirmDialog" style="display:none">
+					<p>Climate Data Online's cart currently only supports ordering data from one dataset at a time. Changing datasets will remove all items in your cart. Do you wish to proceed?</p>
+				</div>
+
+		
+			</div>
+		</div>
+		
+
+		
+		<footer id="footer" class="clearfix">
+	<div class="inset">
+
+		<div class="subfooter">
+			<a role="link" href="https://www.commerce.gov/" rel="nofollow"><img src="/shared/v1/images/logos/logo_doc_dark.png" alt="Click to visit the U.S. Department of Commerce Website"></a>
+			<a role="link" href="https://www.usa.gov" rel="nofollow"><img src="/shared/v1/images/logos/logo_usagov.png" alt="Click to visit USA.gov"></a>
+			<a role="link" href="https://www.ready.gov" rel="nofollow"><img src="/shared/v1/images/logos/logo_ready.png" alt="Click to visit Ready.gov"></a>
+		</div>
+
+		<ul class="menu">
+			<li><a role="link" title="NCDC" href="//www.ncei.noaa.gov/">NCEI</a></li>
+			<li><a role="link" title="About" href="//www.ncei.noaa.gov/about">About</a></li>
+			<li><a role="link" title="General help section" href="//www.ncei.noaa.gov/sitemap">Site Map</a></li>
+		</ul>
+
+		<ul class="menu">
+			<li><a role="link" title="NOAA's Privacy Policy" href="http://www.noaa.gov/privacy.html" rel="external nofollow">Privacy</a></li>
+			<li><a role="link" title="Freedom of Information Act" href="http://www.rdc.noaa.gov/%7Efoia/" rel="external nofollow">FOIA</a></li>
+			<li><a role="link" title="Information Quality" href="http://www.cio.noaa.gov/Policy_Programs/info_quality.html" rel="external nofollow">Information Quality</a></li>
+			<li><a role="link" title="Disclaimer" href="http://www.noaa.gov/disclaimer.html" rel="external nofollow">Disclaimer</a></li>
+		</ul>
+
+		<ul class="menu last">
+			<li><a role="link" title="United States Department of Commerce" href="http://www.commerce.gov/" rel="external nofollow">Department of Commerce</a></li>
+			<li><a role="link" title="NOAA" href="http://www.noaa.gov" rel="external nofollow">NOAA</a></li>
+			<li><a role="link" title="NESDIS" href="http://www.nesdis.noaa.gov/" rel="external nofollow">NESDIS</a></li>
+		</ul>
+
+		<div class="clearfix"></div>
+
+		<div id="footerCrumbs" class="clearfix">
+			<a class="ext" href="//www.commerce.gov/" target="_blank" title="Department of Commerce">Department of Commerce</a><span class="ext">&nbsp;</span>&nbsp;&gt;&nbsp;<a class="ext" href="//www.noaa.gov/" target="_blank" title="NOAA">NOAA</a><span class="ext">&nbsp;</span>&nbsp;&gt;&nbsp;<a class="ext" href="//www.nesdis.noaa.gov/" target="_blank" title="NESDIS">NESDIS</a><span class="ext">&nbsp;</span>&nbsp;&gt;&nbsp;<a href="//www.ncei.noaa.gov/" title="NCEI">NCEI</a>
+		</div>
+
+	</div>
+</footer>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1Q1BML6E5"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-E1Q1BML6E5', { 'anonymize_ip': true });
+        gtag('event', 'page_view')
+    </script>
+
+
+		
+
+	</div>
+
+	
+	
+	
+	
+	<!--[if lte IE 9]>
+	<script type="text/javascript" src="/shared/v1/js/lib/html5shiv.min.js"></script>
+	<script type="text/javascript" src="/shared/v1/js/lib/html5shiv-printshiv.min.js"></script>
+<![endif]-->
+
+
+	
+		<script src="/cdo-web/resources-3.7/js/min/jquery.min.js"></script>
+		<script src="/cdo-web/resources-3.7/js/min/knockout.min.js"></script>
+		<script src="/cdo-web/resources-3.7/js/min/cdo.min.js"></script>
+		
+		<script type="text/javascript" src="/shared/v1/js/application.min.js"></script>
+	
+	
+
+
+	
+
+	
+	
+		
+			<script src="/cdo-web/resources-3.7/js/min/search.js"></script>
+		
+		
+	
+
+	<script>
+		$(function() {
+			ko.applyBindings(
+				new Search.ViewModel({
+					datasetId:'GSOY',
+					searchString: '',
+					searchStartDate: '',
+					searchEndDate: '',
+					resultType: ''
+				})
+			);
+		});
+	</script>
+	
+<script id="_fed_an_ua_tag" type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NOAA"></script></body>
+</html>

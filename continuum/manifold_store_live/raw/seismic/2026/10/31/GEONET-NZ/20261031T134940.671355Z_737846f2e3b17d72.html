@@ -1,0 +1,920 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link type="image/x-icon" href="https://www.geonet.org.nz/assets/images/favicon.ico" rel="shortcut icon" />
+    <link href="https://www.geonet.org.nz/assets/images/quake-apple-icon-57x57.png" rel="apple-touch-icon" />
+    <link href="https://www.geonet.org.nz/assets/images/quake-apple-icon-72x72.png" sizes="72x72" rel="apple-touch-icon" />
+    <link href="https://www.geonet.org.nz/assets/images/quake-apple-icon-114x114.png" sizes="114x114" rel="apple-touch-icon" />
+
+    <link rel="stylesheet" href="/assets/css/8edaf9a3-bootstrap.v5.min.css" integrity="sha384-UNC90G119O7sE1k/GbmEm/7gbDWZ1f9ZZpNS+5j9Kq6y7lhRTXgQ/U5ZjMM2xRK/" >
+    <link rel="stylesheet" href="/assets/css/c724e665-geonet.v7.css" integrity="sha384-l3PYb1KLiPIyx+f0/RDeK0G746CHsnt2VPOzGmpzp9W6972yPG/dUCrbXD+Ve4/n" >
+    <link rel="stylesheet" href="/assets/dependencies/@fortawesome/fontawesome-free/css/0df5a337-all.min.css" integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" >
+
+    <meta property="twitter:image" content="https://static.geonet.org.nz/images/squareGeoNeticon.jpg">
+    <meta property="og:title" content="GeoNet API">
+    <meta property="twitter:title" content="GeoNet API">
+    <meta property="og:description" content="geological hazard information for New Zealand.">
+    <meta property="twitter:description" content="geological hazard information for New Zealand.">
+    <meta property="og:image" content="https://static.geonet.org.nz/images/squareGeoNeticon.jpg">
+    <meta property="twitter:image:src" content="https://static.geonet.org.nz/images/squareGeoNeticon.jpg">
+
+    <title>GeoNet: API</title>
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light flex-column bg-primary">
+    <div class="container-fluid d-flex align-items-lg-end">
+        <div class="p-2">
+            <a class="text-white" href="https://www.geonet.org.nz">
+              <?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="177" height="69" viewBox="0 0 177 69">
+  <path d="M19.28,38.71c-1.96,.51-4.18,.68-5.94-.63-1.25-1.01-2.05-2.47-2.25-4.07-.43-3.42,2-6.54,5.42-6.97,1.62-.14,3.24,.13,4.72,.8l.73-2.41c-2.83-1.18-5.99-1.31-8.91-.36h0c-3.6,1.44-5.8,5.11-5.37,8.96,.16,3.57,2.69,6.6,6.18,7.39,2.85,.65,5.83,.4,8.53-.73v-8.37l-3.09,.04-.03,6.34Z" fill="#fff"/>
+  <path d="M42.97,28.92c-2.6,0-6.04,1.48-6.04,6.38s3.1,6.38,6.1,6.38c2.7,0,5.98-1.55,5.98-6.33,0-4.69-3.14-6.43-6.04-6.43Zm2.41,9.24c-.27,.56-.73,1-1.29,1.26-1.34,.61-2.91,.02-3.52-1.32-.97-1.77-.93-3.92,.1-5.65,.15-.27,.34-.52,.57-.72,1.13-1.02,2.86-.93,3.88,.2h0c1.33,1.84,1.44,4.29,.27,6.23Z" fill="#fff"/>
+  <path d="M31.89,29.19c-2.16-.69-4.52,0-5.95,1.77-1.2,1.47-1.73,3.37-1.48,5.25,.18,2.53,1.49,4.59,3.59,5.25,2.41,.74,5.04,.15,6.89-1.57l-1.12-1.8c-1.56,1.07-3.09,1.96-4.92,.83-1.19-.74-1.43-1.89-1.44-3.3h7.9c.07-1.28,.08-5.39-3.47-6.43Zm-2.98,4.51h-1.41c.07-1.52,1.32-2.72,2.84-2.73,1.28,.02,2.12,1.19,2.12,2.73h-3.56Z" fill="#fff"/>
+  <rect x="8.24" y="43.21" width="1.56" height="1.56" fill="#fff"/>
+  <rect x="11.24" y="43.21" width="1.56" height="1.56" fill="#fff"/>
+  <rect x="14.24" y="43.21" width="1.56" height="1.56" fill="#fff"/>
+  <rect x="17.24" y="43.21" width="1.56" height="1.56" fill="#fff"/>
+  <rect x="20.24" y="43.21" width="1.56" height="1.56" fill="#fff"/>
+  <rect x="23.24" y="43.21" width="1.56" height="1.56" fill="#fff"/>
+  <rect x="26.24" y="43.21" width="1.56" height="1.56" fill="#fff"/>
+  <rect x="29.25" y="43.21" width="1.56" height="1.56" fill="#fff"/>
+  <rect x="32.25" y="43.21" width="1.56" height="1.56" fill="#fff"/>
+  <rect x="35.25" y="43.21" width="1.56" height="1.56" fill="#fff"/>
+  <rect x="38.25" y="43.21" width="1.56" height="1.56" fill="#fff"/>
+  <rect x="41.25" y="43.21" width="1.56" height="1.56" fill="#fff"/>
+  <rect x="44.25" y="43.21" width="1.56" height="1.56" fill="#fff"/>
+  <rect x="47.25" y="43.21" width="1.56" height="1.56" fill="#fff"/>
+  <path d="M86.05,.32C39.81,.32,2.5,13.64,.76,32.96c0,0,7.75-28.39,84.9-28.39,30.3,0,82.49,11.77,82.49,29.76,0,20.9-46.66,32.83-80.95,33.6l.12,.56c44.36,2.07,89.42-13.27,89.42-33.14,0-29.04-62.71-35.02-90.69-35.02Z" fill="#fff"/>
+  <path d="M75.15,33.65c-.02-1.51-.85-2.66-2.12-2.68-.5,0-.99,.13-1.41,.38-.78,.51-1.28,1.37-1.34,2.3h0s4.87,0,4.87,0Z" fill="#fff"/>
+  <polygon points="101.96 17.77 103.4 17.73 105.06 33.24 105.98 20 107.42 19.95 109.17 33.61 110.46 22.41 111.89 22.36 113.79 33.1 115.49 25.8 116.86 25.67 118.64 29.67 129.98 29.67 100.61 13.64 101.31 29.47 101.95 17.77 101.96 17.77" fill="#fff"/>
+  <path d="M92.29,43.26l1.69-23.26,1.44-.03,1.53,12.85,1.95-20.04c-3.22,3.49-7.76,5.45-12.5,5.41-4.7,.09-9.2-1.92-12.28-5.47l-23.86,12.67v21.04h110.5l-28.12-15.33h0s-14.88,0-14.88,0l-1.35-2.9-2.02,8.64-1.42-.04-1.65-9.33-1.4,12.18h-1.44s-1.57-12.26-1.57-12.26l-.98,14.11-1.44,.03-1.59-14.8-.96,17.39h-1.44s-1-22.68-1-22.68l-1.78,18.18h-1.44s-1.42-11.97-1.42-11.97l-1.12,17.05h-21.08v-1.45h19.61Zm-13.13-14h1.99v-4.49h2.9v4.44h2.82v2.14h-2.86l-.14,6.69c0,.86,.59,1.02,1.2,.91l1.57-.36,.54,1.89c-1.19,.76-2.61,1.1-4.02,.96-1.27-.24-2.08-.76-2.19-2.84l.08-7.22h-1.9v-2.13Zm-25.87,15.51h-1.56v-1.56h1.56v1.56Zm.64-2.98h0s-2.86,.05-2.86,.05v-15.84l3.26-1.66,7.72,12.42v-12.02h3.09l-.04,16.04-3.24,1.01-7.91-12.77-.02,12.77Zm2.34,2.98h-1.56v-1.56h1.56v1.56Zm2.98,0h-1.56v-1.56h1.57v1.56Zm2.98,0h-1.56v-1.56h1.56v1.56Zm2.98,0h-1.56v-1.56h1.56v1.56Zm2.98,0h-1.56v-1.56h1.56v1.56Zm2.98,0h-1.56v-1.56h1.56v1.56Zm-.43-3.32h0c-2.1-.66-3.41-2.72-3.59-5.25-.25-1.88,.29-3.78,1.48-5.25,.47-.55,1.03-1.01,1.66-1.37,1.33-.75,2.91-.91,4.37-.45,3.55,1.03,3.54,5.15,3.47,6.42h-.08v.05h-7.81c.01,1.4,.26,2.53,1.44,3.25,1.24,.76,2.81,.67,3.96-.21,.29-.17,.58-.36,.87-.56h0s.06-.03,.09-.05l1.12,1.8c-.4,.32-.81,.61-1.25,.87-1.69,1.1-3.8,1.38-5.72,.75Z" fill="#fff"/>
+  <path d="M9.69,55.24c.39-.53,.96-.79,1.71-.79,1.13,0,1.8,.57,2.02,1.7h1.12c-.12-.84-.45-1.48-1-1.94s-1.26-.68-2.15-.68c-1.09,0-1.93,.35-2.53,1.06s-.9,1.7-.9,2.99v.74c0,.79,.16,1.49,.45,2.09s.71,1.07,1.25,1.39,1.16,.49,1.85,.49,1.29-.1,1.81-.31,.92-.51,1.21-.93v-3.13h-3.09v.92h1.97v1.91c-.21,.22-.47,.38-.79,.47-.32,.09-.69,.14-1.11,.14-.75,0-1.34-.28-1.78-.85-.44-.56-.66-1.33-.66-2.28v-.7c0-1,.2-1.77,.59-2.3Z" fill="#fff"/>
+  <path d="M18.85,55.72c-.5,0-.97,.14-1.4,.42s-.77,.67-1.01,1.16-.36,1.06-.36,1.68v.2c0,.95,.27,1.7,.81,2.26s1.24,.85,2.1,.85c1.06,0,1.86-.41,2.39-1.22l-.66-.52c-.2,.26-.43,.46-.7,.62s-.59,.23-.97,.23c-.54,0-.98-.19-1.33-.58s-.53-.89-.55-1.51h4.29v-.45c0-1.01-.23-1.79-.69-2.33s-1.1-.81-1.92-.81Zm1.52,2.71h-3.18c.07-.57,.25-1.02,.55-1.34s.66-.48,1.1-.48,.81,.15,1.08,.45,.41,.73,.45,1.28v.08Z" fill="#fff"/>
+  <path d="M25.39,55.72c-.56,0-1.06,.13-1.49,.4s-.78,.65-1.02,1.15-.37,1.05-.37,1.68v.08c0,.98,.27,1.78,.8,2.37s1.23,.9,2.09,.9c.57,0,1.08-.14,1.51-.41s.78-.66,1.01-1.15,.35-1.04,.35-1.66v-.08c0-.99-.27-1.79-.8-2.38s-1.23-.9-2.09-.9Zm1.32,5.04c-.32,.43-.76,.65-1.31,.65s-.98-.21-1.31-.64-.49-.99-.49-1.69c0-.79,.16-1.4,.49-1.83s.76-.64,1.29-.64,.99,.22,1.32,.65,.5,1,.5,1.69c0,.78-.16,1.38-.49,1.81Z" fill="#fff"/>
+  <polygon points="35.35 60.25 31.04 53.64 29.91 53.64 29.91 62.17 31.04 62.17 31.04 55.6 35.34 62.17 36.47 62.17 36.47 53.64 35.35 53.64 35.35 60.25" fill="#fff"/>
+  <path d="M40.89,55.72c-.5,0-.97,.14-1.4,.42s-.77,.67-1.01,1.16-.36,1.06-.36,1.68v.2c0,.95,.27,1.7,.81,2.26s1.24,.85,2.1,.85c1.06,0,1.86-.41,2.39-1.22l-.66-.52c-.2,.26-.43,.46-.7,.62s-.59,.23-.97,.23c-.54,0-.98-.19-1.33-.58s-.53-.89-.55-1.51h4.29v-.45c0-1.01-.23-1.79-.69-2.33s-1.1-.81-1.92-.81Zm1.52,2.71h-3.18c.07-.57,.25-1.02,.55-1.34s.66-.48,1.1-.48,.81,.15,1.08,.45,.41,.73,.45,1.28v.08Z" fill="#fff"/>
+  <path d="M46.48,61.18c-.11-.13-.16-.32-.16-.57v-3.94h1.18v-.84h-1.18v-1.54h-1.08v1.54h-1.15v.84h1.15v3.93c0,.54,.12,.96,.37,1.25s.61,.44,1.1,.44c.27,0,.55-.04,.83-.12v-.87c-.22,.05-.39,.07-.52,.07-.25,0-.43-.06-.54-.19Z" fill="#fff"/>
+  <path d="M54.53,53.64l-3.26,8.53h1.16l.8-2.23h3.57l.81,2.23h1.15l-3.26-8.53h-.98Zm-.96,5.38l1.45-3.99,1.45,3.99h-2.9Z" fill="#fff"/>
+  <path d="M63.17,53.64h-3.15v8.53h1.12v-3.34h2.01c.96,0,1.71-.22,2.22-.67s.78-1.08,.78-1.91c0-.79-.26-1.42-.79-1.89s-1.26-.71-2.19-.71Zm1.38,3.85c-.32,.28-.78,.43-1.38,.43h-2.02v-3.35h2.09c.56,.01,1,.17,1.32,.48,.32,.3,.48,.71,.48,1.22,0,.54-.16,.95-.48,1.23Z" fill="#fff"/>
+  <rect x="67.77" y="53.64" width="1.12" height="8.53" fill="#fff"/>
+</svg>
+            </a>
+        </div>
+        <button class="navbar-toggler navbar-toggler-right mt-2 mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                
+                
+                
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="/"
+                        rel=""
+                        title="API Documentation"
+                        target="_self"
+                    >
+                        
+                        <span class="d-inline-flex align-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16.571" height="14.5" viewBox="0 0 16.571 14.5">
+  <path id="Icon_open-home" data-name="Icon open-home" d="M8.286,0,0,6.214H2.071V14.5H6.214V10.357h4.143V14.5H14.5V6.152l2.071.062Z" fill="#fff"/>
+</svg>
+</span>
+                        API Documentation
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container-xl">
+<h2>GeoNet API</h2>
+
+<p>Welcome to api.geonet.org.nz. The data provided here is used for the GeoNet web site and other similar services.</p>
+
+<p>The GeoNet project makes all its data and images freely available. Please ensure you have read and understood our Data Policy and Disclaimer before using any of these services.</p>
+
+<h3>Versioning</h3>
+
+<p>API queries may be versioned via the Accept header. Please specify the <code>Accept</code> header for your request exactly as specified for the endpoint query you are using.</p>
+
+<p>If you don&#39;t specify an Accept header with a version then your request will be routed to the current highest API version of the query.</p>
+
+<p>Taking advantage of the API versioning will pay dividends in the future for any client that you write. We use the <a href="https://stedolan.github.io/jq/" rel="nofollow">jq</a> command for JSON pretty printing etc. A curl command might look like:</p>
+
+<pre><code>curl -H &#34;Accept: application/vnd.geo+json;version=2&#34; &#34;http://...API-QUERY...&#34; | jq .
+</code></pre>
+
+<p>You may also be able to find a browser plugin to help with setting the Accept header for requests.</p>
+
+<h3>Compression</h3>
+
+<p>The response for a query can be compressed. If your client can handle a compressed response then the reduced download size is a great benifit. Gzip compression is supported. You can request a compressed response by including <code>gzip</code> in your <code>Accept-Encoding</code> header.</p>
+
+<h3>Bugs</h3>
+
+<p>If you believe you have found a bug, please raise an issue on our <a href="https://github.com/GeoNet/help" rel="nofollow">Help repository</a>.</p>
+
+<h2>Endpoints</h2>
+
+<ul>
+<li><a href="#intensity" rel="nofollow">Intensity</a></li>
+<li><a href="#strong" rel="nofollow">Strong</a></li>
+<li><a href="#news" rel="nofollow">News</a></li>
+<li><a href="#quake" rel="nofollow">Quake</a></li>
+<li><a href="#quakehistory" rel="nofollow">Quake History</a></li>
+<li><a href="#quakestats" rel="nofollow">Quake Stats</a></li>
+<li><a href="#quakes" rel="nofollow">Quakes</a></li>
+<li><a href="#quakecap" rel="nofollow">Quake CAP</a></li>
+<li><a href="#quakecapfeed" rel="nofollow">Quake CAP Feed</a></li>
+<li><a href="#val" rel="nofollow">Volcanic Alert Level</a></li>
+<li><a href="#volcquakes" rel="nofollow">Volcano Quakes</a></li>
+<li><a href="#networksensor" rel="nofollow">Network Data</a></li>
+<li><a href="#sensordetails" rel="nofollow">Network Sensor Details</a></li>
+</ul>
+
+<h3 id="intensity">Intensity</h3>
+
+<p>Retrieve shaking intensity information.</p>
+
+<pre><code>[GET] /intensity?type=(measured|reported)[&amp;aggregation=(max|median)][&amp;publicID=(publicID)]
+</code></pre>
+
+<h4>Accept Format/Version</h4>
+
+<pre><code>application/vnd.geo+json;version=2
+</code></pre>
+
+<h4>Parameters</h4>
+
+<dl>
+<dt>type</dt>
+<dd>the type of shaking information, either <code>reported</code> or <code>measured</code>. If <code>publicID</code> is not specified the information is for the last 60 minutes.</dd>
+<dt>aggregation</dt>
+<dd><em>optional</em> - the selected aggregation method performed on reported values where there is a distribution of values. Default is max. Only available with <code>type=reported</code>.</dd>
+<dt>publicID</dt>
+<dd><em>optional</em> - a valid quake id. Returns shaking information in a time window around the quake time. Only available with <code>type=reported</code>.</dd>
+</dl>
+
+<h4>Response</h4>
+
+<p>GeoJSON features with the following properties for both <code>reported</code> and <code>measured</code> queries.</p>
+
+<dl>
+<dt>mmi</dt>
+<dd>the MMI measured at the point or reported in the area around the point.</dd>
+</dl>
+
+<p>For <code>measured</code> queries the addtional GeoJSON properites</p>
+
+<dl>
+<dt>count</dt>
+<dd>the count of MMI values reported in the area of around the point.</dd>
+</dl>
+
+<p>As well as a summary of report counts by MMI.</p>
+
+<h4>Examples</h4>
+
+<ul>
+<li><a href="/intensity?type=measured" rel="nofollow">/intensity?type=measured</a></li>
+<li><a href="/intensity?type=reported" rel="nofollow">/intensity?type=reported</a></li>
+<li><a href="/intensity?type=reported&amp;aggregation=median" rel="nofollow">/intensity?type=reported&amp;aggregation=median</a></li>
+<li><a href="/intensity?type=reported&amp;publicID=2013p407387" rel="nofollow">/intensity?type=reported&amp;publicID=2013p407387</a></li>
+<li><a href="/intensity?type=reported&amp;aggregation=median&amp;publicID=2013p407387" rel="nofollow">/intensity?type=reported&amp;aggregation=median&amp;publicID=2013p407387</a></li>
+</ul>
+
+<h3 id="strong">Strong</h3>
+
+<p>Retrieve strong motion information for specified quake.</p>
+
+<pre><code>[GET] /intensity/strong/processed/(publicID)
+</code></pre>
+
+<h4>Accept Format</h4>
+
+<pre><code>application/json
+</code></pre>
+
+<h4>Parameters</h4>
+
+<dl>
+<dt>publicID</dt>
+<dd>- a valid quake id. Returns strong motion data for the quake.</dd>
+</dl>
+
+<h4>Response</h4>
+
+<p>GeoJSON data containing quake information and strong motion data from stations:</p>
+
+<dl>
+<dt>metadata</dt>
+<dd>- metadata about the quake.</dd>
+<dt>strong motion data</dt>
+<dd>- GeoJSON features on strong motion data from stations.</dd>
+</dl>
+
+<h4>Units</h4>
+
+<p>PGA (Peak ground acceleration): %g<br>
+PGV (Peak ground velocity): cm/second</p>
+
+<h4>Examples</h4>
+
+<ul>
+<li><a href="/intensity/strong/processed/2020p666015" rel="nofollow">/intensity/strong/processed/2020p666015</a></li>
+</ul>
+
+<h3 id="news">News</h3>
+
+<p>A simple JSON feed of GeoNet news.</p>
+
+<pre><code>[GET] /news/geonet
+</code></pre>
+
+<h4>Accept Format/Version</h4>
+
+<pre><code>application/json;version=2
+</code></pre>
+
+<h4>Parameters</h4>
+
+<p>No query parameters are required.</p>
+
+<h4>Response</h4>
+
+<p>JSON with the following properties</p>
+
+<dl>
+<dt>mlink</dt>
+<dd>a link to a mobile version of the news story.</dd>
+<dt>link</dt>
+<dd>a link to the news story.</dd>
+<dt>published</dt>
+<dd>the date the story was published.</dd>
+<dt>title</dt>
+<dd>the title of the story.</dd>
+</dl>
+
+<h4>Examples</h4>
+
+<p><a href="/news/geonet" rel="nofollow">/news/geonet</a></p>
+
+<h3 id="quake">Quake</h3>
+
+<p>Information for a single quake</p>
+
+<pre><code>[GET] /quake/(publicID)
+</code></pre>
+
+<h4>Accept Format/Version</h4>
+
+<pre><code>application/vnd.geo+json;version=2
+</code></pre>
+
+<h4>Parameters</h4>
+
+<dl>
+<dt>publicID</dt>
+<dd>A valid publicID for a quake e.g. <code>2014p715167</code></dd>
+</dl>
+
+<h4>Response</h4>
+
+<p>GeoJSON features with the following properties:</p>
+
+<dl>
+<dt>publicID</dt>
+<dd>the unique public identifier for this quake.</dd>
+<dt>time</dt>
+<dd>the origin time of the quake.</dd>
+<dt>depth</dt>
+<dd>the depth of the quake in km.</dd>
+<dt>magnitude</dt>
+<dd>the summary magnitude for the quake.</dd>
+<dt>locality</dt>
+<dd>distance and direction to the nearest locality.</dd>
+<dt>MMI</dt>
+<dd>the calculated MMI shaking at the closest locality in the New Zealand region.</dd>
+<dt>quality</dt>
+<dd>the quality of this information: <code>best</code>, <code>preliminary</code>, <code>automatic</code>, <code>deleted</code>.</dd>
+</dl>
+
+<h4>Examples</h4>
+
+<p><a href="/quake/2013p407387" rel="nofollow">/quake/2013p407387</a></p>
+
+<h3 id="quakehistory">Quake History</h3>
+
+<p>Location history for a single quake. Not all quakes have a location history.</p>
+
+<pre><code>[GET] /quake/history/(publicID)
+</code></pre>
+
+<h4>Accept Version</h4>
+
+<pre><code>application/vnd.geo+json;version=2
+</code></pre>
+
+<h4>Parameters</h4>
+
+<dl>
+<dt>publicID</dt>
+<dd>A valid publicID for a quake e.g. <code>2014p715167</code></dd>
+</dl>
+
+<h4>Response</h4>
+
+<p>GeoJSON features with the following properties:</p>
+
+<dl>
+<dt>publicID</dt>
+<dd>the unique public identifier for this quake.</dd>
+<dt>time</dt>
+<dd>the origin time of the quake.</dd>
+<dt>modificationTime</dt>
+<dd>the modification time of this information.</dd>
+<dt>depth</dt>
+<dd>the depth of the quake in km.</dd>
+<dt>magnitude</dt>
+<dd>the summary magnitude for the quake.</dd>
+<dt>locality</dt>
+<dd>distance and direction to the nearest locality.</dd>
+<dt>MMI</dt>
+<dd>the calculated MMI shaking at the closest locality in the New Zealand region.</dd>
+<dt>quality</dt>
+<dd>the quality of this information: <code>best</code>, <code>preliminary</code>, <code>automatic</code>, <code>deleted</code>.</dd>
+</dl>
+
+<h4>Examples</h4>
+
+<p><a href="/quake/history/2013p407387" rel="nofollow">/quake/history/2013p407387</a></p>
+
+<h3 id="quakestats">Quake Stats</h3>
+
+<p>Quake statistics.</p>
+
+<p>[GET] /quake/stats</p>
+
+<h4>Accept Version</h4>
+
+<pre><code>application/json;version=2
+</code></pre>
+
+<h4>Response</h4>
+
+<dl>
+<dt>magnitudeCount</dt>
+<dd>contains three members that summarise magnitude by count over the last 7, 28, and 365 days.</dd>
+<dt>rate</dt>
+<dd>contains the member perDay that gives a per day summary by count of quake occurence.</dd>
+</dl>
+
+<h4>Examples</h4>
+
+<p><a href="/quake/stats" rel="nofollow">/quake/stats</a></p>
+
+<h3 id="quakes">Quakes</h3>
+
+<p>Returns quakes possibly felt in the New Zealand region during the last 365 days up to a maximum of 100 quakes.</p>
+
+<pre><code>[GET] /quake?MMI=(int)
+</code></pre>
+
+<h4>Accept Version</h4>
+
+<pre><code>application/vnd.geo+json;version=2
+</code></pre>
+
+<h4>Parameters</h4>
+
+<dl>
+<dt>MMI</dt>
+<dd>request quakes that may have caused shaking greater than or equal to the MMI value in the New Zealand region. Allowable values are <code>-1..8</code> inclusive. <code>-1</code> is used for quakes that are to small to calculate a stable MMI value for.</dd>
+</dl>
+
+<h4>Response</h4>
+
+<p>GeoJSON features with the following properties:</p>
+
+<dl>
+<dt>publicID</dt>
+<dd>the unique public identifier for this quake.</dd>
+<dt>time</dt>
+<dd>the origin time of the quake.</dd>
+<dt>depth</dt>
+<dd>the depth of the quake in km.</dd>
+<dt>magnitude</dt>
+<dd>the summary magnitude for the quake.</dd>
+<dt>locality</dt>
+<dd>distance and direction to the nearest locality.</dd>
+<dt>mmi</dt>
+<dd>the calculated MMI shaking at the closest locality in the New Zealand region.</dd>
+<dt>quality</dt>
+<dd>the quality of this information: <code>best</code>, <code>preliminary</code>, <code>automatic</code>, <code>deleted</code>.</dd>
+</dl>
+
+<h4>Examples</h4>
+
+<p><a href="/quake?MMI=3" rel="nofollow">/quake?MMI=3</a></p>
+
+<h3 id="quakecap">Quake CAP</h3>
+
+<p>Information in CAP format for a single quake.</p>
+
+<pre><code>[GET] /cap/1.2/GPA1.0/quake/(ID)
+</code></pre>
+
+<h4>Accept Version</h4>
+
+<p>Queries to this endpoint are not versioned by accept header.</p>
+
+<h4>Parameters</h4>
+
+<dl>
+<dt>ID</dt>
+<dd>a valid quake CAP ID from the Quake CAP Feed.</dd>
+</dl>
+
+<h4>Example Response</h4>
+
+<p>The response is a CAP document using the Google Public Alerts CAP v1.0 profile e.g.,</p>
+
+<pre><code>&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;
+    &lt;alert xmlns=&#34;urn:oasis:names:tc:emergency:cap:1.2&#34;&gt;
+        &lt;identifier&gt;2.49.0.0.554.1.2015p012816.1420493554884741&lt;/identifier&gt;
+        &lt;sender&gt;https://geonet.org.nz&lt;/sender&gt;
+        &lt;sent&gt;2015-01-06T10:32:34+13:00&lt;/sent&gt;
+        &lt;status&gt;Actual&lt;/status&gt;
+        &lt;msgType&gt;Alert&lt;/msgType&gt;
+        &lt;scope&gt;Public&lt;/scope&gt;
+        &lt;info&gt;
+            &lt;language&gt;en-NZ&lt;/language&gt;
+            &lt;category&gt;Geo&lt;/category&gt;
+            &lt;event&gt;Earthquake&lt;/event&gt;
+            &lt;responseType&gt;Monitor&lt;/responseType&gt;
+            &lt;urgency&gt;Past&lt;/urgency&gt;
+            &lt;severity&gt;Moderate&lt;/severity&gt;
+            &lt;certainty&gt;Observed&lt;/certainty&gt;
+            &lt;onset&gt;2015-01-06T10:31:34+13:00&lt;/onset&gt;
+            &lt;expires&gt;2015-01-08T10:32:34+13:00&lt;/expires&gt;
+            &lt;senderName&gt;Earth Sciences New Zealand (GeoNet)&lt;/senderName&gt;
+            &lt;headline&gt;Quake 25 km south-west of Arthur&amp;#39;s Pass , intensity severe, approx. M6.0, depth 5 km Tue Jan 06 2015 10:31 PM (NZDT).&lt;/headline&gt;
+            &lt;description&gt;A magnitude 6.0 earthquake occurred 25 km south-west of Arthur&amp;#39;s Pass, New Zealand at Tue Jan 06 2015 10:31 PM (NZDT). The quake was 5.1 kilometres deep and the intensity was severe close to the quake.  The quake may have been felt in Arthur&amp;#39;s Pass, Hokitika, Greymouth, Methven and surrounding localities.&lt;/description&gt;
+            &lt;instruction&gt;During an earthquake, if you are inside a building, move no more than a few steps, then Drop, Cover and Hold. Stay indoors until the shaking stops and you are sure it is safe to exit. If you are outdoors when the shaking starts, move no more than a few steps away from buildings, trees, streetlights and power lines, then Drop, Cover and Hold. After an earthquake, listen to your local radio stations as emergency management officials will be broadcasting the most appropriate advice for your community and situation. Expect to feel aftershocks. If you are in a damaged building, try to get outside and find a safe, open place. Use the stairs, not the elevators.&lt;/instruction&gt;
+            &lt;web&gt;https://geonet.org.nz/quakes/2015p012816&lt;/web&gt;
+            &lt;contact&gt;info@geonet.org.nz&lt;/contact&gt;
+            &lt;parameter&gt;
+                &lt;valueName&gt;PublicID&lt;/valueName&gt;
+                &lt;value&gt;2015p012816&lt;/value&gt;
+            &lt;/parameter&gt;
+            &lt;parameter&gt;
+                &lt;valueName&gt;Time&lt;/valueName&gt;
+                &lt;value&gt;2019-11-20T15:48:04+13:00&lt;/value&gt;
+            &lt;/parameter&gt;
+            &lt;parameter&gt;
+                &lt;valueName&gt;LatitudeLongitude&lt;/valueName&gt;
+                &lt;value&gt;-43.06,171.25&lt;/value&gt;
+            &lt;/parameter&gt;
+            &lt;parameter&gt;
+                &lt;valueName&gt;Depth&lt;/valueName&gt;
+                &lt;value&gt;5&lt;/value&gt;
+            &lt;/parameter&gt;
+            &lt;parameter&gt;
+                &lt;valueName&gt;Magnitude&lt;/valueName&gt;
+                &lt;value&gt;6.0&lt;/value&gt;
+            &lt;/parameter&gt;
+            &lt;parameter&gt;
+                &lt;valueName&gt;Locality&lt;/valueName&gt;
+                &lt;value&gt;25 km south-west of Arthur&amp;#39;s Pass, 40 km south-east of Hokitika, 65 km south of Greymouth, 70 km north-west of Methven&lt;/value&gt;
+            &lt;/parameter&gt;
+            &lt;parameter&gt;
+                &lt;valueName&gt;Quality&lt;/valueName&gt;
+                &lt;value&gt;best&lt;/value&gt;
+            &lt;/parameter&gt;
+            &lt;parameter&gt;
+                &lt;valueName&gt;Intensity&lt;/valueName&gt;
+                &lt;value&gt;severe&lt;/value&gt;
+            &lt;/parameter&gt;
+            &lt;parameter&gt;
+                &lt;valueName&gt;MMI&lt;/valueName&gt;
+                &lt;value&gt;8.0&lt;/value&gt;
+            &lt;/parameter&gt;
+            &lt;area&gt;
+                &lt;areaDesc&gt;25 km south-west of Arthur&amp;#39;s Pass, 40 km south-east of Hokitika, 65 km south of Greymouth, 70 km north-west of Methven&lt;/areaDesc&gt;
+                &lt;circle&gt;-43.06,171.25 71.3&lt;/circle&gt;
+            &lt;/area&gt;
+        &lt;/info&gt;
+    &lt;/alert&gt;
+</code></pre>
+
+<h3 id="quakecapfeed">Quake CAP Feed</h3>
+
+<p>Quake feed with CAP links for alerting.</p>
+
+<p>Feed of quakes in the last 48 hours of intensity moderate or higher in the New Zealand region and a suitable quality for alerting. Links (type <code>application/cap+xml</code>) to individual quakes in the requested CAP version and profile are included in the returned feed.</p>
+
+<pre><code>[GET] /cap/1.2/GPA1.0/feed/atom1.0/quake
+</code></pre>
+
+<h4>Accept Version</h4>
+
+<p>queries to this endpoint are not versioned by accept header.</p>
+
+<h4>Examples</h4>
+
+<p><a href="/cap/1.2/GPA1.0/feed/atom1.0/quake" rel="nofollow">/cap/1.2/GPA1.0/feed/atom1.0/quake</a></p>
+
+<h3 id="val">Volcanic Alert Level</h3>
+
+<p>Returns the current Volcanic Alert Level for volcanoes in New Zealand.</p>
+
+<pre><code>[GET] /volcano/val
+</code></pre>
+
+<h4>Accept Format/Version</h4>
+
+<pre><code>application/vnd.geo+json;version=2
+</code></pre>
+
+<h4>Response</h4>
+
+<p>GeoJSON features with the following properties:</p>
+
+<dl>
+<dt>volcanoID</dt>
+<dd>a unique identifier for the volcano.</dd>
+<dt>volcanoTitle</dt>
+<dd>the volcano title.</dd>
+<dt>level</dt>
+<dd>volcanic alert level.</dd>
+<dt>acc</dt>
+<dd>aviation colour code.</dd>
+<dt>activity</dt>
+<dd>volcanic activity.</dd>
+<dt>hazards</dt>
+<dd>most likely hazards.</dd>
+</dl>
+
+<h4>Examples</h4>
+
+<p><a href="/volcano/val" rel="nofollow">/volcano/val</a></p>
+
+<h3 id="volcquakes">Volcano Quakes</h3>
+
+<p>Returns quakes in the vicinity of a volcano (within a pre-defined region) in the past 60 days.</p>
+
+<pre><code>[GET] /volcano/quake/(volcanoID)
+</code></pre>
+
+<h4>Accept Format/Version</h4>
+
+<pre><code>application/vnd.geo+json;version=2
+</code></pre>
+
+<h4>Parameters</h4>
+
+<dl>
+<dt>volcanoID</dt>
+<dd>A valid volcanoID e.g. <code>ruapehu</code></dd>
+</dl>
+
+<h4>Response</h4>
+
+<p>GeoJSON features with the following properties:</p>
+
+<dl>
+<dt>publicID</dt>
+<dd>the unique public identifier for this quake.</dd>
+<dt>time</dt>
+<dd>the origin time of the quake.</dd>
+<dt>depth</dt>
+<dd>the depth of the quake in km.</dd>
+<dt>magnitude</dt>
+<dd>the summary magnitude for the quake.</dd>
+<dt>locality</dt>
+<dd>distance and direction to the nearest locality.</dd>
+<dt>intensity</dt>
+<dd>quake intensity at the epicentre.</dd>
+<dt>regionIntensity</dt>
+<dd>quake intensity at the closest locality in the New Zealand region.</dd>
+<dt>mmi</dt>
+<dd>the calculated MMI shaking at the closest locality in the New Zealand region.</dd>
+<dt>quality</dt>
+<dd>the quality of this information: <code>best</code>, <code>preliminary</code>, <code>automatic</code>, <code>deleted</code>.</dd>
+<dt>status</dt>
+<dd>the evaluation status of this information: <code>automatic</code>, <code>reviewed</code>, <code>duplicate</code>, <code>deleted</code>.</dd>
+</dl>
+
+<h4>Examples</h4>
+
+<p><a href="/volcano/quake/ruapehu" rel="nofollow">/volcano/quake/ruapehu</a></p>
+
+<h3 id="networksensor">Network Data</h3>
+
+<p>Returns GeoNet network sensor data.</p>
+
+<pre><code>[GET] /network/station
+</code></pre>
+
+<h4>Accept Format/Version</h4>
+
+<pre><code>application/vnd.geo+json;version=2
+</code></pre>
+
+<h4>Parameters</h4>
+
+<dl>
+<dt>sensorType</dt>
+<dd>type(s) of the sensor e.g. <code>1,2,3,4,5,6,7,8,9,10,11,12,13</code>, which can be queried from <a href="/network/sensor/type" rel="nofollow">/network/sensor/type</a></dd>
+<dt>startDate</dt>
+<dd>the start date of the sensor, optional</dd>
+<dt>endDate</dt>
+<dd>the end date of the sensor, optional</dd>
+</dl>
+
+<h4>Response</h4>
+
+<p>GeoJSON features with the following properties:</p>
+
+<dl>
+<dt>Network</dt>
+<dd>the network id.</dd>
+<dt>Code</dt>
+<dd>the station code</dd>
+<dt>Location</dt>
+<dd>the location of the sensor</dd>
+<dt>Start</dt>
+<dd>Start date of the sensor</dd>
+<dt>End</dt>
+<dd>End date of the sensor</dd>
+<dt>SensorType</dt>
+<dd>The sensor type</dd>
+</dl>
+
+<h4>Examples</h4>
+
+<p><a href="/network/station?sensorType=2,6&amp;endDate=9999-01-01" rel="nofollow">/network/station?sensorType=2,6&amp;endDate=9999-01-01</a></p>
+
+<h3 id="sensordetails">Network Sensor Details</h3>
+
+<p>Returns GeoNet network sensor details.</p>
+
+<pre><code>[GET] /network/sensors
+</code></pre>
+
+<h4>Accept Format/Version</h4>
+
+<pre><code>application/json;version=2
+</code></pre>
+
+<h4>Parameters</h4>
+
+<dl>
+<dt>sensorType</dt>
+<dd>the type of the sensor</dd>
+<dt>station</dt>
+<dd>station code</dd>
+<dt>location</dt>
+<dd>the location of the sensor, optional</dd>
+</dl>
+
+<h4>Response</h4>
+
+<p>JSON features with the detailed information of the station</p>
+
+<h4>Examples</h4>
+
+<p><a href="/network/sensors?sensorType=8&amp;station=DUND" rel="nofollow">/network/sensors?station=DUND</a></p>
+
+</div>
+
+<div class="container">
+
+    
+<div class="container">
+    <div class="footer">
+        <div class="row d-flex">
+            <div class="col-xs-12 col-md"><a href="https://www.geonet.org.nz/about">About&nbsp;GeoNet</a></div>
+            <div class="col-xs-12 col-md"><a href="https://www.geonet.org.nz/contact">Contact&nbsp;GeoNet</a></div>
+            
+            <div class="col-xs-12 col-md"><a href="https://www.geonet.org.nz/policy">GeoNet&nbsp;Data&nbsp;Policy</a></div>
+            <div class="col-xs-12 col-md"><a href="https://www.geonet.org.nz/disclaimer">GeoNet&nbsp;Disclaimer</a></div>
+            <div class="col-xs-12 col-md"><a href="https://gns.cri.nz/Home/Contact-Us/Privacy-Policy" target="_blank" rel="external noopener noreferrer">GeoNet&nbsp;Privacy</a></div>
+            
+            <div id="appLinkContainer" class="col-12 d-md-none"><a id="appLink" href="" rel="external noopener noreferrer">Get&nbsp;our&nbsp;GeoNet&nbsp;App
+                <i id="osIcon" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="footer">
+        <div class="row">
+            <div class="col-12 d-md-none pt-1 pb-4">
+                <a href="https://www.geonet.org.nz/">
+                    <?xml version="1.0" encoding="UTF-8"?><svg role="img" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="160" height="65" viewBox="0 0 612 249"><title>GeoNet logo</title><path d="M2.35,116.05c.09,.08,.08,.26-.03,.55-.08-.08-.08-.26,.03-.55Z"/><g><rect fill="#d52e25" x="29.83" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="40.2" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="50.57" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="60.94" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="71.31" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="81.67" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="92.04" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="102.41" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="112.78" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="123.15" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="133.52" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="143.88" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="154.25" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="164.62" y="155.16" width="5.4" height="5.4"/><path fill="#d52e25" d="M4,119.77S30.77,21.67,297.33,21.67c104.67,0,285,40.67,285,102.83,0,72.19-161.2,113.42-279.67,116.08l.42,1.92c153.25,7.16,308.92-45.84,308.92-114.5,0-100.33-216.67-121-313.33-121C138.91,7,10,53.01,4,119.77Z"/></g><g><path fill="#144c3f" d="M46.5,92.54c10.47-3.7,20.52-2.43,30.78,1.23l-2.53,8.33c-5.39-2.14-10.67-3.46-16.32-2.77-8.5,1.03-15.7,6.98-17.93,15.05-2.49,9.01,.24,18.06,6.99,23.07,6.08,4.52,13.74,3.94,20.51,2.17l.1-21.89,10.67-.13v28.91c-4.26,2.29-17.04,5.49-29.47,2.51-12.43-2.99-20.46-12.95-21.34-25.52-.99-14.14,5.47-25.03,18.54-30.97Z"/><path fill="#144c3f" d="M170.71,128.04c.01,16.5-11.33,21.87-20.66,21.87-10.38,0-21.06-5.12-21.06-22.05s11.89-22.05,20.86-22.05c10.03,0,20.85,6.02,20.86,22.23Zm-13.47-11.84c-4.8-4.73-12.06-4.01-15.36,1.81-3.61,6.35-3.63,13.1-.34,19.53,3.62,7.07,12.83,7.21,16.63,.2,3.82-7.04,3.91-14.31-.93-21.54Z"/><path fill="#144c3f" d="M96.21,128.92c.02,4.89,.87,8.86,4.98,11.4,6.32,3.9,11.59,.83,16.99-2.86l3.87,6.21c-7.17,5.74-14.91,8.22-23.79,5.42-7.25-2.28-11.79-9.39-12.4-18.13-.46-6.68,.6-12.91,5.13-18.14,5.53-6.39,12.95-8.3,20.54-6.09,12.27,3.57,12.23,17.78,11.99,22.18m-22.27-6.59h12.3c0-5.32-2.9-9.36-7.33-9.44-4.95-.09-9.4,3.86-9.81,9.44,1.45,0,2.89,0,4.84,0Z"/><g><path fill="#144c3f" d="M244.21,122.14c1.45,0,2.89,0,4.84,0h11.98c-.07-5.23-2.95-9.18-7.33-9.26-1.74-.03-3.41,.45-4.88,1.31-2.54,1.63-4.36,4.47-4.62,7.95Z"/><path fill="#144c3f" d="M353.62,67.28l4.98-.13,5.75,53.57,3.16-45.75,4.97-.15,6.05,47.17,4.46-38.7,4.95-.15,6.56,37.09,5.89-25.22,4.72-.45,6.17,13.82h39.18l-101.48-55.36,2.4,54.67,2.23-40.42Zm-.67,5.56c-.13-.2-.19-.5-.15-.87,.15,.21,.18,.49,.15,.87Z"/><path fill="#144c3f" d="M459.63,113.39h-51.4l-4.65-10.01-6.98,29.85-4.9-.13-5.7-32.23-4.85,42.08-4.96,.03-5.44-42.38-3.37,48.74-4.98,.09-5.49-51.13-3.31,60.07-4.99-.03-3.45-78.34-6.12,62.78-4.97,.05-4.92-41.4-3.85,58.92h-72.83v-5h67.76l5.83-80.36,4.98-.11,5.27,44.41,6.75-69.22c-1.65,1.94-16.59,18.7-43.18,18.7-28.22,0-42.44-18.89-42.44-18.89l-82.44,43.78v72.7h381.76l-97.13-52.98Zm-184.75-6.41h6.87v-15.52h10.01v15.34h9.75v7.4h-9.88l-.47,23.11c0,2.97,2.03,3.53,4.15,3.16l5.43-1.23,1.87,6.54c-1.06,1.25-7.64,3.94-13.87,3.31-4.39-.83-7.2-2.64-7.58-9.83l.26-24.94h-6.55v-7.34Zm-89.39,53.58h-5.4v-5.4h5.4v5.4Zm2.2-10.32l-9.9,.18v-54.71l11.25-5.75,26.68,42.92v-41.54h10.69s-.13,55.42-.13,55.42l-11.2,3.49-27.33-44.11-.06,44.11Zm8.1,10.32h-5.4v-5.4h5.4v5.4Zm10.3,0h-5.4v-5.4h5.4v5.4Zm10.3,0h-5.4v-5.4h5.4v5.4Zm10.3,0h-5.4v-5.4h5.4v5.4Zm10.3,0h-5.4v-5.4h5.4v5.4Zm10.3,0h-5.4v-5.4h5.4v5.4Zm-1.52-11.48c-7.25-2.28-11.79-9.39-12.4-18.13-.46-6.68,.6-12.91,5.13-18.14,1.75-2.02,3.68-3.59,5.75-4.72,4.56-2.61,9.78-3.1,15.09-1.55,12.27,3.57,12.23,17.78,11.99,22.18h-.3c0,.06,0,.12,0,.18h-26.99c.04,4.83,.91,8.73,4.98,11.23,5.03,3.11,9.39,1.79,13.69-.74,1-.6,1.99-1.26,2.99-1.94v.02c.11-.07,.21-.13,.31-.2l3.87,6.21c-1.42,1.14-2.86,2.14-4.33,3-6.04,3.65-12.52,4.88-19.77,2.59Z"/></g></g></svg>
+
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-md-none pb-4">
+                <a target="_blank" href="https://earthsciences.nz" rel="external noopener noreferrer">
+                    <?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"  width="170" height="50" viewBox="0 0 357.93 94.58">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #062d51;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path class="cls-1" d="M98.71.57h18.8v4.73h-13.82v5.9h12.62v4.63h-12.62v6.25h13.88v4.73h-18.84V.57h-.02Z"/>
+      <path class="cls-1" d="M174.75,26.79h-4.72V.57h4.72v10.33h.04c.91-4.37,5.14-5.18,6.97-5.18,4.94,0,6.81,3.23,6.81,7.7v13.38h-4.72v-12.15c0-2.49-1.09-4.67-4.28-4.67-3,0-4.84,1.74-4.84,4.67v12.15h.02Z"/>
+      <path class="cls-1" d="M199.43,18.11l4.8-.97c.69,3.72,3.22,5.9,7.25,5.9,3.36,0,5.09-1.31,5.09-3.4s-1.52-3.23-6.46-3.98c-7.25-1.13-9.56-4.06-9.56-8.05,0-4.63,3.4-7.6,9.77-7.6,6.89,0,9.68,3.72,10.68,8.53l-4.88,1.01c-.83-3.46-2.31-5.28-6.02-5.28-2.92,0-4.54,1.31-4.54,3.28,0,1.74.97,3.01,6.71,3.98,7.37,1.19,9.34,4.23,9.34,7.95,0,4.73-3.28,7.91-10.46,7.91-7.94-.04-11.12-4.19-11.73-9.26v-.02Z"/>
+      <path class="cls-1" d="M233.71,10.01c-3.36,0-5.71,2.1-5.71,6.51s2.31,6.51,5.81,6.51,4.66-2.18,5.33-5.12l4.5.91c-.83,5.24-3.79,8.53-9.74,8.53-6.46,0-10.68-3.8-10.68-10.8s4.32-10.84,10.56-10.84,8.98,3.07,9.81,8.35l-4.54.75c-.61-2.89-2.13-4.81-5.33-4.81l-.02.02Z"/>
+      <path class="cls-1" d="M245.5,3.5V0h5.11v3.5h-5.11ZM245.72,26.79V6.25h4.72v20.54h-4.72Z"/>
+      <path class="cls-1" d="M252.96,16.78c0-6.95,4.11-11.06,10.47-11.06s9.38,3.94,9.38,9.58c0,.83,0,1.66-.08,2.75h-15.05c.43,3.46,2.45,5.16,5.81,5.16s4.5-1.62,5.11-3.72l4.11,1.19c-1.05,3.94-3.83,6.65-9.24,6.65-6.28,0-10.46-3.76-10.46-10.53l-.04-.02ZM257.72,14.56h10.74c-.26-3.19-1.92-4.85-5.15-4.85s-5.06,1.52-5.59,4.85Z"/>
+      <path class="cls-1" d="M306.55,10.01c-3.36,0-5.71,2.1-5.71,6.51s2.31,6.51,5.8,6.51,4.66-2.18,5.33-5.12l4.5.91c-.83,5.24-3.79,8.53-9.74,8.53-6.46,0-10.68-3.8-10.68-10.8s4.32-10.84,10.56-10.84,8.98,3.07,9.81,8.35l-4.54.75c-.61-2.89-2.13-4.81-5.33-4.81l-.02.02Z"/>
+      <path class="cls-1" d="M318.34,16.78c0-6.95,4.11-11.06,10.47-11.06s9.38,3.94,9.38,9.58c0,.83,0,1.66-.08,2.75h-15.05c.43,3.46,2.45,5.16,5.81,5.16s4.5-1.62,5.11-3.72l4.11,1.19c-1.05,3.94-3.83,6.65-9.24,6.65-6.28,0-10.46-3.76-10.46-10.53l-.04-.02ZM323.1,14.56h10.74c-.26-3.19-1.92-4.85-5.15-4.85s-5.06,1.52-5.59,4.85Z"/>
+      <path class="cls-1" d="M339.92,20.28l4.4-.87c.65,2.57,1.95,4.33,5.23,4.33,2.49,0,3.71-.97,3.75-2.57,0-1.48-1.05-2.28-5.15-3.01-5.55-1.09-7.5-3.01-7.5-6.29,0-3.72,2.71-6.11,8.08-6.11s7.9,2.41,8.77,6.33l-4.5,1.01c-.61-2.71-1.84-3.84-4.28-3.84-2.23,0-3.4.91-3.4,2.41s.83,2.41,4.98,3.11c5.71,1.05,7.64,3.15,7.64,6.29,0,3.84-2.67,6.33-8.47,6.33-6.6,0-8.81-3.07-9.56-7.08l.02-.04Z"/>
+      <path class="cls-1" d="M108.36,48.52c-1.48-2.57-3.57-6.65-4.98-9.58h-.08c.14,3.25.18,7.26.18,10.01v11.5h-4.76v-26.24h7.33l5.67,10.27c1.8,3.23,3.79,7.16,5.19,10.05h.04c-.04-3.01-.08-6.25-.08-8.83v-11.5h4.76v26.24h-6.5l-6.75-11.93h-.02Z"/>
+      <path class="cls-1" d="M124.06,50.44c0-6.95,4.11-11.06,10.47-11.06s9.38,3.94,9.38,9.58c0,.83,0,1.66-.08,2.75h-15.05c.43,3.46,2.45,5.16,5.8,5.16s4.5-1.62,5.11-3.72l4.11,1.19c-1.05,3.94-3.83,6.65-9.24,6.65-6.28,0-10.47-3.76-10.47-10.53l-.04-.02ZM128.8,48.2h10.74c-.26-3.19-1.92-4.85-5.15-4.85s-5.06,1.52-5.59,4.85Z"/>
+      <path class="cls-1" d="M164.96,47.94c.83,2.97,1.52,6.07,2.23,9.26h.08c.69-3.19,1.44-6.07,2.27-9.36l1.92-7.95h4.66l-6.2,20.54h-5.71l-2.31-8.96c-.69-2.75-1.26-5.5-1.8-8.35h-.08c-.53,2.79-1.18,5.64-1.84,8.35l-2.17,8.96h-5.67l-6.24-20.54h4.84l2.17,7.95c.91,3.23,1.66,6.21,2.31,9.36h.08c.69-3.19,1.4-6.29,2.17-9.26l2.05-8.05h5.11l2.09,8.05h.02Z"/>
+      <path class="cls-1" d="M206.42,60.45h-21.68v-4.73l14.97-16.7-.08-.22c-2.23.08-4.72.14-6.85.14h-7.58v-4.73h21.11v4.67l-15.05,16.7.08.26c2.09-.08,4.36-.14,6.2-.14h8.91v4.73l-.02.02Z"/>
+      <path class="cls-1" d="M206.78,50.44c0-6.95,4.11-11.06,10.46-11.06s9.38,3.94,9.38,9.58c0,.83,0,1.66-.08,2.75h-15.05c.43,3.46,2.45,5.16,5.81,5.16s4.5-1.62,5.11-3.72l4.11,1.19c-1.05,3.94-3.83,6.65-9.24,6.65-6.28,0-10.46-3.76-10.46-10.53l-.04-.02ZM211.52,48.2h10.74c-.26-3.19-1.92-4.85-5.15-4.85s-5.06,1.52-5.59,4.85Z"/>
+      <path class="cls-1" d="M255.96,60.39h-4.72v-26.79h4.72v26.79Z"/>
+      <path class="cls-1" d="M98.73,67.87h20.77v3.01h-8.79v23.21h-3.14v-23.21h-8.85v-3.01Z"/>
+      <path class="cls-1" d="M116.01,84c0-6.73,4.23-10.71,10.21-10.71s9.3,3.8,9.3,9.44c0,.47,0,1.31-.08,2.14h-16.37c.3,4.45,2.92,6.98,7.25,6.98,4.01,0,5.63-2.1,6.38-4.73l2.71.79c-1.05,4.12-4.05,6.65-9.08,6.65-6.32,0-10.29-3.98-10.29-10.59l-.02.02ZM119.11,82.37h13.57c-.22-4.12-2.35-6.43-6.54-6.43-3.93,0-6.54,2.18-7.03,6.43Z"/>
+      <path class="cls-1" d="M152.2,94.11h-4.05l-7.42-26.24h3.46l3.46,12.9c.87,3.54,1.74,6.91,2.49,10.41h.3c.91-3.58,1.8-6.77,2.84-10.37l3.89-12.94h3.57l3.89,12.94c1.01,3.58,1.84,6.77,2.74,10.37h.3c.75-3.5,1.66-6.87,2.53-10.41l3.36-12.9h3.36l-7.42,26.24h-4.05l-3.75-12.72c-.97-3.29-1.96-7.12-2.74-10.31h-.22c-.83,3.15-1.88,7.04-2.78,10.31l-3.71,12.72h-.02Z"/>
+      <path class="cls-1" d="M224.33,76.44h-3.28v-2.67h3.28v-5.82h3v5.82h6.85v2.67h-6.85v11.46c0,2.53.97,3.8,3.4,3.8,1.13,0,2.05-.18,3.22-.53l.43,2.75c-1.36.44-2.49.65-4.19.65-4.05,0-5.88-2.67-5.88-6.43v-11.71l.02.02Z"/>
+      <path class="cls-1" d="M281.1,86.02h-12l-3.28,8.09h-3.36l10.96-26.24h3.4l10.96,26.24h-3.4l-3.28-8.09ZM270.14,83.34h9.91l-1.18-2.89c-1.22-3.07-2.67-6.69-3.67-9.48h-.22c-1.05,2.85-2.45,6.43-3.67,9.48l-1.18,2.89h.02Z"/>
+      <path class="cls-1" d="M287.06,83.86c0-6.65,4.19-10.59,10.21-10.59s10.21,3.94,10.21,10.59-3.83,10.71-10.21,10.71-10.21-4.12-10.21-10.71ZM290.07,83.82c0,4.77,2.53,7.95,7.15,7.95s7.25-3.19,7.25-7.95-2.74-7.74-7.21-7.74-7.21,2.97-7.21,7.74h.02Z"/>
+      <path class="cls-1" d="M167.88,24.64v-2.45c-.91.22-2.17.61-3.22.61-2.05,0-2.84-1.01-2.84-3.01v-9.54h6.06v-3.98h-6.06V.57h-4.66v5.68h-2.78v3.98h2.78v10.31c0,3.84,1.92,6.83,6.42,6.83,1.88,0,2.96-.24,4.32-.65v-2.08h-.02Z"/>
+      <path class="cls-1" d="M126.37,5.74c4.11-.04,6.42,1.17,7.33,5.42h.04v-4.91h4.72v20.54h-4.72v-4.83h-.08c-.91,4.16-4.4,5.4-7.29,5.4-5.33,0-8.08-4.12-8.08-10.74s2.92-10.92,8.08-10.88ZM133.74,16.74v-.36c0-3.94-2.09-6.47-5.45-6.47-3.57,0-5.33,2.49-5.33,6.69s1.66,6.47,5.33,6.47c3.36,0,5.45-2.28,5.45-6.33Z"/>
+      <path class="cls-1" d="M236.69,39.4c4.11-.04,6.42,1.17,7.33,5.42h.04v-4.91h4.72v20.54h-4.72v-4.83h-.08c-.91,4.16-4.4,5.4-7.29,5.4-5.33,0-8.08-4.12-8.08-10.74s2.92-10.92,8.08-10.88ZM244.06,50.4v-.36c0-3.94-2.09-6.47-5.45-6.47-3.57,0-5.33,2.49-5.33,6.69s1.66,6.47,5.33,6.47c3.36,0,5.45-2.28,5.45-6.33Z"/>
+      <path class="cls-1" d="M266.03,39.4c4.11-.04,6.42,1.17,7.33,5.42h.04v-4.91h4.72v20.54h-4.72v-4.83h-.08c-.91,4.16-4.4,5.4-7.29,5.4-5.33,0-8.08-4.12-8.08-10.74s2.92-10.92,8.08-10.88ZM273.39,50.4v-.36c0-3.94-2.09-6.47-5.45-6.47-3.57,0-5.33,2.49-5.33,6.69s1.66,6.47,5.33,6.47c3.36,0,5.45-2.28,5.45-6.33Z"/>
+      <path class="cls-1" d="M152.87,10.23h-2.01c-3.67,0-5.09,2.57-5.09,6.17v10.41h-4.72V6.25h4.72v4.9h.08c.91-5.34,5.15-4.9,7.03-4.9h0v3.98Z"/>
+      <path class="cls-1" d="M279.98,26.79h-4.72V6.25h4.72v3.66h.04c.91-4.37,6.3-4.19,6.97-4.19,4.94,0,6.81,3.23,6.81,7.7v13.38h-4.72v-12.15c0-2.49-1.09-4.67-4.28-4.67-3,0-4.84,1.74-4.84,4.67v12.15h.02Z"/>
+      <path class="cls-1" d="M285.39,60.39h-4.72v-20.54h4.72v3.66h.04c.91-4.37,6.3-4.19,6.97-4.19,4.94,0,6.81,3.23,6.81,7.7v13.38h-4.72v-12.15c0-2.49-1.09-4.67-4.28-4.67-3,0-4.84,1.74-4.84,4.67v12.15h.02Z"/>
+      <path class="cls-1" d="M181.78,94.11h-3v-26.24h3v10.37h.04c.87-3.98,5.06-4.97,7.25-4.97,5.59,0,7.37,3.68,7.37,8.05v12.76h-3v-12.11c0-3.01-1.26-5.94-5.41-5.94-3.89,0-6.24,2.18-6.24,5.94v12.13Z"/>
+      <path class="cls-1" d="M207.31,73.29c3.41-.02,7.21,1.72,7.98,5.74h.04v-5.26h3v20.32h-3v-5.18h-.04c-.83,3.98-4.5,5.66-7.86,5.66-5.71,0-8.73-4.12-8.73-10.63s3.24-10.7,8.59-10.67l.02.02ZM215.35,84.1v-.26c0-4.73-2.71-7.84-6.99-7.84s-6.63,2.93-6.63,7.99,2.13,7.82,6.63,7.82,6.99-2.75,6.99-7.74v.02Z"/>
+      <path class="cls-1" d="M251.07,89.68h-.04c-.87,3.94-5.1,4.91-7.25,4.91-5.59,0-7.37-3.68-7.37-7.99v-12.8h3v12.11c0,3.01,1.26,5.94,5.41,5.94,3.83,0,6.24-2.18,6.24-5.94v-12.11h2.96v20.32h-2.96v-4.43Z"/>
+      <path class="cls-1" d="M316.6,55.56h-.08c-.91,4.16-4.5,5.4-7.29,5.4-5.33,0-8.08-4.12-8.08-10.74s2.92-10.92,8.08-10.88c2.77,0,6.42,1.19,7.33,5.44h.04v-11.16h4.72v26.79h-4.72v-4.85ZM316.6,50.34v-.36c0-3.94-2.09-6.47-5.45-6.47-3.57,0-5.33,2.45-5.33,6.69s1.66,6.47,5.33,6.47c3.36,0,5.45-2.28,5.45-6.33Z"/>
+      <g>
+        <path class="cls-1" d="M80.05,37.97H18.7v18.7h61.35v-18.7Z"/>
+        <path class="cls-1" d="M9.32,19.27h9.37v18.7H0v-9.37c0-5.15,4.18-9.32,9.32-9.32Z"/>
+        <path class="cls-1" d="M28.02.57h52.03v18.7H18.7v-9.37c0-5.15,4.18-9.32,9.32-9.32Z"/>
+        <path class="cls-1" d="M9.32,56.67h9.37v18.7H0v-9.37c0-5.15,4.18-9.32,9.32-9.32Z" transform="translate(-56.67 75.37) rotate(-90)"/>
+        <path class="cls-1" d="M49.35,54.04h9.37v61.35h-18.7v-52.03c0-5.15,4.18-9.32,9.32-9.32Z" transform="translate(-35.34 134.09) rotate(-90)"/>
+      </g>
+    </g>
+  </g>
+</svg>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-md-none pb-4">
+                <a target="_blank" href="https://www.naturalhazards.govt.nz" rel="external noopener noreferrer">
+                    <?xml version="1.0" encoding="UTF-8"?><svg role="img" id="Layer_2" xmlns="http://www.w3.org/2000/svg" width="160" height="53" viewBox="0 0 583 196"><title>Natural Hazards Commission Toka Tū Ake logo</title><rect fill="#102a4c" width="111.6" height="195.39999"/><polygon fill="#f05b3e" points="0 99.9 0 123.1 55.8 67.3 111.6 123.1 111.6 99.9 55.8 44.1 0 99.9"/><polygon fill="#00a3c8" points="55.8 0 0 55.8 0 79.1 55.8 23.2 111.6 79 111.6 55.8 55.8 0"/><polygon fill="#00acaa" points="0 144 0 167.2 55.8 111.4 111.6 167.2 111.6 143.89999 55.8 88.1 0 144"/><polygon fill="#03b06a" points="65.2 165.5 95.1 195.39999 111.6 195.39999 111.6 188.7 76.8 153.89999 65.2 165.5"/><rect fill="#03b06a" x="47.4811" y="136.31885" width="16.49984" height="16.29985" transform="translate(-85.83161 81.72171) rotate(-45)"/><polygon fill="#03b06a" points="35.2 195.39999 76.2 195.39999 55.7 174.89999 35.2 195.39999"/><polygon fill="#03b06a" points="0 188.7 0 195.39999 16.4 195.39999 46.3 165.5 34.7 154 0 188.7"/><path fill="#102a4c" d="M396.60001,24.4v40.3c-1.5.2-3,.4-4.60001.4s-3.10001-.1-4.79999-.4v-16.1h-15.79999v16.1c-1.5.2-3.10001.4-4.60001.4s-3.10001-.1-4.70001-.4V24.4c1.39999-.2,3-.4,4.5-.4s3.10001.1,4.79999.4v15.6h15.79999v-15.6c1.5-.2,3.10001-.4,4.60001-.4s3.20001.1,4.80002.4"/><path fill="#102a4c" d="M416.89999,59.2c1.5,0,3-.2,4.5-.7v-5.5c-1.5-.4-3.20001-.7-5.10001-.7-3,0-4.79999,1-4.79999,3.2s1.89999,3.7,5.39999,3.7M430.79999,47.1v15.7c-4.5,1.8-9.60001,2.9-15.10001,2.9-8.5,0-13.5-3.3-13.5-9.8s5.39999-9.5,13-9.4c2.39999.1,4.5.3,6.29999.9v-1.2c0-2.6-1.79999-4.4-6.20001-4.4-3.5,0-6.5,1.4-8.10001,2.6-2-1.1-3.60001-3.2-4-6,1.70001-1.5,6.39999-4.3,13-4.3,8.60004-.1,14.60004,3.7,14.60004,13"/><path fill="#102a4c" d="M462,60.8c0,1.7-.29999,3-.60001,3.8h-25.89999c-.20001-.7-.39999-1.6-.39999-2.2,0-2.5.89999-3.9,1.79999-5l11.39999-13,1.70001-1.9h-14.10001c-.20001-.8-.5-2.5-.5-3.9,0-1.6.20001-2.8.5-3.6h24.89999c.20001.6.29999,1.4.29999,2.1,0,2.3-.70001,4.2-1.79999,5.5l-10.5,12.8-1.5,1.6h14.10001c.30002,1.00001.60001,2.30001.60001,3.80001"/><path fill="#102a4c" d="M479.79999,59.2c1.5,0,3-.2,4.5-.7v-5.5c-1.5-.4-3.20001-.7-5.10001-.7-3,0-4.79999,1-4.79999,3.2s1.80002,3.7,5.39999,3.7M493.60001,47.1v15.7c-4.5,1.8-9.60001,2.9-15.10001,2.9-8.5,0-13.5-3.3-13.5-9.8s5.39999-9.5,13-9.4c2.39999.1,4.5.3,6.29999.9v-1.2c0-2.6-1.79999-4.4-6.20001-4.4-3.5,0-6.5,1.4-8.10001,2.6-2-1.1-3.60001-3.2-4-6,1.70001-1.5,6.39999-4.3,13-4.3,8.60004-.1,14.60004,3.7,14.60004,13"/><path fill="#102a4c" d="M519.59998,34.8c-.09998,3.1-.90002,6-2.59998,8.1-1.09998-.3-2.29999-.4-3.59998-.4-2,0-3.60001.4-4.60001.9v21.4c-1.5.2-3.10001.4-4.70001.4s-3.10001-.1-4.60001-.4v-26.3c2.10001-1.9,6.70001-4.6,13.29999-4.6,2.70001,0,5,.3,6.79999.9"/><path fill="#102a4c" d="M541.90002,57.2v-14.3c-1.40002-.7-2.79999-.9-4.29999-.9-4.5,0-7.79999,3-7.79999,7.8s3.09998,7.9,7.70001,7.9c1.49994.1,2.99994-.1,4.39996-.5M551.29999,23.4v39.4c-3.09998,1.6-8.29999,3-13.5,3-10.90002,0-17.40002-5.7-17.40002-15.8s7.40002-16,16.70001-16c2,0,3.5.2,4.79999.6v-11.2c1.59998-.2,3.09998-.4,4.70001-.4s3.10004.2,4.70001.4"/><path fill="#102a4c" d="M556.09998,62c.5-3,1.90002-5.2,3.70001-6.3,2.20001,1.4,5.29999,3,9.79999,3,2.90002,0,3.90002-1.1,3.90002-2.4,0-1.6-1.59998-2.4-6.5-3.3-4.90002-1-10.09998-2.8-10.09998-9.4,0-6.2,5.70001-9.7,13.09998-9.7,6.20001,0,10,1.4,12.09998,2.8-.40002,3-1.59998,5.2-3.29999,6.5-2-1.1-5.29999-2.2-8.70001-2.2-3,0-4.29999.6-4.29999,2.1s1.29999,2.1,6,3c5.90002,1,10.90002,3,10.90002,9.4s-4.79999,10.1-13.5,10.1c-6.60004.20001-11.10004-1.99999-13.10004-3.59999"/><path fill="#102a4c" d="M170,24.4v40.1c-3,.6-6.2.7-9,.5l-15.60001-23-1.3-2.4.2,2.9v22.1c-1.60001.2-3.2.4-4.7.4s-2.8-.1-4.60001-.4V24.6c2.10001-.7,5.89999-1,9-.6l15.5,23.4,1.39999,2.5-.2-3.2v-22.3c1.7-.2,2.89999-.4,4.5-.4s3.10002.1,4.80002.4"/><path fill="#102a4c" d="M190.3,59.2c1.5,0,3-.2,4.5-.7v-5.5c-1.5-.4-3.2-.7-5.10001-.7-2.89999,0-4.8,1-4.8,3.2s1.8,3.7,5.40001,3.7M204.10001,47.1v15.7c-4.5,1.8-9.60001,2.9-15.10001,2.9-8.60001,0-13.5-3.3-13.5-9.8s5.39999-9.5,13-9.4c2.39999.1,4.5.3,6.3.9v-1.2c0-2.6-1.8-4.4-6.2-4.4-3.5,0-6.5,1.4-8.10001,2.6-2-1.1-3.60001-3.2-4-6,1.7-1.5,6.39999-4.3,12.89999-4.3,8.70001-.1,14.70001,3.7,14.70001,13"/><path fill="#102a4c" d="M234.2,62.3c-2.10001,1.7-5.10001,3.3-9.7,3.3-6.89999,0-12-2.9-12-10.2v-12.4h-5.10001c-.2-1.2-.3-2.5-.3-3.9,0-1.3.10001-2.5.3-3.8h5.10001v-7.9c1.60001-.2,3.2-.4,4.8-.4s3.10001.1,4.5.4v7.9h10.39999c.2,1.2.39999,2.5.39999,3.7,0,1.4-.2,2.6-.39999,4h-10.39999v10.1c0,3.4,1.60001,4.5,4.3,4.5,1.8,0,3.10001-.9,4.10001-1.8,1.89999,1.2,3.69998,4,3.99998,6.5"/><path fill="#102a4c" d="M266.60001,35.1v27.2c-2.29999,1.3-7.70001,3.5-14.8,3.5-10.2,0-14.3-4.8-14.3-12.1v-18.60001c1.60001-.2,3.10001-.4,4.7-.4s3.10001.1,4.60001.4v16.4c0,4.1,1.2,6,5.7,6,1.8,0,3.39999-.3,4.70001-.9v-21.5c1.60001-.2,3.10001-.4,4.60001-.4s3.29999.2,4.79999.4"/><path fill="#102a4c" d="M293.20001,34.8c-.10001,3.1-.89999,6-2.60001,8.1-1.10001-.3-2.29999-.4-3.60001-.4-2,0-3.60001.4-4.60001.9v21.4c-1.5.2-3.10001.4-4.70001.4s-3.10001-.1-4.60001-.4v-26.3c2.10001-1.9,6.70001-4.6,13.29999-4.6,2.70004,0,5.10004.3,6.80005.9"/><path fill="#102a4c" d="M309.10001,59.2c1.5,0,3-.2,4.5-.7v-5.5c-1.5-.4-3.20001-.7-5.10001-.7-3,0-4.79999,1-4.79999,3.2s1.79999,3.7,5.39999,3.7M322.89999,47.1v15.7c-4.5,1.8-9.60001,2.9-15.10001,2.9-8.5,0-13.5-3.3-13.5-9.8s5.39999-9.5,13-9.4c2.39999.1,4.5.3,6.29999.9v-1.2c0-2.6-1.79999-4.4-6.20001-4.4-3.5,0-6.5,1.4-8.10001,2.6-2-1.1-3.60001-3.2-4-6,1.70001-1.5,6.39999-4.3,13-4.3,8.70004-.1,14.60004,3.7,14.60004,13"/><path fill="#102a4c" d="M328.89999,64.7V23.5c1.39999-.2,3-.4,4.60001-.4s3.20001.1,4.79999.4v41.2c-1.5.2-3.10001.4-4.60001.4s-3.19998-.2-4.79999-.4"/><path fill="#102a4c" d="M135,101.2c0-12.6,8.7-21.5,21.2-21.5,5.7,0,9.7,1.7,12.39999,3.9-.39999,2.8-2.39999,5.9-5.10001,7.3-2.3-1.6-4.5-2.3-7.10001-2.3-6.8,0-11.2,4.7-11.2,12.6s4.5,12.5,11,12.5c4,0,6.2-1.2,8.10001-2.8,2.89999,1.7,4.5,3.9,5.10001,7.5-2.39999,1.9-6.39999,4.1-13.60001,4.1-12.79999,0-20.79999-8.69999-20.79999-21.3"/><path fill="#102a4c" d="M194.39999,106.5c0-4.9-2.5-8.1-6.89999-8.1s-7,3.2-7,8.1,2.60001,8.1,7,8.1,6.89999-3.3,6.89999-8.1M171.10001,106.5c0-9.6,6.89999-16,16.39999-16s16.3,6.2,16.3,16-6.89999,15.9-16.39999,15.9-16.3-6-16.3-15.9"/><path fill="#102a4c" d="M257.29999,102.6v18.8c-1.60001.2-3.10001.4-4.7.4s-3.10001-.1-4.7-.4v-16.7c0-3.7-1.8-5.7-5.3-5.7-2.39999,0-3.89999.9-5,1.7.10001.6.10001,1.3.10001,1.9v18.8c-1.60001.2-3.10001.4-4.7.4s-3.10001-.1-4.60001-.4v-16.7c0-3.7-1.8-5.7-5.3-5.7-2.10001,0-3.7.6-4.8,1.3v21.1c-1.60001.2-3.10001.4-4.7.4s-3.10001-.1-4.60001-.4v-25.9c2.10001-1.8,7.7-5,15.10001-5,4.2,0,7.5,1.1,9.7,2.8,2.39999-1.5,5.8-2.8,9.89999-2.8,9.10002,0,13.60001,5.1,13.60001,12.1"/><path fill="#102a4c" d="M312,102.6v18.8c-1.60001.2-3.10001.4-4.70001.4s-3.10001-.1-4.70001-.4v-16.7c0-3.7-1.79999-5.7-5.29999-5.7-2.39999,0-3.89999.9-5,1.7.10001.6.10001,1.3.10001,1.9v18.8c-1.60001.2-3.10001.4-4.70001.4s-3.10001-.1-4.60001-.4v-16.7c0-3.7-1.79999-5.7-5.29999-5.7-2.10001,0-3.70001.6-4.79999,1.3v21.1c-1.60001.2-3.10001.4-4.70001.4s-3.10001-.1-4.60001-.4v-25.9c2.10001-1.8,7.70001-5,15.10001-5,4.20001,0,7.5,1.1,9.70001,2.8,2.39999-1.5,5.79999-2.8,9.89999-2.8,9.20001,0,13.60001,5.1,13.60001,12.1"/><path fill="#102a4c" d="M318.39999,121.4v-29.8c1.5-.2,3.10001-.4,4.60001-.4s3.10001.1,4.70001.4v29.8c-1.5.2-3.10001.4-4.70001.4-1.5,0-3-.1-4.60001-.39999M317.5,82.1c0-3.1,2.5-5.6,5.70001-5.6s5.70001,2.5,5.70001,5.6-2.60001,5.7-5.70001,5.7-5.70001-2.7-5.70001-5.7"/><path fill="#102a4c" d="M332.70001,118.7c.5-2.9,1.89999-5.2,3.70001-6.3,2.20001,1.4,5.29999,3,9.79999,3,2.89999,0,3.89999-1.1,3.89999-2.4,0-1.6-1.60001-2.4-6.5-3.3-4.89999-1-10.10001-2.8-10.10001-9.4,0-6.2,5.70001-9.7,13.10001-9.7,6.20001,0,10,1.4,12.10001,2.8-.39999,3-1.60001,5.2-3.29999,6.5-2-1.1-5.29999-2.2-8.70001-2.2-3,0-4.29999.6-4.29999,2.1s1.29999,2.1,6,2.9c5.89999,1,10.89999,2.9,10.89999,9.4s-4.79999,10.1-13.5,10.1c-6.70001.3-11.20001-1.89999-13.10001-3.5"/><path fill="#102a4c" d="M362.79999,118.7c.5-2.9,1.89999-5.2,3.70001-6.3,2.20001,1.4,5.29999,3,9.79999,3,2.89999,0,3.89999-1.1,3.89999-2.4,0-1.6-1.60001-2.4-6.5-3.3-4.89999-1-10.10001-2.8-10.10001-9.4,0-6.2,5.70001-9.7,13.10001-9.7,6.20001,0,10,1.4,12.10001,2.8-.39999,3-1.60001,5.2-3.29999,6.5-2-1.1-5.29999-2.2-8.70001-2.2-3,0-4.29999.6-4.29999,2.1s1.29999,2.1,6,2.9c5.89999,1,10.89999,2.9,10.89999,9.4s-4.79999,10.1-13.5,10.1c-6.60001.3-11.10001-1.89999-13.10001-3.5"/><path fill="#102a4c" d="M394.79999,121.4v-29.8c1.5-.2,3.10001-.4,4.60001-.4s3.10001.1,4.70001.4v29.8c-1.5.2-3.10001.4-4.70001.4-1.39999,0-3-.1-4.60001-.39999M393.89999,82.1c0-3.1,2.5-5.6,5.70001-5.6s5.70001,2.5,5.70001,5.6-2.60001,5.7-5.70001,5.7-5.70001-2.7-5.70001-5.7"/><path fill="#102a4c" d="M432.60001,106.5c0-4.9-2.5-8.1-6.89999-8.1s-7,3.2-7,8.1,2.60001,8.1,7,8.1,6.89999-3.3,6.89999-8.1M409.29999,106.5c0-9.6,6.89999-16,16.39999-16s16.29999,6.2,16.29999,16-6.89999,15.9-16.39999,15.9-16.29999-6-16.29999-15.9"/><path fill="#102a4c" d="M476.5,103.3v18.1c-1.60001.2-3.10001.4-4.70001.4s-3.10001-.1-4.70001-.4v-16.6c0-4.3-2.29999-5.8-5.70001-5.8-2.20001,0-4,.6-5,1.3v21.1c-1.60001.2-3.10001.4-4.70001.4s-3.10001-.1-4.60001-.4v-25.9c2.29999-2.1,7.70001-5,15.10001-5,9.80005.1,14.30005,5.5,14.30005,12.8"/><polygon fill="#102a4c" points="144.7 145.89999 135 145.89999 135 142.5 158.5 142.5 158.5 145.89999 148.8 145.89999 148.8 174.39999 144.7 174.39999 144.7 145.89999"/><path fill="#102a4c" d="M175.39999,162.7c0-5.5-2.7-9.10001-6.8-9.10001s-6.8,3.60001-6.8,9.10001,2.7,9,6.8,9,6.8-3.59999,6.8-9M157.60001,162.7c0-7.89999,5.2-12.5,11-12.5s11,4.5,11,12.5-5.2,12.39999-11,12.39999-11-4.59999-11-12.39999"/><polygon fill="#102a4c" points="183.7 139.8 187.7 139.8 187.7 163.10001 187.89999 163.10001 197.89999 150.8 202.39999 150.8 194.5 160.3 203.39999 174.39999 199 174.39999 192.10001 163.10001 187.7 168.2 187.7 174.39999 183.7 174.39999 183.7 139.8"/><path fill="#102a4c" d="M219.2,168.7v-6.39999c-8,.89999-10.60001,2.7-10.60001,5.8,0,2.60001,1.8,3.60001,4.10001,3.60001s4.2-1.00002,6.5-3.00002M204.7,168.3c0-5.3,4.39999-7.8,14.5-8.89999-.10001-3-1-5.89999-4.89999-5.89999-2.7,0-5.2,1.2-7.10001,2.39999l-1.60001-2.7c2.2-1.5,5.5-3.10001,9.3-3.10001,5.8,0,8.2,3.89999,8.2,9.7v14.60001h-3.3l-.39999-2.8h-.10001c-2.2,1.89999-4.8,3.39999-7.8,3.39999-3.89998,0-6.79999-2.39999-6.79999-6.7"/><polygon fill="#102a4c" points="242.60001 145.89999 232.89999 145.89999 232.89999 142.5 256.39999 142.5 256.39999 145.89999 246.7 145.89999 246.7 174.39999 242.60001 174.39999 242.60001 145.89999"/><path fill="#102a4c" d="M262.20001,142.39999h13v2.8h-13v-2.8ZM259.10001,165.8v-15h4v14.5c0,4.39999,1.39999,6.3,4.5,6.3,2.39999,0,4.10001-1.2,6.29999-4v-16.8h4v23.7h-3.29999l-.29999-3.7h-.10001c-2.20001,2.60001-4.5,4.3-7.79999,4.3-5.10004-.10001-7.30002-3.3-7.30002-9.3"/><path fill="#102a4c" d="M299,161.39999h9.5l-1.5-4.8c-1.20001-3.60001-2.20001-7.10001-3.20001-10.8h-.20001c-1,3.7-2,7.2-3.10001,10.8l-1.49997,4.8h0ZM301.5,142.5h4.70001l10.79999,32h-4.29999l-3-9.7h-11.70001l-3.10001,9.7h-4.10001l10.70001-32h0Z"/><polygon fill="#102a4c" points="321.10001 139.8 325.10001 139.8 325.10001 163.10001 325.29999 163.10001 335.29999 150.8 339.79999 150.8 331.89999 160.3 340.79999 174.39999 336.39999 174.39999 329.5 163.10001 325.10001 168.2 325.10001 174.39999 321.10001 174.39999 321.10001 139.8"/><path fill="#102a4c" d="M357.89999,160.60001c0-4.7-2.20001-7.2-5.79999-7.2-3.29999,0-6.20001,2.60001-6.70001,7.2h12.5ZM341.39999,162.60001c0-7.7,5.20001-12.39999,10.60001-12.39999,6,0,9.5,4.3,9.5,11.10001,0,.89999,0,1.60001-.20001,2.39999h-15.89999c.29999,4.89999,3.29999,8.10001,7.79999,8.10001,2.29999,0,4.29999-.60001,5.89999-1.8l1.39999,2.60001c-2,1.5-4.60001,2.39999-7.89999,2.39999-6.19998.09999-11.19998-4.50002-11.19998-12.40001"/></svg>
+
+                </a>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-3 d-none d-md-flex justify-content-center">
+                    <a href="https://www.geonet.org.nz/">
+                        <?xml version="1.0" encoding="UTF-8"?><svg role="img" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="160" height="65" viewBox="0 0 612 249"><title>GeoNet logo</title><path d="M2.35,116.05c.09,.08,.08,.26-.03,.55-.08-.08-.08-.26,.03-.55Z"/><g><rect fill="#d52e25" x="29.83" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="40.2" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="50.57" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="60.94" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="71.31" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="81.67" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="92.04" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="102.41" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="112.78" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="123.15" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="133.52" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="143.88" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="154.25" y="155.16" width="5.4" height="5.4"/><rect fill="#d52e25" x="164.62" y="155.16" width="5.4" height="5.4"/><path fill="#d52e25" d="M4,119.77S30.77,21.67,297.33,21.67c104.67,0,285,40.67,285,102.83,0,72.19-161.2,113.42-279.67,116.08l.42,1.92c153.25,7.16,308.92-45.84,308.92-114.5,0-100.33-216.67-121-313.33-121C138.91,7,10,53.01,4,119.77Z"/></g><g><path fill="#144c3f" d="M46.5,92.54c10.47-3.7,20.52-2.43,30.78,1.23l-2.53,8.33c-5.39-2.14-10.67-3.46-16.32-2.77-8.5,1.03-15.7,6.98-17.93,15.05-2.49,9.01,.24,18.06,6.99,23.07,6.08,4.52,13.74,3.94,20.51,2.17l.1-21.89,10.67-.13v28.91c-4.26,2.29-17.04,5.49-29.47,2.51-12.43-2.99-20.46-12.95-21.34-25.52-.99-14.14,5.47-25.03,18.54-30.97Z"/><path fill="#144c3f" d="M170.71,128.04c.01,16.5-11.33,21.87-20.66,21.87-10.38,0-21.06-5.12-21.06-22.05s11.89-22.05,20.86-22.05c10.03,0,20.85,6.02,20.86,22.23Zm-13.47-11.84c-4.8-4.73-12.06-4.01-15.36,1.81-3.61,6.35-3.63,13.1-.34,19.53,3.62,7.07,12.83,7.21,16.63,.2,3.82-7.04,3.91-14.31-.93-21.54Z"/><path fill="#144c3f" d="M96.21,128.92c.02,4.89,.87,8.86,4.98,11.4,6.32,3.9,11.59,.83,16.99-2.86l3.87,6.21c-7.17,5.74-14.91,8.22-23.79,5.42-7.25-2.28-11.79-9.39-12.4-18.13-.46-6.68,.6-12.91,5.13-18.14,5.53-6.39,12.95-8.3,20.54-6.09,12.27,3.57,12.23,17.78,11.99,22.18m-22.27-6.59h12.3c0-5.32-2.9-9.36-7.33-9.44-4.95-.09-9.4,3.86-9.81,9.44,1.45,0,2.89,0,4.84,0Z"/><g><path fill="#144c3f" d="M244.21,122.14c1.45,0,2.89,0,4.84,0h11.98c-.07-5.23-2.95-9.18-7.33-9.26-1.74-.03-3.41,.45-4.88,1.31-2.54,1.63-4.36,4.47-4.62,7.95Z"/><path fill="#144c3f" d="M353.62,67.28l4.98-.13,5.75,53.57,3.16-45.75,4.97-.15,6.05,47.17,4.46-38.7,4.95-.15,6.56,37.09,5.89-25.22,4.72-.45,6.17,13.82h39.18l-101.48-55.36,2.4,54.67,2.23-40.42Zm-.67,5.56c-.13-.2-.19-.5-.15-.87,.15,.21,.18,.49,.15,.87Z"/><path fill="#144c3f" d="M459.63,113.39h-51.4l-4.65-10.01-6.98,29.85-4.9-.13-5.7-32.23-4.85,42.08-4.96,.03-5.44-42.38-3.37,48.74-4.98,.09-5.49-51.13-3.31,60.07-4.99-.03-3.45-78.34-6.12,62.78-4.97,.05-4.92-41.4-3.85,58.92h-72.83v-5h67.76l5.83-80.36,4.98-.11,5.27,44.41,6.75-69.22c-1.65,1.94-16.59,18.7-43.18,18.7-28.22,0-42.44-18.89-42.44-18.89l-82.44,43.78v72.7h381.76l-97.13-52.98Zm-184.75-6.41h6.87v-15.52h10.01v15.34h9.75v7.4h-9.88l-.47,23.11c0,2.97,2.03,3.53,4.15,3.16l5.43-1.23,1.87,6.54c-1.06,1.25-7.64,3.94-13.87,3.31-4.39-.83-7.2-2.64-7.58-9.83l.26-24.94h-6.55v-7.34Zm-89.39,53.58h-5.4v-5.4h5.4v5.4Zm2.2-10.32l-9.9,.18v-54.71l11.25-5.75,26.68,42.92v-41.54h10.69s-.13,55.42-.13,55.42l-11.2,3.49-27.33-44.11-.06,44.11Zm8.1,10.32h-5.4v-5.4h5.4v5.4Zm10.3,0h-5.4v-5.4h5.4v5.4Zm10.3,0h-5.4v-5.4h5.4v5.4Zm10.3,0h-5.4v-5.4h5.4v5.4Zm10.3,0h-5.4v-5.4h5.4v5.4Zm10.3,0h-5.4v-5.4h5.4v5.4Zm-1.52-11.48c-7.25-2.28-11.79-9.39-12.4-18.13-.46-6.68,.6-12.91,5.13-18.14,1.75-2.02,3.68-3.59,5.75-4.72,4.56-2.61,9.78-3.1,15.09-1.55,12.27,3.57,12.23,17.78,11.99,22.18h-.3c0,.06,0,.12,0,.18h-26.99c.04,4.83,.91,8.73,4.98,11.23,5.03,3.11,9.39,1.79,13.69-.74,1-.6,1.99-1.26,2.99-1.94v.02c.11-.07,.21-.13,.31-.2l3.87,6.21c-1.42,1.14-2.86,2.14-4.33,3-6.04,3.65-12.52,4.88-19.77,2.59Z"/></g></g></svg>
+
+                    </a>
+            </div>
+            <div class="col-sm-12 col-md-6 footer-middle-col">
+                <p>GeoNet is a collaboration between <a target="_blank" href="https://www.naturalhazards.govt.nz" rel="external noopener noreferrer">NHC Toka Tū Ake</a>
+                    and <a target="_blank" href="https://earthsciences.nz" rel="external noopener noreferrer">Earth Sciences New Zealand</a>.</p>
+                <p>GeoNet content is copyright <a target="_blank" href="https://earthsciences.nz" rel="external noopener noreferrer">Earth Sciences New Zealand</a> and is
+                    licensed under a <a rel="license external noopener noreferrer" target="_blank"
+                                        href="http://creativecommons.org/licenses/by/3.0/nz/">Creative Commons
+                        Attribution 3.0 New Zealand License</a></p>
+            </div>
+            <div class="col-md-3 d-none d-md-block">
+                <div class="row d-flex align-items-center">
+                    <div class="col-12">                      
+                        <a class="d-block" target="_blank" href="https://earthsciences.nz" rel="external noopener noreferrer">
+                            <?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"  width="170" height="50" viewBox="0 0 357.93 94.58">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #062d51;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path class="cls-1" d="M98.71.57h18.8v4.73h-13.82v5.9h12.62v4.63h-12.62v6.25h13.88v4.73h-18.84V.57h-.02Z"/>
+      <path class="cls-1" d="M174.75,26.79h-4.72V.57h4.72v10.33h.04c.91-4.37,5.14-5.18,6.97-5.18,4.94,0,6.81,3.23,6.81,7.7v13.38h-4.72v-12.15c0-2.49-1.09-4.67-4.28-4.67-3,0-4.84,1.74-4.84,4.67v12.15h.02Z"/>
+      <path class="cls-1" d="M199.43,18.11l4.8-.97c.69,3.72,3.22,5.9,7.25,5.9,3.36,0,5.09-1.31,5.09-3.4s-1.52-3.23-6.46-3.98c-7.25-1.13-9.56-4.06-9.56-8.05,0-4.63,3.4-7.6,9.77-7.6,6.89,0,9.68,3.72,10.68,8.53l-4.88,1.01c-.83-3.46-2.31-5.28-6.02-5.28-2.92,0-4.54,1.31-4.54,3.28,0,1.74.97,3.01,6.71,3.98,7.37,1.19,9.34,4.23,9.34,7.95,0,4.73-3.28,7.91-10.46,7.91-7.94-.04-11.12-4.19-11.73-9.26v-.02Z"/>
+      <path class="cls-1" d="M233.71,10.01c-3.36,0-5.71,2.1-5.71,6.51s2.31,6.51,5.81,6.51,4.66-2.18,5.33-5.12l4.5.91c-.83,5.24-3.79,8.53-9.74,8.53-6.46,0-10.68-3.8-10.68-10.8s4.32-10.84,10.56-10.84,8.98,3.07,9.81,8.35l-4.54.75c-.61-2.89-2.13-4.81-5.33-4.81l-.02.02Z"/>
+      <path class="cls-1" d="M245.5,3.5V0h5.11v3.5h-5.11ZM245.72,26.79V6.25h4.72v20.54h-4.72Z"/>
+      <path class="cls-1" d="M252.96,16.78c0-6.95,4.11-11.06,10.47-11.06s9.38,3.94,9.38,9.58c0,.83,0,1.66-.08,2.75h-15.05c.43,3.46,2.45,5.16,5.81,5.16s4.5-1.62,5.11-3.72l4.11,1.19c-1.05,3.94-3.83,6.65-9.24,6.65-6.28,0-10.46-3.76-10.46-10.53l-.04-.02ZM257.72,14.56h10.74c-.26-3.19-1.92-4.85-5.15-4.85s-5.06,1.52-5.59,4.85Z"/>
+      <path class="cls-1" d="M306.55,10.01c-3.36,0-5.71,2.1-5.71,6.51s2.31,6.51,5.8,6.51,4.66-2.18,5.33-5.12l4.5.91c-.83,5.24-3.79,8.53-9.74,8.53-6.46,0-10.68-3.8-10.68-10.8s4.32-10.84,10.56-10.84,8.98,3.07,9.81,8.35l-4.54.75c-.61-2.89-2.13-4.81-5.33-4.81l-.02.02Z"/>
+      <path class="cls-1" d="M318.34,16.78c0-6.95,4.11-11.06,10.47-11.06s9.38,3.94,9.38,9.58c0,.83,0,1.66-.08,2.75h-15.05c.43,3.46,2.45,5.16,5.81,5.16s4.5-1.62,5.11-3.72l4.11,1.19c-1.05,3.94-3.83,6.65-9.24,6.65-6.28,0-10.46-3.76-10.46-10.53l-.04-.02ZM323.1,14.56h10.74c-.26-3.19-1.92-4.85-5.15-4.85s-5.06,1.52-5.59,4.85Z"/>
+      <path class="cls-1" d="M339.92,20.28l4.4-.87c.65,2.57,1.95,4.33,5.23,4.33,2.49,0,3.71-.97,3.75-2.57,0-1.48-1.05-2.28-5.15-3.01-5.55-1.09-7.5-3.01-7.5-6.29,0-3.72,2.71-6.11,8.08-6.11s7.9,2.41,8.77,6.33l-4.5,1.01c-.61-2.71-1.84-3.84-4.28-3.84-2.23,0-3.4.91-3.4,2.41s.83,2.41,4.98,3.11c5.71,1.05,7.64,3.15,7.64,6.29,0,3.84-2.67,6.33-8.47,6.33-6.6,0-8.81-3.07-9.56-7.08l.02-.04Z"/>
+      <path class="cls-1" d="M108.36,48.52c-1.48-2.57-3.57-6.65-4.98-9.58h-.08c.14,3.25.18,7.26.18,10.01v11.5h-4.76v-26.24h7.33l5.67,10.27c1.8,3.23,3.79,7.16,5.19,10.05h.04c-.04-3.01-.08-6.25-.08-8.83v-11.5h4.76v26.24h-6.5l-6.75-11.93h-.02Z"/>
+      <path class="cls-1" d="M124.06,50.44c0-6.95,4.11-11.06,10.47-11.06s9.38,3.94,9.38,9.58c0,.83,0,1.66-.08,2.75h-15.05c.43,3.46,2.45,5.16,5.8,5.16s4.5-1.62,5.11-3.72l4.11,1.19c-1.05,3.94-3.83,6.65-9.24,6.65-6.28,0-10.47-3.76-10.47-10.53l-.04-.02ZM128.8,48.2h10.74c-.26-3.19-1.92-4.85-5.15-4.85s-5.06,1.52-5.59,4.85Z"/>
+      <path class="cls-1" d="M164.96,47.94c.83,2.97,1.52,6.07,2.23,9.26h.08c.69-3.19,1.44-6.07,2.27-9.36l1.92-7.95h4.66l-6.2,20.54h-5.71l-2.31-8.96c-.69-2.75-1.26-5.5-1.8-8.35h-.08c-.53,2.79-1.18,5.64-1.84,8.35l-2.17,8.96h-5.67l-6.24-20.54h4.84l2.17,7.95c.91,3.23,1.66,6.21,2.31,9.36h.08c.69-3.19,1.4-6.29,2.17-9.26l2.05-8.05h5.11l2.09,8.05h.02Z"/>
+      <path class="cls-1" d="M206.42,60.45h-21.68v-4.73l14.97-16.7-.08-.22c-2.23.08-4.72.14-6.85.14h-7.58v-4.73h21.11v4.67l-15.05,16.7.08.26c2.09-.08,4.36-.14,6.2-.14h8.91v4.73l-.02.02Z"/>
+      <path class="cls-1" d="M206.78,50.44c0-6.95,4.11-11.06,10.46-11.06s9.38,3.94,9.38,9.58c0,.83,0,1.66-.08,2.75h-15.05c.43,3.46,2.45,5.16,5.81,5.16s4.5-1.62,5.11-3.72l4.11,1.19c-1.05,3.94-3.83,6.65-9.24,6.65-6.28,0-10.46-3.76-10.46-10.53l-.04-.02ZM211.52,48.2h10.74c-.26-3.19-1.92-4.85-5.15-4.85s-5.06,1.52-5.59,4.85Z"/>
+      <path class="cls-1" d="M255.96,60.39h-4.72v-26.79h4.72v26.79Z"/>
+      <path class="cls-1" d="M98.73,67.87h20.77v3.01h-8.79v23.21h-3.14v-23.21h-8.85v-3.01Z"/>
+      <path class="cls-1" d="M116.01,84c0-6.73,4.23-10.71,10.21-10.71s9.3,3.8,9.3,9.44c0,.47,0,1.31-.08,2.14h-16.37c.3,4.45,2.92,6.98,7.25,6.98,4.01,0,5.63-2.1,6.38-4.73l2.71.79c-1.05,4.12-4.05,6.65-9.08,6.65-6.32,0-10.29-3.98-10.29-10.59l-.02.02ZM119.11,82.37h13.57c-.22-4.12-2.35-6.43-6.54-6.43-3.93,0-6.54,2.18-7.03,6.43Z"/>
+      <path class="cls-1" d="M152.2,94.11h-4.05l-7.42-26.24h3.46l3.46,12.9c.87,3.54,1.74,6.91,2.49,10.41h.3c.91-3.58,1.8-6.77,2.84-10.37l3.89-12.94h3.57l3.89,12.94c1.01,3.58,1.84,6.77,2.74,10.37h.3c.75-3.5,1.66-6.87,2.53-10.41l3.36-12.9h3.36l-7.42,26.24h-4.05l-3.75-12.72c-.97-3.29-1.96-7.12-2.74-10.31h-.22c-.83,3.15-1.88,7.04-2.78,10.31l-3.71,12.72h-.02Z"/>
+      <path class="cls-1" d="M224.33,76.44h-3.28v-2.67h3.28v-5.82h3v5.82h6.85v2.67h-6.85v11.46c0,2.53.97,3.8,3.4,3.8,1.13,0,2.05-.18,3.22-.53l.43,2.75c-1.36.44-2.49.65-4.19.65-4.05,0-5.88-2.67-5.88-6.43v-11.71l.02.02Z"/>
+      <path class="cls-1" d="M281.1,86.02h-12l-3.28,8.09h-3.36l10.96-26.24h3.4l10.96,26.24h-3.4l-3.28-8.09ZM270.14,83.34h9.91l-1.18-2.89c-1.22-3.07-2.67-6.69-3.67-9.48h-.22c-1.05,2.85-2.45,6.43-3.67,9.48l-1.18,2.89h.02Z"/>
+      <path class="cls-1" d="M287.06,83.86c0-6.65,4.19-10.59,10.21-10.59s10.21,3.94,10.21,10.59-3.83,10.71-10.21,10.71-10.21-4.12-10.21-10.71ZM290.07,83.82c0,4.77,2.53,7.95,7.15,7.95s7.25-3.19,7.25-7.95-2.74-7.74-7.21-7.74-7.21,2.97-7.21,7.74h.02Z"/>
+      <path class="cls-1" d="M167.88,24.64v-2.45c-.91.22-2.17.61-3.22.61-2.05,0-2.84-1.01-2.84-3.01v-9.54h6.06v-3.98h-6.06V.57h-4.66v5.68h-2.78v3.98h2.78v10.31c0,3.84,1.92,6.83,6.42,6.83,1.88,0,2.96-.24,4.32-.65v-2.08h-.02Z"/>
+      <path class="cls-1" d="M126.37,5.74c4.11-.04,6.42,1.17,7.33,5.42h.04v-4.91h4.72v20.54h-4.72v-4.83h-.08c-.91,4.16-4.4,5.4-7.29,5.4-5.33,0-8.08-4.12-8.08-10.74s2.92-10.92,8.08-10.88ZM133.74,16.74v-.36c0-3.94-2.09-6.47-5.45-6.47-3.57,0-5.33,2.49-5.33,6.69s1.66,6.47,5.33,6.47c3.36,0,5.45-2.28,5.45-6.33Z"/>
+      <path class="cls-1" d="M236.69,39.4c4.11-.04,6.42,1.17,7.33,5.42h.04v-4.91h4.72v20.54h-4.72v-4.83h-.08c-.91,4.16-4.4,5.4-7.29,5.4-5.33,0-8.08-4.12-8.08-10.74s2.92-10.92,8.08-10.88ZM244.06,50.4v-.36c0-3.94-2.09-6.47-5.45-6.47-3.57,0-5.33,2.49-5.33,6.69s1.66,6.47,5.33,6.47c3.36,0,5.45-2.28,5.45-6.33Z"/>
+      <path class="cls-1" d="M266.03,39.4c4.11-.04,6.42,1.17,7.33,5.42h.04v-4.91h4.72v20.54h-4.72v-4.83h-.08c-.91,4.16-4.4,5.4-7.29,5.4-5.33,0-8.08-4.12-8.08-10.74s2.92-10.92,8.08-10.88ZM273.39,50.4v-.36c0-3.94-2.09-6.47-5.45-6.47-3.57,0-5.33,2.49-5.33,6.69s1.66,6.47,5.33,6.47c3.36,0,5.45-2.28,5.45-6.33Z"/>
+      <path class="cls-1" d="M152.87,10.23h-2.01c-3.67,0-5.09,2.57-5.09,6.17v10.41h-4.72V6.25h4.72v4.9h.08c.91-5.34,5.15-4.9,7.03-4.9h0v3.98Z"/>
+      <path class="cls-1" d="M279.98,26.79h-4.72V6.25h4.72v3.66h.04c.91-4.37,6.3-4.19,6.97-4.19,4.94,0,6.81,3.23,6.81,7.7v13.38h-4.72v-12.15c0-2.49-1.09-4.67-4.28-4.67-3,0-4.84,1.74-4.84,4.67v12.15h.02Z"/>
+      <path class="cls-1" d="M285.39,60.39h-4.72v-20.54h4.72v3.66h.04c.91-4.37,6.3-4.19,6.97-4.19,4.94,0,6.81,3.23,6.81,7.7v13.38h-4.72v-12.15c0-2.49-1.09-4.67-4.28-4.67-3,0-4.84,1.74-4.84,4.67v12.15h.02Z"/>
+      <path class="cls-1" d="M181.78,94.11h-3v-26.24h3v10.37h.04c.87-3.98,5.06-4.97,7.25-4.97,5.59,0,7.37,3.68,7.37,8.05v12.76h-3v-12.11c0-3.01-1.26-5.94-5.41-5.94-3.89,0-6.24,2.18-6.24,5.94v12.13Z"/>
+      <path class="cls-1" d="M207.31,73.29c3.41-.02,7.21,1.72,7.98,5.74h.04v-5.26h3v20.32h-3v-5.18h-.04c-.83,3.98-4.5,5.66-7.86,5.66-5.71,0-8.73-4.12-8.73-10.63s3.24-10.7,8.59-10.67l.02.02ZM215.35,84.1v-.26c0-4.73-2.71-7.84-6.99-7.84s-6.63,2.93-6.63,7.99,2.13,7.82,6.63,7.82,6.99-2.75,6.99-7.74v.02Z"/>
+      <path class="cls-1" d="M251.07,89.68h-.04c-.87,3.94-5.1,4.91-7.25,4.91-5.59,0-7.37-3.68-7.37-7.99v-12.8h3v12.11c0,3.01,1.26,5.94,5.41,5.94,3.83,0,6.24-2.18,6.24-5.94v-12.11h2.96v20.32h-2.96v-4.43Z"/>
+      <path class="cls-1" d="M316.6,55.56h-.08c-.91,4.16-4.5,5.4-7.29,5.4-5.33,0-8.08-4.12-8.08-10.74s2.92-10.92,8.08-10.88c2.77,0,6.42,1.19,7.33,5.44h.04v-11.16h4.72v26.79h-4.72v-4.85ZM316.6,50.34v-.36c0-3.94-2.09-6.47-5.45-6.47-3.57,0-5.33,2.45-5.33,6.69s1.66,6.47,5.33,6.47c3.36,0,5.45-2.28,5.45-6.33Z"/>
+      <g>
+        <path class="cls-1" d="M80.05,37.97H18.7v18.7h61.35v-18.7Z"/>
+        <path class="cls-1" d="M9.32,19.27h9.37v18.7H0v-9.37c0-5.15,4.18-9.32,9.32-9.32Z"/>
+        <path class="cls-1" d="M28.02.57h52.03v18.7H18.7v-9.37c0-5.15,4.18-9.32,9.32-9.32Z"/>
+        <path class="cls-1" d="M9.32,56.67h9.37v18.7H0v-9.37c0-5.15,4.18-9.32,9.32-9.32Z" transform="translate(-56.67 75.37) rotate(-90)"/>
+        <path class="cls-1" d="M49.35,54.04h9.37v61.35h-18.7v-52.03c0-5.15,4.18-9.32,9.32-9.32Z" transform="translate(-35.34 134.09) rotate(-90)"/>
+      </g>
+    </g>
+  </g>
+</svg>
+                        </a>
+                    </div>
+                    <div class="col-12">                      
+                        <a class="d-block pt-3" target="_blank" href="https://www.naturalhazards.govt.nz" rel="external noopener noreferrer">
+                            <?xml version="1.0" encoding="UTF-8"?><svg role="img" id="Layer_2" xmlns="http://www.w3.org/2000/svg" width="160" height="53" viewBox="0 0 583 196"><title>Natural Hazards Commission Toka Tū Ake logo</title><rect fill="#102a4c" width="111.6" height="195.39999"/><polygon fill="#f05b3e" points="0 99.9 0 123.1 55.8 67.3 111.6 123.1 111.6 99.9 55.8 44.1 0 99.9"/><polygon fill="#00a3c8" points="55.8 0 0 55.8 0 79.1 55.8 23.2 111.6 79 111.6 55.8 55.8 0"/><polygon fill="#00acaa" points="0 144 0 167.2 55.8 111.4 111.6 167.2 111.6 143.89999 55.8 88.1 0 144"/><polygon fill="#03b06a" points="65.2 165.5 95.1 195.39999 111.6 195.39999 111.6 188.7 76.8 153.89999 65.2 165.5"/><rect fill="#03b06a" x="47.4811" y="136.31885" width="16.49984" height="16.29985" transform="translate(-85.83161 81.72171) rotate(-45)"/><polygon fill="#03b06a" points="35.2 195.39999 76.2 195.39999 55.7 174.89999 35.2 195.39999"/><polygon fill="#03b06a" points="0 188.7 0 195.39999 16.4 195.39999 46.3 165.5 34.7 154 0 188.7"/><path fill="#102a4c" d="M396.60001,24.4v40.3c-1.5.2-3,.4-4.60001.4s-3.10001-.1-4.79999-.4v-16.1h-15.79999v16.1c-1.5.2-3.10001.4-4.60001.4s-3.10001-.1-4.70001-.4V24.4c1.39999-.2,3-.4,4.5-.4s3.10001.1,4.79999.4v15.6h15.79999v-15.6c1.5-.2,3.10001-.4,4.60001-.4s3.20001.1,4.80002.4"/><path fill="#102a4c" d="M416.89999,59.2c1.5,0,3-.2,4.5-.7v-5.5c-1.5-.4-3.20001-.7-5.10001-.7-3,0-4.79999,1-4.79999,3.2s1.89999,3.7,5.39999,3.7M430.79999,47.1v15.7c-4.5,1.8-9.60001,2.9-15.10001,2.9-8.5,0-13.5-3.3-13.5-9.8s5.39999-9.5,13-9.4c2.39999.1,4.5.3,6.29999.9v-1.2c0-2.6-1.79999-4.4-6.20001-4.4-3.5,0-6.5,1.4-8.10001,2.6-2-1.1-3.60001-3.2-4-6,1.70001-1.5,6.39999-4.3,13-4.3,8.60004-.1,14.60004,3.7,14.60004,13"/><path fill="#102a4c" d="M462,60.8c0,1.7-.29999,3-.60001,3.8h-25.89999c-.20001-.7-.39999-1.6-.39999-2.2,0-2.5.89999-3.9,1.79999-5l11.39999-13,1.70001-1.9h-14.10001c-.20001-.8-.5-2.5-.5-3.9,0-1.6.20001-2.8.5-3.6h24.89999c.20001.6.29999,1.4.29999,2.1,0,2.3-.70001,4.2-1.79999,5.5l-10.5,12.8-1.5,1.6h14.10001c.30002,1.00001.60001,2.30001.60001,3.80001"/><path fill="#102a4c" d="M479.79999,59.2c1.5,0,3-.2,4.5-.7v-5.5c-1.5-.4-3.20001-.7-5.10001-.7-3,0-4.79999,1-4.79999,3.2s1.80002,3.7,5.39999,3.7M493.60001,47.1v15.7c-4.5,1.8-9.60001,2.9-15.10001,2.9-8.5,0-13.5-3.3-13.5-9.8s5.39999-9.5,13-9.4c2.39999.1,4.5.3,6.29999.9v-1.2c0-2.6-1.79999-4.4-6.20001-4.4-3.5,0-6.5,1.4-8.10001,2.6-2-1.1-3.60001-3.2-4-6,1.70001-1.5,6.39999-4.3,13-4.3,8.60004-.1,14.60004,3.7,14.60004,13"/><path fill="#102a4c" d="M519.59998,34.8c-.09998,3.1-.90002,6-2.59998,8.1-1.09998-.3-2.29999-.4-3.59998-.4-2,0-3.60001.4-4.60001.9v21.4c-1.5.2-3.10001.4-4.70001.4s-3.10001-.1-4.60001-.4v-26.3c2.10001-1.9,6.70001-4.6,13.29999-4.6,2.70001,0,5,.3,6.79999.9"/><path fill="#102a4c" d="M541.90002,57.2v-14.3c-1.40002-.7-2.79999-.9-4.29999-.9-4.5,0-7.79999,3-7.79999,7.8s3.09998,7.9,7.70001,7.9c1.49994.1,2.99994-.1,4.39996-.5M551.29999,23.4v39.4c-3.09998,1.6-8.29999,3-13.5,3-10.90002,0-17.40002-5.7-17.40002-15.8s7.40002-16,16.70001-16c2,0,3.5.2,4.79999.6v-11.2c1.59998-.2,3.09998-.4,4.70001-.4s3.10004.2,4.70001.4"/><path fill="#102a4c" d="M556.09998,62c.5-3,1.90002-5.2,3.70001-6.3,2.20001,1.4,5.29999,3,9.79999,3,2.90002,0,3.90002-1.1,3.90002-2.4,0-1.6-1.59998-2.4-6.5-3.3-4.90002-1-10.09998-2.8-10.09998-9.4,0-6.2,5.70001-9.7,13.09998-9.7,6.20001,0,10,1.4,12.09998,2.8-.40002,3-1.59998,5.2-3.29999,6.5-2-1.1-5.29999-2.2-8.70001-2.2-3,0-4.29999.6-4.29999,2.1s1.29999,2.1,6,3c5.90002,1,10.90002,3,10.90002,9.4s-4.79999,10.1-13.5,10.1c-6.60004.20001-11.10004-1.99999-13.10004-3.59999"/><path fill="#102a4c" d="M170,24.4v40.1c-3,.6-6.2.7-9,.5l-15.60001-23-1.3-2.4.2,2.9v22.1c-1.60001.2-3.2.4-4.7.4s-2.8-.1-4.60001-.4V24.6c2.10001-.7,5.89999-1,9-.6l15.5,23.4,1.39999,2.5-.2-3.2v-22.3c1.7-.2,2.89999-.4,4.5-.4s3.10002.1,4.80002.4"/><path fill="#102a4c" d="M190.3,59.2c1.5,0,3-.2,4.5-.7v-5.5c-1.5-.4-3.2-.7-5.10001-.7-2.89999,0-4.8,1-4.8,3.2s1.8,3.7,5.40001,3.7M204.10001,47.1v15.7c-4.5,1.8-9.60001,2.9-15.10001,2.9-8.60001,0-13.5-3.3-13.5-9.8s5.39999-9.5,13-9.4c2.39999.1,4.5.3,6.3.9v-1.2c0-2.6-1.8-4.4-6.2-4.4-3.5,0-6.5,1.4-8.10001,2.6-2-1.1-3.60001-3.2-4-6,1.7-1.5,6.39999-4.3,12.89999-4.3,8.70001-.1,14.70001,3.7,14.70001,13"/><path fill="#102a4c" d="M234.2,62.3c-2.10001,1.7-5.10001,3.3-9.7,3.3-6.89999,0-12-2.9-12-10.2v-12.4h-5.10001c-.2-1.2-.3-2.5-.3-3.9,0-1.3.10001-2.5.3-3.8h5.10001v-7.9c1.60001-.2,3.2-.4,4.8-.4s3.10001.1,4.5.4v7.9h10.39999c.2,1.2.39999,2.5.39999,3.7,0,1.4-.2,2.6-.39999,4h-10.39999v10.1c0,3.4,1.60001,4.5,4.3,4.5,1.8,0,3.10001-.9,4.10001-1.8,1.89999,1.2,3.69998,4,3.99998,6.5"/><path fill="#102a4c" d="M266.60001,35.1v27.2c-2.29999,1.3-7.70001,3.5-14.8,3.5-10.2,0-14.3-4.8-14.3-12.1v-18.60001c1.60001-.2,3.10001-.4,4.7-.4s3.10001.1,4.60001.4v16.4c0,4.1,1.2,6,5.7,6,1.8,0,3.39999-.3,4.70001-.9v-21.5c1.60001-.2,3.10001-.4,4.60001-.4s3.29999.2,4.79999.4"/><path fill="#102a4c" d="M293.20001,34.8c-.10001,3.1-.89999,6-2.60001,8.1-1.10001-.3-2.29999-.4-3.60001-.4-2,0-3.60001.4-4.60001.9v21.4c-1.5.2-3.10001.4-4.70001.4s-3.10001-.1-4.60001-.4v-26.3c2.10001-1.9,6.70001-4.6,13.29999-4.6,2.70004,0,5.10004.3,6.80005.9"/><path fill="#102a4c" d="M309.10001,59.2c1.5,0,3-.2,4.5-.7v-5.5c-1.5-.4-3.20001-.7-5.10001-.7-3,0-4.79999,1-4.79999,3.2s1.79999,3.7,5.39999,3.7M322.89999,47.1v15.7c-4.5,1.8-9.60001,2.9-15.10001,2.9-8.5,0-13.5-3.3-13.5-9.8s5.39999-9.5,13-9.4c2.39999.1,4.5.3,6.29999.9v-1.2c0-2.6-1.79999-4.4-6.20001-4.4-3.5,0-6.5,1.4-8.10001,2.6-2-1.1-3.60001-3.2-4-6,1.70001-1.5,6.39999-4.3,13-4.3,8.70004-.1,14.60004,3.7,14.60004,13"/><path fill="#102a4c" d="M328.89999,64.7V23.5c1.39999-.2,3-.4,4.60001-.4s3.20001.1,4.79999.4v41.2c-1.5.2-3.10001.4-4.60001.4s-3.19998-.2-4.79999-.4"/><path fill="#102a4c" d="M135,101.2c0-12.6,8.7-21.5,21.2-21.5,5.7,0,9.7,1.7,12.39999,3.9-.39999,2.8-2.39999,5.9-5.10001,7.3-2.3-1.6-4.5-2.3-7.10001-2.3-6.8,0-11.2,4.7-11.2,12.6s4.5,12.5,11,12.5c4,0,6.2-1.2,8.10001-2.8,2.89999,1.7,4.5,3.9,5.10001,7.5-2.39999,1.9-6.39999,4.1-13.60001,4.1-12.79999,0-20.79999-8.69999-20.79999-21.3"/><path fill="#102a4c" d="M194.39999,106.5c0-4.9-2.5-8.1-6.89999-8.1s-7,3.2-7,8.1,2.60001,8.1,7,8.1,6.89999-3.3,6.89999-8.1M171.10001,106.5c0-9.6,6.89999-16,16.39999-16s16.3,6.2,16.3,16-6.89999,15.9-16.39999,15.9-16.3-6-16.3-15.9"/><path fill="#102a4c" d="M257.29999,102.6v18.8c-1.60001.2-3.10001.4-4.7.4s-3.10001-.1-4.7-.4v-16.7c0-3.7-1.8-5.7-5.3-5.7-2.39999,0-3.89999.9-5,1.7.10001.6.10001,1.3.10001,1.9v18.8c-1.60001.2-3.10001.4-4.7.4s-3.10001-.1-4.60001-.4v-16.7c0-3.7-1.8-5.7-5.3-5.7-2.10001,0-3.7.6-4.8,1.3v21.1c-1.60001.2-3.10001.4-4.7.4s-3.10001-.1-4.60001-.4v-25.9c2.10001-1.8,7.7-5,15.10001-5,4.2,0,7.5,1.1,9.7,2.8,2.39999-1.5,5.8-2.8,9.89999-2.8,9.10002,0,13.60001,5.1,13.60001,12.1"/><path fill="#102a4c" d="M312,102.6v18.8c-1.60001.2-3.10001.4-4.70001.4s-3.10001-.1-4.70001-.4v-16.7c0-3.7-1.79999-5.7-5.29999-5.7-2.39999,0-3.89999.9-5,1.7.10001.6.10001,1.3.10001,1.9v18.8c-1.60001.2-3.10001.4-4.70001.4s-3.10001-.1-4.60001-.4v-16.7c0-3.7-1.79999-5.7-5.29999-5.7-2.10001,0-3.70001.6-4.79999,1.3v21.1c-1.60001.2-3.10001.4-4.70001.4s-3.10001-.1-4.60001-.4v-25.9c2.10001-1.8,7.70001-5,15.10001-5,4.20001,0,7.5,1.1,9.70001,2.8,2.39999-1.5,5.79999-2.8,9.89999-2.8,9.20001,0,13.60001,5.1,13.60001,12.1"/><path fill="#102a4c" d="M318.39999,121.4v-29.8c1.5-.2,3.10001-.4,4.60001-.4s3.10001.1,4.70001.4v29.8c-1.5.2-3.10001.4-4.70001.4-1.5,0-3-.1-4.60001-.39999M317.5,82.1c0-3.1,2.5-5.6,5.70001-5.6s5.70001,2.5,5.70001,5.6-2.60001,5.7-5.70001,5.7-5.70001-2.7-5.70001-5.7"/><path fill="#102a4c" d="M332.70001,118.7c.5-2.9,1.89999-5.2,3.70001-6.3,2.20001,1.4,5.29999,3,9.79999,3,2.89999,0,3.89999-1.1,3.89999-2.4,0-1.6-1.60001-2.4-6.5-3.3-4.89999-1-10.10001-2.8-10.10001-9.4,0-6.2,5.70001-9.7,13.10001-9.7,6.20001,0,10,1.4,12.10001,2.8-.39999,3-1.60001,5.2-3.29999,6.5-2-1.1-5.29999-2.2-8.70001-2.2-3,0-4.29999.6-4.29999,2.1s1.29999,2.1,6,2.9c5.89999,1,10.89999,2.9,10.89999,9.4s-4.79999,10.1-13.5,10.1c-6.70001.3-11.20001-1.89999-13.10001-3.5"/><path fill="#102a4c" d="M362.79999,118.7c.5-2.9,1.89999-5.2,3.70001-6.3,2.20001,1.4,5.29999,3,9.79999,3,2.89999,0,3.89999-1.1,3.89999-2.4,0-1.6-1.60001-2.4-6.5-3.3-4.89999-1-10.10001-2.8-10.10001-9.4,0-6.2,5.70001-9.7,13.10001-9.7,6.20001,0,10,1.4,12.10001,2.8-.39999,3-1.60001,5.2-3.29999,6.5-2-1.1-5.29999-2.2-8.70001-2.2-3,0-4.29999.6-4.29999,2.1s1.29999,2.1,6,2.9c5.89999,1,10.89999,2.9,10.89999,9.4s-4.79999,10.1-13.5,10.1c-6.60001.3-11.10001-1.89999-13.10001-3.5"/><path fill="#102a4c" d="M394.79999,121.4v-29.8c1.5-.2,3.10001-.4,4.60001-.4s3.10001.1,4.70001.4v29.8c-1.5.2-3.10001.4-4.70001.4-1.39999,0-3-.1-4.60001-.39999M393.89999,82.1c0-3.1,2.5-5.6,5.70001-5.6s5.70001,2.5,5.70001,5.6-2.60001,5.7-5.70001,5.7-5.70001-2.7-5.70001-5.7"/><path fill="#102a4c" d="M432.60001,106.5c0-4.9-2.5-8.1-6.89999-8.1s-7,3.2-7,8.1,2.60001,8.1,7,8.1,6.89999-3.3,6.89999-8.1M409.29999,106.5c0-9.6,6.89999-16,16.39999-16s16.29999,6.2,16.29999,16-6.89999,15.9-16.39999,15.9-16.29999-6-16.29999-15.9"/><path fill="#102a4c" d="M476.5,103.3v18.1c-1.60001.2-3.10001.4-4.70001.4s-3.10001-.1-4.70001-.4v-16.6c0-4.3-2.29999-5.8-5.70001-5.8-2.20001,0-4,.6-5,1.3v21.1c-1.60001.2-3.10001.4-4.70001.4s-3.10001-.1-4.60001-.4v-25.9c2.29999-2.1,7.70001-5,15.10001-5,9.80005.1,14.30005,5.5,14.30005,12.8"/><polygon fill="#102a4c" points="144.7 145.89999 135 145.89999 135 142.5 158.5 142.5 158.5 145.89999 148.8 145.89999 148.8 174.39999 144.7 174.39999 144.7 145.89999"/><path fill="#102a4c" d="M175.39999,162.7c0-5.5-2.7-9.10001-6.8-9.10001s-6.8,3.60001-6.8,9.10001,2.7,9,6.8,9,6.8-3.59999,6.8-9M157.60001,162.7c0-7.89999,5.2-12.5,11-12.5s11,4.5,11,12.5-5.2,12.39999-11,12.39999-11-4.59999-11-12.39999"/><polygon fill="#102a4c" points="183.7 139.8 187.7 139.8 187.7 163.10001 187.89999 163.10001 197.89999 150.8 202.39999 150.8 194.5 160.3 203.39999 174.39999 199 174.39999 192.10001 163.10001 187.7 168.2 187.7 174.39999 183.7 174.39999 183.7 139.8"/><path fill="#102a4c" d="M219.2,168.7v-6.39999c-8,.89999-10.60001,2.7-10.60001,5.8,0,2.60001,1.8,3.60001,4.10001,3.60001s4.2-1.00002,6.5-3.00002M204.7,168.3c0-5.3,4.39999-7.8,14.5-8.89999-.10001-3-1-5.89999-4.89999-5.89999-2.7,0-5.2,1.2-7.10001,2.39999l-1.60001-2.7c2.2-1.5,5.5-3.10001,9.3-3.10001,5.8,0,8.2,3.89999,8.2,9.7v14.60001h-3.3l-.39999-2.8h-.10001c-2.2,1.89999-4.8,3.39999-7.8,3.39999-3.89998,0-6.79999-2.39999-6.79999-6.7"/><polygon fill="#102a4c" points="242.60001 145.89999 232.89999 145.89999 232.89999 142.5 256.39999 142.5 256.39999 145.89999 246.7 145.89999 246.7 174.39999 242.60001 174.39999 242.60001 145.89999"/><path fill="#102a4c" d="M262.20001,142.39999h13v2.8h-13v-2.8ZM259.10001,165.8v-15h4v14.5c0,4.39999,1.39999,6.3,4.5,6.3,2.39999,0,4.10001-1.2,6.29999-4v-16.8h4v23.7h-3.29999l-.29999-3.7h-.10001c-2.20001,2.60001-4.5,4.3-7.79999,4.3-5.10004-.10001-7.30002-3.3-7.30002-9.3"/><path fill="#102a4c" d="M299,161.39999h9.5l-1.5-4.8c-1.20001-3.60001-2.20001-7.10001-3.20001-10.8h-.20001c-1,3.7-2,7.2-3.10001,10.8l-1.49997,4.8h0ZM301.5,142.5h4.70001l10.79999,32h-4.29999l-3-9.7h-11.70001l-3.10001,9.7h-4.10001l10.70001-32h0Z"/><polygon fill="#102a4c" points="321.10001 139.8 325.10001 139.8 325.10001 163.10001 325.29999 163.10001 335.29999 150.8 339.79999 150.8 331.89999 160.3 340.79999 174.39999 336.39999 174.39999 329.5 163.10001 325.10001 168.2 325.10001 174.39999 321.10001 174.39999 321.10001 139.8"/><path fill="#102a4c" d="M357.89999,160.60001c0-4.7-2.20001-7.2-5.79999-7.2-3.29999,0-6.20001,2.60001-6.70001,7.2h12.5ZM341.39999,162.60001c0-7.7,5.20001-12.39999,10.60001-12.39999,6,0,9.5,4.3,9.5,11.10001,0,.89999,0,1.60001-.20001,2.39999h-15.89999c.29999,4.89999,3.29999,8.10001,7.79999,8.10001,2.29999,0,4.29999-.60001,5.89999-1.8l1.39999,2.60001c-2,1.5-4.60001,2.39999-7.89999,2.39999-6.19998.09999-11.19998-4.50002-11.19998-12.40001"/></svg>
+
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 d-none d-md-block social-icon">
+                <div class="row d-flex justify-content-center">
+                    <a target="_blank" class="m-1 p-0 w-auto" href="https://twitter.com/geonet" rel="external noopener noreferrer">
+                        <i class="fa-brands fa-twitter-square fa-2" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" class="m-1 p-0 w-auto" href="https://www.facebook.com/geonetnz/" rel="external noopener noreferrer">
+                        <i class="fa-brands fa-facebook-square fa-2" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" class="m-1 p-0 w-auto" href="https://github.com/GeoNet" rel="external noopener noreferrer">
+                        <i class="fa-brands fa-github fa-2" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" class="m-1 p-0 w-auto" href="https://www.youtube.com/user/GeoNetNZ" rel="external noopener noreferrer">
+                        <i class="fa-brands fa-youtube-square fa-2" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" class="m-1 p-0 w-auto" href="https://play.google.com/store/apps/details?id=nz.org.geonet.quake&hl=en" rel="external noopener noreferrer">
+                        <i class="fa-brands fa-android fa-2" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" class="m-1 p-0 w-auto" href="https://itunes.apple.com/nz/app/geonet-quake/id533054360?mt=8" rel="external noopener noreferrer">
+                        <i class="fa-brands fa-apple fa-2" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<script src="/assets/js/80b1488f-bootstrap.v5.bundle.min.js" type="text/javascript" integrity="sha384-9kDu1jIz592pWTsTCOYqxySLTEUzZ+ycurR4yPOYMrXOf+lkTnM6UXAl1Rfbf4MO" nonce="kevGJ+U7fmxSFW8rciHg" ></script>
+<script src="/assets/js/ccb4d3af-footer.js" type="text/javascript" integrity="sha384-miv/oc7wjmw1bhsJrlxyP5MIJvir/oRexbqMV426rDV664Ftyu3267wCav1Tm4F1" nonce="kevGJ+U7fmxSFW8rciHg" ></script>
+</body>
+</html>

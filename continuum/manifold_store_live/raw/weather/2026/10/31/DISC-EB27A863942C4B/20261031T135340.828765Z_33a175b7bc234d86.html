@@ -1,0 +1,605 @@
+
+<!doctype html>
+<!--
+NCO Homepage
+9/20/2022 - Implemented major upgrade to the page
+6/7/2025 - Updated the CWD banner to better align with the CWD website (banner will always display the current status, and the background color of the banner will change depending on the current status). 
+7/28/2025 - Added "Latest Admin Message" and "Recent & Upcoming Model Changes" Widgits to the bottom of the page.
+6/01/2026 - Removed NCEP from flag variable that keys latest SDM Admin Message.
+-->
+<html><!-- InstanceBegin template="/Templates/main_nco_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>NWS Central Operations</title>
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="head" -->
+<meta name="DC.title" content="NWS Central Operations">
+<meta name="DC.description" content="NWS Central Operations">
+<meta name="DC.keywords" content="NCO NCEP Central Operations, NWS Central Operations, numerical weather prediction, IT, SDM, Senior Duty Meteorologist, Critical Weather Day, CWD, weather models, NWS services, NWS applications, NWS radar, NWS forecast, weather.gov">
+<!-- InstanceEndEditable -->
+	<meta name="DC.creator" content="NWS Central Operations">
+	<meta name="DC.language" scheme="DCTERMS.RFC1766" content="EN-US">
+	<meta name="DC.publisher" content="NWS Central Operations">
+	<meta name="DC.contributor" content="NWS Central Operations">
+	<meta name="DC.rights" content="https://www.weather.gov/disclaimer.php">
+	<meta name="rating" content="General">
+	<meta name="robots" content="index,follow">
+	<link href="/css/nco_main_structural.css" rel="stylesheet" type="text/css" medial="all">
+	<link href="/css/nco_main_style.css" rel="stylesheet" type="text/css" media="all">
+    
+<!-- InstanceBeginEditable name="OtherScripts" -->
+    <!--Style sheet for home page-->
+    <link href="https://www.nco.ncep.noaa.gov/css/nco_style_home.css?version=1.2" rel="stylesheet" type="text/css" media="all">
+    <!--set base for relative URLs in include files -->
+    <base href="https://www.nco.ncep.noaa.gov/includes/">
+    <!--add auto refresh-->
+    <meta http-equiv="refresh" content="1200">
+<!-- InstanceEndEditable -->
+<!-- Analytics - DAP-->
+  <script async type="text/javascript" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NOAA&pga4=G-3FGE2SCD1B"></script>
+
+
+</head>
+
+<body>
+	<!--top header-->
+
+<div class="header">
+	<div class="header-content">
+		<a href="https://www.noaa.gov" title="Explore other NOAA products" class="header-noaa-icon">
+		  <img src="/images/header-noaa.png" alt="NOAA" /></a>
+		<a href="https://www.weather.gov" title="Access to the latest watches and warnings" class="header-nws-icon">
+		  <img src="/images/header-nws.png" alt="NWS" /></a>
+		<a href="https://www.commerce.gov" title="Learn about the Department of Commerce" class="header-doc">
+		  <img src="/images/header_doc.png" alt="DOC" /></a>
+		<a href="#contents">
+		  <img height="1" src="/images/skipgraphic.gif" alt="Skip Naviagation Links" width="1"></a>
+	
+		<div class="header-center-text">
+    	    <a class="header-center-text" href="https://www.nco.ncep.noaa.gov">NWS Central Operations</a>
+        </div>
+	  <div class="header-noaa-text">
+	        <a class="header-noaa-text" href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a>
+	  </div>
+	</div>
+</div>
+<div class="header-shadow">
+	<div class="header-shadow-content">	</div>
+</div>
+<!--End top header-->
+	<div class="center">
+		<div class="content">
+			<div class="center">
+  <div class="content">
+    <div class="topnav">
+      <ul id="topnav">
+        <li>
+          <div class="left-section-link">
+              <a href="https://www.nco.ncep.noaa.gov" title="Back to NCO's home page">Home</a> </div>
+        </li>
+        <li>
+          <div class="center-section-link">
+              <a href="https://mag.ncep.noaa.gov" title="NWS Model Graphics">MODELS &#x25BC;</a></div>
+          <div class="drop">
+            <ul>
+              <li><a href="https://mag.ncep.noaa.gov">Model Analyses & Guidance</a></li>
+              <li><a href="/pmb/nwprod/prodstat_new/">Current Model Status</a></li>
+              <li><a href="/status/data/realtime/">Real-Time Data Monitor</a></li>
+              <li><a href="/pmb/nwprod/gdas/">GDAS Data Counts</a></li>
+              <li><a href="/status/nwps/">NWPS WFO Status</a></li>
+              <li><a href="/pmb/products/">Products Inventory</a> </li>
+              <li><a href="/pmb/changes/">Model Changes</a></li>
+              <li><a href="/pmb/codes/nwprod">Model Source Code</a></li>
+              <!--<li><a href=#>WCOSS/Supercomputers (Coming Soon)</a></li> -->
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link">
+              <a href="/omb/apps/" title="More about Applications and Services at NCEP">Applications/Services &#x25BC;</a> </div>
+          <div class="drop">
+            <ul>
+              <li><a href="https://www.weather.gov">Weather.gov</a></li>
+              <li><a href="https://www.weather.gov/emwin/">EMWIN</a></li>
+              <li><a href="https://nomads.ncep.noaa.gov/pub/">FTPPRD</a></li>
+              <li><a href="https://inws.ncep.noaa.gov">iNWS</a></li>
+              <li><a href="https://iris.ncep.noaa.gov">IRIS (NOAA access)</a></li>
+              <li><a href="https://madis-data.ncep.noaa.gov/">MADIS</a></li>
+              <li><a href="https://mag.ncep.noaa.gov/">MAG</a></li>
+              <li><a href="https://mrms.ncep.noaa.gov/data/">MRMS</a></li>
+              <li><a href="https://nomads.ncep.noaa.gov">NOMADS</a></li>
+              <li><a href="https://nwschat.nws.noaa.gov/registration/login">NWSChat</a></li>
+              <li><a href="https://radar.weather.gov">Ridge II Radar</a></li>
+              <li><a href="http://tgftp.ncep.noaa.gov">TGFTP</a></li>
+              <li><a href="/pmb/primarysite/">IDP Primary Site</a></li>
+              <li><a href="/idsb/IDP_standards/">IDP Implementation Standards</a></li>
+              <li><a href="/omb/apps/">More...</a></li>
+            
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link"> 
+            <!--<a href="https://www.weather.gov/tg/tginfo">The Gateway</a> --> 
+            <a href="/status/" title="More about Operational Status">Operational Status &#x25BC;</a> </div>
+          <div class="drop">
+            <ul>
+              <li><a href="/status/cwd/">Critical Weather Day</a></li>
+	      <li><a href="/status/messages/">SDM Administrative Messages</a></li>
+	      <li><a href="/status/dashboard/">Dashboard (NOAA access)</a></li>
+              <li><a href="/status/data/realtime/">Real-Time Data Monitor</a></li>
+	      <li><a href="/omb/dataqc/">Upper Air & Surface Data QC</a></li>
+	      <li><a href="/status/data/thanks/">Raob &#34;Thanks&#34; Reports</a></li>
+              <li><a href="/status/wsr/">Winter Storm Reconnaissance</a></li>
+              <li><a href="/status/recon/">Aircraft Dropsondes</a></li>
+	      <li><a href="/status/satellite/">Satellite Sectors</a></li>
+	      <li><a href="https://www.weather.gov/nl2/NEXRADView">Radar Level II</a></li>
+	      <li><a href="https://radar3pub.ncep.noaa.gov">Radar Level III</a></li>
+              <li><a href="/pmb/nwprod/prodstat_new/">NWS Model Status</a></li>
+              <li><a href="/status/nwps/">NWPS WFO Status</a></li>
+	      <li><a href="/omb/soe/">Schedule of Events (NOAA access)</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link">
+              <a href="https://www.nco.ncep.noaa.gov" title="More about NCO">About NCO &#x25BC;</a> </div>
+          <div class="drop">
+            <ul>
+              <li><a href="/director/">Office of the Director</a></li>
+	      <li><a href="/pmb/">Implementation and Data Services (IDSD)</a></li>
+              <li><a href="/hpc/">High Performance Computing (HPCD)</a></li>
+	      <li><a href="/nsb/">Network and Security (NSD)</a></li>
+              <li><a href="/omb/">Operational Monitoring (OMD)</a></li>
+              <li><a href="/director/orgchart.php">Organizational Chart</a></li>
+              <li><a href="/sitemap/">Web Site Map</a></li>
+	      <!--<li><a href="#">FAQ/History/MissonAndVision (coming soon)</a></li>-->
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link"> <a href="https://www.weather.gov/ncep/" title="More about NCEP Centers">Centers &#x25BC;</a> </div>
+          <div class="drop">
+            <ul>
+              <li><a href="https://www.aviationweather.gov">Aviation (AWC)</a></li>
+	      <li><a href="https://www.cpc.ncep.noaa.gov/">Climate (CPC)</a></li>
+              <li><a href="https://www.nhc.noaa.gov">Hurricane (NHC/CPHC)</a></li>
+              <li><a href="https://www.spc.noaa.gov">Storm (SPC)</a></li>
+              <li><a href="https://www.swpc.noaa.gov">Space (SWPC)</a></li>
+              <li><a href="https://tsunami.gov">Tsunami (NTWC/PTWC)</a></li>
+	      <li><a href="https://water.noaa.gov/">Water (NWC)</a></li>
+              <li><a href="https://www.wpc.ncep.noaa.gov">Weather (WPC)</a></li>
+	      <li><a href="https://ocean.weather.gov">Ocean (OPC)</a></li>
+	      <li><a href="https://usicecenter.gov">Ice (USNIC)</a></li>
+              <li><a href="https://www.nco.ncep.noaa.gov">Technology (NCO)</a></li>
+              <li><a href="https://www.emc.ncep.noaa.gov/">Modeling (EMC)</a></li>
+	      <li><a href="https://www.ndbc.noaa.gov">Buoy Data (NDBC)</a></li>
+              <li><a href="https://www.roc.noaa.gov/">Radar Ops (ROC)</a></li>
+	    </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link"> 
+            <!-- link to noaa/nws website search --> 
+            <a href="https://www.weather.gov/search">Search</a> </div>
+          <div class="dropsearch">
+            <div class="site-search">
+              <form method="get" action="https://search.usa.gov/search" style="margin-bottom: 0; margin-top: 0;">
+                <input type="hidden" name="v:project" value="firstgov"/>
+                <label for="query">Search For</label>
+                <input type="text" name="query" id="query" size="12"/>
+                <input type="submit" value="Go"/>
+                <p>
+                  <input type="radio" name="affiliate" checked="checked" value="nws.noaa.gov" id="nws"/>
+                  <label for="nws" class="search-scope">NWS</label>
+                  <input type="radio" name="affiliate" value="noaa.gov" id="noaa"/>
+                  <label for="noaa" class="search-scope">All NOAA</label>
+                </p>
+              </form>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<br>
+<!--
+<div class="shutdown">
+  </div>
+-->
+		</div>
+		<div class="center-content">
+			<!-- TOP NEW AREA-->
+<!--     <div class="five-sixth-last">
+      <div id="topnews">
+        <div class="icon"><img src="https://www.weather.gov/css/images/news-important.jpg" /></div>
+        <div class="body">
+<h1 style="font-size: 11pt;">Severe Thunderstorms and Locally Heavy Rain Possible</h1>
+            <p>
+                Severe thunderstorms with large hail and damaging winds will be possible from Oklahoma and northeast Texas to Kentucky, West Virginia and parts of Virginia and North Carolina. More isolated strong/severe storms will also be possible across parts of the northern Rockies.  Heavy rain and local flooding are possible in the lower Mississippi Valley and central Appalachians. 
+                <a href="http://www.wpc.ncep.noaa.gov/discussions/hpcdiscussions.php?disc=pmdspd" target="_blank" rel="noopener noreferrer">Read More &gt;</a>
+            </p>        </div>
+      </div>
+    </div>
+-->
+			<div class="full-width-border">
+				<div class="partial-width-borderbottom">
+					<div class="div-full">
+						<div class="div-full breadcrumb">
+							<div class='location-breadcrumb'>
+
+<!-- InstanceBeginEditable name="breadcrumb" -->
+
+<!--No breadcrumb for homepage -->
+<!--
+<div><img src="/status/css/images/NCOops.jpg" alt="NCOops" height="100" ></div>                                
+<a href="http://www.ncep.noaa.gov/">NCEP Home</a> &gt; 
+NCEP Central Operations-->
+
+<!-- InstanceEndEditable -->
+
+							</div>
+						</div>
+					</div>
+					<div class="div-full">
+					</div>
+					<div class="div-full cms-content" id="home_page_content">
+						<div class="content_centered">
+
+<!-- InstanceBeginEditable name="content" -->
+
+<!--body of NCO home page-->
+
+<!--PHP file that gathers CWD data -->
+
+
+<div class="row-headline"><div class="col-headline1">Latest News Headline: <a href="https://www.nco.ncep.noaa.gov/status/messages/" title="click for more info">iNWS Text Message - Restored</a><br></div></div><a href="https://www.nco.ncep.noaa.gov/status/cwd/"><div class="row-nor-headline"><div class="col-cwd-headline1">Critical Weather Day status is currently normal</div></div></a>
+<!--Rotating showcase images -->
+<div id="slider1" class="slider-container">
+  <img class="image-darken" src="https://www.nco.ncep.noaa.gov/status/css/images/scroll-ncwcp.jpg" alt="NCOops" height="550" width="100%">
+  <div class="slider-highlight"></div>
+  <div class="slider-description">
+    The NOAA Center for Weather and Climate Prediction (NCWCP).
+  </div>
+  <div class="slider-dots">
+    <span onclick="currentDiv(1)">&#9679;</span>
+    <span onclick="currentDiv(2)">&#9675;</span>
+    <span onclick="currentDiv(3)">&#9675;</span>
+    <span onclick="currentDiv(4)">&#9675;</span>
+    <span onclick="currentDiv(5)">&#9675;</span>
+  </div>
+  <div class="slider-left" onclick="currentDiv(5)">&#8249;</div>
+  <div class="slider-right" onclick="currentDiv(2)">&#8250;</div>
+</div>
+
+<div id="slider2" class="slider-container">
+  <img class="image-darken" src="https://www.nco.ncep.noaa.gov/status/css/images/Hive_Cirrus.png" alt="NCOops" height="550" width="100%">
+  <div class="slider-highlight"></div>
+  <div class="slider-description">
+    NWS eyes the cloud for next-gen applications. <a target="_blank" rel="noopener noreferrer" href="https://www.noaa.gov/news-release/noaas-national-weather-service-eyes-cloud-for-next-gen-applications">Find out more.</a></div>
+  <div class="slider-dots">
+    <span onclick="currentDiv(1)">&#9675;</span>
+    <span onclick="currentDiv(2)">&#9679;</span>
+    <span onclick="currentDiv(3)">&#9675;</span>
+    <span onclick="currentDiv(4)">&#9675;</span>
+    <span onclick="currentDiv(5)">&#9675;</span>
+  </div>
+  <div class="slider-left" onclick="currentDiv(1)">&#8249;</div>
+  <div class="slider-right" onclick="currentDiv(3)">&#8250;</div>
+</div>
+
+<!--
+<div id="slider2" class="slider-container">
+  <img class="image-darken" src="https://www.noaa.gov/sites/default/files/styles/landscape_width_1275/public/2023-01/NOAAOrionPlane.jpg?h=410e710d&itok=-lXaDcLH" alt="NCOops" height="550" width="100%">
+  <div class="slider-highlight"></div>
+  <div class="slider-description">
+    Hurricane Hunters fly winter missions too? <a target="_blank" rel="noopener noreferrer" href="https://www.noaa.gov/stories/wait-hurricane-hunters-fly-winter-missions-too">Find out</a> how recon flights help improve forecasts in the winter season. </div>
+  <div class="slider-dots">
+    <span onclick="currentDiv(1)">&#9675;</span>
+    <span onclick="currentDiv(2)">&#9679;</span>
+    <span onclick="currentDiv(3)">&#9675;</span>
+    <span onclick="currentDiv(4)">&#9675;</span>
+    <span onclick="currentDiv(5)">&#9675;</span>
+  </div>
+  <div class="slider-left" onclick="currentDiv(1)">&#8249;</div>
+  <div class="slider-right" onclick="currentDiv(3)">&#8250;</div>
+</div>
+-->
+<div id="slider3" class="slider-container">
+  <img class="image-darken" src="https://radar.weather.gov/ridge/standard/CONUS-LARGE_loop.gif" alt="NCOops" height="550" width="100%">
+  <div class="slider-highlight"></div>
+  <div class="slider-description">
+    Current NWS radar mosaic. Visit <a target="_blank" rel="noopener noreferrer" href="https://radar.weather.gov">radar.weather.gov</a> for more.
+  </div>
+  <div class="slider-dots">
+    <span onclick="currentDiv(1)">&#9675;</span>
+    <span onclick="currentDiv(2)">&#9675;</span>
+    <span onclick="currentDiv(3)">&#9679;</span>
+    <span onclick="currentDiv(4)">&#9675;</span>
+    <span onclick="currentDiv(5)">&#9675;</span>
+  </div>
+  <div class="slider-left" onclick="currentDiv(2)">&#8249;</div>
+  <div class="slider-right" onclick="currentDiv(4)">&#8250;</div>
+</div>
+
+<div id="slider4" class="slider-container">
+  <img class="image-darken" src="https://mag.ncep.noaa.gov/data/gfs/00/namer/sim_radar_comp/gfs_namer_024_sim_radar_comp.gif" alt="NCOops" height="550" width="100%">  <div class="slider-highlight"></div>
+  <div class="slider-description">
+    24hr forecast from the NWS Global Forecast System. Visit <a target="_blank" rel="noopener noreferrer" href="https://mag.ncep.noaa.gov">mag.ncep.noaa.gov</a> for more.
+  </div>
+  <div class="slider-dots">
+    <span onclick="currentDiv(1)">&#9675;</span>
+    <span onclick="currentDiv(2)">&#9675;</span>
+    <span onclick="currentDiv(3)">&#9675;</span>
+    <span onclick="currentDiv(4)">&#9679;</span>
+    <span onclick="currentDiv(5)">&#9675;</span>
+  </div>
+  <div class="slider-left" onclick="currentDiv(3)">&#8249;</div>
+  <div class="slider-right" onclick="currentDiv(5)">&#8250;</div>
+</div>
+
+<!--
+<div id="slider3" class="slider-container">
+  <img class="image-darken" src="https://www.nco.ncep.noaa.gov/status/css/images/wcoss2b.jpeg" alt="NCOops" height="550" width="100%">
+  <div class="slider-highlight"></div>
+  <div class="slider-description">
+    The NOAA Weather and Climate Operational Supercomputing System (<a target="_blank" rel="noopener noreferrer" href="https://www.noaa.gov/news-release/noaa-completes-upgrade-to-weather-and-climate-supercomputer-system">WCOSS2</a>). </div>
+  <div class="slider-dots">
+    <span onclick="currentDiv(1)">&#9675;</span>
+    <span onclick="currentDiv(2)">&#9675;</span>
+    <span onclick="currentDiv(3)">&#9679;</span>
+    <span onclick="currentDiv(4)">&#9675;</span>
+    <span onclick="currentDiv(5)">&#9675;</span>
+  </div>
+  <div class="slider-left" onclick="currentDiv(2)">&#8249;</div>
+  <div class="slider-right" onclick="currentDiv(4)">&#8250;</div>
+</div>
+-->
+
+<div id="slider5" class="slider-container">
+  <img class="image-darken" src="https://forecast.weather.gov/wwamap/png/US.png" alt="NCOops" height="550" width="100%">
+  <div class="slider-highlight"></div>
+  <div class="slider-description">
+    Current NWS watches, warnings, and advisories. Visit <a target="_blank" rel="noopener noreferrer" href="https://www.weather.gov">weather.gov</a> for details.
+  </div>
+  <div class="slider-dots">
+    <span onclick="currentDiv(1)">&#9675;</span>
+    <span onclick="currentDiv(2)">&#9675;</span>
+    <span onclick="currentDiv(3)">&#9675;</span>
+    <span onclick="currentDiv(4)">&#9675;</span>
+    <span onclick="currentDiv(5)">&#9679;</span>
+  </div>
+  <div class="slider-left" onclick="currentDiv(4)">&#8249;</div>
+  <div class="slider-right" onclick="currentDiv(1)">&#8250;</div>
+</div>
+
+<script>
+  //script to rotate through showcase images
+  var slideIndex = 1;
+  showDivs();
+  var auto = setInterval(showDivs, 9000);                
+  function currentDiv(n) {
+    slideIndex = n;
+    showDivs();
+    clearInterval(auto);
+  }
+  function showDivs() {
+  var i;
+  var x = document.getElementsByClassName("slider-container");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    x[slideIndex-1].style.display = "block";
+                
+    //increment for automated picture change
+    if (slideIndex == x.length) {
+      slideIndex = 1;
+    } else { 
+      slideIndex = slideIndex + 1;
+    }
+  }
+</script>
+
+<!--Description of NCO and links to branches -->
+<div class="center-content-option1">
+  <div class="text-vision-title" style="text-align: center; font-size: 150%;">
+    Welcome to NWS Central Operations
+  </div>
+  <div class="text-vision">
+    As the information technology center for the National Weather Service, NCO executes and manages upgrades to the NWS model production suite, enterprise applications, and network services for the entire NWS, and provides 24x7 monitoring and customer support. <br><br>
+
+Our vision is to set the standard for information technology excellence for the NWS, serving as a valued technical asset for the NWS and NOAA in defining and accomplishing mission goals, and to be as renowned for IT management as our other National Centers are for scientific excellence.<br>
+<br>
+<center><b><a href="../director/">Office of the Director</a></b></center>
+  </div>
+  <div class="row-splash1">
+    <div class="column-splash1">
+      <a href="../nsb/">Network and Security (NSD)</a><br>
+      <a href="../hpc/">High Performance Computing (HPCD)</a><br>
+    </div>
+    <div class="column-splash1">
+      <a href="../omb/">Operational Monitoring (OMD)</a><br>
+      <a href="../pmb/">Implementation & Data Services (IDSD)</a><br>
+    </div>
+  </div>
+</div>
+
+<!--Bottom 4 "Explore" graphics -->
+
+
+<div class="center-content-full">
+  <div class="row-splash1">
+    <div class="column-splash2">  
+      <a href="https://mag.ncep.noaa.gov/">
+          <img class="image-darken" src="https://mag.ncep.noaa.gov/mag_images/mag-world-background.gif" alt="NCOops" height="140" width="100%">
+	  <div class="explore-title1">NWS Model Guidance</div>
+      </a>
+    </div>
+
+    <div class="column-splash2">
+      <a href="https://www.nco.ncep.noaa.gov/omb/apps/">
+          <img class="image-darken" src="https://www.nco.ncep.noaa.gov/status/css/images/nowCOAST.PNG" alt="NCOops" height="140" width="100%">
+	  <div class="explore-title1">Applications/Services</div>
+       </a>
+    </div>
+
+    <div class="column-splash2">
+      <a href="https://www.nco.ncep.noaa.gov/status/dashboard/">
+          <div class="explore-container">
+          <img class="image-darken" src="https://www.nco.ncep.noaa.gov/status/css/images/ITstatus.jpg" alt="NCOops" height="140" width="100%">
+	  <div class="explore-title1">IT Status Dashboard</div>
+          <div class="explore-title4">(NOAA Access Only)</div>
+          </div>
+      </a> 
+    </div>
+
+    <div class="column-splash2">
+      <a href="https://www.nco.ncep.noaa.gov/status/data/thanks/">
+          <img class="image-darken" src="https://www.nco.ncep.noaa.gov/status/css/images/thanks.GIF" alt="NCOops" height="140" width="100%">
+          <div class="explore-title1">Raob "Thanks" Status</div>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+<!--Widgits-->
+<div class="center-content-full">
+<div class="row-widgits">
+  <div class="column-widgits-a">
+    <div class="widgit-header"><a href="https://www.nco.ncep.noaa.gov/status/messages/">Latest SDM Admin Message</a></div>
+    SENIOR DUTY METEOROLOGIST NWS ADMINISTRATIVE MESSAGE
+<br>NWS CENTRAL OPERATIONS COLLEGE PARK MD
+<br>1334Z SAT OCT 31 2026
+<br>
+<br>The 12Z NWS model production suite began and is running on time
+<br>with 9 Alaskan, 25 Canadian, 44 CONUS, 13 Mexican, 9 Caribbean,
+<br>and 8 Pacific stations available for ingest.
+<br>
+<br>12Z NAM RAOB RECAP...
+<br>70219/BET - No report
+<br>70350/ADQ - No report
+<br>72240/LCH - No report
+<br>72248/SHV - No report
+<br>72250/BRO - No report
+<br>72363/AMA - No report
+<br>72364/EPZ - No report
+<br>72365/ABQ - No report
+<br>72376/FGZ - No report
+<br>72451/DDC - No report
+<br>72476/GJT - No report
+<br>72558/OAX - No report
+<br>72562/LBF - No report
+<br>72582/LKN - No report
+<br>72597/MFR - No report
+<br>72659/ABR - No report
+<br>72662/UNR - No report
+<br>72672/RIW - No report
+<br>72681/BOI - No report
+<br>72712/CAR - No report
+<br>72764/BIS - No report
+<br>72768/GGW - No report
+<br>74455/DVN - No report
+<br>91376/MAJ - No report
+<br>70308/SNP - 10159
+<br>70398/ANN - 10142
+<br>70414/SYA - 10158
+<br>72274/TWC - 10159
+<br>72293/NKX - 10142
+<br>78384/GCM - 10142
+<br>72440/SGF - Missing TTAA/TTBB
+<br>78016/BDA - Missing TTBB
+<br>78583/BZE - Missing TTAA/TTBB
+<br>76644/MID - Purged spurious winds surface to 1012 mb
+<br>
+<br>
+<br>Renkevens/SDM/NCO
+<br>  </div>
+  <div class="column-widgits-b">
+    <div class="widgit-header"><a href="https://www.nco.ncep.noaa.gov/pmb/changes/">Recent Model Upgrades</a></div>
+    &#11162;<a href="https://www.nco.ncep.noaa.gov/pmb/changes/" title="Model Upgrades"><strong>NWPS Model Upgrade</strong></a> November 9, 2026<br> Upgrade the Nearshore Wave Prediction System to version 1.5<br><br>&#11162;<a href="https://www.nco.ncep.noaa.gov/pmb/changes/" title="Model Upgrades"><strong>CIP Model Upgrade</strong></a> October 22, 2026<br>the Current Icing Product Model (CIP) to version 2.0<br><br>&#11162;<a href="https://www.nco.ncep.noaa.gov/pmb/changes/" title="Model Upgrades"><strong>BLEND Model Upgrade</strong></a> May 5, 2026<br> Upgrade the National Blend of Models (NBM) to version 5.0<br><br>  </div>
+</div>
+</div>
+
+
+<!--Display times page was loaded-->
+<div class="gray-borderbottom"></div>
+<div class="center-content">
+  <div class="loadtime">
+  Page loaded: 13:53 UTC &nbsp; | &nbsp; 6:53 am Pacific &nbsp; | &nbsp; 7:53 am Mountain &nbsp; | &nbsp; 8:53 am Central &nbsp; | &nbsp; 9:53 am Eastern   </div>
+</div>
+
+
+
+
+
+
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Filetime" -->
+<!-- *********************************************************
+Please change the filemtime to your file name so the date page date last updated is correct 
+********************************************************************************** -->						
+<!-- InstanceEndEditable -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="full-width-first">
+			<div class="full-width-first communication-links">
+				<div class="one-half-last nopad">
+					<span class="txt-rt myforecast-current">
+						<!--<div class="myforecast-current"> <a href="/rss_page.php?site_name=cfo" target="_blank" rel = "noopener noreferrer" style="text-decoration:none;font-size:11px;"> <img src="/css/images/rss.png" width="16" height="16" alt="CFO RSS Feed" />&nbsp;&nbsp;CFO RSS Feed </a> </div>
+-->
+					</span>
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+	<!-- end of <div class="center"> -->
+
+	<!-- sitemap area -->
+	<!-- legal footer area -->
+	<div class="footer-legal">
+  <div class="footer-legal">
+    <div class="footer-legal-content">
+      <div class="one-sixth-first" id="footer_legal_gov"> <a href="http://www.usa.gov"> <img src="https://www.weather.gov/bundles/templating/images/footer/usa_gov.png" alt="usa.gov" width="110" height="30" /></a> </div>
+      <div class="one-half-first" id="footer_legal_info">
+        <p> <a href="https://www.commerce.gov">US Dept of Commerce</a><br/>
+          <a href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a><br/>
+          <a href="https://www.weather.gov">National Weather Service</a><br/>
+          5830 University Research Court<br>
+          Riverdale Park, MD 20737<br>
+          <br/>
+          <br/>
+          <a href="https://www.nco.ncep.noaa.gov/mail_webmaster/">NWS Web Services POCs</a> </p>
+      </div>
+      <!-- end of <div class="one-half-first" id="footer_legal_info"> -->
+      <div class="one-third-last" id="footer_required_links">
+        <div class="div-half"> <a href="https://www.weather.gov/disclaimer">Disclaimer</a><br/>
+          <a href="http://www.cio.noaa.gov/services_programs/info_quality.html">Information Quality</a><br/>
+          <a href="https://www.weather.gov/help">Help</a><br/>
+          <a href="https://www.weather.gov/glossary">Glossary</a> </div>
+        <div class="div-half"> <a href="https://www.weather.gov/privacy">Privacy Policy</a><br/>
+          <a href="https://www.noaa.gov/foia-freedom-of-information-act">Freedom of Information Act (FOIA)</a><br/>
+          <a href="https://www.weather.gov/about">About Us</a><br/>
+          <a href="https://www.weather.gov/careers">Career Opportunities</a> </div>
+      </div>
+      <!-- end of <div class="one-third-last" id="footer_required_links"> --> 
+    </div>
+    <!-- end of <div class="footer-legal-content"> --> 
+  </div>
+  <!-- end of <div class="footer-legal"> --> 
+</div>
+	<!-- end of <div class="footer-legal"> -->
+</body>
+<!-- InstanceEnd --></html>

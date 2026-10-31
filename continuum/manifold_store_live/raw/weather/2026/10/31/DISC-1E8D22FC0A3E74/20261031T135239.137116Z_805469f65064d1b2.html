@@ -1,0 +1,333 @@
+<!-- Copyright © 2026, Oracle and/or its affiliates -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Oracle Applications</title>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="preconnect" href="https://static.oracle.com" />
+    <link rel="preload" as="script" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/bundles/redwood-app-bundle.js" />
+    <script type="text/javascript">
+window.userPreferences = {};    window.userPreferences['locale'] = "en";
+    window.userPreferences['timezone'] = {"timezone" : "Asia/Dubai" , "isoStrFormat" : "14400000" , "displayName" : "Gulf Standard Time" , "dst" : "false"};
+    window.userPreferences['dateFormatPattern'] = "MM/dd/yyyy";
+    window.userPreferences['timeFormatPattern'] = "HH:mm";
+    window.userPreferences['numberFormatPattern'] = "#,##0.###";
+    window.userPreferences['groupingSeparator'] = ",";
+    window.userPreferences['decimalSeparator'] = ".";
+    window.userPreferences['currencyCode'] = "AED";
+    window.userPreferences['FND_USER_PHOTO_ENABLED'] = "Y";
+    window.userPreferences['territory'] = "AE";
+</script>
+    <link rel="stylesheet" href="https://static.oracle.com/cdn/jet/19.0.0-2604.11/default/css/redwood/oj-redwood-min.css" id="css" type="text/css"/>
+<link rel="stylesheet" href="https://static.oracle.com/cdn/jet/19.0.0-2604.11/3rdparty/oraclejet-preact/amd/Theme-redwood/theme.css" id="css-theme" type="text/css"/>
+    <link rel="manifest" href="https://iaahbv.fa.ocs.oraclecloud.com:443/fscmUI/redwood/manifest.webmanifest"/> 
+<link rel="stylesheet" type="text/css" href="https://iaahbv.fa.ocs.oraclecloud.com:443/fscmUI/atkjet/NCM-Theme-V1-0alta_v1-non-ie-802d288beee5ca3c8aaa63719e8dad38e239109df996543a9aefc2ffac31c9dc.css"/>
+
+
+<!--FND_PRECONNECT_ARTIFACTS_PLACEHOLDER-->
+<link rel="preconnect" href="https://cls-99474101284b4525aedf9afda23c525b.cls.ocp.oraclecloud.com">
+
+<link rel="preload" as="script" href="https://static.oracle.com/cdn/spectra-ui/oj-sp/2607.10.0/oj-sp-unified-redwood-platform-bundle-config.js" ></link>
+<link rel="preload" as="script" href="https://static.oracle.com/cdn/spectra-ui/oj-sp/2607.10.0/oj-sp-unified-redwood-platform-external-dependency-bundle.js" ></link>
+<link rel="preload" as="script" href="https://static.oracle.com/cdn/spectra-ui/oj-sp/2607.10.0/oj-sp-unified-redwood-platform-base-bundle-1.js" ></link>
+<link rel="preload" as="script" href="https://static.oracle.com/cdn/spectra-ui/oj-sp/2607.10.0/oj-sp-unified-redwood-platform-base-bundle-2.js" ></link>
+<link rel="preload" as="script" href="https://static.oracle.com/cdn/spectra-ui/oj-sp/2607.10.0/oj-sp-unified-redwood-platform-base-bundle-3.js" ></link>
+<link rel="preload" as="script" href="https://static.oracle.com/cdn/spectra-ui/oj-sp/2607.10.0/oj-sp-unified-redwood-platform-base-bundle-4.js" ></link>
+<link rel="preload" as="script" href="https://static.oracle.com/cdn/spectra-ui/oj-sp/2607.10.0/oj-sp-unified-redwood-platform-base-bundle-5.js" ></link>
+<link rel="preload" as="script" href="https://static.oracle.com/cdn/vb/2607.1.0/visual-runtime.js" ></link>
+<link rel="preload" as="style" href="https://static.oracle.com/cdn/fnd/gallery/2607.0.1/images/iconfont/ojuxgallerybundle.min.css" ></link>
+<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="https://static.oracle.com/cdn/fnd/gallery/2607.0.1/images/iconfont/ojuxIconFont_Rg.woff2" ></link>
+<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="https://static.oracle.com/cdn/fnd/gallery/2607.0.1/images/iconfont/ojuxIconFont_SBd.woff2" ></link>
+<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="https://static.oracle.com/cdn/fnd/gallery/2607.0.1/OracleFont/OracleBrand_VariableFont/WOFF2/OracleBrandVF_Tb_W_WghtWdth.woff2" ></link>
+<link rel="icon" href="https://static.oracle.com/cdn/spectra-ui/oj-sp/2607.10.0/spectra-shell/resources/images/favicon.ico" ></link>
+<link rel="preload" as="fetch" href="https://iaahbv.fa.ocs.oraclecloud.com:443/fscmRestApi/vxmanifest/v2/digests/58?type=app-ui-info" crossorigin="anonymous" ></link>
+
+<!--APPUI_SPECIFIC_PRECONNECT_SCRIPT-->
+<script type="text/javascript">
+window.maintenanceBanner = {};
+</script>
+<script type="text/javascript">
+window.faConfig = window.faConfig || {};
+window.faConfig['LANG'] = "en";
+window.faConfig['APPL_SESSION_ID'] = "5E4E33FB2B941B9FE0636A6D1E0A83F5";
+window.faConfig['CERTIFIED_LABEL'] = "941458ab-3048-42b9-a509-bd75925a9b91";
+</script>
+<script type="text/javascript">
+window.FAEndPoints  = window.FAEndPoints || {};
+window.FAEndPoints['ORA_FSCM_UI'] = "https://iaahbv.fa.ocs.oraclecloud.com:443/fscmUI/";
+window.FAEndPoints['ORA_CRM_UI'] = "https://iaahbv.fa.ocs.oraclecloud.com:443/crmUI/";
+window.FAEndPoints['ORA_HCM_UI'] = "https://iaahbv.fa.ocs.oraclecloud.com:443/hcmUI/";
+window.FAEndPoints['ORA_FSCM_REST'] = "https://iaahbv.fa.ocs.oraclecloud.com:443/fscmRestApi/";
+window.FAEndPoints['ORA_CRM_REST'] = "https://iaahbv.fa.ocs.oraclecloud.com:443/crmRestApi/";
+window.FAEndPoints['ORA_HCM_REST'] = "https://iaahbv.fa.ocs.oraclecloud.com:443/hcmRestApi/";
+window.FAEndPoints['FND_FLOWS_LOCATION'] = "https://iaahbv.fa.ocs.oraclecloud.com:443/fscmUI/vb/fnd";
+window.FAEndPoints['FA_IMAGES'] = "https://iaahbv.fa.ocs.oraclecloud.com:443/fscmUI/images";
+window.FAEndPoints['FA_RESOURCE_BUNDLE'] = "https://iaahbv.fa.ocs.oraclecloud.com:443/fscmUI/strings";
+window.vbcsProductFamily = "/redwood";
+</script>
+<script type="text/javascript">
+window.faConfig['MANIFEST'] = {
+  "bundles" : [ {
+    "version" : "2607.10.0",
+    "serviceApps" : [ "ORA_SAAS_APP", "ORA_AIAPP", "ZCA_CX_MARKETING", "ORA_OARS_APP", "ORA_HYBRID_OCE_APP", "ORA_CXINDUSTRY_FABRIC", "ORA_ELOCATION_APP", "ORA_PROCESS_AUTOMATION_APP", "ORA_CDP_CORE_APP", "ORA_FIELDSERVICEAPP", "ORA_FA_CANONICAL" ],
+    "cca-dependencies" : [ "crm:oj-mca", "fin:oj-fa-fin", "crm:oj-cx-km-agent", "crm:oj-cx-ma", "crm:oj-cx-svc-common", "crm:oj-cx-es", "crm:oj-cx-ca", "crm:oj-cx-svc", "crm:oj-omnichannel-video", "hcm:oj-hcm", "psc:oj-psc-intake", "psc:oj-psc-common" ],
+    "pwaEnabled" : "true",
+    "sourceUrl" : "https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0",
+    "indexHtml" : "https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/index_unified.html"
+  } ]
+}
+; 
+window.vbInitConfig  = window.vbInitConfig || {} ;
+if (window.faConfig && window.faConfig['MANIFEST'] && window.faConfig.MANIFEST.bundles[0].sourceUrl && window.faConfig.MANIFEST.bundles[0].sourceUrl.length > 0) { 
+ window.vbInitConfig['BASE_URL'] = window.faConfig.MANIFEST.bundles[0].sourceUrl; 
+ } 
+window.vbInitConfig['REGISTRY_URL'] = window.FAEndPoints['ORA_FSCM_REST'];
+window.faConfig['extensibleApps'] = {'redwood':true};
+window.faConfig['PROFILE'] = {"ORA_FND_SMART_LOV_ENABLED":"N","ORA_FND_ASKORACLE_ODA_INTENTS_ENABLED":"N","ORA_LOCAL_PERSISTENCE_USERCONFIG_ENABLED":"Y","ORA_VB_PARTIAL_DIGEST_ENABLED":"Y","ORA_AO_CONNECTIONS_ENABLED":"Y","ORA_CLS_OTLP_ENABLED":"N","ORA_EMOBUTTON_ENABLED":"N","ORA_CLS_OTEL_LOGS_ENABLED":"N","ORA_CLS_TRACE_ENABLED":"Y","FA_ENABLE_DIGITAL_ASSISTANT":"","ORA_FND_APPROVALS":"N","FND_CUSTOM_AO_ENABLED":""};
+window.faConfig['SHOW_CODE_COACH'] = false;
+window.userPreferences = window.userPreferences || {};
+window.vbInitConfig.REGISTRY_DIGEST_VERSION = "58";
+window.vbInitConfig.INJECTED = {security: {
+user: {"userId": "","guId":"","fullName":"anonymous","userName":"anonymous","roles": [ "ORA_PSC_PERMIT_PROJECT_INQUIRY_DUTY","ORA_FND_AUTHENTICATED_USER_ABSTRACT","ORA_PSC_ANONYMOUS_PERMIT_APPLICATION_INQUIRY_DUTY","ORA_PSC_HEARINGS_INQUIRY","ORA_PSC_ANONYMOUS_USER_DUTY","ORA_FND_ANONYMOUS_USER_ABSTRACT","ORA_PSC_REVIEW_SUMMARY_INQUIRY_DUTY","ORA_PSC_EXECUTE_OPA_QUESTIONNAIRE_DUTY","ORA_PSC_GIS_MAP_USER_DUTY","ORA_PSC_ANONYMOUS_USER_LANDING_PAGE_DUTY","ORA_PSC_VIEW_PROJECT_ATTACHMENTS_DUTY","ORA_POZ_ANONYMOUS_SUPPLIER_USER_DUTY","ORA_PSC_CE_ANONYMOUS_INCIDENT_INQUIRY_DUTY","ORA_POZ_SUPPLIER_REGISTRATION_ATTACHMENT_MANAGEMENT_AS_ANONYMOUS_USER_DUTY","ORA_PSC_ANONYMOUS_BUSINESS_LICENSE_INQUIRY_DUTY","ORA_CRM_AUTHENTICATED_USER_DUTY","ORA_PSC_SELF_REGISTERATION_DUTY","ORA_PSC_ANONYMOUS_PNZ_APPLICATION_INQUIRY_DUTY" ],"permissions": [ "/vbcs/redwood/license-permit-agency/business-entity-list/business-entity-list","/vbcs/redwood/license-permit-agency/opal-global-search/opal-global-search-page","/vbcs/redwood/license-permit-agency/business-master-details/business-master-details","/vbcs/redwood/license-permit-agency/project-detail","/vbcs/redwood/license-permit-self-service/project-list","/vbcs/redwood/license-permit-self-service/project-detail","/vbcs/redwood/license-permit-self-service/psc-explore-city-search/psc-explore-city-search-start","/vbcs/redwood/license-permit-self-service/business-master-details/business-master-details" ],"isAuthenticated": false,"loginUrl": "https://iaahbv.fa.ocs.oraclecloud.com:443/fscmUI/faces/FuseWelcome" }
+} }
+window.faConfig.isIdcsEnv = true;
+</script>
+
+<script type="text/javascript">
+window.vbInitParams  = window.vbInitParams || {};
+window.vbInitParams['services.catalog.common.faBackendUrl'] = "https://iaahbv.fa.ocs.oraclecloud.com:443";
+window.vbInitParams['services.global.oraSaasApp'] = "https://iaahbv.fa.ocs.oraclecloud.com";
+window.vbInitParams['services.global.oraFaCanonical'] = "https://iaahbv.fa.ocs.oraclecloud.com";
+window.vbInitParams['services.global.oraAiapp'] = "https://iaahbv-amrsa-fa.aiapps.ocs.oraclecloud.com";
+window.vbInitParams['services.catalog.common.oraElocationApp'] = "https://elocation.oracle.com/";
+window.vbInitParams['services.global.oraClientLoggingServiceApp'] = "https://cls-99474101284b4525aedf9afda23c525b.cls.ocp.oraclecloud.com/trace";
+window.vbInitParams['services.global.oraElocationApp'] = "https://elocation.oracle.com/";
+window.vbInitParams['services.catalog.common.oraProcessAutomationApp'] = "https://opa-iaahbv-axqq3slbwbc6-auh.process.oci.oraclecloud.com";
+window.vbInitParams['services.catalog.common.oraFaCanonical'] = "https://iaahbv.fa.ocs.oraclecloud.com";
+window.vbInitParams['services.catalog.common.oraSaasApp'] = "https://iaahbv.fa.ocs.oraclecloud.com";
+window.vbInitParams['services.catalog.common.oraAiapp'] = "https://iaahbv-amrsa-fa.aiapps.ocs.oraclecloud.com";
+window.vbInitParams['services.global.oraProcessAutomationApp'] = "https://opa-iaahbv-axqq3slbwbc6-auh.process.oci.oraclecloud.com";
+window.vbInitParams['services.catalog.common.oraClientLoggingServiceApp'] = "https://cls-99474101284b4525aedf9afda23c525b.cls.ocp.oraclecloud.com/trace";
+window.vbInitParams['services.catalog.common.oraApmDeploymentId'] = "73";
+window.vbInitParams['services.global.oraApmDeploymentId'] = "73";
+window.vbInitParams['services.catalog.common.faLangVar'] = "en";
+window.vbInitParams['services.catalog.common.faVersionVar'] = "11.13.18.05";
+window.vbInitParams['services.catalog.common.faParamsVar'] = ";label=941458ab-3048-42b9-a509-bd75925a9b91;fmwVersion=2.0";
+window.vbInitParams['services.catalog.common.faPodName'] = "iaahbv";
+window.vbInitParams['services.catalog.common.faMetadataContextVar'] = "rv:941458ab-3048-42b9-a509-bd75925a9b91";
+window.vbInitParams['profile'] = "faProduction";
+window.vbInitParams['services.catalog.common.oraBackendUrl'] = "https://iaahbv.fa.ocs.oraclecloud.com:443";
+window.vbInitParams['services.catalog.common.oraLangVar'] = "en";
+window.vbInitParams['services.global.oraLangVar'] = "en";
+window.vbInitParams['services.catalog.common.oraVersionVar'] = "11.13.18.05";
+window.vbInitParams['services.catalog.common.oraParamsVar'] = ";label=941458ab-3048-42b9-a509-bd75925a9b91;fmwVersion=2.0";
+window.vbInitParams['services.global.oraPodName'] = "iaahbv";
+window.vbInitParams['services.catalog.common.oraMetadataContextVar'] = "rv:941458ab-3048-42b9-a509-bd75925a9b91";
+</script>
+
+<script type="text/javascript">
+window.versionContent = {};
+window.versionContent['RELEASE_VERSION'] = "26C (11.13.26.07.0)";
+</script> 
+
+<script type="text/javascript">
+</script>
+<script type="text/javascript">
+window.vbInitConfig['BASE_URL_TOKEN'] = "rv:941458ab-3048-42b9-a509-bd75925a9b91";
+window.faConfig['APP_STRIPE'] = 'fscm' ;
+</script>
+
+
+<!--FND_DEBUG_INFO-->
+<script type="text/javascript">
+window.faConfig.ogl = window.faConfig.ogl || {}; 
+window.faConfig.ogl.oglEnabled = false;
+</script>
+
+<script type="text/javascript">
+window.faConfig = window.faConfig || {}; 
+window.FAEndPoints = window.FAEndPoints || {}; 
+window.FAEndPoints.CDN_LOCATION = 'https://static.oracle.com/cdn/'; 
+window.faConfig.OJ_SP_VERSION = '2607.10.0'; 
+window.faConfig.FND_GALLERY_CDN_PATH = 'https://static.oracle.com/cdn/';
+window.faConfig.FND_GALLERY_VERSION = '2607.0.1';
+window.faConfig.ODA_CDN_PATH = 'https://static.oracle.com/cdn/oda/';
+window.faConfig.ODA_VERSION = '23.8.0';
+window.faConfig.OGL_VERSION = '2604.0.23'; 
+window.faConfig.OGL_CDN_PATH = 'https://static.oracle.com/cdn/ogl/'; 
+window.faConfig.OARS_CDN_PATH = 'https://static.oracle.com/cdn/oars/';
+window.faConfig.OARS_CDN_VERSION = '2607.0.6';
+window.faConfig.BOSS_CDN_PATH = 'https://static.oracle.com/cdn/boss/';
+window.faConfig.BOSS_CDN_VERSION = '2607.843.260620007';
+window.faConfig.MCA_CDN_PATH = 'https://static.oracle.com/cdn/mca/packs/oj-mca/';
+window.faConfig.MCA_VERSION = '2607.16.261941840';
+window.faConfig.ORTL_CDN_PATH = 'https://static.oracle.com/cdn/ode/ortl/';
+window.faConfig.ORTL_VERSION = '2607.1.0';
+window.faConfig.RWD3RDPARTY_CDN_PATH = 'https://static.oracle.com/cdn/spectra-ui/3rdParty/';
+window.faConfig.RWD3RDPARTY_VERSION = '2607.0.2';
+window.FAEndPoints.OJ_DYNAMIC = 'https://static.oracle.com/cdn/jet/packs/oj-dynamic/2607.12.0/min'; 
+window.FAEndPoints.OJ_DYN = 'https://static.oracle.com/cdn/jet/packs/oj-dyn/2607.12.0/min'; 
+</script>
+
+<script type="text/javascript">
+window.faConfig.ccaDependencies = window.faConfig.ccaDependencies || {} ;
+window.faConfig.ccaDependencies['oracle-input-sanitizer'] = 'https://static.oracle.com/cdn/omnicn/security/1.0.11/IOracleInputSanitizer';
+window.faConfig.ccaDependencies['engage-mercury-adapter'] = 'https://static.oracle.com/cdn/omnicn/engage/0.2.89/engage-mercury-adapter';
+window.faConfig.ccaDependencies['oj-cx-svc-common'] = 'https://static.oracle.com/cdn/fa/oj-cx-svc-common/2607.21.262251013';
+window.faConfig.ccaDependencies['oj-hcm'] = 'https://static.oracle.com/cdn/fa/oj-hcm/2607.67.262361100';
+window.faConfig.ccaDependencies['oj-mca'] = 'https://static.oracle.com/cdn/fa/oj-mca/2607.17.262431446';
+window.faConfig.ccaDependencies['oj-fa-fin'] = 'https://static.oracle.com/cdn/fa/oj-fa-fin/2607.23.262230110';
+window.faConfig.ccaDependencies['oj-cx-ma'] = 'https://static.oracle.com/cdn/fa/oj-cx-ma/2607.22.262240449';
+window.faConfig.ccaDependencies['oracle-mercury-client'] = 'https://static.oracle.com/cdn/omnicn/mercury/clientLib/2607.0.2/package/dist/oracle-mercury-client.umd';
+window.faConfig.ccaDependencies['oj-cx-es'] = 'https://static.oracle.com/cdn/fa/oj-cx-es/2607.3.261100000';
+window.faConfig.ccaDependencies['oj-omnichannel-video'] = 'https://static.oracle.com/cdn/fa/oj-omnichannel-video/2207.0.50';
+window.faConfig.ccaDependencies['oj-psc-intake'] = 'https://static.oracle.com/cdn/fa/oj-psc-intake/2607.40.262451747';
+window.faConfig.ccaDependencies['oj-cx-svc'] = 'https://static.oracle.com/cdn/fa/oj-cx-svc/2607.10.261682248';
+window.faConfig.ccaDependencies['oj-omnichannel'] = 'https://static.oracle.com/cdn/omnicn/mercury/jet-composites/oj-omnichannel/2607.14.261442257';
+window.faConfig.ccaDependencies['oj-cx-ca'] = 'https://static.oracle.com/cdn/fa/oj-cx-ca/2607.3.261730653';
+window.faConfig.ccaDependencies['@osvc/service-center-components'] = 'https://static.oracle.com/cdn/services/package/@osvc/service-center-components/0.9.3/libs/vb/osvc-service-center-components.umd';
+window.faConfig.ccaDependencies['ui-events-framework'] = 'https://static.oracle.com/cdn/ui-events-framework/libs/2607.21.0/app/ui-events-framework-app';
+window.faConfig.ccaDependencies['omni-sdk'] = 'https://static.oracle.com/cdn/omnicn/omnichannelsdk/1.0.40/dist/omni-sdk.umd';
+window.faConfig.ccaDependencies['oj-cx-km-agent'] = 'https://static.oracle.com/cdn/fa/oj-cx-km-agent/2310.0.11';
+window.faConfig.ccaDependencies['oj-psc-common'] = 'https://static.oracle.com/cdn/fa/oj-psc-common/2607.49.262312009';
+</script>
+
+
+    <!-- spSetHomeToAskOracle -->
+    
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="rgb(49,45,42)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="n/a">
+<!-- Copyright © 2026, Oracle and/or its affiliates -->
+
+<link rel="apple-touch-icon" href="https://iaahbv.fa.ocs.oraclecloud.com:443/fscmUI/images/applcore/pwa/pwa-app-ico-fa-120.png"> <link rel="apple-touch-icon" sizes="152x152" href="https://iaahbv.fa.ocs.oraclecloud.com:443/fscmUI/images/applcore/pwa/pwa-app-ico-fa-152.png"> <link rel="apple-touch-icon" sizes="167x167" href="https://iaahbv.fa.ocs.oraclecloud.com:443/fscmUI/images/applcore/pwa/pwa-app-ico-fa-167.png"> <link rel="apple-touch-icon" sizes="180x180" href="https://iaahbv.fa.ocs.oraclecloud.com:443/fscmUI/images/applcore/pwa/pwa-app-ico-fa-180.png"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-2048-2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-2732-2048.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-1668-2388.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-2388-1668.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-1536-2048.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-2048-1536.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-1668-2224.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-2224-1668.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-1620-2160.png" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-2160-1620.png" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-1290-2796.png" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-2796-1290.png" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-1179-2556.png" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-2556-1179.png" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-1284-2778.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-2778-1284.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-1170-2532.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-2532-1170.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-1125-2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-2436-1125.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-1242-2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-2688-1242.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-828-1792.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-1792-828.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-1242-2208.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-2208-1242.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-750-1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-1334-750.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-640-1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"> <link rel="apple-touch-startup-image" href="https://static.oracle.com/cdn/spectra-ui/redwood/2607.10.0/resources/splashscreens/apple-splash-1136-640.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"> 
+
+
+<script >
+    var iOS = !!navigator.platform && /iPhone|iPad/.test(navigator.platform);
+    if(iOS) {
+        const v = (navigator.appVersion).match(/OS (\d+)_(\d+)?/);
+        if ((v && v.length >=3) && (parseInt(v[1]) === 12 && parseInt(v[2]) < 2))
+            document.querySelector('link[rel="manifest"]').setAttribute('rel', 'no-on-ios');
+    }
+</script>
+    <!-- ojsp:offline=true -->
+    <script >
+      // window.faConfig = window.faConfig || {};
+      // window.faConfig.PROFILE = window.faConfig.PROFILE || {};
+      // window.faConfig.PROFILE.ORA_ASK_ORACLE_ENABLED = 'Y';
+      // SPECTRAUI-8558: set APP_TYPE to use this app as unified app,
+      // set APP_NAME so that VB runtime will skip /vp marker.
+      window.vbInitConfig = window.vbInitConfig || {};
+      window.vbInitConfig.APP_TYPE = 'unified';
+      window.vbInitConfig.APP_NAME = 'redwood';
+window.vbInitConfig.UNIFIED_BUNDLE = true;
+      window.oj_whenReady = true;
+      // SPECTRAUI-9944
+	    window.vbInitParams = window.vbInitParams || {};
+      window.vbInitParams['services.security.handlers.passthroughs'] = ['propagate', 'cloud', 'oauth2_user_assertion'];
+      if (window.vbInitConfig && window.vbInitConfig['BASE_URL_TOKEN']) {
+        window.vbInitParams['services.catalog.common.faMetadataContextVar'] = window.vbInitConfig['BASE_URL_TOKEN'];
+      } else {
+        // this else block is optional, only add this if you're not seeing the default value of {faMetadataContextVar} variable working in VB DT (alm)
+        if (window.vbInitConfig && window.vbInitConfig.IS_DT_MODE) {
+          window.vbInitParams['services.catalog.common.faMetadataContextVar'] = 'latest';
+        }
+      }
+      // SPECTRAUI-48618
+      window.vbInitParams['services.global.oraHtmlLangVar']  = document.documentElement.lang;
+      // SPECTRAUI-14970
+      const logLevelOverride = localStorage.getItem('vb_logConfig_level');
+      if (logLevelOverride){
+        window.faConfig = window.faConfig || {};
+        window.faConfig.VB_LOGCONFIG_LEVEL = logLevelOverride;
+      }
+    </script>
+  <script > 
+ window.vbInitConfig = window.vbInitConfig || {}; 
+ window.vbInitConfig.PWA_CONFIG = {}; 
+ window.vbInitConfig.PWA_CONFIG = { offlinePage: 'offlinePage.html'}; 
+ window.vbInitConfig.SERVICE_WORKER_CONFIG = {};
+window.vbInitConfig.PWA_CONFIG = window.vbInitConfig.PWA_CONFIG || {};
+window.vbInitConfig.PWA_CONFIG.libraryManifestUrl = 'https://iaahbv.fa.ocs.oraclecloud.com:443/fscmUI/redwood/libraryManifest.js'; 
+ </script>
+ </head>
+  <body class="oj-body oj-rw-unified-app">
+    <oj-vb-content config="[[vbApplication]]"></oj-vb-content>
+    <!-- For SPECTRAUI-54924: smaller digest to improve performance -->
+    <script  type="text/javascript">
+      // SPECTRAUI-70823: Do not use partial digest when preview from VBS
+      const rwdQueryString = window.location.search;
+      const rwdUrlParams = new URLSearchParams(rwdQueryString);
+      const vbdtPreferExtVer = rwdUrlParams.get('vbdt:preferExtensionVersion') || sessionStorage.getItem('vbdt:preferExtensionVersion');
+      if (window.faConfig?.PROFILE?.ORA_VB_PARTIAL_DIGEST_ENABLED === 'Y' && !vbdtPreferExtVer) {
+        const { APP_NAME } = window.vbInitConfig;
+        if (APP_NAME) {
+          const { pathname } = window.location;
+          const appUrl = pathname.substring(pathname.indexOf(APP_NAME));
+          if (appUrl) {
+            const appUi = appUrl.split('/')[1];
+            if (appUi && appUi.length > 0 && appUi !== 'redwoodHome') {
+              const currentDigestId = window.vbInitConfig?.REGISTRY_DIGEST_VERSION || 'latest';
+                window.vbInitConfig.DIGEST_PROMISE = fetch(`${window.vbInitConfig.REGISTRY_URL}vxmanifest/v2/partialDigest/${currentDigestId}?appRoute=${appUi}`);
+            }
+          }
+        }
+      }
+    </script>
+    <!-- application built by grunt-vb-build version 2607.1.0 at 2026-08-28T04:10:32.854Z -->
+
+<script >
+    window.vbInitConfig = window.vbInitConfig || {};
+    window.vbInitConfig['JET_CDN_PATH'] = "https://static.oracle.com/cdn/jet/";
+    window.vbInitConfig['JET_CDN_VERSION'] = "19.0.0-2604.11";
+</script>
+
+<script  type="text/javascript">
+      var html = document.documentElement;
+
+      // Set the locale on initParams
+      window.vbInitParams = window.vbInitParams || {};
+      window.vbInitParams.locale = html.lang;
+</script>
+
+
+<!-- Telemetry -->
+<script id="oracle-otel-client-fusion" type="text/javascript" src="https://static.oracle.com/cdn/trace/10.5.0/otel/oracle-otel-client-fusion.min.js" charset="UTF-8"></script>
+<!-- End Telemetry Injection -->
+<script type="text/javascript" src="https://static.oracle.com/cdn/jet/19.0.0-2604.11/3rdparty/require/require.js"></script>
+
+<script type="text/javascript" src="https://static.oracle.com/cdn/spectra-ui/oj-sp/2607.10.0/oj-sp-unified-redwood-platform-bundle-config.js"></script>
+    <script type="text/javascript" src="https://static.oracle.com/cdn/spectra-ui/oj-sp/2607.10.0/oj-sp-unified-redwood-platform-external-dependency-bundle.js"></script>
+<script type="text/javascript" src="https://static.oracle.com/cdn/trace/10.5.0/otel/util/jet-trace-init.js" charset="UTF-8"></script>
+
+
+<script  id="vb-require-bundles-config">
+        const getBundlesType = (url) => { const m = /[?&]vb.bundles(=([^&#]*)|&|#|$)/.exec(url); return m ? m[2] : 'default'; }
+        const bundlesType = getBundlesType(window.location.href);
+        if (bundlesType === 'plain') { require.config({ paths: { bundles: 'bundles/plain'}}); }
+        if (bundlesType !== 'none') { require.config({"bundles":{"bundles/redwood-app-bundle":["app-flow","text!app-flow.json","chains/validateOjSpReturnUrlVariableChain","dynamicLayouts/fa-prc-por/data-description-overlay","text!dynamicLayouts/fa-prc-por/data-description-overlay.json","text!dynamicLayouts/fa-prc-por/layout.html","dynamicLayouts/fa-prc-por/layout","text!dynamicLayouts/fa-prc-por/layout.json","dynamicLayouts/fa-prj-pjf-projects/data-description-overlay","text!dynamicLayouts/fa-prj-pjf-projects/data-description-overlay.json","text!dynamicLayouts/fa-prj-pjf-projects/layout.html","dynamicLayouts/fa-prj-pjf-projects/layout","text!dynamicLayouts/fa-prj-pjf-projects/layout.json","text!dynamicLayouts/field-templates-overlay.html","dynamicLayouts/field-templates-overlay","text!dynamicLayouts/field-templates-overlay.json","text!dynamicLayouts/workerSearches/context.json","dynamicLayouts/workerSearches/data-description-overlay","text!dynamicLayouts/workerSearches/data-description-overlay.json","text!dynamicLayouts/workerSearches/layout.html","dynamicLayouts/workerSearches/layout","text!dynamicLayouts/workerSearches/layout.json","text!dynamicLayouts/workerSearches/metadata-rules.json","text!fragments/ask-oracle-bo-metadata/ask-oracle-bo-metadata-fragment.html","fragments/ask-oracle-bo-metadata/ask-oracle-bo-metadata-fragment","text!fragments/ask-oracle-bo-metadata/ask-oracle-bo-metadata-fragment.json","text!fragments/ask-oracle-chat/ask-oracle-chat-fragment.html","fragments/ask-oracle-chat/ask-oracle-chat-fragment","text!fragments/ask-oracle-chat/ask-oracle-chat-fragment.json","pages/redwood-page-chains/NavigatetoELReviewADFPageActionChain","pages/redwood-page-chains/aiAgentClearMessageChain","pages/redwood-page-chains/aiAgentDrawerCloseChain","pages/redwood-page-chains/aiAgentDrawerMaximizeChain","pages/redwood-page-chains/aiAgentEvaluationChain","pages/redwood-page-chains/aiAgentLoadChain","text!pages/redwood-page-chains/aoBannerChain.json","pages/redwood-page-chains/aoCheckNotificationProcessingFlagChain","pages/redwood-page-chains/aoCloseButtonClickActionChain","pages/redwood-page-chains/aoContentLoadChain","pages/redwood-page-chains/aoNotificationSubscriptionActionChain","pages/redwood-page-chains/aoOnPaginationChangeChain","text!pages/redwood-page-chains/aoUserPreferenceChain.json","pages/redwood-page-chains/aoViewPreferenceAutoUpdateChain","pages/redwood-page-chains/cancelAONavigationChain","text!pages/redwood-page-chains/cancelNavigationChain.json","text!pages/redwood-page-chains/checkDirtyDataFlagChain.json","pages/redwood-page-chains/checkNamedRouteFeatureChain","text!pages/redwood-page-chains/closeCoachScreenDialogChain.json","pages/redwood-page-chains/closeHWAOThemePublishBannerMessageChain","pages/redwood-page-chains/closeSandboxExitErrorBannerChain","pages/redwood-page-chains/continueAONavigationChain","text!pages/redwood-page-chains/continueNavigationChain.json","text!pages/redwood-page-chains/fetchAONotificationsSDPDataChain.json","text!pages/redwood-page-chains/fetchAOSuggestionSDPChain.json","text!pages/redwood-page-chains/fetchDigitalAssistantSettingChain.json","pages/redwood-page-chains/fetchGHNavigatorDataChain","text!pages/redwood-page-chains/fetchGHNotificationsSDPDataChain.json","text!pages/redwood-page-chains/getProductMapFetchChain.json","pages/redwood-page-chains/keyPressOnSearchActionChain","pages/redwood-page-chains/navigateToScheduledProcesses","pages/redwood-page-chains/oarsServiceSynchronizationChain","pages/redwood-page-chains/ojSpLoadOGLChain","text!pages/redwood-page-chains/onProductMapViewAllChain.json","text!pages/redwood-page-chains/openAOIntroDialogChain.json","text!pages/redwood-page-chains/openUrlChain.json","pages/redwood-page-chains/pageScrollerChain","pages/redwood-page-chains/processProductMapDataForNavigateChain","text!pages/redwood-page-chains/resetProductMapChain.json","pages/redwood-page-chains/selfDetailsProfilePhotoChain","pages/redwood-page-chains/setupMaintenanceNavigateChain","pages/redwood-page-chains/triggerOnPageReadyChain","text!pages/redwood-page-chains/updatePresenceDisplayStateChain.json","text!pages/redwood-page-chains/updateProfileOptionGPChain.json","text!pages/redwood-page-template.html","text!pages/redwood-page.html","pages/redwood-page","text!pages/redwood-page.json","pages/resources/nls/ar/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/ar/oracle.apps.service.mca.resource","pages/resources/nls/ar-XB/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/cs/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/cs/oracle.apps.service.mca.resource","pages/resources/nls/da/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/da/oracle.apps.service.mca.resource","pages/resources/nls/de/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/de/oracle.apps.service.mca.resource","pages/resources/nls/el/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/el/oracle.apps.service.mca.resource","pages/resources/nls/en-XA/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/en-XC/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/es/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/es/oracle.apps.service.mca.resource","pages/resources/nls/et/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/et/oracle.apps.service.mca.resource","pages/resources/nls/fi/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/fi/oracle.apps.service.mca.resource","pages/resources/nls/fr/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/fr/oracle.apps.service.mca.resource","pages/resources/nls/fr-CA/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/fr-CA/oracle.apps.service.mca.resource","pages/resources/nls/he/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/he/oracle.apps.service.mca.resource","pages/resources/nls/hr/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/hr/oracle.apps.service.mca.resource","pages/resources/nls/hu/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/hu/oracle.apps.service.mca.resource","pages/resources/nls/it/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/it/oracle.apps.service.mca.resource","pages/resources/nls/ja/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/ja/oracle.apps.service.mca.resource","pages/resources/nls/ko/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/ko/oracle.apps.service.mca.resource","pages/resources/nls/lt/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/lt/oracle.apps.service.mca.resource","pages/resources/nls/lv/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/lv/oracle.apps.service.mca.resource","pages/resources/nls/nl/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/nl/oracle.apps.service.mca.resource","pages/resources/nls/no/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/no/oracle.apps.service.mca.resource","pages/resources/nls/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/oracle.apps.service.mca.resource","pages/resources/nls/pl/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/pl/oracle.apps.service.mca.resource","pages/resources/nls/pt/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/pt/oracle.apps.service.mca.resource","pages/resources/nls/pt-PT/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/pt-PT/oracle.apps.service.mca.resource","pages/resources/nls/ro/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/ro/oracle.apps.service.mca.resource","pages/resources/nls/root/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/root/oracle.apps.service.mca.resource","pages/resources/nls/ru/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/ru/oracle.apps.service.mca.resource","pages/resources/nls/sk/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/sk/oracle.apps.service.mca.resource","pages/resources/nls/sv/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/sv/oracle.apps.service.mca.resource","pages/resources/nls/th/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/th/oracle.apps.service.mca.resource","pages/resources/nls/tr/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/tr/oracle.apps.service.mca.resource","pages/resources/nls/uk/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/uk/oracle.apps.service.mca.resource","pages/resources/nls/vi/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/vi/oracle.apps.service.mca.resource","pages/resources/nls/zh-Hans/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/zh-Hans/oracle.apps.service.mca.resource","pages/resources/nls/zh-Hant/oracle.apps.fnd.applcore.vbcs.ojSp.flows.redwoodShell","pages/resources/nls/zh-Hant/oracle.apps.service.mca.resource","text!resources/css/three-dots-animation.css","resources/js/three-dots-animation","text!resources/links.html","text!services/catalog.json","text!services/oraClientLoggingServiceApp/openapi3.json"],"oj-sp/spectra-shell/oj-sp-shell-bundle":"[[ ($initParams.unifiedBundle || $initParams.ojSpDebug) ? [] : $initParams.ojSpShellInitialBundleInfo ]]","oj-sp/oj-sp-unified-redwood-platform-base-bundle-5":"[[ $initParams.unifiedBundle ? $initParams.ojSpShellInitialBundleInfo : [] ]]"},"paths":{},"map":{}}); }
+</script>
+<script id="vbrt" type="text/javascript" src="https://static.oracle.com/cdn/vb/2607.1.0/visual-runtime.js"></script>
+<!-- Begin OARS tags added with enableOars flag set -->
+
+<!-- End OARS tags -->
+<script id="boss-loader" type="text/javascript" src="https://static.oracle.com/cdn/boss/2607.843.260620007/js/transforms/boss-loader.js"></script>
+    <div class="oj-helper-hidden" id="fndsectkn" data="HAlG8eL1etedGmdocrb1DAsqhwI="></div>
+<script >
+      // workaround suggested by VB as part of VBS-15807
+      require.config({ config: { ojL10n: {} } });
+</script>
+    <script >
+      // workaround suggested by VB as part of VBS-15807
+      if(!require.s.contexts._.config.config.ojL10n){
+        require.config({ config: { ojL10n: {} } });
+      }
+    </script>
+  </body>
+</html>
+

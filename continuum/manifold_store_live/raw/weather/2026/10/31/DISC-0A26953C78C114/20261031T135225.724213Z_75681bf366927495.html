@@ -1,0 +1,921 @@
+<!doctype html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="National Center of Meteorology - المنصة الوطنية لجودة الهواء - NCM">
+    <meta name="keywords" content="National Center of Meteorology, NCM, UAE, Abu Dhabi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>المنصة الوطنية لجودة الهواء - NCM</title>
+    <link href='https://assets.ncm.gov.ae/resources/airquality/build/411.f297425f.css' rel='stylesheet'><link href='https://assets.ncm.gov.ae/resources/airquality/build/app.d4c5d8de.css' rel='stylesheet'>    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body class="lang-ar h-100 d-flex flex-column" style="display: none">
+    <header class="position-relative">
+    <div class="d-md-none">
+        <a href="/">
+            <img loading="lazy"
+                 class="img-fluid"
+                 src="https://assets.ncm.gov.ae/resources/airquality/build/images/mob-header@2x.jpg"
+                 alt="المنصة الوطنية لجودة الهواء - NCM"
+                 title="المنصة الوطنية لجودة الهواء - NCM"
+            >
+        </a>
+    </div>
+    <div class="desk-header d-flex justify-content-end">
+        <a class="d-flex" href="/">
+            <img loading="lazy"
+                 class="img-fluid desk-title d-none d-md-block"
+                 alt="المنصة الوطنية لجودة الهواء - NCM"
+                 title="المنصة الوطنية لجودة الهواء - NCM"
+                 src="https://assets.ncm.gov.ae/resources/airquality/build/images/desk-title-ar@2x.jpg"
+            >
+            <img loading="lazy"
+                 class="img-fluid desk-ncm-logo d-none d-md-block"
+                 src="https://assets.ncm.gov.ae/resources/airquality/build/images/desk-ncm-logo@2x.jpg"
+                 alt="NCM"
+                 title="NCM"
+            >
+        </a>
+    </div>
+    <div class="lang position-absolute ">
+        <a href="/?lang=en" class="btn text-decoration-none fw-bold">
+            <span class="d-none d-md-block">English</span>
+            <span class="d-md-none">EN</span>
+        </a>
+    </div>
+</header>
+    <main class="flex-grow-1 position-relative">
+        <div class="d-flex flex-column flex-md-row h-100">
+    <div id="sidebar" class="h-100 order-2">
+        <div class="sidebar-content">
+            <div class="d-md-flex flex-md-column">
+                <div class="mt-md-3 order-md-3">
+                    <div class="aqi-details-wrapper position-relative no-value">
+                        <div class="mb-3 d-md-flex">
+                            <div class="flex-grow-1">
+                                <div class="text-center mb-4 mb-md-3 ">
+                                    <div class="select-station mx-auto">
+                                        <label for="station">
+                                            <select class="form-select text-center" name="station"
+                                                    id="station">
+                                                <option value='9902' >البريرات</option><option value='9961' >البيئة</option><option value='9959' >الجرف</option><option value='9954' >الجزيرة</option><option value='9901' >الجير</option><option value='9917' >الحمرا</option><option value='9904' >الحمرية</option><option value='9907' >الحميدية</option><option value='9949' selected=selected>الشوامخ</option><option value='9916' >الطوية</option><option value='9956' >الغيل</option><option value='9903' >القاسمية</option><option value='9964' >القرية</option><option value='9918' >القوع</option><option value='9914' >المفرق</option><option value='9951' >المقطع</option><option value='9920' >المقطـع</option><option value='9931' >الميناء</option><option value='9966' >ثوبان</option><option value='9957' >جبل جيس</option><option value='9910' >حبشان جنوب</option><option value='9955' >خور خوير</option><option value='9933' >دبا</option><option value='9952' >زاخر</option><option value='9963' >سكمكم</option><option value='9915' >سويحان</option><option value='9925' >شارع العين</option><option value='9919' >شارع حمدان</option><option value='9911' >طريف</option><option value='9905' >غليلة</option><option value='9927' >غياثي</option><option value='9965' >قدفع</option><option value='9908' >كلباء</option><option value='9921' >مدرسة الشيخ خليفة</option><option value='9923' >مدرسة بني ياس</option><option value='9950' >مدرسة خديجة</option><option value='9926' >مدينة زايد</option><option value='9967' >مدينة محمد بن زايد</option><option value='9906' >مشيرف</option><option value='9922' >مصفح</option><option value='9960' >مصفوت</option><option value='9924' >معهد العين الإسلامي</option>                                            </select>
+                                        </label>
+                                    </div>
+                                    <div class="d-none d-md-block mt-3">
+                                        <div class="fw-bold aqi-description-text">
+                                            <div class="cat-1">جودة الهواء جيدة جداً، ولا يشكل تلوث الهواء خطراً على الأفراد</div>
+<div class="cat-2">جودة الهواء جيده للأفراد</div>
+<div class="cat-3">قد تعاني الفئات الحساسة من تأثيرات صحية</div>
+<div class="cat-4">قد يعاني بعض الأفراد من تأثيرات صحية</div>
+<div class="cat-5">قد يعاني غالبية الأفراد من التأثيرات الصحية</div>
+<div class="cat-6">من المحتمل أن يعاني جميع الأفراد من التأثيرات الصحية</div>
+<div class="no-value">ا توجد معلومات في الوقت الذي اخترته، الرجاء اختيار الوقت من الخريطة</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ms-md-2 d-flex d-md-block align-items-center">
+                                <div class="flex-grow-1 d-md-none">
+                                    <div class="fw-bold aqi-description-text">
+                                        <div class="cat-1">جودة الهواء جيدة جداً، ولا يشكل تلوث الهواء خطراً على الأفراد</div>
+<div class="cat-2">جودة الهواء جيده للأفراد</div>
+<div class="cat-3">قد تعاني الفئات الحساسة من تأثيرات صحية</div>
+<div class="cat-4">قد يعاني بعض الأفراد من تأثيرات صحية</div>
+<div class="cat-5">قد يعاني غالبية الأفراد من التأثيرات الصحية</div>
+<div class="cat-6">من المحتمل أن يعاني جميع الأفراد من التأثيرات الصحية</div>
+<div class="no-value">ا توجد معلومات في الوقت الذي اخترته، الرجاء اختيار الوقت من الخريطة</div>
+                                    </div>
+                                </div>
+
+                                <div class="ms-4 ms-md-0 aqi-reading-circle position-relative">
+                                    <svg>
+                                        <circle cx="45" cy="45" r="45"></circle>
+                                        <circle cx="45" cy="45" r="45" id="progress-bar"></circle>
+                                    </svg>
+                                    <div class="aqi-progress-unit position-absolute fw-bold text-center">
+                                        <div class="aqi-value mb-1">-</div>
+                                        <div>AQI</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="aqi-activities mt-3 mt-md-0 text-center">
+                            <div class="container">
+                                <div class="activity-column cat-1">
+                                    <div class="row justify-content-around">
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-outside-activities@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                استمتع بالأنشطة الخارجية                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-open-window@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                افتح الأبواب والنوافذ ودع الهواء النقي يدخل                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="activity-column cat-2">
+                                    <div class="row justify-content-around">
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-outside-activities@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                استمتع بالأنشطة الخارجية                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-reduce-outside-activities@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                يجب على الأفراد الحساسين جداً التقليل من الأنشطة الخارجية الطويلة أو المكثفة                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-description">
+                                                يمكن للفئات الحساسة الاستمتاع بالأنشطة الخارجية، لكن يجب أن يكونوا منتبهين لعلامات السعال أو ضيق التنفس                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-open-window@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                افتح الأبواب والنوافذ ودع الهواء النقي يدخل                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="activity-column cat-3">
+                                    <div class="row justify-content-around">
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-outside-activities@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                يمكن للأفراد الاستمتاع بالأنشطة الخارجية                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-reduce-outside-activities@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                يجب على الفئات الحساسة الحد من الأنشطة المطولة أو المكثفة الخارجية                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-coughing@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                يمكن أن يعاني الأفراد الحساسين جداً من علامات السعال وضيق التنفس أو التعب غير المعتاد                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-medical-recommendations@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                مرضى الربو: اتبع التوصيات الطبية                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="activity-column cat-4">
+                                    <div class="row justify-content-around">
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-reduce-outside-activities@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                يجب على الأفراد تقليل الأنشطة الخارجية الطويلة والمكثفة                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-avoid-outside-activities@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                يجب على الفئات الحساسة تجنب الأنشطة المطولة أو المكثفة الخارجية                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-face_mask@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                تُنصح الفئات الحساسة بارتداء قناع في حال البقاء في الخارج لفترات طويلة                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="activity-column cat-5">
+                                    <div class="row justify-content-around">
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-reduce-outside-activities@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                يجب على الأفراد تجنب الأنشطة الخارجية الطويلة والمكثفة                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-avoid-outside-activities@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                يجب على الفئات الحساسة الامتناع عن ممارسة الأنشطة الخارجية                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-close-window@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                أغلق الأبواب والنوافذ                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-face_mask@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                ننصح الأفراد بارتداء أقنعة الوجه في حال البقاء في الخارج لفترات طويلة                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-air-purifier@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                إذا كان متاحًا، استخدم جهاز تنقية الهواء الداخلي                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-car-circulation@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                يُنصح السائقون بالحفاظ على إعداد تهوية السيارة على "إعادة التدوير"                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="activity-column cat-6">
+                                    <div class="row justify-content-around">
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-avoid-outside-activities@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                يجب على جميع الأفراد الامتناع عن الأنشطة الخارجية                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-avoid-outside-activities@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                يجب على الفئات الحساسة البقاء في الداخل                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-close-window@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                أغلق الأبواب والنوافذ                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-face_mask@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                ننصح الأفراد بارتداء أقنعة الوجه في حال الخروج                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-air-purifier@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                إذا كان متاحًا، استخدم جهاز تنقية الهواء الداخلي                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="activity-image">
+                                                <img class="img-fluid" alt=""
+                                                     src="https://assets.ncm.gov.ae/resources/airquality/build/images/activities/i-car-circulation@2x.png"/>
+                                            </div>
+                                            <div class="activity-description">
+                                                يُنصح السائقون بالحفاظ على إعداد تهوية السيارة على "إعادة التدوير"                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-section mx-3 mt-3 order-md-4">
+                    <div class="mb-4 mb-md-3 text-center">
+                        <div class="d-flex readings">
+                            <div>
+                                <div class="reading">
+                                    <div class="text-white sensor-label">PM<sub>10</sub></div>
+                                    <div class="fw-bold reading-value" data-field="pm10">
+                                        <span class="reading-text">-</span>
+                                        <span class="reading-unit d-none">µg/m³</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="reading">
+                                    <div class="text-white sensor-label">PM<sub>2.5</sub></div>
+                                    <div class="fw-bold reading-value" data-field="pm2p5">
+                                        <span class="reading-text">-</span>
+                                        <span class="reading-unit d-none">µg/m³</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="reading">
+                                    <div class="text-white sensor-label">CO</div>
+                                    <div class="fw-bold reading-value" data-field="co">
+                                        <span class="reading-text">-</span>
+                                        <span class="reading-unit d-none">mg/m³</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="reading">
+                                    <div class="text-white sensor-label">NO<sub>2</sub></div>
+                                    <div class="fw-bold reading-value" data-field="no2">
+                                        <span class="reading-text">-</span>
+                                        <span class="reading-unit d-none">µg/m³</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="reading">
+                                    <div class="text-white sensor-label">O<sub>3</sub></div>
+                                    <div class="fw-bold reading-value" data-field="o3">
+                                        <span class="reading-text">-</span>
+                                        <span class="reading-unit d-none">µg/m³</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="reading">
+                                    <div class="text-white sensor-label">SO<sub>2</sub></div>
+                                    <div class="fw-bold reading-value" data-field="so2">
+                                        <span class="reading-text">-</span>
+                                        <span class="reading-unit d-none">µg/m³</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reading-helper-text d-flex justify-content-center mt-2">
+
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <nav class="mx-2">
+                            <div class="nav nav-tabs ms-4 ms-md-2" role="tablist">
+                                <button
+                                        class="nav-link active"
+                                        data-bs-toggle="tab"
+                                        type="button"
+                                        role="tab"
+                                        aria-selected="false"
+                                        data-field="pm10"
+                                        data-bs-target="#pm10-description"
+                                        aria-controls="#pm10-description"
+                                >
+                                    PM<sub>10</sub>
+                                </button>
+                                <button
+                                        class="nav-link"
+                                        data-bs-toggle="tab"
+                                        type="button"
+                                        role="tab"
+                                        aria-selected="false"
+                                        data-field="pm2p5"
+                                        data-bs-target="#pm2p5-description"
+                                        aria-controls="#pm2p5-description"
+                                >
+                                    PM<sub>2.5</sub>
+                                </button>
+                                <button
+                                        class="nav-link"
+                                        data-bs-toggle="tab"
+                                        type="button"
+                                        role="tab"
+                                        aria-selected="false"
+                                        data-field="co"
+                                        data-bs-target="#co-description"
+                                        aria-controls="#co-description"
+                                >
+                                    CO
+                                </button>
+                                <button
+                                        class="nav-link"
+                                        data-bs-toggle="tab"
+                                        type="button"
+                                        role="tab"
+                                        aria-selected="false"
+                                        data-field="no2"
+                                        data-bs-target="#no2-description"
+                                        aria-controls="#no2-description"
+                                >
+                                    NO<sub>2</sub>
+                                </button>
+                                <button
+                                        class="nav-link"
+                                        data-bs-toggle="tab"
+                                        type="button"
+                                        role="tab"
+                                        aria-selected="false"
+                                        data-field="o3_8h"
+                                        data-bs-target="#o3-description"
+                                        aria-controls="#o3-description"
+                                >
+                                    O<sub>3</sub>
+                                </button>
+                                <button
+                                        class="nav-link"
+                                        data-bs-toggle="tab"
+                                        type="button"
+                                        role="tab"
+                                        aria-selected="false"
+                                        data-field="so2"
+                                        data-bs-target="#so2-description"
+                                        aria-controls="#so2-description"
+                                >
+                                    SO<sub>2</sub>
+                                </button>
+                            </div>
+                        </nav>
+                        <div class="tab-content text-center mt-2 element-description">
+                            <div class="tab-pane fade show active" id="pm10-description" role="tabpanel">
+                                PM10 (أقل من 10 ميكرون) (µg/m³)                            </div>
+                            <div class="tab-pane fade" id="co-description" role="tabpanel">
+                                أول أكسيد الكربون (mg/m³)                            </div>
+                            <div class="tab-pane fade" id="no2-description" role="tabpanel">
+                                ثاني أكسيد النيتروجين (µg/m³)                            </div>
+                            <div class="tab-pane fade" id="o3-description" role="tabpanel">
+                                الأوزون الأرضي (µg/m³)                            </div>
+                            <div class="tab-pane fade" id="so2-description" role="tabpanel">
+                                ثاني أكسيد الكبريت (µg/m³)                            </div>
+                            <div class="tab-pane fade" id="pm2p5-description" role="tabpanel">
+                                PM2.5 (أقل من 2.5 ميكرون) (µg/m³)                            </div>
+                        </div>
+                        <div id="chart" class="mt-3 mb-2"></div>
+                        <div class="last-updated-text text-center mb-3">
+                            <span class="d-inline-block">
+                                <span class="d-none pm10-text pm2p5-text">
+                                    متوسط تراكيز آخر 24 ساعة                                </span>
+                                <span class="d-none no2-text so2-text">
+                                    متوسط تراكيز آخر ساعة                                </span>
+                                <span class="d-none o3_8h-text co-text">
+                                    متوسط تراكيز آخر 8 ساعات                                </span>
+                            </span>
+                        </div>
+                        <div class="text-center mb-4 mb-md-3 chart-legend-text">
+                            اللون&nbsp;<span class="clr-chart-normal">الأخضر&nbsp;</span>إذا كان تركيز الملوث أقل من المعيار الوطني و&nbsp;<span class="clr-chart-high"> البرتقالي&nbsp;</span>إذا تخطاه.                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-3 order-md-2">
+                    <div class="pdf-section">
+                        <a class="aqi-link font-cairo d-inline-block text-decoration-none"
+                           href="resources/pdf/aqi-quickguide-ar-2023.pdf"
+                           target="_blank">
+                            تحميل <strong>الدليل الإرشادي</strong>‎ لمؤشر جودة هواء الإمارات من وزارة التغير المناخي و البيئة                        </a>
+                    </div>
+                </div>
+
+                <div class="layer-info mt-3 order-md-1 mb-4 mb-md-0">
+                    <div class="panel">
+                        <div class="panel-header px-3 py-1 fw-bold">
+                            <span class="d-inline-block">
+                                <img
+                                        class="img-fluid"
+                                        src="https://assets.ncm.gov.ae/resources/airquality/build/images/icon-book.png"
+                                        alt="icon-book"
+                                        title="icon-book"
+                                >
+                            </span>
+                            <span class="layer-title">مؤشر جودة الهواء</span>
+                        </div>
+                        <div class="panel-body p-2">
+                            <p class="p-0 mb-2 layer-description">
+                                هو مؤشر للإبلاغ عن نوعية الهواء في منطقة معينة، يخبرك بمدى نقاوة الهواء، وما الآثار الصحية المرتبطة به.<br> ويتم حسابه من أعلى تركيز للملوثات الخمسة: أول أكسيد الكربون، ثاني أكسيد النيتروجين، وثاني أكسيد الكبريت، والأوزون الأرضي، والمواد الجسيمية ذات القطر الأقل من 10 ميكرون.                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-grow-1 position-relative map-wrapper h-100 order-1 order-md-2">
+        <div id="mapgl" class="h-100">
+            <div class="maplibregl-attribution-text position-absolute start-0 bottom-0">
+                &copy; <a href="https://www.ncm.gov.ae" target="_blank" rel="noreferrer noopener">NCM</a>
+                <span> | </span>
+                <a href="https://www.openmaptiles.org" target="_blank" rel="noreferrer noopener">OpenMapTiles</a>
+                <span> | </span>
+                <a class="d-none d-md-inline-block text-nowrap" href="https://www.openstreetmap.org/copyright"
+                   target="_blank" rel="noreferrer noopener">OpenStreetMap contributors</a>
+                <a class="d-md-none text-nowrap" href="https://www.openstreetmap.org/copyright" target="_blank"
+                   rel="noreferrer noopener">OSM contributors</a>
+                <span> | </span>
+                <button id="map-attribution-btn" class="border-0 bg-transparent px-0">Maps Attributions</button>
+            </div>
+            <div id="maplibregl-attribution-popup" class="maplibregl-attribution-popup position-absolute d-none p-2">
+    <div class="title">Maps attributions and copyrights</div>
+    <div class="main-attributions my-2 px-1 py-2">
+        &copy; <a href="https://www.ncm.gov.ae" target="_blank" rel="noreferrer noopener">NCM</a> |
+        &copy; <a href="https://www.openmaptiles.org" target="_blank" rel="noreferrer noopener">OpenMapTiles</a> |
+        &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer noopener">OpenStreetMap contributors</a>
+    </div>
+    <div class="attributions px-1 py-2 flex-fill">
+        <ul class="attribution-text text-left px-0 ltr list-unstyled">
+            <li>
+                <h6>Radars, Weather, Numerical Forecast and Earthquakes data:</h6>
+                <ul>
+                    <li>
+                        <a href="https://www.ncm.gov.ae" target="_blank" rel="noreferrer noopener">National Center of
+                            Meteorology</a> - <a
+                            href="https://www.ncm.gov.ae" target="_blank" rel="noreferrer noopener">https://www.ncm.gov.ae</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <h6>Satellite basemap layer:</h6>
+                <ul>
+                    <li>
+                        <a href="https://s2maps.eu/" target="_blank" rel="noreferrer noopener">Sentinel-2 cloudless -
+                            https://s2maps.eu</a> by <a href="https://eox.at" target="_blank" rel="noreferrer noopener">EOX IT
+                            Services GmbH</a>
+                    </li>
+                    <li>
+                        Contains modified Copernicus Sentinel data 2022
+                    </li>
+                    <li>
+                        Contains KhalifaSat UAE Mosaic data 2022 <br/>&copy; <a href="https://www.mbrsc.ae"
+                                                                                target="_blank" rel="noreferrer noopener">Mohammed Bin
+                            Rashid Space Centre</a> - <a href="https://www.mbrsc.ae"
+                                                         target="_blank" rel="noreferrer noopener">MBRSC</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <h6>Terrain basemap layer:</h6>
+                <ul>
+                    <li>
+                        OpenStreetMap &copy; <a href="https://www.openstreetmap.org/copyright"
+                                                target="_blank" rel="noreferrer noopener">OpenStreetMap contributors</a>
+                    </li>
+                    <li>
+                        NaturalEarth <a href="https://www.naturalearthdata.com/about/terms-of-use/"
+                                        target="_blank" rel="noreferrer noopener">public domain</a>
+                    </li>
+                    <li>
+                        <a href="https://www.opentopodata.org/datasets/eudem/"
+                           target="_blank" rel="noreferrer noopener">EUDEM</a> &copy; Produced
+                        using Copernicus data and information<br/>funded by the European Union
+                    </li>
+                    <li>
+                        SRTM &copy; <a href="https://www.nasa.gov" target="_blank" rel="noreferrer noopener">NASA</a>
+                    </li>
+                    <li>
+                        GTOPO30 <a href=" https://lta.cr.usgs.gov/GTOPO30" target="_blank" rel="noreferrer noopener">Data available from the U.S. Geological Survey</a>
+                    </li>
+                    <li>
+                        CleanTOPO2 public domain
+                    </li>
+                    <li>
+                        GlobCover &copy; <a href="https://due.esrin.esa.int/page_globcover.php" target="_blank" rel="noreferrer noopener">ESA</a>
+                    </li>
+                    <li>
+                        The rendering is &copy; <a href="https://eox.at" target="_blank" rel="noreferrer noopener">EOX</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <h6>Coastlines basemap layer:</h6>
+                <ul>
+                    <li>
+                        Based on <a href="https://osmdata.openstreetmap.de"
+                                    target="_blank" rel="noreferrer noopener">OpenStreetMapData</a> and <a
+                                href="https://www.imagico.de" target="_blank" rel="noreferrer noopener">imagico.de</a> geodata products
+                    </li>
+                    <li>
+                        Modified and rendered by <a href="https://www.ncm.gov.ae" target="_blank" rel="noreferrer noopener">NCM</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <h6>Land basemap layer:</h6>
+                <ul>
+                    <li>
+                        Based on <a href="https://osmdata.openstreetmap.de"
+                                    target="_blank" rel="noreferrer noopener">OpenStreetMapData</a> and <a
+                                href="https://www.imagico.de" target="_blank" rel="noreferrer noopener">imagico.de</a> geodata products
+                    </li>
+                    <li>
+                        Modified and rendered by <a href="https://www.ncm.gov.ae" target="_blank" rel="noreferrer noopener">NCM</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <h6>Boundaries basemap layer:</h6>
+                <ul>
+                    <li>
+                        Based on <a href="https://www.geoboundaries.org" target="_blank" rel="noreferrer noopener">geoBoundaries.org</a> adm0 generalized dataset
+                    </li>
+                    <li>
+                        Modified and rendered by <a href="https://www.ncm.gov.ae" target="_blank" rel="noreferrer noopener">NCM</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <h6>Terrain RGB basemap layer:</h6>
+                <ul>
+                    <li>
+                        Based on <a href="https://earth.jaxa.jp/en/data/policy/" target="_blank" rel="noreferrer noopener">JAXA</a> <a
+                                href="https://www.eorc.jaxa.jp/ALOS/en/dataset/aw3d30/aw3d30_e.htm" target="_blank" rel="noreferrer noopener">ALOS World 3D 30m (AW3D30)</a> dataset
+                    </li>
+                    <li>
+                        Modified and rendered by <a href="https://www.ncm.gov.ae" target="_blank" rel="noreferrer noopener">NCM</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <h6>Hillshade basemap layer:</h6>
+                <ul>
+                    <li>
+                        Based on <a href="https://earth.jaxa.jp/en/data/policy/" target="_blank" rel="noreferrer noopener">JAXA</a> <a
+                                href="https://www.eorc.jaxa.jp/ALOS/en/dataset/aw3d30/aw3d30_e.htm" target="_blank" rel="noreferrer noopener">ALOS World 3D 30m (AW3D30)</a> dataset
+                    </li>
+                    <li>
+                        Modified and rendered by <a href="https://www.ncm.gov.ae" target="_blank" rel="noreferrer noopener">NCM</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <h6>Satellite data layer:</h6>
+                <ul>
+                    <li>
+                        Based on <a href="https://www.eumetsat.int/about-us/terms-use" target="_blank" rel="noreferrer noopener">EUMETSAT</a> data products
+                    </li>
+                    <li>
+                        Modified and rendered by <a href="https://www.ncm.gov.ae" target="_blank" rel="noreferrer noopener">NCM</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="pb-2">
+                <h6>Clouds data layer:</h6>
+                <ul>
+                    <li>
+                        Based on <a href="https://content.meteoblue.com/en/about-us/legal/terms-conditions" target="_blank" rel="noreferrer noopener">METEOBLUE</a> data products
+                    </li>
+                    <li>
+                        Modified and rendered by <a href="https://www.ncm.gov.ae" target="_blank" rel="noreferrer noopener">NCM</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <button id="map-attribution-close-btn" class="border-0 px-0 bg-transparent">
+        <img src="https://assets.ncm.gov.ae/resources/airquality/build/images/b-close.svg" class="img-fluid" alt=""/>
+    </button>
+</div>
+        </div>
+        <div class="position-absolute msg-no-warnings text-center d-none">
+            لا يوجد تحذير للغبار و الأتربة حاليا        </div>
+        <div class="position-absolute d-none d-md-none layer-title-mobile"></div>
+        <button class="position-absolute btn d-none d-md-block" id="sidebar-toggler">
+            <img
+                    src="https://assets.ncm.gov.ae/resources/airquality/build/images/close-side@2x.png"
+                    class="img-fluid sidebar-close-btn"
+                    alt="close-sidebar"
+                    title="close-sidebar"
+            >
+        </button>
+        <ul class="basemap-style-ctrl list-unstyled position-absolute">
+            <li id="bright-terrain" class="bm-topo-blue d-none"></li>
+            <li id="topo-blue" class="bm-topo-dark d-none"></li>
+            <li id="satellite-2022" class="bm-hybrid active"></li>
+        </ul>
+
+        <div class="legend d-none d-md-block position-absolute">
+            <img loading="lazy"
+                 src="https://assets.ncm.gov.ae/resources/airquality/build/images/legends/legend-aqi-ar@2x.png"
+                 class="img-fluid aqi-legend d-none" alt=""/>
+            <img loading="lazy"
+                 src="https://assets.ncm.gov.ae/resources/airquality/build/images/legends/legend-dust-ar@2x.png"
+                 class="img-fluid dust-legend d-none" alt=""/>
+        </div>
+
+        <ul class="layers-list list-unstyled position-absolute">
+            <li class="aqi-layer active text-center mt-2" data-layer="aqi">
+                <span class="ctrl-icon"></span>
+                <span class="ctrl-label">
+                    مؤشر جودة الهواء                </span>
+            </li>
+            <li class="warnings-layer mt-2" data-layer="warnings">
+                <span class="ctrl-icon"></span>
+                <span class="ctrl-label">
+                    التحذيرات                </span>
+            </li>
+            <li class="temp-layer mt-2" data-layer="aws-temperature">
+                <span class="ctrl-icon"></span>
+                <span class="ctrl-label">
+                    درجات الحرارة                </span>
+            </li>
+            <li class="wind-layer mt-2" data-layer="aws-wind">
+                <span class="ctrl-icon"></span>
+                <span class="ctrl-label">
+                    الرياح                </span>
+            </li>
+            <li class="humidity-layer mt-2" data-layer="aws-humidity">
+                <span class="ctrl-icon"></span>
+                <span class="ctrl-label">
+                    الرطوبة النسبية                </span>
+            </li>
+        </ul>
+        <div class="player-controls bg-white d-flex justify-content-around align-items-center py-2 py-md-0">
+            <div class="player-controls-btn d-inline-flex justify-content-around align-items-center">
+                <button class="first-btn border rounded ms-2 action-btn d-none" data-action="first"
+                        title="البداية"></button>
+                <button class="prev-btn border rounded ms-2 action-btn" data-action="prev"
+                        title="السابق"></button>
+                <div class="date-time-info border text-nowrap rounded px-3 ms-2">
+                    <span class="time-info"></span>
+                </div>
+                <button class="next-btn border rounded ms-2 action-btn" data-action="next"
+                        title="التالي"></button>
+                <button class="last-btn border rounded ms-2 action-btn" data-action="last"
+                        title="آخر معلومات"></button>
+                <button class="play-btn border rounded ms-2 d-none" title="تشغيل"></button>
+                <button class="pause-btn border rounded ms-2 d-none"
+                        title="Pause"></button>
+                <button class="refresh-btn border rounded ms-2 action-btn" data-action="refresh"
+                        title="تحديث المعلومات"></button>
+            </div>
+            <div class="wms-btn-wrapper d-inline-flex justify-content-around align-items-center">
+                <button class="btn btn-wms-layer font-cairo text-nowrap"
+                        type="button">نموذج تنبؤ الغبار</button>
+                <button class="btn btn-stations-layer font-cairo text-nowrap"
+                        type="button">خريطة المحطات</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.__OPTIONS__ = {
+        'map_base_url': 'https://tiles2.ncm.gov.ae',
+        'aws_data_url': '/api/?action=aws',
+        'aqi_data_url': '/api/?action=aqi',
+        'warnings_data_url': '/api/?action=warnings',
+        'assets_base_url': '/resources',
+        'area_warnings_base_layer_tiles_url': '/data/uae-land-v3/{z}/{x}/{y}.pbf',
+        'translations': {
+            "1h standard": "المعيار الساعي",
+            "24h standard": "معيار 24 ساعة",
+            "8h standard": "معيار 8 ساعات",
+            "Avg": "Avg",
+            "From": "من",
+            "To": "إلى"
+        },
+        'current_time': '1793454690'
+    };
+</script>
+    </main>
+    <footer class="py-2">
+    <div class="container-fluid container-md">
+        <div class="partner-logo-container bg-white p-2 mx-auto">
+            <ul class="d-md-flex justify-content-md-center align-items-md-center text-center p-0 m-0">
+                <li class="px-2 mb-3 mb-md-0">
+                    <a href="https://www.moccae.gov.ae" target="_blank" rel="noreferrer noopener">
+                        <img loading="lazy"
+                            class="img-fluid partner-logo"
+                            src="https://assets.ncm.gov.ae/resources/airquality/build/images/map-logos/logo-moccae-v2@2x.jpg"
+                            alt="وزارة التغير المناخي و البيئة"
+                            title="وزارة التغير المناخي و البيئة"
+                        />
+                    </a>
+                </li>
+                <li class="px-2 mb-3 mb-md-0">
+                    <a href="https://www.ead.gov.ae/ar" target="_blank" rel="noreferrer noopener">
+                        <img loading="lazy"
+                            class="img-fluid partner-logo"
+                            src="https://assets.ncm.gov.ae/resources/airquality/build/images/map-logos/logo-ead-v2@2x.jpg"
+                            alt="هيئة البيئة أبوظبي"
+                            title="هيئة البيئة أبوظبي"
+                        >
+                    </a>
+                </li>
+                <li class="px-2 mb-3 mb-md-0">
+                    <a href="https://www.epaashj.ae/ar/" target="_blank" rel="noreferrer noopener">
+                        <img loading="lazy"
+                            class="img-fluid partner-logo"
+                            src="https://assets.ncm.gov.ae/resources/airquality/build/images/map-logos/logo-epaashj-v2@2x.jpg"
+                            alt="هيئة البيئة والمحميات الطبيعية"
+                            title="هيئة البيئة والمحميات الطبيعية"
+                        >
+                    </a>
+                </li>
+                <li class="px-2 mb-3 mb-md-0">
+                    <a href="https://epda.rak.ae/" target="_blank" rel="noreferrer noopener">
+                        <img loading="lazy"
+                            class="img-fluid partner-logo"
+                            src="https://assets.ncm.gov.ae/resources/airquality/build/images/map-logos/logo-epda@2x.jpg"
+                            alt="هيئة حماية البيئة و التنمية"
+                            title="هيئة حماية البيئة و التنمية"
+                        >
+                    </a>
+                </li>
+                <li class="px-2">
+                    <a href="https://www.am.gov.ae/" target="_blank" rel="noreferrer noopener">
+                        <img loading="lazy"
+                            class="img-fluid partner-logo"
+                            src="https://assets.ncm.gov.ae/resources/airquality/build/images/map-logos/logo-am@2x.jpg"
+                            alt="دائرة البلدية و التخطيط - حكومة عجمان"
+                            title="دائرة البلدية و التخطيط - حكومة عجمان"
+                        >
+                    </a>
+                </li>
+                <li class="px-2">
+                    <a href="https://fea.gov.ae/" target="_blank" rel="noreferrer noopener">
+                        <img loading="lazy"
+                            class="img-fluid partner-logo"
+                            src="https://assets.ncm.gov.ae/resources/airquality/build/images/map-logos/logo-fea@2x.jpg"
+                            alt="هيئة الفجيرة للبيئة"
+                            title="هيئة الفجيرة للبيئة"
+                        >
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+    <script src='https://assets.ncm.gov.ae/resources/airquality/build/runtime.088fa5fe.js'></script><script src='https://assets.ncm.gov.ae/resources/airquality/build/411.471331e7.js'></script><script src='https://assets.ncm.gov.ae/resources/airquality/build/app.281aa7b9.js'></script>    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D8RLL0XN22"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D8RLL0XN22', {
+            cookie_domain: 'airquality.ncm.gov.ae',
+            cookie_flags: 'SameSite=None;Secure'
+        });
+    </script>
+</body>
+</html>

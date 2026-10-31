@@ -1,0 +1,23 @@
+{
+  "candidate_id": "DISC-7321DBBA031714",
+  "provider": "NOAA/SWPC",
+  "dataset": "enlil_time_series.json",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "space_weather",
+    "solar"
+  ],
+  "retrieved_utc": "2026-10-31T13:49:53.497834Z",
+  "request_url": "https://services.swpc.noaa.gov/json/enlil_time_series.json",
+  "final_url": "https://services.swpc.noaa.gov/json/enlil_time_series.json",
+  "status_code": 200,
+  "content_type": "application/json",
+  "byte_length": 1547916,
+  "sha256": "e586519be06b73fa5ac84b57b6dd58aee0c392eacb529000d4730e1a53cdb6fb",
+  "etag": "\"179e8c-65f232afa0af3\"",
+  "last_modified": "Sat, 31 Oct 2026 13:48:29 GMT",
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/space_weather/2026/10/31/DISC-7321DBBA031714/20261031T134953.497834Z_e586519be06b73fa.json",
+  "parent_id": "SWPC-JSON",
+  "discovery_depth": 1
+}

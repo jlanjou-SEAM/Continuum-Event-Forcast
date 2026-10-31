@@ -1,0 +1,23 @@
+{
+  "candidate_id": "SWPC-WIND-1M",
+  "provider": "NOAA/SWPC",
+  "dataset": "Real-time solar wind 1-minute",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "space_weather",
+    "solar"
+  ],
+  "retrieved_utc": "2026-10-31T13:49:39.315442Z",
+  "request_url": "https://services.swpc.noaa.gov/json/rtsw/rtsw_wind_1m.json",
+  "final_url": "https://services.swpc.noaa.gov/json/rtsw/rtsw_wind_1m.json",
+  "status_code": 200,
+  "content_type": "application/json",
+  "byte_length": 2510526,
+  "sha256": "e17ef945c7d2ee0a896c19f8a634ce583097bd93a3ecaf5edc56b8a9682b863a",
+  "etag": "\"264ebe-65f2329d5f35e\"",
+  "last_modified": "Sat, 31 Oct 2026 13:48:10 GMT",
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/space_weather/2026/10/31/SWPC-WIND-1M/20261031T134939.315442Z_e17ef945c7d2ee0a.json",
+  "parent_id": null,
+  "discovery_depth": 0
+}

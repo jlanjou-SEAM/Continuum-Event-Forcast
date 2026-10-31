@@ -1,0 +1,533 @@
+<!doctype html>
+<html>
+<head>
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>NCO Dropsondes</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<meta name="DC.title" content="NWS/NCO Dropsonde Status">
+<meta name="DC.description" content="NWS/NCO Dropsonde Status">
+<meta name="DC.keywords" content="NWS Central Operations, Aircraft Reconnaissance, Dropsondes, Hurricanes, Tropical Cyclones, Winter Storm Reconnaissance, Atmospheric River">
+<meta name="DC.date.created" content="2026-05-20">
+<meta name="DC.date.reviewed" content="2026-05-20">
+<!-- TemplateEndEditable -->
+<meta name="DC.creator" content="NWS Central Operations">
+<meta name="DC.language" scheme="DCTERMS.RFC1766" content="EN-US">
+<meta name="DC.publisher" content="NWS Central Operations">
+<meta name="DC.contributor" content="NWS Central Operations">
+<meta name="DC.rights" content="https://www.weather.gov/disclaimer.php">
+<meta name="rating" content="General">
+<meta name="robots" content="index,follow">
+<link href="/css/nco_main_structural.css" rel="stylesheet" type="text/css" medial="all">
+<link href="/css/nco_main_style.css" rel="stylesheet" type="text/css" media="all">
+<link href="/status/recon/wide-patch.css" rel="stylesheet" type="text/css" media="all">
+<!-- TemplateBeginEditable name="OtherScripts" -->
+<!-- TemplateEndEditable -->
+
+<!-- Analytics - DAP-->
+<script async type="text/javascript" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NOAA&pga4=G-3FGE2SCD1B"></script>
+
+
+<style>
+.column {
+	float: left;
+	width: 50%;
+	margin: 0px;
+	padding: 0px;
+	color: black;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.div-full.breadcrumb {
+	margin-bottom: 10px;
+}
+
+h1 {
+	margin: 8pt 0pt;
+}
+
+h3 {
+	text-align: center;
+	color: black;
+	margin: 8pt 0pt;
+}
+
+h4 {
+	margin: 8pt 0pt;
+}
+
+.column img {
+	padding-top: 0px;
+}
+
+img {
+	object-fit: contain;
+	max-width: 100%;
+}
+</style>
+</head>
+
+<body>
+<!--top header-->
+
+<div class="header">
+	<div class="header-content">
+		<a href="https://www.noaa.gov" title="Explore other NOAA products" class="header-noaa-icon">
+		  <img src="/images/header-noaa.png" alt="NOAA" /></a>
+		<a href="https://www.weather.gov" title="Access to the latest watches and warnings" class="header-nws-icon">
+		  <img src="/images/header-nws.png" alt="NWS" /></a>
+		<a href="https://www.commerce.gov" title="Learn about the Department of Commerce" class="header-doc">
+		  <img src="/images/header_doc.png" alt="DOC" /></a>
+		<a href="#contents">
+		  <img height="1" src="/images/skipgraphic.gif" alt="Skip Naviagation Links" width="1"></a>
+	
+		<div class="header-center-text">
+    	    <a class="header-center-text" href="https://www.nco.ncep.noaa.gov">NWS Central Operations</a>
+        </div>
+	  <div class="header-noaa-text">
+	        <a class="header-noaa-text" href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a>
+	  </div>
+	</div>
+</div>
+<div class="header-shadow">
+	<div class="header-shadow-content">	</div>
+</div>
+<!--End top header-->
+<div class="center">
+  <div class="content">
+    <div>
+    <div class="center">
+  <div class="content">
+    <div class="topnav">
+      <ul id="topnav">
+        <li>
+          <div class="left-section-link">
+              <a href="https://www.nco.ncep.noaa.gov" title="Back to NCO's home page">Home</a> </div>
+        </li>
+        <li>
+          <div class="center-section-link">
+              <a href="https://mag.ncep.noaa.gov" title="NWS Model Graphics">MODELS &#x25BC;</a></div>
+          <div class="drop">
+            <ul>
+              <li><a href="https://mag.ncep.noaa.gov">Model Analyses & Guidance</a></li>
+              <li><a href="/pmb/nwprod/prodstat_new/">Current Model Status</a></li>
+              <li><a href="/status/data/realtime/">Real-Time Data Monitor</a></li>
+              <li><a href="/pmb/nwprod/gdas/">GDAS Data Counts</a></li>
+              <li><a href="/status/nwps/">NWPS WFO Status</a></li>
+              <li><a href="/pmb/products/">Products Inventory</a> </li>
+              <li><a href="/pmb/changes/">Model Changes</a></li>
+              <li><a href="/pmb/codes/nwprod">Model Source Code</a></li>
+              <!--<li><a href=#>WCOSS/Supercomputers (Coming Soon)</a></li> -->
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link">
+              <a href="/omb/apps/" title="More about Applications and Services at NCEP">Applications/Services &#x25BC;</a> </div>
+          <div class="drop">
+            <ul>
+              <li><a href="https://www.weather.gov">Weather.gov</a></li>
+              <li><a href="https://www.weather.gov/emwin/">EMWIN</a></li>
+              <li><a href="https://nomads.ncep.noaa.gov/pub/">FTPPRD</a></li>
+              <li><a href="https://inws.ncep.noaa.gov">iNWS</a></li>
+              <li><a href="https://iris.ncep.noaa.gov">IRIS (NOAA access)</a></li>
+              <li><a href="https://madis-data.ncep.noaa.gov/">MADIS</a></li>
+              <li><a href="https://mag.ncep.noaa.gov/">MAG</a></li>
+              <li><a href="https://mrms.ncep.noaa.gov/data/">MRMS</a></li>
+              <li><a href="https://nomads.ncep.noaa.gov">NOMADS</a></li>
+              <li><a href="https://nwschat.nws.noaa.gov/registration/login">NWSChat</a></li>
+              <li><a href="https://radar.weather.gov">Ridge II Radar</a></li>
+              <li><a href="http://tgftp.ncep.noaa.gov">TGFTP</a></li>
+              <li><a href="/pmb/primarysite/">IDP Primary Site</a></li>
+              <li><a href="/idsb/IDP_standards/">IDP Implementation Standards</a></li>
+              <li><a href="/omb/apps/">More...</a></li>
+            
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link"> 
+            <!--<a href="https://www.weather.gov/tg/tginfo">The Gateway</a> --> 
+            <a href="/status/" title="More about Operational Status">Operational Status &#x25BC;</a> </div>
+          <div class="drop">
+            <ul>
+              <li><a href="/status/cwd/">Critical Weather Day</a></li>
+	      <li><a href="/status/messages/">SDM Administrative Messages</a></li>
+	      <li><a href="/status/dashboard/">Dashboard (NOAA access)</a></li>
+              <li><a href="/status/data/realtime/">Real-Time Data Monitor</a></li>
+	      <li><a href="/omb/dataqc/">Upper Air & Surface Data QC</a></li>
+	      <li><a href="/status/data/thanks/">Raob &#34;Thanks&#34; Reports</a></li>
+              <li><a href="/status/wsr/">Winter Storm Reconnaissance</a></li>
+              <li><a href="/status/recon/">Aircraft Dropsondes</a></li>
+	      <li><a href="/status/satellite/">Satellite Sectors</a></li>
+	      <li><a href="https://www.weather.gov/nl2/NEXRADView">Radar Level II</a></li>
+	      <li><a href="https://radar3pub.ncep.noaa.gov">Radar Level III</a></li>
+              <li><a href="/pmb/nwprod/prodstat_new/">NWS Model Status</a></li>
+              <li><a href="/status/nwps/">NWPS WFO Status</a></li>
+	      <li><a href="/omb/soe/">Schedule of Events (NOAA access)</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link">
+              <a href="https://www.nco.ncep.noaa.gov" title="More about NCO">About NCO &#x25BC;</a> </div>
+          <div class="drop">
+            <ul>
+              <li><a href="/director/">Office of the Director</a></li>
+	      <li><a href="/pmb/">Implementation and Data Services (IDSD)</a></li>
+              <li><a href="/hpc/">High Performance Computing (HPCD)</a></li>
+	      <li><a href="/nsb/">Network and Security (NSD)</a></li>
+              <li><a href="/omb/">Operational Monitoring (OMD)</a></li>
+              <li><a href="/director/orgchart.php">Organizational Chart</a></li>
+              <li><a href="/sitemap/">Web Site Map</a></li>
+	      <!--<li><a href="#">FAQ/History/MissonAndVision (coming soon)</a></li>-->
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link"> <a href="https://www.weather.gov/ncep/" title="More about NCEP Centers">Centers &#x25BC;</a> </div>
+          <div class="drop">
+            <ul>
+              <li><a href="https://www.aviationweather.gov">Aviation (AWC)</a></li>
+	      <li><a href="https://www.cpc.ncep.noaa.gov/">Climate (CPC)</a></li>
+              <li><a href="https://www.nhc.noaa.gov">Hurricane (NHC/CPHC)</a></li>
+              <li><a href="https://www.spc.noaa.gov">Storm (SPC)</a></li>
+              <li><a href="https://www.swpc.noaa.gov">Space (SWPC)</a></li>
+              <li><a href="https://tsunami.gov">Tsunami (NTWC/PTWC)</a></li>
+	      <li><a href="https://water.noaa.gov/">Water (NWC)</a></li>
+              <li><a href="https://www.wpc.ncep.noaa.gov">Weather (WPC)</a></li>
+	      <li><a href="https://ocean.weather.gov">Ocean (OPC)</a></li>
+	      <li><a href="https://usicecenter.gov">Ice (USNIC)</a></li>
+              <li><a href="https://www.nco.ncep.noaa.gov">Technology (NCO)</a></li>
+              <li><a href="https://www.emc.ncep.noaa.gov/">Modeling (EMC)</a></li>
+	      <li><a href="https://www.ndbc.noaa.gov">Buoy Data (NDBC)</a></li>
+              <li><a href="https://www.roc.noaa.gov/">Radar Ops (ROC)</a></li>
+	    </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link"> 
+            <!-- link to noaa/nws website search --> 
+            <a href="https://www.weather.gov/search">Search</a> </div>
+          <div class="dropsearch">
+            <div class="site-search">
+              <form method="get" action="https://search.usa.gov/search" style="margin-bottom: 0; margin-top: 0;">
+                <input type="hidden" name="v:project" value="firstgov"/>
+                <label for="query">Search For</label>
+                <input type="text" name="query" id="query" size="12"/>
+                <input type="submit" value="Go"/>
+                <p>
+                  <input type="radio" name="affiliate" checked="checked" value="nws.noaa.gov" id="nws"/>
+                  <label for="nws" class="search-scope">NWS</label>
+                  <input type="radio" name="affiliate" value="noaa.gov" id="noaa"/>
+                  <label for="noaa" class="search-scope">All NOAA</label>
+                </p>
+              </form>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<br>
+<!--
+<div class="shutdown">
+  </div>
+-->
+  </div>
+  <div class="center-content">
+    <!-- TOP NEW AREA-->
+<!--     <div class="five-sixth-last">
+      <div id="topnews">
+        <div class="icon"><img src="https://www.weather.gov/css/images/news-important.jpg" /></div>
+        <div class="body">
+<h1 style="font-size: 11pt;">Severe Thunderstorms and Locally Heavy Rain Possible</h1>
+            <p>
+                Severe thunderstorms with large hail and damaging winds will be possible from Oklahoma and northeast Texas to Kentucky, West Virginia and parts of Virginia and North Carolina. More isolated strong/severe storms will also be possible across parts of the northern Rockies.  Heavy rain and local flooding are possible in the lower Mississippi Valley and central Appalachians. 
+                <a href="http://www.wpc.ncep.noaa.gov/discussions/hpcdiscussions.php?disc=pmdspd" target="_blank" rel="noopener noreferrer">Read More &gt;</a>
+            </p>        </div>
+      </div>
+    </div>
+-->
+    <div class="full-width-border">
+      <div class="partial-width-borderbottom">
+        <div class="div-full">
+          <div class="div-full breadcrumb">
+            <div class='location-breadcrumb'> <!-- TemplateBeginEditable name="breadcrumb" --> <a href="https://www.weather.gov/">NWS</a> &gt; <a href="https://www.nco.ncep.noaa.gov/">NCO</a> &gt; <a href="https://www.nco.ncep.noaa.gov/status">Ops Status</a> &gt; <a href="https://www.nco.ncep.noaa.gov/status/recon">Aircraft Dropsondes</a> <!-- TemplateEndEditable --> </div>
+          </div>
+        </div>
+        <div class="div-full"> </div>
+        <div class="div-full cms-content" id="home_page_content">
+          <div class="content_centered"> <!-- TemplateBeginEditable name="content" --> 
+<!-- *******************CONTENT AREA ***************************-->
+<h1 style="text-align: center;">Aircraft Reconnaissance Dropsondes</h1>
+<script type="text/javascript">history.replaceState(null, "", `?mission=261029152558308_WXWXA_AF308`);</script>
+<h3>
+<div class=row>
+<div class=column style='text-align: center;'>Latest: 18Z 29 Oct 2026</div>
+<div class=column style='text-align: center;'>Plotted/Available: 1/1</div>
+</div>
+</h3>
+<div class=row>
+<div class=column align="center">
+<form method="get" id="flights" style="display: inline;">
+  <select name="mission" id="flight" onchange="this.form.submit();">
+          <option value=261029152558308_WXWXA_AF308 selected>261029152558308_WXWXA_AF308 (29 Oct 2026)</option>
+          <option value=261027155738305_WXWXA_AF305>261027155738305_WXWXA_AF305 (27 Oct 2026)</option>
+          <option value=261022214910301_WXWXA_AF301>261022214910301_WXWXA_AF301 (22 Oct 2026)</option>
+          <option value=261022152942301_WXWXA_AF301>261022152942301_WXWXA_AF301 (22 Oct 2026)</option>
+          <option value=CHAMPI_WXWXC_G100>CHAMPI_WXWXC_G100 (21 Oct 2026)</option>
+          <option value=261020160808300_WXWXA_AF300>261020160808300_WXWXA_AF300 (20 Oct 2026)</option>
+          <option value=TRUDY_0421E_AF305>TRUDY_0421E_AF305 (18 Oct 2026)</option>
+          <option value=TRUDY_0321E_AF301>TRUDY_0321E_AF301 (17 Oct 2026)</option>
+          <option value=TRUDY_0221E_AF306>TRUDY_0221E_AF306 (16 Oct 2026)</option>
+          <option value=TRUDY_0121E_AF307>TRUDY_0121E_AF307 (15 Oct 2026)</option>
+          <option value=SIMON_0320E_AF307>SIMON_0320E_AF307 (14 Oct 2026)</option>
+          <option value=SIMON_0220E_AF302>SIMON_0220E_AF302 (11 Oct 2026)</option>
+          <option value=ISAIAS_1409A_AF301>ISAIAS_1409A_AF301 (09 Oct 2026)</option>
+          <option value=ISAIAS_1309A_NOAA3>ISAIAS_1309A_NOAA3 (09 Oct 2026)</option>
+          <option value=ISAIAS_1209A_AF309>ISAIAS_1209A_AF309 (09 Oct 2026)</option>
+          <option value=ISAIAS_1109A_NOAA3>ISAIAS_1109A_NOAA3 (09 Oct 2026)</option>
+          <option value=ISAIAS_1009A_AF307>ISAIAS_1009A_AF307 (09 Oct 2026)</option>
+          <option value=ISAIAS_0909A_NOAA9>ISAIAS_0909A_NOAA9 (08 Oct 2026)</option>
+          <option value=ISAIAS_0809A_NOAA3>ISAIAS_0809A_NOAA3 (08 Oct 2026)</option>
+          <option value=ISAIAS_0709A_AF305>ISAIAS_0709A_AF305 (08 Oct 2026)</option>
+          <option value=ISAIAS_0609A_NOAA2>ISAIAS_0609A_NOAA2 (08 Oct 2026)</option>
+          <option value=ISAIAS_0509A_AF301>ISAIAS_0509A_AF301 (07 Oct 2026)</option>
+          <option value=ISAIAS_0409A_NOAA9>ISAIAS_0409A_NOAA9 (07 Oct 2026)</option>
+          <option value=ISAIAS_0309A_NOAA3>ISAIAS_0309A_NOAA3 (07 Oct 2026)</option>
+          <option value=ISAIAS_0209A_AF304>ISAIAS_0209A_AF304 (07 Oct 2026)</option>
+          <option value=SURV_01BBA_NOAA9>SURV_01BBA_NOAA9 (06 Oct 2026)</option>
+          <option value=261001214514308_WXWXA_AF308>261001214514308_WXWXA_AF308 (01 Oct 2026)</option>
+          <option value=261001152759308_WXWXA_AF308>261001152759308_WXWXA_AF308 (01 Oct 2026)</option>
+          <option value=RACHEL_WD18E_NOAA2>RACHEL_WD18E_NOAA2 (30 Sep 2026)</option>
+          <option value=RACHEL_WC18E_NOAA2>RACHEL_WC18E_NOAA2 (30 Sep 2026)</option>
+          <option value=260929192043302_WXWXC_AF302>260929192043302_WXWXC_AF302 (29 Sep 2026)</option>
+          <option value=RACHEL_WB18E_NOAA2>RACHEL_WB18E_NOAA2 (29 Sep 2026)</option>
+          <option value=RACHEL_WA18E_NOAA2>RACHEL_WA18E_NOAA2 (29 Sep 2026)</option>
+          <option value=POLO_0517E_NOAA2>POLO_0517E_NOAA2 (28 Sep 2026)</option>
+          <option value=POLO_0417E_NOAA2>POLO_0417E_NOAA2 (27 Sep 2026)</option>
+          <option value=NOLO_0715E_AF300>NOLO_0715E_AF300 (27 Sep 2026)</option>
+          <option value=NOLO_0615E_AF306>NOLO_0615E_AF306 (26 Sep 2026)</option>
+          <option value=POLO_0317E_NOAA2>POLO_0317E_NOAA2 (26 Sep 2026)</option>
+          <option value=NOLO_0515E_AF302>NOLO_0515E_AF302 (26 Sep 2026)</option>
+          <option value=NOLO_0415E_AF306>NOLO_0415E_AF306 (26 Sep 2026)</option>
+          <option value=POLO_WD17E_NOAA3>POLO_WD17E_NOAA3 (25 Sep 2026)</option>
+          <option value=NOLO_0315E_AF302>NOLO_0315E_AF302 (25 Sep 2026)</option>
+          <option value=POLO_WC17E_NOAA2>POLO_WC17E_NOAA2 (25 Sep 2026)</option>
+          <option value=NOLO_0215E_AF306>NOLO_0215E_AF306 (25 Sep 2026)</option>
+          <option value=NOLO_0115E_AF302>NOLO_0115E_AF302 (24 Sep 2026)</option>
+          <option value=POLO_WB17E_NOAA2>POLO_WB17E_NOAA2 (24 Sep 2026)</option>
+          <option value=260924124302300_WXWXA_AF300>260924124302300_WXWXA_AF300 (24 Sep 2026)</option>
+          <option value=260923195012306_WXWXE_AF306>260923195012306_WXWXE_AF306 (23 Sep 2026)</option>
+          <option value=POLO_WA17E_NOAA3>POLO_WA17E_NOAA3 (22 Sep 2026)</option>
+          <option value=POLO_0117E_NOAA2>POLO_0117E_NOAA2 (21 Sep 2026)</option>
+          <option value=260917145834306_WXWXA_AF306>260917145834306_WXWXA_AF306 (17 Sep 2026)</option>
+          <option value=260915212620307_WXWXA_AF307>260915212620307_WXWXA_AF307 (15 Sep 2026)</option>
+          <option value=260913165332300_WXWXA_AF300>260913165332300_WXWXA_AF300 (13 Sep 2026)</option>
+          <option value=LOWELL_WD12E_NOAA9>LOWELL_WD12E_NOAA9 (08 Sep 2026)</option>
+          <option value=LOWELL_1212E_AF303>LOWELL_1212E_AF303 (08 Sep 2026)</option>
+          <option value=LOWELL_WC12E_NOAA9>LOWELL_WC12E_NOAA9 (07 Sep 2026)</option>
+          <option value=LOWELL_1112E_AF309>LOWELL_1112E_AF309 (08 Sep 2026)</option>
+          <option value=LOWELL_1012E_AF303>LOWELL_1012E_AF303 (07 Sep 2026)</option>
+          <option value=LOWELL_0912E_AF309>LOWELL_0912E_AF309 (07 Sep 2026)</option>
+          <option value=LOWELL_0712E_AF309>LOWELL_0712E_AF309 (06 Sep 2026)</option>
+          <option value=LOWELL_0812E_NOAA9>LOWELL_0812E_NOAA9 (06 Sep 2026)</option>
+          <option value=LOWELL_0612E_AF309>LOWELL_0612E_AF309 (06 Sep 2026)</option>
+          <option value=LOWELL_0512E_NOAA9>LOWELL_0512E_NOAA9 (05 Sep 2026)</option>
+          <option value=LOWELL_0412E_AF309>LOWELL_0412E_AF309 (05 Sep 2026)</option>
+          <option value=LOWELL_0212E_AF309>LOWELL_0212E_AF309 (04 Sep 2026)</option>
+          <option value=LOWELL_0312E_NOAA3>LOWELL_0312E_NOAA3 (04 Sep 2026)</option>
+          <option value=KARINA_0111E_NOAA9>KARINA_0111E_NOAA9 (04 Sep 2026)</option>
+          <option value=LOWELL_WB12E_NOAA3>LOWELL_WB12E_NOAA3 (03 Sep 2026)</option>
+          <option value=LOWELL_WA12E_NOAA3>LOWELL_WA12E_NOAA3 (02 Sep 2026)</option>
+          <option value=EDOUARD_0305A_AF303>EDOUARD_0305A_AF303 (01 Sep 2026)</option>
+          <option value=CYCLONE_0205A_AF303>CYCLONE_0205A_AF303 (01 Sep 2026)</option>
+          <option value=INVEST_01AAA_AF303>INVEST_01AAA_AF303 (31 Aug 2026)</option>
+          <option value=260827153411307_WXWXA_AF307>260827153411307_WXWXA_AF307 (27 Aug 2026)</option>
+          <option value=260825184759306_WXWXA_AF306>260825184759306_WXWXA_AF306 (25 Aug 2026)</option>
+          <option value=260825151935306_WXWXA_AF306>260825151935306_WXWXA_AF306 (25 Aug 2026)</option>
+          <option value=MOKE_0602C_AF308>MOKE_0602C_AF308 (23 Aug 2026)</option>
+          <option value=MOKE_0502C_NOAA2>MOKE_0502C_NOAA2 (22 Aug 2026)</option>
+          <option value=MOKE_0402C_AF302>MOKE_0402C_AF302 (22 Aug 2026)</option>
+          <option value=MOKE_0302C_AF308>MOKE_0302C_AF308 (22 Aug 2026)</option>
+          <option value=CYCLONE_0202C_NOAA2>CYCLONE_0202C_NOAA2 (21 Aug 2026)</option>
+          <option value=CYCLONE_0102C_AF305>CYCLONE_0102C_AF305 (21 Aug 2026)</option>
+          <option value=LALA_1001C_AF302>LALA_1001C_AF302 (15 Aug 2026)</option>
+          <option value=LALA_0901C_NOAA2>LALA_0901C_NOAA2 (14 Aug 2026)</option>
+          <option value=LALA_0801C_NOAA9>LALA_0801C_NOAA9 (14 Aug 2026)</option>
+          <option value=LALA_0701C_AF305>LALA_0701C_AF305 (14 Aug 2026)</option>
+          <option value=LALA_0601C_AF302>LALA_0601C_AF302 (14 Aug 2026)</option>
+          <option value=LALA_0501C_NOAA2>LALA_0501C_NOAA2 (13 Aug 2026)</option>
+          <option value=LALA_0401C_NOAA9>LALA_0401C_NOAA9 (13 Aug 2026)</option>
+          <option value=LALA_0301C_AF303>LALA_0301C_AF303 (13 Aug 2026)</option>
+          <option value=SURV_01AAC_NOAA9>SURV_01AAC_NOAA9 (11 Aug 2026)</option>
+          <option value=260806220439309_WXWXA_AF309>260806220439309_WXWXA_AF309 (06 Aug 2026)</option>
+          <option value=260806143747309_WXWXA_AF309>260806143747309_WXWXA_AF309 (06 Aug 2026)</option>
+          <option value=260804223435302_WXWXA_AF302>260804223435302_WXWXA_AF302 (04 Aug 2026)</option>
+          <option value=260804144559302_WXWXA_AF302>260804144559302_WXWXA_AF302 (04 Aug 2026)</option>
+          <option value=260730143955307_WXWXA_AF307>260730143955307_WXWXA_AF307 (30 Jul 2026)</option>
+          <option value=GENEVIEVE_WA07E_NOAA9>GENEVIEVE_WA07E_NOAA9 (28 Jul 2026)</option>
+          <option value=FAUSTO_0706E_AF306>FAUSTO_0706E_AF306 (28 Jul 2026)</option>
+          <option value=FAUSTO_0606E_AF301>FAUSTO_0606E_AF301 (28 Jul 2026)</option>
+          <option value=FAUSTO_0506E_AF301>FAUSTO_0506E_AF301 (27 Jul 2026)</option>
+          <option value=FAUSTO_WA06E_NOAA9>FAUSTO_WA06E_NOAA9 (27 Jul 2026)</option>
+          <option value=FAUSTO_0406E_AF306>FAUSTO_0406E_AF306 (27 Jul 2026)</option>
+          <option value=FAUSTO_0306E_NOAA9>FAUSTO_0306E_NOAA9 (26 Jul 2026)</option>
+          <option value=FAUSTO_0106E_NOAA9>FAUSTO_0106E_NOAA9 (25 Jul 2026)</option>
+          <option value=BERTHA_1302A_AF308>BERTHA_1302A_AF308 (23 Jul 2026)</option>
+          <option value=BERTHA_1202A_AF308>BERTHA_1202A_AF308 (22 Jul 2026)</option>
+          <option value=BERTHA_1102A_NOAA3>BERTHA_1102A_NOAA3 (22 Jul 2026)</option>
+          <option value=BERTHA_1002A_AF304>BERTHA_1002A_AF304 (22 Jul 2026)</option>
+          <option value=BERTHA_0902A_AF307>BERTHA_0902A_AF307 (21 Jul 2026)</option>
+          <option value=BERTHA_0802A_NOAA3>BERTHA_0802A_NOAA3 (21 Jul 2026)</option>
+          <option value=BERTHA_0702A_AF309>BERTHA_0702A_AF309 (21 Jul 2026)</option>
+          <option value=BERTHA_0602A_NOAA3>BERTHA_0602A_NOAA3 (21 Jul 2026)</option>
+          <option value=CYCLONE_0502A_AF306>CYCLONE_0502A_AF306 (21 Jul 2026)</option>
+          <option value=CYCLONE_0402A_NOAA3>CYCLONE_0402A_NOAA3 (20 Jul 2026)</option>
+          <option value=CYCLONE_0202A_AF301>CYCLONE_0202A_AF301 (20 Jul 2026)</option>
+          <option value=260716222506305_WXWXA_AF305>260716222506305_WXWXA_AF305 (16 Jul 2026)</option>
+          <option value=260716145028303_WXWXA_AF303>260716145028303_WXWXA_AF303 (16 Jul 2026)</option>
+          <option value=ELIDA_WA05E_NOAA9>ELIDA_WA05E_NOAA9 (15 Jul 2026)</option>
+          <option value=260712155146304_WXWXA_AF304>260712155146304_WXWXA_AF304 (12 Jul 2026)</option>
+          <option value=BAVI_WXWXC_G100>BAVI_WXWXC_G100 (09 Jul 2026)</option>
+          <option value=BAVI_WXWXA_G100>BAVI_WXWXA_G100 (09 Jul 2026)</option>
+          <option value=260707144415302_WXWXA_AF302>260707144415302_WXWXA_AF302 (07 Jul 2026)</option>
+          <option value=260701153757307_WXWXA_AF307>260701153757307_WXWXA_AF307 (01 Jul 2026)</option>
+          <option value=260630223825307_WXWXA_AF307>260630223825307_WXWXA_AF307 (30 Jun 2026)</option>
+          <option value=260629163728309_WXWXA_AF309>260629163728309_WXWXA_AF309 (29 Jun 2026)</option>
+          <option value=INVEST_0201A_AF302>INVEST_0201A_AF302 (17 Jun 2026)</option>
+          <option value=ARTHUR_0301A_NOAA3>ARTHUR_0301A_NOAA3 (17 Jun 2026)</option>
+          <option value=SURVEY_0101A_AF309>SURVEY_0101A_AF309 (17 Jun 2026)</option>
+          <option value=260611151203309_WXWXA_AF309>260611151203309_WXWXA_AF309 (11 Jun 2026)</option>
+          <option value=260419142727303_WXWXA_AF303>260419142727303_WXWXA_AF303 (19 Apr 2026)</option>
+          <option value=260415123734303_WXWXA_AF303>260415123734303_WXWXA_AF303 (15 Apr 2026)</option>
+          <option value=260413153306303_WXWXA_AF303>260413153306303_WXWXA_AF303 (13 Apr 2026)</option>
+          <option value=archive>Previous Years</option>
+  </select>
+</form>
+</div>
+<div class=column align="center">
+<select name="drop" id="drop">
+  <option value=02 selected>Drop 02</option>
+</select>
+</div>
+</div>
+<div class='row' style='margin-top: 0px; border-bottom: 2px solid black;'>
+<div class='column'>
+<img src="dropsondes-261029152558308_WXWXA_AF308.png" border="1">
+</div>
+<div class="column">
+	<img id="skew" src="skew261029152558308_WXWXA_AF308-02.png" border="1">
+</div>
+</div>
+<h4>
+
+<div class="row">
+<div class="column">ObsProc cycle time starts at UTC+03:00 (e.g. 03Z, 09Z, 15Z, 21Z)</div>
+<div class="column" align="right">1351Z 31 Oct 2026</div>
+</div>
+</h4>
+<p>
+This page displays dropsonde plots and flight track overviews from aircraft reconnaissance missions and dropsonde availability for the GFS model.<br>
+<span style="color:#008000">Green</span> drops drops were assimilated into the GFS<br>
+<span style="color:#BFBF00">Yellow</span> drops were assimilated, but TEMP DROP message data is different from bufr data, even if difference is minor and insignificant<br>
+<span style="color:blue">Blue</span> drops reached WCOSS, but were not assimilated into the GFS - could be due to obs proc not yet running, or another reason<br>
+The plotted/available count shows the number of drops plotted out of the number of messages parsed. These will normally be the same, but a shortage of drops may indicate an error with message processing or an error with the message itself.
+<h5>
+For more information about Winter Storm Recon, please visit the <a href="https://www.nco.ncep.noaa.gov/status/wsr/">NCO WSR Page</a><p>
+For the archive of previous years, please visit the <a href="../archive.php">Previous Years Archive</a><p>
+</h5>
+<script>
+	const p=document.getElementById("drop");
+	p.addEventListener("change", chooseskew);
+
+	updateURL();
+
+	function updateURL() {
+		var flightSel=document.getElementById("flight").value;
+		var dropSel=document.getElementById("drop").value;
+		const params = new URLSearchParams(document.location.search);
+
+		params.set("mission", params.get("mission") ?? flightSel);
+		params.set("drop", params.get("drop") ?? dropSel.slice(-2));
+
+		history.replaceState(null, "", `?${params}`);
+	}
+
+	function chooseskew(event) {
+		var s=document.getElementById("skew");
+		const params = new URLSearchParams(document.location.search);
+		s.src="skew"+params.get("mission")+"-"+event.target.value+".png";
+		params.set("drop", event.target.value);
+		history.replaceState(null, "", `?${params}`);
+	}
+</script>
+<!-- *******END of CONTENT AREA *********************************--> 
+<!-- TemplateEndEditable --> <!-- TemplateBeginEditable name="Filetime" --> 
+<!-- *********************************************************
+Please change the filemtime to your file name so the date page date last updated is correct 
+********************************************************************************** -->
+            <div id="grayTime">
+              <br>Page last modified: 23 October 2026.            </div>
+            <!-- TemplateEndEditable --> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="full-width-first">
+    <div class="full-width-first communication-links">
+      <div class="one-half-last nopad"> <span class="txt-rt myforecast-current">
+        <!--<div class="myforecast-current"> <a href="/rss_page.php?site_name=cfo" target="_blank" rel = "noopener noreferrer" style="text-decoration:none;font-size:11px;"> <img src="/css/images/rss.png" width="16" height="16" alt="CFO RSS Feed" />&nbsp;&nbsp;CFO RSS Feed </a> </div>
+-->
+        </span> </div>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+  <div style="clear:both;"></div>
+</div>
+<!-- end of <div class="center"> --> 
+
+<!-- sitemap area --> 
+<!-- legal footer area -->
+<div class="footer-legal">
+  <div class="footer-legal">
+    <div class="footer-legal-content">
+      <div class="one-sixth-first" id="footer_legal_gov"> <a href="http://www.usa.gov"> <img src="https://www.weather.gov/bundles/templating/images/footer/usa_gov.png" alt="usa.gov" width="110" height="30" /></a> </div>
+      <div class="one-half-first" id="footer_legal_info">
+        <p> <a href="https://www.commerce.gov">US Dept of Commerce</a><br/>
+          <a href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a><br/>
+          <a href="https://www.weather.gov">National Weather Service</a><br/>
+          5830 University Research Court<br>
+          Riverdale Park, MD 20737<br>
+          <br/>
+          <br/>
+          <a href="https://www.nco.ncep.noaa.gov/mail_webmaster/">NWS Web Services POCs</a> </p>
+      </div>
+      <!-- end of <div class="one-half-first" id="footer_legal_info"> -->
+      <div class="one-third-last" id="footer_required_links">
+        <div class="div-half"> <a href="https://www.weather.gov/disclaimer">Disclaimer</a><br/>
+          <a href="http://www.cio.noaa.gov/services_programs/info_quality.html">Information Quality</a><br/>
+          <a href="https://www.weather.gov/help">Help</a><br/>
+          <a href="https://www.weather.gov/glossary">Glossary</a> </div>
+        <div class="div-half"> <a href="https://www.weather.gov/privacy">Privacy Policy</a><br/>
+          <a href="https://www.noaa.gov/foia-freedom-of-information-act">Freedom of Information Act (FOIA)</a><br/>
+          <a href="https://www.weather.gov/about">About Us</a><br/>
+          <a href="https://www.weather.gov/careers">Career Opportunities</a> </div>
+      </div>
+      <!-- end of <div class="one-third-last" id="footer_required_links"> --> 
+    </div>
+    <!-- end of <div class="footer-legal-content"> --> 
+  </div>
+  <!-- end of <div class="footer-legal"> --> 
+</div>
+<!-- end of <div class="footer-legal"> -->
+</body>
+</html>

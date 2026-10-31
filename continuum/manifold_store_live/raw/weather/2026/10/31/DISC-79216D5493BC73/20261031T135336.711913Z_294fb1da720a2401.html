@@ -1,0 +1,519 @@
+<!doctype html>
+
+
+<!-- Sanitize URL string to prevent URL injection -->
+
+<html><!-- InstanceBegin template="/Templates/main_nco_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>NCO Real Time Data Monitoring System</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<meta name="DC.title" content="NWS/NCO Real Time Data Monitoring System">
+<meta name="DC.description" content="NWS/NCO Real Time Data Monitoring System">
+<meta name="DC.keywords" content="NCO Operational Monitoring Branch, 
+            NWS Central Operations, NCEP Central Operations, Central Operations, National Centers for Environmental Prediction, 
+            National Weather Service, NCO RTDM, RTDM, NCO RTDMS, RTDMS">
+<meta name="DC.date.created" content="2023-01-23">
+<!-- InstanceEndEditable -->
+<meta name="DC.creator" content="NWS Central Operations">
+<meta name="DC.language" scheme="DCTERMS.RFC1766" content="EN-US">
+<meta name="DC.publisher" content="NWS Central Operations">
+<meta name="DC.contributor" content="NWS Central Operations">
+<meta name="DC.rights" content="https://www.weather.gov/disclaimer.php">
+<meta name="rating" content="General">
+<meta name="robots" content="index,follow">
+<meta http-equiv="refresh" content="60">
+<link href="/css/nco_main_structural.css" rel="stylesheet" type="text/css" medial="all"> 
+<link href="/css/nco_main_style.css" rel="stylesheet" type="text/css" media="all">
+<!-- InstanceBeginEditable name="OtherScripts" -->
+<style>
+   body {
+      text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+   }
+
+   .header-shadow-content {
+      width: 990px;
+   }
+
+   .content {
+      width: 990px;
+      background: white;
+   }
+
+   .center-content {
+      overflow: visible;
+      width: 990px; 
+   }
+   
+   .div-full.breadcrumb {
+      margin-bottom: 0px;
+   }
+ 
+   .partial-width-borderbottom {
+      padding-top: 0px; 
+   }
+
+   .parent-rtdmimage {
+      position: relative;
+      width: 100%;
+   }
+   
+   .RTDMimage {
+      display: block;
+      width: 100%;
+      height: 50px; 
+   }
+   
+   .RTDMimgtext {
+      position: absolute;
+      top: 50%;
+      left: 0.5%;
+      transform: translate(0%, -50%);
+      color: white; 
+      font-weight: 750;
+      font-size: 2em; 
+      word-spacing: -0.5px; 
+      text-shadow: 1px 1px 1px rgb(0 0 0 / 75%);
+   }
+
+   .loadtime {
+      font-size: 95%;
+      background: #f2f2f2;
+      color: #6e6e6e;
+      padding-top: .25em;
+      padding-bottom: .25em;
+      text-align: center;
+      font-weight: normal; 
+   }
+   
+   .location-breadcrumb {
+      padding-left: .5em;
+    }
+
+   table, tr, th, td {
+      border-collapse: separate;
+      border: 1px solid #ffffff;
+   }
+</style>
+<!-- InstanceEndEditable -->
+
+<!-- Analytics - DAP-->
+<script async type="text/javascript" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NOAA&pga4=G-3FGE2SCD1B"></script>
+
+
+</head>
+
+<body>
+<!--top header-->
+
+<div class="header">
+	<div class="header-content">
+		<a href="https://www.noaa.gov" title="Explore other NOAA products" class="header-noaa-icon">
+		  <img src="/images/header-noaa.png" alt="NOAA" /></a>
+		<a href="https://www.weather.gov" title="Access to the latest watches and warnings" class="header-nws-icon">
+		  <img src="/images/header-nws.png" alt="NWS" /></a>
+		<a href="https://www.commerce.gov" title="Learn about the Department of Commerce" class="header-doc">
+		  <img src="/images/header_doc.png" alt="DOC" /></a>
+		<a href="#contents">
+		  <img height="1" src="/images/skipgraphic.gif" alt="Skip Naviagation Links" width="1"></a>
+	
+		<div class="header-center-text">
+    	    <a class="header-center-text" href="https://www.nco.ncep.noaa.gov">NWS Central Operations</a>
+        </div>
+	  <div class="header-noaa-text">
+	        <a class="header-noaa-text" href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a>
+	  </div>
+	</div>
+</div>
+<div class="header-shadow">
+	<div class="header-shadow-content">	</div>
+</div>
+<!--End top header-->
+<div class="center">
+  <div class="content">
+    <div class="center">
+  <div class="content">
+    <div class="topnav">
+      <ul id="topnav">
+        <li>
+          <div class="left-section-link">
+              <a href="https://www.nco.ncep.noaa.gov" title="Back to NCO's home page">Home</a> </div>
+        </li>
+        <li>
+          <div class="center-section-link">
+              <a href="https://mag.ncep.noaa.gov" title="NWS Model Graphics">MODELS &#x25BC;</a></div>
+          <div class="drop">
+            <ul>
+              <li><a href="https://mag.ncep.noaa.gov">Model Analyses & Guidance</a></li>
+              <li><a href="/pmb/nwprod/prodstat_new/">Current Model Status</a></li>
+              <li><a href="/status/data/realtime/">Real-Time Data Monitor</a></li>
+              <li><a href="/pmb/nwprod/gdas/">GDAS Data Counts</a></li>
+              <li><a href="/status/nwps/">NWPS WFO Status</a></li>
+              <li><a href="/pmb/products/">Products Inventory</a> </li>
+              <li><a href="/pmb/changes/">Model Changes</a></li>
+              <li><a href="/pmb/codes/nwprod">Model Source Code</a></li>
+              <!--<li><a href=#>WCOSS/Supercomputers (Coming Soon)</a></li> -->
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link">
+              <a href="/omb/apps/" title="More about Applications and Services at NCEP">Applications/Services &#x25BC;</a> </div>
+          <div class="drop">
+            <ul>
+              <li><a href="https://www.weather.gov">Weather.gov</a></li>
+              <li><a href="https://www.weather.gov/emwin/">EMWIN</a></li>
+              <li><a href="https://nomads.ncep.noaa.gov/pub/">FTPPRD</a></li>
+              <li><a href="https://inws.ncep.noaa.gov">iNWS</a></li>
+              <li><a href="https://iris.ncep.noaa.gov">IRIS (NOAA access)</a></li>
+              <li><a href="https://madis-data.ncep.noaa.gov/">MADIS</a></li>
+              <li><a href="https://mag.ncep.noaa.gov/">MAG</a></li>
+              <li><a href="https://mrms.ncep.noaa.gov/data/">MRMS</a></li>
+              <li><a href="https://nomads.ncep.noaa.gov">NOMADS</a></li>
+              <li><a href="https://nwschat.nws.noaa.gov/registration/login">NWSChat</a></li>
+              <li><a href="https://radar.weather.gov">Ridge II Radar</a></li>
+              <li><a href="http://tgftp.ncep.noaa.gov">TGFTP</a></li>
+              <li><a href="/pmb/primarysite/">IDP Primary Site</a></li>
+              <li><a href="/idsb/IDP_standards/">IDP Implementation Standards</a></li>
+              <li><a href="/omb/apps/">More...</a></li>
+            
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link"> 
+            <!--<a href="https://www.weather.gov/tg/tginfo">The Gateway</a> --> 
+            <a href="/status/" title="More about Operational Status">Operational Status &#x25BC;</a> </div>
+          <div class="drop">
+            <ul>
+              <li><a href="/status/cwd/">Critical Weather Day</a></li>
+	      <li><a href="/status/messages/">SDM Administrative Messages</a></li>
+	      <li><a href="/status/dashboard/">Dashboard (NOAA access)</a></li>
+              <li><a href="/status/data/realtime/">Real-Time Data Monitor</a></li>
+	      <li><a href="/omb/dataqc/">Upper Air & Surface Data QC</a></li>
+	      <li><a href="/status/data/thanks/">Raob &#34;Thanks&#34; Reports</a></li>
+              <li><a href="/status/wsr/">Winter Storm Reconnaissance</a></li>
+              <li><a href="/status/recon/">Aircraft Dropsondes</a></li>
+	      <li><a href="/status/satellite/">Satellite Sectors</a></li>
+	      <li><a href="https://www.weather.gov/nl2/NEXRADView">Radar Level II</a></li>
+	      <li><a href="https://radar3pub.ncep.noaa.gov">Radar Level III</a></li>
+              <li><a href="/pmb/nwprod/prodstat_new/">NWS Model Status</a></li>
+              <li><a href="/status/nwps/">NWPS WFO Status</a></li>
+	      <li><a href="/omb/soe/">Schedule of Events (NOAA access)</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link">
+              <a href="https://www.nco.ncep.noaa.gov" title="More about NCO">About NCO &#x25BC;</a> </div>
+          <div class="drop">
+            <ul>
+              <li><a href="/director/">Office of the Director</a></li>
+	      <li><a href="/pmb/">Implementation and Data Services (IDSD)</a></li>
+              <li><a href="/hpc/">High Performance Computing (HPCD)</a></li>
+	      <li><a href="/nsb/">Network and Security (NSD)</a></li>
+              <li><a href="/omb/">Operational Monitoring (OMD)</a></li>
+              <li><a href="/director/orgchart.php">Organizational Chart</a></li>
+              <li><a href="/sitemap/">Web Site Map</a></li>
+	      <!--<li><a href="#">FAQ/History/MissonAndVision (coming soon)</a></li>-->
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link"> <a href="https://www.weather.gov/ncep/" title="More about NCEP Centers">Centers &#x25BC;</a> </div>
+          <div class="drop">
+            <ul>
+              <li><a href="https://www.aviationweather.gov">Aviation (AWC)</a></li>
+	      <li><a href="https://www.cpc.ncep.noaa.gov/">Climate (CPC)</a></li>
+              <li><a href="https://www.nhc.noaa.gov">Hurricane (NHC/CPHC)</a></li>
+              <li><a href="https://www.spc.noaa.gov">Storm (SPC)</a></li>
+              <li><a href="https://www.swpc.noaa.gov">Space (SWPC)</a></li>
+              <li><a href="https://tsunami.gov">Tsunami (NTWC/PTWC)</a></li>
+	      <li><a href="https://water.noaa.gov/">Water (NWC)</a></li>
+              <li><a href="https://www.wpc.ncep.noaa.gov">Weather (WPC)</a></li>
+	      <li><a href="https://ocean.weather.gov">Ocean (OPC)</a></li>
+	      <li><a href="https://usicecenter.gov">Ice (USNIC)</a></li>
+              <li><a href="https://www.nco.ncep.noaa.gov">Technology (NCO)</a></li>
+              <li><a href="https://www.emc.ncep.noaa.gov/">Modeling (EMC)</a></li>
+	      <li><a href="https://www.ndbc.noaa.gov">Buoy Data (NDBC)</a></li>
+              <li><a href="https://www.roc.noaa.gov/">Radar Ops (ROC)</a></li>
+	    </ul>
+          </div>
+        </li>
+        <li>
+          <div class="center-section-link"> 
+            <!-- link to noaa/nws website search --> 
+            <a href="https://www.weather.gov/search">Search</a> </div>
+          <div class="dropsearch">
+            <div class="site-search">
+              <form method="get" action="https://search.usa.gov/search" style="margin-bottom: 0; margin-top: 0;">
+                <input type="hidden" name="v:project" value="firstgov"/>
+                <label for="query">Search For</label>
+                <input type="text" name="query" id="query" size="12"/>
+                <input type="submit" value="Go"/>
+                <p>
+                  <input type="radio" name="affiliate" checked="checked" value="nws.noaa.gov" id="nws"/>
+                  <label for="nws" class="search-scope">NWS</label>
+                  <input type="radio" name="affiliate" value="noaa.gov" id="noaa"/>
+                  <label for="noaa" class="search-scope">All NOAA</label>
+                </p>
+              </form>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<br>
+<!--
+<div class="shutdown">
+  </div>
+-->
+  </div>
+  <div class="center-content">
+    <!-- TOP NEW AREA-->
+<!--     <div class="five-sixth-last">
+      <div id="topnews">
+        <div class="icon"><img src="https://www.weather.gov/css/images/news-important.jpg" /></div>
+        <div class="body">
+<h1 style="font-size: 11pt;">Severe Thunderstorms and Locally Heavy Rain Possible</h1>
+            <p>
+                Severe thunderstorms with large hail and damaging winds will be possible from Oklahoma and northeast Texas to Kentucky, West Virginia and parts of Virginia and North Carolina. More isolated strong/severe storms will also be possible across parts of the northern Rockies.  Heavy rain and local flooding are possible in the lower Mississippi Valley and central Appalachians. 
+                <a href="http://www.wpc.ncep.noaa.gov/discussions/hpcdiscussions.php?disc=pmdspd" target="_blank" rel="noopener noreferrer">Read More &gt;</a>
+            </p>        </div>
+      </div>
+    </div>
+-->
+    <div class="full-width-border">
+      <div class="partial-width-borderbottom">
+        <div class="div-full">
+	  <div class="div-full breadcrumb">
+	    <div class="parent-rtdmimage">
+               <img src="https://www.nco.ncep.noaa.gov/status/data/realtime/images/RTDM_Banner.png" alt="RTDMimage" class="RTDMimage"></img>
+               <div class="RTDMimgtext">Real Time Data Monitor</div>
+            </div>
+            <div class="loadtime">
+                               Page loaded: 13:53 UTC &nbsp; | &nbsp; 3:53 am Hawaii &nbsp; | &nbsp; 5:53 am Alaska &nbsp; |  &nbsp; 6:53 am Pacific &nbsp; | &nbsp; 7:53 am Mountain &nbsp; | &nbsp; 8:53 am Central &nbsp; | &nbsp; 9:53 am Eastern 	    </div>
+            <div class='location-breadcrumb'>
+            <br>
+                <!-- InstanceBeginEditable name="breadcrumb" -->
+                
+                <a href="https://www.weather.gov/"><font COLOR="#6e6e6e">NWS</font></a> &gt; 
+                <a href="https://www.nco.ncep.noaa.gov/"><font COLOR="#6e6e6e">NCO</font></a> &gt;
+                <a href="/status/"><font COLOR="#6e6e6e">Ops Status</font></a> &gt;
+                <a href="/status/data/realtime/"><font COLOR="#6e6e6e">Real Time Data Monitor</font></a>
+                
+                <!-- InstanceEndEditable --> </div>
+          </div>
+        </div>
+        <div class="div-full"> </div>
+        <div class="div-full cms-content" id="home_page_content">
+          <div class="content_centered"> <!-- InstanceBeginEditable name="content" --> 
+<!-- *******************CONTENT AREA ***************************-->
+
+
+  
+<table border="1" ALIGN="center" WIDTH ="100%" cellpadding="3" cellspacing="10" bordercolor="#FFFFFF">
+<th COLSPAN="12" ALIGN="center"><h1> Hourly Data Ingest</h1></th>
+<tr VALIGN="center">
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=00" ><font COLOR="#000000" title="Hourly 00z - Shortage in any one of the data types of opportunity ">00z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=01" title="Hourly 01z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">01z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=02" title="Hourly 02z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">02z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=03" title="Hourly 03z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">03z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=04" title="Hourly 04z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">04z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=05" title="Hourly 05z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">05z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=06" title="Hourly 06z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">06z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=07" title="Hourly 07z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">07z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=08" title="Hourly 08z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">08z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=09" title="Hourly 09z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">09z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=10" title="Hourly 10z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">10z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=11" title="Hourly 11z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">11z</a></p></th>
+</tr>
+     
+<tr>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=12" title="Hourly 12z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">12z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" style="border: 1px solid black;"><p><u><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=13" title="Hourly 13z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">13z</a></u></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=14" title="Hourly 14z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">14z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=15" title="Hourly 15z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">15z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=16" title="Hourly 16z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">16z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=17" title="Hourly 17z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">17z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=18" title="Hourly 18z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">18z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=19" title="Hourly 19z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">19z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=20" title="Hourly 20z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">20z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=21" title="Hourly 21z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">21z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=22" title="Hourly 22z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">22z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=hrly&hr=23" title="Hourly 23z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">23z</a></p></th>
+</tr>
+<tr VALIGN="center">
+<th style="font-weight: normal;" COLSPAN="12"><a href="/status/data/realtime/?view=sum&mod=hrly&hr=13" title="Summary for 13z Hourly" >Latest Hourly Text Summary</a></th><br>
+</tr>
+</table>
+<table border="1" ALIGN="center" WIDTH ="100%" cellpadding="3" cellspacing="10" bordercolor="#FFFFFF">
+<th COLSPAN="12" ALIGN="center"><h1> RAP Data Ingest</h1></th>
+<tr VALIGN="center">
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=00" ><font COLOR="#000000" title="RAP 00z - Shortage in any one of the data types of opportunity ">00z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#D9EAD3" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=01" title="RAP 01z - Normal counts for all critical and sub-critical data types " ><font COLOR="#000000">01z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=02" title="RAP 02z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">02z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=03" title="RAP 03z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">03z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=04" title="RAP 04z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">04z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=05" title="RAP 05z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">05z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=06" title="RAP 06z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">06z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=07" title="RAP 07z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">07z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=08" title="RAP 08z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">08z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=09" title="RAP 09z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">09z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=10" title="RAP 10z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">10z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=11" title="RAP 11z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">11z</a></p></th>
+</tr>
+     
+<tr>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=12" title="RAP 12z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">12z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" style="border: 1px solid black;"><p><u><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=13" title="RAP 13z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">13z</a></u></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=14" title="RAP 14z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">14z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=15" title="RAP 15z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">15z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=16" title="RAP 16z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">16z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=17" title="RAP 17z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">17z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=18" title="RAP 18z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">18z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=19" title="RAP 19z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">19z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#D9EAD3" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=20" title="RAP 20z - Normal counts for all critical and sub-critical data types " ><font COLOR="#000000">20z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#D9EAD3" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=21" title="RAP 21z - Normal counts for all critical and sub-critical data types " ><font COLOR="#000000">21z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=22" title="RAP 22z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">22z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=rap&hr=23" title="RAP 23z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">23z</a></p></th>
+</tr>
+<tr VALIGN="center">
+<th style="font-weight: normal;" COLSPAN="12"><a href="/status/data/realtime/?view=sum&mod=rap&hr=13" title="Summary for 13z RAP" >Latest RAP Text Summary</a></th><br>
+</tr>
+</table>
+  
+<br>
+<table border="1" ALIGN="center" WIDTH="100%" cellpadding="3" cellspacing="10" bordercolor="#FFFFFF">
+<tr VALIGN="center">
+</tr>
+</table>
+<table border="1" ALIGN="center" WIDTH ="100%" cellpadding="3" cellspacing="10" bordercolor="#FFFFFF">
+<tr VALIGN="center">
+<th COLSPAN="4" ALIGN="center"><h1> NAM Data Ingest</h1></th>
+<th>&nbsp;</th>
+<th COLSPAN="4" ALIGN="center"><h1> GFS Data Ingest</h1></th>
+<th>&nbsp;</th>
+<th COLSPAN="4" ALIGN="center"><h1> GDS Data Ingest</h1></th>
+</tr> <tr>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#9FC5E8" ><p><a HREF="/status/data/realtime/?view=tbl&mod=nam&hr=00" ><font COLOR="#000000" title="NAM 00z - Overage in any one of the sub-critical data types ">00z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#D9EAD3" ><p><a HREF="/status/data/realtime/?view=tbl&mod=nam&hr=06" title="NAM 06z - Normal counts for all critical and sub-critical data types " ><font COLOR="#000000">06z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#F9CB9C" style="border: 1px solid black;"><p><u><a HREF="/status/data/realtime/?view=tbl&mod=nam&hr=12" title="NAM 12z - Shortage in any one of the sub-critical data types " ><font COLOR="#000000">12z</a></u></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=nam&hr=18" title="NAM 18z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">18z</a></p></th>
+<th>&nbsp;</th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=gfs&hr=00" ><font COLOR="#000000" title="GFS 00z - Shortage in any one of the data types of opportunity ">00z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" style="border: 1px solid black;"><p><u><a HREF="/status/data/realtime/?view=tbl&mod=gfs&hr=06" title="GFS 06z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">06z</a></u></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=gfs&hr=12" title="GFS 12z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">12z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=gfs&hr=18" title="GFS 18z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">18z</a></p></th>
+<th>&nbsp;</th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=gds&hr=00" ><font COLOR="#000000" title="GDS 00z - Shortage in any one of the data types of opportunity ">00z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" style="border: 1px solid black;"><p><u><a HREF="/status/data/realtime/?view=tbl&mod=gds&hr=06" title="GDS 06z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">06z</a></u></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=gds&hr=12" title="GDS 12z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">12z</a></p></th>
+<th ALIGN="CENTER" COLSPAN="1" bgcolor="#FFE598" ><p><a HREF="/status/data/realtime/?view=tbl&mod=gds&hr=18" title="GDS 18z - Shortage in any one of the data types of opportunity " ><font COLOR="#000000">18z</a></p></th>
+</tr>
+<tr VALIGN="center">
+<th style="font-weight: normal;" COLSPAN="4" ><center><a HREF="/status/data/realtime/?view=sum&mod=nam&hr=12" title="Summary for 12z NAM" >Latest NAM Text Summary</a></center></th>
+<th>&nbsp;</th>
+<th style="font-weight: normal;" COLSPAN="4" ><center><a HREF="/status/data/realtime/?view=sum&mod=gfs&hr=06" title="Summary for 06z GFS" >Latest GFS Text Summary</a></center></th>
+<th>&nbsp;</th>
+<th style="font-weight: normal;" COLSPAN="4" ><center><a HREF="/status/data/realtime/?view=sum&mod=gds&hr=06" title="Summary for 06z GDS" >Latest GDS Text Summary</a></center></th>
+</tr>
+</table>
+  
+<br><br>
+<center>
+<p>Updated: 1335Z 31 Oct 2026</p>
+</center>
+<br>
+<table align="center" cellpadding="3">
+<tr VALIGN="center"><br>
+<th ALIGN="center" COLSPAN="1"><p><b> <font COLOR="black">Explanation of Colors</font></b></p></th>
+</tr>
+</table>
+<table  border="1" align="center" bordercolor="#FFFFFF">
+<tr><th bgcolor="#E06666"><p ALIGN = "left"><b> <font COLOR="black">---- Abnormal shortage in critical data type - Investigate</font></b></p></th></tr>
+<tr><th bgcolor="#F9CB9C"><p ALIGN = "left"><b> <font COLOR="black">---- Shortage in sub-critical data type - Monitor  </font></b></p></th></tr>
+<tr><th bgcolor="#FFE598"><p ALIGN = "left"><b> <font COLOR="black">---- Shortage in data type of opportunity - Monitor</font></b></p></th></tr>
+<tr><th bgcolor="#B4A7D6"><p ALIGN = "left"><b> <font COLOR="black">---- Overage in critical data type - Investigate </font></b></p></th></tr>
+<tr><th bgcolor="#9FC5E8"><p ALIGN = "left"><b> <font COLOR="black">---- Overage in sub-critical data type - Monitor</font></b></p></th></tr>
+<tr><th bgcolor="#CFE2F3"><p ALIGN = "left"><b> <font COLOR="black">---- Overage in data type of opportunity - Monitor</font></b></p></th></tr>
+<tr><th bgcolor="#D9EAD3"><p ALIGN = "left"><b> <font COLOR="black">---- Critical data with normal counts</font></b></p></th></tr>
+<tr><th bgcolor="#EFEFEF"><p ALIGN = "left"><b> <font COLOR="black">---- Data of opportunity with normal counts</font></b></p></th></tr>
+</table>
+<br>
+  
+  
+<br>The NWS Real Time Data Monitor tracks the ingest of a wide range of data into the NOAA Weather and Climate Operational Supercomputing System (WCOSS2).  Click on an hour to view data dump tables for that ingest cycle.<br>
+<!-- Display times page was loaded -->
+
+<!-- <div class="loadtime">
+   Page loaded: 13:53 UTC &nbsp; | &nbsp; 6:53 am Pacific &nbsp; | &nbsp; 7:53 am Mountain &nbsp; | &nbsp; 8:53 am Central &nbsp; | &nbsp; 9:53 am Eastern </div> -->
+
+<!-- *******END of CONTENT AREA *********************************--> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="Filetime" --> 
+<!-- *********************************************************
+Please change the filemtime to your file name so the date page date last updated is correct 
+********************************************************************************** -->
+            <div id="grayTime">
+                          </div>
+            <!-- InstanceEndEditable --> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="full-width-first">
+    <div class="full-width-first communication-links">
+      <div class="one-half-last nopad"> <span class="txt-rt myforecast-current">
+        <!--<div class="myforecast-current"> <a href="/rss_page.php?site_name=cfo" target="_blank" rel = "noopener noreferrer" style="text-decoration:none;font-size:11px;"> <img src="/css/images/rss.png" width="16" height="16" alt="CFO RSS Feed" />&nbsp;&nbsp;CFO RSS Feed </a> </div>
+-->
+        </span> </div>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+  <div style="clear:both;"></div>
+</div>
+<!-- end of <div class="center"> --> 
+
+<!-- sitemap area --> 
+<!-- legal footer area -->
+<div class="footer-legal">
+  <div class="footer-legal">
+    <div class="footer-legal-content">
+      <div class="one-sixth-first" id="footer_legal_gov"> <a href="http://www.usa.gov"> <img src="https://www.weather.gov/bundles/templating/images/footer/usa_gov.png" alt="usa.gov" width="110" height="30" /></a> </div>
+      <div class="one-half-first" id="footer_legal_info">
+        <p> <a href="https://www.commerce.gov">US Dept of Commerce</a><br/>
+          <a href="https://www.noaa.gov">National Oceanic and Atmospheric Administration</a><br/>
+          <a href="https://www.weather.gov">National Weather Service</a><br/>
+          5830 University Research Court<br>
+          Riverdale Park, MD 20737<br>
+          <br/>
+          <br/>
+          <a href="https://www.nco.ncep.noaa.gov/mail_webmaster/">NWS Web Services POCs</a> </p>
+      </div>
+      <!-- end of <div class="one-half-first" id="footer_legal_info"> -->
+      <div class="one-third-last" id="footer_required_links">
+        <div class="div-half"> <a href="https://www.weather.gov/disclaimer">Disclaimer</a><br/>
+          <a href="http://www.cio.noaa.gov/services_programs/info_quality.html">Information Quality</a><br/>
+          <a href="https://www.weather.gov/help">Help</a><br/>
+          <a href="https://www.weather.gov/glossary">Glossary</a> </div>
+        <div class="div-half"> <a href="https://www.weather.gov/privacy">Privacy Policy</a><br/>
+          <a href="https://www.noaa.gov/foia-freedom-of-information-act">Freedom of Information Act (FOIA)</a><br/>
+          <a href="https://www.weather.gov/about">About Us</a><br/>
+          <a href="https://www.weather.gov/careers">Career Opportunities</a> </div>
+      </div>
+      <!-- end of <div class="one-third-last" id="footer_required_links"> --> 
+    </div>
+    <!-- end of <div class="footer-legal-content"> --> 
+  </div>
+  <!-- end of <div class="footer-legal"> --> 
+</div>
+<!-- end of <div class="footer-legal"> -->
+</body>
+<!-- InstanceEnd --></html>

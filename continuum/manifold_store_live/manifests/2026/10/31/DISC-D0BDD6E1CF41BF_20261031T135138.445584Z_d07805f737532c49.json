@@ -1,0 +1,24 @@
+{
+  "candidate_id": "DISC-D0BDD6E1CF41BF",
+  "provider": "IPMA",
+  "dataset": "observations.json",
+  "sector": "public",
+  "country": "PT",
+  "scientific_regime": [
+    "weather",
+    "marine",
+    "seismic"
+  ],
+  "retrieved_utc": "2026-10-31T13:51:38.445584Z",
+  "request_url": "https://api.ipma.pt/open-data/observation/meteorology/stations/observations.json",
+  "final_url": "https://api.ipma.pt/open-data/observation/meteorology/stations/observations.json",
+  "status_code": 200,
+  "content_type": "application/json",
+  "byte_length": 1073087,
+  "sha256": "d07805f737532c49e43364121c415bee8ef2c2b276decf5d5196c5b98a5735c2",
+  "etag": "\"463-105fbf-65f22faef5734\"",
+  "last_modified": "Sat, 31 Oct 2026 13:35:03 GMT",
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/weather/2026/10/31/DISC-D0BDD6E1CF41BF/20261031T135138.445584Z_d07805f737532c49.json",
+  "parent_id": "IPMA-API",
+  "discovery_depth": 1
+}
