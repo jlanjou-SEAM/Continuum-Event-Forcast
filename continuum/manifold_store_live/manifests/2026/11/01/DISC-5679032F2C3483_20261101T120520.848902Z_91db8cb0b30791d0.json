@@ -1,0 +1,23 @@
+{
+  "candidate_id": "DISC-5679032F2C3483",
+  "provider": "NOAA/SWPC",
+  "dataset": "geospace",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "space_weather",
+    "geomagnetic"
+  ],
+  "retrieved_utc": "2026-11-01T12:05:20.848902Z",
+  "request_url": "https://services.swpc.noaa.gov/products/geospace/?C=S;O=A",
+  "final_url": "https://services.swpc.noaa.gov/products/geospace/?C=S;O=A",
+  "status_code": 200,
+  "content_type": "text/html;charset=UTF-8",
+  "byte_length": 625,
+  "sha256": "91db8cb0b30791d02c92f6af72219118ef70d188737d21a1f7de8bcf9c033baf",
+  "etag": null,
+  "last_modified": null,
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/space_weather/2026/11/01/DISC-5679032F2C3483/20261101T120520.848902Z_91db8cb0b30791d0.html",
+  "parent_id": "SWPC-GEOSPACE",
+  "discovery_depth": 1
+}
