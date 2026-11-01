@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MSC GeoMet - GeoMet-OGC-API - Climate - Normals 1981-2010 </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="[&#39;en-CA&#39;, &#39;fr-CA&#39;]">
+    <meta name="description" content="MSC GeoMet - GeoMet-OGC-API">
+    <meta name="keywords" content="Weather,Meteorology,Climate,Forecasting,Floods,Weather alerts,Storms,Wind,Temperature,Precipitation,Snow,Ice">
+    <link rel="shortcut icon" href="https://api.weather.gc.ca/static/img/favicon.ico" type="image/x-icon">
+
+    <!-- GCWeb theme -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://api.weather.gc.ca/static/themes-gcweb/GCWeb/css/theme.min.css">
+
+    <link rel="stylesheet" href="https://api.weather.gc.ca/static/css/default.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+    
+
+    <!-- ESM import map -->
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.7/vue.esm-browser.prod.js",
+          "leaflet": "https://unpkg.com/leaflet@1.7.1/dist/leaflet-src.esm.js",
+          "leaflet-non-esm": "https://unpkg.com/leaflet/dist/leaflet.js",
+          "leaflet.markercluster": "https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster-src.js"
+        }
+      }
+    </script>
+    
+    
+  </head>
+  <body vocab="http://schema.org/" typeof="WebPage">
+    <nav>
+        <ul id="wb-tphp">
+            <li class="wb-slc">
+                <a class="wb-sl" href="#wb-cont">Skip to main content</a>
+            </li>
+            <li class="wb-slc">
+                <a class="wb-sl" href="#wb-info">Skip to "About government"</a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+      <div id="wb-bnr" class="container">
+        <div class="row">
+          <!-- language selection (JSON) -->
+          <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+            <h2 class="wb-inv">Format and language selection</h2>
+            <ul class="list-inline mrgn-bttm-0">
+              
+
+              
+
+              
+              <li>
+                <a id="json-format-url" href="?f=json" class="btn btn-xs btn-default">
+                  <span class="hidden-xs">JSON</span>
+                  <abbr title="JSON" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">JSON</abbr>
+                </a>
+              </li>
+              
+              
+              <li>
+                <a id="jsonld-format-url" href="?f=jsonld" class="btn btn-xs btn-default">
+                  <span class="hidden-xs">JSON-LD</span>
+                  <abbr title="JSON-LD" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">JSON-LD</abbr>
+                </a>
+              </li>
+              
+              
+              
+
+              <!-- language toggle -->
+              
+              
+              
+              
+              <li>
+                <a class="lang-toggle" href="?lang=fr" hreflang="fr-CA">FR</a>
+              </li>
+              
+              
+            </ul>
+          </section>
+
+          <!-- Brand -->
+          <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+            <a href="https://www.canada.ca/en.html" property="url">
+              <img src="https://api.weather.gc.ca/static/img/eccc_c_en.png" alt="Environment & Climate Change Canada" property="logo" /><span class="wb-inv"> / <span lang="fr">Environnement et Changement climatique Canada</span></span>
+            </a>
+            <meta property="name" content="Environment & Climate Change Canada" />
+            <meta property="areaServed" typeof="Country" content="Canada" />
+            <link property="logo" href="https://api.weather.gc.ca/static/img/eccc_c_en.png" />
+          </div>
+        </div>
+      </div>
+
+      <nav id="wb-bc" property="breadcrumb">
+        <h2>You are here:</h2>
+        <div class="container">
+          <ol class="breadcrumb">
+            
+            <li><a href="https://api.weather.gc.ca?lang=en">Home</a></li>
+            
+<li><a href="https://api.weather.gc.ca/collections?lang=en">Collections</a></li>
+<li><a href="https://api.weather.gc.ca/collections/climate-normals?lang=en">Climate - Normals 1981-2010</a></li>
+<li><a href="https://api.weather.gc.ca/collections/climate-normals/queryables?lang=en">Queryables</a></li>
+
+          </ol>
+        </div>
+      </nav>
+    </header>
+    <main property="mainContentOfPage" class="container" typeof="WebPageElement">
+      
+    <section id="collection">
+      <h1>Climate - Normals 1981-2010</h1>
+      <p></p>
+      <ul>
+        
+      </ul>
+      <h3>Queryables</h3>
+      <ul>
+        
+          
+          <li><a href="">geometry </a></li>
+          
+        
+          
+          <li>CLIMATE_IDENTIFIER (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>CURRENT_FLAG (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>DATE_CALCULATED (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>E_NORMAL_ELEMENT_NAME (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>FIRST_OCCURRENCE_DATE (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>FIRST_YEAR (<code>integer</code>)
+          
+          </li>
+          
+        
+          
+          <li>FIRST_YEAR_NORMAL_PERIOD (<code>integer</code>)
+          
+          </li>
+          
+        
+          
+          <li>F_NORMAL_ELEMENT_NAME (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>ID (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>LAST_YEAR (<code>integer</code>)
+          
+          </li>
+          
+        
+          
+          <li>LAST_YEAR_NORMAL_PERIOD (<code>integer</code>)
+          
+          </li>
+          
+        
+          
+          <li>MAX_DURATION_MISSING_YEARS (<code>integer</code>)
+          
+          </li>
+          
+        
+          
+          <li>MONTH (<code>integer</code>)
+          
+          </li>
+          
+        
+          
+          <li>NORMAL_CODE (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>NORMAL_ID (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>OCCURRENCE_COUNT (<code>integer</code>)
+          
+          </li>
+          
+        
+          
+          <li>PERCENT_OF_POSSIBLE_OBS (<code>integer</code>)
+          
+          </li>
+          
+        
+          
+          <li>PERIOD (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>PERIOD_BEGIN (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>PERIOD_END (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>PROVINCE_CODE (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>PUBLICATION_CODE (<code>integer</code>)
+          
+          </li>
+          
+        
+          
+          <li>STATION_NAME (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>STN_ID (<code>integer</code>)
+          
+          </li>
+          
+        
+          
+          <li>TOTAL_OBS_COUNT (<code>integer</code>)
+          
+          </li>
+          
+        
+          
+          <li>VALUE (<code>integer</code>)
+          
+          </li>
+          
+        
+          
+          <li>YEAR_COUNT_NORMAL_PERIOD (<code>integer</code>)
+          
+          </li>
+          
+        
+        </ul>
+    </section>
+
+      <div class="pagedetails">
+        <dl id="wb-dtmd">
+          <dt>Powered by <a title="pygeoapi" href="https://pygeoapi.io"><img src="https://api.weather.gc.ca/static/img/pygeoapi.png" style="height:24px;vertical-align: middle;"/></a></dt>
+          <dd>0.20.0</dd>
+          | <dt><a href="https://github.com/ECCC-MSC/msc-pygeoapi" target="_blank">msc-pygeoapi</a></dt>
+          <dd>0.18.9</dd>
+        </dl>
+      </div>
+    </main>
+    <footer id="wb-info">
+      <div class="landscape">
+        <nav class="container wb-navcurr">
+          <h2 class="wb-inv">About government</h2>
+          <ul class="list-unstyled colcount-sm-2 colcount-md-3">
+            <li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
+            <li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
+            <li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
+            <li><a href="https://www.canada.ca/en/news.html">News</a></li>
+            <li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
+            <li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+            <li><a href="https://pm.gc.ca/eng">Prime Minister</a></li>
+            <li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
+            <li><a href="https://open.canada.ca/en/">Open government</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="brand">
+        <div class="container">
+          <div class="row">
+            <nav class="col-md-9 col-lg-10 ftr-urlt-lnk">
+              <h2 class="wb-inv">About this site</h2>
+              <ul>
+                <li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+                <li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+                <li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
+                <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+                <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+              </ul>
+            </nav>
+            <div class="col-xs-6 visible-sm visible-xs tofpg">
+              <a href="#wb-cont">Top of page <span class="glyphicon glyphicon-chevron-up"></span></a>
+            </div>
+            <div class="col-xs-6 col-md-3 col-lg-2 text-right">
+              <img src="https://api.weather.gc.ca/static/themes-gcweb/GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    
+    <script>
+      // Requests and embeds JSON-LD representation of the current page
+      var xhr = new XMLHttpRequest();
+
+      // Get the current URL's search parameters
+      var currentParams = new URLSearchParams(window.location.search);
+
+      // Add the new parameter for JSON-LD representation
+      currentParams.set('f', 'jsonld');
+
+      // Check if the pathname matches /items and add a limit parameter
+      if (window.location.pathname.match(/\/items(#)*/gi)) { // reduce load on /items page
+        currentParams.set('limit', '10');
+      }
+
+      // Construct the full path with updated query parameters
+      var path = window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + currentParams.toString();
+
+      // Make the request
+      xhr.open('GET', path);
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          var head = document.getElementsByTagName('head')[0];
+          var jsonld_datablock = document.createElement('script');
+          jsonld_datablock.type = "application/ld+json";
+          // Remove full context path, because search engines don't expect it here, pyld requires it
+          jsonld_datablock.textContent = xhr.responseText.replace('docs/jsonldcontext.jsonld', '');
+          head.appendChild(jsonld_datablock);
+        }
+      };
+      xhr.send();
+    </script>
+  </body>
+</html>

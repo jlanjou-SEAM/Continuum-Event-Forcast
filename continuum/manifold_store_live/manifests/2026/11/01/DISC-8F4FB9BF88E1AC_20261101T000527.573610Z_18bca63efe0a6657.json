@@ -1,0 +1,23 @@
+{
+  "candidate_id": "DISC-8F4FB9BF88E1AC",
+  "provider": "NOAA/SWPC",
+  "dataset": "f107_cm_flux.json",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "space_weather",
+    "solar"
+  ],
+  "retrieved_utc": "2026-11-01T00:05:27.573610Z",
+  "request_url": "https://services.swpc.noaa.gov/json/f107_cm_flux.json",
+  "final_url": "https://services.swpc.noaa.gov/json/f107_cm_flux.json",
+  "status_code": 200,
+  "content_type": "application/json",
+  "byte_length": 22661,
+  "sha256": "18bca63efe0a66573d45525347be723144620f1cb46ba6ebd0addb2c0529d91e",
+  "etag": "\"5885-65f2bc2169bc4\"",
+  "last_modified": "Sun, 01 Nov 2026 00:03:24 GMT",
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/space_weather/2026/11/01/DISC-8F4FB9BF88E1AC/20261101T000527.573610Z_18bca63efe0a6657.json",
+  "parent_id": "SWPC-JSON",
+  "discovery_depth": 1
+}

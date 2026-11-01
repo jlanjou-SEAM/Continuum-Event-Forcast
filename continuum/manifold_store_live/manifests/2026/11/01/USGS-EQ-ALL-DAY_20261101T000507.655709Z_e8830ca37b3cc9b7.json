@@ -1,0 +1,22 @@
+{
+  "candidate_id": "USGS-EQ-ALL-DAY",
+  "provider": "USGS",
+  "dataset": "All earthquakes past day",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "seismic"
+  ],
+  "retrieved_utc": "2026-11-01T00:05:07.655709Z",
+  "request_url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
+  "final_url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
+  "status_code": 200,
+  "content_type": "application/json; charset=utf-8",
+  "byte_length": 157570,
+  "sha256": "e8830ca37b3cc9b781a547d62c0732c1ea80e327c6088b145d749bb0845347e8",
+  "etag": null,
+  "last_modified": "Sun, 01 Nov 2026 00:04:11 GMT",
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/seismic/2026/11/01/USGS-EQ-ALL-DAY/20261101T000507.655709Z_e8830ca37b3cc9b7.geojson",
+  "parent_id": null,
+  "discovery_depth": 0
+}
