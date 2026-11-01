@@ -1,0 +1,5742 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MSC GeoMet - GeoMet-OGC-API - City Page Weather [experimental] </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="[&#39;en-CA&#39;, &#39;fr-CA&#39;]">
+    <meta name="description" content="MSC GeoMet - GeoMet-OGC-API">
+    <meta name="keywords" content="Weather,Meteorology,Climate,Forecasting,Floods,Weather alerts,Storms,Wind,Temperature,Precipitation,Snow,Ice">
+    <link rel="shortcut icon" href="https://api.weather.gc.ca/static/img/favicon.ico" type="image/x-icon">
+
+    <!-- GCWeb theme -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://api.weather.gc.ca/static/themes-gcweb/GCWeb/css/theme.min.css">
+
+    <link rel="stylesheet" href="https://api.weather.gc.ca/static/css/default.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+    
+
+    <!-- ESM import map -->
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.7/vue.esm-browser.prod.js",
+          "leaflet": "https://unpkg.com/leaflet@1.7.1/dist/leaflet-src.esm.js",
+          "leaflet-non-esm": "https://unpkg.com/leaflet/dist/leaflet.js",
+          "leaflet.markercluster": "https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster-src.js"
+        }
+      }
+    </script>
+    
+    
+  </head>
+  <body vocab="http://schema.org/" typeof="WebPage">
+    <nav>
+        <ul id="wb-tphp">
+            <li class="wb-slc">
+                <a class="wb-sl" href="#wb-cont">Skip to main content</a>
+            </li>
+            <li class="wb-slc">
+                <a class="wb-sl" href="#wb-info">Skip to "About government"</a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+      <div id="wb-bnr" class="container">
+        <div class="row">
+          <!-- language selection (JSON) -->
+          <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+            <h2 class="wb-inv">Format and language selection</h2>
+            <ul class="list-inline mrgn-bttm-0">
+              
+
+              
+
+              
+              <li>
+                <a id="json-format-url" href="?f=json" class="btn btn-xs btn-default">
+                  <span class="hidden-xs">JSON</span>
+                  <abbr title="JSON" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">JSON</abbr>
+                </a>
+              </li>
+              
+              
+              <li>
+                <a id="jsonld-format-url" href="?f=jsonld" class="btn btn-xs btn-default">
+                  <span class="hidden-xs">JSON-LD</span>
+                  <abbr title="JSON-LD" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">JSON-LD</abbr>
+                </a>
+              </li>
+              
+              
+              
+
+              <!-- language toggle -->
+              
+              
+              
+              
+              <li>
+                <a class="lang-toggle" href="?lang=fr" hreflang="fr-CA">FR</a>
+              </li>
+              
+              
+            </ul>
+          </section>
+
+          <!-- Brand -->
+          <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+            <a href="https://www.canada.ca/en.html" property="url">
+              <img src="https://api.weather.gc.ca/static/img/eccc_c_en.png" alt="Environment & Climate Change Canada" property="logo" /><span class="wb-inv"> / <span lang="fr">Environnement et Changement climatique Canada</span></span>
+            </a>
+            <meta property="name" content="Environment & Climate Change Canada" />
+            <meta property="areaServed" typeof="Country" content="Canada" />
+            <link property="logo" href="https://api.weather.gc.ca/static/img/eccc_c_en.png" />
+          </div>
+        </div>
+      </div>
+
+      <nav id="wb-bc" property="breadcrumb">
+        <h2>You are here:</h2>
+        <div class="container">
+          <ol class="breadcrumb">
+            
+            <li><a href="https://api.weather.gc.ca?lang=en">Home</a></li>
+            
+<li><a href="https://api.weather.gc.ca/collections?lang=en">Collections</a></li>
+<li><a href="https://api.weather.gc.ca/collections/citypageweather-realtime?lang=en">City Page Weather...</a></li>
+<li><a href="https://api.weather.gc.ca/collections/citypageweather-realtime/schema?lang=en">Schema</a></li>
+
+          </ol>
+        </div>
+      </nav>
+    </header>
+    <main property="mainContentOfPage" class="container" typeof="WebPageElement">
+      
+    <section id="collection-schema">
+      <h1>City Page Weather [experimental]</h1>
+      <p></p>
+      <p>
+        
+      </p>
+      <h3>Schema</h3>
+      <table class="table table-striped table-bordered">
+        <th>Name</th>
+        <th>Title</th>
+        <th>Type</th>
+        <th>Units</th>
+        <th>Values</th>
+      
+        <tr>
+          <td>geometry</td>
+          <td></td>
+          
+          <td><a href="">geometry </a></td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.condition.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.condition.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.dewpoint.qaValue.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.dewpoint.qaValue.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.dewpoint.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.dewpoint.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.dewpoint.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.dewpoint.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.dewpoint.value.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.dewpoint.value.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.icon</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.iconCode.format</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.iconCode.url</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.iconCode.value</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.pressure.change.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.pressure.change.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.pressure.qaValue.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.pressure.qaValue.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.pressure.tendency.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.pressure.tendency.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.pressure.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.pressure.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.pressure.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.pressure.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.pressure.value.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.pressure.value.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.relativeHumidity.qaValue.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.relativeHumidity.qaValue.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.relativeHumidity.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.relativeHumidity.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.relativeHumidity.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.relativeHumidity.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.relativeHumidity.value.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.relativeHumidity.value.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.station.code.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.station.code.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.station.lat.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.station.lat.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.station.lon.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.station.lon.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.station.value.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.station.value.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.temperature.qaValue.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.temperature.qaValue.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.temperature.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.temperature.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.temperature.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.temperature.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.temperature.value.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.temperature.value.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.timestamp.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          (<code>date</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.timestamp.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          (<code>date</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.bearing.qaValue.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.bearing.qaValue.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.bearing.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.bearing.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.bearing.value.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.bearing.value.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.direction.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.direction.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.direction.qaValue.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.direction.qaValue.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.direction.value.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.direction.value.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.gust.qaValue.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.gust.qaValue.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.gust.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.gust.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.gust.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.gust.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.gust.value.en</td>
+          <td></td>
+          
+          <td><code>integer</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.gust.value.fr</td>
+          <td></td>
+          
+          <td><code>integer</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.speed.qaValue.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.speed.qaValue.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.speed.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.speed.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.speed.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.speed.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.speed.value.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.wind.speed.value.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.windChill.qaValue.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.windChill.qaValue.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.windChill.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.windChill.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.windChill.value.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>currentConditions.windChill.value.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.abbreviatedForecast.icon.format</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.abbreviatedForecast.icon.url</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.abbreviatedForecast.icon.value</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.abbreviatedForecast.textSummary.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.abbreviatedForecast.textSummary.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.abbreviated_forecast.icon</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.abbreviated_forecast.pop</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.abbreviated_forecast.text_summary</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.cloudPrecip.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.cloudPrecip.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.cloud_precip</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.frost.textSummary.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.frost.textSummary.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.humidex.calculated.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.humidex.calculated.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.humidex.textSummary.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.humidex.textSummary.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.period.textForecastName.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.period.textForecastName.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.period.value.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.period.value.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.precipitation.accumulation.amount.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.precipitation.accumulation.amount.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.precipitation.accumulation.amount.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.precipitation.accumulation.amount.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.precipitation.accumulation.amount.value.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.precipitation.accumulation.amount.value.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.precipitation.accumulation.name.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.precipitation.accumulation.name.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.precipitation.precipPeriods.end.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.precipitation.precipPeriods.end.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.precipitation.precipPeriods.start.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.precipitation.precipPeriods.start.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.precipitation.precipPeriods.value.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.precipitation.precipPeriods.value.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.precipitation.precip_periods.end</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.precipitation.precip_periods.precip_type</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.precipitation.precip_periods.start</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.precipitation.textSummary.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.precipitation.textSummary.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.rel_hum.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.rel_hum.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.relativeHumidity.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.relativeHumidity.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.relativeHumidity.value.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.relativeHumidity.value.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.snowLevel.textSummary.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.snowLevel.textSummary.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.temperatures.temp_high</td>
+          <td></td>
+          
+          <td><code>integer</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.temperatures.temp_low</td>
+          <td></td>
+          
+          <td><code>integer</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.temperatures.temperature.class.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.temperatures.temperature.class.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.temperatures.temperature.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.temperatures.temperature.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.temperatures.temperature.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.temperatures.temperature.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.temperatures.temperature.value.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.temperatures.temperature.value.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.temperatures.textSummary.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.temperatures.textSummary.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.temperatures.text_summary.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.temperatures.text_summary.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.textForecast_name.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.textForecast_name.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.textSummary.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.textSummary.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.uv.category.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.uv.category.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.uv.index.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.uv.index.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.uv.textSummary.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.uv.textSummary.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.uv.text_summary.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.uv.text_summary.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.visibility.cause</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.visibility.textSummary.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.visibility.textSummary.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.windChill.calculated.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.windChill.calculated.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.windChill.frostbite.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.windChill.frostbite.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.windChill.textSummary.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.windChill.textSummary.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.bearing.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.bearing.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.bearing.value.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.bearing.value.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.direction.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.direction.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.gust.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.gust.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.gust.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.gust.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.gust.value.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.gust.value.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.index.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.index.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.rank.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.rank.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.speed.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.speed.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.speed.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.speed.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.speed.value.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.periods.speed.value.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>long</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.textSummary.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.textSummary.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts.winds.text_summary</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.forecasts</td>
+          <td></td>
+          
+          <td><code>nested</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.regionalNormals.temperature.class.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.regionalNormals.temperature.class.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.regionalNormals.temperature.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.regionalNormals.temperature.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.regionalNormals.temperature.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.regionalNormals.temperature.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.regionalNormals.temperature.value.en</td>
+          <td></td>
+          
+          <td><code>integer</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.regionalNormals.temperature.value.fr</td>
+          <td></td>
+          
+          <td><code>integer</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.regionalNormals.temperature</td>
+          <td></td>
+          
+          <td><code>nested</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.regionalNormals.textSummary.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.regionalNormals.textSummary.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.timestamp.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>forecastGroup.timestamp.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.condition.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.condition.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.humidex.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.humidex.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.humidex.value.en</td>
+          <td></td>
+          
+          <td><code>byte</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.humidex.value.fr</td>
+          <td></td>
+          
+          <td><code>byte</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.iconCode.format</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.iconCode.url</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.iconCode.value</td>
+          <td></td>
+          
+          <td><code>byte</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.lop.category.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.lop.category.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.lop.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.lop.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.lop.value.en</td>
+          <td></td>
+          
+          <td><code>byte</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.lop.value.fr</td>
+          <td></td>
+          
+          <td><code>byte</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.temperature.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.temperature.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.temperature.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.temperature.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.temperature.value.en</td>
+          <td></td>
+          
+          <td><code>byte</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.temperature.value.fr</td>
+          <td></td>
+          
+          <td><code>byte</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.timestamp</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          (<code>date</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.uv.index.value.en</td>
+          <td></td>
+          
+          <td><code>byte</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.uv.index.value.fr</td>
+          <td></td>
+          
+          <td><code>byte</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.wind.direction.value.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.wind.direction.value.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.wind.direction.windDirFull.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.wind.direction.windDirFull.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.wind.gust.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.wind.gust.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.wind.gust.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.wind.gust.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.wind.gust.value.en</td>
+          <td></td>
+          
+          <td><code>byte</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.wind.gust.value.fr</td>
+          <td></td>
+          
+          <td><code>byte</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.wind.speed.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.wind.speed.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.wind.speed.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.wind.speed.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.wind.speed.value.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.wind.speed.value.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.windChill.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.windChill.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.windChill.value.en</td>
+          <td></td>
+          
+          <td><code>byte</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts.windChill.value.fr</td>
+          <td></td>
+          
+          <td><code>byte</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.hourlyForecasts</td>
+          <td></td>
+          
+          <td><code>nested</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.timestamp.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>hourlyForecastGroup.timestamp.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>identifier</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>lastUpdated</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          (<code>date</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>name.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>name.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>region.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>region.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>riseSet.disclaimer.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>riseSet.disclaimer.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>riseSet.sunrise.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          (<code>date</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>riseSet.sunrise.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          (<code>date</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>riseSet.sunset.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          (<code>date</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>riseSet.sunset.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          (<code>date</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>url.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>url.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>warnings.alertColourLevel.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>warnings.alertColourLevel.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>warnings.description.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>warnings.description.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>warnings.eventIssue.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          (<code>date</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>warnings.eventIssue.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          (<code>date</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>warnings.expiryTime.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          (<code>date</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>warnings.expiryTime.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          (<code>date</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>warnings.priority.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>warnings.priority.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>warnings.type.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>warnings.type.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>warnings.url.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>warnings.url.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>warnings</td>
+          <td></td>
+          
+          <td><code>nested</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.precip.trace.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.precip.trace.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.precip.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.precip.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.precip.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.precip.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.precip.value.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.precip.value.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.rainfall.trace.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.rainfall.trace.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.rainfall.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.rainfall.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.rainfall.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.rainfall.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.rainfall.value.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.rainfall.value.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.snowfall.trace.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.snowfall.trace.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.snowfall.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.snowfall.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.snowfall.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.snowfall.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.snowfall.value.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.snowfall.value.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.temperature.class.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.temperature.class.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.temperature.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.temperature.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.temperature.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.temperature.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.temperature.value.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.temperature.value.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.temperature</td>
+          <td></td>
+          
+          <td><code>nested</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.windGust.bearing.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.windGust.bearing.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.windGust.bearing.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.windGust.bearing.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.windGust.bearing.value.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.windGust.bearing.value.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.windGust.direction.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.windGust.direction.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.windGust.direction.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.windGust.direction.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.windGust.direction.value.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.windGust.direction.value.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.windGust.speed.unitType.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.windGust.speed.unitType.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.windGust.speed.units.en</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.windGust.speed.units.fr</td>
+          <td></td>
+          
+          <td><code>string</code>
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.windGust.speed.value.en</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>yesterdayConditions.windGust.speed.value.fr</td>
+          <td></td>
+          
+          <td><code>number</code>
+          
+          (<code>float</code>)
+          
+          </td>
+          
+          <td></td>
+          <td>
+            <ul>
+            
+            </ul>
+          </td>
+        </tr>
+      
+      </table>
+    </section>
+
+      <div class="pagedetails">
+        <dl id="wb-dtmd">
+          <dt>Powered by <a title="pygeoapi" href="https://pygeoapi.io"><img src="https://api.weather.gc.ca/static/img/pygeoapi.png" style="height:24px;vertical-align: middle;"/></a></dt>
+          <dd>0.20.0</dd>
+          | <dt><a href="https://github.com/ECCC-MSC/msc-pygeoapi" target="_blank">msc-pygeoapi</a></dt>
+          <dd>0.18.9</dd>
+        </dl>
+      </div>
+    </main>
+    <footer id="wb-info">
+      <div class="landscape">
+        <nav class="container wb-navcurr">
+          <h2 class="wb-inv">About government</h2>
+          <ul class="list-unstyled colcount-sm-2 colcount-md-3">
+            <li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
+            <li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
+            <li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
+            <li><a href="https://www.canada.ca/en/news.html">News</a></li>
+            <li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
+            <li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+            <li><a href="https://pm.gc.ca/eng">Prime Minister</a></li>
+            <li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
+            <li><a href="https://open.canada.ca/en/">Open government</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="brand">
+        <div class="container">
+          <div class="row">
+            <nav class="col-md-9 col-lg-10 ftr-urlt-lnk">
+              <h2 class="wb-inv">About this site</h2>
+              <ul>
+                <li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+                <li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+                <li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
+                <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+                <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+              </ul>
+            </nav>
+            <div class="col-xs-6 visible-sm visible-xs tofpg">
+              <a href="#wb-cont">Top of page <span class="glyphicon glyphicon-chevron-up"></span></a>
+            </div>
+            <div class="col-xs-6 col-md-3 col-lg-2 text-right">
+              <img src="https://api.weather.gc.ca/static/themes-gcweb/GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    
+    <script>
+      // Requests and embeds JSON-LD representation of the current page
+      var xhr = new XMLHttpRequest();
+
+      // Get the current URL's search parameters
+      var currentParams = new URLSearchParams(window.location.search);
+
+      // Add the new parameter for JSON-LD representation
+      currentParams.set('f', 'jsonld');
+
+      // Check if the pathname matches /items and add a limit parameter
+      if (window.location.pathname.match(/\/items(#)*/gi)) { // reduce load on /items page
+        currentParams.set('limit', '10');
+      }
+
+      // Construct the full path with updated query parameters
+      var path = window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + currentParams.toString();
+
+      // Make the request
+      xhr.open('GET', path);
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          var head = document.getElementsByTagName('head')[0];
+          var jsonld_datablock = document.createElement('script');
+          jsonld_datablock.type = "application/ld+json";
+          // Remove full context path, because search engines don't expect it here, pyld requires it
+          jsonld_datablock.textContent = xhr.responseText.replace('docs/jsonldcontext.jsonld', '');
+          head.appendChild(jsonld_datablock);
+        }
+      };
+      xhr.send();
+    </script>
+  </body>
+</html>
