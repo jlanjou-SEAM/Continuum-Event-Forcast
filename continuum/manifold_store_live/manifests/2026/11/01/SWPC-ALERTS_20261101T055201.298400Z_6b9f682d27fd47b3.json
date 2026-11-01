@@ -1,0 +1,23 @@
+{
+  "candidate_id": "SWPC-ALERTS",
+  "provider": "NOAA/SWPC",
+  "dataset": "Space weather alerts",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "space_weather",
+    "solar"
+  ],
+  "retrieved_utc": "2026-11-01T05:52:01.298400Z",
+  "request_url": "https://services.swpc.noaa.gov/products/alerts.json",
+  "final_url": "https://services.swpc.noaa.gov/products/alerts.json",
+  "status_code": 200,
+  "content_type": "application/json",
+  "byte_length": 64861,
+  "sha256": "6b9f682d27fd47b31372e6b5195719178744b54c71a4dceff9a689424affd61a",
+  "etag": "\"fd5d-65f309dc1911b\"",
+  "last_modified": "Sun, 01 Nov 2026 05:51:10 GMT",
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/space_weather/2026/11/01/SWPC-ALERTS/20261101T055201.298400Z_6b9f682d27fd47b3.json",
+  "parent_id": null,
+  "discovery_depth": 0
+}
