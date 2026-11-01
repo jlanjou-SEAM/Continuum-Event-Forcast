@@ -1,0 +1,23 @@
+{
+  "candidate_id": "DISC-B60C2292B7E137",
+  "provider": "NOAA Aviation Weather Center",
+  "dataset": "metar",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "aviation",
+    "weather"
+  ],
+  "retrieved_utc": "2026-11-01T21:29:10.346129Z",
+  "request_url": "https://aviationweather.gov/api/data/metar?ids=KMCI&format=json",
+  "final_url": "https://aviationweather.gov/api/data/metar?ids=KMCI&format=json",
+  "status_code": 200,
+  "content_type": "application/json; charset=utf-8",
+  "byte_length": 488,
+  "sha256": "3df981cf0b03245d22133ca0d8387158d737835626c2c6d08f418d70fda065bb",
+  "etag": "W/\"1e8-kRqvpkN47xRz+RtXhXq7QO6Bbi0\"",
+  "last_modified": null,
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/aviation/2026/11/01/DISC-B60C2292B7E137/20261101T212910.346129Z_3df981cf0b03245d.json",
+  "parent_id": "AVIATION-WX-API",
+  "discovery_depth": 1
+}

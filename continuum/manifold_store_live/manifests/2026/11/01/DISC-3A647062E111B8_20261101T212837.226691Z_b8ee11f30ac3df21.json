@@ -1,0 +1,23 @@
+{
+  "candidate_id": "DISC-3A647062E111B8",
+  "provider": "NOAA/SWPC",
+  "dataset": "solar_probabilities.json",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "space_weather",
+    "solar"
+  ],
+  "retrieved_utc": "2026-11-01T21:28:37.226691Z",
+  "request_url": "https://services.swpc.noaa.gov/json/solar_probabilities.json",
+  "final_url": "https://services.swpc.noaa.gov/json/solar_probabilities.json",
+  "status_code": 200,
+  "content_type": "application/json",
+  "byte_length": 9365,
+  "sha256": "b8ee11f30ac3df21ac355a47a39a74380575f56817b1cdae19fc08f5d7f152bf",
+  "etag": "\"2495-65f3dae01b505\"",
+  "last_modified": "Sun, 01 Nov 2026 21:26:17 GMT",
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/space_weather/2026/11/01/DISC-3A647062E111B8/20261101T212837.226691Z_b8ee11f30ac3df21.json",
+  "parent_id": "SWPC-JSON",
+  "discovery_depth": 1
+}

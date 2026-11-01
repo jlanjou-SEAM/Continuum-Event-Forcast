@@ -1,0 +1,23 @@
+{
+  "candidate_id": "DISC-34E5C02A399CB9",
+  "provider": "NOAA Aviation Weather Center",
+  "dataset": "gairmets.cache.xml.gz",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "aviation",
+    "weather"
+  ],
+  "retrieved_utc": "2026-11-01T21:42:00.368525Z",
+  "request_url": "https://aviationweather.gov/data/cache/gairmets.cache.xml.gz",
+  "final_url": "https://aviationweather.gov/data/cache/gairmets.cache.xml.gz",
+  "status_code": 200,
+  "content_type": "application/octet-stream",
+  "byte_length": 40155,
+  "sha256": "a0b5d8d13090050b1812b38984e715b7e3782b6e07fb9bd8fb937ec6dbd65324",
+  "etag": "\"6ae7b212-9cdb\"",
+  "last_modified": "Sun, 01 Nov 2026 21:41:38 GMT",
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/aviation/2026/11/01/DISC-34E5C02A399CB9/20261101T214200.368525Z_a0b5d8d13090050b.gz",
+  "parent_id": "AVIATION-WX-API",
+  "discovery_depth": 1
+}

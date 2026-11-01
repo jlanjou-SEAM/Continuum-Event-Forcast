@@ -1,0 +1,23 @@
+{
+  "candidate_id": "DISC-38F6663375334D",
+  "provider": "NOAA/SWPC",
+  "dataset": "predicted_fredericksburg_a_index.json",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "space_weather",
+    "solar"
+  ],
+  "retrieved_utc": "2026-11-01T21:31:07.955286Z",
+  "request_url": "https://services.swpc.noaa.gov/json/predicted_fredericksburg_a_index.json",
+  "final_url": "https://services.swpc.noaa.gov/json/predicted_fredericksburg_a_index.json",
+  "status_code": 200,
+  "content_type": "application/json",
+  "byte_length": 2220,
+  "sha256": "b91e02adfcc1025c2558374013ec49d98d7bdf55786935bf212bcdf4165612f4",
+  "etag": "\"8ac-65f3db4afbafb\"",
+  "last_modified": "Sun, 01 Nov 2026 21:28:09 GMT",
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/space_weather/2026/11/01/DISC-38F6663375334D/20261101T213107.955286Z_b91e02adfcc1025c.json",
+  "parent_id": "SWPC-JSON",
+  "discovery_depth": 1
+}

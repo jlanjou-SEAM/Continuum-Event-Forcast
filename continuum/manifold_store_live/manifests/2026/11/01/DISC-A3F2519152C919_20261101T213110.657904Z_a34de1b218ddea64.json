@@ -1,0 +1,24 @@
+{
+  "candidate_id": "DISC-A3F2519152C919",
+  "provider": "Japan Meteorological Agency",
+  "dataset": "map.json",
+  "sector": "public",
+  "country": "JP",
+  "scientific_regime": [
+    "weather",
+    "seismic",
+    "hazards"
+  ],
+  "retrieved_utc": "2026-11-01T21:31:10.657904Z",
+  "request_url": "https://www.jma.go.jp/bosai/warning/data/r8/map.json",
+  "final_url": "https://www.jma.go.jp/bosai/warning/data/r8/map.json",
+  "status_code": 200,
+  "content_type": "application/json",
+  "byte_length": 957950,
+  "sha256": "a34de1b218ddea647bffe6c9a21976b32803b609be249786657d1a1d834dff74",
+  "etag": "\"0aa38f0e62ee7465f5450826d489a9e9\"",
+  "last_modified": "Sun, 01 Nov 2026 21:06:37 GMT",
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/weather/2026/11/01/DISC-A3F2519152C919/20261101T213110.657904Z_a34de1b218ddea64.json",
+  "parent_id": "JMA-BOSAI",
+  "discovery_depth": 1
+}

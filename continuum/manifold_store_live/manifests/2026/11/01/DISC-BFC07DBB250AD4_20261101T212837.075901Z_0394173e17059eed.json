@@ -1,0 +1,23 @@
+{
+  "candidate_id": "DISC-BFC07DBB250AD4",
+  "provider": "NOAA/SWPC",
+  "dataset": "ovation_aurora_latest.json",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "space_weather",
+    "solar"
+  ],
+  "retrieved_utc": "2026-11-01T21:28:37.075901Z",
+  "request_url": "https://services.swpc.noaa.gov/json/ovation_aurora_latest.json",
+  "final_url": "https://services.swpc.noaa.gov/json/ovation_aurora_latest.json",
+  "status_code": 200,
+  "content_type": "application/json",
+  "byte_length": 921632,
+  "sha256": "0394173e17059eed89197603c8d25443ec1cd2b732bcc06d7c746d926d745bb4",
+  "etag": "\"e1020-65f3db02340c8\"",
+  "last_modified": "Sun, 01 Nov 2026 21:26:53 GMT",
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/space_weather/2026/11/01/DISC-BFC07DBB250AD4/20261101T212837.075901Z_0394173e17059eed.json",
+  "parent_id": "SWPC-JSON",
+  "discovery_depth": 1
+}

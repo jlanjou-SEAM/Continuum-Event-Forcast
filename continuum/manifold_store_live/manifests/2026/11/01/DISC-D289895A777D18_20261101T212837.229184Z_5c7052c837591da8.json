@@ -1,0 +1,23 @@
+{
+  "candidate_id": "DISC-D289895A777D18",
+  "provider": "NOAA/SWPC",
+  "dataset": "solar_regions.json",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "space_weather",
+    "solar"
+  ],
+  "retrieved_utc": "2026-11-01T21:28:37.229184Z",
+  "request_url": "https://services.swpc.noaa.gov/json/solar_regions.json",
+  "final_url": "https://services.swpc.noaa.gov/json/solar_regions.json",
+  "status_code": 200,
+  "content_type": "application/json",
+  "byte_length": 103163,
+  "sha256": "5c7052c837591da8b71fa14c8497b29c77353253180a004da879d7ea2f49bc0c",
+  "etag": "\"192fb-65f3dae0c8e97\"",
+  "last_modified": "Sun, 01 Nov 2026 21:26:17 GMT",
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/space_weather/2026/11/01/DISC-D289895A777D18/20261101T212837.229184Z_5c7052c837591da8.json",
+  "parent_id": "SWPC-JSON",
+  "discovery_depth": 1
+}
