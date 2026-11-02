@@ -1092,15 +1092,18 @@
                     return false;
                 });
 
-                // Active status alone cannot make an old prediction current.
-                const criticalEvents = allCritical.filter(evt => eventIsActive(evt) && hasFreshEvidence(evt, now.getTime())).sort((a, b) => {
+                // Events with ACTIVE status are listed as current. Events whose prediction evidence is older than the freshness window are flagged, not hidden.
+                const criticalEvents = allCritical.filter(evt => eventIsActive(evt)).sort((a, b) => {
                     return b.confidence_history.at(-1).seam_phi - a.confidence_history.at(-1).seam_phi;
                 });
-                const staleEvents = allCritical.filter(evt => eventIsActive(evt) && !hasFreshEvidence(evt, now.getTime()));
+                const staleEvents = criticalEvents.filter(evt => !hasFreshEvidence(evt, now.getTime()));
                 const evidenceDates = allEvents.map(predictionEvidenceTime).filter(t => t !== null);
                 const latestEvidence = evidenceDates.length ? new Date(Math.max(...evidenceDates)).toISOString() : 'unavailable';
+                const staleNote = staleEvents.length
+                    ? ` ${staleEvents.length} listed with prediction evidence older than 2 hours (status from the official alert, not re-checked by this page).`
+                    : '';
                 document.getElementById('feedStatus').textContent =
-                    `${criticalEvents.length ? 'Recent prediction evidence available.' : 'Current forecast unavailable: no fresh prediction evidence.'} ` +
+                    `${criticalEvents.length ? `${criticalEvents.length} active event(s) listed.${staleNote}` : 'Current forecast unavailable: no active events.'} ` +
                     `Last prediction evidence: ${latestEvidence}. Snapshot written: ${snapshotTime || 'unavailable'}. ` +
                     'The refresh clock checks the file; it does not run the prediction engine.';
 
@@ -1141,7 +1144,7 @@
 
                 // Add stale events to log panel (right column)
                 if (staleEvents.length > 0) {
-                    addLog(`📋 HISTORICAL RECORDS — not current forecasts`, 'info');
+                    addLog(`📋 PREDICTION EVIDENCE OLDER THAN 2 HOURS (status from official alert)`, 'info');
                     staleEvents.forEach(evt => {
                         const lastConf = evt.confidence_history[evt.confidence_history.length - 1].seam_phi;
                         const ageMs = predictionEvidenceTime(evt) === null ? NaN : now - predictionEvidenceTime(evt);
