@@ -1,0 +1,23 @@
+{
+  "candidate_id": "DISC-8DFBA0A25DE43D",
+  "provider": "NOAA/SWPC",
+  "dataset": "45-day-forecast.json",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "space_weather",
+    "solar"
+  ],
+  "retrieved_utc": "2026-11-02T07:18:28.387890Z",
+  "request_url": "https://services.swpc.noaa.gov/json/45-day-forecast.json",
+  "final_url": "https://services.swpc.noaa.gov/json/45-day-forecast.json",
+  "status_code": 200,
+  "content_type": "application/json",
+  "byte_length": 6271,
+  "sha256": "bd187f3f4cc90f84f84583db727b86448ee761608421cf97d86afaac920abd26",
+  "etag": "\"187f-65f45f3134487\"",
+  "last_modified": "Mon, 02 Nov 2026 07:18:15 GMT",
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/space_weather/2026/11/02/DISC-8DFBA0A25DE43D/20261102T071828.387890Z_bd187f3f4cc90f84.json",
+  "parent_id": "SWPC-JSON",
+  "discovery_depth": 1
+}

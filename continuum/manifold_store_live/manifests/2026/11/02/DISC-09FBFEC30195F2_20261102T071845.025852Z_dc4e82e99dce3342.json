@@ -1,0 +1,23 @@
+{
+  "candidate_id": "DISC-09FBFEC30195F2",
+  "provider": "US EPA",
+  "dataset": "mas",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "environmental",
+    "air_quality"
+  ],
+  "retrieved_utc": "2026-11-02T07:18:45.025852Z",
+  "request_url": "https://aqs.epa.gov/data/api/list/mas?email=test@aqs.api&key=test",
+  "final_url": "https://aqs.epa.gov/data/api/list/mas?email=test@aqs.api&key=test",
+  "status_code": 200,
+  "content_type": "application/json; charset=utf-8",
+  "byte_length": 39205,
+  "sha256": "dc4e82e99dce3342110ee77518e30835c9dfdda26c85a7dbc19676e7144d63ce",
+  "etag": null,
+  "last_modified": null,
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/environmental/2026/11/02/DISC-09FBFEC30195F2/20261102T071845.025852Z_dc4e82e99dce3342.json",
+  "parent_id": "EPA-AQS",
+  "discovery_depth": 1
+}

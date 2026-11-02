@@ -1,0 +1,24 @@
+{
+  "candidate_id": "DISC-75AEF451C1A952",
+  "provider": "Environment and Climate Change Canada",
+  "dataset": "items",
+  "sector": "public",
+  "country": "CA",
+  "scientific_regime": [
+    "weather",
+    "climate",
+    "hydrology"
+  ],
+  "retrieved_utc": "2026-11-02T07:23:45.955246Z",
+  "request_url": "https://api.weather.gc.ca/collections/hydrometric-realtime/items?offset=500",
+  "final_url": "https://api.weather.gc.ca/collections/hydrometric-realtime/items?offset=500",
+  "status_code": 200,
+  "content_type": "application/json",
+  "byte_length": 245380,
+  "sha256": "b9c2cf86ff81eb4c0306d471a9889d40dd1eb0d9bd1adfc250c06aad82c40a87",
+  "etag": null,
+  "last_modified": null,
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/weather/2026/11/02/DISC-75AEF451C1A952/20261102T072345.955246Z_b9c2cf86ff81eb4c.json",
+  "parent_id": "DISC-C9A88F94472D1D",
+  "discovery_depth": 2
+}

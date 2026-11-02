@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<meta name="doc_version" content="5.10">
+<title>TDS Online Tutorial | TDS User's Guide</title>
+<link rel="stylesheet" href="assets/css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">-->
+<link rel="stylesheet" href="assets/css/modern-business.css">
+<link rel="stylesheet" href="assets/css/lavish-bootstrap.css">
+<link rel="stylesheet" href="assets/css/customstyles.css">
+<link rel="stylesheet" href="assets/css/theme-unidata.css">
+
+<script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"
+    integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+<script src="assets/js/jquery.navgoco.min.js"></script>
+
+
+<script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.3.1/anchor.min.js"
+    integrity="sha512-zPB79j2C+3sFS9zcA3vg/z6bVKzJVEyu9pY5w89akQRys76zpAT2t6S3wZKla3QQ14O5l/Yt0RUQ/DHXx82Y5g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+<script src="assets/js/toc.js"></script>
+<script src="assets/js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+  <script>
+    $(document).ready(function () {
+      // Initialize navgoco with default options
+      $("#mysidebar").navgoco({
+        caretHtml: '',
+        accordion: true,
+        openClass: 'active', // open
+        save: false, // leave false or nav highlighting doesn't work right
+        cookie: {
+          name: 'navgoco',
+          expires: false,
+          path: '/'
+        },
+        slide: {
+          duration: 400,
+          easing: 'swing'
+        }
+      });
+
+      $("#collapseAll").click(function (e) {
+        e.preventDefault();
+        $("#mysidebar").navgoco('toggle', false);
+      });
+
+      $("#expandAll").click(function (e) {
+        e.preventDefault();
+        $("#mysidebar").navgoco('toggle', true);
+      });
+
+    });
+
+  </script>
+  <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("#tg-sb-link").click(function () {
+        $("#tg-sb-sidebar").toggle();
+        $("#tg-sb-content").toggleClass('col-md-9');
+        $("#tg-sb-content").toggleClass('col-md-12');
+        $("#tg-sb-icon").toggleClass('fa-toggle-on');
+        $("#tg-sb-icon").toggleClass('fa-toggle-off');
+      });
+    });
+  </script>
+  
+
+</head>
+
+<body>
+  <!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html" style="padding-right:0px;">&nbsp;<span class="projectTitle">
+          THREDDS Data Server (TDS)</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left">
+              
+              <li class="dropdown" id="vermenu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Version 5.10<b class="caret"></b></a>
+                <ul class="dropdown-menu" id="docmenu">
+                  
+                  
+                  <li id="remove"><a href="">Menu Loading...</a></li>
+                  
+                  
+                </ul>
+              </li>
+              
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">netCDF-Java<b class="caret"></b></a>
+                    <ul class="dropdown-menu" id="">
+                        
+                        
+                        <li id=""><a href="https://www.unidata.ucar.edu/software/netcdf-java/" target="_blank">Unidata Homepage</a></li>
+                        
+                        
+                        
+                        <li id=""><a href="https://github.com/Unidata/netcdf-java" target="_blank">GitHub</a></li>
+                        
+                        
+                        
+                        <li id=""><a href="https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html" target="_blank">User's guide</a></li>
+                        
+                        
+                        
+                        <li id=""><a href="https://docs.unidata.ucar.edu/netcdf-java/current/javadoc/index.html" target="_blank">Public API</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">TDS<b class="caret"></b></a>
+                    <ul class="dropdown-menu" id="">
+                        
+                        
+                        <li id=""><a href="https://www.unidata.ucar.edu/software/tds/" target="_blank">Unidata Homepage</a></li>
+                        
+                        
+                        
+                        <li id=""><a href="https://github.com/Unidata/tds" target="_blank">GitHub</a></li>
+                        
+                        
+                        
+                        <li id=""><a href="https://docs.unidata.ucar.edu/tds/current/userguide/index.html" target="_blank">Documentation</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Siphon<b class="caret"></b></a>
+                    <ul class="dropdown-menu" id="">
+                        
+                        
+                        <li id=""><a href="https://www.unidata.ucar.edu/software/siphon/" target="_blank">Unidata Homepage</a></li>
+                        
+                        
+                        
+                        <li id=""><a href="https://github.com/Unidata/siphon" target="_blank">GitHub</a></li>
+                        
+                        
+                        
+                        <li id=""><a href="https://unidata.github.io/siphon/latest/" target="_blank">Documentation</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="https://github.com/Unidata/tds/issues/new?title=Documentation%20feedback">Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="assets/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            var pageLocation = window.location.href;
+                            var searchJson = pageLocation.substring(0, pageLocation.lastIndexOf('/') + 1) + "assets/search/search.json";
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: searchJson,
+                                searchResultTemplate: '<li><a href="{url}" title="TDS Online Tutorial">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div id="main">
+      <!-- Content Row -->
+      <div class="row" id="content">
+        
+        
+        <!-- Sidebar Column -->
+        <div class="col-md-3" id="tg-sb-sidebar">
+          
+
+<ul id="mysidebar" class="nav">
+  <!-- figure out title for sidebar
+     sidebar[0].product -> sidebar[0].title -> site.site_title -> empty
+       (sidebar yaml)       (sidebar yaml)     (_config.yaml)
+    -->
+  
+
+  <!-- figure out title for sidebar
+   sidebar[0].version -> site.docset_version -> empty
+     (sidebar yaml)        (_config.yaml)
+    -->
+  
+
+  
+
+  <!-- Both sidebar_title and sidebar_version defined -->
+  
+  <li class="sidebarTitle"><a href="index.html">TDS User's Guide 5.10</a></li>
+  <!-- Only sidebar_title defined -->
+  
+
+  
+  
+  
+      
+  
+  <li>
+      <a title="Getting Started With The TDS" href="#">Getting Started With The TDS</a>
+      <ul>
+          
+          
+          
+          <li class="active"><a title="TDS Overview" href="index.html">TDS Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Installing Java And Tomcat" href="install_java_tomcat.html">Installing Java And Tomcat</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tomcat Directory Structure" href="tomcat_dir_structure_qt.html">Tomcat Directory Structure</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Running Tomcat" href="running_tomcat.html">Running Tomcat</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tomcat Log Files" href="tomcat_log_files.html">Tomcat Log Files</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tomcat Config Files" href="tomcat_configuration_files.html">Tomcat Config Files</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Deploying The TDS" href="deploying_the_tds.html">Deploying The TDS</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tomcat Manager Application" href="tomcat_manager_app.html">Tomcat Manager Application</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Client Catalogs" href="#">Client Catalogs</a>
+      <ul>
+          
+          
+          
+          <li><a title="Basic Client Catalog Primer" href="basic_client_catalog.html">Basic Client Catalog Primer</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Nested Datasets" href="nested_datasets.html">Nested Datasets</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Client Catalog Metadata" href="client_catalog_metadata.html">Client Catalog Metadata</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Catalog References" href="client_catalog_references.html">Catalog References</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Compound Service Elements" href="compound_service_elements.html">Compound Service Elements</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="XML Validation" href="client_catalog_xml_validation.html">XML Validation</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Client Catalogs In ToolsUI" href="client_catalog_via_toolsUI.html">Client Catalogs In ToolsUI</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="TDS Configuration" href="#">TDS Configuration</a>
+      <ul>
+          
+          
+          
+          <li><a title="TDS Content Directory" href="tds_content_directory.html">TDS Content Directory</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Default TDS Configuration Catalog" href="default_config_catalog.html">Default TDS Configuration Catalog</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Basics Of Configuration Catalogs" href="basic_config_catalog.html">Basics Of Configuration Catalogs</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Configuration Catalogs" href="config_catalog.html">Configuration Catalogs</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Basic TDS Configuration" href="basic_tds_configuration.html">Basic TDS Configuration</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Adding OGC / ISO Services" href="adding_ogc_iso_services.html">Adding OGC / ISO Services</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Adding The NetCDF Subset Service" href="adding_ncss.html">Adding The NetCDF Subset Service</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Customizing The TDS Look And Feel" href="customizing_tds_look_and_feel.html">Customizing The TDS Look And Feel</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Monitoring And Debugging" href="#">Monitoring And Debugging</a>
+      <ul>
+          
+          
+          
+          <li><a title="Modifying Tomcat Access Logs" href="tomcat_access_log.html">Modifying Tomcat Access Logs</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="TDS Log Files" href="tds_logs.html">TDS Log Files</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Using The TdsMonitor Tool" href="using_the_tdsmonitor_tool.html">Using The TdsMonitor Tool</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="netCDF Markup Language (NcML)" href="#">netCDF Markup Language (NcML)</a>
+      <ul>
+          
+          
+          
+          <li><a title="Basic NcML Tutorial" href="https://docs.unidata.ucar.edu/netcdf-java/current/userguide/basic_ncml_tutorial.html" target="_blank" rel="noopener">Basic NcML Tutorial</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="NcML Aggregation" href="https://docs.unidata.ucar.edu/netcdf-java/current/userguide/ncml_aggregation.html" target="_blank" rel="noopener">NcML Aggregation</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Using NcML In The TDS" href="using_ncml_in_the_tds.html">Using NcML In The TDS</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Basic NcML Examples" href="basic_ncml_examples.html">Basic NcML Examples</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="NcML Aggregation Examples" href="ncml_aggregation_examples.html">NcML Aggregation Examples</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Feature Collections" href="#">Feature Collections</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="feature_collections_ref.html">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="GRIB Feature Collections" href="grib_feature_collections_ref.html">GRIB Feature Collections</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="GRIB Feature Collection Tutorial" href="grib_feature_collections.html">GRIB Feature Collection Tutorial</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Forecast Model Run Collections (FMRC)" href="fmrc_ref.html">Forecast Model Run Collections (FMRC)</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="FMRC Tutorial" href="fmrc_tutorial.html">FMRC Tutorial</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Metadata" href="#">Metadata</a>
+      <ul>
+          
+          
+          
+          <li><a title="THREDDS Metadata" href="thredds_metadata.html">THREDDS Metadata</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="ISO Metadata Generation - ncIso" href="iso_metadata.html">ISO Metadata Generation - ncIso</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Putting TDS Into Production" href="#">Putting TDS Into Production</a>
+      <ul>
+          
+          
+          
+          <li><a title="Restrict Tomcat Permissions" href="tomcat_permissions.html">Restrict Tomcat Permissions</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Use Digested Passwords" href="digested_passwords.html">Use Digested Passwords</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Enable TLS/SSL Encryption" href="enable_tls_encryption.html">Enable TLS/SSL Encryption</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Secure Tomcat Manager App" href="secure_manager_app.html">Secure Tomcat Manager App</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Remove Unused Web Applications" href="remove_unused_webapps.html">Remove Unused Web Applications</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Block Non-Essential Ports" href="block_nonessential_ports.html">Block Non-Essential Ports</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Restrict Access To The TDS" href="restict_access_to_tds.html">Restrict Access To The TDS</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Keep Software Up-To-Date" href="keep_software_uptodate.html">Keep Software Up-To-Date</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Running Behind A Proxy Server" href="tds_behind_proxy.html">Running Behind A Proxy Server</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Tomcat With A Security Manager" href="tomcat_with_security_manager.html">Tomcat With A Security Manager</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Troubleshooting Problems" href="troubleshooting_problems.html">Troubleshooting Problems</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Performance Tips" href="performance_tips.html">Performance Tips</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Upgrading To 5.x" href="upgrade.html">Upgrading To 5.x</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Installation Checklist" href="installation_checklist.html">Installation Checklist</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="TDS Upgrade Procedure" href="upgrade_tds_ref.html">TDS Upgrade Procedure</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="FAQ" href="#">FAQ</a>
+      <ul>
+          
+          
+          
+          <li><a title="FAQ" href="tds_faq.html">FAQ</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="GRIB FAQ" href="tds_grib_faq.html">GRIB FAQ</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Reference Guide" href="#">Reference Guide</a>
+      <ul>
+          
+          
+          
+          <li><a title="" href=""></a></li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="THREDDS Catalogs" href="#">THREDDS Catalogs</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Client-Side Catalog Specification" href="client_side_catalog_specification.html">Client-Side Catalog Specification</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Server-Side Catalog Specification" href="server_side_catalog_specification.html">Server-Side Catalog Specification</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="For Developers" href="#">For Developers</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="TDS Doc Guide" href="https://docs.unidata.ucar.edu/netcdf-java/current/userguide/doc_guide.html" target="_blank" rel="noopener">TDS Doc Guide</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Data Source Plugins" href="dataset_source_plugin.html">Data Source Plugins</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Services" href="#">Services</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="TDS Services" href="services_ref.html">TDS Services</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="NCSS Reference" href="netcdf_subset_service_ref.html">NCSS Reference</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="NCSS For Grid Data" href="ncss_grid.html">NCSS For Grid Data</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="NCSS For Point Data" href="ncss_point.html">NCSS For Point Data</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="WCS Reference" href="wcs_ref.html">WCS Reference</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="WMS Reference" href="adding_wms.html">WMS Reference</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Customizing WMS" href="customizing_wms.html">Customizing WMS</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="GRIB" href="#">GRIB</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="GRIB Collection Configuration" href="grib_collection_config_ref.html">GRIB Collection Configuration</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="GRIB Time Partitions" href="partitions_ref.html">GRIB Time Partitions</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          
+          
+          
+          <li><a title="TDS Config (threddsConfig.xml)" href="tds_config_ref.html">TDS Config (threddsConfig.xml)</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Configuring TDS With DatasetScan" href="tds_dataset_scan_ref.html">Configuring TDS With DatasetScan</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Coverage Datasets" href="https://docs.unidata.ucar.edu/netcdf-java/current/userguide/coverage_feature.html" target="_blank" rel="noopener">Coverage Datasets</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Annotated Schema For NcML" href="https://docs.unidata.ucar.edu/netcdf-java/current/userguide/annotated_ncml_schema.html" target="_blank" rel="noopener">Annotated Schema For NcML</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Collection Specification String" href="collection_spec_string_ref.html">Collection Specification String</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Remote Management Reference" href="remote_management_ref.html">Remote Management Reference</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="THREDDS Data Manager Reference" href="tdm_ref.html">THREDDS Data Manager Reference</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Dataset Viewer" href="viewers_ref.html">Dataset Viewer</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="PointFeature Collection Reference" href="pointfeature_collection_ref.html">PointFeature Collection Reference</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Digital Libraries Reference" href="digital_libraries.html">Digital Libraries Reference</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+        </div>
+
+        
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+          <div class="post-header">
+   <h1 class="post-title-main">TDS Online Tutorial</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+   <!--
+  If breadcrumbs explicitly set in the front matter of the markdown source, use it.
+  -->
+
+
+
+
+
+
+<div id="breadcrumbs">
+  
+  <a href="index.html" class="bcStart">TDS User's Guide</a>
+  
+</div>
+
+   <h2 id="what-is-the-thredds-project">What is the THREDDS Project?</h2>
+
+<p>The overarching goal of Unidata’s Thematic Real-time Environmental Distributed Data Services (THREDDS) project is to provide students, educators and researchers with coherent access to a large collection of real-time and archived datasets from a variety of environmental data sources at a number of distributed server sites.</p>
+
+<h2 id="what-is-the-thredds-data-server-tds">What is the THREDDS Data Server (TDS)?</h2>
+
+<p>The THREDDS Data Server (TDS) is a web server that provides metadata and data access for scientific datasets, using OPeNDAP, OGC WMS and WCS, HTTP, and other remote data access protocols.
+The TDS is developed and supported by Unidata, a division of the University Corporation for Atmospheric Research (UCAR), and is sponsored by the National Science Foundation.</p>
+
+<p>Some of the technology in the TDS:</p>
+
+<ul>
+  <li>THREDDS <a href="basic_config_catalog.html">Dataset Inventory Catalogs</a> are used to provide virtual directories of available data and their associated metadata. 
+These catalogs can be generated dynamically or statically.</li>
+  <li>The <a href="https://www.unidata.ucar.edu/software/netcdf-java/" target="_blank">Netcdf-Java/CDM library</a> reads NetCDF, OpenDAP, and HDF5 datasets, as well as other binary formats such as GRIB and NEXRAD into a Common Data Model (CDM), essentially an (extended) netCDF view of the data.
+Datasets that can be read through the Netcdf-Java library are called CDM datasets.</li>
+  <li>TDS can use the <a href="using_ncml_in_the_tds.html">NetCDF Markup Language</a> (NcML) to modify and create virtual aggregations of CDM datasets.</li>
+  <li>An integrated server provides <a href="http://www.opendap.org/" target="_blank">OPeNDAP</a> access to any CDM dataset.
+OPeNDAP is a widely used, subsetting data access method extending the HTTP protocol.</li>
+  <li>An integrated server provides bulk file access through the HTTP protocol.</li>
+  <li>An integrated server provides data access through the <a href="https://www.ogc.org/standards/wcs" target="_blank">OpenGIS Consortium (OGC) Web Coverage Service (WCS)</a> protocol, for any gridded dataset whose coordinate system information is complete.</li>
+  <li>An integrated server provides data access through the <a href="http://www.opengeospatial.org/standards/wms" target="_blank">OpenGIS Consortium (OGC) Web Map Service (WMS)</a> protocol, for any gridded dataset whose coordinate system information is complete.
+This software was developed by Jon Blower (University of Reading (UK) E-Science Center) as part of the <a href="https://github.com/Reading-eScience-Centre/edal-java" target="_blank">ESSC Web Map Service for environmental data</a> (aka Godiva3).</li>
+  <li>The optional <a href="iso_metadata.html">ncISO server</a> provides automated metadata analysis and ISO metadata generation.</li>
+  <li>The integrated <a href="netcdf_subset_service_ref.html">NetCDF Subset Service</a> allows subsetting certain CDM datasets in coordinate space, using a REST API.
+Gridded data subsets can be returned in <a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html" target="_blank">CF-compliant</a> netCDF-3 or netCDF-4.
+Point data subsets can be returned in CSV, XML, WaterML (with <a href="https://github.com/Unidata/thredds/tree/5.0.0/waterml#waterml" target="_blank">assistance</a>
+from <a href="https://coastwatch.pfeg.noaa.gov/erddap/index.html" target="_blank">ERDDAP</a> [NOAA / Robert Simons/CoHort Software], <a href="https://github.com/Unidata/thredds/tree/5.0.0/docs/src/private/licenses/third-party/erddap" target="_blank">license information</a>), 
+or <a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#discrete-sampling-geometries" target="_blank">CF-DSG v1.6</a> netCDF files.</li>
+</ul>
+
+<p>The THREDDS Data Server is implemented in 100% Java*, and is contained in a single war file, which allows very easy installation into a servlet container such as the open-source Tomcat web server.
+Configuration is made as simple and as automatic as possible, and we have made the server as secure as possible.</p>
+
+<p>* Writing to netCDF-4 files is supported through the netCDF C library only.</p>
+
+<p>Much of the realtime data available over the Unidata Internet Data Distribution (IDD) is available through a demonstration THREDDS Data Server hosted at Unidata at <a href="https://thredds.ucar.edu/thredds/catalog.html" target="_blank">https://thredds.ucar.edu/</a>.
+You are welcome to browse and access these meteorological datasets.
+If you need regular access to large amounts of data, please contact <a href="mailto:support-idd@unidata.ucar.edu">support-idd@unidata.ucar.edu</a>.</p>
+
+<p>As of version 5.0, the TDS is released under the BSD-3 licence, which can be found can be found <a href="https://github.com/Unidata/tds/blob/master/LICENSE" target="_blank">here</a>.</p>
+
+<p>For information on how to cite the TDS, please visit <a href="https://www.unidata.ucar.edu/community/index.html#acknowledge">https://www.unidata.ucar.edu/community/index.html#acknowledge</a></p>
+
+
+    <div class="tags">
+        
+    </div>
+
+
+
+
+</div>
+
+
+        </div>
+        
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /#main -->
+  </div>
+  <div id="footer">
+       <footer class="unidata">
+
+    <div id="content-footer">
+     <h2>NSF Unidata Support</h2>
+     <ul>
+      <li>NSF Unidata provides free technical support to our community members. For more information, please see our <a href="https://support.unidata.ucar.edu/conditions-of-support/">Conditions Of Support</a>.</li>
+      <li>Visit: <a href="https://support.unidata.ucar.edu/">NSF Unidata Support </a></li>
+      <li>Email: <a href="mailto:support@unidata.ucar.edu">support@unidata.ucar.edu</a></li>
+      <li>Report a security issue/vulnerability: <a href="mailto:security@unidata.ucar.edu">security@unidata.ucar.edu</a></li>
+     </ul>
+    </div> <!-- /#content-footer -->
+
+    <div id="legal-footer">
+     <ul>
+      <li>&#169; NSF Unidata</li>
+      <li><a href="https://support.unidata.ucar.edu/conditions-of-support">Conditions of Support</a></li>
+      <li><a href="https://www.unidata.ucar.edu/legal/participation.html">Participation Policy</a></li>
+      <li><a href="https://www.ucar.edu/privacy-policy">Privacy Policy</a></li>
+      <li><a href="https://www.ucar.edu/terms-of-use">Terms of Use</a></li>
+      <li><a href="https://www.ucar.edu/accessibility">Accessibility</a></li>
+     </ul>
+    </div> <!-- /#legal-footer -->
+
+    <div id="nsf-footer">
+     <a href="https://www.nsf.gov" class="logo">
+      <img src="assets/images/nsf_logo_transparent.png" alt="U.S. National Science Foundation"/>
+     </a>
+     <div>
+      NSF Unidata is a member of the
+      <a href="https://www.ucp.ucar.edu/">UCAR Community Programs</a>,
+      managed by the
+      <a href="https://www.ucar.edu">University Corporation for Atmospheric Research</a>,
+      and funded by the
+      <a href="https://www.nsf.gov">U.S. National Science Foundation</a>.
+     </div>
+    </div> <!-- /#nsf-footer -->
+
+   </footer>
+  </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-92978945-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+
+</html>

@@ -1,0 +1,1729 @@
+<!doctype html>
+    <html>
+
+<head>
+	<title>Total Energy Monthly Data - U.S. Energy Information Administration (EIA)</title>
+	<meta property="og:title" content="Total Energy Monthly Data - U.S. Energy Information Administration (EIA)">
+	
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="all" />
+<meta name="agency" content="EIA - Energy Information Administration" />
+<meta name="subject" content="official energy statistics, data, analysis and forecasting" />
+<meta name="Description" content="Energy Information Administration - EIA - Official Energy Statistics from the U.S. Government" />
+<link rel="shortcut icon" href="//www.eia.gov/favicon.ico" />
+<link rel="icon" href="//www.eia.gov/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="//www.eia.gov/favicon.ico" />
+
+<link href="/global/styles/global.min.css?v=10.07.26" type="text/css" media="screen, projection" rel="stylesheet" />
+<link href="/global/styles/global.print.min.css?v=09.01.26" type="text/css" media="print" rel="stylesheet" />
+
+<script src="/global/scripts/vendor/jquery/jquery.min.js"></script>
+<script src="/global/scripts/vendor/jquery-migrate/jquery.migrate.min.js"></script>
+<script src="/global/scripts/vendor/jquery-ui/jquery.ui.min.js"></script>
+<script src="/global/scripts/vendor/jquery-ui/jquery.ui.touch-punch.min.js"></script>
+
+<script type="text/javascript" src="/global/scripts/jquery/highcharts/3.0.10/js/highcharts.js"></script>		<script type="text/javascript" src="/global/scripts/jquery/highcharts/3.0.10/js/highcharts-more.js"></script>
+
+		<script type="text/javascript" src="/global/scripts/jquery/highcharts/3.0.10/js/modules/exporting.js"></script>
+
+		<script type="text/javascript" src="/global/scripts/jquery/highcharts/3.0.10/js/modules/no-data-to-display.js"></script>
+
+		
+<script src="/global/scripts/jquery/ga/ga-file-downloads.js"></script>
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-25837230-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-25837230-1');
+	</script>
+
+
+
+<script type="text/javascript" src="/global/survey/engine/js/survey_engine.js"></script>
+<link href="/global/survey/engine/css/layout.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+<body>
+<div class="l-body-wrapper data" id="top" name="top">
+	<div id="sticker">
+    <ul>
+        <li><a href="http://x.com/eiagov/" target="_blank" class="ico-sticker twitter"></a></li>
+        <li><a href="https://www.facebook.com/eiagov" target="_blank" class="ico-sticker facebook"></a></li>
+    </ul>
+</div>	<header>
+	<div class="print">
+		<img src="/global/images/logos/eia_logo_print.png" alt="U.S. Energy Information Administration logo" />
+	</div>
+	<a href="#page-sub-nav" class="eia-accessibility">Skip to sub-navigation</a>
+	<nav class="primary-navigation">
+		<a class="logo" href="/">
+			<h1>U.S. Energy Information Administration - EIA - Independent Statistics and Analysis</h1>
+		</a>
+		<div class="nav-mobile">
+			<div class="search-menu-toggle">
+				<span class="ico-menu search-icon"></span>
+			</div>
+			<div class="nav-primary-item-link menu-toggle" data-topic="topic-1">
+				<div class="bars">
+					<div class="toggle-bar"></div>
+					<div class="toggle-bar"></div>
+					<div class="toggle-bar"></div>
+				</div>
+				<p>Menu</p>
+			</div>
+		</div>
+		<ul class="nav-primary">
+			<li class="nav-primary-item">
+				<div class="nav-primary-item-link" data-topic="topic-1">Statistics</div>
+			</li>
+			<li class="nav-primary-item">
+				<div class="nav-primary-item-link" data-topic="topic-2">Analysis</div>
+			</li>
+			<li class="nav-primary-item">
+				<div class="nav-primary-item-link" data-topic="topic-3">Tools</div>
+			</li>
+			<li class="nav-primary-item">
+				<div class="nav-primary-item-link" data-topic="topic-4">Education</div>
+			</li>
+			<li class="nav-primary-item">
+				<div class="nav-primary-item-link" data-topic="topic-5">News</div>
+			</li>
+			<li class="nav-primary-item search-toggle-button">
+				<div class="nav-primary-item-link search-menu-toggle">
+					<span class="ico-menu search-icon"></span>
+				</div>
+			</li>
+		</ul>
+		<div class="nav-search search-panel form-wrapper hide-search-panel">
+			<div class="search">
+				<form accept-charset="UTF-8" action="//search.usa.gov/search" id="search_form" method="get">
+					<input name="utf8" type="hidden" value="&#x2713;" />
+					<input id="affiliate" name="affiliate" type="hidden" value="eia.doe.gov" />
+					<!-- label class="accessibility" for="query">Enter Search Term(s):</label -->
+					<!-- span class="ico-menu search-icon"></span -->
+					<input autocomplete="off" class="usagov-search-autocomplete header-search-input" name="query" id="query" type="text" placeholder="Search eia.gov" />
+					<button type="submit" name="search" id="goBtn" class="button primary">Search</button>
+				</form>
+								<script>
+				//<![CDATA[
+				var usasearch_config = {
+					siteHandle: "eia.doe.gov"
+				};
+				var script = document.createElement("script");
+				script.type = "text/javascript";
+				script.src = "/global/scripts/search.usa.gov/remote.loader.js"; // NOTE this may need to be updated from //search.usa.gov/javascripts/remote.loader.js" periodically
+				document.getElementsByTagName("head")[0].appendChild(script);
+				//]]>
+				</script>
+							</div>
+		</div>
+	</nav>
+</header>	<div class="l-outer-wrapper">
+		<div class="l-inner-wrapper">
+			
+
+
+
+
+<div class="l-row header l-full-width-col">
+	<div class="title-banner bg-all-sources">
+		<h1>
+			Total Energy		</h1>
+	</div>
+	<a href="#page-content" class="eia-accessibility">Skip to page content</a>
+	<div class="sub-navigation" id="page-sub-nav">
+		<div class="left">
+			<ul class="left-nav">
+				<li class=""><a href="/totalenergy/">Overview</a></li>
+				<li class="dropdown-data active">
+					<a href="/totalenergy/data/monthly/index.php" class="dropbtn">
+						Browse Data<span class="ico sort-up"></span>
+					</a>
+					<div class="dropdown-data-content dropdown-content">
+						<ul>
+							<li>
+								<a href="/totalenergy/data/monthly/index.php">
+									Monthly								</a>
+							</li>
+							<li>
+								<a href="/totalenergy/data/annual/index.php">
+									Annual								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="dropdown-analysis-projections  ">
+					<a href="/totalenergy/reports.php" class="dropbtn">
+						Search by Tag<span class="ico sort-up"></span>
+					</a>
+					<div class="dropdown-analysis-projections-content dropdown-content">
+						<!-- 66.666% / 33.333% -->
+						<div class="l-row l-two-col-right">
+							<div class="l-col">
+								<h4>
+									Major Topics								</h4>
+							</div>
+							<div class="l-col">
+								<h4>
+									Find by								</h4>
+							</div>
+						</div>
+						<!-- 66.666% / 33.333% -->
+						<div class="l-row l-two-col-right">
+							<div class="l-col">
+								<!-- 50% | 50% -->
+								<div class="l-row l-two-col-even">
+									<ul class="l-col">
+    <li><a href="/totalenergy/reports.php#/T120,T214">Most popular</a></li>
+    <li><a href="/totalenergy/reports.php#/T120,T182">Annual</a></li>
+    <li><a href="/totalenergy/reports.php#/T120,T198">Monthly</a></li>
+</ul>
+<ul class="l-col">
+    <li><a href="/totalenergy/reports.php#/T120,T186">Forecasts/projections</a></li>
+    <li><a href="/totalenergy/reports.php#/T120,T1304">States</a></li>
+    <li><a href="/totalenergy/reports.php#/T120">All reports</a></li>
+</ul>
+								</div>
+							</div>
+							<ul class="l-col">
+								<li>
+									<a href="/totalenergy/browsebytag.php">
+										Alphabetical									</a>
+								</li>
+								<li>
+									<a href="/totalenergy/reports.php#/T120,T182,T198">
+										Recurring									</a>
+								</li>
+								<li>
+									<a href="/totalenergy/browsebytag.php?tagcloud">
+										Tag Cloud									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="right">
+			<span><a href="/glossary/">
+					Glossary				</a><a href="/tools/faqs/">
+					FAQS				</a></span>
+		</div>
+	</div>
+</div>
+<div id="page-content"></div>        <div class="l-row l-two-col-right-narrow">
+            <div class="l-col">
+<div class="primary">
+	<h1>Monthly Energy Review</h1>
+	<div class="l-row l-report-header">
+	<div class="l-col">
+		<div class="release-dates">
+			<span class="responsive-container">
+				October 2026 <a href="pdf/mer.pdf"><span
+						class="ico pdf"><span>PDF</span></span></a>
+				<span class="pipe">|</span> <a href="previous.php">previous editions</a></span>		</div>
+		<div class="release-dates">
+			<span class="responsive-container">
+				<span class="label">Release Date:</span> <span class="date">
+					October 29, 2026									</span>
+			</span>
+						<span class="responsive-container">
+				<span class="label">Next Release Date:</span> <span class="date">
+					November 2026									</span>
+			</span>
+		</div>
+		<div class="release-dates">
+			<span class="responsive-container">
+				<span class="ico zip"><a title="Download all Excel tables zipped" href="Zip_Excel_Month_end/MER_Excel_Zip.zip"> Download all tables ZIP</a></span>
+			</span>
+		</div>
+	</div>
+</div>
+<p>A publication of recent and historical U.S. energy statistics. This publication includes total energy production, consumption, stocks, and trade; energy prices; overviews of petroleum, natural gas, coal, electricity, nuclear energy, renewable energy, and carbon dioxide emissions; and data unit conversions values.</p><div class="call-out">
+    <p>Each month, most MER tables and figures present data for a new month. These data are usually preliminary (and sometimes estimated or forecasted) and likely to be revised the following month. The first dissemination of most annual data is also preliminary. It is often based on monthly estimates and is likely to be revised later that year after final data are published from sources, according to source data revision policies and publication schedules. In addition, EIA may revise historical data when a major revision in a source publication is needed, when new data sources become available, or when estimation methodologies are improved. A record of current and historical changes to MER data is available on the <a href="/totalenergy/data/monthly/whatsnew.php">What's New in the Monthly Energy Review&mdash;Content Changes</a> webpage.</p>
+    <!-- <p>Each month, most MER tables and figures present data for a new month. These data are usually preliminary (and sometimes estimated or forecasted) and likely to be revised the following month. The first dissemination of most annual data is also preliminary. It is often based on monthly estimates and is likely to be revised later that year after final data are published from sources, according to source data revision policies and publication schedules. In addition, EIA may revise historical data when a major revision in a source publication is needed, when new data sources become available, or when estimation methodologies are improved.</p> -->
+</div>	<h2 class="alt">Data categories</h2>
+	<span class="expand-collapse-container">
+		<span class="ico expand"><span>Expand all</span></span>
+		<span class="ico collapse"><span>Collapse all</span></span>
+	</span>
+
+	<div class="accordion">
+		<h3><a name="summary"></a>Energy overview</h3>
+		<div class="accordion-content">
+			<ul class="highlight">
+				<li class="head">Topic</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec1.pdf" title="entire section"><span class="ico pdf"><span>PDF (entire section)</span></span></a></li>
+			</ul>
+			<ul class="numbered">
+				<li><span class="number">1.1</span>Primary energy overview</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec1_3.pdf" title="Table 1.1 Primary energy overview"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T01.01&freq=m" title="Table 1.1 Primary energy overview"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T01.01" title="Table 1.1 Primary energy overview"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec1_2.pdf" title="Table 1.1 Primary energy overview"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T01.01#/?f=M&start=200001" title="Table 1.1 Primary energy overview  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">1.2</span>Primary energy production by source</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec1_5.pdf" title="Table 1.2 Primary energy production by source"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T01.02&freq=m" title="Table 1.2 Primary energy production by source"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T01.02" title="Table 1.2 Primary energy production by source"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec1_4.pdf" title="Table 1.2 Primary energy production by source"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T01.02#/?f=M&start=200001" title="Table 1.2 Primary energy production by source  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">1.3</span>Primary energy consumption by source</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec1_7.pdf" title="Table 1.3 Primary energy consumption by source"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T01.03&freq=m" title="Table 1.3 Primary energy consumption by source"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T01.03" title="Table 1.3 Primary energy consumption by source"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec1_6.pdf" title="Table 1.3 Primary energy consumption by source"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T01.03#/?f=M&start=200001" title="Table 1.3 Primary energy consumption by source  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">1.4a</span>Primary energy imports by source</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec1_9.pdf" title="Table 1.4a Primary energy imports by source"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T01.04A&freq=m" title="Table 1.4a Primary energy imports by source"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T01.04A" title="Table 1.4a Primary energy imports by source"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec1_8.pdf" title="Table 1.4a Primary energy imports by source"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T01.04A#/?f=M&start=200001" title="Table 1.4a Primary energy imports by source  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">1.4b</span>Primary energy exports by source</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec1_11.pdf" title="Table 1.4b Primary energy exports"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T01.04B&freq=m" title="Table 1.4b Primary energy exports"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T01.04B" title="Table 1.4b Primary energy exports"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec1_10.pdf" title="Table 1.4b Primary energy exports"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T01.04B#/?f=M&start=200001" title="Table 1.4b Primary energy exports  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">1.4c</span>Primary energy net imports by source</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec1_13.pdf" title="Table 1.4c  Primary energy net imports by source"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T01.04C&freq=m" title="Table  1.4c Primary energy net imports by source"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T01.04C" title="Table 1.4c Primary energy net imports by source"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec1_12.pdf" title="Table 1.4c Primary energy net imports by source"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T01.04C#/?f=M&start=200001" title="Table 1.4c Primary energy net imports by source  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">1.5</span>Merchandise trade value</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec1_15.pdf" title="Table 1.5 Merchandise trade value"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T01.05&freq=m" title="Table 1.5 Merchandise trade value"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T01.05" title="Table 1.5 Merchandise trade value"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec1_14.pdf" title="Table 1.5 Merchandise trade value"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T01.05#/?f=M&start=200001" title="Table 1.5 Merchandise trade value  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">1.6</span>Cost of fuels to end users in real (1982&ndash;1984) dollars</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec1_17.pdf" title="Table 1.6 Cost of fuels to end users in real (1982-1984) dollars"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T01.06&freq=m" title="Table 1.6 Cost of fuels to end users in real (1982-1984) dollars"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T01.06" title="Table 1.6 Cost of fuels to end users in real (1982-1984) dollars"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec1_16.pdf" title="Table 1.6 Cost of fuels to end users in real (1982-1984) dollars"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T01.06#/?f=M&start=200001" title="Table 1.6 Cost of fuels to end users in real (1982-1984) dollars  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">1.7</span>Primary energy consumption, energy expenditures, and carbon dioxide emissions indicators</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec1_19.pdf" title="Table 1.7 Primary energy consumption, energy expenditures, and carbon dioxide emissions indicators"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T01.07&freq=m" title="Table 1.7 Primary energy consumption, energy expenditures, and carbon dioxide emissions indicators"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T01.07" title="Table 1.7 Primary energy consumption, energy expenditures, and carbon dioxide emissions indicators"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec1_18.pdf" title="Table 1.7 Primary energy consumption, energy expenditures, and carbon dioxide emissions indicators"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T01.07#/?f=M&start=200001" title="Table 1.7 Primary energy consumption, energy expenditures, and carbon dioxide emissions indicators  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">1.8</span>Motor vehicle mileage, fuel consumption, and fuel economy</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec1_21.pdf" title="Table 1.8 Motor vehicle mileage, fuel consumption, and fuel economy"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T01.08&freq=m" title="Table 1.8 Motor vehicle mileage, fuel consumption, and fuel economy"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T01.08" title="Table 1.8 Motor vehicle mileage, fuel consumption, and fuel economy"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec1_20.pdf" title="Table 1.8 Motor vehicle mileage, fuel consumption, and fuel economy"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T01.08#/?f=M&start=200001" title="Table 1.8 Motor vehicle mileage, fuel consumption, and fuel economy  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">1.9</span>Light-duty vehicle average miles travel by technology type</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec1_22.pdf" title="Table 1.9 Light-Duty Vehicle Average Miles Traveled by Technology Type"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T01.09&amp;freq=a" title="Table 1.9 Light-Duty Vehicle Average Miles Traveled by Technology Type"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T01.09" title="Table 1.9 Light-Duty Vehicle Average Miles Traveled by Technology Type"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T01.09#/f=A" title="Table 1.9 Light-Duty Vehicle Average Miles Traveled by Technology Type  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">1.10</span>Electric and fuel cell electric light-duty vehicles overview</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec1_23.pdf" title="Table 1.10 Electric and fuel cell electric light-duty vehicles overview"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T01.10&amp;freq=a" title="Table 1.10 Electric and fuel cell electric light-duty vehicles overview"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T01.10" title="Table 1.10 Electric and fuel cell electric light-duty vehicles overview"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T01.10#/f=A&start=2012" title="Table 1.10 Electric and fuel cell electric light-duty vehicles overview  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">1.11</span>Heating degree-days by census division</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec1_24.pdf" title="Table 1.11 Heating degree-days by census division"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T01.11&amp;freq=m" title="Table 1.11 Heating degree-days by census division"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T01.11" title="Table 1.11 Heating degree-days by census division"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T01.11#/?f=A&start=200001" title="Table 1.11 Heating degree-days by census division  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">1.12</span>Cooling degree-days by census division</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec1_25.pdf" title="Table 1.12 Cooling degree-days by census division"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T01.12&amp;freq=m" title="Table 1.12 Cooling degree-days by census division"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T01.12" title="Table 1.12 Cooling degree-days by census division"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T01.12#/?f=A&amp;start=200001" title="Table 1.12 Cooling degree-days by census division  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">1.13a</span>Non-combustion use of fossil fuels in physical units</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec1_26.pdf" title="Table 1.13a Non-combustion use of fossil fuels in physical units"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T01.13A&amp;freq=m" title="Table 1.13a Non-combustion use of fossil fuels in physical units"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T01.13A" title="Table 1.13a Non-combustion use of fossil fuels in physical units"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T01.13A#/?f=A&amp;start=200001" title="Table 1.13a Non-combustion use of fossil fuels in physical units  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">1.13b</span>Heat content of non-combustion use of fossil fuels</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec1_27.pdf" title="Table 1.13b Heat content of non-combustion use of fossil fuels"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T01.13B&amp;freq=m" title="Table 1.13b Heat content of non-combustion use of fossil fuels"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T01.13B" title="Table 1.13b Heat content of non-combustion use of fossil fuels"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T01.13B#/?f=A&amp;start=200001" title="Table 1.13b Heat content of non-combustion use of fossil fuels  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+			</ul>
+			<ul>
+				<li>Section notes</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec1_n.pdf" title="Section 1 notes"><span class="ico pdf"><span>PDF</span></span></a></li>
+			</ul>
+		</div>
+
+
+		<span class="number"></span>
+
+		<h3><a name="consumption"></a>Energy consumption by sector</h3>
+		<div class="accordion-content">
+			<ul class="highlight">
+				<li class="head">Topic</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec2.pdf" title="entire section 2"><span class="ico pdf"><span>PDF (entire section)</span></span></a></li>
+			</ul>
+			<ul class="numbered">
+				<li><span class="number">2.1a</span>Energy consumption: Residential, commercial, and industrial sectors</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec2_4.pdf" title="Table 2.1a Residential, commercial, and industrial sectors"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T02.01a&freq=m" title="Table 2.1a Energy consumption: Residential, commercial, and industrial sectors"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T02.01A" title="Table 2.1a Energy consumption: Residential, commercial, and industrial sectors"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec2_2.pdf" title="Table 2.1a Energy consumption: Residential, commercial, and industrial sectors"><span class="ico pdf"><span>PDF (graph)</span></span></a></a>
+					<span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T02.01A#/?f=M&start=200001" title="Table 2.1a Energy consumption: Residential, commercial, and industrial sectors  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a>
+				</li>
+				<li class="list-spacer"></li>
+				<li><span class="number">2.1b</span>Energy consumption: Transportation sector, total end-use sectors, and electric power sector</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec2_5.pdf" title="Table 2.1b Energy consumption: Transportation sector, total end-use sectors, and electric power sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T02.01b&freq=m" title="Table 2.1b Energy consumption: Transportation sector, total end-use sectors, and electric power sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T02.01B" title="Table 2.1b Energy consumption: Transportation sector, total end-use sectors, and electric power sector"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec2_3.pdf" title="Table 2.1b Energy consumption: Transportation sector, total end-use sectors, and electric power sector"><span class="ico pdf"><span>PDF (graph)</span></span></a></a>
+					<span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T02.01B#/?f=M&start=200001" title="Table 2.1b Energy consumption: Transportation sector, total end-use sectors, and electric power sector - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a>
+				</li>
+				<li class="list-spacer"></li>
+				<li><span class="number">2.2</span>Residential sector energy consumption</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec2_7.pdf" title="Table 2.2 Residential sector energy consumption"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T02.02&freq=m" title="Table 2.2 Residential sector energy consumption"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T02.02" title="Table 2.2 Residential sector energy consumption"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec2_6.pdf" title="Table 2.2 Residential sector energy consumption"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T02.02#/?f=M&start=200001" title="Table 2.2 Residential sector energy consumption  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">2.3</span>Commercial sector energy consumption</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec2_9.pdf" title="Table 2.3 Commercial sector energy consumption"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T02.03&freq=m" title="Table 2.3 Commercial sector energy consumption"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T02.03" title="Table 2.3 Commercial sector energy consumption"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec2_8.pdf" title="Table 2.3 Commercial sector energy consumption"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T02.03#/?f=M&start=200001" title="Table 2.3 Commercial sector energy consumption  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">2.4</span>Industrial sector energy consumption</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec2_11.pdf" title="Table 2.4 Industrial sector energy consumption"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T02.04&freq=m" title="Table 2.4 Industrial sector energy consumption"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T02.04" title="Table 2.4 Industrial sector energy consumption"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec2_10.pdf" title="Table 2.4 Industrial sector energy consumption"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T02.04#/?f=M&start=200001" title="Table 2.4 Industrial sector energy consumption  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">2.5</span>Transportation sector energy consumption</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec2_13.pdf" title="Table 2.5 Transportation sector energy consumption"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T02.05&freq=m" title="Table 2.5 Transportation sector energy consumption"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T02.05" title="Table 2.5 Transportation sector energy consumption"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec2_12.pdf" title="Table 2.5 Transportation sector energy consumption"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T02.05#/?f=M&start=200001" title="Table 2.5 Transportation sector energy consumption  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">2.6</span>Electric power sector energy consumption</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec2_15.pdf" title="Table 2.6 Electric power sector energy consumption"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T02.06&freq=m" title="Table 2.6 Electric power sector energy consumption"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T02.06" title="Table 2.6 Electric power sector energy consumption"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec2_14.pdf" title="Table 2.6 Electric power sector energy consumption"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T02.06#/?f=M&start=200001" title="Table 2.6 Electric power sector energy consumption  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">2.7</span>U.S. government energy consumption by agency, fiscal years</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec2_16.pdf" title="Table 2.7 U.S. government energy consumption by agency, fiscal years"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T02.07&freq=m" title="Table 2.7  U.S. government energy consumption by agency, fiscal years"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T02.07" title="Table 2.7  U.S. government energy consumption by agency, fiscal years"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T02.07#/?f=M&start=200001" title="Table 2.7  U.S. government energy consumption by agency, fiscal years  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">2.8</span>U.S. government energy consumption by source, fiscal years</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec2_17.pdf" title="Table 2.8  U.S. government energy consumption by source, fiscal years"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T02.08&freq=m" title="Table 2.8  U.S. government energy consumption by source, fiscal years"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T02.08" title="Table 2.8  U.S. government energy consumption by source, fiscal years"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T02.08#/?f=M&start=200001" title="Table 2.8  U.S. government energy consumption by source, fiscal years  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+			</ul>
+			<ul>
+				<li>Section notes</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec2_n.pdf" title="Table 2 Section notes"><span class="ico pdf"><span>PDF</span></span></a></li>
+			</ul>
+		</div>
+
+
+
+
+		<h3><a name="petroleum"></a>Petroleum</h3>
+		<div class="accordion-content">
+			<ul class="highlight">
+				<li class="head">Topic</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec3.pdf" title="entire section 3"><span class="ico pdf"><span>PDF (entire section
+								)</span></span></a></li>
+			</ul>
+			<ul class="numbered">
+				<li><span class="number">3.1</span>Overview</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec3_3.pdf" title="Table 3.1 Overview"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T03.01&freq=m" title="Table 3.1 Overview"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T03.01" title="Table 3.1 Overview"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec3_2.pdf" title="Table 3.1 Overview"><span class="ico pdf"><span>PDF
+								(graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T03.01#/?f=M&start=200001" title="Table 3.1 Overview  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">3.2</span>Refinery and blender net inputs and net production</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec3_5.pdf" title="Table 3.2 Refinery and blender net inputs and net production"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T03.02&freq=m" title="Table 3.2 Refinery and blender net inputs and net production"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T03.02" title="Table 3.2 Refinery and blender net inputs and net production"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec3_4.pdf" title="Table 3.2 Refinery and blender net inputs and net production"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T03.02#/?f=M&start=200001" title="Table 3.2 Refinery and blender net inputs and net production  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">3.3</span>Trade</li>
+				<li class="list-spacer"></li>
+				<li><span class="number">3.3a</span>Overview</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec3_7.pdf" title="Table 3.3a Trade Overview"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T03.03A&freq=m" title="Table 3.3a Trade Overview"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T03.03A" title="Table 3.3a Trade Overview"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec3_6.pdf" title="Table 3.3a Trade Overview"><span class="ico pdf"><span>PDF
+								(graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T03.03A#/?f=M&start=200001" title="Table 3.3a Trade Overview  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">3.3b</span>Imports by type</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec3_9.pdf" title="Table 3.3b Imports and exports by type"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T03.03B&freq=m" title="Table 3.3b Imports and exports by type"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T03.03B" title="Table 3.3b Imports and exports by type"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec3_8.pdf" title="Table 3.3b Imports and exports by type"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T03.03B#/?f=M&start=200001" title="Table 3.3b Imports and exports by type  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">3.3c</span>Imports from OPEC countries</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec3_10.pdf" title="Table 3.3c Imports from OPEC countries"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T03.03C&freq=m" title="Table 3.3c Imports from OPEC countries"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T03.03C" title="Table 3.3c Imports from OPEC countries"><span class="ico csv"><span>CSV</span></span></a>
+					<!--<a href="./pdf/sec3_8.pdf" title="Table 3.3c Imports from OPEC countries"><span class="ico pdf"><span>PDF (graph)</span></span></a>-->
+					<span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T03.03C#/?f=M&start=200001" title="Table 3.3c Imports from OPEC countries  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a>
+				</li>
+				<li class="list-spacer"></li>
+				<li><span class="number">3.3d</span>Imports from non-OPEC countries</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec3_11.pdf" title="Table 3.3d Imports from non-OPEC countries"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T03.03D&freq=m" title="Table 3.3d Imports from non-OPEC countries"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T03.03D" title="Table 3.3d Imports from non-OPEC countries"><span class="ico csv"><span>CSV</span></span></a>
+					<!--<a href="./pdf/sec3_8.pdf" title="Table 3.3d Imports from non-OPEC countries"><span class="ico pdf"><span>PDF (graph)</span></span></a>-->
+					<span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T03.03D#/?f=M&start=200001" title="Table 3.3d Imports from non-OPEC countries - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a>
+				</li>
+				<li class="list-spacer"></li>
+				<li><span class="number">3.3e</span>Exports by type</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec3_12.pdf" title="Table 3.3e Exports by type"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T03.03E&freq=m" title="Table 3.3e Exports by type"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T03.03E" title="Table 3.3e Exports by type"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec3_8.pdf" title="Table 3.3e Exports by type"><span class="ico pdf"><span>PDF
+								(graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T03.03E#/?f=M&start=200001" title="Table 3.3e Exports by type - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">3.3f</span>Exports by country of destination</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec3_13.pdf" title="Table 3.3f Exports by country of destination"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T03.03f&freq=m" title="Table 3.3f Exports by country of destination"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T03.03f" title="Table 3.3f Exports by country of destination"><span class="ico csv"><span>CSV</span></span></a>
+					<!--<a href="./pdf/sec3_8.pdf" title="Table 3.3f Exports by country of destination"><span class="ico pdf"><span>PDF (graph)</span></span></a>-->
+					<span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T03.03F#/?f=M&start=200001" title="Table 3.3f Exports by country of destination - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a>
+				</li>
+				<li class="list-spacer"></li>
+				<li><span class="number">3.4</span>Stocks</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec3_15.pdf" title="Table 3.4 Stocks"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T03.04&freq=m" title="Table 3.4 Stocks"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T03.04" title="Table 3.4 Stocks"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec3_14.pdf" title="Table 3.4 Stocks"><span class="ico pdf"><span>PDF
+								(graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T03.04#/?f=M&start=200001" title="Table 3.4 Stocks  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">3.5</span>Products supplied by type</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec3_17.pdf" title="Table 3.5 Products supplied by type"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T03.05&freq=m" title="Table 3.5 Products supplied by type"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T03.05" title="Table 3.5 Products supplied by type"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec3_16.pdf" title="Table 3.5 Products supplied by type"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T03.05#/?f=M&start=200001" title="Table 3.5 Products supplied by type  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">3.6</span>Heat content of petroleum products supplied by type</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec3_19.pdf" title="Table 3.6 Heat content of petroleum products supplied by type"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T03.06&freq=m" title="Table 3.6 Heat content of petroleum products supplied by type"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T03.06" title="Table 3.6 Heat content of petroleum products supplied by type"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec3_18.pdf" title="Table 3.6 Heat content of petroleum products supplied by type"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T03.06#/?f=M&start=200001" title="Table 3.6 Heat content of petroleum products supplied by type  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">3.7</span>Petroleum consumption by sector:</li>
+				<li class="list-spacer"></li>
+				<li><span class="number">3.7a</span>Residential and commercial sectors</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec3_21.pdf" title="Table 3.7a Residential and commercial sectors"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T03.07A&freq=m" title="Table 3.7a Residential and commercial sectors"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T03.07A" title="Table 3.7a Residential and commercial sectors"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec3_20.pdf" title="Table 3.7a Residential and commercial sectors"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T03.07A#/?f=M&start=200001" title="Table 3.7a Residential and commercial sectors  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">3.7b</span>Industrial sector</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec3_22.pdf" title="Table 3.7b Industrial sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T03.07B&freq=m" title="Table 3.7b Industrial sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T03.07B" title="Table 3.7b Industrial sector"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec3_20.pdf" title="Table 3.7b Industrial sector"><span class="ico pdf"><span>PDF
+								(graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T03.07B#/?f=M&start=200001" title="Table 3.7b Industrial sector  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">3.7c</span>Transportation and electric power sectors</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec3_23.pdf" title="Table 3.7c Transportation and electric power sectors"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T03.07C&freq=m" title="Table 3.7c Transportation and electric power sectors"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T03.07C" title="Table 3.7c Transportation and electric power sectors"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec3_20.pdf" title="Table 3.7c Transportation and electric power sectors"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T03.07C#/?f=M&start=200001" title="Table 3.7c Transportation and electric power sectors  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">3.8</span>Heat content of petroleum consumption by sector:</li>
+				<li class="list-spacer"></li>
+				<li><span class="number">3.8a</span>Residential and commercial sectors</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec3_26.pdf" title="Table 3.8a Residential and commercial sectors"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T03.08A&freq=m" title="Table 3.8a Residential and commercial sectors"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T03.08A" title="Table 3.8a Residential and commercial sectors"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec3_24.pdf" title="Table 3.8a Residential and commercial sectors"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T03.08A#/?f=M&start=200001" title="Table 3.8a Residential and commercial sectors  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">3.8b</span>Industrial sector</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec3_27.pdf" title="Table 3.8b Industrial sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T03.08B&freq=m" title="Table 3.8b Industrial sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T03.08B" title="Table 3.8b Industrial sector"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec3_24.pdf" title="Table 3.8b Industrial sector"><span class="ico pdf"><span>PDF
+								(graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T03.08B#/?f=M&start=200001" title="Table 3.8b Industrial sector - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">3.8c</span>Transportation and electric power sectors</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec3_28.pdf" title="Table 3.8c Transportation and electric power sectors"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T03.08C&freq=m" title="Table 3.8c Transportation and electric power sectors"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T03.08C" title="Table 3.8c Transportation and electric power sectors"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec3_24.pdf" title="Table 3.8c Transportation and electric power sectors"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T03.08C#/?f=M&start=200001" title="Table 3.8c Transportation and electric power sectors - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+			</ul>
+			<ul>
+				<!-- class="numbered" -->
+				<li>Section notes</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec3_n.pdf" title="section 3 notes"><span class="ico pdf"><span>PDF</span></span></a></li>
+			</ul>
+		</div>
+
+
+
+
+		<h3><a name="naturalgas"></a>Natural gas</h3>
+		<div class="accordion-content">
+			<ul class="highlight">
+				<li class="head">Topic</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec4.pdf" title="entire section 4"><span class="ico pdf"><span>PDF (entire section
+								)</span></span></a></li>
+			</ul>
+			<ul class="numbered">
+				<li><span class="number">4.1</span>Overview</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec4_3.pdf" title="Table 4.1 Overview"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T04.01&freq=m" title="Table 4.1 Overview"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T04.01" title="Table 4.1 Overview"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec4_2.pdf" title="Table 4.1 Overview graph"><span class="ico pdf"><span>PDF
+								(graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T04.01#/?f=M&start=200001" title="Table 4.1 Overview  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">4.2a</span>Imports by country</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec4_4.pdf" title="Table 4.2a Imports by country"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T04.02A&freq=m" title="Table 4.2a Imports by country"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T04.02A" title="Table 4.2a Imports by country"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T04.02A#/?f=M&start=200001" title="Table 4.2a Imports by country"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">4.2b</span>Exports by country</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec4_5.pdf" title="Table 4.2b Exports by country"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T04.02B&freq=m" title="Table 4.2b Exports by country"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T04.02B" title="Table 4.2b Exports by country"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T04.02B#/?f=M&start=200001" title="Table 4.2b Exports by country"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">4.3</span>Consumption by sector</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec4_6.pdf" title="Table 4.3 Consumption by sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T04.03&freq=m" title="Table 4.3 Consumption by sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T04.03" title="Table 4.3 Consumption by sector"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec4_2.pdf"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T04.03#/?f=M&start=200001" title="Table 4.3 Consumption by sector  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">4.4</span>Underground storage</li>
+				<li><span class="additional-formas">Available formats:</span> <a href="./pdf/sec4_7.pdf" title="Table 4.4 Underground storage"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T04.04&freq=m" title="Table 4.4 Underground storage"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T04.04"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T04.04#/?f=M&start=200001" title="Table 4.4 Underground storage  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+			</ul>
+			<ul>
+				<!-- class="numbered" -->
+				<li>Section notes</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec4_n.pdf" title="Section 4 notes"><span class="ico pdf"><span>PDF</span></span></a></li>
+			</ul>
+		</div>
+
+
+
+
+		<h3><a name="crude"></a>Crude oil and natural gas resource development</h3>
+		<div class="accordion-content">
+			<ul class="highlight">
+				<li class="head">Topic</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec5.pdf" title="entire section 5"><span class="ico pdf"><span>PDF (entire section
+								)</span></span></a></li>
+			</ul>
+			<ul class="numbered">
+				<li><span class="number">5.1</span>Drilling activity measurements</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec5_3.pdf" title="Table 5.1 Drilling activity measurements"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T05.01&freq=m" title="Table 5.1 Drilling activity measurements"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T05.01" title="Table 5.1 Drilling activity measurements"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec5_2.pdf"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T05.01#/?f=M&start=200001" title="Table 5.1 Drilling activity measurements  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">5.2</span>Wells and footage drilled</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec5_5.pdf" title="Table 5.2 Wells and footage drilled"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T05.02&freq=m" title="Table 5.2 Wells and footage drilled"><span class="ico xls"><span>XLS</span></span></a>
+					<!--<a href="/totalenergy/data/monthly/csv/Table_5_2.csv" title="Table 5.2 Wells and footage drilled"><span class="ico csv"><span>CSV</span></span>-->
+					<a href="/totalenergy/data/browser/csv.php?tbl=T05.02" title="Table 5.2 Wells and footage drilled"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec5_4.pdf"><span class="ico pdf" title="Table 5.2 Wells and footage drilled graph"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T05.02#/?f=M&start=200001" title="Table 5.2 Wells and footage drilled  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a>
+				</li>
+			</ul>
+			<ul>
+				<!-- class="numbered" -->
+				<li>Section notes</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec5_n.pdf" title="Section 5 notes"><span class="ico pdf"><span>PDF</span></span></a></li>
+			</ul>
+		</div>
+
+
+
+
+		<h3><a name="coal"></a>Coal</h3>
+		<div class="accordion-content">
+			<ul class="highlight">
+				<li class="head">Topic</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec6.pdf" title="entire section 6"><span class="ico pdf"><span>PDF (entire section
+								)</span></span></a></li>
+			</ul>
+			<ul class="numbered">
+				<li><span class="number">6.1</span>Overview</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec6_3.pdf" title="Table 6.1 Overview"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T06.01&freq=m" title="Table 6.1 Overview"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T06.01" title="Table 6.1 Overview"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec6_2.pdf"><span class="ico pdf" title="Table 6.1 Overview graph"><span>PDF
+								(graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T06.01#/?f=M&start=200001" title="Table 6.1 Overview  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">6.2</span>Consumption by sector</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec6_4.pdf" title="Table 6.2 Consumption by sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T06.02&freq=m" title="Table 6.2 Consumption by sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T06.02" title="Table 6.2 Consumption by sector"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec6_2.pdf"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T06.02#/?f=M&start=200001" title="Table 6.2 Consumption by sector  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">6.3</span>Stocks by sector</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec6_5.pdf" title="Table 6.3 Stocks by sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T06.03&freq=m" title="Table 6.3 Stocks by sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T06.03" title="Table 6.3 Stocks by sector"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T06.03#/?f=M&start=200001" title="Table 6.3 Stocks by sector  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+			</ul>
+			<ul>
+				<!-- class="numbered" -->
+				<li>Section notes</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec6_n.pdf" title="Section 6 notes"><span class="ico pdf"><span>PDF</span></span></a></li>
+			</ul>
+		</div>
+
+
+
+
+		<h3><a name="electricity"></a>Electricity</h3>
+		<div class="accordion-content">
+			<ul class="highlight">
+				<li class="head">Topic</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7.pdf" title="entire section 7"><span class="ico pdf"><span>PDF (entire
+								section)</span></span></a></li>
+			</ul>
+			<ul class="numbered">
+				<li><span class="number">7.1</span>Overview</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_3.pdf" title="Table 7.1 Overview"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.01&freq=m" title="Table 7.1 Overview"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.01" title="Table 7.1 Overview"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec7_2.pdf" title="Table 7.1 Overview"><span class="ico pdf"><span>PDF
+								(graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.01#/?f=M&start=200001" title="Table 7.1 Overview  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.2</span>Electricity net generation:</li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.2a</span>Total (all sectors)</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_5.pdf" title="Table 7.2a Electricity net generation: Total (all sectors)"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.02A&freq=m" title="Table 7.2a Electricity net generation: Total (all sectors)"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.02A" title="Table 7.2a Electricity net generation: Total (all sectors)"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec7_4.pdf" title="Table 7.2a Electricity net generation: Total (all sectors)"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.02A#/?f=M&start=200001" title="Table 7.2a Electricity net generation: Total (all sectors)  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.2b</span>Electric power sector</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_6.pdf" title="Table 7.2b Electricity net generation: Electric power sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.02B&freq=m" title="Table 7.2b Electricity net generation: Electric power sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.02B" title="Table 7.2b Electricity net generation: Electric power sector"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec7_4.pdf" title="Table 7.2b Electricity net generation: Electric power sector"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.02B#/?f=M&start=200001" title="Table 7.2b Electricity net generation: Electric power sector  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.2c</span>Commercial and industrial sectors</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_7.pdf" title="Table 7.2c Electricity net generation: Commercial and industrial sectors"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.02C&freq=m" title="Table 7.2c Electricity net generation: Commercial and industrial sectors"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.02C" title="Table 7.2c Electricity net generation: Commercial and industrial sectors"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec7_4.pdf" title="Table 7.2c Electricity net generation: Commercial and industrial sectors"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.02C#/?f=M&start=200001" title="Table 7.2c Electricity net generation: Commercial and industrial sectors  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.3</span>Consumption of combustible fuels for electricity generation:</li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.3a</span>Total (all sectors)</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_9.pdf" title="Table 7.3a Consumption of combustible fuels for electricity generation: Total (all sectors)"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.03A&freq=m" title="Table 7.3a Consumption of combustible fuels for electricity generation: Total (all sectors)"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.03A" title="Table 7.3a Consumption of combustible fuels for electricity generation: Total (all sectors)"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec7_8.pdf" title="Table 7.3a Consumption of combustible fuels for electricity generation: Total (all sectors)"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.03A#/?f=M&start=200001" title="Table 7.3a Consumption of combustible fuels for electricity generation: Total (all sectors)  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.3b</span>Electric power sector</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_10.pdf" title="Table 7.3b Consumption of combustible fuelsfor electricity generation: Electric power sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.03B&freq=m" title="Table 7.3b Consumption of combustible fuelsfor electricity generation: Electric power sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.03B" title="Table 7.3b Consumption of combustible fuelsfor electricity generation: Electric power sector"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec7_8.pdf" title="Table 7.3b Consumption of combustible fuelsfor electricity generation: Electric power sector"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.03B#/?f=M&start=200001" title="Table 7.3b Consumption of combustible fuelsfor electricity generation: Electric power sector  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.3c</span>Commercial and industrial sectors (selected fuels) </a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_11.pdf" title="Table 7.3c Consumption of combustible fuelsfor electricity generation: Commercial and industrial sectors (selected fuels)"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.03C&freq=m" title="Table 7.3c Consumption of combustible fuelsfor electricity generation: Commercial and industrial sectors (selected fuels)"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.03C" title="Table 7.3c Consumption of combustible fuelsfor electricity generation: Commercial and industrial sectors (selected fuels)"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec7_8.pdf" title="Table 7.3c Consumption of combustible fuelsfor electricity generation: Commercial and industrial sectors (selected fuels)"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.03C#/?f=M&start=200001" title="Table 7.3c Consumption of combustible fuelsfor electricity generation: Commercial and industrial sectors (selected fuels)  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.4</span>Consumption of combustible fuels for electricity generation and
+					useful thermal output:
+				<li class="list-spacer"></li>
+				<li><span class="number">7.4a</span>Total (all sectors)</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_13.pdf" title="Table 7.4a Consumption of combustible fuels for electricity generation and useful thermal output: Total (all sectors)"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.04A&freq=m" title="Table 7.4a Consumption of combustible fuels for electricity generation and useful thermal output: Total (all sectors)"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.04A" title="Table 7.4a Consumption of combustible fuels for electricity generation and useful thermal output: Total (all sectors)"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec7_12.pdf" title="Table 7.4a Consumption of combustible fuels for electricity generation and useful thermal output: Total (all sectors)"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.04A#/?f=M&start=200001" title="Table 7.4a Consumption of combustible fuels for electricity generation and useful thermal output: Total (all sectors)  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.4b</span>Electric power sector</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_14.pdf" title="Table 7.4b Consumption of combustible fuels for electricity generation and useful thermal output: Electric power sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.04B&freq=m" title="Table 7.4b Consumption of combustible fuels for electricity generation and useful thermal output: Electric power sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.04B" title="Table 7.4b Consumption of combustible fuels for electricity generation and useful thermal output: Electric power sector"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec7_12.pdf" title="Table 7.4b Consumption of combustible fuels for electricity generation and useful thermal output: Electric power sector"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.04B#/?f=M&start=200001" title="Table 7.4b Consumption of combustible fuels for electricity generation and useful thermal output: Electric power sector  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.4c</span>Commercial and industrial sectors (selected fuels) </a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_15.pdf" title="Table 7.4c Consumption of combustible fuels for electricity generation and useful thermal output: Commercial and industrial sectors (selected fuels)"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.04C&freq=m" title="Table 7.4c Consumption of combustible fuels for electricity generation and useful thermal output: Commercial and industrial sectors (selected fuels)"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.04C" title="Table 7.4c Consumption of combustible fuels for electricity generation and useful thermal output: Commercial and industrial sectors (selected fuels)"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec7_12.pdf" title="Table 7.4c Consumption of combustible fuels for electricity generation and useful thermal output: Commercial and industrial sectors (selected fuels)"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.04C#/?f=M&start=200001" title="Table 7.4c Consumption of combustible fuels for electricity generation and useful thermal output: Commercial and industrial sectors (selected fuels)  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.5</span>Stocks of coal and petroleum: electric power sector </a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_17.pdf" title="Table 7.5 Stocks of coal and petroleum: electric power sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.05&freq=m" title="Table 7.5 Stocks of coal and petroleum: electric power sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.05" title="Table 7.5 Stocks of coal and petroleum: electric power sector"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec7_16.pdf" title="Table 7.5 Stocks of coal and petroleum: electric power sector"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.05#/?f=M&start=200001" title="Table 7.5 Stocks of coal and petroleum: electric power sector  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.6</span>Electricity end use and electric vehicle use</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_19.pdf" title="Table 7.6 Electricity end use and electric vehicle use"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.06&freq=m" title="Table 7.6 Electricity end use and electric vehicle use"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.06" title="Table 7.6 Electricity end use and electric vehicle use"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec7_18.pdf" title="Table 7.6 Electricity end use and electric vehicle use"><span class="ico pdf"><span>PDF
+								(graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.06#/?f=M&start=200001" title="Table 7.6 Electricity end use and electric vehicle use  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.7</span>Electric net summer capacity:
+				<li class="list-spacer"></li>
+				<li><span class="number">7.7a</span>Total (all sectors)</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_20.pdf" title="Table 7.7a Electric net summer capacity: Total (all sectors)"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.07a&freq=m" title="Table 7.7a Electric net summer capacity: Total (all sectors)"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.07a" title="Table 7.7a Electric net summer capacity: Total (all sectors)"><span class="ico csv"><span>CSV</span></span></a>
+					<!--<a href="./pdf/sec7_xx.pdf" title="Table 7.7a Electric net summer capacity: Total (all sectors)"><span class="ico pdf"><span>PDF (graph)</span></span></a>--><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.07A#/?f=M" title="Table 7.7a Electric net summer capacity: Total (all sectors)"><span class="ico interactive"><span>Interactive</span></span></a>
+				</li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.7b</span>Electric power sector</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_21.pdf" title="Table 7.7b Electric net summer capacity: Electric power sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.07b&freq=m" title="Table 7.7b Electric net summer capacity: Electric power sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.07b" title="Table 7.7b Electric net summer capacity: Electric power sector"><span class="ico csv"><span>CSV</span></span></a>
+					<!--<a href="./pdf/sec7_xx.pdf" title="Table 7.7b Electric net summer capacity: Electric power sector"><span class="ico pdf"><span>PDF (graph)</span></span></a>--><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.07B#/?f=M" title="Table 7.7b Electric net summer capacity: Electric power sector"><span class="ico interactive"><span>Interactive</span></span></a>
+				</li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.7c</span>Commercial sector</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_22.pdf" title="Table 7.7c Electric net summer capacity: Commercial sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.07c&freq=m" title="Table 7.7c Electric net summer capacity: Commercial sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.07c" title="Table 7.7c Electric net summer capacity: Commercial sector"><span class="ico csv"><span>CSV</span></span></a>
+					<!--<a href="./pdf/sec7_xx.pdf" title="Table 7.7c Electric net summer capacity: Commercial sector"><span class="ico pdf"><span>PDF (graph)</span></span></a>--><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.07C#/?f=M" title="Table 7.7c Electric net summer capacity: Commercial sector"><span class="ico interactive"><span>Interactive</span></span></a>
+				</li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.7d</span>Industrial sector</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_23.pdf" title="Table 7.7d Electric net summer capacity: Industrial sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.07d&freq=m" title="Table 7.7d Electric net summer capacity: Industrial sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.07d" title="Table 7.7d Electric net summer capacity: Industrial sector"><span class="ico csv"><span>CSV</span></span></a>
+					<!--<a href="./pdf/sec7_xx.pdf" title="Table 7.7d Electric net summer capacity: Industrial sector"><span class="ico pdf"><span>PDF (graph)</span></span></a>--><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.07D#/?f=M" title="Table 7.7d Electric net summer capacity: Industrial sector"><span class="ico interactive"><span>Interactive</span></span></a>
+				</li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.8</span>Capacity factors and usage factors at electric generators:
+				<li class="list-spacer"></li>
+				<li><span class="number">7.8a</span>Total (all sectors)</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_24.pdf" title="Table 7.8a Capacity factors and usage factors at electric generators: Total (all sectors)"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.08a&freq=m" title="Table 7.8a Capacity factors and usage factors at electric generators: Total (all sectors)"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.08a" title="Table 7.8a Capacity factors and usage factors at electric generators: Total (all sectors)"><span class="ico csv"><span>CSV</span></span></a>
+					<!--<a href="./pdf/sec7_xx.pdf" title="Table 7.8a Capacity factors and usage factors at electric generators: Total (all sectors)"><span class="ico pdf"><span>PDF (graph)</span></span></a>--><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.08A#/?f=M" title="Table 7.8a Capacity factors and usage factors at electric generators: Total (all sectors)"><span class="ico interactive"><span>Interactive</span></span></a>
+				</li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.8b</span>Electric power sector</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_25.pdf" title="Table 7.8b Capacity factors and usage factors at electric generators: Electric power sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.08b&freq=m" title="Table 7.8b Capacity factors and usage factors at electric generators: Electric power sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.08b" title="Table 7.8b Capacity factors and usage factors at electric generators: Electric power sector"><span class="ico csv"><span>CSV</span></span></a>
+					<!--<a href="./pdf/sec7_xx.pdf" title="Table 7.8b Capacity factors and usage factors at electric generators: Electric power sector"><span class="ico pdf"><span>PDF (graph)</span></span></a>--><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.08B#/?f=M" title="Table 7.8b Capacity factors and usage factors at electric generators: Electric power sector"><span class="ico interactive"><span>Interactive</span></span></a>
+				</li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.8c</span>Commercial sector</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_26.pdf" title="Table 7.8c Capacity factors and usage factors at electric generators: Commercial sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.08c&freq=m" title="Table 7.8c Capacity factors and usage factors at electric generators: Commercial sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.08c" title="Table 7.8c Capacity factors and usage factors at electric generators: Commercial sector"><span class="ico csv"><span>CSV</span></span></a>
+					<!--<a href="./pdf/sec7_xx.pdf" title="Table 7.8c Capacity factors and usage factors at electric generators: Commercial sector"><span class="ico pdf"><span>PDF (graph)</span></span></a>--><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.08C#/?f=M" title="Table 7.8c Capacity factors and usage factors at electric generators: Commercial sector"><span class="ico interactive"><span>Interactive</span></span></a>
+				</li>
+				<li class="list-spacer"></li>
+				<li><span class="number">7.8d</span>Industrial sector</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_27.pdf" title="Table 7.8d Capacity factors and usage factors at electric generators: Industrial sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T07.08d&freq=m" title="Table 7.8d Capacity factors and usage factors at electric generators: Industrial sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T07.08d" title="Table 7.8d Capacity factors and usage factors at electric generators: Industrial sector"><span class="ico csv"><span>CSV</span></span></a>
+					<!--<a href="./pdf/sec7_xx.pdf" title="Table 7.8d Capacity factors and usage factors at electric generators: Industrial sector"><span class="ico pdf"><span>PDF (graph)</span></span></a>--><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T07.08D#/?f=M" title="Table 7.8d Capacity factors and usage factors at electric generators: Industrial sector"><span class="ico interactive"><span>Interactive</span></span></a>
+				</li>
+			</ul>
+
+			<ul>
+				<!-- class="numbered" -->
+				<li>Section notes</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec7_n.pdf" title="Section 7 notes"><span class="ico pdf"><span>PDF</span></span></a></li>
+			</ul>
+		</div>
+
+		<h3><a name="nuclear"></a>Nuclear energy</h3>
+		<div class="accordion-content">
+			<ul class="highlight">
+				<li class="head">Topic</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec8.pdf" title="entire section 8"><span class="ico pdf"><span>PDF (entire
+								section)</span></span></a></li>
+			</ul>
+			<ul class="numbered">
+				<li><span class="number">8.1</span>Nuclear energy overview</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec8_3.pdf" title="Table 8.1 Nuclear energy overview"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T08.01&freq=m" title="Table 8.1 Nuclear energy overview"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T08.01" title="Table 8.1 Nuclear energy overview"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec8_2.pdf" title="Table 8.1 Nuclear energy overview"><span class="ico pdf"><span>PDF
+								(graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T08.01#/?f=M&start=200001" title="Table 8.1 Nuclear energy overview  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">8.2</span>Uranium overview</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec8_5.pdf" title="Table 8.2 Uranium overview"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T08.02&freq=m" title="Table 8.2 Uranium overview"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T08.02" title="Table 8.2 Uranium overview"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec8_4.pdf" title="Table 8.2 Uranium overview"><span class="ico pdf"><span>PDF
+								(graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T08.02#/?f=M&start=200001" title="Table 8.2 Uranium overview  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+			</ul>
+			<ul>
+				<!-- class="numbered" -->
+				<li>Section notes</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec8_n.pdf" title="Section 8 notes"><span class="ico pdf"><span>PDF</span></span></a></li>
+			</ul>
+		</div>
+
+
+
+
+		<h3><a name="prices"></a>Energy prices</h3>
+		<div class="accordion-content">
+			<ul class="highlight">
+				<li class="head">Topic</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec9.pdf" title="entire section 9"><span class="ico pdf"><span>PDF (entire
+								section)</span></span></a></li>
+			</ul>
+			<ul class="numbered">
+				<li><span class="number">9.1</span>Crude oil price summary</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec9_3.pdf" title="Table 9.1 Crude oil price summary"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T09.01&freq=m" title="Table 9.1 Crude oil price summary"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T09.01" title="Table 9.1 Crude oil price summary"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec9_2.pdf" title="Table 9.1 Crude oil price summary"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T09.01#/?f=M&start=200001" title="Table 9.1 Crude oil price summary  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">9.2</span>F.O.B. costs of crude oil imports from selected countries</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec9_4.pdf" title="Table 9.2 F.O.B. costs of crude oil imports from selected countries"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T09.02&freq=m" title="Table 9.2 F.O.B. costs of crude oil imports from selected countries"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T09.02" title="Table 9.2 F.O.B. costs of crude oil imports from selected countries"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T09.02#/?f=M&start=200001" title="Table 9.2 F.O.B. costs of crude oil imports from selected countries  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">9.3</span>Landed costs of crude oil imports from selected countries</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec9_5.pdf" title="Table 9.3 Landed costs of crude oil imports from selected countries"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T09.03&freq=m" title="Table 9.3 Landed costs of crude oil imports from selected countries"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T09.03" title="Table 9.3 Landed costs of crude oil imports from selected countries"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T09.03#/?f=M&start=200001" title="Table 9.3 Landed costs of crude oil imports from selected countries  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">9.4</span>Retail motor gasoline and on-highway diesel fuel prices</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec9_6.pdf" title="Table 9.4 Retail motor gasoline and on-highway diesel fuel prices"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T09.04&freq=m" title="Table 9.4 Retail motor gasoline and on-highway diesel fuel prices"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T09.04" title="Table 9.4 Retail motor gasoline and on-highway diesel fuel prices"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T09.04#/?f=M&start=200001" title="Table 9.4 Retail motor gasoline and on-highway diesel fuel prices  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">9.5</span>Refiner prices of residual fuel oil</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec9_7.pdf" title="Table 9.5 Refiner prices of residual fuel oil"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T09.05&freq=m" title="Table 9.5 Refiner prices of residual fuel oil"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T09.05" title="Table 9.5 Refiner prices of residual fuel oil"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec9_2.pdf" title="Table 9.5 Refiner prices of residual fuel oil"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T09.05#/?f=M&start=200001" title="Table 9.5 Refiner prices of residual fuel oil  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">9.6</span>Refiner prices of petroleum products for resale</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec9_8.pdf" title="Table 9.6 Refiner prices of petroleum products for resale"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T09.06&freq=m" title="Table 9.6 Refiner prices of petroleum products for resale"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T09.06" title="Table 9.6 Refiner prices of petroleum products for resale"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T09.06#/?f=M&start=200001" title="Table 9.6 Refiner prices of petroleum products for resale  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">9.7</span>Refiner prices of petroleum products to end users</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec9_9.pdf" title="Table 9.7 Refiner prices of petroleum products to end users"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T09.07&freq=m" title="Table 9.7 Refiner prices of petroleum products to end users"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T09.07" title="Table 9.7 Refiner prices of petroleum products to end users"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec9_2.pdf"><span class="ico pdf" title="Refiner prices of petroleum products to end users graph"><span>PDF
+								(graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T09.07#/?f=M&start=200001" title="Table 9.7 Refiner prices of petroleum products to end users  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">9.8</span>Average prices of electricity to ultimate customers</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec9_11.pdf" title="Table 9.8 Average prices of electricity to ultimate customers"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T09.08&freq=m" title="Table 9.8 Average prices of electricity to ultimate customers"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T09.08" title="Table 9.8 Average prices of electricity to ultimate customers"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec9_10.pdf" title="Table 9.8 Average prices of electricity to ultimate customers"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T09.08#/?f=M&start=200001" title="Table 9.8 Average prices of electricity to ultimate customers - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">9.9</span>Cost of fossil-fuel receipts at electric generating plants</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec9_13.pdf" title="Table 9.9 Cost of fossil-fuel receipts at electric generating plants"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T09.09&freq=m" title="Table 9.9 Cost of fossil-fuel receipts at electric generating plants"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T09.09" title="Table 9.9 Cost of fossil-fuel receipts at electric generating plants"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec9_12.pdf" title="Table 9.9 Cost of fossil-fuel receipts at electric generating plants"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T09.09#/?f=M&start=200001" title="Table 9.9 Cost of fossil-fuel receipts at electric generating plants  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">9.10</span>Natural gas prices</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec9_15.pdf" title="Table 9.10 Natural gas prices"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T09.10&freq=m" title="Table 9.10 Natural gas prices"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T09.10" title="Table 9.10 Natural gas prices"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec9_14.pdf" title="Table 9.10 Natural gas prices"><span class="ico pdf"><span>PDF
+								(graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T09.10#/?f=M&start=200001" title="Table 9.10 Natural gas prices  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+			</ul>
+			<ul>
+				<!-- class="numbered" -->
+				<li>Section notes</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec9_n.pdf" title="Section 9 notes"><span class="ico pdf"><span>PDF</span></span></a></li>
+			</ul>
+		</div>
+
+
+
+
+		<h3><a name="renewable"></a>Renewable energy</h3>
+
+		<div class="accordion-content">
+			<ul class="highlight">
+				<li class="head">Topic</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec10.pdf" title="entire section 10"><span class="ico pdf"><span>PDF (entire
+								section)</span></span></a></li>
+			</ul>
+			<ul class="numbered">
+				<li><span class="number">10.1</span>Production and consumption by source</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec10_3.pdf" title="Table 10.1 Production and consumption by source"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T10.01&freq=m" title="Table 10.1 Production and consumption by source"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T10.01" title="Table 10.1 Production and consumption by source"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec10_2.pdf" title="Table 10.1 Production and consumption by source"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T10.01#/?f=M&start=200001" title="Table 10.1 Production and consumption by source  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">10.2a</span>Consumption:</span> residential and commercial sectors</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec10_4.pdf" title="Table 10.2a Consumption: residential and commercial sectors"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T10.02A&freq=m" title="Table 10.2a Consumption: residential and commercial sectors"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T10.02A" title="Table 10.2a Consumption: residential and commercial sectors"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec10_2.pdf" title="Table 10.2a Consumption: residential and commercial sectors"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T10.02A#/?f=M&start=200001" title="Table 10.2a Consumption: residential and commercial sectors  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">10.2b</span>Consumption:</span> industrial sector</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec10_5.pdf" title="Table 10.2b Consumption: industrial sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T10.02B&freq=m" title="Table 10.2b Consumption: industrial sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T10.02B" title="Table 10.2b Consumption: industrial sector"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec10_2.pdf" title="Table 10.2b Consumption: industrial sector"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T10.02B#/?f=M&start=200001" title="Table 10.2b Consumption: industrial sector  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">10.2c</span>Consumption:</span> transportation and electric power sectors</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec10_6.pdf" title="Table 10.2c Consumption: transportation and electric power sectors"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T10.02C&freq=m" title="Table 10.2c Consumption: transportation and electric power sectors"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T10.02C" title="Table 10.2c Consumption: transportation and electric power sectors"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec10_2.pdf" title="Table 10.2c Consumption: transportation and electric power sectors"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T10.02C#/?f=M&start=200001" title="Table 10.2c Consumption: transportation and electric power sectors - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">10.3</span>Fuel ethanol overview</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec10_7.pdf" title="Table 10.3 Fuel ethanol overview"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T10.03&freq=m" title="Table 10.3 Fuel ethanol overview"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T10.03" title="Table 10.3 Fuel ethanol overview"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T10.03#/?f=M&start=200001" title="Table 10.3 Fuel ethanol overview  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">10.4a</span>Biodiesel overview</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec10_8.pdf" title="Table 10.4a Biodiesel overview"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T10.04A&freq=m" title="Table 10.4a Biodiesel overview"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T10.04A" title="Table 10.4a Biodiesel overview"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T10.04A#/?f=M" title="Table 10.4a Biodiesel overview - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">10.4b</span>Renewable diesel fuel overview</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec10_9.pdf" title="Table 10.4b Renewable diesel fuel overview"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T10.04B&freq=m" title="Table 10.4b Renewable diesel fuel overview"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T10.04B" title="Table 10.4b Renewable diesel fuel overview"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T10.04B#/?f=M" title="Table 10.4b Renewable diesel fuel overview  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">10.4c</span>Other biofuels overview</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec10_10.pdf" title="Table 10.4c Other biofuels overview"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T10.04C&freq=m" title="Table 10.4c Other biofuels overview"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T10.04C" title="Table 10.4c Other biofuels overview"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T10.04C#/?f=M" title="Table 10.4c Other biofuels overview  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">10.5</span>Solar energy consumption</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec10_11.pdf" title="Table 10.5 Solar energy consumption"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T10.05&amp;freq=m" title="Table 10.5 Solar energy consumption"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T10.05" title="Table 10.5 Solar energy consumption"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T10.05#/?f=M&amp;start=200001" title="Table 10.5 Solar energy consumption  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">10.6</span>Solar electricity net generation</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec10_12.pdf" title="Table 10.6 Solar electricity net generation"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T10.06&amp;freq=m" title="Table 10.6 Solar electricity net generation"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T10.06" title="Table 10.6 Solar electricity net generation"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T10.06#/?f=M&amp;start=200001" title="Table 10.6 Solar electricity net generation  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+			</ul>
+			<ul>
+				<li class="note">Notes:</li>
+				<li class="list-spacer"></li>
+				<li>Section notes</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec10_n.pdf" title="Section 10 notes"><span class="ico pdf"><span>PDF</span></span></a></li>
+				
+			</ul>
+		</div>
+
+
+
+		
+
+
+		<h3><a name="environment"></a>Environment</h3>
+		<div class="accordion-content">
+			<ul class="highlight">
+				<li class="head">Topic</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec11.pdf" title="entire section 11"><span class="ico pdf"><span>PDF (entire
+								section)</span></span></a></li>
+			</ul>
+			<ul class="numbered">
+				<li>Carbon dioxide emissions from energy consumption:</li>
+				<li class="list-spacer"></li>
+				<li><span class="number">11.1</span>By source</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec11_3.pdf" title="Table 11.1 Carbon dioxide emissions from energy consumption: By source"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T11.01&freq=m" title="Table 11.1 Carbon dioxide emissions from energy consumption: By source"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T11.01" title="Table 11.1 Carbon dioxide emissions from energy consumption: By source"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec11_2.pdf" title="Table 11.1 Carbon dioxide emissions from energy consumption: By source"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T11.01#/?f=M&start=200001" title="Table 11.1 Carbon dioxide emissions from energy consumption: By source - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">11.2</span>Residential sector</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec11_5.pdf" title="Table 11.2 Carbon dioxide emissions from energy consumption: Residential sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T11.02&freq=m" title="Table 11.2 Carbon dioxide emissions from energy consumption: Residential sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T11.02" title="Table 11.2 Carbon dioxide emissions from energy consumption: Residential sector"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec11_4.pdf" title="Table 11.2 Carbon dioxide emissions from energy consumption: Residential sector"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T11.02#/?f=M&start=200001" title="Table 11.2 Carbon dioxide emissions from energy consumption: Residential sector - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">11.3</span>Commercial sector</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec11_6.pdf" title="Table 11.3 Carbon dioxide emissions from energy consumption: Commercial sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T11.03&freq=m" title="Table 11.3 Carbon dioxide emissions from energy consumption: Commercial sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T11.03" title="Table 11.3 Carbon dioxide emissions from energy consumption: Commercial sector"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec11_4.pdf" title="Table 11.3 Carbon dioxide emissions from energy consumption: Commercial sector"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T11.03#/?f=M&start=200001" title="Table 11.3 Carbon dioxide emissions from energy consumption: Commercial sector - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">11.4</span>Industrial sector</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec11_7.pdf" title="Table 11.4 Carbon dioxide emissions from energy consumption: Industrial sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T11.04&freq=m" title="Table 11.4 Carbon dioxide emissions from energy consumption: Industrial sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T11.04" title="Table 11.4 Carbon dioxide emissions from energy consumption: Industrial sector"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec11_4.pdf" title="Table 11.4 Carbon dioxide emissions from energy consumption: Industrial sector"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T11.04#/?f=M&start=200001" title="Table 11.4 Carbon dioxide emissions from energy consumption: Industrial sector - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">11.5</span>Transportation sector</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec11_8.pdf" title="Table 11.5 Carbon dioxide emissions from energy consumption: Transportation sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T11.05&freq=m" title="Table 11.5 Carbon dioxide emissions from energy consumption: Transportation sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T11.05" title="Table 11.5 Carbon dioxide emissions from energy consumption: Transportation sector"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec11_4.pdf" title="Table 11.5 Carbon dioxide emissions from energy consumption: Transportation sector"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T11.05#/?f=M&start=200001" title="Table 11.5 Carbon dioxide emissions from energy consumption: Transportation sector - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">11.6</span>Electric power sector</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec11_9.pdf" title="Table 11.6 Carbon dioxide emissions from energy consumption: Electric power sector"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T11.06&freq=m" title="Table 11.6 Carbon dioxide emissions from energy consumption: Electric power sector"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T11.06" title="Table 11.6 Carbon dioxide emissions from energy consumption: Electric power sector"><span class="ico csv"><span>CSV</span></span></a> <a href="./pdf/sec11_4.pdf" title="Table 11.6 Carbon dioxide emissions from energy consumption: Electric power sector"><span class="ico pdf"><span>PDF (graph)</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T11.06#/?f=M&start=200001" title="Table 11.6 Carbon dioxide emissions from energy consumption: Electric power sector - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">11.7</span>Biomass</a></li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec11_10.pdf" title="Table 11.7 Carbon dioxide emissions from energy consumption: Biomass"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=T11.07&freq=m" title="Table 11.7 Carbon dioxide emissions from energy consumption: Biomass"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=T11.07" title="Table 11.7 Carbon dioxide emissions from energy consumption: Biomass"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=T11.07#/?f=M&start=200001" title="Table 11.7 Carbon dioxide emissions from energy consumption: Biomass - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+			</ul>
+			<ul>
+				<!-- class="numbered" -->
+				<li>Section notes</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec11_n.pdf" title="Section 11 notes"><span class="ico pdf"><span>PDF</span></span></a></li>
+			</ul>
+		</div>
+
+
+
+
+		<h3><a name="appendices"></a>Appendices</h3>
+		<div class="accordion-content">
+			<ul class="highlight">
+				<li class="head">Topic</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec12.pdf" title="Appendices"><span class="ico pdf"><span>PDF (entire section)</span></span></a></li>
+			</ul>
+			<ul>
+				<!-- class="numbered" -->
+				<!-- <li>Appendix A</li> -->
+				<!-- <li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/mer_A_FULL.pdf" title="Appendix A"><span class="ico pdf"><span>PDF</span></span></a></li>
+			</ul>
+
+			<ul class="numbered">
+				<li>Approximate heat content of:</li>
+				<li class="list-spacer"></li>
+				<li><span class="number">A1</span>Petroleum and biofuels</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec12_2.pdf" title="Table A1 Petroleum and biofuels"><span class="ico pdf"><span>PDF</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">A2</span>Petroleum production, imports, and exports</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec12_3.pdf" title="Table A2 Petroleum production, imports, and exports"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=TA2&freq=a" title="Table A2 Petroleum production, imports, and exports"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=TA2" title="Table A2 Petroleum production, imports, and exports"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=TA2#/?f=A&start=1991" title="Table A2 Petroleum production, imports, and exports - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">A3</span>Petroleum consumption and fuel ethanol</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec12_4.pdf" title="Table A3 Petroleum consumption and fuel ethanol"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=TA3&freq=a" title="Table A3 Petroleum consumption and fuel ethanol"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=TA3" title="Table A3 Petroleum consumption and fuel ethanol"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=TA3#/?f=A&start=1991" title="Table A3 Petroleum consumption and fuel ethanol - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">A4</span>Natural gas</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec12_5.pdf" title="Table A4 Natural gas"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=TA4&freq=a" title="Table A4 Natural gas"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=TA4" title="Table A4 Natural gas"><span class="ico csv"><span>CSV</span></span></a> <a href="/totalenergy/data/browser/index.php?tbl=TA4#/?f=A&start=1991" title="Table A4 Natural gas - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">A5</span>Coal and coal coke</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec12_6.pdf" title="Table A5 Coal and coal coke"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=TA5&freq=a" title="Table A5 Coal and coal coke"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=TA5" title="Table A5 Coal and coal coke"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=TA5#/?f=A&start=1991" title="Table A5 Coal and coal coke - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">A6</span>Approximate heat rates for electricity, and heat content of
+					electricity</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec12_7.pdf" title="Table A6 Approximate heat rates for electricity,"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=TA6&freq=a" title="Table A6 Approximate heat rates for electricity,"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=TA6" title="Table A6 Approximate heat rates for electricity,"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=TA6#/?f=A&start=1991" title="Table A6 Approximate heat rates for electricity, - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+			</ul>
+			<ul>
+				<li>Appendix A documentation</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/mer_a_doc.pdf" title="Appendix A documentation"><span class="ico pdf"><span>PDF</span></span></a></li>
+			</ul>
+			<ul class="numbered">
+				<li>Appendix B</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/mer_b.pdf" title="Appendix B"><span class="ico pdf"><span>PDF</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">B1</span>Metric conversion factors</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec12_19.pdf" title="Table B1 Metric conversion factors"><span class="ico pdf"><span>PDF</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">B2</span>Metric prefixes</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec12_20.pdf" title="Table B2 Metric prefixes"><span class="ico pdf"><span>PDF</span></span></a></li>
+				<li class="list-spacer"></li>
+				<li><span class="number">B3</span>Other physical conversion factors</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec12_20.pdf" title="Table B3 Other physical conversion factors"><span class="ico pdf"><span>PDF</span></span></a></li>
+			</ul> -->
+			<ul class="numbered">
+				<li>Appendix A</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/mer_a.pdf" title="Appendix A"><span class="ico pdf"><span>PDF</span></span></a></li>
+				<li class="list-spacer"></li>
+
+				<li><span class="number">A1</span>Population, U.S. gross domestic product, and U.S. gross output</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> 
+				<a href="./pdf/sec12_2.pdf" title="Table A1 Population, U.S. gross domestic product, and U.S. gross output"><span class="ico pdf"><span>PDF</span></span></a> 
+				<a href="/totalenergy/data/browser/xls.php?tbl=TA1&freq=a" title="Table A1 Population, U.S. gross domestic product, and U.S. gross output"><span class="ico xls"><span>XLS</span></span></a> 
+				<a href="/totalenergy/data/browser/csv.php?tbl=TA1" title="Table A1 Population, U.S. gross domestic product, and U.S. gross output"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span>
+				<a href="/totalenergy/data/browser/index.php?tbl=TA1#/?f=A&start=1991" title="Table A1 Population, U.S. gross domestic product, and U.S. gross output  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+			</ul>
+
+			<ul class="numbered">
+				<li>Appendix B</li>
+				<li><span class="number"></span>
+				<span class="formats">Available formats:</span> <a href="./pdf/mer_b.pdf" title="Appendix B"><span class="ico pdf"><span>PDF</span></span></a></li>
+				<li class="list-spacer"></li>
+
+				<li><span class="number">B1</span>Primary Energy Overview, Fossil Fuel Equivalency Approach</li>
+				<li><span class="number"></span>
+				<span class="formats">Available formats:</span> <a href="./pdf/sec12_6.pdf" title="Table B1 Primary Energy Overview, Fossil Fuel Equivalency Approach"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=TB1&amp;freq=a" title="Table B1 Primary Energy Overview, Fossil Fuel Equivalency Approach"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=TB1" title="Table B1 Primary Energy Overview, Fossil Fuel Equivalency Approach"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=TB1#/?f=A&amp;start=1991" title="Table B1 Primary Energy Overview, Fossil Fuel Equivalency Approach  -  View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+
+				<li><span class="number">B2</span>Primary Energy Production by Source, Fossil Fuel Equivalency Approach</li>
+				<li><span class="number"></span>
+				<span class="formats">Available formats:</span> <a href="./pdf/sec12_7.pdf" title="Table B2 Primary Energy Production by Source, Fossil Fuel Equivalency Approach"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=TB2&amp;freq=a" title="Table B2 Primary Energy Production by Source, Fossil Fuel Equivalency Approach"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=TB2" title="Table B2 Primary Energy Production by Source, Fossil Fuel Equivalency Approach"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=TB2#/?f=A&amp;start=1991" title="Table B2 Primary Energy Production by Source, Fossil Fuel Equivalency Approach - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+
+				<li><span class="number">B3</span>Primary Energy Consumption by Source, Fossil Fuel Equivalency Approach</li>
+				<li><span class="number"></span>
+				<span class="formats">Available formats:</span> <a href="./pdf/sec12_8.pdf" title="Table B3 Primary Energy Consumption by Source, Fossil Fuel Equivalency Approach"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=TB3&amp;freq=a" title="Table B3 Primary Energy Consumption by Source, Fossil Fuel Equivalency Approach"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=TB3" title="Table B3 Primary Energy Consumption by Source, Fossil Fuel Equivalency Approach"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=TB3#/?f=A&amp;start=1991" title="Table B3 Primary Energy Consumption by Source, Fossil Fuel Equivalency Approach - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+				<li class="list-spacer"></li>
+
+				<li><span class="number">B4</span>Renewable Energy Production and Consumption by Source, Fossil Fuel Equivalency Approach</li>
+				<li><span class="number"></span>
+				<span class="formats">Available formats:</span> <a href="./pdf/sec12_9.pdf" title="Table B4 Renewable Energy Production and Consumption by Source, Fossil Fuel Equivalency Approach"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=TB4&amp;freq=a" title="Table B4 Renewable Energy Production and Consumption by Source, Fossil Fuel Equivalency Approach"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=TB4" title="Table B4 Renewable Energy Production and Consumption by Source, Fossil Fuel Equivalency Approach"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span><a href="/totalenergy/data/browser/index.php?tbl=TB4#/?f=A&amp;start=1991" title="Table B4 Renewable Energy Production and Consumption by Source, Fossil Fuel Equivalency Approach - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+			</ul>
+			<ul class="numbered">
+				<li>Appendix B documentation</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec12_28.pdf" title="Appendix B documentation"><span class="ico pdf"><span>PDF</span></span></a></li>
+			</ul>
+			<ul class="numbered">
+				<li>Appendix C</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/mer_C_FULL.pdf" title="Appendix C"><span class="ico pdf"><span>PDF</span></span></a></li>
+				<li class="list-spacer"></li>
+
+				<li><span class="number">C1</span>Electric Vehicle Charging Infrastructure</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec12_12.pdf" title="Table C1. Electric Vehicle Charging Infrastructure"><span class="ico pdf"><span>PDF</span></span></a> <a href="/totalenergy/data/browser/xls.php?tbl=TC1&amp;freq=a" title="Table C1. Electric Vehicle Charging Infrastructure"><span class="ico xls"><span>XLS</span></span></a> <a href="/totalenergy/data/browser/csv.php?tbl=TC1" title="Table C1. Electric Vehicle Charging Infrastructure"><span class="ico csv"><span>CSV</span></span></a><span class="pipe">|</span> <a href="/totalenergy/data/browser/index.php?tbl=TC1#/?f=A&amp;start=2015" title="Table C1. Electric Vehicle Charging Infrastructure  - View in Total Energy Browser"><span class="ico interactive"><span>Interactive</span></span></a></li>
+			</ul>
+			<ul class="numbered">
+				<li>Appendix C microdata file</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./full_data_MER.zip" title="Appendix C microdata file"><span class="ico zip"><span>ZIP</span></span></a></li>
+				<li class="list-spacer"></li>
+
+				<li>Appendix C monthly state file</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./State_data_MER.xlsx" title="Appendix C monthly state file"><span class="ico xls"><span>XLS</span></span></a></li>
+				<li class="list-spacer"></li>
+
+				<li>Appendix C documentation</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/MER_C_DOC.pdf" title="Appendix C documentation"><span class="ico pdf"><span>PDF</span></span></a></li>
+			</ul>
+		</div>
+		<!-- <h3><a name="Glossary"></a>Glossary</h3>
+		<div class="accordion-content">
+			<ul>
+				<li class="head">Glossary</li>
+				<li><span class="number"></span><span class="formats">Available formats:</span> <a href="./pdf/sec13.pdf" title="Glossary"><span class="ico pdf"><span>PDF</span></span></a></li>
+			</ul>
+		</div> -->
+	</div>
+
+
+	<ul>
+		<li class="foot"><a href="/about/contact/totalenergy.php">Total Energy Experts</a></li>
+	</ul>
+</div>      </div>
+            <div class="l-col">
+<!--<div class="secondary">
+
+	<ul>
+		<li class="head">
+			<h2>Upcoming changes</h2>
+		</li>
+		<li>
+			<ul>
+				<li>Beginning with the September 2023 <em>Monthly Energy Review </em>(MER), we are calculating
+					consumption of noncombustible renewable energy for electricity generation using the
+					<a href="/totalenergy/data/monthly/change/">captured energy approach</a>.
+				</li>
+			</ul>
+	</ul>
+</div>-->
+
+
+<div class="secondary">
+
+	<ul>
+		<li class="head">
+			<h2>Changes this month</h2>
+		</li>
+
+		<li>
+			<!--  No data updates --------------------------------------------------------------------- -->
+			<!-- <ul>
+				<li>Data updates</li>
+				<li><a href="/totalenergy/data/monthly/whatsnew.php">See list of previous changes</a></li>
+			</ul> -->
+
+			<!-- -------------------------------------------------------------------------------------- -->
+
+			<!-- Data updates ------------------------------------------------------------------------- -->
+			<ul>
+				<li>We moved the MER Glossary. The <a href="https://www.eia.gov/tools/glossary/">EIA glossary</a> has answers to your questions about energy terminology.</li>
+				<li>We moved the British thermal unit conversion factors (Appendix A) and <em>Metric conversion factors, metric prefixes, and other physical conversion factors</em> (Appendix B) to a dedicated <a href="http://www.eia.gov/totalenergy/conversion/factors/">conversion factor table</a>.</li>
+				<li>We moved <em>Estimated primary energy consumption in the United States, Selected Years, 1635-1945</em> (Appendix D). You can find these data in a <a href="https://www.eia.gov/energyexplained/us-energy-facts/estimated-consumption-1635-1945.php">special report</a>.</li>
+				<li>We moved the legacy appendices in Electricity and Renewable energy to the <a href="https://www.eia.gov/totalenergy/data/monthly/pdf/sec7_n.pdf">section notes</a>: <em>Electric vehicle consumption; Estimating monthly 1989-2000 data for generation, consumption, and stocks; Estimating and presenting power sector fuel use in EIA publications and analyses; and Methodology for allocating municipal solid waste to biogenic and non-biogenic energy</em>.</li>
+			</ul>
+
+			<ul>
+				<li>Data updates</li>
+				<li><a href="/totalenergy/data/monthly/whatsnew.php">See list of previous changes</a></li>
+			</ul> 
+
+			<!-- -------------------------------------------------------------------------------------- -->
+			
+		</li>
+	</ul>
+</div>
+
+<div class="secondary-alt">
+	<ul>
+		<li class="head">
+			<h2>Diagrams</h2>
+		</li>
+		<li class="sub-head">Energy flows 2025</li>
+		<li class="list-spacer"><a href="/totalenergy/data/flow-graphs/total-energy.php"><img src="/totalenergy/data/monthly/pdf/flow/total-energy-2025.png" alt="Total Energy diagram image"></a></li>
+		<li>
+			<ul>
+				<li><a href="/totalenergy/data/flow-graphs/total-energy.php">Total energy</a></li>
+				<li><a href="/totalenergy/data/flow-graphs/petroleum.php">Petroleum</a></li>
+				<li><a href="/totalenergy/data/flow-graphs/natural-gas.php">Natural gas</a></li>
+				<li><a href="/totalenergy/data/flow-graphs/coal.php">Coal</a></li>
+				<li><a href="/totalenergy/data/flow-graphs/electricity.php">Electricity</a></li>
+			</ul>
+		</li>
+		<li class="sub-head">Energy consumption by source and sector 2025</li>
+
+		<li><a href="/totalenergy/data/monthly/pdf/flow/total_energy_spaghettichart.pdf"><img src="/totalenergy/data/monthly/pdf/flow/css_2025.png" alt="Consumption by Source and Sector diagram image"></a></li>
+		
+		<ul>
+		<li class="list-spacer ico pdf"><a href="/totalenergy/data/monthly/pdf/flow/total_energy_spaghettichart.pdf">Total
+					energy</a></li>
+			<!--<li class="list-spacer ico pdf"><a href="/totalenergy/data/monthly/pdf/flow/total_energy_sankey_2023.pdf">Total
+					energy Sankey</a></li> -->
+			<li class="list-spacer ico pdf"><a href="/totalenergy/data/monthly/pdf/flow/fossil_fuel_spaghettichart.pdf">Fossil
+					fuels</a></li>
+			<li class="list-spacer ico pdf"><a href="/totalenergy/data/monthly/pdf/flow/petroleum_spaghettichart.pdf">Petroleum
+					products</a>
+			</li>
+			<li class="list-spacer ico pdf"><a
+					href="/totalenergy/data/monthly/pdf/flow/renewable_spaghettichart.pdf">Renewable energy</a>
+			</li>
+			<li class="list-spacer ico pdf"><a
+					href="/totalenergy/data/monthly/pdf/flow/CO2_spaghettichart.pdf">CO<sub>2</sub>
+					emissions</a></li>
+			<li><a href="/totalenergy/data/annual/archive/energyflow.php">Archive of energy flow and consumption
+					diagrams</a></li>
+
+		</ul>
+	</ul>
+</div>
+
+<div class="secondary">
+	<ul>
+	<li class="head">
+	<h2>Related analysis</h2>
+	</li>
+	<p><a href="../../emissions/co2/harmonization/">EIA-EPA energy-related CO<sub>2</sub> emissions harmonization </a>
+	</p> 
+	</ul>
+</div>      </div>
+    </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+	<div class="footer-inner">
+		<div class="l-row  l-two-col-right address-bar">
+			<div class="l-col">
+				<ul class="above-address-links">
+					<li><a href="/about/">About EIA</a><span class="right-arrow-head"></span></li>
+					<li><a href="/beta/api/">Open Data</a><span class="right-arrow-head"></span></li>
+					<li><a href="/reports/legacy/">Legacy</a><span class="right-arrow-head"></span></li>
+					<li><a href="/about/contact/">Contact Us</a><span class="right-arrow-head"></span></li>
+				</ul>
+			</div>
+			<div class="l-col">
+				<div>U.S. Energy Information Administration</div>
+				<div>1000 Independence Ave., SW</div>
+				<div>Washington, DC 20585</div>
+			</div>
+		</div>
+		<div class="footer-links">
+			<!-- col 1 -->
+			<div>Policies</div>
+			<div><a href="/about/privacy_security_policy.php">Privacy/Security</a></div>
+			<div><a href="/about/copyrights_reuse.php">Copyright &amp; Reuse</a></div>
+			<div><a href="/about/accessibility.php">Accessibility</a></div>
+			<!-- col 2 -->
+			<div><a href="/about/information_quality_guidelines.php">Information Quality</a></div>
+			<div><a href="/about/foia.php">Freedom of Information Act (FOIA)</a></div>
+			<!-- col 3 -->
+			<div>Related Sites</div>
+			<div><a href="https://www.usa.gov/">usa.gov</a></div>
+			<div><a href="https://www.energy.gov/">U.S. Department of Energy</a></div>
+			<!-- col 4 -->
+			<div>Stay Connected</div>
+			<div><a href="http://facebook.com/eiagov/" target="_blank"><span class="ico-footer facebook"></span>Facebook</a></div>
+			<div><a href="http://x.com/eiagov/" target="_blank"><span class="ico-footer twitter"></span>X</a></div>
+			<!-- col 5 -->
+			<div><a href="http://youtube.com/eiagov/" target="_blank"><span class="ico-footer youtube"></span>Youtube</a></div>
+			<div><a href="http://linkedin.com/company/u-s-energy-information-administration" target="_blank"><span class="ico-footer linkedin"></span>LinkedIn</a></div>
+			<!-- col 6 -->
+			<div><a href="/tools/emailupdates/" target="_blank"><span class="ico-footer email"></span>Email Updates</a></div>
+			<div><a href="/tools/rssfeeds/" target="_blank"><span class="ico-footer rss"></span>RSS Feeds</a></div>
+		</div>
+	</div>
+</footer>
+<div class="mega-menu-overlay">
+	<div class="mega-menu">
+		<button type="button" class="close" tabindex="0"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-dialog-header-close-icon p-icon" aria-hidden="true">
+				<path d="M8.01186 7.00933L12.27 2.75116C12.341 2.68501 12.398 2.60524 12.4375 2.51661C12.4769 2.42798 12.4982 2.3323 12.4999 2.23529C12.5016 2.13827 12.4838 2.0419 12.4474 1.95194C12.4111 1.86197 12.357 1.78024 12.2884 1.71163C12.2198 1.64302 12.138 1.58893 12.0481 1.55259C11.9581 1.51625 11.8617 1.4984 11.7647 1.50011C11.6677 1.50182 11.572 1.52306 11.4834 1.56255C11.3948 1.60204 11.315 1.65898 11.2488 1.72997L6.99067 5.98814L2.7325 1.72997C2.59553 1.60234 2.41437 1.53286 2.22718 1.53616C2.03999 1.53946 1.8614 1.61529 1.72901 1.74767C1.59663 1.88006 1.5208 2.05865 1.5175 2.24584C1.5142 2.43303 1.58368 2.61419 1.71131 2.75116L5.96948 7.00933L1.71131 11.2675C1.576 11.403 1.5 11.5866 1.5 11.7781C1.5 11.9696 1.576 12.1532 1.71131 12.2887C1.84679 12.424 2.03043 12.5 2.2219 12.5C2.41338 12.5 2.59702 12.424 2.7325 12.2887L6.99067 8.03052L11.2488 12.2887C11.3843 12.424 11.568 12.5 11.7594 12.5C11.9509 12.5 12.1346 12.424 12.27 12.2887C12.4053 12.1532 12.4813 11.9696 12.4813 11.7781C12.4813 11.5866 12.4053 11.403 12.27 11.2675L8.01186 7.00933Z" fill="currentColor"></path>
+			</svg></button>
+		<div class="topic-selectors">
+			<div class="topic-selector topic-selector-1" data-topic="topic-1" data-topic-selector="inactive">Statistics</div>
+			<div class="topic-selector topic-selector-2" data-topic="topic-2" data-topic-selector="inactive">Analysis</div>
+			<div class="topic-selector topic-selector-3" data-topic="topic-3" data-topic-selector="inactive">Tools</div>
+			<div class="topic-selector topic-selector-4" data-topic="topic-4" data-topic-selector="inactive">Education</div>
+			<div class="topic-selector topic-selector-5" data-topic="topic-5" data-topic-selector="inactive">News</div>
+		</div>
+		<div class="topics">
+			<div class="topic topic-1" data-topic-panel="inactive">
+				<div class="column">
+					<div class="petroleum">
+						<span class="ico-menu petroleum-icon"></span>
+						<span>
+							<h3>
+								<a href="/petroleum/" title="Petroleum & Other Liquids">Petroleum &amp; Other Liquids</a>
+							</h3>
+							<p>Crude oil, gasoline, heating oil, diesel, propane, and other liquids including biofuels and natural gas liquids.</p>
+						</span>
+					</div>
+					<div class="natural-gas">
+						<span class="ico-menu natural-gas-icon"></span>
+						<span>
+							<h3>
+								<a href="/naturalgas/" title="Natural Gas">Natural Gas</a>
+							</h3>
+							<p>Exploration and reserves, storage, imports and exports, production, prices, sales.</p>
+						</span>
+					</div>
+
+					<div class="electricity">
+						<span class="ico-menu electricity-icon"></span>
+						<span>
+							<h3>
+								<a href="/electricity/" title="Electricity">Electricity</a>
+							</h3>
+							<p>Sales, revenue and prices, power plants, fuel use, stocks, generation, trade, demand &amp; emissions.</p>
+						</span>
+					</div>
+					<div class="coal">
+						<span class="ico-menu coal-icon"></span>
+						<span>
+							<h3>
+								<a href="/coal/" title="Coal">Coal</a>
+							</h3>
+							<p>Reserves, production, prices, employment and productivity, distribution, stocks, imports and exports.</p>
+						</span>
+					</div>
+					<div class="nuclear">
+						<span class="ico-menu nuclear-icon"></span>
+						<span>
+							<h3>
+								<a href="/nuclear/" title="Nuclear & Uranium">Nuclear &amp; Uranium</a>
+							</h3>
+							<p>Uranium fuel, nuclear reactors, generation, spent fuel.</p>
+						</span>
+					</div>
+
+					<div class="renewable">
+						<span class="ico-menu renewable-icon"></span>
+						<span>
+							<h3>
+								<a href="/renewable/" title="Renewable & Alternative Fuels">Renewable &amp; Alternative Fuels</a>
+							</h3>
+							<p>Includes hydropower, solar, wind, geothermal, biomass and ethanol.</p>
+						</span>
+					</div>
+
+					<div class="survey-forms">
+						<span class="ico-menu survey-forms-icon"></span>
+						<span>
+							<h3>
+								<a href="/survey/" title="EIA Survey Forms">EIA Survey Forms</a>
+							</h3>
+							<p>Forms EIA uses to collect energy data including descriptions, links to survey instructions, and additional information.</p>
+													</span>
+					</div>
+
+				</div>
+				<div class="column">
+
+					<div class="total-energy">
+						<span class="ico-menu total-energy-icon"></span>
+						<span>
+							<h3>
+								<a href="/totalenergy/" title="Total Energy">Total Energy</a>
+							</h3>
+							<p>Comprehensive data summaries, comparisons, analysis, and projections integrated across all energy sources.</p>
+							<ul>
+								<li>
+									<a href="/totalenergy/data/monthly/" title="Monthly Energy Review">Monthly Energy Review</a>
+								</li>
+								<!--li>
+										<a href="/totalenergy/data/annual/" title="Annual Energy Review">Annual Energy Review</a>
+									</li-->
+							</ul>
+						</span>
+					</div>
+
+					<div class="consumption">
+						<span class="ico-menu consumption-icon"></span>
+						<span>
+							<h3>
+								<a href="/consumption/" title="Consumption & Efficiency">Consumption &amp; Efficiency</a>
+							</h3>
+							<p>Energy use in homes, commercial buildings, manufacturing, and transportation.</p>
+							<ul>
+								<li>
+									<a href="/consumption/residential/" title="Residential Energy Consumption Survey (RECS)">Residential Energy Consumption Survey (RECS)</a>
+								</li>
+								<li>
+									<a href="/consumption/commercial/" title="Commercial Buildings Energy Consumption Survey (CBECS)">Commercial Buildings Energy Consumption Survey (CBECS)</a>
+								</li>
+								<li>
+									<a href="/consumption/manufacturing/" title="Manufacturing Energy Consumption Survey (MECS)">Manufacturing Energy Consumption Survey (MECS)</a>
+								</li>
+							</ul>
+						</span>
+					</div>
+
+					<div class="states">
+						<span class="ico-menu states-icon"></span>
+						<span>
+							<h3>
+								<a href="/states/" title="U.S. States">U.S. States</a>
+							</h3>
+							<p>State energy information, including overviews, rankings, data, and analyses.</p>
+							<!--ul>
+									<li>
+										<a href="/state/seds/" title="State Energy Data System (SEDS)">State Energy Data System (SEDS)</a>
+									</li>
+								</ul-->
+						</span>
+					</div>
+					<div class="international">
+						<span class="ico-menu international-icon"></span>
+						<span>
+							<h3>
+								<a href="/international/" title="International">International</a>
+							</h3>
+							<p>International energy information, including overviews, rankings, data, and analyses.</p>
+							<!--ul>
+									<li>
+										<a href="/international/data/browser/" title="International Energy Statistics">International Energy Statistics</a>
+									</li>
+								</ul-->
+						</span>
+					</div>
+
+					<div class="environment">
+						<span class="ico-menu environment-icon"></span>
+						<span>
+							<h3>
+								<a href="/environment/" title="Environment">Environment</a>
+							</h3>
+							<p>Greenhouse gas data, voluntary reporting, electric power plant emissions.</p>
+							<ul>
+								<li><a href="/environment/emissions/carbon/" title="U.S. Energy-Related Carbon Dioxide Emissions">U.S. Energy-Related Carbon Dioxide Emissions</a></li>
+								<!-- li><a href="/environment/emissions/state/analysis/" title="Energy-Related Carbon Dioxide Emissions at the State Level, 2005-2016">Energy-Related Carbon Dioxide Emissions at the State Level, 2005-2016</a></li -->
+								<li><a href="/environment/emissions/state/" title="Energy-Related Carbon Dioxide Emissions at the State Level">Energy-Related Carbon Dioxide Emissions at the State Level</a></li>
+							</ul>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="topic topic-2" data-topic-panel="inactive">
+				<div class="column">
+					<div>
+						<span class="ico-menu analysis-projections-icon"></span>
+						<span>
+							<h3>
+								<a href="/analysis/" title="Analysis">Analysis and Projections</a>
+							</h3>
+							<p>Monthly and yearly energy forecasts, analysis of energy topics, financial analysis, congressional reports.</p>
+							<ul>
+								<li>
+									<a href="/outlooks/steo/" title="Short-Term Energy Outlook">Short-Term Energy Outlook</a>
+								</li>
+								<li>
+									<a href="/outlooks/aeo/" title="Annual Energy Outlook">Annual Energy Outlook</a>
+								</li>
+							</ul>
+						</span>
+					</div>
+
+					<div>
+						<span class="ico-menu markets-finance-icon"></span>
+						<span>
+							<h3>
+								<!--Special Reports-->
+								<a href="/reports/#T138" title="Special Reports">Special Reports</a>
+							</h3>
+							<p>Special market analysis and/or data requests.</p>
+							<ul>
+								<li>
+									<a href="/analysis/requests/residential/utility/" title="Residential Utility Disconnections Report">EIA-112 Residential Utility Disconnections</a>
+								</li>
+								<li>
+									<a href="/international/analysis/special-topics/SHIP_Act" title="SHIP Act">SHIP Act</a>
+								</li>
+								<li>
+									<a href="/finance/markets/crudeoil/" title="Energy & Financial Markets: What Drives Crude Oil Prices?">Energy &amp; Financial Markets: What Drives Crude Oil Prices?</a>
+								</li>
+							</ul>
+						</span>
+					</div>
+				</div>
+
+				<div class="column">
+					<div class="international">
+						<span class="ico-menu international-icon"></span>
+						<span>
+							<h3>
+								<a href="/international/" title="International">International</a>
+							</h3>
+							<p>International energy analyses.</p>
+							<ul>
+								<li>
+									<a href="/international/analysis/world" title="Regional Analysis Briefs">Regional Analysis Briefs</a>
+								</li>
+								<li>
+									<a href="/international/analysis/world" title="Country Analysis Briefs">Country Analysis Briefs</a>
+								</li>
+								<li>
+									<a href="/international/analysis/special-topics/World_Oil_Transit_Chokepoints" title="World Oil Transit Chokepoints">World Oil Transit Chokepoints</a>
+								</li>
+								<li>
+									<a href="/international/analysis/special-topics/OPEC_Revenues_Fact_Sheet" title="OPEC Revenue">OPEC Revenue</a>
+								</li>
+
+								<li>
+									<a href="/outlooks/steo/report/energysecurity/article.php" title="Global Energy Security data">Global Energy Security Data</a>
+								</li>
+
+							</ul>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="topic topic-3" data-topic-panel="inactive">
+				<div class="column">
+					<!--div class="eia-glossary">
+									<span class="ico-menu eia-glossary-icon"></span>
+									<span>
+										<h3>
+											<a href="/tools/glossary/" title="Glossary">Glossary</a>
+										</h3>
+										<div class="form-wrapper">
+    <form action="/tools/glossary/index.php" method="post" name="frmGlossary">
+        <input class="fancy-search-box" name="glossary" placeholder="Search the glossary" onfocus="this.placeholder=''" onblur="this.placeholder='Search the glossary'"
+            type="text" />
+        <button class="search-submit"></button>
+    </form>
+</div>								</div-->
+					<div class="data-tools-model">
+						<span class="ico-menu data-tools-model-icon"></span>
+						<span>
+							<h3>
+								<a href="/tools/" title="Data Tools, Apps, & Maps">Data Tools, Apps, &amp; Maps</a>
+							</h3>
+							<p>Tools to customize searches, view specific data sets, study detailed documentation, and access time-series data.</p>
+						</span>
+					</div>
+					<div class="open-data">
+						<span class="ico-menu open-data-icon"></span>
+						<span>
+							<h3>
+								<a href="/opendata/" title="Open Data">Open Data</a>
+							</h3>
+							<p>EIA's free and open data available as API, Excel add-in, bulk files, and widgets</p>
+						</span>
+					</div>
+					<div class="beta">
+						<span class="ico-menu beta-icon"></span>
+						<span>
+							<h3>
+								<a href="/beta" title="EIA Beta">EIA Beta</a>
+							</h3>
+							<p>Come test out some of the products still in development and let us know what you think!</p>
+						</span>
+					</div>
+					<div class="open-source-code">
+						<span class="ico-menu open-source-code-icon"></span>
+						<span>
+							<h3>
+								<a href="/tools/open-source-code/" title="Open Source Code">Open Source Code</a>
+							</h3>
+							<p>EIA's open source code, available on GitHub.</p>
+						</span>
+					</div>
+				</div>
+				<div class="column">
+					<div class="reports">
+						<span class="ico-menu reports-icon"></span>
+						<span>
+							<h3>
+								<a href="/reports/" title="All Reports & Products">All Reports &amp; Products</a>
+							</h3>
+							<div id="header-tag-search" class="reports-publication-search form-wrapper">
+	<form id="header-bookshelf-search-form">
+		<input type="text" class="fancy-search-box" value="" tabindex="-1" placeholder="Enter tags. Tags should be separated with the + character" onfocus="this.placeholder=''" onblur="this.placeholder='Enter tags. Tags should be separated with the + character'" />
+		<button class="search-submit" id="goBtn"></button>
+		<div id="header-tags-search" class="tags-search">
+			<ul class="bookshelftags"></ul>
+		</div>
+	</form>
+</div>
+
+
+
+
+
+						</span>
+					</div>
+					<!--div class="survey-forms">
+									<span class="ico-menu survey-forms-icon"></span>
+									<span>
+										<h3>
+											<a href="/survey/" title="EIA Survey Forms">EIA Survey Forms</a>
+										</h3>
+										<p>Forms EIA uses to collect energy data including descriptions, links to survey instructions, and additional information.</p>
+																			</span>
+								</div-->
+					<div class="email-complex">
+						<span class="ico-menu email-complex-icon"></span>
+						<span>
+							<h3>
+								<a href="/tools/emailupdates/" title="Email Updates">Email Updates</a>
+							</h3>
+							<p>Sign up for email subscriptions to receive messages about specific EIA products</p>
+						</span>
+					</div>
+					<div class="rss-complex">
+						<span class="ico-menu rss-complex-icon"></span>
+						<span>
+							<h3>
+								<a href="/tools/rssfeeds/" title="RSS Feeds">RSS Feeds</a>
+							</h3>
+							<p>Subscribe to feeds for updates on EIA products including Today in Energy and What's New.</p>
+						</span>
+					</div>
+					<div class="follow-us">
+						<span class="ico-menu follow-us-icon"></span>
+						<span>
+							<h3>Follow us. . .</h3>
+							<p>
+								<a href="http://facebook.com/eiagov/" title="facebook" target="_blank">
+									<span class="ico-menu facebook"></span>
+								</a>
+								<a href="http://x.com/eiagov/" title="twitter" target="_blank">
+									<span class="ico-menu twitter"></span>
+								</a>
+								<a href="http://youtube.com/eiagov/" title="youtube" target="_blank">
+									<span class="ico-menu youtube"></span>
+								</a>
+								<!--a href="https://www.flickr.com/photos/eiagov/" title="flickr">
+                                            <span class="ico-menu flickr"></span>
+                                        </a-->
+								<a href="https://www.linkedin.com/company/u-s-energy-information-administration" title="linkedin">
+									<span class="ico-menu linkedin"></span>
+								</a>
+							</p>
+						</span>
+
+					</div>
+				</div>
+				<div class="a-z-bottom" style="--d: 280ms;">
+	<div class="nav-menu a-z-index">
+		<span class="ico-menu a-z-index-icon"></span>
+		<span>
+			<h3>
+				<a href="/tools/a-z/" title="A-Z Index">A-Z Index</a>
+			</h3>
+			<div class="a-z-list">
+				<a href="/tools/a-z/index.php?id=a" title="A">A</a> |
+				<a href="/tools/a-z/index.php?id=b" title="B">B</a> |
+				<a href="/tools/a-z/index.php?id=c" title="C">C</a> |
+				<a href="/tools/a-z/index.php?id=d" title="D">D</a> |
+				<a href="/tools/a-z/index.php?id=e" title="E">E</a> |
+				<a href="/tools/a-z/index.php?id=f" title="F">F</a> |
+				<a href="/tools/a-z/index.php?id=g" title="G">G</a> |
+				<a href="/tools/a-z/index.php?id=h" title="H">H</a> |
+				<a href="/tools/a-z/index.php?id=i" title="I">I</a> |
+				<a href="/tools/a-z/index.php?id=j" title="J">J</a> |
+				<a href="/tools/a-z/index.php?id=k" title="K">K</a> |
+				<a href="/tools/a-z/index.php?id=l" title="L">L</a> |
+				<a href="/tools/a-z/index.php?id=m" title="M">M</a> |
+				<a href="/tools/a-z/index.php?id=n" title="N">N</a> |
+				<a href="/tools/a-z/index.php?id=o" title="O">O</a> |
+				<a href="/tools/a-z/index.php?id=p" title="P">P</a> |
+				<a href="/tools/a-z/index.php?id=q" title="Q">Q</a> |
+				<a href="/tools/a-z/index.php?id=r" title="R">R</a> |
+				<a href="/tools/a-z/index.php?id=s" title="S">S</a> |
+				<a href="/tools/a-z/index.php?id=t" title="T">T</a> |
+				<a href="/tools/a-z/index.php?id=u" title="U">U</a> |
+				<a href="/tools/a-z/index.php?id=v" title="V">V</a> |
+				<a href="/tools/a-z/index.php?id=w" title="W">W</a> |
+				<a href="/tools/a-z/index.php?id=xyz" title="XYZ">XYZ</a>
+			</div>
+		</span> 
+	</div>
+</div>			</div>
+			<div class="topic topic-4" data-topic-panel="inactive">
+				<div class="column">
+					<!--div class="today-in-energy">
+									<span class="ico-menu today-in-energy-icon"></span>
+									<span>
+										<h3>
+											<a href="/todayinenergy/" title="Today in Energy">Today in Energy</a>
+										</h3>
+										<p>Short, timely articles with graphics on energy, facts, issues, and trends.</p>
+									</span>
+								</div-->
+					<div>
+						<span class="ico-menu energy-explained-icon"></span>
+						<span style="width: 100%;">
+							<h3>
+								<a href="/energyexplained/" title="Energy Explained">Energy Explained</a>
+							</h3>
+							<div class="temporary-class">
+								<ul class="energy-explained-list left">
+									<li>
+										<a href="/energyexplained/what-is-energy/" title="What is Energy?">What is Energy?</a>
+									</li>
+									<li>
+										<a href="/energyexplained/units-and-calculators/" title="Units & Calculators">Units &amp; Calculators</a>
+									</li>
+									<li>
+										<a href="/energyexplained/us-energy-facts/" title="U.S. Energy Facts">U.S. Energy Facts</a>
+									</li>
+									<li>
+										<a href="/energyexplained/use-of-energy/" title="Use of Energy">Use of Energy</a>
+									</li>
+									<li>
+										<a href="/energyexplained/energy-and-the-environment/" title="Energy & Environment">Energy &amp; Environment</a>
+									</li>
+									<li>
+										<a href="/energyexplained/oil-and-petroleum-products/" title="Petroleum">Petroleum</a>
+									</li>
+									<li>
+										<a href="/energyexplained/hydrocarbon-gas-liquids/" title="Hydrocarbon Gas Liquids">Hydrocarbon Gas Liquids</a>
+									</li>
+									<li>
+										<a href="/energyexplained/natural-gas/" title="Natural Gas">Natural Gas</a>
+									</li>
+								</ul>
+								<ul class="energy-explained-list right">
+									<li>
+										<a href="/energyexplained/coal/" title="Coal">Coal</a>
+									</li>
+									<li>
+										<a href="/energyexplained/nuclear/" title="Nuclear">Nuclear</a>
+									</li>
+									<li>
+										<a href="/energyexplained/electricity/" title="Electricity">Electricity</a>
+									</li>
+									<li>
+										<a href="/energyexplained/hydrogen/" title="Hydrogen">Hydrogen</a>
+									</li>
+									<li>
+										<a href="/energyexplained/hydropower/" title="Hydropower">Hydropower</a>
+									</li>
+									<li>
+										<a href="/energyexplained/biofuels/" title="Biofuels">Biofuels</a>
+									</li>
+									<li>
+										<a href="/energyexplained/biomass/" title="Biomass">Biomass</a>
+									</li>
+									<li>
+										<a href="/energyexplained/wind/" title="Wind">Wind</a>
+									</li>
+									<li>
+										<a href="/energyexplained/geothermal/" title="Geothermal">Geothermal</a>
+									</li>
+									<li>
+										<a href="/energyexplained/solar/" title="Solar">Solar</a>
+									</li>
+								</ul>
+							</div>
+						</span>
+					</div>
+					<div class="teachers">
+						<span class="ico-menu teachers-icon"></span>
+						<span>
+							<h3>
+								<a href="/kids/energy.php?page=6" title="For Teachers">For Teachers</a>
+							</h3>
+							<p>Lesson plans, science fair experiments, field trips, teacher guide, and career corner.</p>
+						</span>
+					</div>
+				</div>
+				<div class="column">
+					<div class="eia-glossary">
+						<span class="ico-menu eia-glossary-icon"></span>
+						<span>
+							<h3>
+								<a href="/tools/glossary/" title="Glossary">Glossary</a>
+							</h3>
+							<div class="form-wrapper">
+    <form action="/tools/glossary/index.php" method="post" name="frmGlossary">
+        <input class="fancy-search-box" name="glossary" placeholder="Search the glossary" onfocus="this.placeholder=''" onblur="this.placeholder='Search the glossary'"
+            type="text" />
+        <button class="search-submit"></button>
+    </form>
+</div>						</span>
+					</div>
+					<div>
+						<span class="ico-menu faq-icon"></span>
+						<span style="width: 100%">
+							<h3>
+								<a href="/tools/faqs/" title="FAQs">FAQs</a>
+							</h3>
+							<div class="temporary-class">
+								<ul class="faq-list left">
+									<li>
+										<a href="/tools/faqs/#coal" title="Coal">Coal</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/#conversion equivalents" title="Conversion & Equivalents">Conversion &amp; Equivalents</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/index.php#oil/petroleum" title="Oil/Petroleum">Oil/Petroleum</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/#diesel" title="Diesel">Diesel</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/#electricity" title="Electricity">Electricity</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/#environment" title="Environment">Environment</a>
+									</li>
+								</ul>
+								<ul class="faq-list right">
+									<li>
+										<a href="/tools/faqs/index.php#gasoline" title="Gasoline">Gasoline</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/index.php#generalenergy" title="General Energy">General Energy</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/index.php#naturalgas" title="Natural Gas">Natural Gas</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/index.php#nuclear" title="Nuclear">Nuclear</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/index.php#prices" title="Prices">Prices</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/index.php#renewables" title="Renewables">Renewables</a>
+									</li>
+								</ul>
+							</div>
+						</span>
+					</div>
+					<div class="energy-kids">
+						<a href="/kids/" class="energy-kids" title="energy kids">
+							<svg id="nav-kids" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 431.38 105.45">
+								<polygon points="410.24 96.12 9.24 96.12 27.24 80.12 428.24 80.12 410.24 96.12" fill="#e4f6ff" />
+								<image width="373" height="332" transform="translate(176.25 11.28) scale(0.24)" xlink:href="/global/images/energy-kids/energy-ant.png" />
+								<path d="M46.38,74.79H35.65a0.59,0.59,0,0,0-.71.62,3.67,3.67,0,0,0,1.61,2.79A5.37,5.37,0,0,0,40,79.51a8.12,8.12,0,0,0,2.43-.42,7.89,7.89,0,0,0,2.2-1,2.41,2.41,0,0,1,1.23-.55,1.55,1.55,0,0,1,1.16.73,2.42,2.42,0,0,1,.57,1.51q0,1.64-2.05,3.17a13.59,13.59,0,0,1-8.37,2.71,11.89,11.89,0,0,1-8-2.78,11.4,11.4,0,0,1-2.6-3.31,11.57,11.57,0,0,1-1.35-5.43,11.08,11.08,0,0,1,2.33-6.89,12.23,12.23,0,0,1,5.11-3.95,12.84,12.84,0,0,1,5-1,11.31,11.31,0,0,1,7.37,2.46,9.85,9.85,0,0,1,2.46,2.92,7.64,7.64,0,0,1,1.07,3.74A4.38,4.38,0,0,1,48,73.84,1.84,1.84,0,0,1,46.38,74.79ZM36.25,70.52h2.3A1.24,1.24,0,0,0,40,69.18a2.86,2.86,0,0,0-.71-2,2.38,2.38,0,0,0-1.85-.78,2.35,2.35,0,0,0-2,1,3.18,3.18,0,0,0-.68,1.89,1.19,1.19,0,0,0,.33,1A1.84,1.84,0,0,0,36.25,70.52Z" class="hello" fill="@{fill-color}" />
+								<path d="M77.72,70.71l0.32,8a3.25,3.25,0,0,0,.29,1.35,11.51,11.51,0,0,0,1.4,1.67,1.44,1.44,0,0,1,.34,1,2.18,2.18,0,0,1-1.8,2.1,23.53,23.53,0,0,1-6.43.59,12.66,12.66,0,0,1-4.45-.55A1.92,1.92,0,0,1,66,83.07a1.3,1.3,0,0,1,.14-0.67,11.94,11.94,0,0,1,.91-1.06q0.91-1,.91-6.39a11.21,11.21,0,0,0-.73-4.65A2.66,2.66,0,0,0,63,70.07a7.73,7.73,0,0,0-.57,3.56v4.52A6.68,6.68,0,0,0,62.59,80a11.28,11.28,0,0,0,1.13,1.94,1.76,1.76,0,0,1,.25.94q0,1.35-1.87,2a19.52,19.52,0,0,1-5.84.64q-6.34,0-6.34-2.62a1.48,1.48,0,0,1,.2-0.83A4.15,4.15,0,0,1,51,81.22a1.89,1.89,0,0,0,.75-1,17.71,17.71,0,0,0,.3-2.75q0.16-2.6.16-5.45A5.59,5.59,0,0,0,52,70a3.76,3.76,0,0,0-1.38-1.2,1.71,1.71,0,0,1-.18-3,15,15,0,0,1,3.28-1.47q2.19-.78,4.22-1.31a13.33,13.33,0,0,1,2.78-.54,1.52,1.52,0,0,1,1.15.5,1.69,1.69,0,0,1,.47,1.19s0,0.24,0,.57a2.6,2.6,0,0,0,0,.32,0.9,0.9,0,0,0,.91,1.09,1.63,1.63,0,0,0,1.16-.87,6.51,6.51,0,0,1,5.7-2.83A8.1,8.1,0,0,1,75,63.93a5.79,5.79,0,0,1,2,2.52A14.08,14.08,0,0,1,77.72,70.71Z" class="hello" fill="@{fill-color}" />
+								<path d="M100.89,74.79H90.17a0.59,0.59,0,0,0-.71.62,3.66,3.66,0,0,0,1.61,2.79,5.37,5.37,0,0,0,3.46,1.31,8.11,8.11,0,0,0,2.43-.42,7.9,7.9,0,0,0,2.2-1,2.41,2.41,0,0,1,1.23-.55,1.55,1.55,0,0,1,1.16.73,2.42,2.42,0,0,1,.57,1.51q0,1.64-2.05,3.17a13.59,13.59,0,0,1-8.37,2.71,11.89,11.89,0,0,1-8-2.78,11.4,11.4,0,0,1-2.6-3.31,11.57,11.57,0,0,1-1.35-5.43A11.09,11.09,0,0,1,82,67.22a12.23,12.23,0,0,1,5.11-3.95,12.84,12.84,0,0,1,5-1,11.31,11.31,0,0,1,7.37,2.46A9.86,9.86,0,0,1,102,67.67a7.64,7.64,0,0,1,1.07,3.74,4.38,4.38,0,0,1-.62,2.43A1.84,1.84,0,0,1,100.89,74.79ZM90.76,70.52h2.3a1.24,1.24,0,0,0,1.46-1.35,2.86,2.86,0,0,0-.71-2A2.38,2.38,0,0,0,92,66.4a2.35,2.35,0,0,0-2,1,3.18,3.18,0,0,0-.68,1.89,1.19,1.19,0,0,0,.33,1A1.84,1.84,0,0,0,90.76,70.52Z" class="hello" fill="@{fill-color}" />
+								<path d="M114.3,62.43a2,2,0,0,1,1.47.34,6.11,6.11,0,0,1,.47,2.19q0.11,1,.71,1a1.12,1.12,0,0,0,.87-0.66,5.48,5.48,0,0,1,4.77-2.85A4.56,4.56,0,0,1,126,63.8a5.13,5.13,0,0,1,1,1.7,5.07,5.07,0,0,1-.09,4.2,5.52,5.52,0,0,1-1.3,1.86,5,5,0,0,1-3.58,1.39,4.19,4.19,0,0,1-2-.41A9.85,9.85,0,0,1,118,70.87a1.33,1.33,0,0,0-.89-0.48,0.83,0.83,0,0,0-.83.72,14.54,14.54,0,0,0-.19,3,28.58,28.58,0,0,0,.25,4.7,1.86,1.86,0,0,0,.44.95,3.4,3.4,0,0,0,1.22.54q2.05,0.62,2.05,2.14a2.29,2.29,0,0,1-.66,1.63,3.26,3.26,0,0,1-1.76.93,33.88,33.88,0,0,1-6.43.46,20.29,20.29,0,0,1-6.14-.71,2.31,2.31,0,0,1-1.87-2.21,2.61,2.61,0,0,1,1.37-2.12,3.44,3.44,0,0,0,.91-0.79,2.23,2.23,0,0,0,.34-1,52.81,52.81,0,0,0,.36-7.69,3.45,3.45,0,0,0-.23-1.47,1.65,1.65,0,0,0-.91-0.72,2.07,2.07,0,0,1-1.62-1.85,2.28,2.28,0,0,1,1.12-1.88,13.63,13.63,0,0,1,3.74-1.56A22.22,22.22,0,0,1,114.3,62.43Z" class="hello" fill="@{fill-color}" />
+								<path d="M151.94,61.06a1.22,1.22,0,0,1,1,.65,2.67,2.67,0,0,1,.43,1.52,4.93,4.93,0,0,1-.58,2.12,5.87,5.87,0,0,1-1.4,1.89,1.23,1.23,0,0,0-.52.73s0,0.23,0,.55a6.17,6.17,0,0,1,.07.87,6.24,6.24,0,0,1-1.82,4.56,11.09,11.09,0,0,1-4.23,2.55,17,17,0,0,1-5.69.91,11.94,11.94,0,0,1-1.48-.09,8.58,8.58,0,0,0-.91-0.07,1.07,1.07,0,0,0-1.21,1.21,1.36,1.36,0,0,0,.79,1.22,4.35,4.35,0,0,0,2.13.44,21,21,0,0,0,2.69-.25,44.23,44.23,0,0,1,5.52-.52,8.15,8.15,0,0,1,4.17.89,5,5,0,0,1,1.88,1.92,5.29,5.29,0,0,1,.7,2.65,7.2,7.2,0,0,1-1.69,4.47,11.75,11.75,0,0,1-5.91,3.79,23.67,23.67,0,0,1-7.07,1,18.65,18.65,0,0,1-8.21-1.55,6.32,6.32,0,0,1-2.33-1.92,4.12,4.12,0,0,1-.87-2.46,2.94,2.94,0,0,1,.49-1.64,2.75,2.75,0,0,1,1.24-1.07,0.86,0.86,0,0,0,.68-0.59,1.32,1.32,0,0,0-.57-0.73,4.24,4.24,0,0,1-1.82-3.17,3.77,3.77,0,0,1,.88-2.26,6,6,0,0,1,2.18-1.8,0.78,0.78,0,0,0,.55-0.55,1.78,1.78,0,0,0-.68-1A6.69,6.69,0,0,1,128,70.25a5.6,5.6,0,0,1,.83-2.92A7.4,7.4,0,0,1,131.18,65a14.59,14.59,0,0,1,8.14-2.4,19.62,19.62,0,0,1,4,.46,17.78,17.78,0,0,0,2.85.41,7.93,7.93,0,0,0,4.95-2A1.65,1.65,0,0,1,151.94,61.06ZM134.58,86.54a0.55,0.55,0,0,0-.57.66,2.47,2.47,0,0,0,1.46,2.18,7.59,7.59,0,0,0,3.79.83,8.42,8.42,0,0,0,3.5-.59A1.84,1.84,0,0,0,144,88a1.22,1.22,0,0,0-.48-1,1.78,1.78,0,0,0-1.19-.4,8.56,8.56,0,0,0-1,.09,18.07,18.07,0,0,1-2.85.21,21.14,21.14,0,0,1-2.24-.11,9.9,9.9,0,0,1-1.3-.18A1.92,1.92,0,0,0,134.58,86.54Zm5-20.76a2.24,2.24,0,0,0-1.84.87A3.57,3.57,0,0,0,137,69a8.77,8.77,0,0,0,.75,3.95,2.25,2.25,0,0,0,2,1.48,2.28,2.28,0,0,0,1.92-.93,4,4,0,0,0,.71-2.47,8,8,0,0,0-.74-3.8A2.39,2.39,0,0,0,139.55,65.78Z" class="hello" fill="@{fill-color}" />
+								<path d="M176.32,73.51l-3,8.28a32,32,0,0,1-2.25,5,14.76,14.76,0,0,1-2.57,3.32A10,10,0,0,1,161.36,93a8.17,8.17,0,0,1-5.47-1.78,4.37,4.37,0,0,1-1.62-3.49,4.14,4.14,0,0,1,1.13-3,3.66,3.66,0,0,1,2.77-1.2,3.42,3.42,0,0,1,2.65,1.09,3.08,3.08,0,0,1,.64.89,14.93,14.93,0,0,1,.48,1.71,1.13,1.13,0,0,0,1.14,1,1.45,1.45,0,0,0,1.19-.62,2.41,2.41,0,0,0,.48-1.53,10.09,10.09,0,0,0-1.19-3.58L158,70.82a10.66,10.66,0,0,0-1.3-2.28,6.69,6.69,0,0,0-1.92-1.12A1.67,1.67,0,0,1,154,66.7a2,2,0,0,1-.33-1q0-2,4-2.76a35.27,35.27,0,0,1,6.14-.48,11.59,11.59,0,0,1,3.81.5,2.35,2.35,0,0,1,1.87,2.26,2.53,2.53,0,0,1-.52,1.35,2.38,2.38,0,0,0-.5,1.3,3,3,0,0,0,.24,1.14,22,22,0,0,0,1,2q0.87,1.6,1.53,1.6t1.46-1.4a5.71,5.71,0,0,0,.75-2.7,2.53,2.53,0,0,0-.57-1.71A3,3,0,0,1,172.1,65a2.13,2.13,0,0,1,1.55-1.86,10.32,10.32,0,0,1,4.15-.69q4.84,0,4.84,2.33a1.89,1.89,0,0,1-.49,1.36,4.71,4.71,0,0,1-1.79,1,3.51,3.51,0,0,0-1.73,1.37A26.91,26.91,0,0,0,176.32,73.51Z" class="hello" fill="@{fill-color}" />
+								<path d="M296.3,54.3l-3.09,3a4.41,4.41,0,0,0-1.71,2.95,3,3,0,0,0,.39,1.44,12.36,12.36,0,0,0,1.46,2l10.81,12.51a20.77,20.77,0,0,0,2,2.12,7.41,7.41,0,0,0,1.65.94A5.66,5.66,0,0,1,310,80.68a3.27,3.27,0,0,1,.65,2.11q0,3.06-4.36,3.06h-11a2.88,2.88,0,0,1-1.78-.49,13.49,13.49,0,0,1-2.07-2.43,83.32,83.32,0,0,0-6-7.11,29.49,29.49,0,0,0-2.27-2.27,2,2,0,0,0-1.2-.53q-1.68,0-1.68,3.15,0,2.57,1.1,3.55l0.92,0.64A3,3,0,0,1,284,82.88q0,1.91-2.54,2.73a30.93,30.93,0,0,1-8.55.82,34.25,34.25,0,0,1-7.8-.64,3.32,3.32,0,0,1-1.69-1.05,2.59,2.59,0,0,1-.65-1.72,3.13,3.13,0,0,1,1.73-2.63,3.27,3.27,0,0,0,1.11-1.14,8.16,8.16,0,0,0,.62-2.09,63.23,63.23,0,0,0,.58-10.05,74.21,74.21,0,0,0-.61-11.47,5.4,5.4,0,0,0-.64-2,4.18,4.18,0,0,0-1.42-1.18,2.84,2.84,0,0,1-1.62-2.57,2.74,2.74,0,0,1,1-2.23,7.33,7.33,0,0,1,3.24-1.27,39.5,39.5,0,0,1,7.4-.58,19.52,19.52,0,0,1,6.73.87,2.9,2.9,0,0,1,2,2.89,2.52,2.52,0,0,1-.3,1.34A8.07,8.07,0,0,1,281,52.39a4.12,4.12,0,0,0-.85,1.94,12.11,12.11,0,0,0-.39,3q0,2.43,1.1,2.43a1.88,1.88,0,0,0,1.28-.58,36.56,36.56,0,0,0,2.5-2.89q2.17-2.69,2.17-3.67a3.85,3.85,0,0,0-.55-1.56,2.91,2.91,0,0,1-.38-1.33,3.1,3.1,0,0,1,2.31-3q2.31-.88,7.89-0.88a27.41,27.41,0,0,1,6.59.58q2.63,0.72,2.63,3.06a3,3,0,0,1-.55,1.72,2.46,2.46,0,0,1-1.36,1,11.94,11.94,0,0,1-2.8.23,6.36,6.36,0,0,0-2.3.36A7.67,7.67,0,0,0,296.3,54.3Z" class="hello" fill="@{fill-color}" />
+								<path d="M324.54,45.8a32.06,32.06,0,0,1,6.21.58q3.93,0.78,3.93,3.32a1.78,1.78,0,0,1-.39,1.26,8.45,8.45,0,0,1-2,1.23,3.76,3.76,0,0,0-1.75,2.92,58.41,58.41,0,0,0-.42,8.78q0,11,.55,13.67a2.79,2.79,0,0,0,.62,1.29,5.28,5.28,0,0,0,1.46,1,2.74,2.74,0,0,1,1.91,2.51q0,2.31-3.53,3.18a40.27,40.27,0,0,1-9.33.93q-9.42,0-9.42-3.58,0-1.3,1.85-2.43A3.38,3.38,0,0,0,315.93,78a109,109,0,0,0,.55-14q0-7.4-.75-9.48a4.29,4.29,0,0,0-1.94-2.14,6.92,6.92,0,0,1-1.59-1.3,2.09,2.09,0,0,1-.41-1.33,2.24,2.24,0,0,1,1.2-2,13.66,13.66,0,0,1,4.23-1.32A37.25,37.25,0,0,1,324.54,45.8Z" class="hello" fill="@{fill-color}" />
+								<path d="M349.27,85.85h-2.08q-1.82,0-4.07.17-1.42.11-2,.12a5.16,5.16,0,0,1-3.15-.9,2.77,2.77,0,0,1-1.21-2.34,2.2,2.2,0,0,1,.53-1.58,3.87,3.87,0,0,1,1.75-.91,2.43,2.43,0,0,0,1.56-.94,7,7,0,0,0,.64-2.53q0.23-2.17.42-8.44t0.19-12.45a9,9,0,0,0-.38-3.24,2.86,2.86,0,0,0-1.76-1.3,2.65,2.65,0,0,1-2-2.57,2.45,2.45,0,0,1,1.37-2.21,7.67,7.67,0,0,1,3.83-.8l1.91,0q2.43,0.09,3.53.09,4.13,0,9.33-.26,1.1-.06,2.74-0.06a29.54,29.54,0,0,1,10.46,1.5,16.29,16.29,0,0,1,8.61,7.57A22.82,22.82,0,0,1,382.09,66a23.32,23.32,0,0,1-1,6.54,20.15,20.15,0,0,1-2.57,5.68A17.68,17.68,0,0,1,369.32,85a23.25,23.25,0,0,1-7.4,1.16l-3.5-.12-3-.09Q351.93,85.85,349.27,85.85Zm6.07-31.32V76.89a3.53,3.53,0,0,0,.78,2.59,3.63,3.63,0,0,0,2.6.77q8.44,0,8.44-12.83,0-7.08-2-11a7.57,7.57,0,0,0-7.34-4.31,2.76,2.76,0,0,0-1.95.55A2.5,2.5,0,0,0,355.34,54.53Z" class="hello" fill="@{fill-color}" />
+								<path d="M401.8,45.6a28.19,28.19,0,0,1,7.8,1.47,3.37,3.37,0,0,0,.93.17,8.79,8.79,0,0,0,1.73-.52,2.77,2.77,0,0,1,1-.17q1.93,0,4.09,3.06a10.25,10.25,0,0,1,2.15,5.84,4,4,0,0,1-1,2.73,3,3,0,0,1-2.35,1.11,3.42,3.42,0,0,1-1.88-.46,32.3,32.3,0,0,1-3.18-2.74q-3.47-3.24-6.82-3.24a4,4,0,0,0-2.59.78,2.5,2.5,0,0,0-1,2.05q0,2.51,4.42,3.79A65,65,0,0,1,412.81,62q7.37,3.58,7.37,10.55a12.17,12.17,0,0,1-5,10.05q-5.14,4-13.44,4a37.2,37.2,0,0,1-7.8-.88A18.58,18.58,0,0,1,388,83.68q-1.39-.92-2.5-4a17.89,17.89,0,0,1-1.11-6.05,3.36,3.36,0,0,1,.58-2.14,2.22,2.22,0,0,1,1.82-.93,2.87,2.87,0,0,1,2.11,1.13,42.31,42.31,0,0,1,2.86,4.07,7.82,7.82,0,0,0,3.39,2.69,11.39,11.39,0,0,0,4.81,1.07,6.71,6.71,0,0,0,3.47-.79,2.34,2.34,0,0,0,1.33-2,2.5,2.5,0,0,0-1-2,10.56,10.56,0,0,0-3.38-1.56,45.3,45.3,0,0,1-6.3-2.38A19.06,19.06,0,0,1,390,68q-4.57-4-4.57-9.19a11.1,11.1,0,0,1,1.18-5A12.37,12.37,0,0,1,390,49.68,17.81,17.81,0,0,1,401.8,45.6Z" class="hello" fill="@{fill-color}" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="topic topic-5" data-topic-panel="inactive">
+				<div class="column">
+					<div class="nav-menu whats-new">
+	<span class="ico-menu whats-new-icon"></span>
+	<span>
+		<h3><a href="/about/new/">What's New?</a></h3>
+		<ul class="header-whats-new">
+			<li><a href="/electricity/wholesale/">Wholesale Electricity Market Data</a></li><li class="date">Oct 29, 2026</li><li><a href="/totalenergy/data/monthly/">Monthly Energy Review</a></li><li class="date">Oct 29, 2026</li><li><a href="/electricity/monthly/">Electric Power Monthly</a></li><li class="date">Oct 23, 2026</li>		</ul>
+	</span>
+</div>				</div>
+				<div class="column">
+					<div class="press-room">
+						<span class="ico-menu press-room-icon"></span>
+						<span>
+							<h3>
+								<a href="/pressroom/" title="Press Room">Press Room</a>
+							</h3>
+							<ul>
+								<li>
+									<a href="/pressroom/releases.php" title="Press Releases">Press Releases</a>
+								</li>
+								<li>
+									<a href="/pressroom/testimony.php" title="Congressional Testimony">Congressional Testimony</a>
+								</li>
+								<li>
+									<a href="/pressroom/presentations.php" title="Presentations">Presentations</a>
+								</li>
+								<li>
+									<a href="/pressroom/events/" title="Events">Events</a>
+								</li>
+							</ul>
+						</span>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div><script src="/global/scripts/global.min.js?v=09.02.26"></script>
+<script src="/global/scripts/global.highlight-search-results.min.js"></script>
+</body>
+
+</html>

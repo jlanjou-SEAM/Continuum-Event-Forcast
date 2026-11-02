@@ -1,0 +1,25 @@
+{
+  "candidate_id": "DISC-01F8E56F26B53B",
+  "provider": "NOAA/NCEP MADIS",
+  "dataset": "qcday.txt",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "weather",
+    "surface",
+    "hydrology",
+    "aviation"
+  ],
+  "retrieved_utc": "2026-11-02T07:20:44.379254Z",
+  "request_url": "https://madis-data.ncep.noaa.gov/qcms_data/qc76/qcday.txt",
+  "final_url": "https://madis-data.ncep.noaa.gov/qcms_data/qc76/qcday.txt",
+  "status_code": 200,
+  "content_type": "text/plain; charset=utf-8",
+  "byte_length": 1669,
+  "sha256": "edad4577136bac3b2556171f5f4a06b3eb74c7978c98fac93fcb360c7f3d3dbb",
+  "etag": null,
+  "last_modified": "Mon, 02 Nov 2026 00:16:25 GMT",
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/weather/2026/11/02/DISC-01F8E56F26B53B/20261102T072044.379254Z_edad4577136bac3b.txt",
+  "parent_id": "DISC-C3ED0EB44C19B6",
+  "discovery_depth": 2
+}

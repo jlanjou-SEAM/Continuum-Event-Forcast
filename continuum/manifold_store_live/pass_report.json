@@ -1,46 +1,46 @@
 {
-  "overall_started_utc": "2026-11-02T00:59:05.580163Z",
-  "overall_finished_utc": "2026-11-02T01:11:17.447521Z",
-  "overall_duration_sec": 731.867,
+  "overall_started_utc": "2026-11-02T07:18:17.945404Z",
+  "overall_finished_utc": "2026-11-02T07:26:15.515984Z",
+  "overall_duration_sec": 477.571,
   "passes": 1,
   "workers": 32,
   "per_host": 4,
   "per_pass": [
     {
       "pass": 1,
-      "started_utc": "2026-11-02T00:59:05.585924Z",
+      "started_utc": "2026-11-02T07:18:17.951062Z",
       "tested": 6746,
-      "unchanged_no_body": 636,
-      "body_checked_unchanged": 444,
-      "changed_preserved": 4932,
-      "errors": 735,
-      "bytes_transferred": 2054184516,
-      "bytes_preserved": 1922629551,
+      "unchanged_no_body": 630,
+      "body_checked_unchanged": 455,
+      "changed_preserved": 5049,
+      "errors": 613,
+      "bytes_transferred": 2090222113,
+      "bytes_preserved": 1951060623,
       "new_discovered": 2000,
-      "records_observed": 23532,
+      "records_observed": 22385,
       "workers": 32,
       "per_host": 4,
       "checkpoint_every": 100,
-      "finished_utc": "2026-11-02T01:11:17.424226Z",
-      "duration_sec": 731.838,
+      "finished_utc": "2026-11-02T07:26:15.493691Z",
+      "duration_sec": 477.543,
       "candidates_after_pass": 8746
     }
   ],
   "totals": {
     "tested": 6746,
-    "unchanged_no_body": 636,
-    "body_checked_unchanged": 444,
-    "changed_preserved": 4932,
-    "errors": 735,
-    "bytes_transferred": 2054184516,
-    "bytes_preserved": 1922629551,
+    "unchanged_no_body": 630,
+    "body_checked_unchanged": 455,
+    "changed_preserved": 5049,
+    "errors": 613,
+    "bytes_transferred": 2090222113,
+    "bytes_preserved": 1951060623,
     "new_discovered": 2000,
-    "records_observed": 23532
+    "records_observed": 22385
   },
   "timing": {
-    "fastest_pass_sec": 731.838,
-    "slowest_pass_sec": 731.838,
-    "average_pass_sec": 731.838
+    "fastest_pass_sec": 477.543,
+    "slowest_pass_sec": 477.543,
+    "average_pass_sec": 477.543
   },
   "final_candidate_count": 8746
 }
