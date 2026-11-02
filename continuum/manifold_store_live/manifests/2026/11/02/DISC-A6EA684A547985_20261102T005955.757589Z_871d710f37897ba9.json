@@ -1,0 +1,23 @@
+{
+  "candidate_id": "DISC-A6EA684A547985",
+  "provider": "US EPA",
+  "dataset": "byCounty",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "environmental",
+    "air_quality"
+  ],
+  "retrieved_utc": "2026-11-02T00:59:55.757589Z",
+  "request_url": "https://aqs.epa.gov/data/api/sampleData/byCounty?email=test@aqs.api&key=test&param=88101&bdate=20160101&edate=20160228&state=37&county=183",
+  "final_url": "https://aqs.epa.gov/data/api/sampleData/byCounty?email=test@aqs.api&key=test&param=88101&bdate=20160101&edate=20160228&state=37&county=183",
+  "status_code": 200,
+  "content_type": "application/json; charset=utf-8",
+  "byte_length": 1397808,
+  "sha256": "871d710f37897ba9266e6309e1777e1914d16766ada47cb86e71cc48f7f4a56d",
+  "etag": null,
+  "last_modified": null,
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/environmental/2026/11/02/DISC-A6EA684A547985/20261102T005955.757589Z_871d710f37897ba9.json",
+  "parent_id": "EPA-AQS",
+  "discovery_depth": 1
+}

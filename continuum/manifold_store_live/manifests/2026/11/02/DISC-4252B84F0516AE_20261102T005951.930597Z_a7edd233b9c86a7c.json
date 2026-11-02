@@ -1,0 +1,24 @@
+{
+  "candidate_id": "DISC-4252B84F0516AE",
+  "provider": "NOAA/CO-OPS",
+  "dataset": "datagetter",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "marine",
+    "hydrology",
+    "coastal"
+  ],
+  "retrieved_utc": "2026-11-02T00:59:51.930597Z",
+  "request_url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=today&station=9414290&product=water_level&datum=MLLW&time_zone=gmt&units=english&application=DataAPI_Sample&format=xml",
+  "final_url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=today&station=9414290&product=water_level&datum=MLLW&time_zone=gmt&units=english&application=DataAPI_Sample&format=xml",
+  "status_code": 200,
+  "content_type": "text/xml;charset=UTF-8",
+  "byte_length": 839,
+  "sha256": "a7edd233b9c86a7cfb432ad1b130464024c3e7a3d2c43fa3c170fe94242244a9",
+  "etag": null,
+  "last_modified": null,
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/marine/2026/11/02/DISC-4252B84F0516AE/20261102T005951.930597Z_a7edd233b9c86a7c.xml",
+  "parent_id": "NOAA-COOPS",
+  "discovery_depth": 1
+}

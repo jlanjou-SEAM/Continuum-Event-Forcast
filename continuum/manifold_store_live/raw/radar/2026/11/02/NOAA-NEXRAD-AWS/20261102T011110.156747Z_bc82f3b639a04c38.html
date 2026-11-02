@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  
+    
+  
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    
+    <link rel="shortcut icon" type="image/ico" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-iphone-114-smile.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-ipad-144-smile.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-iphone-114-smile.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-ipad-144-smile.png"/>  
+  
+    <title>NEXRAD on AWS - Registry of Open Data on AWS</title>
+  
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://assets.opendata.aws/css/bootstrap/3.4.1/bootstrap.min.css">
+  
+    <!-- Our local CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+  
+    <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Dataset",
+      "name" : "NEXRAD on AWS",
+      "description" : "Real-time and archival data from the Next Generation Weather Radar (NEXRAD) network.\u003ch4 id=\"update\"\u003eUpdate\u003c/h4\u003e\nThe NEXRAD Level II archive data is moving to a new bucket: \u003ccode\u003eunidata-nexrad-level2\u003c/code\u003e\nand SNS topic: \u003ccode\u003earn:aws:sns:us-east-1:684042711724:NewNEXRADLevel2Archive\u003c/code\u003e. The old\nbucket and SNS topic are now deprecated and will no longer be available starting September 1, 2025.",
+      "license" : "NOAA data disseminated through NODD are open to the public and can be used as desired.\u003cbr/\u003e \u003cbr/\u003eNOAA makes data openly available to ensure maximum use of our data, and to spur and encourage exploration and innovation throughout the industry. NOAA requests attribution for the use or dissemination of unaltered NOAA data. However, it is not permissible to state or imply endorsement by or affiliation with NOAA. If you modify NOAA data, you may not state or imply that it is original, unaltered NOAA data.",
+      "sourceOrganization" : "\u003ca href=\"https://www.unidata.ucar.edu/\"\u003eUnidata\u003c/a\u003e"
+    }
+    </script>
+  
+  </head>
+  <body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://assets.opendata.aws/js/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://assets.opendata.aws/js/bootstrap/3.4.1/bootstrap.min.js"></script>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="roda-header">
+          <h2><a href="/" alt="Home">Registry of Open Data on AWS</a></h2>
+          <a href="http://aws.amazon.com/what-is-cloud-computing">
+            <img src="https://assets.opendata.aws/img/AWS-Logo_White-Color_300x180.png" alt="Powered by AWS Cloud Computing" id="aws_header_logo">
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="container" >
+
+    <h1>NEXRAD on AWS</h1>
+    <p>
+      <span class="label label-info tag link-tag">agriculture</span>
+
+      
+
+      <span class="label label-info tag link-tag">earth observation</span>
+
+      <span class="label label-info tag link-tag">meteorological</span>
+
+      <span class="label label-info tag link-tag">natural resource</span>
+
+      <span class="label label-info tag link-tag">weather</span>
+    </p>
+    <div class="row">
+      <div class="col-md-6">
+      <h3>Description</h3>
+      <p>Real-time and archival data from the Next Generation Weather Radar (NEXRAD) network.<h4 id="update">Update</h4>
+The NEXRAD Level II archive data is moving to a new bucket: <code>unidata-nexrad-level2</code>
+and SNS topic: <code>arn:aws:sns:us-east-1:684042711724:NewNEXRADLevel2Archive</code>. The old
+bucket and SNS topic are now deprecated and will no longer be available starting September 1, 2025.</p>
+
+      <h4>Update Frequency</h4>
+      <p>New Level II data is added as soon as it is available.</p>
+
+      <h4>License</h4>
+      <p>NOAA data disseminated through NODD are open to the public and can be used as desired.<br/> <br/>NOAA makes data openly available to ensure maximum use of our data, and to spur and encourage exploration and innovation throughout the industry. NOAA requests attribution for the use or dissemination of unaltered NOAA data. However, it is not permissible to state or imply endorsement by or affiliation with NOAA. If you modify NOAA data, you may not state or imply that it is original, unaltered NOAA data.</p>
+
+      <h4>Documentation</h4>
+      <p><a href="https://github.com/awslabs/open-data-docs/tree/main/docs/noaa/noaa-nexrad">https://github.com/awslabs/open-data-docs/tree/main/docs/noaa/noaa-nexrad</a></p>
+
+      <h4>Managed By</h4>
+      <p><a href="https://www.unidata.ucar.edu/"><img src="/img/logos/unidata-logo.png" class="managed-by-logo" alt="Unidata"></a></p>
+      <p>See all datasets managed by <a href="https://registry.opendata.aws/collab/noaa">Unidata</a>.</p>
+
+      <h4>Contact</h4>
+      <p><a href="mailto:support-level2@unidata.ucar.edu">&#115;&#117;&#112;&#112;&#111;&#114;&#x74;&#x2d;&#108;&#x65;&#118;&#101;&#108;&#x32;&#64;&#117;&#x6e;&#105;&#100;&#x61;&#x74;&#97;&#x2e;&#117;&#99;&#x61;&#x72;&#x2e;&#x65;&#100;&#x75;</a></p>
+
+      <h4>How to Cite</h4>
+      <p>NEXRAD on AWS was accessed on <code>DATE</code> from https://registry.opendata.aws/noaa-nexrad. </p>
+
+      <h4 name="usageexamples">Usage Examples</h4>
+        <h5 class="dataatwork-category">Tutorials</h5>
+        <ul class="dataatwork-list">
+          <li>
+            <a href="https://scigantic.com/archive/b2c6e420-9855-55ce-af73-f8e41a24278e/sample" class="" target="_none">Explore NEXRAD in a Browser-Based Notebook with Scigantic</a> by <a href="https://scigantic.com" target="_none">Scigantic</a></a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://github.com/russ-schumacher/ats641_spring2022/blob/master/example_notebooks/pyart_nexrad_maps_reports.ipynb" class="" target="_none">Get NEXRAD data from AWS, get severe reports from SPC archive, and plot a loop of them</a> by <a href="https://www.atmos.colostate.edu/people/faculty/schumacher/" target="_none">Russ Schumacher</a></a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://www.spatialworkflow.io/read-nexrad-level2-python/" class="" target="_none">How to Read NEXRAD Level II Radar Data in Python</a> by <a href="https://www.spatialworkflow.io/" target="_none">Spatial Workflow</a></a>
+            <br>
+            <a href="https://studiolab.sagemaker.aws/import/github/https://www.spatialworkflow.io/notebooks/read-nexrad-level2-python.ipynb" rel="nofollow" target="_blank"><img src="https://studiolab.sagemaker.aws/studiolab.svg" alt="Open In SageMaker Studio Lab" data-canonical-src="https://studiolab.sagemaker.aws/studiolab.svg" style="max-width: 100%;"></a><br>
+            
+          </li>          <li>
+            <a href="https://carto.com/blog/mapping-nexrad-radar-data/" class="" target="_none">Mapping Noaa Nexrad Radar Data With CARTO</a> by <a href="https://carto.com/blog/author/stuart-lynn/" target="_none">Stuart Lynn</a></a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://github.com/openradar/AMS_radar_in_the_cloud" class="" target="_none">NEXRAD on EC2 tutorial</a> by <a href="https://github.com/openradar" target="_none">openradar</a></a>
+            <br>
+            
+            <span class="label label-info tag service-tag link-tag">Amazon EC2</span>
+          </li>          <li>
+            <a href="https://github.com/aws-samples/aws-nexrad-smsl-notebook/" class="aws-link" target="_none">Updated introduction to S3, Boto, and NOAA Nexrad in SageMaker Studio Lab (SMSL)</a> by Chris Stoner</a>
+            <br>
+            <a href="https://studiolab.sagemaker.aws/import/github/https://github.com/aws-samples/aws-nexrad-smsl-notebook/blob/main/Nexrad_Demo.ipynb" rel="nofollow" target="_blank"><img src="https://studiolab.sagemaker.aws/studiolab.svg" alt="Open In SageMaker Studio Lab" data-canonical-src="https://studiolab.sagemaker.aws/studiolab.svg" style="max-width: 100%;"></a><br>
+            <span class="label label-info tag service-tag link-tag">Amazon SageMaker Studio Lab</span>
+          </li>          <li>
+            <a href="http://nbviewer.jupyter.org/gist/dopplershift/356f2e14832e9b676207" class="" target="_none">Using Python to Access NCEI Archived NEXRAD Level 2 Data (Jupyter notebook)</a> by <a href="http://dopplershift.github.io" target="_none">Ryan May</a></a>
+            <br>
+            
+            
+          </li>        </ul>
+        <h5 class="dataatwork-category">Tools & Applications</h5>
+        <ul class="dataatwork-list">
+          <li>
+            <a href="https://blog.mapbox.com/3d-animated-hurricane-map-from-radar-data-affaed8a3d70" class="" target="_none">Into the eye of the storm: NEXRAD Level II open data</a> by Jonni Walker</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://pypi.org/project/nexradaws/" class="" target="_none">nexradaws on pypi.python.org - python module to query and download Nexrad data from Amazon S3</a> by <a href="https://github.com/aarande" target="_none">Aaron Anderson</a></a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://github.com/zflamig/ondas-pds" class="" target="_none">Open NEXRAD Data Access for Level 3 with Lambda@Edge</a> by Zac Flamig</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://github.com/stephenlienharrell/WeatherPipe" class="" target="_none">WeatherPipe - Amazon EMR based analysis tool for NEXRAD data stored on Amazon S3</a> by <a href="https://github.com/stephenlienharrell" target="_none">Stephen Lien Harrell</a></a>
+            <br>
+            
+            
+          </li>        </ul>
+        <h5 class="dataatwork-category">Publications</h5>
+        <ul class="dataatwork-list">
+          <li>
+            <a href="https://www.pnas.org/content/117/6/2987" class="" target="_none">Declines in an abundant aquatic insect, the burrowing mayfly, across major North American waterways</a> by Phillip M. Stepanian, Sally A. Entrekin, Charlotte E. Wainwright, Djordje Mirkovic, Jennifer L. Tank, &amp; Jeffrey F. Kelly</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2020GL089001" class="" target="_none">Extreme Pyroconvective Updrafts During a Megafire</a> by B. Rodriguez, N. P. Lareau, D. E. Kingsmill, &amp; C. B. Clements</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://www.roc.noaa.gov/wsr88d/PublicDocs/ICDs/2620002R.pdf" class="" target="_none">Level 2 Interface Control Document for Message Data Formats: Build 18</a> by NOAA ROC</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://www.roc.noaa.gov/wsr88d/PublicDocs/ICDs/2620010G.pdf" class="" target="_none">Level 2 Interface Control Document for Transfer: Build 18</a> by NOAA ROC</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://www.roc.noaa.gov/wsr88d/PublicDocs/ICDs/2620001X.pdf" class="" target="_none">Level 3 Interface Control Document for Message Data Formats: Build 18</a> by NOAA ROC</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://www.jstage.jst.go.jp/article/sola/advpub/0/advpub_2023-010/_pdf" class="" target="_none">Observed Concentric Eyewalls of Supertyphoon Hinnamnor</a> by Sachie Kanada and Akira Nishii</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://www.nature.com/articles/s41559-018-0666-4" class="" target="_none">Seasonal abundance and survival of North America’s migratory avifauna determined by weather radar</a> by Adriaan M. Dokter, Andrew Farnsworth, Daniel Fink, Viviana Ruiz-Gutierrez, Wesley M. Hochachka, Frank A. La Sorte, Orin J. Robinson, Kenneth V. Rosenberg &amp; Steve Kelling</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://journals.ametsoc.org/doi/full/10.1175/BAMS-D-16-0021.1" class="" target="_none">Unlocking the Potential of NEXRAD Data through NOAA’s Big Data Partnership</a> by Steve Ansari and Stephen Del Greco</a>
+            <br>
+            
+            
+          </li>        </ul>
+
+    </div>
+    <div class="col-md-5 col-md-offset-1">
+      <h3>Resources on AWS</h3>
+      <ul class="resource-list">
+        <li>
+          <dl class="resource-list">
+            <dt class="resource-description">Description</dt>
+            <dd class="resource-description">NEXRAD Level II archive data</dd>
+            <dt class="resource-type">Resource type</dt>
+            <dd class="resource-type s3-bucket">S3 Bucket</dd>
+            <dt class="resource-arn">Amazon Resource Name (ARN)</dt>
+            <dd><code>arn:aws:s3:::unidata-nexrad-level2</code></dd>
+            <dt class="resource-region">AWS Region</dt>
+            <dd><code>us-east-1</code></dd>
+            <dt class="resource-region"><a href="https://aws.amazon.com/cli/">AWS CLI</a> Access (No AWS account required)</dt>
+            <dd><code>aws s3 ls --no-sign-request s3://unidata-nexrad-level2/</code></dd>
+            <dt class="resource-explore">Explore</dt>
+            <dd><a href="https://unidata-nexrad-level2.s3.amazonaws.com/index.html">Browse Bucket</a></dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="resource-list">
+            <dt class="resource-description">Description</dt>
+            <dd class="resource-description">NEXRAD Level II real-time data</dd>
+            <dt class="resource-type">Resource type</dt>
+            <dd class="resource-type s3-bucket">S3 Bucket</dd>
+            <dt class="resource-arn">Amazon Resource Name (ARN)</dt>
+            <dd><code>arn:aws:s3:::unidata-nexrad-level2-chunks</code></dd>
+            <dt class="resource-region">AWS Region</dt>
+            <dd><code>us-east-1</code></dd>
+            <dt class="resource-region"><a href="https://aws.amazon.com/cli/">AWS CLI</a> Access (No AWS account required)</dt>
+            <dd><code>aws s3 ls --no-sign-request s3://unidata-nexrad-level2-chunks/</code></dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="resource-list">
+            <dt class="resource-description">Description</dt>
+            <dd class="resource-description">NEXRAD Level III real-time select data</dd>
+            <dt class="resource-type">Resource type</dt>
+            <dd class="resource-type s3-bucket">S3 Bucket</dd>
+            <dt class="resource-arn">Amazon Resource Name (ARN)</dt>
+            <dd><code>arn:aws:s3:::unidata-nexrad-level3</code></dd>
+            <dt class="resource-region">AWS Region</dt>
+            <dd><code>us-east-1</code></dd>
+            <dt class="resource-region"><a href="https://aws.amazon.com/cli/">AWS CLI</a> Access (No AWS account required)</dt>
+            <dd><code>aws s3 ls --no-sign-request s3://unidata-nexrad-level3/</code></dd>
+            <dt class="resource-explore">Explore</dt>
+            <dd><a href="https://unidata-nexrad-level3.s3.amazonaws.com/index.html">Browse Bucket</a></dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="resource-list">
+            <dt class="resource-description">Description</dt>
+            <dd class="resource-description"><a href="https://github.com/awslabs/open-data-docs/tree/main/docs/noaa/noaa-nexrad#subscribing-to-nexrad-data-notifications">Rich notifications</a> for real-time data with filterable fields</dd>
+            <dt class="resource-type">Resource type</dt>
+            <dd class="resource-type sns-topic">SNS Topic</dd>
+            <dt class="resource-arn">Amazon Resource Name (ARN)</dt>
+            <dd><code>arn:aws:sns:us-east-1:684042711724:NewNEXRADLevel2ObjectFilterable</code></dd>
+            <dt class="resource-region">AWS Region</dt>
+            <dd><code>us-east-1</code></dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="resource-list">
+            <dt class="resource-description">Description</dt>
+            <dd class="resource-description">Notifications for the new Level II archival bucket</dd>
+            <dt class="resource-type">Resource type</dt>
+            <dd class="resource-type sns-topic">SNS Topic</dd>
+            <dt class="resource-arn">Amazon Resource Name (ARN)</dt>
+            <dd><code>arn:aws:sns:us-east-1:684042711724:NewNEXRADLevel2Archive</code></dd>
+            <dt class="resource-region">AWS Region</dt>
+            <dd><code>us-east-1</code></dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="resource-list">
+            <dt class="resource-description">Description</dt>
+            <dd class="resource-description">Notifications for the Level III bucket</dd>
+            <dt class="resource-type">Resource type</dt>
+            <dd class="resource-type sns-topic">SNS Topic</dd>
+            <dt class="resource-arn">Amazon Resource Name (ARN)</dt>
+            <dd><code>arn:aws:sns:us-east-1:684042711724:NewNEXRADLevel3Object</code></dd>
+            <dt class="resource-region">AWS Region</dt>
+            <dd><code>us-east-1</code></dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+    <hr/>
+    <p><a href="https://github.com/awslabs/open-data-registry/blob/main/datasets/noaa-nexrad.yaml">Edit this dataset entry on GitHub</a></p>
+    <p><a href="mailto:opendata@amazon.com">Tell us about your project</a></p>
+    <p><a href="/"><b>Home</b></a></p>
+  </div>
+  <script src="/js/tags.js"></script>

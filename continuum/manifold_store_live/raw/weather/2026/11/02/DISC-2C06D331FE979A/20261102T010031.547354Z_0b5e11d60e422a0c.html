@@ -1,0 +1,2229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MSC GeoMet - GeoMet-OGC-API - City Page Weather [experimental] </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="[&#39;en-CA&#39;, &#39;fr-CA&#39;]">
+    <meta name="description" content="MSC GeoMet - GeoMet-OGC-API">
+    <meta name="keywords" content="Weather,Meteorology,Climate,Forecasting,Floods,Weather alerts,Storms,Wind,Temperature,Precipitation,Snow,Ice">
+    <link rel="shortcut icon" href="https://api.weather.gc.ca/static/img/favicon.ico" type="image/x-icon">
+
+    <!-- GCWeb theme -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://api.weather.gc.ca/static/themes-gcweb/GCWeb/css/theme.min.css">
+
+    <link rel="stylesheet" href="https://api.weather.gc.ca/static/css/default.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+    
+
+    <!-- ESM import map -->
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.7/vue.esm-browser.prod.js",
+          "leaflet": "https://unpkg.com/leaflet@1.7.1/dist/leaflet-src.esm.js",
+          "leaflet-non-esm": "https://unpkg.com/leaflet/dist/leaflet.js",
+          "leaflet.markercluster": "https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster-src.js"
+        }
+      }
+    </script>
+    
+    
+  </head>
+  <body vocab="http://schema.org/" typeof="WebPage">
+    <nav>
+        <ul id="wb-tphp">
+            <li class="wb-slc">
+                <a class="wb-sl" href="#wb-cont">Skip to main content</a>
+            </li>
+            <li class="wb-slc">
+                <a class="wb-sl" href="#wb-info">Skip to "About government"</a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+      <div id="wb-bnr" class="container">
+        <div class="row">
+          <!-- language selection (JSON) -->
+          <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+            <h2 class="wb-inv">Format and language selection</h2>
+            <ul class="list-inline mrgn-bttm-0">
+              
+
+              
+
+              
+              <li>
+                <a id="json-format-url" href="?f=json" class="btn btn-xs btn-default">
+                  <span class="hidden-xs">JSON</span>
+                  <abbr title="JSON" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">JSON</abbr>
+                </a>
+              </li>
+              
+              
+              <li>
+                <a id="jsonld-format-url" href="?f=jsonld" class="btn btn-xs btn-default">
+                  <span class="hidden-xs">JSON-LD</span>
+                  <abbr title="JSON-LD" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">JSON-LD</abbr>
+                </a>
+              </li>
+              
+              
+              
+
+              <!-- language toggle -->
+              
+              
+              
+              
+              <li>
+                <a class="lang-toggle" href="?lang=fr" hreflang="fr-CA">FR</a>
+              </li>
+              
+              
+            </ul>
+          </section>
+
+          <!-- Brand -->
+          <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+            <a href="https://www.canada.ca/en.html" property="url">
+              <img src="https://api.weather.gc.ca/static/img/eccc_c_en.png" alt="Environment & Climate Change Canada" property="logo" /><span class="wb-inv"> / <span lang="fr">Environnement et Changement climatique Canada</span></span>
+            </a>
+            <meta property="name" content="Environment & Climate Change Canada" />
+            <meta property="areaServed" typeof="Country" content="Canada" />
+            <link property="logo" href="https://api.weather.gc.ca/static/img/eccc_c_en.png" />
+          </div>
+        </div>
+      </div>
+
+      <nav id="wb-bc" property="breadcrumb">
+        <h2>You are here:</h2>
+        <div class="container">
+          <ol class="breadcrumb">
+            
+            <li><a href="https://api.weather.gc.ca?lang=en">Home</a></li>
+            
+<li><a href="https://api.weather.gc.ca/collections?lang=en">Collections</a></li>
+<li><a href="https://api.weather.gc.ca/collections/citypageweather-realtime?lang=en">City Page Weather...</a></li>
+<li><a href="https://api.weather.gc.ca/collections/citypageweather-realtime/queryables?lang=en">Queryables</a></li>
+
+          </ol>
+        </div>
+      </nav>
+    </header>
+    <main property="mainContentOfPage" class="container" typeof="WebPageElement">
+      
+    <section id="collection">
+      <h1>City Page Weather [experimental]</h1>
+      <p></p>
+      <ul>
+        
+      </ul>
+      <h3>Queryables</h3>
+      <ul>
+        
+          
+          <li><a href="">geometry </a></li>
+          
+        
+          
+          <li>currentConditions.condition.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.condition.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.dewpoint.qaValue.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.dewpoint.qaValue.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.dewpoint.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.dewpoint.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.dewpoint.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.dewpoint.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.dewpoint.value.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.dewpoint.value.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.icon (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.iconCode.format (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.iconCode.url (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.iconCode.value (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.pressure.change.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.pressure.change.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.pressure.qaValue.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.pressure.qaValue.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.pressure.tendency.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.pressure.tendency.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.pressure.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.pressure.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.pressure.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.pressure.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.pressure.value.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.pressure.value.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.relativeHumidity.qaValue.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.relativeHumidity.qaValue.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.relativeHumidity.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.relativeHumidity.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.relativeHumidity.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.relativeHumidity.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.relativeHumidity.value.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.relativeHumidity.value.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.station.code.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.station.code.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.station.lat.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.station.lat.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.station.lon.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.station.lon.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.station.value.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.station.value.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.temperature.qaValue.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.temperature.qaValue.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.temperature.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.temperature.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.temperature.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.temperature.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.temperature.value.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.temperature.value.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.timestamp.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.timestamp.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.bearing.qaValue.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.bearing.qaValue.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.bearing.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.bearing.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.bearing.value.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.bearing.value.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.direction.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.direction.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.direction.qaValue.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.direction.qaValue.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.direction.value.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.direction.value.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.gust.qaValue.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.gust.qaValue.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.gust.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.gust.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.gust.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.gust.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.gust.value.en (<code>integer</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.gust.value.fr (<code>integer</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.speed.qaValue.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.speed.qaValue.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.speed.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.speed.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.speed.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.speed.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.speed.value.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.wind.speed.value.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.windChill.qaValue.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.windChill.qaValue.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.windChill.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.windChill.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.windChill.value.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>currentConditions.windChill.value.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.abbreviatedForecast.icon.format (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.abbreviatedForecast.icon.url (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.abbreviatedForecast.icon.value (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.abbreviatedForecast.textSummary.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.abbreviatedForecast.textSummary.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.abbreviated_forecast.icon (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.abbreviated_forecast.pop (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.abbreviated_forecast.text_summary (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.cloudPrecip.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.cloudPrecip.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.cloud_precip (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.frost.textSummary.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.frost.textSummary.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.humidex.calculated.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.humidex.calculated.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.humidex.textSummary.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.humidex.textSummary.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.period.textForecastName.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.period.textForecastName.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.period.value.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.period.value.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.precipitation.accumulation.amount.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.precipitation.accumulation.amount.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.precipitation.accumulation.amount.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.precipitation.accumulation.amount.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.precipitation.accumulation.amount.value.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.precipitation.accumulation.amount.value.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.precipitation.accumulation.name.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.precipitation.accumulation.name.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.precipitation.precipPeriods.end.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.precipitation.precipPeriods.end.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.precipitation.precipPeriods.start.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.precipitation.precipPeriods.start.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.precipitation.precipPeriods.value.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.precipitation.precipPeriods.value.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.precipitation.precip_periods.end (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.precipitation.precip_periods.precip_type (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.precipitation.precip_periods.start (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.precipitation.textSummary.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.precipitation.textSummary.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.rel_hum.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.rel_hum.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.relativeHumidity.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.relativeHumidity.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.relativeHumidity.value.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.relativeHumidity.value.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.snowLevel.textSummary.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.snowLevel.textSummary.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.temperatures.temp_high (<code>integer</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.temperatures.temp_low (<code>integer</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.temperatures.temperature.class.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.temperatures.temperature.class.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.temperatures.temperature.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.temperatures.temperature.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.temperatures.temperature.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.temperatures.temperature.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.temperatures.temperature.value.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.temperatures.temperature.value.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.temperatures.textSummary.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.temperatures.textSummary.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.temperatures.text_summary.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.temperatures.text_summary.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.textForecast_name.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.textForecast_name.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.textSummary.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.textSummary.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.uv.category.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.uv.category.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.uv.index.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.uv.index.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.uv.textSummary.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.uv.textSummary.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.uv.text_summary.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.uv.text_summary.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.visibility.cause (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.visibility.textSummary.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.visibility.textSummary.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.windChill.calculated.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.windChill.calculated.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.windChill.frostbite.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.windChill.frostbite.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.windChill.textSummary.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.windChill.textSummary.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.bearing.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.bearing.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.bearing.value.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.bearing.value.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.direction.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.direction.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.gust.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.gust.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.gust.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.gust.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.gust.value.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.gust.value.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.index.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.index.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.rank.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.rank.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.speed.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.speed.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.speed.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.speed.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.speed.value.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.periods.speed.value.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.textSummary.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.textSummary.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts.winds.text_summary (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.forecasts (<code>nested</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.regionalNormals.temperature.class.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.regionalNormals.temperature.class.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.regionalNormals.temperature.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.regionalNormals.temperature.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.regionalNormals.temperature.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.regionalNormals.temperature.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.regionalNormals.temperature.value.en (<code>integer</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.regionalNormals.temperature.value.fr (<code>integer</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.regionalNormals.temperature (<code>nested</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.regionalNormals.textSummary.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.regionalNormals.textSummary.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.timestamp.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>forecastGroup.timestamp.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.condition.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.condition.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.humidex.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.humidex.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.humidex.value.en (<code>byte</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.humidex.value.fr (<code>byte</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.iconCode.format (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.iconCode.url (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.iconCode.value (<code>byte</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.lop.category.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.lop.category.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.lop.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.lop.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.lop.value.en (<code>byte</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.lop.value.fr (<code>byte</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.temperature.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.temperature.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.temperature.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.temperature.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.temperature.value.en (<code>byte</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.temperature.value.fr (<code>byte</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.timestamp (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.uv.index.value.en (<code>byte</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.uv.index.value.fr (<code>byte</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.wind.direction.value.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.wind.direction.value.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.wind.direction.windDirFull.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.wind.direction.windDirFull.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.wind.gust.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.wind.gust.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.wind.gust.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.wind.gust.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.wind.gust.value.en (<code>byte</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.wind.gust.value.fr (<code>byte</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.wind.speed.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.wind.speed.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.wind.speed.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.wind.speed.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.wind.speed.value.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.wind.speed.value.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.windChill.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.windChill.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.windChill.value.en (<code>byte</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts.windChill.value.fr (<code>byte</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.hourlyForecasts (<code>nested</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.timestamp.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>hourlyForecastGroup.timestamp.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>identifier (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>lastUpdated (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>name.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>name.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>region.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>region.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>riseSet.disclaimer.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>riseSet.disclaimer.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>riseSet.sunrise.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>riseSet.sunrise.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>riseSet.sunset.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>riseSet.sunset.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>url.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>url.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>warnings.alertColourLevel.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>warnings.alertColourLevel.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>warnings.description.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>warnings.description.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>warnings.eventIssue.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>warnings.eventIssue.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>warnings.expiryTime.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>warnings.expiryTime.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>warnings.priority.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>warnings.priority.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>warnings.type.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>warnings.type.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>warnings.url.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>warnings.url.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>warnings (<code>nested</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.precip.trace.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.precip.trace.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.precip.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.precip.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.precip.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.precip.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.precip.value.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.precip.value.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.rainfall.trace.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.rainfall.trace.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.rainfall.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.rainfall.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.rainfall.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.rainfall.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.rainfall.value.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.rainfall.value.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.snowfall.trace.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.snowfall.trace.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.snowfall.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.snowfall.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.snowfall.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.snowfall.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.snowfall.value.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.snowfall.value.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.temperature.class.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.temperature.class.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.temperature.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.temperature.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.temperature.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.temperature.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.temperature.value.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.temperature.value.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.temperature (<code>nested</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.windGust.bearing.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.windGust.bearing.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.windGust.bearing.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.windGust.bearing.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.windGust.bearing.value.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.windGust.bearing.value.fr (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.windGust.direction.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.windGust.direction.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.windGust.direction.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.windGust.direction.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.windGust.direction.value.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.windGust.direction.value.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.windGust.speed.unitType.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.windGust.speed.unitType.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.windGust.speed.units.en (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.windGust.speed.units.fr (<code>string</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.windGust.speed.value.en (<code>number</code>)
+          
+          </li>
+          
+        
+          
+          <li>yesterdayConditions.windGust.speed.value.fr (<code>number</code>)
+          
+          </li>
+          
+        
+        </ul>
+    </section>
+
+      <div class="pagedetails">
+        <dl id="wb-dtmd">
+          <dt>Powered by <a title="pygeoapi" href="https://pygeoapi.io"><img src="https://api.weather.gc.ca/static/img/pygeoapi.png" style="height:24px;vertical-align: middle;"/></a></dt>
+          <dd>0.20.0</dd>
+          | <dt><a href="https://github.com/ECCC-MSC/msc-pygeoapi" target="_blank">msc-pygeoapi</a></dt>
+          <dd>0.18.9</dd>
+        </dl>
+      </div>
+    </main>
+    <footer id="wb-info">
+      <div class="landscape">
+        <nav class="container wb-navcurr">
+          <h2 class="wb-inv">About government</h2>
+          <ul class="list-unstyled colcount-sm-2 colcount-md-3">
+            <li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
+            <li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
+            <li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
+            <li><a href="https://www.canada.ca/en/news.html">News</a></li>
+            <li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
+            <li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+            <li><a href="https://pm.gc.ca/eng">Prime Minister</a></li>
+            <li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
+            <li><a href="https://open.canada.ca/en/">Open government</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="brand">
+        <div class="container">
+          <div class="row">
+            <nav class="col-md-9 col-lg-10 ftr-urlt-lnk">
+              <h2 class="wb-inv">About this site</h2>
+              <ul>
+                <li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+                <li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+                <li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
+                <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+                <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+              </ul>
+            </nav>
+            <div class="col-xs-6 visible-sm visible-xs tofpg">
+              <a href="#wb-cont">Top of page <span class="glyphicon glyphicon-chevron-up"></span></a>
+            </div>
+            <div class="col-xs-6 col-md-3 col-lg-2 text-right">
+              <img src="https://api.weather.gc.ca/static/themes-gcweb/GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    
+    <script>
+      // Requests and embeds JSON-LD representation of the current page
+      var xhr = new XMLHttpRequest();
+
+      // Get the current URL's search parameters
+      var currentParams = new URLSearchParams(window.location.search);
+
+      // Add the new parameter for JSON-LD representation
+      currentParams.set('f', 'jsonld');
+
+      // Check if the pathname matches /items and add a limit parameter
+      if (window.location.pathname.match(/\/items(#)*/gi)) { // reduce load on /items page
+        currentParams.set('limit', '10');
+      }
+
+      // Construct the full path with updated query parameters
+      var path = window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + currentParams.toString();
+
+      // Make the request
+      xhr.open('GET', path);
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          var head = document.getElementsByTagName('head')[0];
+          var jsonld_datablock = document.createElement('script');
+          jsonld_datablock.type = "application/ld+json";
+          // Remove full context path, because search engines don't expect it here, pyld requires it
+          jsonld_datablock.textContent = xhr.responseText.replace('docs/jsonldcontext.jsonld', '');
+          head.appendChild(jsonld_datablock);
+        }
+      };
+      xhr.send();
+    </script>
+  </body>
+</html>

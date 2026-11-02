@@ -1,0 +1,25 @@
+{
+  "candidate_id": "DISC-34F3BD6865106D",
+  "provider": "Australian Bureau of Meteorology",
+  "dataset": "index.shtml",
+  "sector": "public",
+  "country": "AU",
+  "scientific_regime": [
+    "weather",
+    "marine",
+    "radar",
+    "satellite"
+  ],
+  "retrieved_utc": "2026-11-02T01:01:24.831048Z",
+  "request_url": "https://www.bom.gov.au/australia/radar/index.shtml?ref=hdr",
+  "final_url": "https://www.bom.gov.au/weather-and-climate/rain-radar-and-weather-maps?ref=hdr",
+  "status_code": 200,
+  "content_type": "text/html; charset=UTF-8",
+  "byte_length": 222275,
+  "sha256": "1aa20959e2ff552392991a66a0255629404e907fd57d10b349e51034a201bfbe",
+  "etag": "W/\"1793576082\"",
+  "last_modified": "Sun, 01 Nov 2026 23:34:42 GMT",
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/weather/2026/11/02/DISC-34F3BD6865106D/20261102T010124.831048Z_1aa20959e2ff5523.html",
+  "parent_id": "BOM-DATA",
+  "discovery_depth": 1
+}

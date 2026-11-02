@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  
+    
+  
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    
+    <link rel="shortcut icon" type="image/ico" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-iphone-114-smile.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-ipad-144-smile.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-iphone-114-smile.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-ipad-144-smile.png"/>  
+  
+    <title>NOAA Geostationary Operational Environmental Satellites (GOES) 16, 17, 18 &amp; 19 - Registry of Open Data on AWS</title>
+  
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://assets.opendata.aws/css/bootstrap/3.4.1/bootstrap.min.css">
+  
+    <!-- Our local CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+  
+    <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Dataset",
+      "name" : "NOAA Geostationary Operational Environmental Satellites (GOES) 16, 17, 18 &amp; 19",
+      "description" : "\u003cbr/\u003e\n\u003cbr/\u003e \nNEW GOES-19 Data!! On April 4, 2025 at 1500 UTC, the GOES-19 satellite will be declared the Operational GOES-East satellite. All products and services, including NODD, for GOES-East will transition to GOES-19 data at that time. GOES-19 will operate out of the GOES-East location of 75.2°W starting on April 1, 2025 and through the operational transition. Until the transition time and during the final stretch of Post Launch Product Testing (PLPT), GOES-19 products are considered non-operational regardless of their validation maturity level. Shortly following the transition of GOES-19 to GOES-East, all data distribution from GOES-16 will be turned off. GOES-16 will drift to the storage location at 104.7°W. GOES-19 data should begin flowing again on April 4th once this maneuver is complete. \n\u003cbr/\u003e\n\u003cbr/\u003e\nNEW GOES 16 Reprocess Data!! The reprocessed GOES-16 ABI L1b data mitigates systematic data issues (including data gaps and image artifacts) seen in the Operational products, and improves the stability of both the radiometric and geometric calibration over the course of the entire mission life. These data were produced by recomputing the L1b radiance products from input raw L0 data using improved calibration algorithms and look-up tables, derived from data analysis of the NIST-traceable, on-board sources. In addition, the reprocessed data products contain enhancements to the L1b file format, including limb pixels and pixel timestamps, while maintaining compatibility with the operational products. The datasets currently available span the operational life of GOES-16 ABI, from early 2018 through the end of 2024. The Reprocessed L1b dataset shows improvement over the Operational L1b products but may still contain data gaps or discrepancies. Please provide feedback to Dan Lindsey (dan.lindsey@noaa.gov) and Gary Lin (guoqing.lin-1@nasa.gov). More information can be found in the [GOES-R ABI Reprocess User Guide](https://github.com/NOAA-Big-Data-Program/nodd-data-docs/blob/main/GOES/GOES-R_ABI_Reprocessed_L1b_User_Guide-v1.1.pdf).\n\u003cbr/\u003e\n\u003cbr/\u003e  \nNOTICE: As of January 10th 2023, GOES-18 assumed the GOES-West position and all data files are deemed both operational and provisional, so no ‘preliminary, non-operational’ caveat is needed. GOES-17 is now offline, shifted approximately 105 degree West, where it will be in on-orbit storage. GOES-17 data will no longer flow into the GOES-17 bucket. Operational GOES-West products can be found in the GOES-18 bucket. \n\u003cbr/\u003e\n\u003cbr/\u003e \nGOES satellites (GOES-16, GOES-17, GOES-18 \u0026amp; GOES-19) provide continuous weather imagery and\nmonitoring of meteorological and space environment data across North America.\nGOES satellites provide the kind of continuous monitoring necessary for\nintensive data analysis. They hover continuously over one position on the surface.\nThe satellites orbit high enough to allow for a full-disc view of the Earth. Because\nthey stay above a fixed spot on the surface, they provide a constant vigil for the\natmospheric \u0026quot;triggers\u0026quot; for severe weather conditions such as tornadoes, flash floods,\nhailstorms, and hurricanes. When these conditions develop, the GOES satellites are able\nto monitor storm development and track their movements. SUVI products available in both NetCDF and FITS. \n",
+      "license" : "NOAA data disseminated through NODD are open to the public and can be used as desired.\u003cbr/\u003e \u003cbr/\u003eNOAA makes data openly available to ensure maximum use of our data, and to spur and encourage exploration and innovation throughout the industry. NOAA requests attribution for the use or dissemination of unaltered NOAA data. However, it is not permissible to state or imply endorsement by or affiliation with NOAA. If you modify NOAA data, you may not state or imply that it is original, unaltered NOAA data.",
+      "sourceOrganization" : "\u003ca href=\"http://www.noaa.gov/\"\u003eNOAA\u003c/a\u003e"
+    }
+    </script>
+  
+  </head>
+  <body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://assets.opendata.aws/js/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://assets.opendata.aws/js/bootstrap/3.4.1/bootstrap.min.js"></script>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="roda-header">
+          <h2><a href="/" alt="Home">Registry of Open Data on AWS</a></h2>
+          <a href="http://aws.amazon.com/what-is-cloud-computing">
+            <img src="https://assets.opendata.aws/img/AWS-Logo_White-Color_300x180.png" alt="Powered by AWS Cloud Computing" id="aws_header_logo">
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="container" >
+
+    <h1>NOAA Geostationary Operational Environmental Satellites (GOES) 16, 17, 18 &amp; 19</h1>
+    <p>
+      <span class="label label-info tag link-tag">agriculture</span>
+
+      
+
+      <span class="label label-info tag link-tag">disaster response</span>
+
+      <span class="label label-info tag link-tag">earth observation</span>
+
+      <span class="label label-info tag link-tag">geospatial</span>
+
+      <span class="label label-info tag link-tag">meteorological</span>
+
+      <span class="label label-info tag link-tag">satellite imagery</span>
+
+      <span class="label label-info tag link-tag">weather</span>
+    </p>
+    <div class="row">
+      <div class="col-md-6">
+      <h3>Description</h3>
+      <p><br/>
+<br/> 
+NEW GOES-19 Data!! On April 4, 2025 at 1500 UTC, the GOES-19 satellite will be declared the Operational GOES-East satellite. All products and services, including NODD, for GOES-East will transition to GOES-19 data at that time. GOES-19 will operate out of the GOES-East location of 75.2°W starting on April 1, 2025 and through the operational transition. Until the transition time and during the final stretch of Post Launch Product Testing (PLPT), GOES-19 products are considered non-operational regardless of their validation maturity level. Shortly following the transition of GOES-19 to GOES-East, all data distribution from GOES-16 will be turned off. GOES-16 will drift to the storage location at 104.7°W. GOES-19 data should begin flowing again on April 4th once this maneuver is complete. 
+<br/>
+<br/>
+NEW GOES 16 Reprocess Data!! The reprocessed GOES-16 ABI L1b data mitigates systematic data issues (including data gaps and image artifacts) seen in the Operational products, and improves the stability of both the radiometric and geometric calibration over the course of the entire mission life. These data were produced by recomputing the L1b radiance products from input raw L0 data using improved calibration algorithms and look-up tables, derived from data analysis of the NIST-traceable, on-board sources. In addition, the reprocessed data products contain enhancements to the L1b file format, including limb pixels and pixel timestamps, while maintaining compatibility with the operational products. The datasets currently available span the operational life of GOES-16 ABI, from early 2018 through the end of 2024. The Reprocessed L1b dataset shows improvement over the Operational L1b products but may still contain data gaps or discrepancies. Please provide feedback to Dan Lindsey (dan.lindsey@noaa.gov) and Gary Lin (guoqing.lin-1@nasa.gov). More information can be found in the [GOES-R ABI Reprocess User Guide](https://github.com/NOAA-Big-Data-Program/nodd-data-docs/blob/main/GOES/GOES-R_ABI_Reprocessed_L1b_User_Guide-v1.1.pdf).
+<br/>
+<br/>  
+NOTICE: As of January 10th 2023, GOES-18 assumed the GOES-West position and all data files are deemed both operational and provisional, so no ‘preliminary, non-operational’ caveat is needed. GOES-17 is now offline, shifted approximately 105 degree West, where it will be in on-orbit storage. GOES-17 data will no longer flow into the GOES-17 bucket. Operational GOES-West products can be found in the GOES-18 bucket. 
+<br/>
+<br/> 
+GOES satellites (GOES-16, GOES-17, GOES-18 &amp; GOES-19) provide continuous weather imagery and
+monitoring of meteorological and space environment data across North America.
+GOES satellites provide the kind of continuous monitoring necessary for
+intensive data analysis. They hover continuously over one position on the surface.
+The satellites orbit high enough to allow for a full-disc view of the Earth. Because
+they stay above a fixed spot on the surface, they provide a constant vigil for the
+atmospheric &quot;triggers&quot; for severe weather conditions such as tornadoes, flash floods,
+hailstorms, and hurricanes. When these conditions develop, the GOES satellites are able
+to monitor storm development and track their movements. SUVI products available in both NetCDF and FITS. 
+</p>
+
+      <h4>Update Frequency</h4>
+      <p>New data is added as soon as it&#39;s available</p>
+
+      <h4>License</h4>
+      <p>NOAA data disseminated through NODD are open to the public and can be used as desired.<br/> <br/>NOAA makes data openly available to ensure maximum use of our data, and to spur and encourage exploration and innovation throughout the industry. NOAA requests attribution for the use or dissemination of unaltered NOAA data. However, it is not permissible to state or imply endorsement by or affiliation with NOAA. If you modify NOAA data, you may not state or imply that it is original, unaltered NOAA data.</p>
+
+      <h4>Documentation</h4>
+      <p><a href="https://github.com/NOAA-Big-Data-Program/nodd-data-docs/tree/main/GOES">https://github.com/NOAA-Big-Data-Program/nodd-data-docs/tree/main/GOES</a></p>
+
+      <h4>Managed By</h4>
+      <p><a href="http://www.noaa.gov/"><img src="/img/logos/noaa-logo.png" class="managed-by-logo" alt="NOAA"></a></p>
+      <p>See all datasets managed by <a href="https://registry.opendata.aws/collab/noaa">NOAA</a>.</p>
+
+      <h4>Contact</h4>
+      <p><br/>
+For questions related to specific GOES Products, please visit the &quot;[GOES-R website](https://www.ncei.noaa.gov/products/satellite/goes-r-series)&quot; and navigate to the Help section.
+<br/>
+For any questions regarding data delivery or any general questions regarding the NOAA Open Data Dissemination (NODD) Program, email the NODD Team at nodd@noaa.gov.
+<br /> We also seek to identify case studies on how NOAA data is being used and will be featuring those stories in joint publications and in upcoming events. If you are interested in seeing your story highlighted, please share it with the NODD team by emailing nodd@noaa.gov
+</p>
+
+      <h4>How to Cite</h4>
+      <p>NOAA Geostationary Operational Environmental Satellites (GOES) 16, 17, 18 &amp; 19 was accessed on <code>DATE</code> from https://registry.opendata.aws/noaa-goes. </p>
+
+      <h4 name="usageexamples">Usage Examples</h4>
+        <h5 class="dataatwork-category">Tutorials</h5>
+        <ul class="dataatwork-list">
+          <li>
+            <a href="https://nbviewer.jupyter.org/github/oceanhackweek/ohw-tutorials/blob/OHW20/10-satellite-data-access/goes-cmp-netcdf-zarr.ipynb" class="" target="_none">Comparison reading GOES-R data from AWS S3 in netCDF versus zarr</a> by <a href="http://www.faralloninstitute.org/chelle" target="_none">Chelle Gentemann</a></a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://github.com/M00NSH0T/Hurricanes/tree/master/2021%20update" class="" target="_none">Forecasting Hurricane Tracks with TensorFlow and data from AWS S3</a> by Kyle Archie</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://www.spatialworkflow.io/goes-satellite-loop-python/" class="" target="_none">How to Make a GOES Satellite Loop in Python</a> by <a href="https://www.spatialworkflow.io/" target="_none">Spatial Workflow</a></a>
+            <br>
+            <a href="https://studiolab.sagemaker.aws/import/github/https://www.spatialworkflow.io/notebooks/goes-satellite-loop-python.ipynb" rel="nofollow" target="_blank"><img src="https://studiolab.sagemaker.aws/studiolab.svg" alt="Open In SageMaker Studio Lab" data-canonical-src="https://studiolab.sagemaker.aws/studiolab.svg" style="max-width: 100%;"></a><br>
+            
+          </li>          <li>
+            <a href="https://github.com/awslabs/amazon-asdi/tree/master/examples/goes16-precip-julia" class="aws-link" target="_none">NOAA GOES16 Julia Jupyter Notebook Example</a> by Peter Schmiedeskamp</a>
+            <br>
+            
+            <span class="label label-info tag service-tag link-tag">AWS CloudFormation</span><span class="label label-info tag service-tag link-tag">Amazon EC2</span><span class="label label-info tag service-tag link-tag">Amazon SageMaker</span>
+          </li>          <li>
+            <a href="https://nbviewer.jupyter.org/github/awslabs/amazon-asdi/blob/main/examples/dask/notebooks/goes16_dask.ipynb" class="aws-link" target="_none">Processing GOES-16 data with Dask &amp; AWS Fargate</a> by Zac Flamig</a>
+            <br>
+            
+            <span class="label label-info tag service-tag link-tag">AWS CloudFormation</span><span class="label label-info tag service-tag link-tag">AWS Fargate</span><span class="label label-info tag service-tag link-tag">Amazon SageMaker</span>
+          </li>          <li>
+            <a href="https://github.com/HamedAlemo/visualize-goes16" class="" target="_none">Visualize GOES-16 in Python using Xarray</a> by <a href="https://www.linkedin.com/in/hamedalemohammad/" target="_none">Hamed Alemohammad</a></a>
+            <br>
+            
+            
+          </li>        </ul>
+        <h5 class="dataatwork-category">Tools & Applications</h5>
+        <ul class="dataatwork-list">
+          <li>
+            <a href="https://coliveir-aer.github.io/goes-data-explorer/" class="" target="_none">GOES Data Explorer</a> by Craig Oliveira</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://github.com/blaylockbk/goes2go" class="" target="_none">GOES-2-go is a python package for downloading and plotting plotting GOES data.</a> by <a href="https://www.linkedin.com/in/blaylockbk/" target="_none">Brian K. Blaylock</a></a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://medium.com/p/6a7182b0d834" class="" target="_none">Modern Data Platform Orchestration with Dagster Software-Defined Assets</a> by <a href="https://medium.com/@adebayoadejare" target="_none">Adebayo Adejare</a></a>
+            <br>
+            
+            
+          </li>        </ul>
+        <h5 class="dataatwork-category">Publications</h5>
+        <ul class="dataatwork-list">
+          <li>
+            <a href="https://noaa-goes16.s3.amazonaws.com/Beginners_Guide_to_GOES-R_Series_Data.pdf" class="" target="_none">Beginner’s Guide to GOES-R Series Data</a> by Danielle Losos</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://www.nationalgeographic.com/magazine/2018/03/bird-migration-interactive-maps/" class="" target="_none">Billions of Birds Migrate. Where Do They Go?</a> by National Geographic</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://doi.org/10.1175/WAF-D-19-0141.1" class="" target="_none">Comparison of Lightning Forecasts from the High-Resolution Rapid Refresh Model to Geostationary Lightning Mapper Observations</a> by Brian K. Blaylock, and John D. Horel</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://aws.amazon.com/blogs/publicsector/embracing-the-cloud-for-climate-research/" class="aws-link" target="_none">Embracing the cloud for climate research</a> by North Carolina State University’s North Carolina Institute for Climate Studies</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://github.com/NOAA-Big-Data-Program/bdp-data-docs/tree/main/GOES/QuickGuides/Spanish" class="" target="_none">GOES Quick Guides (Spanish)</a> by Anthony Segura García</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://arxiv.org/pdf/2211.08883.pdf" class="" target="_none">Identifying the Causes of Pyrocumulonimbus (PyroCb)</a> by Emiliano Díaz Salas-Porras, Kenza Tazi, Ashwin Braude, Daniel Okoh, Kara D. Lamb, Duncan Watson-Parris, Paula Harder, and Nis Meinert</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021EA002080" class="" target="_none">Imaging Considerations From a Geostationary Orbit Using the Short Wavelength Side of the Mid-Infrared Water Vapor Absorption Band</a> by N.B. Miller, M.M. Gunshor, A.J. Merrelli, T.S. L&#x27;Ecuyer, T.J. Schmit, J.J. Gerth, N.J. Gordillo</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://www.nature.com/articles/s41598-020-74576-x" class="" target="_none">Observations of lightning in relation to transitions in volcanic activity during the 3 June 2018 Fuego Eruption</a> by Christopher J. Schultz, Virginia P. Andrews, Kimberly D. Genareau, and Aaron R. Naeger</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://aws.amazon.com/blogs/publicsector/solcast-solar-irradiance-forecasting-for-the-solar-powered-future/" class="aws-link" target="_none">Solar irradiance forecasting for the solar powered future</a> by Solcast</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://arxiv.org/pdf/2201.06173.pdf" class="" target="_none">SunCast: Solar Irradiance Nowcasting from Geosynchronous Satellite Data</a> by Dhileeban Kumaresan, Richard Wang, Ernesto Martinez, Richard Cziva, Alberto Todeschini, Colorado J Reed, Hossein Vahabi</a>
+            <br>
+            
+            
+          </li>          <li>
+            <a href="https://doi.org/10.3390/atmos13010126" class="" target="_none">The Use of Composite GOES-R Satellite Imagery to Evaluate a TC Intensity and Vortex Structure Forecast by an FV3GFS-Based Hurricane Forecast Model</a> by Shaowu Bao, Zhan Zhang, Evan Kalina, and Bin Liu</a>
+            <br>
+            
+            
+          </li>        </ul>
+
+    </div>
+    <div class="col-md-5 col-md-offset-1">
+      <h3>Resources on AWS</h3>
+      <ul class="resource-list">
+        <li>
+          <dl class="resource-list">
+            <dt class="resource-description">Description</dt>
+            <dd class="resource-description">GOES-19 imagery and metadata</dd>
+            <dt class="resource-type">Resource type</dt>
+            <dd class="resource-type s3-bucket">S3 Bucket</dd>
+            <dt class="resource-arn">Amazon Resource Name (ARN)</dt>
+            <dd><code>arn:aws:s3:::noaa-goes19</code></dd>
+            <dt class="resource-region">AWS Region</dt>
+            <dd><code>us-east-1</code></dd>
+            <dt class="resource-region"><a href="https://aws.amazon.com/cli/">AWS CLI</a> Access (No AWS account required)</dt>
+            <dd><code>aws s3 ls --no-sign-request s3://noaa-goes19/</code></dd>
+            <dt class="resource-explore">Explore</dt>
+            <dd><a href="https://noaa-goes19.s3.amazonaws.com/index.html">Browse Bucket</a></dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="resource-list">
+            <dt class="resource-description">Description</dt>
+            <dd class="resource-description">New data notifications for GOES-19, only Lambda and SQS protocols allowed</dd>
+            <dt class="resource-type">Resource type</dt>
+            <dd class="resource-type sns-topic">SNS Topic</dd>
+            <dt class="resource-arn">Amazon Resource Name (ARN)</dt>
+            <dd><code>arn:aws:sns:us-east-1:123901341784:NewGOES19Object</code></dd>
+            <dt class="resource-region">AWS Region</dt>
+            <dd><code>us-east-1</code></dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="resource-list">
+            <dt class="resource-description">Description</dt>
+            <dd class="resource-description">GOES-18 imagery and metadata</dd>
+            <dt class="resource-type">Resource type</dt>
+            <dd class="resource-type s3-bucket">S3 Bucket</dd>
+            <dt class="resource-arn">Amazon Resource Name (ARN)</dt>
+            <dd><code>arn:aws:s3:::noaa-goes18</code></dd>
+            <dt class="resource-region">AWS Region</dt>
+            <dd><code>us-east-1</code></dd>
+            <dt class="resource-region"><a href="https://aws.amazon.com/cli/">AWS CLI</a> Access (No AWS account required)</dt>
+            <dd><code>aws s3 ls --no-sign-request s3://noaa-goes18/</code></dd>
+            <dt class="resource-explore">Explore</dt>
+            <dd><a href="https://noaa-goes18.s3.amazonaws.com/index.html">Browse Bucket</a></dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="resource-list">
+            <dt class="resource-description">Description</dt>
+            <dd class="resource-description">New data notifications for GOES-18, only Lambda and SQS protocols allowed</dd>
+            <dt class="resource-type">Resource type</dt>
+            <dd class="resource-type sns-topic">SNS Topic</dd>
+            <dt class="resource-arn">Amazon Resource Name (ARN)</dt>
+            <dd><code>arn:aws:sns:us-east-1:123901341784:NewGOES18Object</code></dd>
+            <dt class="resource-region">AWS Region</dt>
+            <dd><code>us-east-1</code></dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="resource-list">
+            <dt class="resource-description">Description</dt>
+            <dd class="resource-description">GOES-16 imagery and metadata</dd>
+            <dt class="resource-type">Resource type</dt>
+            <dd class="resource-type s3-bucket">S3 Bucket</dd>
+            <dt class="resource-arn">Amazon Resource Name (ARN)</dt>
+            <dd><code>arn:aws:s3:::noaa-goes16</code></dd>
+            <dt class="resource-region">AWS Region</dt>
+            <dd><code>us-east-1</code></dd>
+            <dt class="resource-region"><a href="https://aws.amazon.com/cli/">AWS CLI</a> Access (No AWS account required)</dt>
+            <dd><code>aws s3 ls --no-sign-request s3://noaa-goes16/</code></dd>
+            <dt class="resource-explore">Explore</dt>
+            <dd><a href="https://noaa-goes16.s3.amazonaws.com/index.html">Browse Bucket</a></dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="resource-list">
+            <dt class="resource-description">Description</dt>
+            <dd class="resource-description">New data notifications for GOES-16, only Lambda and SQS protocols allowed</dd>
+            <dt class="resource-type">Resource type</dt>
+            <dd class="resource-type sns-topic">SNS Topic</dd>
+            <dt class="resource-arn">Amazon Resource Name (ARN)</dt>
+            <dd><code>arn:aws:sns:us-east-1:123901341784:NewGOES16Object</code></dd>
+            <dt class="resource-region">AWS Region</dt>
+            <dd><code>us-east-1</code></dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="resource-list">
+            <dt class="resource-description">Description</dt>
+            <dd class="resource-description">GOES-17 imagery and metadata</dd>
+            <dt class="resource-type">Resource type</dt>
+            <dd class="resource-type s3-bucket">S3 Bucket</dd>
+            <dt class="resource-arn">Amazon Resource Name (ARN)</dt>
+            <dd><code>arn:aws:s3:::noaa-goes17</code></dd>
+            <dt class="resource-region">AWS Region</dt>
+            <dd><code>us-east-1</code></dd>
+            <dt class="resource-region"><a href="https://aws.amazon.com/cli/">AWS CLI</a> Access (No AWS account required)</dt>
+            <dd><code>aws s3 ls --no-sign-request s3://noaa-goes17/</code></dd>
+            <dt class="resource-explore">Explore</dt>
+            <dd><a href="https://noaa-goes17.s3.amazonaws.com/index.html">Browse Bucket</a></dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="resource-list">
+            <dt class="resource-description">Description</dt>
+            <dd class="resource-description">New data notifications for GOES-17, only Lambda and SQS protocols allowed</dd>
+            <dt class="resource-type">Resource type</dt>
+            <dd class="resource-type sns-topic">SNS Topic</dd>
+            <dt class="resource-arn">Amazon Resource Name (ARN)</dt>
+            <dd><code>arn:aws:sns:us-east-1:123901341784:NewGOES17Object</code></dd>
+            <dt class="resource-region">AWS Region</dt>
+            <dd><code>us-east-1</code></dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+    <hr/>
+    <p><a href="https://github.com/awslabs/open-data-registry/blob/main/datasets/noaa-goes.yaml">Edit this dataset entry on GitHub</a></p>
+    <p><a href="mailto:opendata@amazon.com">Tell us about your project</a></p>
+    <p><a href="/"><b>Home</b></a></p>
+  </div>
+  <script src="/js/tags.js"></script>

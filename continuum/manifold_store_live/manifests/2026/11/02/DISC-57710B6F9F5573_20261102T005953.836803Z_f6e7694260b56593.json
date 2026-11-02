@@ -1,0 +1,24 @@
+{
+  "candidate_id": "DISC-57710B6F9F5573",
+  "provider": "NOAA/CO-OPS",
+  "dataset": "datagetter",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "marine",
+    "hydrology",
+    "coastal"
+  ],
+  "retrieved_utc": "2026-11-02T00:59:53.836803Z",
+  "request_url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=today&amp;station=8453662&amp;product=visibility&amp;time_zone=lst_ldt&amp;units=metric&amp;format=csv",
+  "final_url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=today&amp;station=8453662&amp;product=visibility&amp;time_zone=lst_ldt&amp;units=metric&amp;format=csv",
+  "status_code": 200,
+  "content_type": "text/comma-separated-values",
+  "byte_length": 5623,
+  "sha256": "f6e7694260b5659317635e5351b4a757d3035971abfc635cbcf404da18f2f2c6",
+  "etag": null,
+  "last_modified": null,
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/marine/2026/11/02/DISC-57710B6F9F5573/20261102T005953.836803Z_f6e7694260b56593.txt",
+  "parent_id": "NOAA-COOPS",
+  "discovery_depth": 1
+}

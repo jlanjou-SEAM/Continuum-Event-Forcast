@@ -1,0 +1,23 @@
+{
+  "candidate_id": "DISC-06DB78095DA7E5",
+  "provider": "NOAA/SWPC",
+  "dataset": "planetary_k_index_1m.json",
+  "sector": "public",
+  "country": "US",
+  "scientific_regime": [
+    "space_weather",
+    "solar"
+  ],
+  "retrieved_utc": "2026-11-02T01:01:23.700611Z",
+  "request_url": "https://services.swpc.noaa.gov/json/planetary_k_index_1m.json",
+  "final_url": "https://services.swpc.noaa.gov/json/planetary_k_index_1m.json",
+  "status_code": 200,
+  "content_type": "application/json",
+  "byte_length": 27847,
+  "sha256": "e08476bb1660a6e77428f65d2f5b50df038c1bcc0d6bd27fc2a832260621b8e3",
+  "etag": "\"6cc7-65f40a84c7dd9\"",
+  "last_modified": "Mon, 02 Nov 2026 00:59:26 GMT",
+  "raw_path": "/home/runner/work/seam-private-engines/seam-private-engines/backend/event-forcast/continuum/manifold_store_live/raw/space_weather/2026/11/02/DISC-06DB78095DA7E5/20261102T010123.700611Z_e08476bb1660a6e7.json",
+  "parent_id": "SWPC-JSON",
+  "discovery_depth": 1
+}
