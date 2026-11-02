@@ -1,0 +1,22 @@
+name: Trigger Collection (Frontend Request)
+
+on:
+  repository_dispatch:
+    types: [trigger-collection]
+
+jobs:
+  dispatch-to-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger backend collection workflow
+        run: |
+          echo "Received trigger-collection event from frontend"
+          echo "Calling backend workflow via GitHub API..."
+
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.SEAM_GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/jlanjou-SEAM/seam-private-engines/actions/workflows/event-forcast-collect-realtime.yml/dispatches \
+            -d '{"ref":"main"}'
+
+          echo "Backend workflow dispatch triggered"

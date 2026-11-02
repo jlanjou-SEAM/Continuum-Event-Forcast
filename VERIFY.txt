@@ -1,0 +1,33 @@
+{
+  "package": "Continuum_CollectorUtils_Restore_PathChecked.zip",
+  "files": [
+    "collectors/collector_utils.py",
+    "collectors/collector_utils_72hr.py",
+    "README.txt",
+    "VERIFY.txt"
+  ],
+  "checks": {
+    "has_run_collector": true,
+    "has_load_sources": true,
+    "has_config_candidates": true,
+    "checks_original_config_path": true,
+    "checks_step1_config_path": true,
+    "root_level_realtime_output": true,
+    "binary_stream_save": true
+  },
+  "install_locations": {
+    "collector_utils.py": "C:\\Continuum Database\\collectors\\collector_utils.py",
+    "collector_utils_72hr.py": "C:\\Continuum Database\\collectors\\collector_utils_72hr.py"
+  },
+  "config_search_order": [
+    "C:\\Continuum Database\\config\\collector_sources.json",
+    "C:\\Continuum Database\\config\\step1_raw_data_retrieval\\collector_sources.json",
+    "C:\\Continuum Database\\config\\step1_raw_data_retrieval\\collector_sources_additive_patch.json"
+  ],
+  "output_roots": [
+    "C:\\Continuum Database\\realtime",
+    "C:\\Continuum Database\\streams",
+    "C:\\Continuum Database\\curated",
+    "C:\\Continuum Database\\official"
+  ]
+}

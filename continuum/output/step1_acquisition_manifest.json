@@ -1,0 +1,37 @@
+{
+  "generated_utc": "2026-05-16T18:26:33.949970+00:00",
+  "schema": "SEAM_STEP1_ACQUISITION_V33",
+  "backfill_hours": 72,
+  "intakes": {
+    "raw": "raw",
+    "curated": "curated",
+    "streams": "streams",
+    "official": "official"
+  },
+  "results": [
+    {
+      "source": "usgs_earthquakes",
+      "records": 755,
+      "file": "C:\\Continuum Database\\continuum\\official\\usgs_earthquakes_72h.json",
+      "ok": true
+    },
+    {
+      "source": "noaa_alerts",
+      "records": 500,
+      "file": "C:\\Continuum Database\\continuum\\official\\noaa_alerts_72h.json",
+      "ok": true
+    },
+    {
+      "source": "volcano_smithsonian",
+      "records": 18,
+      "file": "C:\\Continuum Database\\continuum\\official\\volcano_smithsonian_72h.json",
+      "ok": true
+    },
+    {
+      "source": "emsc",
+      "records": 1055,
+      "file": "C:\\Continuum Database\\continuum\\official\\emsc_72h.json",
+      "ok": true
+    }
+  ]
+}

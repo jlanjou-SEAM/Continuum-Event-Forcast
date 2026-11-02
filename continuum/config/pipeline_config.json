@@ -1,0 +1,26 @@
+{
+  "project": "continuum-event-forcast",
+  "pipeline_version": "5.0",
+  "inputs": {
+    "manifold": "continuum/manifold.arcv",
+    "realtime_data": "realtime/",
+    "nonrealtime_data": "nonrealtime/",
+    "official_data": "official/",
+    "streams_data": "streams/"
+  },
+  "outputs": {
+    "event_matrix": "continuum/event_matrix.json",
+    "substrate": "continuum/substrate.json",
+    "event_tracker": "continuum/event_tracker.json"
+  },
+  "step4": {
+    "min_confidence": 0.5,
+    "location_inference": true,
+    "deduplicate": true
+  },
+  "step5": {
+    "preserve_manifold": true,
+    "recursive_substrate": true,
+    "native_reconciliation": true
+  }
+}

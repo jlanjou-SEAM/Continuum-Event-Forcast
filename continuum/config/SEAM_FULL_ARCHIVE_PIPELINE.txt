@@ -1,0 +1,25 @@
+=== SEAM FULL ARCHIVE PIPELINE ===
+
+STEP 1:
+Acquire all available raw, curated, stream, and official data.
+
+STEP 2:
+Build a complete SEAM continuum master set from all ingested files.
+
+STEP 3:
+Perform manifold signature extraction and localization.
+
+STEP 4:
+Perform recursive official verification and reconciliation.
+
+CONSTRAINTS:
+- no filtering during intake
+- no reduction during intake
+- preserve all records
+- preserve noise/background state
+- maintain UTC capture metadata
+- preserve source attribution
+- preserve raw payloads
+
+OUTPUT:
+continuum/output/continuum_master_72h.json

@@ -1,0 +1,162 @@
+## realtime_acquisition.py
+returncode=0
+
+=== REALTIME ACQUISITION ===
+[realtime] project_root: /mnt/data/continuum_validation_tree
+[realtime] config: /mnt/data/continuum_validation_tree/config/step1_raw_data_retrieval/collector_sources.json
+[realtime] collectors: /mnt/data/continuum_validation_tree/collectors
+[realtime] output: /mnt/data/continuum_validation_tree/raw/realtime
+[realtime] cycle start | sources=22
+[realtime] validate | missing=0 total=22
+
+
+
+## nonrealtime_acquisition.py
+returncode=0
+
+=== NONREALTIME ACQUISITION ===
+[nonrealtime] project_root: /mnt/data/continuum_validation_tree
+[nonrealtime] config: /mnt/data/continuum_validation_tree/config/step1_raw_data_retrieval/collector_sources.json
+[nonrealtime] collectors: /mnt/data/continuum_validation_tree/collectors
+[nonrealtime] output: /mnt/data/continuum_validation_tree/raw/nonrealtime
+[nonrealtime] cycle start | sources=69
+[nonrealtime] validate | missing=0 total=69
+
+
+
+## official_acquisition.py
+returncode=0
+
+=== OFFICIAL ACQUISITION ===
+[official] project_root: /mnt/data/continuum_validation_tree
+[official] config: /mnt/data/continuum_validation_tree/config/step1_raw_data_retrieval/collector_sources.json
+[official] collectors: /mnt/data/continuum_validation_tree/collectors
+[official] output: /mnt/data/continuum_validation_tree/raw/official
+[official] cycle start | sources=6
+[official] validate | missing=0 total=6
+
+
+
+## image_stream_acquisition.py
+returncode=0
+
+=== IMAGE_STREAM ACQUISITION ===
+[image_stream] project_root: /mnt/data/continuum_validation_tree
+[image_stream] config: /mnt/data/continuum_validation_tree/config/step1_raw_data_retrieval/collector_sources.json
+[image_stream] collectors: /mnt/data/continuum_validation_tree/collectors
+[image_stream] output: /mnt/data/continuum_validation_tree/raw/image_stream
+[image_stream] cycle start | sources=8
+[image_stream] validate | missing=0 total=8
+
+
+
+## realtime_acquisition_72hr.py
+returncode=0
+
+=== REALTIME_72HR ACQUISITION ===
+[realtime_72hr] project_root: /mnt/data/continuum_validation_tree
+[realtime_72hr] config: /mnt/data/continuum_validation_tree/config/step1_raw_data_retrieval/collector_sources.json
+[realtime_72hr] collectors: /mnt/data/continuum_validation_tree/collectors
+[realtime_72hr] output: /mnt/data/continuum_validation_tree/raw/realtime
+[realtime_72hr] window: 2026-05-18T01:41:10Z -> 2026-05-21T01:41:10Z
+[realtime_72hr] cycle start | sources=22
+[realtime_72hr] validate | missing=0 total=22
+
+
+
+## nonrealtime_acquisition_72hr.py
+returncode=0
+
+=== NONREALTIME_72HR ACQUISITION ===
+[nonrealtime_72hr] project_root: /mnt/data/continuum_validation_tree
+[nonrealtime_72hr] config: /mnt/data/continuum_validation_tree/config/step1_raw_data_retrieval/collector_sources.json
+[nonrealtime_72hr] collectors: /mnt/data/continuum_validation_tree/collectors
+[nonrealtime_72hr] output: /mnt/data/continuum_validation_tree/raw/nonrealtime
+[nonrealtime_72hr] window: 2026-05-18T01:41:12Z -> 2026-05-21T01:41:12Z
+[nonrealtime_72hr] cycle start | sources=69
+[nonrealtime_72hr] validate | missing=0 total=69
+
+
+
+## official_acquisition_72hr.py
+returncode=0
+
+=== OFFICIAL_72HR ACQUISITION ===
+[official_72hr] project_root: /mnt/data/continuum_validation_tree
+[official_72hr] config: /mnt/data/continuum_validation_tree/config/step1_raw_data_retrieval/collector_sources.json
+[official_72hr] collectors: /mnt/data/continuum_validation_tree/collectors
+[official_72hr] output: /mnt/data/continuum_validation_tree/raw/official
+[official_72hr] window: 2026-05-18T01:41:14Z -> 2026-05-21T01:41:14Z
+[official_72hr] cycle start | sources=6
+[official_72hr] validate | missing=0 total=6
+
+
+
+## image_stream_acquisition_72hr.py
+returncode=0
+
+=== IMAGE_STREAM_72HR ACQUISITION ===
+[image_stream_72hr] project_root: /mnt/data/continuum_validation_tree
+[image_stream_72hr] config: /mnt/data/continuum_validation_tree/config/step1_raw_data_retrieval/collector_sources.json
+[image_stream_72hr] collectors: /mnt/data/continuum_validation_tree/collectors
+[image_stream_72hr] output: /mnt/data/continuum_validation_tree/raw/image_stream
+[image_stream_72hr] window: 2026-05-18T01:41:17Z -> 2026-05-21T01:41:17Z
+[image_stream_72hr] cycle start | sources=8
+[image_stream_72hr] validate | missing=0 total=8
+
+
+
+## realtime_acquisition_168hr.py
+returncode=0
+
+=== REALTIME_168HR ACQUISITION ===
+[realtime_168hr] project_root: /mnt/data/continuum_validation_tree
+[realtime_168hr] config: /mnt/data/continuum_validation_tree/config/step1_raw_data_retrieval/collector_sources.json
+[realtime_168hr] collectors: /mnt/data/continuum_validation_tree/collectors
+[realtime_168hr] output: /mnt/data/continuum_validation_tree/raw/realtime
+[realtime_168hr] window: 2026-05-14T01:41:19Z -> 2026-05-21T01:41:19Z
+[realtime_168hr] cycle start | sources=22
+[realtime_168hr] validate | missing=0 total=22
+
+
+
+## nonrealtime_acquisition_168hr.py
+returncode=0
+
+=== NONREALTIME_168HR ACQUISITION ===
+[nonrealtime_168hr] project_root: /mnt/data/continuum_validation_tree
+[nonrealtime_168hr] config: /mnt/data/continuum_validation_tree/config/step1_raw_data_retrieval/collector_sources.json
+[nonrealtime_168hr] collectors: /mnt/data/continuum_validation_tree/collectors
+[nonrealtime_168hr] output: /mnt/data/continuum_validation_tree/raw/nonrealtime
+[nonrealtime_168hr] window: 2026-05-14T01:41:22Z -> 2026-05-21T01:41:22Z
+[nonrealtime_168hr] cycle start | sources=69
+[nonrealtime_168hr] validate | missing=0 total=69
+
+
+
+## official_acquisition_168hr.py
+returncode=0
+
+=== OFFICIAL_168HR ACQUISITION ===
+[official_168hr] project_root: /mnt/data/continuum_validation_tree
+[official_168hr] config: /mnt/data/continuum_validation_tree/config/step1_raw_data_retrieval/collector_sources.json
+[official_168hr] collectors: /mnt/data/continuum_validation_tree/collectors
+[official_168hr] output: /mnt/data/continuum_validation_tree/raw/official
+[official_168hr] window: 2026-05-14T01:41:24Z -> 2026-05-21T01:41:24Z
+[official_168hr] cycle start | sources=6
+[official_168hr] validate | missing=0 total=6
+
+
+
+## image_stream_acquisition_168hr.py
+returncode=0
+
+=== IMAGE_STREAM_168HR ACQUISITION ===
+[image_stream_168hr] project_root: /mnt/data/continuum_validation_tree
+[image_stream_168hr] config: /mnt/data/continuum_validation_tree/config/step1_raw_data_retrieval/collector_sources.json
+[image_stream_168hr] collectors: /mnt/data/continuum_validation_tree/collectors
+[image_stream_168hr] output: /mnt/data/continuum_validation_tree/raw/image_stream
+[image_stream_168hr] window: 2026-05-14T01:41:26Z -> 2026-05-21T01:41:26Z
+[image_stream_168hr] cycle start | sources=8
+[image_stream_168hr] validate | missing=0 total=8
+
