@@ -1092,11 +1092,11 @@
                     return false;
                 });
 
-                // Active status alone cannot make an old prediction current.
-                const criticalEvents = allCritical.filter(evt => eventIsActive(evt) && hasFreshEvidence(evt, now.getTime())).sort((a, b) => {
+                // Every active event is shown. Evidence age is displayed per event instead of hiding it.
+                const criticalEvents = allCritical.filter(evt => eventIsActive(evt)).sort((a, b) => {
                     return b.confidence_history.at(-1).seam_phi - a.confidence_history.at(-1).seam_phi;
                 });
-                const staleEvents = allCritical.filter(evt => eventIsActive(evt) && !hasFreshEvidence(evt, now.getTime()));
+                const staleEvents = [];
                 const evidenceDates = allEvents.map(predictionEvidenceTime).filter(t => t !== null);
                 const latestEvidence = evidenceDates.length ? new Date(Math.max(...evidenceDates)).toISOString() : 'unavailable';
                 document.getElementById('feedStatus').textContent =
@@ -1136,7 +1136,10 @@
 
                     const phaseEmoji = lastConf >= 0.97 ? '🔴' : lastConf >= 0.90 ? '🔴' : lastConf >= 0.75 ? '🟠' : lastConf >= 0.50 ? '🟡' : '⚪';
                     const formattedId = evt.formatted_id || `${evt.signature_class.substring(0,3)}_${evt.location.best_effort_lat?.toFixed(0)}_${evt.location.best_effort_lon?.toFixed(0)}`;
-                    addLog(`${phaseEmoji} ACTIVE ${formattedId} ${(lastConf*100).toFixed(0)}%${historyStr}${deltaStr}`, phase);
+                    const evidenceTime = predictionEvidenceTime(evt);
+                    const evidenceAgeHours = evidenceTime === null ? null : Math.floor((now - evidenceTime) / (60*60*1000));
+                    const ageStr = evidenceTime === null ? ' [no evidence time]' : hasFreshEvidence(evt, now.getTime()) ? ' [NEW/UPDATED]' : ` [last evidence ${new Date(evidenceTime).toISOString().slice(0,10)}, ${evidenceAgeHours}h old]`;
+                    addLog(`${phaseEmoji} ACTIVE ${formattedId} ${(lastConf*100).toFixed(0)}%${historyStr}${deltaStr}${ageStr}`, phase);
                 });
 
                 // Add stale events to log panel (right column)
