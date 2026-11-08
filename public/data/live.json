@@ -1,6 +1,6 @@
 {
   "schema": "SEAM_LIVE_FEED_V1",
-  "generated_utc": "2026-11-08T07:59:45.103268+00:00",
+  "generated_utc": "2026-11-08T13:57:44.201956+00:00",
   "sources_loaded": 6746,
   "event_count": 1,
   "events": [
@@ -36,27 +36,40 @@
         "event_time_utc": "2026-09-28T15:05:00Z"
       },
       "official_alert": {
-        "source": "USGS HVO CAP",
-        "status": "Cancel",
-        "alert_level": "ADVISORY",
-        "color_code": "YELLOW",
-        "issued_utc": "2026-11-07T18:24:50Z",
-        "guid": "DOI-USGS-HVO-2026-11-07T17:46:41+00:00",
-        "description": "The Halema'uma'u eruption of K\u012blauea is currently paused after episode 56 fountaining ended on November 5. The summit is reinflating and the next episode of lava fountaining is likely several weeks away."
+        "event_id": "vol_pac_26_001",
+        "name": "K\u012blauea, Hawaii",
+        "signature_class": "volcanic",
+        "status": "ACTIVE",
+        "type": "volcanic",
+        "confidence": 0.97,
+        "location": {
+          "best_effort_lat": 19.42,
+          "best_effort_lon": -155.29,
+          "latitude": 19.42,
+          "longitude": -155.29,
+          "name": "K\u012blauea",
+          "state_province": "Hawaii",
+          "country": "USA"
+        },
+        "region": "Hawaii",
+        "country": "USA",
+        "detected_utc": "2026-05-16T19:43:42Z",
+        "issued_utc": "2026-09-28T14:15:00Z",
+        "projected_event_time": "2026-09-28T15:05:00Z",
+        "event_time_utc": "2026-09-28T15:05:00Z",
+        "alert_level": "WARNING",
+        "description": "K\u012blauea volcano eruption ongoing with high seismic activity",
+        "official_source": "USGS Hawaiian Volcano Observatory",
+        "confidence_history": [
+          {
+            "timestamp_utc": "2026-05-16T19:43:42Z",
+            "seam_phi": 0.97
+          }
+        ],
+        "identification_to_alert_minutes": 1966,
+        "signal_summary": "Strong volcanic seismic signal detected with eruption confirmation"
       },
-      "created_utc": "2026-11-08T07:59:45.103227+00:00",
-      "official_alerts": {
-        "DOI-USGS-HVO-2026-11-07T17:46:41+00:00": {
-          "guid": "DOI-USGS-HVO-2026-11-07T17:46:41+00:00",
-          "issued_utc": "2026-11-07T18:24:50Z",
-          "status": "Cancel",
-          "alert_level": "ADVISORY",
-          "color_code": "YELLOW",
-          "description": "The Halema'uma'u eruption of K\u012blauea is currently paused after episode 56 fountaining ended on November 5. The summit is reinflating and the next episode of lava fountaining is likely several weeks away.",
-          "link": "https://volcanoes.usgs.gov/hans-public/rss/cap/volcano/332010",
-          "source_file": "20261108T075929.496164Z_7344881ee23d9439.xml"
-        }
-      }
+      "created_utc": "2026-11-08T13:57:44.201915+00:00"
     }
   ]
 }
