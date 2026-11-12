@@ -297,7 +297,7 @@
     <header>
         <div>
             <h1>🎯 CONTINUUM EVENT PROJECTION</h1>
-            <p class="subtitle">Real-time natural disaster prediction system</p>
+            <p class="subtitle">Live source observations and SEAM analysis status</p>
         </div>
         <div class="header-right">
             <div class="time-display">
@@ -321,6 +321,7 @@
             <div id="loading" class="loading" style="display:none;">Loading events...</div>
             <div id="error" class="error" style="display:none;"></div>
             <div id="feedStatus" role="status" style="padding:14px;margin-bottom:14px;background:#fff4d6;color:#302200;border-radius:8px;">Checking source freshness…</div>
+            <section id="officialObservations" aria-label="Official observations" style="padding:16px;margin-bottom:16px;background:#f1f5f9;color:#172033;border-radius:8px;">Checking official observation feeds…</section>
             <div id="eventsContainer"></div>
         </div>
 
@@ -983,10 +984,72 @@
             return card;
         }
 
+        function renderOfficialObservations(feed) {
+            const panel = document.getElementById('officialObservations');
+            panel.replaceChildren();
+            const stamp = Date.parse(feed.generated_utc);
+            const fresh = Number.isFinite(stamp) && Date.now() - stamp < 30 * 60000 && stamp <= Date.now() + 300000;
+            const heading = document.createElement('h2');
+            heading.style.cssText = 'font-size:20px;color:#172033;margin-bottom:10px;';
+            heading.textContent = fresh ? 'Current official observations' : 'Official observations — update delayed';
+            panel.append(heading);
+            const note = document.createElement('p');
+            note.textContent = 'Published: ' + (Number.isFinite(stamp) ? new Date(stamp).toLocaleString() : 'unknown') +
+                '. These are source-reported earthquakes and weather alerts; they are not SEAM predictions.';
+            panel.append(note);
+            const sources = document.createElement('p');
+            sources.style.margin = '10px 0';
+            sources.textContent = (feed.source_status || []).map(source => source.provider + ': ' +
+                (source.status === 'ok' ? source.record_count + ' records, checked ' + new Date(source.retrieved_utc).toLocaleString() : 'unavailable')).join(' | ') ||
+                'No current source checks have been published.';
+            panel.append(sources);
+            const engine = document.createElement('p');
+            engine.textContent = feed.seam_execution?.status === 'executed' ?
+                'SEAM executed against ' + feed.seam_execution.manifold_entries + ' Manifold entries; ' +
+                feed.seam_execution.resolved_operators + ' operators resolved. ' + feed.prediction_status :
+                'SEAM execution status: unavailable. ' + (feed.prediction_status || '');
+            panel.append(engine);
+            const rows = feed.official_observations || [];
+            const detail = document.createElement('details');
+            detail.open = true;
+            const summary = document.createElement('summary');
+            summary.style.cssText = 'cursor:pointer;margin:12px 0;font-weight:bold;';
+            summary.textContent = 'Showing ' + rows.length + ' of ' + (feed.official_observation_count || 0) + ' source records';
+            detail.append(summary);
+            const list = document.createElement('div');
+            list.style.cssText = 'max-height:480px;overflow:auto;display:grid;gap:8px;';
+            for (const row of rows) {
+                const card = document.createElement('article');
+                card.style.cssText = 'padding:12px;background:#ffffff;color:#172033;border:1px solid #cbd5e1;border-radius:6px;';
+                const title = document.createElement('strong');
+                title.textContent = (row.provider || '') + ' — ' + (row.title || row.kind);
+                card.append(title);
+                const body = document.createElement('p');
+                body.textContent = (row.area || '') + ' · ' + (row.observed_utc ? 'Observed: ' + new Date(row.observed_utc).toLocaleString() :
+                    'Issued: ' + (row.issued_utc ? new Date(row.issued_utc).toLocaleString() : 'not supplied')) +
+                    (row.expires_utc ? ' · Expires: ' + new Date(row.expires_utc).toLocaleString() : '');
+                card.append(body);
+                try {
+                    const url = new URL(row.url);
+                    if (url.protocol === 'https:') {
+                        const link = document.createElement('a');
+                        link.href = url.href;
+                        link.textContent = 'Read source';
+                        link.style.color = '#174b90';
+                        link.target = '_blank'; link.rel = 'noopener noreferrer';
+                        card.append(link);
+                    }
+                } catch (_) {}
+                list.append(card);
+            }
+            detail.append(list); panel.append(detail);
+        }
+
         async function loadAndRender() {
             const loading = document.getElementById('loading');
             const error = document.getElementById('error');
             const container = document.getElementById('eventsContainer');
+            document.getElementById('officialObservations').textContent = 'Checking official observation feeds…';
 
             loading.style.display = 'block';
             error.style.display = 'none';
@@ -1005,8 +1068,10 @@
                     allEvents = Object.values(live.events || {});
                     feedLoaded = true;
                     snapshotTime = live.generated_utc;
+                    renderOfficialObservations(live);
                     addLog(`📡 Live feed: ${allEvents.length} events (${live.generated_utc})`, 'info');
                 } catch (e) {
+                    document.getElementById('officialObservations').textContent = 'Official observation feed unavailable. No current source check was received.';
                     console.warn('Published live feed unavailable; falling back to repository data', e);
                 }
 
