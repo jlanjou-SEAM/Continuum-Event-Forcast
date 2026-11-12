@@ -1,6 +1,6 @@
 {
   "schema": "SEAM_LIVE_FEED_V1",
-  "generated_utc": "2026-11-12T03:58:42.486692+00:00",
+  "generated_utc": "2026-11-12T04:01:46.880098+00:00",
   "status": "ok",
   "sources_loaded": 2,
   "source_status": [
@@ -8,20 +8,20 @@
       "provider": "USGS earthquakes",
       "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
       "status": "ok",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00",
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00",
       "record_count": 201
     },
     {
       "provider": "NWS alerts",
       "url": "https://api.weather.gov/alerts/active",
       "status": "ok",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00",
-      "record_count": 314
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00",
+      "record_count": 312
     }
   ],
   "event_count": 0,
   "events": [],
-  "official_observation_count": 515,
+  "official_observation_count": 513,
   "official_observations": [
     {
       "id": "ci41361175",
@@ -33,19 +33,19 @@
       "source_updated_utc": "2026-11-12T03:48:41.954000+00:00",
       "magnitude": 1.29,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41361175",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wkcjcz",
       "provider": "USGS earthquakes",
       "kind": "observed_earthquake",
-      "title": "M 3.1 - 9 km SSE of Kasilof, Alaska",
-      "area": "9 km SSE of Kasilof, Alaska",
-      "observed_utc": "2026-11-12T03:43:51.711000+00:00",
-      "source_updated_utc": "2026-11-12T03:50:43.371000+00:00",
+      "title": "M 3.1 - 11 km SSE of Kasilof, Alaska",
+      "area": "11 km SSE of Kasilof, Alaska",
+      "observed_utc": "2026-11-12T03:43:51.447000+00:00",
+      "source_updated_utc": "2026-11-12T04:00:05.888000+00:00",
       "magnitude": 3.1,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wkcjcz",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "nc75465572",
@@ -57,7 +57,7 @@
       "source_updated_utc": "2026-11-12T03:44:39.497000+00:00",
       "magnitude": 1.68,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465572",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wkbtox",
@@ -69,7 +69,7 @@
       "source_updated_utc": "2026-11-12T03:29:05.747000+00:00",
       "magnitude": 1.1,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wkbtox",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wkbomt",
@@ -81,7 +81,7 @@
       "source_updated_utc": "2026-11-12T03:21:25.491000+00:00",
       "magnitude": 2.2,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wkbomt",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "uw714137991",
@@ -93,7 +93,7 @@
       "source_updated_utc": "2026-11-12T03:18:58.806000+00:00",
       "magnitude": 2.16,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714137991",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wkakxb",
@@ -105,7 +105,7 @@
       "source_updated_utc": "2026-11-12T02:48:45.769000+00:00",
       "magnitude": 0.6,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wkakxb",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wkaida",
@@ -117,7 +117,7 @@
       "source_updated_utc": "2026-11-12T02:44:18.914000+00:00",
       "magnitude": 2.1,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wkaida",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "ci41361159",
@@ -129,7 +129,7 @@
       "source_updated_utc": "2026-11-12T02:43:06.095000+00:00",
       "magnitude": 0.72,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41361159",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "nc75465567",
@@ -141,7 +141,7 @@
       "source_updated_utc": "2026-11-12T02:28:58.992000+00:00",
       "magnitude": 0.96,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465567",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "ci41361151",
@@ -153,7 +153,7 @@
       "source_updated_utc": "2026-11-12T02:13:58.021000+00:00",
       "magnitude": 0.48,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41361151",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "ci41361143",
@@ -165,7 +165,7 @@
       "source_updated_utc": "2026-11-12T02:08:27.069000+00:00",
       "magnitude": 0.68,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41361143",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "ci41361127",
@@ -177,7 +177,7 @@
       "source_updated_utc": "2026-11-12T01:48:49.581000+00:00",
       "magnitude": 1.3,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41361127",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "us7000txqa",
@@ -189,7 +189,7 @@
       "source_updated_utc": "2026-11-12T01:33:09.040000+00:00",
       "magnitude": 4.8,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txqa",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "ci41361111",
@@ -201,7 +201,7 @@
       "source_updated_utc": "2026-11-12T01:13:23.209000+00:00",
       "magnitude": 0.74,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41361111",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "nc75465552",
@@ -213,7 +213,7 @@
       "source_updated_utc": "2026-11-12T01:10:24.254000+00:00",
       "magnitude": 0.92,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465552",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "nc75465542",
@@ -225,7 +225,7 @@
       "source_updated_utc": "2026-11-12T00:49:09.075000+00:00",
       "magnitude": 0.73,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465542",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wjvsvz",
@@ -237,7 +237,7 @@
       "source_updated_utc": "2026-11-12T00:26:15+00:00",
       "magnitude": 0.9,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjvsvz",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wjvsfu",
@@ -249,7 +249,7 @@
       "source_updated_utc": "2026-11-12T00:25:32.183000+00:00",
       "magnitude": 1.2,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjvsfu",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "hv75069487",
@@ -261,7 +261,7 @@
       "source_updated_utc": "2026-11-12T00:26:39.920000+00:00",
       "magnitude": 1.89,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75069487",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "ci41361103",
@@ -273,7 +273,7 @@
       "source_updated_utc": "2026-11-12T00:20:27.540000+00:00",
       "magnitude": 1.98,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41361103",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "us7000txpv",
@@ -285,7 +285,7 @@
       "source_updated_utc": "2026-11-12T00:20:14.040000+00:00",
       "magnitude": 4.4,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txpv",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "us7000txpu",
@@ -297,7 +297,7 @@
       "source_updated_utc": "2026-11-12T00:39:04.040000+00:00",
       "magnitude": 3.9,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txpu",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wjudea",
@@ -309,7 +309,7 @@
       "source_updated_utc": "2026-11-11T23:38:26.709000+00:00",
       "magnitude": 2.2,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjudea",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "ci41361095",
@@ -321,7 +321,7 @@
       "source_updated_utc": "2026-11-11T23:32:04.315000+00:00",
       "magnitude": 1.31,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41361095",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "ci41361087",
@@ -333,7 +333,7 @@
       "source_updated_utc": "2026-11-11T23:26:42.715000+00:00",
       "magnitude": 0.9,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41361087",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "nc75465517",
@@ -345,7 +345,7 @@
       "source_updated_utc": "2026-11-11T23:24:49.377000+00:00",
       "magnitude": 0.97,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465517",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "uu80164226",
@@ -357,7 +357,7 @@
       "source_updated_utc": "2026-11-11T23:24:06.770000+00:00",
       "magnitude": 0.6,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uu80164226",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wjtfdh",
@@ -369,7 +369,7 @@
       "source_updated_utc": "2026-11-11T23:10:35.491000+00:00",
       "magnitude": 2.1,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjtfdh",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "uu80164221",
@@ -381,7 +381,7 @@
       "source_updated_utc": "2026-11-11T23:33:34.010000+00:00",
       "magnitude": 1.68,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uu80164221",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "tx2026wgdyjd",
@@ -393,7 +393,7 @@
       "source_updated_utc": "2026-11-12T00:02:03.669000+00:00",
       "magnitude": 2.5,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026wgdyjd",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "us7000txpk",
@@ -405,7 +405,20 @@
       "source_updated_utc": "2026-11-12T03:34:51.050000+00:00",
       "magnitude": 4.6,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txpk",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.232be809cc2e30143166acf4945121b0345194a4.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Special Weather Statement",
+      "area": "Rockcastle; Jackson; Pulaski; Laurel; Breathitt; Owsley; Perry; Clay",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-11T22:59:00-05:00",
+      "effective_utc": "2026-11-11T22:59:00-05:00",
+      "expires_utc": "2026-11-11T23:30:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.232be809cc2e30143166acf4945121b0345194a4.001.1",
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7f6314ff51472e0662c0857fed50210660d8c694.001.1",
@@ -418,7 +431,7 @@
       "effective_utc": "2026-11-11T22:55:00-05:00",
       "expires_utc": "2026-11-11T23:45:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7f6314ff51472e0662c0857fed50210660d8c694.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "ci41361079",
@@ -430,7 +443,7 @@
       "source_updated_utc": "2026-11-11T22:56:45.960000+00:00",
       "magnitude": 1.4,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41361079",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "us7000txpg",
@@ -442,7 +455,7 @@
       "source_updated_utc": "2026-11-12T01:32:13.040000+00:00",
       "magnitude": 2.6,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txpg",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.035c4a3c74288ce989f78e3db9af4f87be60d522.001.1",
@@ -455,7 +468,7 @@
       "effective_utc": "2026-11-11T22:44:00-05:00",
       "expires_utc": "2026-11-11T23:15:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.035c4a3c74288ce989f78e3db9af4f87be60d522.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82c7b42a3985228f7045a6dedb1058f07df469fc.002.1",
@@ -468,7 +481,7 @@
       "effective_utc": "2026-11-11T22:43:00-05:00",
       "expires_utc": "2026-11-12T07:00:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82c7b42a3985228f7045a6dedb1058f07df469fc.002.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82c7b42a3985228f7045a6dedb1058f07df469fc.001.1",
@@ -481,7 +494,7 @@
       "effective_utc": "2026-11-11T22:43:00-05:00",
       "expires_utc": "2026-11-12T07:00:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82c7b42a3985228f7045a6dedb1058f07df469fc.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82c7b42a3985228f7045a6dedb1058f07df469fc.004.1",
@@ -494,7 +507,7 @@
       "effective_utc": "2026-11-11T22:43:00-05:00",
       "expires_utc": "2026-11-12T07:00:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82c7b42a3985228f7045a6dedb1058f07df469fc.004.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82c7b42a3985228f7045a6dedb1058f07df469fc.003.1",
@@ -507,7 +520,7 @@
       "effective_utc": "2026-11-11T22:43:00-05:00",
       "expires_utc": "2026-11-12T07:00:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82c7b42a3985228f7045a6dedb1058f07df469fc.003.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a6de8d89d648a98e4e108edb02e1fdeab52e5a8b.001.1",
@@ -520,20 +533,7 @@
       "effective_utc": "2026-11-11T22:40:00-05:00",
       "expires_utc": "2026-11-12T06:45:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a6de8d89d648a98e4e108edb02e1fdeab52e5a8b.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a6de8d89d648a98e4e108edb02e1fdeab52e5a8b.002.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "5NM East of Mackinac Bridge to Presque Isle Light MI including Bois Blanc Island; Presque Isle Light to Sturgeon Pt MI Including Thunder Bay National Marine Sanctuary; Sturgeon Pt to Alabaster MI",
-      "severity": "Minor",
-      "issued_utc": "2026-11-11T22:40:00-05:00",
-      "effective_utc": "2026-11-11T22:40:00-05:00",
-      "expires_utc": "2026-11-12T06:45:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a6de8d89d648a98e4e108edb02e1fdeab52e5a8b.002.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a6de8d89d648a98e4e108edb02e1fdeab52e5a8b.003.1",
@@ -546,7 +546,20 @@
       "effective_utc": "2026-11-11T22:40:00-05:00",
       "expires_utc": "2026-11-12T06:45:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a6de8d89d648a98e4e108edb02e1fdeab52e5a8b.003.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a6de8d89d648a98e4e108edb02e1fdeab52e5a8b.002.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "5NM East of Mackinac Bridge to Presque Isle Light MI including Bois Blanc Island; Presque Isle Light to Sturgeon Pt MI Including Thunder Bay National Marine Sanctuary; Sturgeon Pt to Alabaster MI",
+      "severity": "Minor",
+      "issued_utc": "2026-11-11T22:40:00-05:00",
+      "effective_utc": "2026-11-11T22:40:00-05:00",
+      "expires_utc": "2026-11-12T06:45:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a6de8d89d648a98e4e108edb02e1fdeab52e5a8b.002.1",
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "uu80164216",
@@ -558,7 +571,7 @@
       "source_updated_utc": "2026-11-11T23:07:10.870000+00:00",
       "magnitude": 1.21,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uu80164216",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "ci41361071",
@@ -570,7 +583,7 @@
       "source_updated_utc": "2026-11-11T23:05:47.694000+00:00",
       "magnitude": 0.65,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41361071",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "uu80164211",
@@ -582,20 +595,7 @@
       "source_updated_utc": "2026-11-11T22:50:07.300000+00:00",
       "magnitude": 2.2,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uu80164211",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e78aff1c9ddb86dc44d61e8c739027eded780ccb.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Special Weather Statement",
-      "area": "Clark; Garrard; Madison; Taylor; Casey; Lincoln; Adair",
-      "severity": "Moderate",
-      "issued_utc": "2026-11-11T22:29:00-05:00",
-      "effective_utc": "2026-11-11T22:29:00-05:00",
-      "expires_utc": "2026-11-11T23:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e78aff1c9ddb86dc44d61e8c739027eded780ccb.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "nc75465507",
@@ -607,7 +607,7 @@
       "source_updated_utc": "2026-11-11T22:27:59.069000+00:00",
       "magnitude": 0.78,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465507",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wjrtps",
@@ -619,7 +619,7 @@
       "source_updated_utc": "2026-11-11T22:27:06.314000+00:00",
       "magnitude": 1.2,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjrtps",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "uu80164201",
@@ -631,20 +631,7 @@
       "source_updated_utc": "2026-11-11T22:53:25.700000+00:00",
       "magnitude": 0.58,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uu80164201",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dd22d554d240327af1a9f1309bf4630658ee8918.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Special Weather Statement",
-      "area": "Montgomery; Estill; Powell; Menifee; Rockcastle; Jackson; Pulaski; Laurel; Wolfe; Lee; Owsley",
-      "severity": "Moderate",
-      "issued_utc": "2026-11-11T22:18:00-05:00",
-      "effective_utc": "2026-11-11T22:18:00-05:00",
-      "expires_utc": "2026-11-11T23:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dd22d554d240327af1a9f1309bf4630658ee8918.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "ci41361063",
@@ -656,7 +643,7 @@
       "source_updated_utc": "2026-11-11T23:03:15.554000+00:00",
       "magnitude": 0.98,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41361063",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f8f1bc4d3fa50968b29452d7dcdde006c2de5446.001.1",
@@ -669,7 +656,7 @@
       "effective_utc": "2026-11-11T22:05:00-05:00",
       "expires_utc": "2026-11-12T06:15:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f8f1bc4d3fa50968b29452d7dcdde006c2de5446.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "us7000txpa",
@@ -681,7 +668,7 @@
       "source_updated_utc": "2026-11-12T01:24:48.040000+00:00",
       "magnitude": 4.9,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txpa",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wjqxbh",
@@ -693,7 +680,7 @@
       "source_updated_utc": "2026-11-11T22:02:55.804000+00:00",
       "magnitude": 0.7,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjqxbh",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "uu80164196",
@@ -705,7 +692,20 @@
       "source_updated_utc": "2026-11-11T22:43:06.710000+00:00",
       "magnitude": 1.05,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uu80164196",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.28faf7dc2f8a67c067d8bbb9369dbc095b21b7a9.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Special Weather Statement",
+      "area": "Divide; Burke; Renville; Williams; Mountrail; Northwest Ward; Central and Southern Ward/Minot Area",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-11T21:59:00-06:00",
+      "effective_utc": "2026-11-11T21:59:00-06:00",
+      "expires_utc": "2026-11-12T00:00:00-06:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.28faf7dc2f8a67c067d8bbb9369dbc095b21b7a9.001.1",
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.15a1c161ffe7db48c6f846d35cb753a9cb3cd300.001.1",
@@ -718,7 +718,7 @@
       "effective_utc": "2026-11-11T21:56:00-05:00",
       "expires_utc": "2026-11-12T06:00:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.15a1c161ffe7db48c6f846d35cb753a9cb3cd300.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a37827c5050a401999a938e3c5d71f5441140992.003.1",
@@ -731,20 +731,7 @@
       "effective_utc": "2026-11-11T21:45:00-05:00",
       "expires_utc": "2026-11-12T09:45:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a37827c5050a401999a938e3c5d71f5441140992.003.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a37827c5050a401999a938e3c5d71f5441140992.002.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "S of Oregon Inlet NC to Cape Hatteras NC out to 20 NM; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM",
-      "severity": "Minor",
-      "issued_utc": "2026-11-11T21:45:00-05:00",
-      "effective_utc": "2026-11-11T21:45:00-05:00",
-      "expires_utc": "2026-11-12T09:45:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a37827c5050a401999a938e3c5d71f5441140992.002.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a37827c5050a401999a938e3c5d71f5441140992.001.1",
@@ -757,7 +744,20 @@
       "effective_utc": "2026-11-11T21:45:00-05:00",
       "expires_utc": "2026-11-12T09:45:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a37827c5050a401999a938e3c5d71f5441140992.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a37827c5050a401999a938e3c5d71f5441140992.002.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "S of Oregon Inlet NC to Cape Hatteras NC out to 20 NM; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM",
+      "severity": "Minor",
+      "issued_utc": "2026-11-11T21:45:00-05:00",
+      "effective_utc": "2026-11-11T21:45:00-05:00",
+      "expires_utc": "2026-11-12T09:45:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a37827c5050a401999a938e3c5d71f5441140992.002.1",
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "aka2026wjqjgm",
@@ -769,7 +769,7 @@
       "source_updated_utc": "2026-11-11T21:46:55.476000+00:00",
       "magnitude": 0.8,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjqjgm",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bf17d39a180a6b174bc8a58e58b473dde5509c49.001.1",
@@ -782,7 +782,7 @@
       "effective_utc": "2026-11-11T21:42:00-06:00",
       "expires_utc": "2026-11-11T22:30:00-06:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bf17d39a180a6b174bc8a58e58b473dde5509c49.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "ci41361047",
@@ -794,7 +794,7 @@
       "source_updated_utc": "2026-11-11T21:56:29.096000+00:00",
       "magnitude": 0.87,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41361047",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "nc75465482",
@@ -806,7 +806,7 @@
       "source_updated_utc": "2026-11-11T21:57:21.921000+00:00",
       "magnitude": 1.56,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465482",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c9384cbcf314c5d8d329028f52194cd97d6d79fd.002.1",
@@ -819,7 +819,7 @@
       "effective_utc": "2026-11-11T21:28:00-05:00",
       "expires_utc": "2026-11-12T05:30:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c9384cbcf314c5d8d329028f52194cd97d6d79fd.002.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c9384cbcf314c5d8d329028f52194cd97d6d79fd.001.1",
@@ -832,7 +832,7 @@
       "effective_utc": "2026-11-11T21:28:00-05:00",
       "expires_utc": "2026-11-12T05:30:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c9384cbcf314c5d8d329028f52194cd97d6d79fd.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "pr71539098",
@@ -844,7 +844,7 @@
       "source_updated_utc": "2026-11-11T22:42:07.015000+00:00",
       "magnitude": 2.93,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71539098",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "nc75465472",
@@ -856,7 +856,7 @@
       "source_updated_utc": "2026-11-11T22:12:27.015000+00:00",
       "magnitude": 1.66,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465472",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "us7000txns",
@@ -868,7 +868,7 @@
       "source_updated_utc": "2026-11-12T01:16:54.040000+00:00",
       "magnitude": 4.4,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txns",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "ci41361039",
@@ -880,7 +880,7 @@
       "source_updated_utc": "2026-11-11T21:46:21.037000+00:00",
       "magnitude": 0.21,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41361039",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "hv75069437",
@@ -892,7 +892,7 @@
       "source_updated_utc": "2026-11-11T21:12:38.120000+00:00",
       "magnitude": 2.15,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75069437",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "nc75465467",
@@ -904,7 +904,7 @@
       "source_updated_utc": "2026-11-11T21:47:27.859000+00:00",
       "magnitude": 1.28,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465467",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0b37537b5abef78cbebca8e348341481121ef26.002.1",
@@ -917,7 +917,7 @@
       "effective_utc": "2026-11-11T21:04:00-05:00",
       "expires_utc": "2026-11-12T09:15:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0b37537b5abef78cbebca8e348341481121ef26.002.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0b37537b5abef78cbebca8e348341481121ef26.003.1",
@@ -930,7 +930,7 @@
       "effective_utc": "2026-11-11T21:04:00-05:00",
       "expires_utc": "2026-11-12T09:15:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0b37537b5abef78cbebca8e348341481121ef26.003.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0b37537b5abef78cbebca8e348341481121ef26.007.1",
@@ -943,7 +943,7 @@
       "effective_utc": "2026-11-11T21:04:00-05:00",
       "expires_utc": "2026-11-12T09:15:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0b37537b5abef78cbebca8e348341481121ef26.007.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0b37537b5abef78cbebca8e348341481121ef26.001.1",
@@ -956,7 +956,7 @@
       "effective_utc": "2026-11-11T21:04:00-05:00",
       "expires_utc": "2026-11-12T09:15:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0b37537b5abef78cbebca8e348341481121ef26.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0b37537b5abef78cbebca8e348341481121ef26.005.1",
@@ -969,7 +969,7 @@
       "effective_utc": "2026-11-11T21:04:00-05:00",
       "expires_utc": "2026-11-12T09:15:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0b37537b5abef78cbebca8e348341481121ef26.005.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0b37537b5abef78cbebca8e348341481121ef26.004.1",
@@ -982,7 +982,7 @@
       "effective_utc": "2026-11-11T21:04:00-05:00",
       "expires_utc": "2026-11-12T09:15:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0b37537b5abef78cbebca8e348341481121ef26.004.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0b37537b5abef78cbebca8e348341481121ef26.008.1",
@@ -995,7 +995,7 @@
       "effective_utc": "2026-11-11T21:04:00-05:00",
       "expires_utc": "2026-11-12T09:15:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0b37537b5abef78cbebca8e348341481121ef26.008.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0b37537b5abef78cbebca8e348341481121ef26.006.1",
@@ -1008,7 +1008,7 @@
       "effective_utc": "2026-11-11T21:04:00-05:00",
       "expires_utc": "2026-11-12T09:15:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0b37537b5abef78cbebca8e348341481121ef26.006.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.065a9651b2309b6a0d2d51c43465d38a5f378e29.001.1",
@@ -1021,7 +1021,7 @@
       "effective_utc": "2026-11-11T20:46:00-05:00",
       "expires_utc": "2026-11-12T12:15:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.065a9651b2309b6a0d2d51c43465d38a5f378e29.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "us7000txni",
@@ -1033,7 +1033,7 @@
       "source_updated_utc": "2026-11-11T22:22:41.875000+00:00",
       "magnitude": 4.5,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txni",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.74c745e794d1d8e559a07c71e20e072593439e0f.001.1",
@@ -1046,7 +1046,7 @@
       "effective_utc": "2026-11-11T20:45:00-05:00",
       "expires_utc": "2026-11-12T12:00:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.74c745e794d1d8e559a07c71e20e072593439e0f.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5ba250f1fa1bbd04aa9a9e452de342af9cda64bf.001.1",
@@ -1059,7 +1059,7 @@
       "effective_utc": "2026-11-11T20:41:00-05:00",
       "expires_utc": "2026-11-12T12:00:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5ba250f1fa1bbd04aa9a9e452de342af9cda64bf.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "us7000txnf",
@@ -1071,7 +1071,7 @@
       "source_updated_utc": "2026-11-11T21:54:59.040000+00:00",
       "magnitude": 4.4,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txnf",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d80cc76de26953027eb02516b3e7ef61718f3119.001.1",
@@ -1084,7 +1084,7 @@
       "effective_utc": "2026-11-11T20:37:00-05:00",
       "expires_utc": "2026-11-12T12:00:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d80cc76de26953027eb02516b3e7ef61718f3119.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.77e928eff45837bf21c2096869d876897004b858.001.1",
@@ -1097,7 +1097,7 @@
       "effective_utc": "2026-11-11T20:34:00-05:00",
       "expires_utc": "2026-11-12T12:00:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.77e928eff45837bf21c2096869d876897004b858.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "nc75465447",
@@ -1109,7 +1109,7 @@
       "source_updated_utc": "2026-11-11T21:12:22.629000+00:00",
       "magnitude": 1.53,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465447",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wjnxib",
@@ -1121,7 +1121,7 @@
       "source_updated_utc": "2026-11-11T22:57:31.004000+00:00",
       "magnitude": 2,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjnxib",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wjnvet",
@@ -1133,7 +1133,7 @@
       "source_updated_utc": "2026-11-11T20:30:45.344000+00:00",
       "magnitude": 0.8,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjnvet",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wjnswr",
@@ -1145,7 +1145,7 @@
       "source_updated_utc": "2026-11-11T21:44:01.040000+00:00",
       "magnitude": 3.3,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjnswr",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wjnmsm",
@@ -1157,7 +1157,7 @@
       "source_updated_utc": "2026-11-11T20:19:45.564000+00:00",
       "magnitude": 0.7,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjnmsm",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "pr71539088",
@@ -1169,7 +1169,7 @@
       "source_updated_utc": "2026-11-11T20:26:40.820000+00:00",
       "magnitude": 2.11,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71539088",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1d98b97646141930e0974afa81b1fc4ab4be0094.001.1",
@@ -1182,20 +1182,85 @@
       "effective_utc": "2026-11-11T20:05:00-05:00",
       "expires_utc": "2026-11-12T13:00:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1d98b97646141930e0974afa81b1fc4ab4be0094.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f2b18a0fba2585692ec23086e850823d42e6cdd8.001.1",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4800753475c22782a06852eb4f72f6f3994bbb32.004.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
-      "title": "Special Weather Statement",
-      "area": "Divide; Burke; Renville; Williams; Mountrail; Northwest Ward; Central and Southern Ward/Minot Area",
+      "title": "Small Craft Advisory",
+      "area": "West Entrance U.S. Waters Strait Of Juan De Fuca",
+      "severity": "Minor",
+      "issued_utc": "2026-11-11T20:01:00-08:00",
+      "effective_utc": "2026-11-11T20:01:00-08:00",
+      "expires_utc": "2026-11-12T04:15:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4800753475c22782a06852eb4f72f6f3994bbb32.004.1",
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4800753475c22782a06852eb4f72f6f3994bbb32.003.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Coastal Waters From Cape Flattery To James Island Out 10 Nm; Coastal Waters From James Island To Point Grenville Out 10 Nm; Coastal Waters From Point Grenville To Cape Shoalwater Out 10 Nm; Coastal Waters From Cape Flattery To James Island 10 To 60 Nm; Waters From James Island To Point Grenville 10 To 60 Nm; Coastal Waters From Point Grenville To Cape Shoalwater 10 To 60 Nm",
+      "severity": "Minor",
+      "issued_utc": "2026-11-11T20:01:00-08:00",
+      "effective_utc": "2026-11-11T20:01:00-08:00",
+      "expires_utc": "2026-11-12T04:15:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4800753475c22782a06852eb4f72f6f3994bbb32.003.1",
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4800753475c22782a06852eb4f72f6f3994bbb32.003.2",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Gale Watch",
+      "area": "Coastal Waters From Cape Flattery To James Island Out 10 Nm; Coastal Waters From James Island To Point Grenville Out 10 Nm; Coastal Waters From Point Grenville To Cape Shoalwater Out 10 Nm; Coastal Waters From Cape Flattery To James Island 10 To 60 Nm; Waters From James Island To Point Grenville 10 To 60 Nm; Coastal Waters From Point Grenville To Cape Shoalwater 10 To 60 Nm",
       "severity": "Moderate",
-      "issued_utc": "2026-11-11T19:57:00-06:00",
-      "effective_utc": "2026-11-11T19:57:00-06:00",
-      "expires_utc": "2026-11-11T22:00:00-06:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f2b18a0fba2585692ec23086e850823d42e6cdd8.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "issued_utc": "2026-11-11T20:01:00-08:00",
+      "effective_utc": "2026-11-11T20:01:00-08:00",
+      "expires_utc": "2026-11-12T04:15:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4800753475c22782a06852eb4f72f6f3994bbb32.003.2",
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4800753475c22782a06852eb4f72f6f3994bbb32.005.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Admiralty Inlet",
+      "severity": "Minor",
+      "issued_utc": "2026-11-11T20:01:00-08:00",
+      "effective_utc": "2026-11-11T20:01:00-08:00",
+      "expires_utc": "2026-11-11T22:00:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4800753475c22782a06852eb4f72f6f3994bbb32.005.1",
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4800753475c22782a06852eb4f72f6f3994bbb32.002.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Gale Warning",
+      "area": "Northern Inland Waters Including The San Juan Islands",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-11T20:01:00-08:00",
+      "effective_utc": "2026-11-11T20:01:00-08:00",
+      "expires_utc": "2026-11-11T22:00:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4800753475c22782a06852eb4f72f6f3994bbb32.002.1",
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4800753475c22782a06852eb4f72f6f3994bbb32.006.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Grays Harbor Bar",
+      "severity": "Minor",
+      "issued_utc": "2026-11-11T20:01:00-08:00",
+      "effective_utc": "2026-11-11T20:01:00-08:00",
+      "expires_utc": "2026-11-12T04:15:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4800753475c22782a06852eb4f72f6f3994bbb32.006.1",
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "us7000txmx",
@@ -1207,7 +1272,7 @@
       "source_updated_utc": "2026-11-11T20:12:01.040000+00:00",
       "magnitude": 4.5,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txmx",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "nc75465437",
@@ -1219,7 +1284,7 @@
       "source_updated_utc": "2026-11-11T20:47:27.475000+00:00",
       "magnitude": 1.42,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465437",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "pr71539083",
@@ -1231,7 +1296,7 @@
       "source_updated_utc": "2026-11-11T20:08:37.520000+00:00",
       "magnitude": 2.41,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71539083",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.297327e570a0185e96849f9208d3aa5345e1ec9f.001.1",
@@ -1244,7 +1309,7 @@
       "effective_utc": "2026-11-11T19:43:00-06:00",
       "expires_utc": "2026-11-12T13:00:00-06:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.297327e570a0185e96849f9208d3aa5345e1ec9f.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e70634c0e4829aaf626b376c506e66e97ac3080c.001.1",
@@ -1257,7 +1322,7 @@
       "effective_utc": "2026-11-11T19:39:00-08:00",
       "expires_utc": "2026-11-12T05:00:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e70634c0e4829aaf626b376c506e66e97ac3080c.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "aka2026wjmdrz",
@@ -1269,20 +1334,7 @@
       "source_updated_utc": "2026-11-11T19:40:35.598000+00:00",
       "magnitude": 0.7,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjmdrz",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.092c7a1cfa3b4806c237df3597d5782ab3a9263c.002.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Dunkirk to Buffalo NY",
-      "severity": "Minor",
-      "issued_utc": "2026-11-11T19:32:00-05:00",
-      "effective_utc": "2026-11-11T19:32:00-05:00",
-      "expires_utc": "2026-11-12T04:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.092c7a1cfa3b4806c237df3597d5782ab3a9263c.002.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.092c7a1cfa3b4806c237df3597d5782ab3a9263c.004.1",
@@ -1295,7 +1347,20 @@
       "effective_utc": "2026-11-11T19:32:00-05:00",
       "expires_utc": "2026-11-12T04:00:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.092c7a1cfa3b4806c237df3597d5782ab3a9263c.004.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.092c7a1cfa3b4806c237df3597d5782ab3a9263c.002.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Dunkirk to Buffalo NY",
+      "severity": "Minor",
+      "issued_utc": "2026-11-11T19:32:00-05:00",
+      "effective_utc": "2026-11-11T19:32:00-05:00",
+      "expires_utc": "2026-11-12T04:00:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.092c7a1cfa3b4806c237df3597d5782ab3a9263c.002.1",
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.092c7a1cfa3b4806c237df3597d5782ab3a9263c.005.1",
@@ -1308,7 +1373,7 @@
       "effective_utc": "2026-11-11T19:32:00-05:00",
       "expires_utc": "2026-11-12T04:00:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.092c7a1cfa3b4806c237df3597d5782ab3a9263c.005.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.092c7a1cfa3b4806c237df3597d5782ab3a9263c.006.1",
@@ -1321,7 +1386,7 @@
       "effective_utc": "2026-11-11T19:32:00-05:00",
       "expires_utc": "2026-11-12T04:00:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.092c7a1cfa3b4806c237df3597d5782ab3a9263c.006.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.092c7a1cfa3b4806c237df3597d5782ab3a9263c.003.1",
@@ -1334,7 +1399,7 @@
       "effective_utc": "2026-11-11T19:32:00-05:00",
       "expires_utc": "2026-11-12T04:00:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.092c7a1cfa3b4806c237df3597d5782ab3a9263c.003.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.092c7a1cfa3b4806c237df3597d5782ab3a9263c.001.1",
@@ -1347,7 +1412,7 @@
       "effective_utc": "2026-11-11T19:32:00-05:00",
       "expires_utc": "2026-11-12T04:00:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.092c7a1cfa3b4806c237df3597d5782ab3a9263c.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "uu80164181",
@@ -1359,7 +1424,7 @@
       "source_updated_utc": "2026-11-11T21:00:21.840000+00:00",
       "magnitude": 1.44,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uu80164181",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "uu80164176",
@@ -1371,7 +1436,7 @@
       "source_updated_utc": "2026-11-11T21:06:05.840000+00:00",
       "magnitude": 1.41,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uu80164176",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b35ba43c92fd74e5bbb7463a3d705217e4adb321.001.1",
@@ -1384,7 +1449,7 @@
       "effective_utc": "2026-11-11T19:24:00-05:00",
       "expires_utc": "2026-11-12T03:30:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b35ba43c92fd74e5bbb7463a3d705217e4adb321.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "us7000txmq",
@@ -1396,7 +1461,7 @@
       "source_updated_utc": "2026-11-11T21:21:59.663000+00:00",
       "magnitude": 5,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txmq",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "pr71539078",
@@ -1408,7 +1473,7 @@
       "source_updated_utc": "2026-11-11T19:37:01.680000+00:00",
       "magnitude": 1.7,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71539078",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wjlmbp",
@@ -1420,7 +1485,7 @@
       "source_updated_utc": "2026-11-11T19:19:06.600000+00:00",
       "magnitude": 1.8,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjlmbp",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wjlejc",
@@ -1432,7 +1497,7 @@
       "source_updated_utc": "2026-11-11T19:32:28.040000+00:00",
       "magnitude": 3.1,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjlejc",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "ci41361023",
@@ -1444,7 +1509,7 @@
       "source_updated_utc": "2026-11-11T19:28:00.353000+00:00",
       "magnitude": 0.38,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41361023",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wjkxqw",
@@ -1456,7 +1521,7 @@
       "source_updated_utc": "2026-11-11T19:02:25.662000+00:00",
       "magnitude": 2,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjkxqw",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "nc75465422",
@@ -1468,7 +1533,7 @@
       "source_updated_utc": "2026-11-11T18:58:08.455000+00:00",
       "magnitude": 0.75,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465422",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "nc75465412",
@@ -1480,7 +1545,7 @@
       "source_updated_utc": "2026-11-11T19:17:28.902000+00:00",
       "magnitude": 1.77,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465412",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.130e922d466a6776ab56bf2b2158cccbc79b41ef.002.1",
@@ -1493,7 +1558,7 @@
       "effective_utc": "2026-11-11T18:44:00-06:00",
       "expires_utc": "2026-11-12T02:45:00-06:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.130e922d466a6776ab56bf2b2158cccbc79b41ef.002.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.130e922d466a6776ab56bf2b2158cccbc79b41ef.001.3",
@@ -1506,7 +1571,7 @@
       "effective_utc": "2026-11-11T18:44:00-06:00",
       "expires_utc": "2026-11-12T02:45:00-06:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.130e922d466a6776ab56bf2b2158cccbc79b41ef.001.3",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.130e922d466a6776ab56bf2b2158cccbc79b41ef.002.2",
@@ -1519,7 +1584,7 @@
       "effective_utc": "2026-11-11T18:44:00-06:00",
       "expires_utc": "2026-11-12T02:45:00-06:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.130e922d466a6776ab56bf2b2158cccbc79b41ef.002.2",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.130e922d466a6776ab56bf2b2158cccbc79b41ef.001.4",
@@ -1532,7 +1597,7 @@
       "effective_utc": "2026-11-11T18:44:00-06:00",
       "expires_utc": "2026-11-12T02:45:00-06:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.130e922d466a6776ab56bf2b2158cccbc79b41ef.001.4",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.130e922d466a6776ab56bf2b2158cccbc79b41ef.001.2",
@@ -1545,7 +1610,7 @@
       "effective_utc": "2026-11-11T18:44:00-06:00",
       "expires_utc": "2026-11-12T02:45:00-06:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.130e922d466a6776ab56bf2b2158cccbc79b41ef.001.2",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.130e922d466a6776ab56bf2b2158cccbc79b41ef.002.3",
@@ -1558,7 +1623,7 @@
       "effective_utc": "2026-11-11T18:44:00-06:00",
       "expires_utc": "2026-11-12T02:45:00-06:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.130e922d466a6776ab56bf2b2158cccbc79b41ef.002.3",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "us7000txmi",
@@ -1570,7 +1635,7 @@
       "source_updated_utc": "2026-11-11T19:20:08.040000+00:00",
       "magnitude": 3.9,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txmi",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.864f8d7b35d7a0a4d466d144d03524ae33f42a76.003.1",
@@ -1583,7 +1648,7 @@
       "effective_utc": "2026-11-11T18:34:00-06:00",
       "expires_utc": "2026-11-12T02:45:00-06:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.864f8d7b35d7a0a4d466d144d03524ae33f42a76.003.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.864f8d7b35d7a0a4d466d144d03524ae33f42a76.001.2",
@@ -1596,7 +1661,7 @@
       "effective_utc": "2026-11-11T18:34:00-06:00",
       "expires_utc": "2026-11-12T02:45:00-06:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.864f8d7b35d7a0a4d466d144d03524ae33f42a76.001.2",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.864f8d7b35d7a0a4d466d144d03524ae33f42a76.002.2",
@@ -1609,7 +1674,7 @@
       "effective_utc": "2026-11-11T18:34:00-06:00",
       "expires_utc": "2026-11-12T02:45:00-06:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.864f8d7b35d7a0a4d466d144d03524ae33f42a76.002.2",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.864f8d7b35d7a0a4d466d144d03524ae33f42a76.002.3",
@@ -1622,7 +1687,7 @@
       "effective_utc": "2026-11-11T18:34:00-06:00",
       "expires_utc": "2026-11-12T02:45:00-06:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.864f8d7b35d7a0a4d466d144d03524ae33f42a76.002.3",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.864f8d7b35d7a0a4d466d144d03524ae33f42a76.001.3",
@@ -1635,7 +1700,7 @@
       "effective_utc": "2026-11-11T18:34:00-06:00",
       "expires_utc": "2026-11-12T02:45:00-06:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.864f8d7b35d7a0a4d466d144d03524ae33f42a76.001.3",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.864f8d7b35d7a0a4d466d144d03524ae33f42a76.002.1",
@@ -1648,7 +1713,7 @@
       "effective_utc": "2026-11-11T18:34:00-06:00",
       "expires_utc": "2026-11-12T02:45:00-06:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.864f8d7b35d7a0a4d466d144d03524ae33f42a76.002.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.864f8d7b35d7a0a4d466d144d03524ae33f42a76.001.1",
@@ -1661,7 +1726,7 @@
       "effective_utc": "2026-11-11T18:34:00-06:00",
       "expires_utc": "2026-11-12T02:45:00-06:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.864f8d7b35d7a0a4d466d144d03524ae33f42a76.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "ci41361015",
@@ -1673,7 +1738,7 @@
       "source_updated_utc": "2026-11-11T19:07:52.805000+00:00",
       "magnitude": 1.05,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41361015",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.001.1",
@@ -1686,20 +1751,7 @@
       "effective_utc": "2026-11-11T18:09:00-08:00",
       "expires_utc": "2026-11-12T06:00:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.001.3",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Beach Hazards Statement",
-      "area": "San Francisco; Southern Monterey Bay and Big Sur Coast",
-      "severity": "Moderate",
-      "issued_utc": "2026-11-11T18:09:00-08:00",
-      "effective_utc": "2026-11-11T18:09:00-08:00",
-      "expires_utc": "2026-11-12T06:00:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.001.3",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.003.1",
@@ -1712,7 +1764,20 @@
       "effective_utc": "2026-11-11T18:09:00-08:00",
       "expires_utc": "2026-11-12T06:00:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.003.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.001.3",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Beach Hazards Statement",
+      "area": "San Francisco; Southern Monterey Bay and Big Sur Coast",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-11T18:09:00-08:00",
+      "effective_utc": "2026-11-11T18:09:00-08:00",
+      "expires_utc": "2026-11-12T06:00:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.001.3",
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.001.2",
@@ -1725,7 +1790,7 @@
       "effective_utc": "2026-11-11T18:09:00-08:00",
       "expires_utc": "2026-11-12T06:00:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.001.2",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.002.2",
@@ -1738,7 +1803,7 @@
       "effective_utc": "2026-11-11T18:09:00-08:00",
       "expires_utc": "2026-11-12T06:00:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.002.2",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.002.1",
@@ -1751,7 +1816,7 @@
       "effective_utc": "2026-11-11T18:09:00-08:00",
       "expires_utc": "2026-11-12T06:00:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.002.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1578ac3427a7e4d58e934077f0833c2dbb484f01.003.1",
@@ -1764,7 +1829,7 @@
       "effective_utc": "2026-11-11T18:06:00-08:00",
       "expires_utc": "2026-11-12T10:00:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1578ac3427a7e4d58e934077f0833c2dbb484f01.003.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1578ac3427a7e4d58e934077f0833c2dbb484f01.001.2",
@@ -1777,7 +1842,7 @@
       "effective_utc": "2026-11-11T18:06:00-08:00",
       "expires_utc": "2026-11-12T10:00:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1578ac3427a7e4d58e934077f0833c2dbb484f01.001.2",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1578ac3427a7e4d58e934077f0833c2dbb484f01.002.1",
@@ -1790,7 +1855,7 @@
       "effective_utc": "2026-11-11T18:06:00-08:00",
       "expires_utc": "2026-11-12T10:00:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1578ac3427a7e4d58e934077f0833c2dbb484f01.002.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1578ac3427a7e4d58e934077f0833c2dbb484f01.001.1",
@@ -1803,7 +1868,7 @@
       "effective_utc": "2026-11-11T18:06:00-08:00",
       "expires_utc": "2026-11-12T10:00:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1578ac3427a7e4d58e934077f0833c2dbb484f01.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "aka2026wjjawr",
@@ -1815,7 +1880,7 @@
       "source_updated_utc": "2026-11-11T18:05:10.351000+00:00",
       "magnitude": 1.1,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjjawr",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "us7000txm8",
@@ -1827,7 +1892,7 @@
       "source_updated_utc": "2026-11-11T18:24:34.040000+00:00",
       "magnitude": 5.1,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txm8",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wjibyh",
@@ -1839,7 +1904,7 @@
       "source_updated_utc": "2026-11-11T17:38:15.884000+00:00",
       "magnitude": 1.8,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjibyh",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "uu80164166",
@@ -1851,7 +1916,7 @@
       "source_updated_utc": "2026-11-11T18:58:39.230000+00:00",
       "magnitude": 0.86,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uu80164166",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3397a4ea1fd2e9d430d167070c8165f1cfe656c8.001.1",
@@ -1864,7 +1929,7 @@
       "effective_utc": "2026-11-11T17:33:00-08:00",
       "expires_utc": "2026-11-12T03:00:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3397a4ea1fd2e9d430d167070c8165f1cfe656c8.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.733761d7720b15d7620cc2392d1d6cceb1559cae.002.1",
@@ -1877,7 +1942,7 @@
       "effective_utc": "2026-11-11T17:32:00-08:00",
       "expires_utc": "2026-11-12T02:00:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.733761d7720b15d7620cc2392d1d6cceb1559cae.002.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.733761d7720b15d7620cc2392d1d6cceb1559cae.001.1",
@@ -1890,7 +1955,7 @@
       "effective_utc": "2026-11-11T17:32:00-08:00",
       "expires_utc": "2026-11-12T02:00:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.733761d7720b15d7620cc2392d1d6cceb1559cae.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.733761d7720b15d7620cc2392d1d6cceb1559cae.003.1",
@@ -1903,7 +1968,7 @@
       "effective_utc": "2026-11-11T17:32:00-08:00",
       "expires_utc": "2026-11-12T02:00:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.733761d7720b15d7620cc2392d1d6cceb1559cae.003.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "aka2026wjhxjv",
@@ -1915,7 +1980,7 @@
       "source_updated_utc": "2026-11-11T17:32:35.974000+00:00",
       "magnitude": 2.3,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjhxjv",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d0f1a4b4b7261946f22826b8e02e3b71e336d292.001.1",
@@ -1928,7 +1993,7 @@
       "effective_utc": "2026-11-11T17:27:00-05:00",
       "expires_utc": "2026-11-12T07:30:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d0f1a4b4b7261946f22826b8e02e3b71e336d292.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "aka2026wjhtuu",
@@ -1940,7 +2005,7 @@
       "source_updated_utc": "2026-11-11T17:30:25.382000+00:00",
       "magnitude": 2.4,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjhtuu",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wjhlwp",
@@ -1952,7 +2017,7 @@
       "source_updated_utc": "2026-11-11T20:04:09.847000+00:00",
       "magnitude": 2.1,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjhlwp",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wjhgma",
@@ -1964,7 +2029,7 @@
       "source_updated_utc": "2026-11-11T17:14:05.737000+00:00",
       "magnitude": 1.8,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjhgma",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "nc75465377",
@@ -1976,7 +2041,7 @@
       "source_updated_utc": "2026-11-11T17:04:58.618000+00:00",
       "magnitude": 0.69,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465377",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "nc75465362",
@@ -1988,7 +2053,7 @@
       "source_updated_utc": "2026-11-11T16:54:47.592000+00:00",
       "magnitude": 0.74,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465362",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4eafbe8d3cab527acb811b53b5d6e51fbb833a60.001.1",
@@ -2001,7 +2066,7 @@
       "effective_utc": "2026-11-11T16:52:00-08:00",
       "expires_utc": "2026-11-13T11:00:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4eafbe8d3cab527acb811b53b5d6e51fbb833a60.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.73727cc7725bfbc0a5dd111917b34c0c2ec101b9.002.1",
@@ -2014,7 +2079,7 @@
       "effective_utc": "2026-11-11T16:50:00-08:00",
       "expires_utc": "2026-11-12T04:00:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.73727cc7725bfbc0a5dd111917b34c0c2ec101b9.002.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.73727cc7725bfbc0a5dd111917b34c0c2ec101b9.001.1",
@@ -2027,7 +2092,7 @@
       "effective_utc": "2026-11-11T16:50:00-08:00",
       "expires_utc": "2026-11-12T04:00:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.73727cc7725bfbc0a5dd111917b34c0c2ec101b9.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "uw714137501",
@@ -2039,7 +2104,7 @@
       "source_updated_utc": "2026-11-11T16:51:50.600000+00:00",
       "magnitude": 1.97527360916138,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714137501",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "tx2026wfribb",
@@ -2051,7 +2116,7 @@
       "source_updated_utc": "2026-11-11T17:36:55.310000+00:00",
       "magnitude": 2.6,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026wfribb",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.14dd5a6967cc9493a529374dc7ae4f9364babd0b.003.1",
@@ -2064,7 +2129,7 @@
       "effective_utc": "2026-11-11T16:44:00-09:00",
       "expires_utc": "2026-11-11T21:00:00-09:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.14dd5a6967cc9493a529374dc7ae4f9364babd0b.003.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.14dd5a6967cc9493a529374dc7ae4f9364babd0b.002.1",
@@ -2077,7 +2142,7 @@
       "effective_utc": "2026-11-11T16:44:00-09:00",
       "expires_utc": "2026-11-11T21:00:00-09:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.14dd5a6967cc9493a529374dc7ae4f9364babd0b.002.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.14dd5a6967cc9493a529374dc7ae4f9364babd0b.001.1",
@@ -2090,7 +2155,7 @@
       "effective_utc": "2026-11-11T16:44:00-09:00",
       "expires_utc": "2026-11-11T21:00:00-09:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.14dd5a6967cc9493a529374dc7ae4f9364babd0b.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.64deb0849e1411a9ec59d3df1a671c418994b881.001.1",
@@ -2103,7 +2168,7 @@
       "effective_utc": "2026-11-11T16:44:00-05:00",
       "expires_utc": "2026-11-12T05:45:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.64deb0849e1411a9ec59d3df1a671c418994b881.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "uu80164161",
@@ -2115,7 +2180,7 @@
       "source_updated_utc": "2026-11-11T16:53:33.150000+00:00",
       "magnitude": 1.48,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uu80164161",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "nc75465357",
@@ -2127,7 +2192,7 @@
       "source_updated_utc": "2026-11-11T16:31:23.447000+00:00",
       "magnitude": 0.5,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465357",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wjfuiv",
@@ -2139,7 +2204,7 @@
       "source_updated_utc": "2026-11-11T16:28:20.041000+00:00",
       "magnitude": 2.5,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjfuiv",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "uu80164156",
@@ -2151,7 +2216,7 @@
       "source_updated_utc": "2026-11-11T16:36:37.220000+00:00",
       "magnitude": 1.64,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uu80164156",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "tx2026wfqmjw",
@@ -2163,7 +2228,7 @@
       "source_updated_utc": "2026-11-11T18:46:03.450000+00:00",
       "magnitude": 2.2,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026wfqmjw",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d52927e6a980c76748cfd3aa050491effac6999a.001.1",
@@ -2176,7 +2241,7 @@
       "effective_utc": "2026-11-11T16:19:00-05:00",
       "expires_utc": "2026-11-12T04:30:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d52927e6a980c76748cfd3aa050491effac6999a.001.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "nc75465337",
@@ -2188,7 +2253,7 @@
       "source_updated_utc": "2026-11-11T16:12:53.208000+00:00",
       "magnitude": 0.66,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465337",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "aka2026wjfdzd",
@@ -2200,7 +2265,7 @@
       "source_updated_utc": "2026-11-11T16:10:31.462000+00:00",
       "magnitude": 2,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjfdzd",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "nc75465327",
@@ -2212,7 +2277,7 @@
       "source_updated_utc": "2026-11-11T16:08:28.158000+00:00",
       "magnitude": 0.95,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465327",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "nc75465322",
@@ -2224,7 +2289,7 @@
       "source_updated_utc": "2026-11-11T16:42:26.868000+00:00",
       "magnitude": 1.18,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465322",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.408607+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.004.3",
@@ -2237,7 +2302,7 @@
       "effective_utc": "2026-11-11T16:01:00-08:00",
       "expires_utc": "2026-11-12T08:15:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.004.3",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.003.2",
@@ -2250,20 +2315,7 @@
       "effective_utc": "2026-11-11T16:01:00-08:00",
       "expires_utc": "2026-11-12T08:15:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.003.2",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.002.3",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Coastal waters from Cape Falcon to Cape Foulweather OR out 10 nm",
-      "severity": "Minor",
-      "issued_utc": "2026-11-11T16:01:00-08:00",
-      "effective_utc": "2026-11-11T16:01:00-08:00",
-      "expires_utc": "2026-11-12T08:15:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.002.3",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.001.3",
@@ -2276,7 +2328,20 @@
       "effective_utc": "2026-11-11T16:01:00-08:00",
       "expires_utc": "2026-11-12T08:15:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.001.3",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.002.3",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Coastal waters from Cape Falcon to Cape Foulweather OR out 10 nm",
+      "severity": "Minor",
+      "issued_utc": "2026-11-11T16:01:00-08:00",
+      "effective_utc": "2026-11-11T16:01:00-08:00",
+      "expires_utc": "2026-11-12T08:15:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.002.3",
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.004.4",
@@ -2289,33 +2354,7 @@
       "effective_utc": "2026-11-11T16:01:00-08:00",
       "expires_utc": "2026-11-12T08:15:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.004.4",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.007.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Hazardous Seas Warning",
-      "area": "Waters from Cape Foulweather to Florence OR from 10 to 60 nm",
-      "severity": "Moderate",
-      "issued_utc": "2026-11-11T16:01:00-08:00",
-      "effective_utc": "2026-11-11T16:01:00-08:00",
-      "expires_utc": "2026-11-12T08:15:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.007.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.006.3",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Gale Watch",
-      "area": "Coastal waters from Cape Foulweather to Florence OR out 10 nm",
-      "severity": "Moderate",
-      "issued_utc": "2026-11-11T16:01:00-08:00",
-      "effective_utc": "2026-11-11T16:01:00-08:00",
-      "expires_utc": "2026-11-12T08:15:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.006.3",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.002.4",
@@ -2328,7 +2367,20 @@
       "effective_utc": "2026-11-11T16:01:00-08:00",
       "expires_utc": "2026-11-12T08:15:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.002.4",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.007.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Hazardous Seas Warning",
+      "area": "Waters from Cape Foulweather to Florence OR from 10 to 60 nm",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-11T16:01:00-08:00",
+      "effective_utc": "2026-11-11T16:01:00-08:00",
+      "expires_utc": "2026-11-12T08:15:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.007.1",
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.002.2",
@@ -2341,20 +2393,20 @@
       "effective_utc": "2026-11-11T16:01:00-08:00",
       "expires_utc": "2026-11-12T08:15:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.002.2",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.006.1",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.006.3",
       "provider": "NWS alerts",
       "kind": "official_alert",
-      "title": "Hazardous Seas Warning",
+      "title": "Gale Watch",
       "area": "Coastal waters from Cape Foulweather to Florence OR out 10 nm",
       "severity": "Moderate",
       "issued_utc": "2026-11-11T16:01:00-08:00",
       "effective_utc": "2026-11-11T16:01:00-08:00",
       "expires_utc": "2026-11-12T08:15:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.006.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.006.3",
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.003.3",
@@ -2367,7 +2419,7 @@
       "effective_utc": "2026-11-11T16:01:00-08:00",
       "expires_utc": "2026-11-12T08:15:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.003.3",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.005.2",
@@ -2380,7 +2432,20 @@
       "effective_utc": "2026-11-11T16:01:00-08:00",
       "expires_utc": "2026-11-12T08:15:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.005.2",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.006.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Hazardous Seas Warning",
+      "area": "Coastal waters from Cape Foulweather to Florence OR out 10 nm",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-11T16:01:00-08:00",
+      "effective_utc": "2026-11-11T16:01:00-08:00",
+      "expires_utc": "2026-11-12T08:15:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.006.1",
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.001.4",
@@ -2393,7 +2458,7 @@
       "effective_utc": "2026-11-11T16:01:00-08:00",
       "expires_utc": "2026-11-12T08:15:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.001.4",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.004.2",
@@ -2406,7 +2471,7 @@
       "effective_utc": "2026-11-11T16:01:00-08:00",
       "expires_utc": "2026-11-12T08:15:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.004.2",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.003.4",
@@ -2419,7 +2484,7 @@
       "effective_utc": "2026-11-11T16:01:00-08:00",
       "expires_utc": "2026-11-12T08:15:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.003.4",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.006.2",
@@ -2432,7 +2497,7 @@
       "effective_utc": "2026-11-11T16:01:00-08:00",
       "expires_utc": "2026-11-12T08:15:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.006.2",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.007.2",
@@ -2445,7 +2510,7 @@
       "effective_utc": "2026-11-11T16:01:00-08:00",
       "expires_utc": "2026-11-12T08:15:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.007.2",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.007.3",
@@ -2458,77 +2523,13 @@
       "effective_utc": "2026-11-11T16:01:00-08:00",
       "expires_utc": "2026-11-12T08:15:00-08:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.007.3",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.005.3",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Gale Watch",
-      "area": "Columbia River Bar",
-      "severity": "Moderate",
-      "issued_utc": "2026-11-11T16:01:00-08:00",
-      "effective_utc": "2026-11-11T16:01:00-08:00",
-      "expires_utc": "2026-11-12T08:15:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.005.3",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.001.2",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Hazardous Seas Warning",
-      "area": "Coastal waters from Cape Shoalwater WA to Cape Falcon OR out 10 nm",
-      "severity": "Moderate",
-      "issued_utc": "2026-11-11T16:01:00-08:00",
-      "effective_utc": "2026-11-11T16:01:00-08:00",
-      "expires_utc": "2026-11-12T08:15:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ec930a0c8802873e85ef2e726608c2c7764f3ed.001.2",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
-    },
-    {
-      "id": "nc75465312",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 0.7 - 7 km NW of The Geysers, CA",
-      "area": "7 km NW of The Geysers, CA",
-      "observed_utc": "2026-11-11T15:55:57.100000+00:00",
-      "source_updated_utc": "2026-11-11T15:57:33.165000+00:00",
-      "magnitude": 0.67,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75465312",
-      "retrieved_utc": "2026-11-12T03:58:42.156688+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d99d600b92d9e42eb9108098f43e522d9c44e71b.014.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Southwest of Saint Lawrence Island from 15 to 100 NM",
-      "severity": "Minor",
-      "issued_utc": "2026-11-11T15:49:00-09:00",
-      "effective_utc": "2026-11-11T15:49:00-09:00",
-      "expires_utc": "2026-11-12T06:00:00-09:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d99d600b92d9e42eb9108098f43e522d9c44e71b.014.1",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8b76d561a16ac88ed56e120569dfa9f374c059a1.002.2",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Cape Beaufort to Point Franklin out to 15 NM",
-      "severity": "Minor",
-      "issued_utc": "2026-11-11T15:48:00-09:00",
-      "effective_utc": "2026-11-11T15:48:00-09:00",
-      "expires_utc": "2026-11-12T06:00:00-09:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8b76d561a16ac88ed56e120569dfa9f374c059a1.002.2",
-      "retrieved_utc": "2026-11-12T03:58:42.475904+00:00"
+      "retrieved_utc": "2026-11-12T04:01:46.869149+00:00"
     }
   ],
   "seam_execution": {
     "status": "executed",
     "prediction_decoder": "not_implemented",
-    "manifold_entries": 821,
+    "manifold_entries": 822,
     "resolved_operators": 30,
     "unresolved_operators": 36
   },
