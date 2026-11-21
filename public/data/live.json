@@ -1,6 +1,6 @@
 {
   "schema": "SEAM_LIVE_FEED_V1",
-  "generated_utc": "2026-11-21T19:46:28.584740+00:00",
+  "generated_utc": "2026-11-21T23:58:43.952304+00:00",
   "status": "ok",
   "sources_loaded": 2,
   "source_status": [
@@ -8,20 +8,20 @@
       "provider": "USGS earthquakes",
       "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
       "status": "ok",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00",
-      "record_count": 229
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00",
+      "record_count": 227
     },
     {
       "provider": "NWS alerts",
       "url": "https://api.weather.gov/alerts/active",
       "status": "ok",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00",
-      "record_count": 224
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00",
+      "record_count": 299
     }
   ],
   "event_count": 0,
   "events": [],
-  "official_observation_count": 453,
+  "official_observation_count": 526,
   "official_observations": [
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.de4deceed9d0ccd33600349beb4afe372762e9c6.001.1",
@@ -34,7 +34,7 @@
       "effective_utc": "2026-11-22T04:52:00+10:00",
       "expires_utc": "2026-11-22T20:00:00+10:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.de4deceed9d0ccd33600349beb4afe372762e9c6.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.874de81864e40cc6938f1f3193ab1b960447d51f.002.1",
@@ -47,7 +47,7 @@
       "effective_utc": "2026-11-22T03:00:00+10:00",
       "expires_utc": "2026-11-22T15:00:00+10:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.874de81864e40cc6938f1f3193ab1b960447d51f.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.874de81864e40cc6938f1f3193ab1b960447d51f.001.1",
@@ -60,7 +60,7 @@
       "effective_utc": "2026-11-22T03:00:00+10:00",
       "expires_utc": "2026-11-22T18:00:00+10:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.874de81864e40cc6938f1f3193ab1b960447d51f.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4a0add6b4905ea21476045f93c5b64cc8fa0cff8.002.1",
@@ -73,7 +73,487 @@
       "effective_utc": "2026-11-22T02:59:00+10:00",
       "expires_utc": "2026-11-22T15:00:00+10:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4a0add6b4905ea21476045f93c5b64cc8fa0cff8.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "uw714140852",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 2.3 - 26 km NNW of Carson, Washington",
+      "area": "26 km NNW of Carson, Washington",
+      "observed_utc": "2026-11-21T23:54:48.900000+00:00",
+      "source_updated_utc": "2026-11-21T23:57:46.440000+00:00",
+      "magnitude": 2.30973434448242,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714140852",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "ci41364743",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 0.8 - 20 km ESE of Little Lake, CA",
+      "area": "20 km ESE of Little Lake, CA",
+      "observed_utc": "2026-11-21T23:54:21.560000+00:00",
+      "source_updated_utc": "2026-11-21T23:57:47.332000+00:00",
+      "magnitude": 0.76,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364743",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nc75470107",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.9 - 11 km NW of Pinnacles, CA",
+      "area": "11 km NW of Pinnacles, CA",
+      "observed_utc": "2026-11-21T23:50:33.320000+00:00",
+      "source_updated_utc": "2026-11-21T23:57:29.340000+00:00",
+      "magnitude": 1.93,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75470107",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nc75470092",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.0 - 5 km NW of The Geysers, CA",
+      "area": "5 km NW of The Geysers, CA",
+      "observed_utc": "2026-11-21T23:33:55.410000+00:00",
+      "source_updated_utc": "2026-11-21T23:35:33.611000+00:00",
+      "magnitude": 1.04,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75470092",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "aka2026xcgasq",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.5 - 63 km ESE of Knik River, Alaska",
+      "area": "63 km ESE of Knik River, Alaska",
+      "observed_utc": "2026-11-21T23:27:44.671000+00:00",
+      "source_updated_utc": "2026-11-21T23:28:54.049000+00:00",
+      "magnitude": 1.5,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xcgasq",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nc75470087",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.0 - 9 km WNW of Cobb, CA",
+      "area": "9 km WNW of Cobb, CA",
+      "observed_utc": "2026-11-21T23:16:38.050000+00:00",
+      "source_updated_utc": "2026-11-21T23:18:14.415000+00:00",
+      "magnitude": 0.97,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75470087",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "aka2026xcfjqo",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.8 - 50 km W of Tonsina, Alaska",
+      "area": "50 km W of Tonsina, Alaska",
+      "observed_utc": "2026-11-21T23:08:00.397000+00:00",
+      "source_updated_utc": "2026-11-21T23:09:50.528000+00:00",
+      "magnitude": 1.8,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xcfjqo",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "ci41364719",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.9 - 8 km SE of San Pedro, CA",
+      "area": "8 km SE of San Pedro, CA",
+      "observed_utc": "2026-11-21T23:06:55.870000+00:00",
+      "source_updated_utc": "2026-11-21T23:17:47.950000+00:00",
+      "magnitude": 1.85,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364719",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nn00927274",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.5 - 0 km N of West Bishop, California",
+      "area": "0 km N of West Bishop, California",
+      "observed_utc": "2026-11-21T23:04:07.763000+00:00",
+      "source_updated_utc": "2026-11-21T23:06:45.726000+00:00",
+      "magnitude": 1.53,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00927274",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "aka2026xcezhw",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.6 - 11 km SSE of Mentasta Lake, Alaska",
+      "area": "11 km SSE of Mentasta Lake, Alaska",
+      "observed_utc": "2026-11-21T22:56:06.746000+00:00",
+      "source_updated_utc": "2026-11-21T22:57:34.247000+00:00",
+      "magnitude": 1.6,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xcezhw",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nc75470072",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.5 - 10 km NW of Pinnacles, CA",
+      "area": "10 km NW of Pinnacles, CA",
+      "observed_utc": "2026-11-21T22:55:08+00:00",
+      "source_updated_utc": "2026-11-21T22:56:44.327000+00:00",
+      "magnitude": 1.49,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75470072",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "ci41364711",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 0.4 - 3 km WSW of Anza, CA",
+      "area": "3 km WSW of Anza, CA",
+      "observed_utc": "2026-11-21T22:54:29.120000+00:00",
+      "source_updated_utc": "2026-11-21T22:58:02.508000+00:00",
+      "magnitude": 0.42,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364711",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "ci41364703",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 0.7 - 20 km ESE of Little Lake, CA",
+      "area": "20 km ESE of Little Lake, CA",
+      "observed_utc": "2026-11-21T22:45:44.230000+00:00",
+      "source_updated_utc": "2026-11-21T22:57:58.476000+00:00",
+      "magnitude": 0.69,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364703",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "ci41364695",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.0 - 16 km E of Coso Junction, CA",
+      "area": "16 km E of Coso Junction, CA",
+      "observed_utc": "2026-11-21T22:34:56.650000+00:00",
+      "source_updated_utc": "2026-11-21T22:38:21.147000+00:00",
+      "magnitude": 1,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364695",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nc75470067",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.8 - 11 km NW of Pinnacles, CA",
+      "area": "11 km NW of Pinnacles, CA",
+      "observed_utc": "2026-11-21T22:31:34.540000+00:00",
+      "source_updated_utc": "2026-11-21T22:35:41.350000+00:00",
+      "magnitude": 1.75,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75470067",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nc75470062",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.3 - 7 km E of Cloverdale, CA",
+      "area": "7 km E of Cloverdale, CA",
+      "observed_utc": "2026-11-21T22:28:35.800000+00:00",
+      "source_updated_utc": "2026-11-21T22:30:14.050000+00:00",
+      "magnitude": 1.25,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75470062",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nc75470057",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.5 - 6 km W of Cobb, CA",
+      "area": "6 km W of Cobb, CA",
+      "observed_utc": "2026-11-21T22:04:38.690000+00:00",
+      "source_updated_utc": "2026-11-21T22:06:14.119000+00:00",
+      "magnitude": 1.49,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75470057",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nc75470052",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.9 - 11 km NW of Pinnacles, CA",
+      "area": "11 km NW of Pinnacles, CA",
+      "observed_utc": "2026-11-21T22:04:21.550000+00:00",
+      "source_updated_utc": "2026-11-21T22:09:59+00:00",
+      "magnitude": 1.94,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75470052",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "ci41364671",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.3 - 5 km SW of Cabazon, CA",
+      "area": "5 km SW of Cabazon, CA",
+      "observed_utc": "2026-11-21T21:58:36.130000+00:00",
+      "source_updated_utc": "2026-11-21T22:02:10.463000+00:00",
+      "magnitude": 1.25,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364671",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nc75470047",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 0.2 - 9 km WNW of Cobb, CA",
+      "area": "9 km WNW of Cobb, CA",
+      "observed_utc": "2026-11-21T21:47:13.390000+00:00",
+      "source_updated_utc": "2026-11-21T21:48:49.851000+00:00",
+      "magnitude": 0.22,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75470047",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "ci41364663",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 2.6 - 11 km WNW of Calipatria, CA",
+      "area": "11 km WNW of Calipatria, CA",
+      "observed_utc": "2026-11-21T21:46:31.560000+00:00",
+      "source_updated_utc": "2026-11-21T21:50:05.953000+00:00",
+      "magnitude": 2.59,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364663",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "uw714140802",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.9 - 14 km NNE of Ashford, Washington",
+      "area": "14 km NNE of Ashford, Washington",
+      "observed_utc": "2026-11-21T21:36:04.670000+00:00",
+      "source_updated_utc": "2026-11-21T21:38:50.840000+00:00",
+      "magnitude": 1.8751106262207,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714140802",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nn00927273",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.5 - 14 km ESE of Hawthorne, Nevada",
+      "area": "14 km ESE of Hawthorne, Nevada",
+      "observed_utc": "2026-11-21T21:20:02.046000+00:00",
+      "source_updated_utc": "2026-11-21T21:22:29.649000+00:00",
+      "magnitude": 1.52,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00927273",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "aka2026xcbsdl",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 2.3 - 6 km W of Willow, Alaska",
+      "area": "6 km W of Willow, Alaska",
+      "observed_utc": "2026-11-21T21:17:53.870000+00:00",
+      "source_updated_utc": "2026-11-21T21:20:55.020000+00:00",
+      "magnitude": 2.3,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xcbsdl",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "aka2026xcbpqd",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 2.3 - 6 km W of Beluga, Alaska",
+      "area": "6 km W of Beluga, Alaska",
+      "observed_utc": "2026-11-21T21:15:27.309000+00:00",
+      "source_updated_utc": "2026-11-21T21:17:14.285000+00:00",
+      "magnitude": 2.3,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xcbpqd",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "ci41364655",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 0.5 - 20 km N of Ridgecrest, CA",
+      "area": "20 km N of Ridgecrest, CA",
+      "observed_utc": "2026-11-21T21:14:39.030000+00:00",
+      "source_updated_utc": "2026-11-21T21:18:10.766000+00:00",
+      "magnitude": 0.53,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364655",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nc75470022",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 2.2 - 11 km NW of Pinnacles, CA",
+      "area": "11 km NW of Pinnacles, CA",
+      "observed_utc": "2026-11-21T21:13:03.550000+00:00",
+      "source_updated_utc": "2026-11-21T21:42:27.245000+00:00",
+      "magnitude": 2.18,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75470022",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nc75470017",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.3 - 3 km ENE of The Geysers, CA",
+      "area": "3 km ENE of The Geysers, CA",
+      "observed_utc": "2026-11-21T21:06:31.330000+00:00",
+      "source_updated_utc": "2026-11-21T21:08:08.553000+00:00",
+      "magnitude": 1.26,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75470017",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nc75470007",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 2.3 - 10 km NW of Pinnacles, CA",
+      "area": "10 km NW of Pinnacles, CA",
+      "observed_utc": "2026-11-21T21:00:49.830000+00:00",
+      "source_updated_utc": "2026-11-21T21:22:22.123000+00:00",
+      "magnitude": 2.29,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75470007",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "hv75074272",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.8 - 18 km N of Pāhala, Hawaii",
+      "area": "18 km N of Pāhala, Hawaii",
+      "observed_utc": "2026-11-21T20:51:22.310000+00:00",
+      "source_updated_utc": "2026-11-21T20:54:45.530000+00:00",
+      "magnitude": 1.77,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75074272",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nc75469997",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.5 - 20 km W of Westley, CA",
+      "area": "20 km W of Westley, CA",
+      "observed_utc": "2026-11-21T20:50:03.860000+00:00",
+      "source_updated_utc": "2026-11-21T20:51:43.234000+00:00",
+      "magnitude": 1.5,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469997",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nc75469992",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.2 - 10 km NNE of San Simeon, CA",
+      "area": "10 km NNE of San Simeon, CA",
+      "observed_utc": "2026-11-21T20:50:00.440000+00:00",
+      "source_updated_utc": "2026-11-21T20:51:39.501000+00:00",
+      "magnitude": 1.24,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469992",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "ci41364647",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 0.9 - 16 km ENE of Borrego Springs, CA",
+      "area": "16 km ENE of Borrego Springs, CA",
+      "observed_utc": "2026-11-21T20:48:19.040000+00:00",
+      "source_updated_utc": "2026-11-21T20:51:47.491000+00:00",
+      "magnitude": 0.94,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364647",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nc75469987",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 1.1 - 7 km WNW of Cobb, CA",
+      "area": "7 km WNW of Cobb, CA",
+      "observed_utc": "2026-11-21T20:33:06.060000+00:00",
+      "source_updated_utc": "2026-11-21T20:34:44.206000+00:00",
+      "magnitude": 1.06,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469987",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nc75469982",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 2.9 - 11 km NW of Pinnacles, CA",
+      "area": "11 km NW of Pinnacles, CA",
+      "observed_utc": "2026-11-21T20:21:38.630000+00:00",
+      "source_updated_utc": "2026-11-21T22:59:12.040000+00:00",
+      "magnitude": 2.89,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469982",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "ci41364631",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 0.6 - 13 km SE of Anza, CA",
+      "area": "13 km SE of Anza, CA",
+      "observed_utc": "2026-11-21T20:16:26.660000+00:00",
+      "source_updated_utc": "2026-11-21T20:19:53.699000+00:00",
+      "magnitude": 0.59,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364631",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nc75469977",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 2.0 - 8 km WNW of Pinnacles, CA",
+      "area": "8 km WNW of Pinnacles, CA",
+      "observed_utc": "2026-11-21T20:10:41.470000+00:00",
+      "source_updated_utc": "2026-11-21T20:12:19.251000+00:00",
+      "magnitude": 2,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469977",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "nc75469967",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 0.7 - 6 km W of Cobb, CA",
+      "area": "6 km W of Cobb, CA",
+      "observed_utc": "2026-11-21T20:02:09.300000+00:00",
+      "source_updated_utc": "2026-11-21T20:03:44.119000+00:00",
+      "magnitude": 0.7,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469967",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "us6000ucnl",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 4.2 - 21 km SSE of Solok, Indonesia",
+      "area": "21 km SSE of Solok, Indonesia",
+      "observed_utc": "2026-11-21T19:52:26.507000+00:00",
+      "source_updated_utc": "2026-11-21T23:10:42.040000+00:00",
+      "magnitude": 4.2,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucnl",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "aka2026xbypfs",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 4.0 - 193 km WSW of Adak, Alaska",
+      "area": "193 km WSW of Adak, Alaska",
+      "observed_utc": "2026-11-21T19:44:34.265000+00:00",
+      "source_updated_utc": "2026-11-21T23:09:29.190000+00:00",
+      "magnitude": 4,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbypfs",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "us6000ucni",
@@ -85,7 +565,111 @@
       "source_updated_utc": "2026-11-21T19:21:42.040000+00:00",
       "magnitude": 4.9,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucni",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ee0bd936c70ac12a588b5f87f57d66399537f1e1.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Flood Warning",
+      "area": "Aguada, PR; Moca, PR",
+      "severity": "Severe",
+      "issued_utc": "2026-11-21T19:01:00-04:00",
+      "effective_utc": "2026-11-21T19:01:00-04:00",
+      "expires_utc": "2026-11-21T22:00:00-04:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ee0bd936c70ac12a588b5f87f57d66399537f1e1.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8cae0efab2678adbb6d4fd581e8c7ab16387c63b.002.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Flood Advisory",
+      "area": "Rio Grande, PR",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T18:55:00-04:00",
+      "effective_utc": "2026-11-21T18:55:00-04:00",
+      "expires_utc": "2026-11-21T20:15:00-04:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8cae0efab2678adbb6d4fd581e8c7ab16387c63b.002.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fca85ffb8d4ecbe611bd6a75c58476c99b81ca90.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Special Marine Warning",
+      "area": "Waters from Deerfield Beach to Ocean Reef FL from 20 to 60 NM excluding the territorial waters of Bahamas",
+      "severity": "Severe",
+      "issued_utc": "2026-11-21T18:53:00-05:00",
+      "effective_utc": "2026-11-21T18:53:00-05:00",
+      "expires_utc": "2026-11-21T19:45:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fca85ffb8d4ecbe611bd6a75c58476c99b81ca90.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.07d174b3db1ce37334244aa5812018657cad467a.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Tornado Warning",
+      "area": "Indian River, FL; Okeechobee, FL; St. Lucie, FL",
+      "severity": "Extreme",
+      "issued_utc": "2026-11-21T18:53:00-05:00",
+      "effective_utc": "2026-11-21T18:53:00-05:00",
+      "expires_utc": "2026-11-21T19:15:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.07d174b3db1ce37334244aa5812018657cad467a.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a6971e6aa4ceb6f8736accaebe4e79ade695e92a.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Tornado Warning",
+      "area": "Palm Beach, FL",
+      "severity": "Extreme",
+      "issued_utc": "2026-11-21T18:50:00-05:00",
+      "effective_utc": "2026-11-21T18:50:00-05:00",
+      "expires_utc": "2026-11-21T19:00:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a6971e6aa4ceb6f8736accaebe4e79ade695e92a.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e42ded9ce1dc520550267259d65581603d5bfcea.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Flood Warning",
+      "area": "Naguabo, PR",
+      "severity": "Severe",
+      "issued_utc": "2026-11-21T18:49:00-04:00",
+      "effective_utc": "2026-11-21T18:49:00-04:00",
+      "expires_utc": "2026-11-21T21:45:00-04:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e42ded9ce1dc520550267259d65581603d5bfcea.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.89b843f8efd47ee9b4e51c91782d5ee5d643aa59.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Special Marine Warning",
+      "area": "Lake Okeechobee",
+      "severity": "Severe",
+      "issued_utc": "2026-11-21T18:48:00-05:00",
+      "effective_utc": "2026-11-21T18:48:00-05:00",
+      "expires_utc": "2026-11-21T19:15:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.89b843f8efd47ee9b4e51c91782d5ee5d643aa59.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e99e95894dfa28884fb72ba62e235eab91e68197.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Special Weather Statement",
+      "area": "Inland Palm Beach County; Metro Palm Beach County; Inland Broward County; Metro Broward County",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T18:46:00-05:00",
+      "effective_utc": "2026-11-21T18:46:00-05:00",
+      "expires_utc": "2026-11-21T19:15:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e99e95894dfa28884fb72ba62e235eab91e68197.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "ci41364615",
@@ -97,7 +681,33 @@
       "source_updated_utc": "2026-11-21T18:48:43.303000+00:00",
       "magnitude": 1.06,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364615",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5cf71df056e615e1784e4d2faceba7ab386f703c.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Special Marine Warning",
+      "area": "Waters from Deerfield Beach to Ocean Reef FL from 20 to 60 NM excluding the territorial waters of Bahamas",
+      "severity": "Severe",
+      "issued_utc": "2026-11-21T18:40:00-05:00",
+      "effective_utc": "2026-11-21T18:40:00-05:00",
+      "expires_utc": "2026-11-21T19:45:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5cf71df056e615e1784e4d2faceba7ab386f703c.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ad4408599aa7d51b44efb2ee60e573b7b7244341.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Special Marine Warning",
+      "area": "Coastal waters from Jupiter Inlet to Deerfield Beach FL out 20 NM; Waters from Jupiter Inlet to Deerfield Beach FL from 20 to 60 NM",
+      "severity": "Severe",
+      "issued_utc": "2026-11-21T18:39:00-05:00",
+      "effective_utc": "2026-11-21T18:39:00-05:00",
+      "expires_utc": "2026-11-21T19:45:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ad4408599aa7d51b44efb2ee60e573b7b7244341.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "nc75469952",
@@ -109,7 +719,59 @@
       "source_updated_utc": "2026-11-21T18:35:14.398000+00:00",
       "magnitude": 0.7,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469952",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bc2448dd1a1c540f7353251c819504d60a79c54c.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Tornado Watch",
+      "area": "Palm Beach, FL",
+      "severity": "Extreme",
+      "issued_utc": "2026-11-21T18:23:00-05:00",
+      "effective_utc": "2026-11-21T18:23:00-05:00",
+      "expires_utc": "2026-11-21T22:00:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bc2448dd1a1c540f7353251c819504d60a79c54c.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bc2448dd1a1c540f7353251c819504d60a79c54c.002.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Tornado Watch",
+      "area": "Coastal waters from Jupiter Inlet to Deerfield Beach FL out 20 NM",
+      "severity": "Extreme",
+      "issued_utc": "2026-11-21T18:23:00-05:00",
+      "effective_utc": "2026-11-21T18:23:00-05:00",
+      "expires_utc": "2026-11-21T22:00:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bc2448dd1a1c540f7353251c819504d60a79c54c.002.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2e48559ebe7aaafcb6cd1e3e928432556d0e4227.002.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Tornado Watch",
+      "area": "Sebastian Inlet to Jupiter Inlet 0-20 nm",
+      "severity": "Extreme",
+      "issued_utc": "2026-11-21T18:23:00-05:00",
+      "effective_utc": "2026-11-21T18:23:00-05:00",
+      "expires_utc": "2026-11-21T22:00:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2e48559ebe7aaafcb6cd1e3e928432556d0e4227.002.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2e48559ebe7aaafcb6cd1e3e928432556d0e4227.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Tornado Watch",
+      "area": "Indian River, FL; Martin, FL; Okeechobee, FL; St. Lucie, FL",
+      "severity": "Extreme",
+      "issued_utc": "2026-11-21T18:23:00-05:00",
+      "effective_utc": "2026-11-21T18:23:00-05:00",
+      "expires_utc": "2026-11-21T22:00:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2e48559ebe7aaafcb6cd1e3e928432556d0e4227.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "nc75469942",
@@ -121,7 +783,7 @@
       "source_updated_utc": "2026-11-21T18:13:54.113000+00:00",
       "magnitude": 1.23,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469942",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "ci41364607",
@@ -133,7 +795,7 @@
       "source_updated_utc": "2026-11-21T18:11:17.066000+00:00",
       "magnitude": 1.36,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364607",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "nc75469937",
@@ -145,7 +807,7 @@
       "source_updated_utc": "2026-11-21T18:04:04.063000+00:00",
       "magnitude": 0.94,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469937",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "hv75074242",
@@ -157,7 +819,7 @@
       "source_updated_utc": "2026-11-21T18:05:48.630000+00:00",
       "magnitude": 1.94,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75074242",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "aka2026xbvaky",
@@ -169,7 +831,7 @@
       "source_updated_utc": "2026-11-21T17:59:34.853000+00:00",
       "magnitude": 2,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbvaky",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "ci41364599",
@@ -181,7 +843,19 @@
       "source_updated_utc": "2026-11-21T17:59:42.399000+00:00",
       "magnitude": 0.5,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364599",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "us6000ucn9",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 4.3 - 15 km WSW of Ollagüe, Chile",
+      "area": "15 km WSW of Ollagüe, Chile",
+      "observed_utc": "2026-11-21T17:41:02.389000+00:00",
+      "source_updated_utc": "2026-11-21T19:57:10.040000+00:00",
+      "magnitude": 4.3,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucn9",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "ci41364591",
@@ -190,10 +864,10 @@
       "title": "M 2.3 - 14 km S of Malibu Beach, CA",
       "area": "14 km S of Malibu Beach, CA",
       "observed_utc": "2026-11-21T17:38:09.380000+00:00",
-      "source_updated_utc": "2026-11-21T17:48:48.040000+00:00",
+      "source_updated_utc": "2026-11-21T20:04:20.994000+00:00",
       "magnitude": 2.28,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364591",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "us6000ucn8",
@@ -205,7 +879,46 @@
       "source_updated_utc": "2026-11-21T18:00:30.040000+00:00",
       "magnitude": 4.6,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucn8",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1c7afe751451b54f7f59d20bf439dfc2cb0cedf4.003.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Coastal waters from Surf City to Cape Fear NC out 20 nm; Coastal waters from Cape Fear NC to Little River Inlet SC out 20 NM",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T17:28:00-05:00",
+      "effective_utc": "2026-11-21T17:28:00-05:00",
+      "expires_utc": "2026-11-22T02:00:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1c7afe751451b54f7f59d20bf439dfc2cb0cedf4.003.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1c7afe751451b54f7f59d20bf439dfc2cb0cedf4.002.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Coastal waters from Little River Inlet to Murrells Inlet SC out 20 NM; Coastal waters from Murrells Inlet to South Santee River SC out 20 NM",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T17:28:00-05:00",
+      "effective_utc": "2026-11-21T17:28:00-05:00",
+      "expires_utc": "2026-11-22T02:00:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1c7afe751451b54f7f59d20bf439dfc2cb0cedf4.002.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bd07a01cfe2bfb93232e6830488c00445fdf0526.002.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "High Surf Advisory",
+      "area": "Coastal Pender; Coastal New Hanover",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T17:24:00-05:00",
+      "effective_utc": "2026-11-21T17:24:00-05:00",
+      "expires_utc": "2026-11-22T02:00:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bd07a01cfe2bfb93232e6830488c00445fdf0526.002.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "aka2026xbtunp",
@@ -217,7 +930,7 @@
       "source_updated_utc": "2026-11-21T17:22:04.643000+00:00",
       "magnitude": 1.6,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbtunp",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "us6000ucn2",
@@ -229,7 +942,7 @@
       "source_updated_utc": "2026-11-21T19:45:16.040000+00:00",
       "magnitude": 4.5,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucn2",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "ci41364583",
@@ -241,7 +954,7 @@
       "source_updated_utc": "2026-11-21T17:15:56.943000+00:00",
       "magnitude": 0.79,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364583",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "aka2026xbsutp",
@@ -250,10 +963,10 @@
       "title": "M 2.6 - 149 km S of Cordova, Alaska",
       "area": "149 km S of Cordova, Alaska",
       "observed_utc": "2026-11-21T16:53:25.513000+00:00",
-      "source_updated_utc": "2026-11-21T16:57:14.753000+00:00",
+      "source_updated_utc": "2026-11-21T20:36:02.040000+00:00",
       "magnitude": 2.6,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbsutp",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "aka2026xbspyh",
@@ -265,7 +978,7 @@
       "source_updated_utc": "2026-11-21T16:48:34.789000+00:00",
       "magnitude": 1,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbspyh",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "aka2026xbsmqw",
@@ -277,7 +990,7 @@
       "source_updated_utc": "2026-11-21T16:43:54.696000+00:00",
       "magnitude": 1.9,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbsmqw",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "hv75074207",
@@ -289,7 +1002,7 @@
       "source_updated_utc": "2026-11-21T16:39:54.580000+00:00",
       "magnitude": 1.96,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75074207",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "aka2026xbsiah",
@@ -301,7 +1014,7 @@
       "source_updated_utc": "2026-11-21T16:38:34.080000+00:00",
       "magnitude": 2.3,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbsiah",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "ci41364575",
@@ -313,7 +1026,20 @@
       "source_updated_utc": "2026-11-21T16:29:14.242000+00:00",
       "magnitude": 1.42,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364575",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.222d3ed6da6761d82bbb7ccc835ffae2c007b74f.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Rip Current Statement",
+      "area": "San Juan and Vicinity; Northeast; North Central; Northwest; Mayaguez and Vicinity",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T16:23:00-04:00",
+      "effective_utc": "2026-11-21T16:23:00-04:00",
+      "expires_utc": "2026-11-22T06:00:00-04:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.222d3ed6da6761d82bbb7ccc835ffae2c007b74f.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "nc75469922",
@@ -325,7 +1051,19 @@
       "source_updated_utc": "2026-11-21T16:19:18.307000+00:00",
       "magnitude": 0.78,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469922",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "aka2026xbrrnr",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 3.6 - 288 km WSW of Adak, Alaska",
+      "area": "288 km WSW of Adak, Alaska",
+      "observed_utc": "2026-11-21T16:17:19.204000+00:00",
+      "source_updated_utc": "2026-11-21T23:04:05.344000+00:00",
+      "magnitude": 3.6,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbrrnr",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "nc75469917",
@@ -337,7 +1075,19 @@
       "source_updated_utc": "2026-11-21T16:09:39.325000+00:00",
       "magnitude": 1.11,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469917",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "us6000ucmv",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 4.0 - 44 km S of Calama, Chile",
+      "area": "44 km S of Calama, Chile",
+      "observed_utc": "2026-11-21T16:04:39.659000+00:00",
+      "source_updated_utc": "2026-11-21T20:37:00.040000+00:00",
+      "magnitude": 4,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucmv",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "aka2026xbrenb",
@@ -349,7 +1099,20 @@
       "source_updated_utc": "2026-11-21T16:06:14.714000+00:00",
       "magnitude": 2.2,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbrenb",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.964103c6cfaada487f3e6c8515419b521a8a6507.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Coastal Flood Statement",
+      "area": "Monroe Upper Keys; Monroe Middle Keys; Monroe Lower Keys",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T16:00:00-05:00",
+      "effective_utc": "2026-11-21T16:00:00-05:00",
+      "expires_utc": "2026-11-22T00:00:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.964103c6cfaada487f3e6c8515419b521a8a6507.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "aka2026xbrayu",
@@ -361,7 +1124,19 @@
       "source_updated_utc": "2026-11-21T15:59:54.401000+00:00",
       "magnitude": 1.8,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbrayu",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "us6000ucmt",
+      "provider": "USGS earthquakes",
+      "kind": "observed_earthquake",
+      "title": "M 4.1 - 237 km NNE of Lospalos, Timor Leste",
+      "area": "237 km NNE of Lospalos, Timor Leste",
+      "observed_utc": "2026-11-21T15:56:07.655000+00:00",
+      "source_updated_utc": "2026-11-21T20:12:03.040000+00:00",
+      "magnitude": 4.1,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucmt",
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "ci41364559",
@@ -373,7 +1148,7 @@
       "source_updated_utc": "2026-11-21T15:57:48.773000+00:00",
       "magnitude": 0.58,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364559",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "hv75074192",
@@ -385,7 +1160,7 @@
       "source_updated_utc": "2026-11-21T15:57:23.250000+00:00",
       "magnitude": 2.87,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75074192",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "hv75074197",
@@ -394,10 +1169,114 @@
       "title": "M 2.8 - 1 km N of Pāhala, Hawaii",
       "area": "1 km N of Pāhala, Hawaii",
       "observed_utc": "2026-11-21T15:53:44.550000+00:00",
-      "source_updated_utc": "2026-11-21T15:57:21.190000+00:00",
+      "source_updated_utc": "2026-11-21T20:04:18.040000+00:00",
       "magnitude": 2.84,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75074197",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.53cb6f3b7f705253452c29614717b1956f53574e.002.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Saxon Harbor WI to Black River MI",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T15:45:00-05:00",
+      "effective_utc": "2026-11-21T15:45:00-05:00",
+      "expires_utc": "2026-11-22T03:45:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.53cb6f3b7f705253452c29614717b1956f53574e.002.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.53cb6f3b7f705253452c29614717b1956f53574e.001.2",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Munising to Grand Marais MI; Grand Marais to Whitefish Point MI",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T15:45:00-05:00",
+      "effective_utc": "2026-11-21T15:45:00-05:00",
+      "expires_utc": "2026-11-22T03:45:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.53cb6f3b7f705253452c29614717b1956f53574e.001.2",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.53cb6f3b7f705253452c29614717b1956f53574e.006.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Seul Choix Point to Point Detour MI; 5NM East of a line from Fairport MI to Rock Island Passage",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T15:45:00-05:00",
+      "effective_utc": "2026-11-21T15:45:00-05:00",
+      "expires_utc": "2026-11-22T03:45:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.53cb6f3b7f705253452c29614717b1956f53574e.006.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.53cb6f3b7f705253452c29614717b1956f53574e.003.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Black River To Ontonagon MI; Ontonagon to Upper Entrance of Portage Canal MI; Upper Entrance of Portage Canal to Eagle River MI; Eagle River to Manitou Island MI",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T15:45:00-05:00",
+      "effective_utc": "2026-11-21T15:45:00-05:00",
+      "expires_utc": "2026-11-22T03:45:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.53cb6f3b7f705253452c29614717b1956f53574e.003.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.53cb6f3b7f705253452c29614717b1956f53574e.007.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Green Bay North of line from Cedar River MI to Rock Island Passage",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T15:45:00-05:00",
+      "effective_utc": "2026-11-21T15:45:00-05:00",
+      "expires_utc": "2026-11-21T19:00:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.53cb6f3b7f705253452c29614717b1956f53574e.007.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.53cb6f3b7f705253452c29614717b1956f53574e.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Munising to Grand Marais MI; Grand Marais to Whitefish Point MI",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T15:45:00-05:00",
+      "effective_utc": "2026-11-21T15:45:00-05:00",
+      "expires_utc": "2026-11-22T03:45:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.53cb6f3b7f705253452c29614717b1956f53574e.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.53cb6f3b7f705253452c29614717b1956f53574e.004.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Manitou Island to Point Isabelle MI; Point Isabelle to Lower Entrance of Portage Canal MI; Portage Lake to Huron Island MI to Lower Entrance of Portage Canal To Huron Islands MI Including Keweenaw and Huron Bays",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T15:45:00-05:00",
+      "effective_utc": "2026-11-21T15:45:00-05:00",
+      "expires_utc": "2026-11-22T03:45:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.53cb6f3b7f705253452c29614717b1956f53574e.004.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.53cb6f3b7f705253452c29614717b1956f53574e.005.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Huron Islands to Marquette MI; Marquette to Munising MI",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T15:45:00-05:00",
+      "effective_utc": "2026-11-21T15:45:00-05:00",
+      "expires_utc": "2026-11-22T03:45:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.53cb6f3b7f705253452c29614717b1956f53574e.005.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "aka2026xbqmgg",
@@ -409,7 +1288,7 @@
       "source_updated_utc": "2026-11-21T15:46:19.223000+00:00",
       "magnitude": 1.7,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbqmgg",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "ci41364551",
@@ -421,7 +1300,20 @@
       "source_updated_utc": "2026-11-21T15:46:58.439000+00:00",
       "magnitude": 0.84,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364551",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c12f85f1802384c1204ebb65e35d3c3269aabd3a.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Freeze Warning",
+      "area": "Southeast Gila County",
+      "severity": "Severe",
+      "issued_utc": "2026-11-21T15:36:00-07:00",
+      "effective_utc": "2026-11-21T15:36:00-07:00",
+      "expires_utc": "2026-11-22T09:00:00-07:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c12f85f1802384c1204ebb65e35d3c3269aabd3a.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "aka2026xbqhbr",
@@ -433,7 +1325,7 @@
       "source_updated_utc": "2026-11-21T15:38:25.202000+00:00",
       "magnitude": 1.2,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbqhbr",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "aka2026xbqczf",
@@ -445,20 +1337,72 @@
       "source_updated_utc": "2026-11-21T15:34:34.698000+00:00",
       "magnitude": 2.4,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbqczf",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.86cc8d2b292acd33bc680ba02cfbea1fce8ebce9.001.1",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.83b598b14f9a4336fd426475c793162bdbfeaad9.002.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
-      "title": "Flood Advisory",
-      "area": "Cabo Rojo, PR; Hormigueros, PR",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T15:29:00-04:00",
-      "effective_utc": "2026-11-21T15:29:00-04:00",
-      "expires_utc": "2026-11-21T16:30:00-04:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.86cc8d2b292acd33bc680ba02cfbea1fce8ebce9.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "title": "Gale Watch",
+      "area": "Coastal Waters extending out to 25 NM South of Marthas Vineyard and Nantucket; Coastal Waters from Montauk NY to Marthas Vineyard extending out to 20 NM South of Block Island",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T15:19:00-05:00",
+      "effective_utc": "2026-11-21T15:19:00-05:00",
+      "expires_utc": "2026-11-22T05:00:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.83b598b14f9a4336fd426475c793162bdbfeaad9.002.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.83b598b14f9a4336fd426475c793162bdbfeaad9.005.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Gale Watch",
+      "area": "Ocean Waters from Provincetown to Nantucket from 20 to 60 NM",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T15:19:00-05:00",
+      "effective_utc": "2026-11-21T15:19:00-05:00",
+      "expires_utc": "2026-11-22T05:00:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.83b598b14f9a4336fd426475c793162bdbfeaad9.005.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.83b598b14f9a4336fd426475c793162bdbfeaad9.003.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Gale Watch",
+      "area": "Cape Cod Bay; Nantucket Sound; Vineyard Sound; Buzzards Bay; Rhode Island Sound",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T15:19:00-05:00",
+      "effective_utc": "2026-11-21T15:19:00-05:00",
+      "expires_utc": "2026-11-22T05:00:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.83b598b14f9a4336fd426475c793162bdbfeaad9.003.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.83b598b14f9a4336fd426475c793162bdbfeaad9.004.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Gale Watch",
+      "area": "Coastal waters from Provincetown MA to Chatham MA to Nantucket MA out 20 NM",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T15:19:00-05:00",
+      "effective_utc": "2026-11-21T15:19:00-05:00",
+      "expires_utc": "2026-11-22T05:00:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.83b598b14f9a4336fd426475c793162bdbfeaad9.004.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.83b598b14f9a4336fd426475c793162bdbfeaad9.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Gale Watch",
+      "area": "Ocean Waters from Marthas Vineyard to Nantucket from 25 to 60 NM; Ocean Waters from Montauk NY to Marthas Vineyard from 25 to 60 NM",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T15:19:00-05:00",
+      "effective_utc": "2026-11-21T15:19:00-05:00",
+      "expires_utc": "2026-11-22T05:00:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.83b598b14f9a4336fd426475c793162bdbfeaad9.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "nc75469902",
@@ -470,7 +1414,111 @@
       "source_updated_utc": "2026-11-21T15:19:09.965000+00:00",
       "magnitude": 0.56,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469902",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.22b01a7dccaeec9f593e6bc2c4d8d575928ce6dc.001.2",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Coastal waters from Pt. St. George to Cape Mendocino CA out 10 nm",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T15:15:00-08:00",
+      "effective_utc": "2026-11-21T15:15:00-08:00",
+      "expires_utc": "2026-11-21T23:15:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.22b01a7dccaeec9f593e6bc2c4d8d575928ce6dc.001.2",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.22b01a7dccaeec9f593e6bc2c4d8d575928ce6dc.003.3",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Gale Watch",
+      "area": "Waters from Cape Mendocino to Pt. Arena CA from 10 to 60 nm",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T15:15:00-08:00",
+      "effective_utc": "2026-11-21T15:15:00-08:00",
+      "expires_utc": "2026-11-21T23:15:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.22b01a7dccaeec9f593e6bc2c4d8d575928ce6dc.003.3",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.22b01a7dccaeec9f593e6bc2c4d8d575928ce6dc.003.2",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Waters from Cape Mendocino to Pt. Arena CA from 10 to 60 nm",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T15:15:00-08:00",
+      "effective_utc": "2026-11-21T15:15:00-08:00",
+      "expires_utc": "2026-11-21T23:15:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.22b01a7dccaeec9f593e6bc2c4d8d575928ce6dc.003.2",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.22b01a7dccaeec9f593e6bc2c4d8d575928ce6dc.002.2",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Coastal waters from Cape Mendocino to Pt. Arena CA out 10 nm",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T15:15:00-08:00",
+      "effective_utc": "2026-11-21T15:15:00-08:00",
+      "expires_utc": "2026-11-21T23:15:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.22b01a7dccaeec9f593e6bc2c4d8d575928ce6dc.002.2",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.22b01a7dccaeec9f593e6bc2c4d8d575928ce6dc.002.3",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Gale Watch",
+      "area": "Coastal waters from Cape Mendocino to Pt. Arena CA out 10 nm",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T15:15:00-08:00",
+      "effective_utc": "2026-11-21T15:15:00-08:00",
+      "expires_utc": "2026-11-21T23:15:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.22b01a7dccaeec9f593e6bc2c4d8d575928ce6dc.002.3",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.22b01a7dccaeec9f593e6bc2c4d8d575928ce6dc.001.3",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Gale Watch",
+      "area": "Coastal waters from Pt. St. George to Cape Mendocino CA out 10 nm",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T15:15:00-08:00",
+      "effective_utc": "2026-11-21T15:15:00-08:00",
+      "expires_utc": "2026-11-21T23:15:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.22b01a7dccaeec9f593e6bc2c4d8d575928ce6dc.001.3",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.22b01a7dccaeec9f593e6bc2c4d8d575928ce6dc.004.2",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Waters from Pt. St. George to Cape Mendocino CA from 10 to 60 nm",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T15:15:00-08:00",
+      "effective_utc": "2026-11-21T15:15:00-08:00",
+      "expires_utc": "2026-11-21T23:15:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.22b01a7dccaeec9f593e6bc2c4d8d575928ce6dc.004.2",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.22b01a7dccaeec9f593e6bc2c4d8d575928ce6dc.004.3",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Storm Watch",
+      "area": "Waters from Pt. St. George to Cape Mendocino CA from 10 to 60 nm",
+      "severity": "Severe",
+      "issued_utc": "2026-11-21T15:15:00-08:00",
+      "effective_utc": "2026-11-21T15:15:00-08:00",
+      "expires_utc": "2026-11-21T23:15:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.22b01a7dccaeec9f593e6bc2c4d8d575928ce6dc.004.3",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "aka2026xbplml",
@@ -482,7 +1530,59 @@
       "source_updated_utc": "2026-11-21T15:11:24.485000+00:00",
       "magnitude": 1.5,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbplml",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.def906a8baba33f246e7e477d14f0251291ca8cd.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Flagler Beach to Volusia-Brevard County Line 20-60 nm; Volusia-Brevard County Line to Sebastian Inlet 20-60 nm",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T15:10:00-05:00",
+      "effective_utc": "2026-11-21T15:10:00-05:00",
+      "expires_utc": "2026-11-22T08:00:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.def906a8baba33f246e7e477d14f0251291ca8cd.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.def906a8baba33f246e7e477d14f0251291ca8cd.002.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Sebastian Inlet to Jupiter Inlet 20-60 nm",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T15:10:00-05:00",
+      "effective_utc": "2026-11-21T15:10:00-05:00",
+      "expires_utc": "2026-11-22T07:00:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.def906a8baba33f246e7e477d14f0251291ca8cd.002.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9716eadba92bb22b6efb9aa05f8fbdbd49881f9e.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Rock Island Passage to Sturgeon Bay WI; Sturgeon Bay to Two Rivers WI; Two Rivers to Sheboygan WI",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T15:07:00-06:00",
+      "effective_utc": "2026-11-21T15:07:00-06:00",
+      "expires_utc": "2026-11-22T00:00:00-06:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9716eadba92bb22b6efb9aa05f8fbdbd49881f9e.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9716eadba92bb22b6efb9aa05f8fbdbd49881f9e.002.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Green Bay south of line from  Cedar River to Rock Island Passage and north of a line from Oconto WI to Little Sturgeon Bay WI; Green Bay south of line from  Oconto WI to Little Sturgeon Bay WI",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T15:07:00-06:00",
+      "effective_utc": "2026-11-21T15:07:00-06:00",
+      "expires_utc": "2026-11-21T18:00:00-06:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9716eadba92bb22b6efb9aa05f8fbdbd49881f9e.002.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "aka2026xbpiof",
@@ -494,7 +1594,7 @@
       "source_updated_utc": "2026-11-21T15:08:15.563000+00:00",
       "magnitude": 1.2,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbpiof",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "pr2026325000",
@@ -503,10 +1603,10 @@
       "title": "M 4.6 - 18 km ESE of La Romana, Dominican Republic",
       "area": "18 km ESE of La Romana, Dominican Republic",
       "observed_utc": "2026-11-21T15:00:13.140000+00:00",
-      "source_updated_utc": "2026-11-21T16:11:15.472000+00:00",
+      "source_updated_utc": "2026-11-21T20:02:36.912000+00:00",
       "magnitude": 4.6,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr2026325000",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "ci41364535",
@@ -518,7 +1618,7 @@
       "source_updated_utc": "2026-11-21T14:59:16.426000+00:00",
       "magnitude": 0.73,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364535",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "ci41364527",
@@ -530,7 +1630,7 @@
       "source_updated_utc": "2026-11-21T14:58:29.540000+00:00",
       "magnitude": 0.35,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364527",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "nc75469892",
@@ -542,20 +1642,33 @@
       "source_updated_utc": "2026-11-21T14:52:38.759000+00:00",
       "magnitude": 1.64,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469892",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ba5bef305bae7d9570bd17020b2f0a307eb76789.001.1",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1e56f6e55e9aee7929285f4acc910112a0103fa8.001.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
-      "title": "Flash Flood Warning",
-      "area": "Aguada, PR; Aguadilla, PR; Moca, PR",
-      "severity": "Severe",
-      "issued_utc": "2026-11-21T14:48:00-04:00",
-      "effective_utc": "2026-11-21T14:48:00-04:00",
-      "expires_utc": "2026-11-21T17:45:00-04:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ba5bef305bae7d9570bd17020b2f0a307eb76789.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "title": "Small Craft Advisory",
+      "area": "New Buffalo MI to St Joseph MI; Michigan City IN to New Buffalo MI",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T14:47:00-05:00",
+      "effective_utc": "2026-11-21T14:47:00-05:00",
+      "expires_utc": "2026-11-21T23:45:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1e56f6e55e9aee7929285f4acc910112a0103fa8.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.37a0e1c128886d313dde2f12ea9c917914cf4bb8.002.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Sheboygan to Port Washington WI",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T14:46:00-06:00",
+      "effective_utc": "2026-11-21T14:46:00-06:00",
+      "expires_utc": "2026-11-21T21:00:00-06:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.37a0e1c128886d313dde2f12ea9c917914cf4bb8.002.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b6156ee166d5154d7dfa4d771fcaac8c040e01b1.002.1",
@@ -568,7 +1681,7 @@
       "effective_utc": "2026-11-21T14:45:00-05:00",
       "expires_utc": "2026-11-21T22:45:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b6156ee166d5154d7dfa4d771fcaac8c040e01b1.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b6156ee166d5154d7dfa4d771fcaac8c040e01b1.001.1",
@@ -581,7 +1694,7 @@
       "effective_utc": "2026-11-21T14:45:00-05:00",
       "expires_utc": "2026-11-21T22:45:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b6156ee166d5154d7dfa4d771fcaac8c040e01b1.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b6156ee166d5154d7dfa4d771fcaac8c040e01b1.005.1",
@@ -594,7 +1707,7 @@
       "effective_utc": "2026-11-21T14:45:00-05:00",
       "expires_utc": "2026-11-21T22:45:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b6156ee166d5154d7dfa4d771fcaac8c040e01b1.005.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b6156ee166d5154d7dfa4d771fcaac8c040e01b1.004.1",
@@ -607,7 +1720,7 @@
       "effective_utc": "2026-11-21T14:45:00-05:00",
       "expires_utc": "2026-11-21T22:45:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b6156ee166d5154d7dfa4d771fcaac8c040e01b1.004.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b6156ee166d5154d7dfa4d771fcaac8c040e01b1.003.1",
@@ -620,7 +1733,7 @@
       "effective_utc": "2026-11-21T14:45:00-05:00",
       "expires_utc": "2026-11-21T22:45:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b6156ee166d5154d7dfa4d771fcaac8c040e01b1.003.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a4a83f65060d99e2eba5145cd9bb58cb5394fc40.001.1",
@@ -633,7 +1746,7 @@
       "effective_utc": "2026-11-21T14:43:00-05:00",
       "expires_utc": "2026-11-21T22:45:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a4a83f65060d99e2eba5145cd9bb58cb5394fc40.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a4a83f65060d99e2eba5145cd9bb58cb5394fc40.002.1",
@@ -646,7 +1759,20 @@
       "effective_utc": "2026-11-21T14:43:00-05:00",
       "expires_utc": "2026-11-21T22:45:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a4a83f65060d99e2eba5145cd9bb58cb5394fc40.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e1d00359662eedfba4906b39cebee769bd3f193a.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Special Weather Statement",
+      "area": "West Polk; Kittson; Roseau; Lake Of The Woods; West Marshall; East Marshall; North Beltrami; Pennington; Red Lake; East Polk; North Clearwater; South Beltrami; Towner; Cavalier; Pembina; Benson; Ramsey; Eastern Walsh County; Nelson; Grand Forks; Western Walsh County",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T14:40:00-06:00",
+      "effective_utc": "2026-11-21T14:40:00-06:00",
+      "expires_utc": "2026-11-22T12:00:00-06:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e1d00359662eedfba4906b39cebee769bd3f193a.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "ci41364519",
@@ -658,7 +1784,72 @@
       "source_updated_utc": "2026-11-21T14:40:09.312000+00:00",
       "magnitude": 1.02,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364519",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f1eb01d8ece1b646acdf3600712cf3165869fb7b.005.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Cape Decision to Cape Edgecumbe from 15 to 80 NM",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T14:36:00-09:00",
+      "effective_utc": "2026-11-21T14:36:00-09:00",
+      "expires_utc": "2026-11-22T08:45:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f1eb01d8ece1b646acdf3600712cf3165869fb7b.005.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f1eb01d8ece1b646acdf3600712cf3165869fb7b.002.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Dixon Entrance to Cape Decision out to 15 NM",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T14:36:00-09:00",
+      "effective_utc": "2026-11-21T14:36:00-09:00",
+      "expires_utc": "2026-11-22T08:45:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f1eb01d8ece1b646acdf3600712cf3165869fb7b.002.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f1eb01d8ece1b646acdf3600712cf3165869fb7b.007.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Cape Edgecumbe to Cape Spencer from 15 to 80 NM",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T14:36:00-09:00",
+      "effective_utc": "2026-11-21T14:36:00-09:00",
+      "expires_utc": "2026-11-22T08:45:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f1eb01d8ece1b646acdf3600712cf3165869fb7b.007.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f1eb01d8ece1b646acdf3600712cf3165869fb7b.003.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Dixon Entrance to Cape Decision from 15 to 90 NM",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T14:36:00-09:00",
+      "effective_utc": "2026-11-21T14:36:00-09:00",
+      "expires_utc": "2026-11-22T08:45:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f1eb01d8ece1b646acdf3600712cf3165869fb7b.003.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f1eb01d8ece1b646acdf3600712cf3165869fb7b.003.2",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Dixon Entrance to Cape Decision from 15 to 90 NM",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T14:36:00-09:00",
+      "effective_utc": "2026-11-21T14:36:00-09:00",
+      "expires_utc": "2026-11-22T08:45:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f1eb01d8ece1b646acdf3600712cf3165869fb7b.003.2",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "ci41364511",
@@ -670,7 +1861,7 @@
       "source_updated_utc": "2026-11-21T14:39:03.306000+00:00",
       "magnitude": 0.76,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364511",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "ci41364503",
@@ -682,20 +1873,189 @@
       "source_updated_utc": "2026-11-21T14:40:05.291000+00:00",
       "magnitude": 1.12,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364503",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.abbd2a5efa0dc66cbc15ee71bf48ce1a3aee1310.001.1",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e5c96c34022e5b5d674d2b8dc348abae5b5ffcac.001.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
-      "title": "Special Marine Warning",
-      "area": "Sebastian Inlet to Jupiter Inlet 0-20 nm; Sebastian Inlet to Jupiter Inlet 20-60 nm",
+      "title": "Winter Weather Advisory",
+      "area": "South Slopes Of The Central Brooks Range; Upper Koyukuk Valley; Dalton Highway Summits",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T14:35:00-09:00",
+      "effective_utc": "2026-11-21T14:35:00-09:00",
+      "expires_utc": "2026-11-21T15:45:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e5c96c34022e5b5d674d2b8dc348abae5b5ffcac.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e505a34bc25d4998aa2c3fcfc53c1517e878d677.003.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Waters from Cape Shoalwater WA to Cape Falcon OR from 10 to 60 nm; Waters from Cape Falcon to Cape Foulweather OR from 10 to 60 nm; Waters from Cape Foulweather to Florence OR from 10 to 60 nm",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T14:32:00-08:00",
+      "effective_utc": "2026-11-21T14:32:00-08:00",
+      "expires_utc": "2026-11-22T06:45:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e505a34bc25d4998aa2c3fcfc53c1517e878d677.003.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e505a34bc25d4998aa2c3fcfc53c1517e878d677.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Coastal waters from Cape Shoalwater WA to Cape Falcon OR out 10 nm; Coastal waters from Cape Falcon to Cape Foulweather OR out 10 nm; Coastal waters from Cape Foulweather to Florence OR out 10 nm",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T14:32:00-08:00",
+      "effective_utc": "2026-11-21T14:32:00-08:00",
+      "expires_utc": "2026-11-22T06:45:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e505a34bc25d4998aa2c3fcfc53c1517e878d677.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e505a34bc25d4998aa2c3fcfc53c1517e878d677.002.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Columbia River Bar",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T14:32:00-08:00",
+      "effective_utc": "2026-11-21T14:32:00-08:00",
+      "expires_utc": "2026-11-22T06:45:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e505a34bc25d4998aa2c3fcfc53c1517e878d677.002.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e505a34bc25d4998aa2c3fcfc53c1517e878d677.001.2",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Gale Watch",
+      "area": "Coastal waters from Cape Shoalwater WA to Cape Falcon OR out 10 nm; Coastal waters from Cape Falcon to Cape Foulweather OR out 10 nm; Coastal waters from Cape Foulweather to Florence OR out 10 nm",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T14:32:00-08:00",
+      "effective_utc": "2026-11-21T14:32:00-08:00",
+      "expires_utc": "2026-11-22T06:45:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e505a34bc25d4998aa2c3fcfc53c1517e878d677.001.2",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e505a34bc25d4998aa2c3fcfc53c1517e878d677.002.2",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Gale Watch",
+      "area": "Columbia River Bar",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T14:32:00-08:00",
+      "effective_utc": "2026-11-21T14:32:00-08:00",
+      "expires_utc": "2026-11-22T06:45:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e505a34bc25d4998aa2c3fcfc53c1517e878d677.002.2",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e505a34bc25d4998aa2c3fcfc53c1517e878d677.003.2",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Storm Watch",
+      "area": "Waters from Cape Shoalwater WA to Cape Falcon OR from 10 to 60 nm; Waters from Cape Falcon to Cape Foulweather OR from 10 to 60 nm; Waters from Cape Foulweather to Florence OR from 10 to 60 nm",
       "severity": "Severe",
-      "issued_utc": "2026-11-21T14:33:00-05:00",
-      "effective_utc": "2026-11-21T14:33:00-05:00",
-      "expires_utc": "2026-11-21T15:30:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.abbd2a5efa0dc66cbc15ee71bf48ce1a3aee1310.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "issued_utc": "2026-11-21T14:32:00-08:00",
+      "effective_utc": "2026-11-21T14:32:00-08:00",
+      "expires_utc": "2026-11-22T06:45:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e505a34bc25d4998aa2c3fcfc53c1517e878d677.003.2",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cf3ef7b560fc1df45b5251d5d1c411a194d493fe.002.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Coastal Flood Advisory",
+      "area": "Coastal North Bay Including Point Reyes National Seashore; San Francisco Peninsula Coast; Northern Monterey Bay; Southern Monterey Bay and Big Sur Coast",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T14:30:00-08:00",
+      "effective_utc": "2026-11-21T14:30:00-08:00",
+      "expires_utc": "2026-11-22T12:00:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cf3ef7b560fc1df45b5251d5d1c411a194d493fe.002.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cf3ef7b560fc1df45b5251d5d1c411a194d493fe.001.2",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Coastal Flood Advisory",
+      "area": "San Francisco; North Bay Interior Valleys; San Francisco Bay Shoreline",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T14:30:00-08:00",
+      "effective_utc": "2026-11-21T14:30:00-08:00",
+      "expires_utc": "2026-11-22T12:00:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cf3ef7b560fc1df45b5251d5d1c411a194d493fe.001.2",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cf3ef7b560fc1df45b5251d5d1c411a194d493fe.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Coastal Flood Warning",
+      "area": "San Francisco; North Bay Interior Valleys; San Francisco Bay Shoreline",
+      "severity": "Severe",
+      "issued_utc": "2026-11-21T14:30:00-08:00",
+      "effective_utc": "2026-11-21T14:30:00-08:00",
+      "expires_utc": "2026-11-22T12:00:00-08:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cf3ef7b560fc1df45b5251d5d1c411a194d493fe.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.58004ac8300c86a5dbf811a8ec832afb4cbc663e.003.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Gale Warning",
+      "area": "Bering Sea Offshore 171W to 180 and North of 56N",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T14:25:00-09:00",
+      "effective_utc": "2026-11-21T14:25:00-09:00",
+      "expires_utc": "2026-11-22T05:30:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.58004ac8300c86a5dbf811a8ec832afb4cbc663e.003.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.58004ac8300c86a5dbf811a8ec832afb4cbc663e.004.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Gale Warning",
+      "area": "Bering Sea Offshore 171W to 180 and South of 56N",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T14:25:00-09:00",
+      "effective_utc": "2026-11-21T14:25:00-09:00",
+      "expires_utc": "2026-11-22T05:30:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.58004ac8300c86a5dbf811a8ec832afb4cbc663e.004.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.58004ac8300c86a5dbf811a8ec832afb4cbc663e.005.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Gale Warning",
+      "area": "Bering Sea Offshore East of 171W",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T14:25:00-09:00",
+      "effective_utc": "2026-11-21T14:25:00-09:00",
+      "expires_utc": "2026-11-22T05:30:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.58004ac8300c86a5dbf811a8ec832afb4cbc663e.005.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.58004ac8300c86a5dbf811a8ec832afb4cbc663e.002.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Gale Warning",
+      "area": "Bering Sea Offshore  West of 180 and East of the International Date Line",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T14:25:00-09:00",
+      "effective_utc": "2026-11-21T14:25:00-09:00",
+      "expires_utc": "2026-11-22T05:30:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.58004ac8300c86a5dbf811a8ec832afb4cbc663e.002.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e0ecaa1319c8312699bc280da5fcb72882df06ee.006.1",
@@ -708,7 +2068,7 @@
       "effective_utc": "2026-11-21T14:25:00-05:00",
       "expires_utc": "2026-11-22T03:30:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e0ecaa1319c8312699bc280da5fcb72882df06ee.006.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e0ecaa1319c8312699bc280da5fcb72882df06ee.004.1",
@@ -721,7 +2081,7 @@
       "effective_utc": "2026-11-21T14:25:00-05:00",
       "expires_utc": "2026-11-22T03:30:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e0ecaa1319c8312699bc280da5fcb72882df06ee.004.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e0ecaa1319c8312699bc280da5fcb72882df06ee.001.2",
@@ -734,7 +2094,7 @@
       "effective_utc": "2026-11-21T14:25:00-05:00",
       "expires_utc": "2026-11-22T03:30:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e0ecaa1319c8312699bc280da5fcb72882df06ee.001.2",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e0ecaa1319c8312699bc280da5fcb72882df06ee.005.1",
@@ -747,7 +2107,7 @@
       "effective_utc": "2026-11-21T14:25:00-05:00",
       "expires_utc": "2026-11-22T03:30:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e0ecaa1319c8312699bc280da5fcb72882df06ee.005.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e0ecaa1319c8312699bc280da5fcb72882df06ee.002.1",
@@ -760,7 +2120,7 @@
       "effective_utc": "2026-11-21T14:25:00-05:00",
       "expires_utc": "2026-11-22T03:30:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e0ecaa1319c8312699bc280da5fcb72882df06ee.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e0ecaa1319c8312699bc280da5fcb72882df06ee.001.1",
@@ -773,7 +2133,7 @@
       "effective_utc": "2026-11-21T14:25:00-05:00",
       "expires_utc": "2026-11-22T03:30:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e0ecaa1319c8312699bc280da5fcb72882df06ee.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e0ecaa1319c8312699bc280da5fcb72882df06ee.003.1",
@@ -786,7 +2146,7 @@
       "effective_utc": "2026-11-21T14:25:00-05:00",
       "expires_utc": "2026-11-22T03:30:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e0ecaa1319c8312699bc280da5fcb72882df06ee.003.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "aka2026xbnyce",
@@ -798,7 +2158,7 @@
       "source_updated_utc": "2026-11-21T14:28:25.165000+00:00",
       "magnitude": 1,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbnyce",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "aka2026xbnwuh",
@@ -810,7 +2170,33 @@
       "source_updated_utc": "2026-11-21T14:25:04.393000+00:00",
       "magnitude": 1.3,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbnwuh",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d54245d589d7c36a5cefdeb5b7638e0fc697c51a.002.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Wind Advisory",
+      "area": "Eastern Alaska Range North of Trims Camp",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T14:23:00-09:00",
+      "effective_utc": "2026-11-21T14:23:00-09:00",
+      "expires_utc": "2026-11-22T03:00:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d54245d589d7c36a5cefdeb5b7638e0fc697c51a.002.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d54245d589d7c36a5cefdeb5b7638e0fc697c51a.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Wind Advisory",
+      "area": "Northern Denali Borough",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T14:23:00-09:00",
+      "effective_utc": "2026-11-21T14:23:00-09:00",
+      "expires_utc": "2026-11-22T03:00:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d54245d589d7c36a5cefdeb5b7638e0fc697c51a.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "ci41364495",
@@ -822,20 +2208,7 @@
       "source_updated_utc": "2026-11-21T14:26:29.471000+00:00",
       "magnitude": 1.62,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364495",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0277d240dff03b0e2f5ac11dc4accff7b9aff3dd.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Whitefish Bay (U.S. Portion)/Whitefish Point to Point Iroquois MI",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T14:22:00-05:00",
-      "effective_utc": "2026-11-21T14:22:00-05:00",
-      "expires_utc": "2026-11-21T21:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0277d240dff03b0e2f5ac11dc4accff7b9aff3dd.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0277d240dff03b0e2f5ac11dc4accff7b9aff3dd.003.1",
@@ -848,7 +2221,20 @@
       "effective_utc": "2026-11-21T14:22:00-05:00",
       "expires_utc": "2026-11-21T19:00:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0277d240dff03b0e2f5ac11dc4accff7b9aff3dd.003.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0277d240dff03b0e2f5ac11dc4accff7b9aff3dd.001.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Small Craft Advisory",
+      "area": "Whitefish Bay (U.S. Portion)/Whitefish Point to Point Iroquois MI",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T14:22:00-05:00",
+      "effective_utc": "2026-11-21T14:22:00-05:00",
+      "expires_utc": "2026-11-21T21:00:00-05:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0277d240dff03b0e2f5ac11dc4accff7b9aff3dd.001.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0277d240dff03b0e2f5ac11dc4accff7b9aff3dd.002.1",
@@ -861,7 +2247,7 @@
       "effective_utc": "2026-11-21T14:22:00-05:00",
       "expires_utc": "2026-11-22T01:00:00-05:00",
       "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0277d240dff03b0e2f5ac11dc4accff7b9aff3dd.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
       "id": "ci41364487",
@@ -873,7 +2259,7 @@
       "source_updated_utc": "2026-11-21T14:53:41.889000+00:00",
       "magnitude": 1.82,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364487",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
       "id": "ci41364479",
@@ -885,1651 +2271,267 @@
       "source_updated_utc": "2026-11-21T14:21:40.131000+00:00",
       "magnitude": 0.88,
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364479",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "retrieved_utc": "2026-11-21T23:58:43.525840+00:00"
     },
     {
-      "id": "ci41364471",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 3.3 - 10 km SSE of San Pedro, CA",
-      "area": "10 km SSE of San Pedro, CA",
-      "observed_utc": "2026-11-21T14:09:32.280000+00:00",
-      "source_updated_utc": "2026-11-21T19:05:56.452000+00:00",
-      "magnitude": 3.31,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364471",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "nc75469877",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 0.6 - 6 km NW of The Geysers, CA",
-      "area": "6 km NW of The Geysers, CA",
-      "observed_utc": "2026-11-21T14:03:08.540000+00:00",
-      "source_updated_utc": "2026-11-21T14:04:44.610000+00:00",
-      "magnitude": 0.6,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469877",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.570c97808765c9f2dc577bf25dbee8aaa4e311b0.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Flood Warning",
-      "area": "Lake, FL; Volusia, FL",
-      "severity": "Severe",
-      "issued_utc": "2026-11-21T14:02:00-05:00",
-      "effective_utc": "2026-11-21T14:02:00-05:00",
-      "expires_utc": "2026-11-21T23:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.570c97808765c9f2dc577bf25dbee8aaa4e311b0.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ba8e1750ce598c894d976e9b755ba4b347caab8d.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Flood Warning",
-      "area": "Lake, FL; Volusia, FL",
-      "severity": "Severe",
-      "issued_utc": "2026-11-21T13:59:00-05:00",
-      "effective_utc": "2026-11-21T13:59:00-05:00",
-      "expires_utc": "2026-11-21T23:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ba8e1750ce598c894d976e9b755ba4b347caab8d.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "hv75074172",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.9 - 5 km SSW of Pāhala, Hawaii",
-      "area": "5 km SSW of Pāhala, Hawaii",
-      "observed_utc": "2026-11-21T13:55:03.150000+00:00",
-      "source_updated_utc": "2026-11-21T13:58:26.860000+00:00",
-      "magnitude": 1.87,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75074172",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.41c6358dd0ce92693ed4455b06c4aeadee642d0e.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Flood Warning",
-      "area": "Seminole, FL",
-      "severity": "Severe",
-      "issued_utc": "2026-11-21T13:55:00-05:00",
-      "effective_utc": "2026-11-21T13:55:00-05:00",
-      "expires_utc": "2026-11-21T23:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.41c6358dd0ce92693ed4455b06c4aeadee642d0e.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5a6ae1079ff562eb5ce0e63b076d688829ebaea1.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Flood Warning",
-      "area": "Seminole, FL",
-      "severity": "Severe",
-      "issued_utc": "2026-11-21T13:52:00-05:00",
-      "effective_utc": "2026-11-21T13:52:00-05:00",
-      "expires_utc": "2026-11-21T23:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5a6ae1079ff562eb5ce0e63b076d688829ebaea1.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.27bb99746a0addd53b2263f3266809e73bc3c158.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Flood Warning",
-      "area": "Brevard, FL",
-      "severity": "Severe",
-      "issued_utc": "2026-11-21T13:48:00-05:00",
-      "effective_utc": "2026-11-21T13:48:00-05:00",
-      "expires_utc": "2026-11-21T23:15:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.27bb99746a0addd53b2263f3266809e73bc3c158.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "aka2026xbmoqi",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.8 - 51 km W of Anchor Point, Alaska",
-      "area": "51 km W of Anchor Point, Alaska",
-      "observed_utc": "2026-11-21T13:44:26.917000+00:00",
-      "source_updated_utc": "2026-11-21T13:46:30.361000+00:00",
-      "magnitude": 1.8,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbmoqi",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "aka2026xblysq",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 4.2 - 200 km S of Akhiok, Alaska",
-      "area": "200 km S of Akhiok, Alaska",
-      "observed_utc": "2026-11-21T13:26:03.324000+00:00",
-      "source_updated_utc": "2026-11-21T15:04:42.040000+00:00",
-      "magnitude": 4.2,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xblysq",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.364258fde6c305e9c19895cbedd09fe935a318f8.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Special Marine Warning",
-      "area": "Coastal waters from Jupiter Inlet to Deerfield Beach FL out 20 NM; Coastal waters from Deerfield Beach to Ocean Reef FL out 20 NM; Waters from Jupiter Inlet to Deerfield Beach FL from 20 to 60 NM; Waters from Deerfield Beach to Ocean Reef FL from 20 to 60 NM excluding the territorial waters of Bahamas",
-      "severity": "Severe",
-      "issued_utc": "2026-11-21T13:26:00-05:00",
-      "effective_utc": "2026-11-21T13:26:00-05:00",
-      "expires_utc": "2026-11-21T15:30:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.364258fde6c305e9c19895cbedd09fe935a318f8.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.099a5a8c4baf4de88d9b61d6d031962541b42f28.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Special Marine Warning",
-      "area": "Coastal waters from Chokoloskee to Bonita Beach FL out 20 NM; Coastal waters from East Cape Sable to Chokoloskee FL out 20 NM; Waters from Chokoloskee to Bonita Beach FL from 20 to 60 NM",
-      "severity": "Severe",
-      "issued_utc": "2026-11-21T13:24:00-05:00",
-      "effective_utc": "2026-11-21T13:24:00-05:00",
-      "expires_utc": "2026-11-21T15:30:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.099a5a8c4baf4de88d9b61d6d031962541b42f28.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.945c7c06d1c5893b02a8c95a23dac6736170131f.001.2",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "High Surf Advisory",
-      "area": "Hatteras Island",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T13:18:00-05:00",
-      "effective_utc": "2026-11-21T13:18:00-05:00",
-      "expires_utc": "2026-11-22T06:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.945c7c06d1c5893b02a8c95a23dac6736170131f.001.2",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.945c7c06d1c5893b02a8c95a23dac6736170131f.002.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "High Surf Advisory",
-      "area": "East Carteret; Ocracoke Island",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T13:18:00-05:00",
-      "effective_utc": "2026-11-21T13:18:00-05:00",
-      "expires_utc": "2026-11-22T06:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.945c7c06d1c5893b02a8c95a23dac6736170131f.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9bafa7c4f2df75502ab525d7cc974dc3a1489b90.003.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "High Surf Advisory",
-      "area": "Charleston",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T13:18:00-05:00",
-      "effective_utc": "2026-11-21T13:18:00-05:00",
-      "expires_utc": "2026-11-21T21:30:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9bafa7c4f2df75502ab525d7cc974dc3a1489b90.003.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9bafa7c4f2df75502ab525d7cc974dc3a1489b90.002.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "High Surf Advisory",
-      "area": "Beaufort; Coastal Colleton; Coastal Jasper",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T13:18:00-05:00",
-      "effective_utc": "2026-11-21T13:18:00-05:00",
-      "expires_utc": "2026-11-21T19:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9bafa7c4f2df75502ab525d7cc974dc3a1489b90.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.945c7c06d1c5893b02a8c95a23dac6736170131f.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Coastal Flood Advisory",
-      "area": "Hatteras Island",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T13:18:00-05:00",
-      "effective_utc": "2026-11-21T13:18:00-05:00",
-      "expires_utc": "2026-11-22T06:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.945c7c06d1c5893b02a8c95a23dac6736170131f.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d727c4647426064fe185d391b6aced232d48e3ad.001.2",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Coastal waters from South Santee River to Edisto Beach SC out 20 NM",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T13:15:00-05:00",
-      "effective_utc": "2026-11-21T13:15:00-05:00",
-      "expires_utc": "2026-11-21T21:15:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d727c4647426064fe185d391b6aced232d48e3ad.001.2",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d727c4647426064fe185d391b6aced232d48e3ad.007.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Charleston Harbor",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T13:15:00-05:00",
-      "effective_utc": "2026-11-21T13:15:00-05:00",
-      "expires_utc": "2026-11-21T21:15:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d727c4647426064fe185d391b6aced232d48e3ad.007.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d727c4647426064fe185d391b6aced232d48e3ad.002.2",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Coastal waters from Edisto Beach SC to Savannah GA out 20 NM",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T13:15:00-05:00",
-      "effective_utc": "2026-11-21T13:15:00-05:00",
-      "expires_utc": "2026-11-21T21:15:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d727c4647426064fe185d391b6aced232d48e3ad.002.2",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d727c4647426064fe185d391b6aced232d48e3ad.003.2",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Coastal waters from Savannah GA to Altamaha Sound GA out 20 nm, including Grays Reef National Marine Sanctuary",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T13:15:00-05:00",
-      "effective_utc": "2026-11-21T13:15:00-05:00",
-      "expires_utc": "2026-11-21T21:15:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d727c4647426064fe185d391b6aced232d48e3ad.003.2",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d727c4647426064fe185d391b6aced232d48e3ad.004.2",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Waters from Savannah GA to Altamaha Sound GA extending from 20 to 60 NM",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T13:15:00-05:00",
-      "effective_utc": "2026-11-21T13:15:00-05:00",
-      "expires_utc": "2026-11-21T21:15:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d727c4647426064fe185d391b6aced232d48e3ad.004.2",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8c7371171f519cb09dd4c8a54e2796f3b49b4b46.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Flood Advisory",
-      "area": "Canovanas, PR; Carolina, PR; Loiza, PR; Rio Grande, PR",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T13:15:00-04:00",
-      "effective_utc": "2026-11-21T13:15:00-04:00",
-      "expires_utc": "2026-11-21T16:15:00-04:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8c7371171f519cb09dd4c8a54e2796f3b49b4b46.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "nc75469867",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.6 - 11 km NW of Pinnacles, CA",
-      "area": "11 km NW of Pinnacles, CA",
-      "observed_utc": "2026-11-21T13:14:27.310000+00:00",
-      "source_updated_utc": "2026-11-21T13:16:05.876000+00:00",
-      "magnitude": 1.57,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469867",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.712b1d9ad61158627c5b7133ccbff9311b3e0405.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Waters from Altamaha Sound GA to Fernandina Beach FL from 20 to 60 NM; Waters from Fernandina Beach to St. Augustine FL from 20 to 60 NM",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T13:12:00-05:00",
-      "effective_utc": "2026-11-21T13:12:00-05:00",
-      "expires_utc": "2026-11-22T04:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.712b1d9ad61158627c5b7133ccbff9311b3e0405.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.712b1d9ad61158627c5b7133ccbff9311b3e0405.004.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Coastal waters from St. Augustine to Flagler Beach FL out 20 NM",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T13:12:00-05:00",
-      "effective_utc": "2026-11-21T13:12:00-05:00",
-      "expires_utc": "2026-11-22T02:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.712b1d9ad61158627c5b7133ccbff9311b3e0405.004.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.712b1d9ad61158627c5b7133ccbff9311b3e0405.003.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Coastal waters from Altamaha Sound to Fernandina Beach FL out 20 NM; Coastal waters from Fernandina Beach to St. Augustine FL out 20 NM",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T13:12:00-05:00",
-      "effective_utc": "2026-11-21T13:12:00-05:00",
-      "expires_utc": "2026-11-22T02:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.712b1d9ad61158627c5b7133ccbff9311b3e0405.003.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.712b1d9ad61158627c5b7133ccbff9311b3e0405.002.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Waters from St. Augustine to Flagler Beach FL from 20 to 60 NM",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T13:12:00-05:00",
-      "effective_utc": "2026-11-21T13:12:00-05:00",
-      "expires_utc": "2026-11-22T04:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.712b1d9ad61158627c5b7133ccbff9311b3e0405.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "aka2026xbllzq",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.4 - 68 km ENE of McCarthy, Alaska",
-      "area": "68 km ENE of McCarthy, Alaska",
-      "observed_utc": "2026-11-21T13:11:00.668000+00:00",
-      "source_updated_utc": "2026-11-21T13:12:24.203000+00:00",
-      "magnitude": 1.4,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbllzq",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c1ae8f94e821fd9f18ccd31d1438759d2f0f8fce.001.2",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "High Surf Advisory",
-      "area": "Coastal Flagler",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T13:11:00-05:00",
-      "effective_utc": "2026-11-21T13:11:00-05:00",
-      "expires_utc": "2026-11-21T22:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c1ae8f94e821fd9f18ccd31d1438759d2f0f8fce.001.2",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c1ae8f94e821fd9f18ccd31d1438759d2f0f8fce.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Coastal Flood Warning",
-      "area": "Coastal Flagler",
-      "severity": "Severe",
-      "issued_utc": "2026-11-21T13:11:00-05:00",
-      "effective_utc": "2026-11-21T13:11:00-05:00",
-      "expires_utc": "2026-11-21T22:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c1ae8f94e821fd9f18ccd31d1438759d2f0f8fce.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c1ae8f94e821fd9f18ccd31d1438759d2f0f8fce.003.3",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Rip Current Statement",
-      "area": "Coastal Duval",
-      "severity": "Moderate",
-      "issued_utc": "2026-11-21T13:11:00-05:00",
-      "effective_utc": "2026-11-21T13:11:00-05:00",
-      "expires_utc": "2026-11-21T22:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c1ae8f94e821fd9f18ccd31d1438759d2f0f8fce.003.3",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c1ae8f94e821fd9f18ccd31d1438759d2f0f8fce.003.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Coastal Flood Advisory",
-      "area": "Coastal Duval",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T13:11:00-05:00",
-      "effective_utc": "2026-11-21T13:11:00-05:00",
-      "expires_utc": "2026-11-21T22:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c1ae8f94e821fd9f18ccd31d1438759d2f0f8fce.003.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c1ae8f94e821fd9f18ccd31d1438759d2f0f8fce.003.2",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "High Surf Advisory",
-      "area": "Coastal Duval",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T13:11:00-05:00",
-      "effective_utc": "2026-11-21T13:11:00-05:00",
-      "expires_utc": "2026-11-21T22:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c1ae8f94e821fd9f18ccd31d1438759d2f0f8fce.003.2",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c1ae8f94e821fd9f18ccd31d1438759d2f0f8fce.002.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Coastal Flood Warning",
-      "area": "Inland Flagler; Eastern Clay; Eastern Putnam; South Central Duval; Western St. Johns",
-      "severity": "Severe",
-      "issued_utc": "2026-11-21T13:11:00-05:00",
-      "effective_utc": "2026-11-21T13:11:00-05:00",
-      "expires_utc": "2026-11-21T22:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c1ae8f94e821fd9f18ccd31d1438759d2f0f8fce.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c1ae8f94e821fd9f18ccd31d1438759d2f0f8fce.004.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "High Surf Advisory",
-      "area": "Coastal Nassau; Northeast Coastal St. Johns; Southeast Coastal St. Johns; Coastal Glynn; Coastal Camden",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T13:11:00-05:00",
-      "effective_utc": "2026-11-21T13:11:00-05:00",
-      "expires_utc": "2026-11-21T22:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c1ae8f94e821fd9f18ccd31d1438759d2f0f8fce.004.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c1ae8f94e821fd9f18ccd31d1438759d2f0f8fce.001.3",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Rip Current Statement",
-      "area": "Coastal Flagler",
-      "severity": "Moderate",
-      "issued_utc": "2026-11-21T13:11:00-05:00",
-      "effective_utc": "2026-11-21T13:11:00-05:00",
-      "expires_utc": "2026-11-21T22:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c1ae8f94e821fd9f18ccd31d1438759d2f0f8fce.001.3",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c1ae8f94e821fd9f18ccd31d1438759d2f0f8fce.004.2",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Rip Current Statement",
-      "area": "Coastal Nassau; Northeast Coastal St. Johns; Southeast Coastal St. Johns; Coastal Glynn; Coastal Camden",
-      "severity": "Moderate",
-      "issued_utc": "2026-11-21T13:11:00-05:00",
-      "effective_utc": "2026-11-21T13:11:00-05:00",
-      "expires_utc": "2026-11-21T22:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c1ae8f94e821fd9f18ccd31d1438759d2f0f8fce.004.2",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "nc75469862",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 2.1 - 10 km NW of Pinnacles, CA",
-      "area": "10 km NW of Pinnacles, CA",
-      "observed_utc": "2026-11-21T13:09:41.290000+00:00",
-      "source_updated_utc": "2026-11-21T13:32:25.916000+00:00",
-      "magnitude": 2.1,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469862",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.592638eb591e59b01d8ed6243c00be0de10419ea.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Gale Watch",
-      "area": "Waters from Eastport ME to Schoodic Point ME from 25 to 60 NM or the Hague Line; Waters from Schoodic Point ME to Stonington ME from 25 to 60 NM",
-      "severity": "Moderate",
-      "issued_utc": "2026-11-21T13:08:00-05:00",
-      "effective_utc": "2026-11-21T13:08:00-05:00",
-      "expires_utc": "2026-11-22T01:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.592638eb591e59b01d8ed6243c00be0de10419ea.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "ci41364455",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 0.4 - 12 km SSE of Anza, CA",
-      "area": "12 km SSE of Anza, CA",
-      "observed_utc": "2026-11-21T12:58:11.130000+00:00",
-      "source_updated_utc": "2026-11-21T13:01:32.829000+00:00",
-      "magnitude": 0.4,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364455",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "ci41364447",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 0.8 - 12 km SSE of Anza, CA",
-      "area": "12 km SSE of Anza, CA",
-      "observed_utc": "2026-11-21T12:56:44.800000+00:00",
-      "source_updated_utc": "2026-11-21T13:00:16.001000+00:00",
-      "magnitude": 0.79,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364447",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71396117db3956454de7aafcdb670d096b961b11.002.1",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.037.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
       "title": "Gale Warning",
-      "area": "Waters from Ocracoke Inlet to Cape Lookout NC from 20 to 60 NM; Waters from Cape Lookout  to Surf City NC from 20 to 60 NM",
+      "area": "Saint Matthew Island Waters",
       "severity": "Moderate",
-      "issued_utc": "2026-11-21T12:56:00-05:00",
-      "effective_utc": "2026-11-21T12:56:00-05:00",
-      "expires_utc": "2026-11-22T01:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71396117db3956454de7aafcdb670d096b961b11.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.037.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71396117db3956454de7aafcdb670d096b961b11.003.1",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.022.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
       "title": "Small Craft Advisory",
-      "area": "S of Oregon Inlet NC to Cape Hatteras NC out to 20 NM; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM",
+      "area": "Seguam to Adak Bering Side out to 15 NM",
       "severity": "Minor",
-      "issued_utc": "2026-11-21T12:56:00-05:00",
-      "effective_utc": "2026-11-21T12:56:00-05:00",
-      "expires_utc": "2026-11-22T04:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71396117db3956454de7aafcdb670d096b961b11.003.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.022.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71396117db3956454de7aafcdb670d096b961b11.004.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "S of Currituck Beach Light NC to Oregon Inlet NC out to 20 NM",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T12:56:00-05:00",
-      "effective_utc": "2026-11-21T12:56:00-05:00",
-      "expires_utc": "2026-11-22T04:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71396117db3956454de7aafcdb670d096b961b11.004.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71396117db3956454de7aafcdb670d096b961b11.005.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "S of Ocracoke Inlet NC to Cape Lookout NC out to 20 NM; S of Cape Lookout NC to Surf City NC out to 20 NM",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T12:56:00-05:00",
-      "effective_utc": "2026-11-21T12:56:00-05:00",
-      "expires_utc": "2026-11-22T04:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71396117db3956454de7aafcdb670d096b961b11.005.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71396117db3956454de7aafcdb670d096b961b11.001.1",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.023.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
       "title": "Gale Warning",
-      "area": "Waters from Oregon Inlet to Cape Hatteras NC from 20 to 60 NM; Waters from Cape Hatteras to Ocracoke Inlet NC from 20 to 60 NM",
+      "area": "Seguam to Adak Bering Side from 15 to 85 NM",
       "severity": "Moderate",
-      "issued_utc": "2026-11-21T12:56:00-05:00",
-      "effective_utc": "2026-11-21T12:56:00-05:00",
-      "expires_utc": "2026-11-22T04:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71396117db3956454de7aafcdb670d096b961b11.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.023.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
-      "id": "nc75469852",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.1 - 14 km SSW of Ridgemark, CA",
-      "area": "14 km SSW of Ridgemark, CA",
-      "observed_utc": "2026-11-21T12:52:23.190000+00:00",
-      "source_updated_utc": "2026-11-21T12:53:59.886000+00:00",
-      "magnitude": 1.05,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469852",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "aka2026xbkrjt",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.9 - 70 km WNW of Ninilchik, Alaska",
-      "area": "70 km WNW of Ninilchik, Alaska",
-      "observed_utc": "2026-11-21T12:47:48.260000+00:00",
-      "source_updated_utc": "2026-11-21T12:51:35.352000+00:00",
-      "magnitude": 1.9,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbkrjt",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.645b1198d35f80d7e445f00684368988bbceb8f2.002.1",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.003.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
       "title": "Small Craft Advisory",
-      "area": "Coastal waters from Sandy Hook to Manasquan Inlet NJ out 20 NM; Coastal waters from Manasquan Inlet to Little Egg Inlet NJ out 20 NM; Coastal waters from Little Egg Inlet to Great Egg Inlet NJ out 20 NM; Coastal waters from Great Egg Inlet to Cape May NJ out 20 NM",
+      "area": "Sitkinak to Castle Cape from 15 to 100 NM",
       "severity": "Minor",
-      "issued_utc": "2026-11-21T12:43:00-05:00",
-      "effective_utc": "2026-11-21T12:43:00-05:00",
-      "expires_utc": "2026-11-22T06:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.645b1198d35f80d7e445f00684368988bbceb8f2.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.003.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.645b1198d35f80d7e445f00684368988bbceb8f2.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Coastal waters from Cape May NJ to Cape Henlopen DE out 20 NM; Coastal waters from Cape Henlopen to Fenwick Island DE out 20 NM",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T12:43:00-05:00",
-      "effective_utc": "2026-11-21T12:43:00-05:00",
-      "expires_utc": "2026-11-22T06:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.645b1198d35f80d7e445f00684368988bbceb8f2.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "ci41364439",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 2.6 - 6 km NNW of Delta, B.C., MX",
-      "area": "6 km NNW of Delta, B.C., MX",
-      "observed_utc": "2026-11-21T12:41:20.670000+00:00",
-      "source_updated_utc": "2026-11-21T12:51:45.820000+00:00",
-      "magnitude": 2.62,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364439",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f56ad5c17e1802870b33066fdb03194087fc4ecf.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Coastal Flood Advisory",
-      "area": "Coastal Aransas; Coastal Kleberg; Coastal Nueces; Coastal San Patricio; Aransas Islands; Coastal Refugio; Coastal Calhoun; Kleberg Islands; Nueces Islands; Calhoun Islands",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T12:27:00-06:00",
-      "effective_utc": "2026-11-21T12:27:00-06:00",
-      "expires_utc": "2026-11-22T09:00:00-06:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f56ad5c17e1802870b33066fdb03194087fc4ecf.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fa189b2289ea2f8b7ac0eef4c8e17b5594f22396.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "High Surf Advisory",
-      "area": "Coastal Horry; Coastal Georgetown",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T12:27:00-05:00",
-      "effective_utc": "2026-11-21T12:27:00-05:00",
-      "expires_utc": "2026-11-22T04:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fa189b2289ea2f8b7ac0eef4c8e17b5594f22396.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fa189b2289ea2f8b7ac0eef4c8e17b5594f22396.002.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "High Surf Advisory",
-      "area": "Coastal Pender; Coastal New Hanover",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T12:27:00-05:00",
-      "effective_utc": "2026-11-21T12:27:00-05:00",
-      "expires_utc": "2026-11-22T04:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fa189b2289ea2f8b7ac0eef4c8e17b5594f22396.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.05468e2997c5a671a70af6ba702dc05678ad4481.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Special Weather Statement",
-      "area": "Teller County/Rampart Range above 7500fT/Pike's Peak Between 7500 And 11000 Ft; Pikes Peak above 11000 Ft",
-      "severity": "Moderate",
-      "issued_utc": "2026-11-21T12:25:00-07:00",
-      "effective_utc": "2026-11-21T12:25:00-07:00",
-      "expires_utc": "2026-11-21T15:00:00-07:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.05468e2997c5a671a70af6ba702dc05678ad4481.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "aka2026xbjuzr",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 0.5 - 62 km WNW of Tyonek, Alaska",
-      "area": "62 km WNW of Tyonek, Alaska",
-      "observed_utc": "2026-11-21T12:21:24.878000+00:00",
-      "source_updated_utc": "2026-11-21T12:24:14.646000+00:00",
-      "magnitude": 0.5,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbjuzr",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "nc75469832",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.7 - 3 km E of The Geysers, CA",
-      "area": "3 km E of The Geysers, CA",
-      "observed_utc": "2026-11-21T12:19:07.530000+00:00",
-      "source_updated_utc": "2026-11-21T12:20:43.712000+00:00",
-      "magnitude": 1.72,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469832",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "nc75469827",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 0.8 - 3 km W of Cobb, CA",
-      "area": "3 km W of Cobb, CA",
-      "observed_utc": "2026-11-21T12:12:52.210000+00:00",
-      "source_updated_utc": "2026-11-21T12:14:28.480000+00:00",
-      "magnitude": 0.76,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469827",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "hv75074142",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 2.3 - 4 km N of Pāhala, Hawaii",
-      "area": "4 km N of Pāhala, Hawaii",
-      "observed_utc": "2026-11-21T12:06:11.900000+00:00",
-      "source_updated_utc": "2026-11-21T12:10:47.610000+00:00",
-      "magnitude": 2.34,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75074142",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "aka2026xbjgoo",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.7 - 69 km ENE of Pedro Bay, Alaska",
-      "area": "69 km ENE of Pedro Bay, Alaska",
-      "observed_utc": "2026-11-21T12:04:36.082000+00:00",
-      "source_updated_utc": "2026-11-21T12:08:54.340000+00:00",
-      "magnitude": 1.7,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbjgoo",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "nc75469822",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.4 - 13 km N of Morgan Hill, CA",
-      "area": "13 km N of Morgan Hill, CA",
-      "observed_utc": "2026-11-21T11:54:58.800000+00:00",
-      "source_updated_utc": "2026-11-21T11:56:34.382000+00:00",
-      "magnitude": 1.44,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469822",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "nc75469817",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.4 - 14 km NNE of Chualar, CA",
-      "area": "14 km NNE of Chualar, CA",
-      "observed_utc": "2026-11-21T11:51:20.630000+00:00",
-      "source_updated_utc": "2026-11-21T11:52:59.865000+00:00",
-      "magnitude": 1.37,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469817",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.93788bcdb14d18017d15310a8441eda3b113ffe6.002.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Winter Weather Advisory",
-      "area": "Waterville Plateau; Central Chelan County; Western Chelan County",
-      "severity": "Moderate",
-      "issued_utc": "2026-11-21T11:38:00-08:00",
-      "effective_utc": "2026-11-21T11:38:00-08:00",
-      "expires_utc": "2026-11-22T00:45:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.93788bcdb14d18017d15310a8441eda3b113ffe6.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.93788bcdb14d18017d15310a8441eda3b113ffe6.003.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Winter Weather Advisory",
-      "area": "Western Okanogan County",
-      "severity": "Moderate",
-      "issued_utc": "2026-11-21T11:38:00-08:00",
-      "effective_utc": "2026-11-21T11:38:00-08:00",
-      "expires_utc": "2026-11-22T00:45:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.93788bcdb14d18017d15310a8441eda3b113ffe6.003.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.93788bcdb14d18017d15310a8441eda3b113ffe6.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Winter Weather Advisory",
-      "area": "Wenatchee Area",
-      "severity": "Moderate",
-      "issued_utc": "2026-11-21T11:38:00-08:00",
-      "effective_utc": "2026-11-21T11:38:00-08:00",
-      "expires_utc": "2026-11-22T00:45:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.93788bcdb14d18017d15310a8441eda3b113ffe6.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4f656e801c8d5876859715ad9f4140e444a03568.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Coastal Flood Watch",
-      "area": "South Central Oregon Coast; Curry County Coast",
-      "severity": "Moderate",
-      "issued_utc": "2026-11-21T11:36:00-08:00",
-      "effective_utc": "2026-11-21T11:36:00-08:00",
-      "expires_utc": "2026-11-22T04:00:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4f656e801c8d5876859715ad9f4140e444a03568.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "nc75469802",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.1 - 1 km E of The Geysers, CA",
-      "area": "1 km E of The Geysers, CA",
-      "observed_utc": "2026-11-21T11:27:42.400000+00:00",
-      "source_updated_utc": "2026-11-21T11:29:19.520000+00:00",
-      "magnitude": 1.05,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469802",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.52550c1b367b218db1edf21639414355d4a19310.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "High Wind Watch",
-      "area": "South Central Oregon Coast; Curry County Coast",
-      "severity": "Severe",
-      "issued_utc": "2026-11-21T11:27:00-08:00",
-      "effective_utc": "2026-11-21T11:27:00-08:00",
-      "expires_utc": "2026-11-22T04:00:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.52550c1b367b218db1edf21639414355d4a19310.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "ci41364431",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.0 - 13 km NNE of Cabazon, CA",
-      "area": "13 km NNE of Cabazon, CA",
-      "observed_utc": "2026-11-21T11:25:11.580000+00:00",
-      "source_updated_utc": "2026-11-21T11:28:33.811000+00:00",
-      "magnitude": 1.04,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364431",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "aka2026xbhqei",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.9 - 24 km WSW of Manley Hot Springs, Alaska",
-      "area": "24 km WSW of Manley Hot Springs, Alaska",
-      "observed_utc": "2026-11-21T11:15:53.609000+00:00",
-      "source_updated_utc": "2026-11-21T11:17:53.741000+00:00",
-      "magnitude": 1.9,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbhqei",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "ci41364423",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.4 - 10 km SW of Salton City, CA",
-      "area": "10 km SW of Salton City, CA",
-      "observed_utc": "2026-11-21T11:13:54.080000+00:00",
-      "source_updated_utc": "2026-11-21T11:24:27.980000+00:00",
-      "magnitude": 1.44,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364423",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "aka2026xbhnha",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.9 - 124 km WNW of Yakutat, Alaska",
-      "area": "124 km WNW of Yakutat, Alaska",
-      "observed_utc": "2026-11-21T11:12:32.108000+00:00",
-      "source_updated_utc": "2026-11-21T11:13:55.700000+00:00",
-      "magnitude": 1.9,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbhnha",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.31896c1bd61bfc19ca6c64cb139d17cbb8c2b9b5.003.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Green Bay North of line from Cedar River MI to Rock Island Passage",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T11:10:00-05:00",
-      "effective_utc": "2026-11-21T11:10:00-05:00",
-      "expires_utc": "2026-11-21T19:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.31896c1bd61bfc19ca6c64cb139d17cbb8c2b9b5.003.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.31896c1bd61bfc19ca6c64cb139d17cbb8c2b9b5.002.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Munising to Grand Marais MI; Grand Marais to Whitefish Point MI",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T11:10:00-05:00",
-      "effective_utc": "2026-11-21T11:10:00-05:00",
-      "expires_utc": "2026-11-21T19:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.31896c1bd61bfc19ca6c64cb139d17cbb8c2b9b5.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.31896c1bd61bfc19ca6c64cb139d17cbb8c2b9b5.004.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Seul Choix Point to Point Detour MI; 5NM East of a line from Fairport MI to Rock Island Passage",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T11:10:00-05:00",
-      "effective_utc": "2026-11-21T11:10:00-05:00",
-      "expires_utc": "2026-11-21T23:15:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.31896c1bd61bfc19ca6c64cb139d17cbb8c2b9b5.004.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "nc75469787",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.1 - 6 km WNW of The Geysers, CA",
-      "area": "6 km WNW of The Geysers, CA",
-      "observed_utc": "2026-11-21T10:58:42.810000+00:00",
-      "source_updated_utc": "2026-11-21T11:00:21.472000+00:00",
-      "magnitude": 1.06,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469787",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a32c4fe18b98297ca45eb0a617a5a1a01343d0fe.002.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Coastal waters from Little River Inlet to Murrells Inlet SC out 20 NM; Coastal waters from Murrells Inlet to South Santee River SC out 20 NM",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T10:53:00-05:00",
-      "effective_utc": "2026-11-21T10:53:00-05:00",
-      "expires_utc": "2026-11-22T04:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a32c4fe18b98297ca45eb0a617a5a1a01343d0fe.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a32c4fe18b98297ca45eb0a617a5a1a01343d0fe.001.1",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.006.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
       "title": "Gale Warning",
-      "area": "Waters from Surf City NC to Little River Inlet SC from 20 to 60 NM; Waters from Little River Inlet SC to South Santee River SC from 20 to 60 NM",
+      "area": "Cape Tolstoi to Cape Sarichef out to 15 NM",
       "severity": "Moderate",
-      "issued_utc": "2026-11-21T10:53:00-05:00",
-      "effective_utc": "2026-11-21T10:53:00-05:00",
-      "expires_utc": "2026-11-22T04:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a32c4fe18b98297ca45eb0a617a5a1a01343d0fe.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.006.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a32c4fe18b98297ca45eb0a617a5a1a01343d0fe.003.1",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.011.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Coastal waters from Surf City to Cape Fear NC out 20 nm; Coastal waters from Cape Fear NC to Little River Inlet SC out 20 NM",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T10:53:00-05:00",
-      "effective_utc": "2026-11-21T10:53:00-05:00",
-      "expires_utc": "2026-11-22T04:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a32c4fe18b98297ca45eb0a617a5a1a01343d0fe.003.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "ci41364415",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 0.2 - 3 km WSW of Anza, CA",
-      "area": "3 km WSW of Anza, CA",
-      "observed_utc": "2026-11-21T10:52:54.790000+00:00",
-      "source_updated_utc": "2026-11-21T10:56:22.168000+00:00",
-      "magnitude": 0.24,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41364415",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "aka2026xbgqkq",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.9 - 27 km WSW of Tanacross, Alaska",
-      "area": "27 km WSW of Tanacross, Alaska",
-      "observed_utc": "2026-11-21T10:46:10.433000+00:00",
-      "source_updated_utc": "2026-11-21T10:47:50.003000+00:00",
-      "magnitude": 1.9,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbgqkq",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "us6000ucly",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 5.9 - 238 km SW of Yanglong, China",
-      "area": "238 km SW of Yanglong, China",
-      "observed_utc": "2026-11-21T10:45:33.230000+00:00",
-      "source_updated_utc": "2026-11-21T12:51:14.230000+00:00",
-      "magnitude": 5.9,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucly",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "aka2026xbggqi",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.7 - 15 km SSE of Eureka Roadhouse, Alaska",
-      "area": "15 km SSE of Eureka Roadhouse, Alaska",
-      "observed_utc": "2026-11-21T10:34:53.410000+00:00",
-      "source_updated_utc": "2026-11-21T10:36:39.364000+00:00",
-      "magnitude": 1.7,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbggqi",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "nc75469777",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.2 - 10 km WNW of Pinnacles, CA",
-      "area": "10 km WNW of Pinnacles, CA",
-      "observed_utc": "2026-11-21T10:24:28.410000+00:00",
-      "source_updated_utc": "2026-11-21T10:26:08.715000+00:00",
-      "magnitude": 1.23,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469777",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e21c61fe3368f215cbe1c511ddf2bf36428689dd.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Coastal Flood Warning",
-      "area": "San Francisco; North Bay Interior Valleys; San Francisco Bay Shoreline",
-      "severity": "Severe",
-      "issued_utc": "2026-11-21T10:24:00-08:00",
-      "effective_utc": "2026-11-21T10:24:00-08:00",
-      "expires_utc": "2026-11-21T18:30:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e21c61fe3368f215cbe1c511ddf2bf36428689dd.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e21c61fe3368f215cbe1c511ddf2bf36428689dd.002.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Coastal Flood Advisory",
-      "area": "Coastal North Bay Including Point Reyes National Seashore; San Francisco Peninsula Coast; Northern Monterey Bay; Southern Monterey Bay and Big Sur Coast",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T10:24:00-08:00",
-      "effective_utc": "2026-11-21T10:24:00-08:00",
-      "expires_utc": "2026-11-21T18:30:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e21c61fe3368f215cbe1c511ddf2bf36428689dd.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e21c61fe3368f215cbe1c511ddf2bf36428689dd.001.2",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Coastal Flood Advisory",
-      "area": "San Francisco; North Bay Interior Valleys; San Francisco Bay Shoreline",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T10:24:00-08:00",
-      "effective_utc": "2026-11-21T10:24:00-08:00",
-      "expires_utc": "2026-11-21T18:30:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e21c61fe3368f215cbe1c511ddf2bf36428689dd.001.2",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b42b61ff69bd4fec823dca9fc80c50a1071eedb3.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Green Bay south of line from  Cedar River to Rock Island Passage and north of a line from Oconto WI to Little Sturgeon Bay WI; Green Bay south of line from  Oconto WI to Little Sturgeon Bay WI",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T10:20:00-06:00",
-      "effective_utc": "2026-11-21T10:20:00-06:00",
-      "expires_utc": "2026-11-21T18:00:00-06:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b42b61ff69bd4fec823dca9fc80c50a1071eedb3.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b42b61ff69bd4fec823dca9fc80c50a1071eedb3.002.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Rock Island Passage to Sturgeon Bay WI; Sturgeon Bay to Two Rivers WI; Two Rivers to Sheboygan WI",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T10:20:00-06:00",
-      "effective_utc": "2026-11-21T10:20:00-06:00",
-      "expires_utc": "2026-11-21T18:30:00-06:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b42b61ff69bd4fec823dca9fc80c50a1071eedb3.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "nc75469772",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 0.7 - 11 km WNW of The Geysers, CA",
-      "area": "11 km WNW of The Geysers, CA",
-      "observed_utc": "2026-11-21T10:19:26.280000+00:00",
-      "source_updated_utc": "2026-11-21T10:21:05.489000+00:00",
-      "magnitude": 0.7,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469772",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c607c0504ffb746f88728eecfce546c3a64a67f7.002.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Winter Weather Advisory",
-      "area": "Southern Big Horn; Bighorn Canyon; Sheridan Foothills",
+      "title": "Gale Warning",
+      "area": "Nelson Lagoon to Unalga Pass from 15 to 70 NM",
       "severity": "Moderate",
-      "issued_utc": "2026-11-21T10:17:00-07:00",
-      "effective_utc": "2026-11-21T10:17:00-07:00",
-      "expires_utc": "2026-11-21T13:00:00-07:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c607c0504ffb746f88728eecfce546c3a64a67f7.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.011.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.867db13b9c5015860a52948c7d3c625026008aa4.002.1",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.012.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
-      "title": "Wind Advisory",
-      "area": "West Slopes Sacramento Mountains Below 7500 Feet; Sacramento Mountains Above 7500 Feet; East Slopes Sacramento Mountains Below 7500 Feet",
+      "title": "Gale Warning",
+      "area": "Unimak Pass",
       "severity": "Moderate",
-      "issued_utc": "2026-11-21T10:17:00-07:00",
-      "effective_utc": "2026-11-21T10:17:00-07:00",
-      "expires_utc": "2026-11-21T17:00:00-07:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.867db13b9c5015860a52948c7d3c625026008aa4.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.012.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.867db13b9c5015860a52948c7d3c625026008aa4.001.1",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.009.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
-      "title": "Freeze Warning",
-      "area": "Southern Gila Foothills/Mimbres Valley; Southwest Desert/Lower Gila River Valley; Lowlands of the Bootheel; Southwest Desert/Mimbres Basin; Eastern Black Range Foothills; Sierra County Lakes; Northern Dona Ana County; Otero Mesa; West Central Tularosa Basin/White Sands; East Central Tularosa Basin/Alamogordo; Southeast Tularosa Basin",
-      "severity": "Severe",
-      "issued_utc": "2026-11-21T10:17:00-07:00",
-      "effective_utc": "2026-11-21T10:17:00-07:00",
-      "expires_utc": "2026-11-21T22:15:00-07:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.867db13b9c5015860a52948c7d3c625026008aa4.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c5988fd49be3b25e877b2d504f5ac3ee43c0ea53.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Coastal Flood Statement",
-      "area": "Monroe Upper Keys; Monroe Middle Keys; Monroe Lower Keys",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T10:16:00-05:00",
-      "effective_utc": "2026-11-21T10:16:00-05:00",
-      "expires_utc": "2026-11-21T21:15:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c5988fd49be3b25e877b2d504f5ac3ee43c0ea53.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "aka2026xbfpbn",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.6 - 4 km NNE of Susitna North, Alaska",
-      "area": "4 km NNE of Susitna North, Alaska",
-      "observed_utc": "2026-11-21T10:14:37.997000+00:00",
-      "source_updated_utc": "2026-11-21T10:16:25.404000+00:00",
-      "magnitude": 1.6,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbfpbn",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.341ec74092be102957dd2438172c3fbb075fae03.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Air Quality Alert",
-      "area": "Marion",
-      "severity": "Unknown",
-      "issued_utc": "2026-11-21T10:13:00-05:00",
-      "effective_utc": "2026-11-21T10:13:00-05:00",
-      "expires_utc": "2026-11-21T22:15:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.341ec74092be102957dd2438172c3fbb075fae03.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "us6000uckx",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 4.4 - 36 km SSE of Jurm, Afghanistan",
-      "area": "36 km SSE of Jurm, Afghanistan",
-      "observed_utc": "2026-11-21T10:10:31.043000+00:00",
-      "source_updated_utc": "2026-11-21T10:43:33.040000+00:00",
-      "magnitude": 4.4,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000uckx",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "nc75469767",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.8 - 11 km WNW of The Geysers, CA",
-      "area": "11 km WNW of The Geysers, CA",
-      "observed_utc": "2026-11-21T10:09:45.210000+00:00",
-      "source_updated_utc": "2026-11-21T10:14:02.840000+00:00",
-      "magnitude": 1.8,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469767",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "us6000ucky",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 5.2 - 112 km SSE of Tateyama, Japan",
-      "area": "112 km SSE of Tateyama, Japan",
-      "observed_utc": "2026-11-21T10:09:05.474000+00:00",
-      "source_updated_utc": "2026-11-21T11:17:36.040000+00:00",
-      "magnitude": 5.2,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucky",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f51a9ac45ac2eef1a6ce500422cb4d359ce91c41.001.2",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Coastal Flood Watch",
-      "area": "San Luis Obispo County Beaches; Santa Barbara County Central Coast Beaches; Ventura County Beaches; Malibu Coast; Los Angeles County Beaches",
+      "title": "Gale Warning",
+      "area": "Port Heiden to Nelson Lagoon from 15 to 60 NM",
       "severity": "Moderate",
-      "issued_utc": "2026-11-21T10:07:00-08:00",
-      "effective_utc": "2026-11-21T10:07:00-08:00",
-      "expires_utc": "2026-11-22T06:00:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f51a9ac45ac2eef1a6ce500422cb4d359ce91c41.001.2",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.009.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f51a9ac45ac2eef1a6ce500422cb4d359ce91c41.001.1",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.008.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
-      "title": "Coastal Flood Advisory",
-      "area": "San Luis Obispo County Beaches; Santa Barbara County Central Coast Beaches; Ventura County Beaches; Malibu Coast; Los Angeles County Beaches",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T10:07:00-08:00",
-      "effective_utc": "2026-11-21T10:07:00-08:00",
-      "expires_utc": "2026-11-22T06:00:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f51a9ac45ac2eef1a6ce500422cb4d359ce91c41.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f51a9ac45ac2eef1a6ce500422cb4d359ce91c41.002.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Coastal Flood Advisory",
-      "area": "Catalina and Santa Barbara Islands; Santa Barbara County Southwestern Coast; Santa Barbara County Southeastern Coast",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T10:07:00-08:00",
-      "effective_utc": "2026-11-21T10:07:00-08:00",
-      "expires_utc": "2026-11-22T06:00:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f51a9ac45ac2eef1a6ce500422cb4d359ce91c41.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0d857f9170f8879dc9ac5977f4129e0d9a1e1e88.002.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Flagler Beach to Volusia-Brevard County Line 20-60 nm; Volusia-Brevard County Line to Sebastian Inlet 20-60 nm",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T10:04:00-05:00",
-      "effective_utc": "2026-11-21T10:04:00-05:00",
-      "expires_utc": "2026-11-22T07:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0d857f9170f8879dc9ac5977f4129e0d9a1e1e88.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0d857f9170f8879dc9ac5977f4129e0d9a1e1e88.003.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Sebastian Inlet to Jupiter Inlet 20-60 nm",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T10:04:00-05:00",
-      "effective_utc": "2026-11-21T10:04:00-05:00",
-      "expires_utc": "2026-11-22T01:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0d857f9170f8879dc9ac5977f4129e0d9a1e1e88.003.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d10258662f04c638d207af1123f45906b294ed8e.001.2",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Coastal Flood Watch",
-      "area": "Northern Coastal Humboldt",
+      "title": "Gale Warning",
+      "area": "Port Heiden to Nelson Lagoon out to 15 NM",
       "severity": "Moderate",
-      "issued_utc": "2026-11-21T09:57:00-08:00",
-      "effective_utc": "2026-11-21T09:57:00-08:00",
-      "expires_utc": "2026-11-21T18:00:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d10258662f04c638d207af1123f45906b294ed8e.001.2",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.008.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d10258662f04c638d207af1123f45906b294ed8e.002.1",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.018.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
-      "title": "Coastal Flood Watch",
-      "area": "Coastal Del Norte; Southwestern Humboldt; Coastal Mendocino",
+      "title": "Gale Warning",
+      "area": "Nikolski to Seguam Bering Side out to 15 NM",
       "severity": "Moderate",
-      "issued_utc": "2026-11-21T09:57:00-08:00",
-      "effective_utc": "2026-11-21T09:57:00-08:00",
-      "expires_utc": "2026-11-21T18:00:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d10258662f04c638d207af1123f45906b294ed8e.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.018.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
-      "id": "nc75469757",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 2.0 - 11 km E of Cholame, CA",
-      "area": "11 km E of Cholame, CA",
-      "observed_utc": "2026-11-21T09:54:41.770000+00:00",
-      "source_updated_utc": "2026-11-21T10:01:29.320000+00:00",
-      "magnitude": 2,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469757",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "us6000ucij",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 6.8 - 105 km NE of Lospalos, Timor Leste",
-      "area": "105 km NE of Lospalos, Timor Leste",
-      "observed_utc": "2026-11-21T09:42:09.120000+00:00",
-      "source_updated_utc": "2026-11-21T12:40:35.300000+00:00",
-      "magnitude": 6.8,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucij",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "aka2026xbemer",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.6 - 16 km SW of Anchorage, Alaska",
-      "area": "16 km SW of Anchorage, Alaska",
-      "observed_utc": "2026-11-21T09:41:19.876000+00:00",
-      "source_updated_utc": "2026-11-21T09:42:34.412000+00:00",
-      "magnitude": 1.6,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbemer",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "nc75469752",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.4 - 10 km WNW of Pinnacles, CA",
-      "area": "10 km WNW of Pinnacles, CA",
-      "observed_utc": "2026-11-21T09:38:03.300000+00:00",
-      "source_updated_utc": "2026-11-21T09:39:38.427000+00:00",
-      "magnitude": 1.37,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469752",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "aka2026xbeiag",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 2.2 - 19 km SW of Karluk, Alaska",
-      "area": "19 km SW of Karluk, Alaska",
-      "observed_utc": "2026-11-21T09:36:30.345000+00:00",
-      "source_updated_utc": "2026-11-21T09:37:34.796000+00:00",
-      "magnitude": 2.2,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbeiag",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "nc75469747",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.4 - 14 km SSW of Ridgemark, CA",
-      "area": "14 km SSW of Ridgemark, CA",
-      "observed_utc": "2026-11-21T09:36:19.820000+00:00",
-      "source_updated_utc": "2026-11-21T09:37:53.390000+00:00",
-      "magnitude": 1.35,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469747",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d4929832b9138a959306c786f29f06c658f04983.001.1",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.019.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
-      "title": "Dense Fog Advisory",
-      "area": "Lower Columbia Basin of Oregon",
+      "title": "Gale Warning",
+      "area": "Nikolski to Seguam Bering Side from 15 to 85 NM",
       "severity": "Moderate",
-      "issued_utc": "2026-11-21T09:31:00-08:00",
-      "effective_utc": "2026-11-21T09:31:00-08:00",
-      "expires_utc": "2026-11-21T13:00:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d4929832b9138a959306c786f29f06c658f04983.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.019.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d4929832b9138a959306c786f29f06c658f04983.002.1",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.017.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
-      "title": "Dense Fog Advisory",
-      "area": "Foothills of the Blue Mountains of Washington",
+      "title": "Gale Warning",
+      "area": "Unalga Pass to Nikolski Pacific Side from 15 to 85 NM",
       "severity": "Moderate",
-      "issued_utc": "2026-11-21T09:31:00-08:00",
-      "effective_utc": "2026-11-21T09:31:00-08:00",
-      "expires_utc": "2026-11-21T13:00:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d4929832b9138a959306c786f29f06c658f04983.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.017.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9924397626d855e3288ba246306f28b05fd15c9e.001.1",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.016.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
-      "title": "Wind Advisory",
-      "area": "South Central Mountains",
+      "title": "Gale Warning",
+      "area": "Unalga Pass to Nikolski Pacific Side out to 15 NM",
       "severity": "Moderate",
-      "issued_utc": "2026-11-21T09:27:00-07:00",
-      "effective_utc": "2026-11-21T09:27:00-07:00",
-      "expires_utc": "2026-11-21T17:00:00-07:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9924397626d855e3288ba246306f28b05fd15c9e.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.016.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1a53b6ac8b0a3738aada0818e6c8151444537a34.001.1",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.005.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
-      "title": "Rip Current Statement",
-      "area": "San Juan and Vicinity; Northeast; North Central; Northwest; Mayaguez and Vicinity",
+      "title": "Small Craft Advisory",
+      "area": "Castle Cape to Cape Tolstoi from 15 to 100 NM",
+      "severity": "Minor",
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.005.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.007.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Gale Warning",
+      "area": "Cape Tolstoi to Unalga Pass from 15 to 100 NM",
       "severity": "Moderate",
-      "issued_utc": "2026-11-21T09:27:00-04:00",
-      "effective_utc": "2026-11-21T09:27:00-04:00",
-      "expires_utc": "2026-11-21T17:30:00-04:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1a53b6ac8b0a3738aada0818e6c8151444537a34.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.007.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
-      "id": "nc75469727",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.2 - 6 km WNW of The Geysers, CA",
-      "area": "6 km WNW of The Geysers, CA",
-      "observed_utc": "2026-11-21T09:25:18.440000+00:00",
-      "source_updated_utc": "2026-11-21T09:31:07.540000+00:00",
-      "magnitude": 1.24,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469727",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.013.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Gale Warning",
+      "area": "Unalga Pass to Nikolski Bering Side out to 15 NM",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.013.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
-      "id": "aka2026xbdouz",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 1.8 - 66 km N of Chickaloon, Alaska",
-      "area": "66 km N of Chickaloon, Alaska",
-      "observed_utc": "2026-11-21T09:14:23.136000+00:00",
-      "source_updated_utc": "2026-11-21T09:16:09.873000+00:00",
-      "magnitude": 1.8,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbdouz",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.015.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Gale Warning",
+      "area": "Unalaska Bay",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.015.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.90cda6a5ee402aecd74e4382ef1c09029c75ae96.002.2",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.004.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
       "title": "Small Craft Advisory",
-      "area": "Coastal waters from Cape Mendocino to Pt. Arena CA out 10 nm; Waters from Cape Mendocino to Pt. Arena CA from 10 to 60 nm",
+      "area": "Castle Cape to Cape Tolstoi out to 15 NM",
       "severity": "Minor",
-      "issued_utc": "2026-11-21T09:05:00-08:00",
-      "effective_utc": "2026-11-21T09:05:00-08:00",
-      "expires_utc": "2026-11-21T15:00:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.90cda6a5ee402aecd74e4382ef1c09029c75ae96.002.2",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.004.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.90cda6a5ee402aecd74e4382ef1c09029c75ae96.001.2",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.020.1",
+      "provider": "NWS alerts",
+      "kind": "official_alert",
+      "title": "Gale Warning",
+      "area": "Nikolski to Seguam Pacfic Side out to 15 NM",
+      "severity": "Moderate",
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.020.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.002.1",
       "provider": "NWS alerts",
       "kind": "official_alert",
       "title": "Small Craft Advisory",
-      "area": "Coastal waters from Pt. St. George to Cape Mendocino CA out 10 nm; Waters from Pt. St. George to Cape Mendocino CA from 10 to 60 nm",
+      "area": "Sitkinak to Castle Cape out to 15 NM",
       "severity": "Minor",
-      "issued_utc": "2026-11-21T09:05:00-08:00",
-      "effective_utc": "2026-11-21T09:05:00-08:00",
-      "expires_utc": "2026-11-21T15:00:00-08:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.90cda6a5ee402aecd74e4382ef1c09029c75ae96.001.2",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "nc75469717",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 2.7 - 10 km NW of Pinnacles, CA",
-      "area": "10 km NW of Pinnacles, CA",
-      "observed_utc": "2026-11-21T09:04:28.860000+00:00",
-      "source_updated_utc": "2026-11-21T11:29:30.034000+00:00",
-      "magnitude": 2.67,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75469717",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fb33c5941e28d9b5977f8e847a0028832d99f838.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Air Quality Alert",
-      "area": "Allegheny",
-      "severity": "Unknown",
-      "issued_utc": "2026-11-21T09:00:00-05:00",
-      "effective_utc": "2026-11-21T09:00:00-05:00",
-      "expires_utc": "2026-11-21T19:00:00-05:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fb33c5941e28d9b5977f8e847a0028832d99f838.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "aka2026xbdanu",
-      "provider": "USGS earthquakes",
-      "kind": "observed_earthquake",
-      "title": "M 2.0 - 5 km NE of Cooper Landing, Alaska",
-      "area": "5 km NE of Cooper Landing, Alaska",
-      "observed_utc": "2026-11-21T08:57:50.668000+00:00",
-      "source_updated_utc": "2026-11-21T13:01:04.160000+00:00",
-      "magnitude": 2,
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026xbdanu",
-      "retrieved_utc": "2026-11-21T19:46:28.338301+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ba6e6a70657ca2b109fd38b73ff1f1a04293dee4.004.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Dixon Entrance to Cape Decision out to 15 NM; Icy Cape to Cape Suckling from 15 to 80 NM",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T08:56:00-09:00",
-      "effective_utc": "2026-11-21T08:56:00-09:00",
-      "expires_utc": "2026-11-21T12:00:00-09:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ba6e6a70657ca2b109fd38b73ff1f1a04293dee4.004.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ba6e6a70657ca2b109fd38b73ff1f1a04293dee4.006.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Dixon Entrance to Cape Decision from 15 to 90 NM",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T08:56:00-09:00",
-      "effective_utc": "2026-11-21T08:56:00-09:00",
-      "expires_utc": "2026-11-21T17:00:00-09:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ba6e6a70657ca2b109fd38b73ff1f1a04293dee4.006.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ba6e6a70657ca2b109fd38b73ff1f1a04293dee4.007.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Cape Decision to Cape Edgecumbe from 15 to 80 NM; Cape Edgecumbe to Cape Spencer from 15 to 80 NM",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T08:56:00-09:00",
-      "effective_utc": "2026-11-21T08:56:00-09:00",
-      "expires_utc": "2026-11-21T17:00:00-09:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ba6e6a70657ca2b109fd38b73ff1f1a04293dee4.007.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ba6e6a70657ca2b109fd38b73ff1f1a04293dee4.005.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Cape Decision to Cape Edgecumbe out to 15 NM; Icy Cape to Cape Suckling out to 15 NM",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T08:56:00-09:00",
-      "effective_utc": "2026-11-21T08:56:00-09:00",
-      "expires_utc": "2026-11-21T12:00:00-09:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ba6e6a70657ca2b109fd38b73ff1f1a04293dee4.005.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ab74299cee6398c1da74ecabc8a4a4539be357f2.002.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Port Washington to North Point Light WI",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T08:56:00-06:00",
-      "effective_utc": "2026-11-21T08:56:00-06:00",
-      "expires_utc": "2026-11-21T17:00:00-06:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ab74299cee6398c1da74ecabc8a4a4539be357f2.002.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
-    },
-    {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ab74299cee6398c1da74ecabc8a4a4539be357f2.001.1",
-      "provider": "NWS alerts",
-      "kind": "official_alert",
-      "title": "Small Craft Advisory",
-      "area": "Sheboygan to Port Washington WI",
-      "severity": "Minor",
-      "issued_utc": "2026-11-21T08:56:00-06:00",
-      "effective_utc": "2026-11-21T08:56:00-06:00",
-      "expires_utc": "2026-11-21T17:00:00-06:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ab74299cee6398c1da74ecabc8a4a4539be357f2.001.1",
-      "retrieved_utc": "2026-11-21T19:46:28.571329+00:00"
+      "issued_utc": "2026-11-21T14:15:00-09:00",
+      "effective_utc": "2026-11-21T14:15:00-09:00",
+      "expires_utc": "2026-11-22T03:15:00-09:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4381a5331c7bd0d9e5b09cf70d7cf5becdc9fc08.002.1",
+      "retrieved_utc": "2026-11-21T23:58:43.945230+00:00"
     }
   ],
   "seam_execution": {
